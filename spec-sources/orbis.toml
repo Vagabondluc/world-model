@@ -1,0 +1,22 @@
+donor = "orbis"
+source_root = "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime"
+source_kind = "typescript"
+included_paths = [
+  "contracts",
+  "kernel",
+  "domains",
+]
+excluded_paths = [
+  "dashboard-components",
+  "__tests__",
+  "world-model.ts",
+  "world-model-harness.ts",
+  "index.ts",
+]
+expected_concept_families = [
+  "simulation-profile",
+  "simulation-snapshot",
+  "simulation-domain",
+  "simulation-event",
+]
+default_promotion_class = "simulation"

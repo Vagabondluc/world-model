@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "DashboardMode": {
+      "enum": [
+        "Hidden",
+        "Summary",
+        "Diagnostic"
+      ],
+      "type": "string"
+    },
+    "FidelityLevel": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "type": "string"
+    },
+    "SimulationDomainConfig": {
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "fidelity": {
+          "$ref": "#/definitions/FidelityLevel"
+        },
+        "id": {
+          "$ref": "#/definitions/SimulationDomainId"
+        },
+        "tick_mode": {
+          "$ref": "#/definitions/TickMode"
+        }
+      },
+      "required": [
+        "enabled",
+        "fidelity",
+        "id",
+        "tick_mode"
+      ],
+      "type": "object"
+    },
+    "SimulationDomainId": {
+      "oneOf": [
+        {
+          "enum": [
+            "Genesis",
+            "Climate"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Custom": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Custom"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SimulationProvenance": {
+      "properties": {
+        "profile_version": {
+          "type": "string"
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "profile_version",
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "SimulationSnapshotRef": {
+      "properties": {
+        "domain_id": {
+          "$ref": "#/definitions/SimulationDomainId"
+        },
+        "snapshot_ref": {
+          "type": "string"
+        },
+        "trace_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain_id",
+        "snapshot_ref",
+        "trace_id"
+      ],
+      "type": "object"
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "TickMode": {
+      "enum": [
+        "Disabled",
+        "OnDemand",
+        "Continuous",
+        "Stepped"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "dashboard_mode": {
+      "$ref": "#/definitions/DashboardMode"
+    },
+    "enabled_domains": {
+      "items": {
+        "$ref": "#/definitions/SimulationDomainConfig"
+      },
+      "type": "array"
+    },
+    "latest_snapshot_refs": {
+      "items": {
+        "$ref": "#/definitions/SimulationSnapshotRef"
+      },
+      "type": "array"
+    },
+    "profile_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance": {
+      "$ref": "#/definitions/SimulationProvenance"
+    }
+  },
+  "required": [
+    "dashboard_mode",
+    "enabled_domains",
+    "latest_snapshot_refs",
+    "provenance"
+  ],
+  "title": "SimulationAttachment",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+[package]
+name = "world-model-schema"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+jsonschema.workspace = true
+schemars.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+world-model-core = { path = "../world-model-core" }
+world-model-specs = { path = "../world-model-specs" }

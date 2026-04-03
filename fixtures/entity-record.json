@@ -1,0 +1,85 @@
+{
+  "entity_id": "entity-capital",
+  "world_id": "world-aster",
+  "entity_type": "location",
+  "metadata": {
+    "label": "Aster Gate",
+    "summary": "Capital settlement attached to a hex",
+    "tags": ["settlement", "capital"]
+  },
+  "schema_binding": {
+    "schema_id": "schema-location",
+    "schema_class": "ProjectSchema",
+    "external_schema_ref": {
+      "source_system": "Mythforge",
+      "source_uri": "mythforge/docs/schema-templates/Settlement.md",
+      "validation_contract_ref": "Settlement.schema.json",
+      "migration_contract_ref": null
+    },
+    "version": "1.0.0",
+    "activation_event_id": "evt-entity-schema-bound",
+    "migration_lineage": {
+      "previous_schema_version": null,
+      "migration_ref": null
+    }
+  },
+  "relation_references": [
+    {
+      "source_entity_id": "entity-capital",
+      "target_entity_id": "entity-faction-crown",
+      "relation_type": "MemberOf",
+      "effective_from": "2026-04-02T12:10:00Z",
+      "effective_to": null,
+      "provenance": {
+        "source_system": "Mythforge",
+        "note": "Created by fixture"
+      }
+    }
+  ],
+  "location_attachment": {
+    "map_anchor": "hex-map/main",
+    "hex_or_cell_ref": "A12",
+    "coordinate_ref": "12,7",
+    "spatial_scope": "hex",
+    "layer_membership": ["settlements", "capitals"]
+  },
+  "asset_attachments": ["asset-city-sigil"],
+  "workflow_attachment": {
+    "workflow_id": "wf-create-world",
+    "activity_type": "create-world",
+    "status": "Paused",
+    "step_state": [
+      {
+        "step_key": "world-basics",
+        "state": {
+          "name": "Aster",
+          "genre": "mythic fantasy"
+        }
+      },
+      {
+        "step_key": "starting-region",
+        "state": {
+          "biome": "temperate",
+          "settlements": 1
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "checkpoint_key": "after-starting-region",
+        "reached_at": "2026-04-02T12:05:00Z"
+      }
+    ],
+    "progress_ratio": 0.6,
+    "output_references": [
+      {
+        "Entity": "entity-capital"
+      }
+    ],
+    "resumable": true
+  },
+  "event_history": {
+    "event_ids": ["evt-entity-created", "evt-entity-schema-bound"]
+  },
+  "latest_projection_reference": "proj-capital-latest"
+}

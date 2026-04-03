@@ -1,0 +1,58 @@
+{
+  "world_id": "world-aster",
+  "metadata": {
+    "label": "Aster",
+    "summary": "Neutral canonical world example",
+    "tags": ["fixture", "world"]
+  },
+  "root_event_ledger": {
+    "event_ids": ["evt-world-created"]
+  },
+  "root_schema_binding": {
+    "schema_id": "schema-world",
+    "schema_class": "ProjectSchema",
+    "external_schema_ref": {
+      "source_system": "Mythforge",
+      "source_uri": "mythforge/docs/schema-templates/World.md",
+      "validation_contract_ref": "world.schema.json",
+      "migration_contract_ref": "world.migrations.json"
+    },
+    "version": "1.0.0",
+    "activation_event_id": "evt-world-created",
+    "migration_lineage": {
+      "previous_schema_version": null,
+      "migration_ref": null
+    }
+  },
+  "workflow_registry_references": ["wf-create-world"],
+  "simulation_attachment": {
+    "profile_id": "profile-orbis-minimal",
+    "enabled_domains": [
+      {
+        "id": "Genesis",
+        "enabled": true,
+        "fidelity": "Medium",
+        "tick_mode": "OnDemand"
+      },
+      {
+        "id": "Climate",
+        "enabled": true,
+        "fidelity": "Low",
+        "tick_mode": "Stepped"
+      }
+    ],
+    "dashboard_mode": "Summary",
+    "latest_snapshot_refs": [
+      {
+        "domain_id": "Climate",
+        "snapshot_ref": "snapshot://orbis/world-aster/climate/0001",
+        "trace_id": "trace-climate-0001"
+      }
+    ],
+    "provenance": {
+      "source_system": "Orbis",
+      "profile_version": "0.1.0"
+    }
+  },
+  "top_level_entity_index": ["entity-capital"]
+}

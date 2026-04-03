@@ -1,0 +1,359 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AppendOnlyEventLedger": {
+      "properties": {
+        "event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "event_ids"
+      ],
+      "type": "object"
+    },
+    "DashboardMode": {
+      "enum": [
+        "Hidden",
+        "Summary",
+        "Diagnostic"
+      ],
+      "type": "string"
+    },
+    "ExternalSchemaRef": {
+      "properties": {
+        "migration_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        },
+        "source_uri": {
+          "type": "string"
+        },
+        "validation_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "source_system",
+        "source_uri"
+      ],
+      "type": "object"
+    },
+    "FidelityLevel": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "type": "string"
+    },
+    "HumanMetadata": {
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "tags"
+      ],
+      "type": "object"
+    },
+    "MigrationLineage": {
+      "properties": {
+        "migration_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "previous_schema_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SchemaBindingRecord": {
+      "properties": {
+        "activation_event_id": {
+          "type": "string"
+        },
+        "external_schema_ref": {
+          "$ref": "#/definitions/ExternalSchemaRef"
+        },
+        "migration_lineage": {
+          "$ref": "#/definitions/MigrationLineage"
+        },
+        "promoted_schema_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schema_class": {
+          "$ref": "#/definitions/SchemaClass"
+        },
+        "schema_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "activation_event_id",
+        "external_schema_ref",
+        "migration_lineage",
+        "schema_class",
+        "schema_id",
+        "version"
+      ],
+      "type": "object"
+    },
+    "SchemaClass": {
+      "enum": [
+        "NativeSchema",
+        "ProjectSchema",
+        "SimulationSchema",
+        "WorkflowSchema"
+      ],
+      "type": "string"
+    },
+    "SimulationAttachment": {
+      "properties": {
+        "dashboard_mode": {
+          "$ref": "#/definitions/DashboardMode"
+        },
+        "enabled_domains": {
+          "items": {
+            "$ref": "#/definitions/SimulationDomainConfig"
+          },
+          "type": "array"
+        },
+        "latest_snapshot_refs": {
+          "items": {
+            "$ref": "#/definitions/SimulationSnapshotRef"
+          },
+          "type": "array"
+        },
+        "profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/definitions/SimulationProvenance"
+        }
+      },
+      "required": [
+        "dashboard_mode",
+        "enabled_domains",
+        "latest_snapshot_refs",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "SimulationDomainConfig": {
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "fidelity": {
+          "$ref": "#/definitions/FidelityLevel"
+        },
+        "id": {
+          "$ref": "#/definitions/SimulationDomainId"
+        },
+        "tick_mode": {
+          "$ref": "#/definitions/TickMode"
+        }
+      },
+      "required": [
+        "enabled",
+        "fidelity",
+        "id",
+        "tick_mode"
+      ],
+      "type": "object"
+    },
+    "SimulationDomainId": {
+      "oneOf": [
+        {
+          "enum": [
+            "Genesis",
+            "Climate"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Custom": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Custom"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SimulationProvenance": {
+      "properties": {
+        "profile_version": {
+          "type": "string"
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "profile_version",
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "SimulationSnapshotRef": {
+      "properties": {
+        "domain_id": {
+          "$ref": "#/definitions/SimulationDomainId"
+        },
+        "snapshot_ref": {
+          "type": "string"
+        },
+        "trace_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain_id",
+        "snapshot_ref",
+        "trace_id"
+      ],
+      "type": "object"
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "TickMode": {
+      "enum": [
+        "Disabled",
+        "OnDemand",
+        "Continuous",
+        "Stepped"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "asset_attachments": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "metadata": {
+      "$ref": "#/definitions/HumanMetadata"
+    },
+    "payload": true,
+    "root_event_ledger": {
+      "$ref": "#/definitions/AppendOnlyEventLedger"
+    },
+    "root_schema_binding": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/SchemaBindingRecord"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "simulation_attachment": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/SimulationAttachment"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "top_level_entity_index": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "workflow_registry_references": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "world_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_attachments",
+    "metadata",
+    "payload",
+    "root_event_ledger",
+    "top_level_entity_index",
+    "workflow_registry_references",
+    "world_id"
+  ],
+  "title": "WorldRecord",
+  "type": "object"
+}

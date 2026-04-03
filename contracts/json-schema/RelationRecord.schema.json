@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "RelationKind": {
+      "oneOf": [
+        {
+          "enum": [
+            "ParentOf",
+            "ChildOf",
+            "LocatedIn",
+            "MemberOf",
+            "Owns",
+            "References"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Custom": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Custom"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "RelationProvenance": {
+      "properties": {
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "effective_from": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effective_to": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance": {
+      "$ref": "#/definitions/RelationProvenance"
+    },
+    "relation_type": {
+      "$ref": "#/definitions/RelationKind"
+    },
+    "source_entity_id": {
+      "type": "string"
+    },
+    "target_entity_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "provenance",
+    "relation_type",
+    "source_entity_id",
+    "target_entity_id"
+  ],
+  "title": "RelationRecord",
+  "type": "object"
+}

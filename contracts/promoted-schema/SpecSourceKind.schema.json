@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "enum": [
+    "doc",
+    "typescript",
+    "json",
+    "schema_template"
+  ],
+  "title": "SpecSourceKind",
+  "type": "string"
+}

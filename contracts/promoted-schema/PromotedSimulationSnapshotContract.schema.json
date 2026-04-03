@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "enabled_domains": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "reason_codes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "snapshot_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "tick": {
+      "format": "int64",
+      "type": "integer"
+    },
+    "trace_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "world_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enabled_domains",
+    "reason_codes",
+    "snapshot_refs",
+    "tick",
+    "trace_ids",
+    "world_id"
+  ],
+  "title": "PromotedSimulationSnapshotContract",
+  "type": "object"
+}

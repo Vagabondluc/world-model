@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "EventCausation": {
+      "properties": {
+        "causation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "EventPayloadRef": {
+      "properties": {
+        "inline_payload": true,
+        "payload_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OwnerRef": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "World": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "World"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Entity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Entity"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Asset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Asset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Workflow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Workflow"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "causation": {
+      "$ref": "#/definitions/EventCausation"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "occurred_at": {
+      "type": "string"
+    },
+    "owner": {
+      "$ref": "#/definitions/OwnerRef"
+    },
+    "payload": {
+      "$ref": "#/definitions/EventPayloadRef"
+    },
+    "source_system": {
+      "$ref": "#/definitions/SourceSystem"
+    }
+  },
+  "required": [
+    "causation",
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "owner",
+    "payload",
+    "source_system"
+  ],
+  "title": "EventEnvelope",
+  "type": "object"
+}

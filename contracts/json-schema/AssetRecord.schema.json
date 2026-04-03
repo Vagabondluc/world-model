@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "HumanMetadata": {
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "tags"
+      ],
+      "type": "object"
+    },
+    "OwnerRef": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "World": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "World"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Entity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Entity"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Asset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Asset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Workflow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Workflow"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "asset_kind": {
+      "type": "string"
+    },
+    "metadata": {
+      "$ref": "#/definitions/HumanMetadata"
+    },
+    "owner": {
+      "$ref": "#/definitions/OwnerRef"
+    },
+    "payload": true,
+    "source_ref": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_id",
+    "asset_kind",
+    "metadata",
+    "owner",
+    "payload",
+    "source_ref"
+  ],
+  "title": "AssetRecord",
+  "type": "object"
+}

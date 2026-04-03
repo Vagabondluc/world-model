@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "SpecDonor": {
+      "enum": [
+        "mythforge",
+        "orbis",
+        "adventure_generator"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "concept_key": {
+      "type": "string"
+    },
+    "losing_donors": {
+      "items": {
+        "$ref": "#/definitions/SpecDonor"
+      },
+      "type": "array"
+    },
+    "provenance_links": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "winning_donor": {
+      "$ref": "#/definitions/SpecDonor"
+    }
+  },
+  "required": [
+    "concept_key",
+    "losing_donors",
+    "provenance_links",
+    "resolution",
+    "winning_donor"
+  ],
+  "title": "PromotionConflict",
+  "type": "object"
+}

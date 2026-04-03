@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "EventRange": {
+      "properties": {
+        "end_event_id": {
+          "type": "string"
+        },
+        "start_event_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "end_event_id",
+        "start_event_id"
+      ],
+      "type": "object"
+    },
+    "OwnerRef": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "World": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "World"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Entity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Entity"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Asset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Asset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Workflow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Workflow"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "derived_state": true,
+    "owner": {
+      "$ref": "#/definitions/OwnerRef"
+    },
+    "projection_id": {
+      "type": "string"
+    },
+    "projection_version": {
+      "type": "string"
+    },
+    "schema_binding_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_event_range": {
+      "$ref": "#/definitions/EventRange"
+    }
+  },
+  "required": [
+    "derived_state",
+    "owner",
+    "projection_id",
+    "projection_version",
+    "source_event_range"
+  ],
+  "title": "ProjectionRecord",
+  "type": "object"
+}

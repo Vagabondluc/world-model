@@ -1,0 +1,14 @@
+[package]
+name = "world-model-driver"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+jsonschema.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+world-model-core = { path = "../world-model-core" }
+world-model-schema = { path = "../world-model-schema" }
+world-model-specs = { path = "../world-model-specs" }

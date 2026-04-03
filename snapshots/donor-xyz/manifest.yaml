@@ -1,0 +1,19 @@
+id: donor-xyz
+name: "Donor XYZ"
+version: "1.0.0"
+source:
+  repo: "https://github.com/example/donor-xyz"
+  commit: "abcdef1234567890"
+snapshot: "snapshots/donor-xyz/2026-04-02/"
+mappings:
+  - "mappings/donor-xyz/mapping.yaml"
+fixtures:
+  - "fixtures/donor-xyz/"
+tests:
+  - "tests/donor-xyz/"
+concepts:
+  - "character"
+  - "location"
+  - "item"
+owner: "adapter-team@org"
+notes: "Snapshot test manifest"

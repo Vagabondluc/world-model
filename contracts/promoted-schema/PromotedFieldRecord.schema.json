@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "FieldDisposition": {
+      "enum": [
+        "promoted",
+        "dropped",
+        "split",
+        "reference_only"
+      ],
+      "type": "string"
+    },
+    "FieldTypeHint": {
+      "enum": [
+        "string",
+        "integer",
+        "number",
+        "boolean",
+        "array",
+        "object",
+        "enum",
+        "reference",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "PromotionClass": {
+      "enum": [
+        "core",
+        "simulation",
+        "workflow",
+        "donor_local",
+        "reference_only"
+      ],
+      "type": "string"
+    },
+    "SchemaProvenance": {
+      "properties": {
+        "alias_history": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "promotion_class": {
+          "$ref": "#/definitions/PromotionClass"
+        },
+        "source_concept_name": {
+          "type": "string"
+        },
+        "source_file_path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "alias_history",
+        "donor",
+        "promotion_class",
+        "source_concept_name",
+        "source_file_path"
+      ],
+      "type": "object"
+    },
+    "SpecDonor": {
+      "enum": [
+        "mythforge",
+        "orbis",
+        "adventure_generator"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "canonical_field": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "disposition": {
+      "$ref": "#/definitions/FieldDisposition"
+    },
+    "field_name": {
+      "type": "string"
+    },
+    "field_type": {
+      "$ref": "#/definitions/FieldTypeHint"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance": {
+      "items": {
+        "$ref": "#/definitions/SchemaProvenance"
+      },
+      "type": "array"
+    },
+    "required": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "disposition",
+    "field_name",
+    "field_type",
+    "provenance",
+    "required"
+  ],
+  "title": "PromotedFieldRecord",
+  "type": "object"
+}

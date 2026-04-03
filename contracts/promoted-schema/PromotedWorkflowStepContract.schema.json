@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "checkpoint_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": true,
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "step_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "state",
+    "step_key"
+  ],
+  "title": "PromotedWorkflowStepContract",
+  "type": "object"
+}

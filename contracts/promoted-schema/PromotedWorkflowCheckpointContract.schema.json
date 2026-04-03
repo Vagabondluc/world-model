@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "checkpoint_key": {
+      "type": "string"
+    },
+    "reached_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "checkpoint_key",
+    "reached_at"
+  ],
+  "title": "PromotedWorkflowCheckpointContract",
+  "type": "object"
+}

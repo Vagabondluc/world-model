@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "coordinate_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hex_or_cell_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "layer_membership": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "map_anchor": {
+      "type": "string"
+    },
+    "spatial_scope": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "layer_membership",
+    "map_anchor",
+    "spatial_scope"
+  ],
+  "title": "LocationAttachment",
+  "type": "object"
+}

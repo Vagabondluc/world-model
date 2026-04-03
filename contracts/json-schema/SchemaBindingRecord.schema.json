@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ExternalSchemaRef": {
+      "properties": {
+        "migration_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        },
+        "source_uri": {
+          "type": "string"
+        },
+        "validation_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "source_system",
+        "source_uri"
+      ],
+      "type": "object"
+    },
+    "MigrationLineage": {
+      "properties": {
+        "migration_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "previous_schema_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SchemaClass": {
+      "enum": [
+        "NativeSchema",
+        "ProjectSchema",
+        "SimulationSchema",
+        "WorkflowSchema"
+      ],
+      "type": "string"
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "activation_event_id": {
+      "type": "string"
+    },
+    "external_schema_ref": {
+      "$ref": "#/definitions/ExternalSchemaRef"
+    },
+    "migration_lineage": {
+      "$ref": "#/definitions/MigrationLineage"
+    },
+    "promoted_schema_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_class": {
+      "$ref": "#/definitions/SchemaClass"
+    },
+    "schema_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "activation_event_id",
+    "external_schema_ref",
+    "migration_lineage",
+    "schema_class",
+    "schema_id",
+    "version"
+  ],
+  "title": "SchemaBindingRecord",
+  "type": "object"
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "adapter_mapping_key": "adventure.location_adventure_linkage",
+    "canonical_schema_name": "PromotedLocationAdventureLinkageContract",
+    "concept_name": "Adventure Location Linkage",
+    "description": "Split linkage contract between Adventure location schemas and canonical spatial entities.",
+    "donor": "adventure_generator",
+    "field_records": [
+      {
+        "canonical_field": "entity_id",
+        "disposition": "promoted",
+        "field_name": "location_entity_id",
+        "field_type": "string",
+        "notes": null,
+        "provenance": [
+          {
+            "alias_history": [],
+            "donor": "adventure_generator",
+            "promotion_class": "workflow",
+            "source_concept_name": "HexCoordinateSchema",
+            "source_file_path": "schemas/location.ts"
+          }
+        ],
+        "required": true
+      },
+      {
+        "canonical_field": "entity_id",
+        "disposition": "promoted",
+        "field_name": "adventure_entity_id",
+        "field_type": "string",
+        "notes": null,
+        "provenance": [
+          {
+            "alias_history": [],
+            "donor": "adventure_generator",
+            "promotion_class": "workflow",
+            "source_concept_name": "SimpleAdventureSchema",
+            "source_file_path": "schemas/adventure.ts"
+          }
+        ],
+        "required": false
+      },
+      {
+        "canonical_field": "hex_or_cell_ref",
+        "disposition": "promoted",
+        "field_name": "region_ref",
+        "field_type": "string",
+        "notes": null,
+        "provenance": [
+          {
+            "alias_history": [],
+            "donor": "adventure_generator",
+            "promotion_class": "workflow",
+            "source_concept_name": "HexCoordinateSchema",
+            "source_file_path": "schemas/location.ts"
+          }
+        ],
+        "required": false
+      },
+      {
+        "canonical_field": "output_references",
+        "disposition": "promoted",
+        "field_name": "scene_refs",
+        "field_type": "array",
+        "notes": null,
+        "provenance": [
+          {
+            "alias_history": [],
+            "donor": "adventure_generator",
+            "promotion_class": "workflow",
+            "source_concept_name": "SceneDetailsSchema",
+            "source_file_path": "schemas/scene.ts"
+          }
+        ],
+        "required": true
+      }
+    ],
+    "normalized_name": "adventure-location-linkage",
+    "outcome": "split",
+    "promotion_class": "workflow",
+    "provenance": [
+      {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "SimpleAdventureSchema",
+        "source_file_path": "schemas/adventure.ts"
+      },
+      {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "CampaignConfigurationSchema",
+        "source_file_path": "schemas/campaign.ts"
+      },
+      {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "HexCoordinateSchema",
+        "source_file_path": "schemas/location.ts"
+      },
+      {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "SceneDetailsSchema",
+        "source_file_path": "schemas/scene.ts"
+      }
+    ],
+    "rust_type_name": "PromotedLocationAdventureLinkageContract",
+    "schema_id": "workflow/location-adventure-linkage",
+    "target": "location_adventure_linkage_contract"
+  }
+]

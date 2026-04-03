@@ -1,0 +1,11 @@
+[package]
+name = "world-model-adapters"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+schemars.workspace = true
+serde.workspace = true
+world-model-specs = { path = "../world-model-specs" }

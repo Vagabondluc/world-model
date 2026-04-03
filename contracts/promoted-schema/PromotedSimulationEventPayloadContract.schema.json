@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "domain": {
+      "type": "string"
+    },
+    "payload": true,
+    "reason_code": {
+      "type": "string"
+    },
+    "tick": {
+      "format": "int64",
+      "type": "integer"
+    },
+    "trace_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "domain",
+    "payload",
+    "reason_code",
+    "tick",
+    "trace_id"
+  ],
+  "title": "PromotedSimulationEventPayloadContract",
+  "type": "object"
+}

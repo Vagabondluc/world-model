@@ -1,0 +1,29 @@
+donor = "mythforge"
+source_root = "../mythforge/docs/schema-templates"
+source_kind = "schema_template"
+included_paths = [
+  "UUID_CONTAINER_ARCHITECTURE.md",
+  "UUID_CONTAINER_IMPLEMENTATION_PLAN.md",
+  "index.md",
+  "schemas",
+  "Campaign.md",
+  "Character.md",
+  "Settlement.md",
+  "Region.md",
+  "Artifact.md",
+  "Item.md",
+  "Faction.md",
+  "NPC.md",
+  "Landmark.md",
+]
+excluded_paths = [
+  "prompts",
+  "samples",
+  "methods",
+]
+expected_concept_families = [
+  "identity-history",
+  "schema-contract",
+  "entity-template",
+]
+default_promotion_class = "core"

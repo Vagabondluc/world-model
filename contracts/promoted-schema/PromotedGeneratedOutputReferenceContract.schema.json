@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "owner_id": {
+      "type": "string"
+    },
+    "owner_kind": {
+      "type": "string"
+    },
+    "reference_kind": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "owner_id",
+    "owner_kind",
+    "reference_kind"
+  ],
+  "title": "PromotedGeneratedOutputReferenceContract",
+  "type": "object"
+}

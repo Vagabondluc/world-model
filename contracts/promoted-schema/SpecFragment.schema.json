@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "PromotionClass": {
+      "enum": [
+        "core",
+        "simulation",
+        "workflow",
+        "donor_local",
+        "reference_only"
+      ],
+      "type": "string"
+    },
+    "SchemaProvenance": {
+      "properties": {
+        "alias_history": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "promotion_class": {
+          "$ref": "#/definitions/PromotionClass"
+        },
+        "source_concept_name": {
+          "type": "string"
+        },
+        "source_file_path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "alias_history",
+        "donor",
+        "promotion_class",
+        "source_concept_name",
+        "source_file_path"
+      ],
+      "type": "object"
+    },
+    "SpecDonor": {
+      "enum": [
+        "mythforge",
+        "orbis",
+        "adventure_generator"
+      ],
+      "type": "string"
+    },
+    "SpecSourceKind": {
+      "enum": [
+        "doc",
+        "typescript",
+        "json",
+        "schema_template"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "concept_family": {
+      "type": "string"
+    },
+    "concept_id": {
+      "type": "string"
+    },
+    "concept_name": {
+      "type": "string"
+    },
+    "declared_symbols": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "donor": {
+      "$ref": "#/definitions/SpecDonor"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "promotion_class": {
+      "$ref": "#/definitions/PromotionClass"
+    },
+    "provenance": {
+      "$ref": "#/definitions/SchemaProvenance"
+    },
+    "relative_path": {
+      "type": "string"
+    },
+    "source_kind": {
+      "$ref": "#/definitions/SpecSourceKind"
+    },
+    "source_root": {
+      "type": "string"
+    },
+    "ui_surface": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "concept_family",
+    "concept_id",
+    "concept_name",
+    "declared_symbols",
+    "donor",
+    "excerpt",
+    "promotion_class",
+    "provenance",
+    "relative_path",
+    "source_kind",
+    "source_root",
+    "ui_surface"
+  ],
+  "title": "SpecFragment",
+  "type": "object"
+}

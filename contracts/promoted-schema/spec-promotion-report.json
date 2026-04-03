@@ -1,0 +1,5063 @@
+{
+  "alias_map": {
+    "groups": [
+      {
+        "aliases": [
+          "container",
+          "root-world"
+        ],
+        "canonical": "world"
+      },
+      {
+        "aliases": [
+          "node",
+          "object"
+        ],
+        "canonical": "entity"
+      },
+      {
+        "aliases": [
+          "region",
+          "site"
+        ],
+        "canonical": "location"
+      },
+      {
+        "aliases": [
+          "activity",
+          "session-flow"
+        ],
+        "canonical": "workflow"
+      },
+      {
+        "aliases": [
+          "domain-config",
+          "world-profile"
+        ],
+        "canonical": "simulation-profile"
+      }
+    ]
+  },
+  "dropped_concepts": [
+    {
+      "concept_id": "orbis/voxel-domains-voxel-ts",
+      "concept_name": "voxel",
+      "donor": "orbis",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "voxel",
+        "source_file_path": "domains/voxel.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "orbis/orbis-kernel-kernel-orbis-kernel-ts",
+      "concept_name": "orbis-kernel",
+      "donor": "orbis",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "orbis-kernel",
+        "source_file_path": "kernel/orbis-kernel.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/airequestentryschema-schemas-ailedger-ts",
+      "concept_name": "AiRequestEntrySchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "AiRequestEntrySchema",
+        "source_file_path": "schemas/aiLedger.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/locationtypeenum-schemas-common-ts",
+      "concept_name": "LocationTypeEnum",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [
+          "location",
+          "region",
+          "site"
+        ],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "LocationTypeEnum",
+        "source_file_path": "schemas/common.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/compendiumstateexportschema-schemas-compendium-ts",
+      "concept_name": "CompendiumStateExportSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "CompendiumStateExportSchema",
+        "source_file_path": "schemas/compendium.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/sensorypackageschema-schemas-delve-ts",
+      "concept_name": "SensoryPackageSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "SensoryPackageSchema",
+        "source_file_path": "schemas/delve.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/combatantschema-schemas-encounter-ts",
+      "concept_name": "CombatantSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "CombatantSchema",
+        "source_file_path": "schemas/encounter.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/combatencounterbalancerconfigschema-schemas-encounters-index-ts",
+      "concept_name": "CombatEncounterBalancerConfigSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "CombatEncounterBalancerConfigSchema",
+        "source_file_path": "schemas/encounters/index.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/clockeventschema-schemas-faction-ts",
+      "concept_name": "ClockEventSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "ClockEventSchema",
+        "source_file_path": "schemas/faction.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/index-schemas-index-ts",
+      "concept_name": "index",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "index",
+        "source_file_path": "schemas/index.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/lootschema-schemas-loot-ts",
+      "concept_name": "LootSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "LootSchema",
+        "source_file_path": "schemas/loot.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/loreentryschema-schemas-lore-ts",
+      "concept_name": "LoreEntrySchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "LoreEntrySchema",
+        "source_file_path": "schemas/lore.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/minornpcdetailsschema-schemas-npc-ts",
+      "concept_name": "MinorNpcDetailsSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "MinorNpcDetailsSchema",
+        "source_file_path": "schemas/npc.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/jobpostschema-schemas-tavern-ts",
+      "concept_name": "JobPostSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "JobPostSchema",
+        "source_file_path": "schemas/tavern.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/trapruleschema-schemas-trap-ts",
+      "concept_name": "TrapRuleSchema",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "TrapRuleSchema",
+        "source_file_path": "schemas/trap.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "adventure-generator/historystore-stores-historystore-ts",
+      "concept_name": "historyStore",
+      "donor": "adventure_generator",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "historyStore",
+        "source_file_path": "stores/historyStore.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    }
+  ],
+  "fragments": [
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/artifact-artifact-md",
+      "concept_name": "Artifact",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Artifact > **Schema Class:** Entity ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Artifact",
+        "source_file_path": "Artifact.md"
+      },
+      "relative_path": "Artifact.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/campaign-campaign-md",
+      "concept_name": "Campaign",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Campaign ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Campaign",
+        "source_file_path": "Campaign.md"
+      },
+      "relative_path": "Campaign.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/character-character-md",
+      "concept_name": "Character",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Character ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Character",
+        "source_file_path": "Character.md"
+      },
+      "relative_path": "Character.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/faction-faction-md",
+      "concept_name": "Faction",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Faction ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Faction",
+        "source_file_path": "Faction.md"
+      },
+      "relative_path": "Faction.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/item-item-md",
+      "concept_name": "Item",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Item ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Item",
+        "source_file_path": "Item.md"
+      },
+      "relative_path": "Item.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/landmark-landmark-md",
+      "concept_name": "Landmark",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Landmark ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Landmark",
+        "source_file_path": "Landmark.md"
+      },
+      "relative_path": "Landmark.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/npc-npc-md",
+      "concept_name": "NPC",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# NPC ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "NPC",
+        "source_file_path": "NPC.md"
+      },
+      "relative_path": "NPC.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/region-region-md",
+      "concept_name": "Region",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Region ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached to the UUID. - Projection:",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [
+          "location",
+          "region",
+          "site"
+        ],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Region",
+        "source_file_path": "Region.md"
+      },
+      "relative_path": "Region.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/settlement-settlement-md",
+      "concept_name": "Settlement",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# Settlement — Template & Field Reference ## Container Model - UUID container: the persistent entity instance that the UI projects. - Schema binding: explicit and versioned; see `UUID_CONTAINER_ARCHITECTURE.md`. - Event behavior: append-only history is attached",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Settlement",
+        "source_file_path": "Settlement.md"
+      },
+      "relative_path": "Settlement.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "identity-history",
+      "concept_id": "mythforge/uuid-container-architecture-uuid-container-architecture-md",
+      "concept_name": "UUID_CONTAINER_ARCHITECTURE",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# UUID Container Architecture > **Status:** Canonical > **Scope:** UUID containers, schema binding, append-only events, schema migration, and projection > **Audience:** Architect agent, schema authors, and UI/runtime implementers ## Purpose Mythforge needs one model that can",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [
+          "world",
+          "container",
+          "root-world"
+        ],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+        "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+      },
+      "relative_path": "UUID_CONTAINER_ARCHITECTURE.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "identity-history",
+      "concept_id": "mythforge/uuid-container-implementation-plan-uuid-container-implementation-plan-md",
+      "concept_name": "UUID_CONTAINER_IMPLEMENTATION_PLAN",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# UUID Container Implementation Plan > **Status:** Draft > **Scope:** `src/lib/schema`, file-authoring UI, UUID container state, event projection, migrations, and per-category doc normalization > **Depends on:** [UUID Container Architecture](./UUID_CONTAINER_ARCHITECTURE.md) ## Goal Build one coherent system for",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [
+          "world",
+          "container",
+          "root-world"
+        ],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "UUID_CONTAINER_IMPLEMENTATION_PLAN",
+        "source_file_path": "UUID_CONTAINER_IMPLEMENTATION_PLAN.md"
+      },
+      "relative_path": "UUID_CONTAINER_IMPLEMENTATION_PLAN.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-profile",
+      "concept_id": "orbis/abstimeschema-contracts-data-contracts-ts",
+      "concept_name": "AbsTimeSchema",
+      "declared_symbols": [
+        "AbsTimeSchema",
+        "AbsTime",
+        "DomainIdSchema",
+        "DomainModeSchema",
+        "SimEventSchema",
+        "SimEvent",
+        "WORKER_JOB_KINDS",
+        "WorkerJobKindV1",
+        "WorkerJobKindSchema",
+        "SIM_WORKER_PRIORITIES",
+        "SimWorkerPriorityV1",
+        "SimWorkerPrioritySchema",
+        "SimWorkerRequestV1Schema",
+        "SimWorkerRequestV1",
+        "SIM_WORKER_STATUSES",
+        "SimWorkerStatusV1",
+        "SimWorkerStatusSchema",
+        "SimWorkerResponseV1Schema",
+        "SimWorkerResponseV1",
+        "ORBIS_DOMAIN_IDS",
+        "OrbisDomainId",
+        "OrbisDomainIdSchema",
+        "ORBIS_DOMAIN_FIDELITIES",
+        "OrbisDomainFidelity",
+        "OrbisDomainFidelitySchema",
+        "ORBIS_DOMAIN_TICK_MODES",
+        "OrbisDomainTickMode",
+        "OrbisDomainTickModeSchema",
+        "DASHBOARD_MODES",
+        "DashboardMode",
+        "DashboardModeSchema",
+        "OrbisDomainConfigSchema",
+        "OrbisDomainConfig",
+        "SimulationLayerToggleSchema",
+        "SimulationLayerToggle",
+        "OrbisWorldProfileSchema",
+        "OrbisWorldProfile",
+        "DEFAULT_DOMAIN_CONFIGS",
+        "buildDomainConfigs",
+        "normalizeWorldProfile"
+      ],
+      "donor": "orbis",
+      "excerpt": "import { z } from 'zod'; export const AbsTimeSchema = z.bigint().nonnegative(); export type AbsTime = z.infer<typeof AbsTimeSchema>; export enum DomainId { CORE_TIME = 0, PLANET_PHYSICS = 10, CLIMATE = 20, HYDROLOGY = 30, BIOSPHERE_CAPACITY = 40,",
+      "promotion_class": "simulation",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "simulation",
+        "source_concept_name": "AbsTimeSchema",
+        "source_file_path": "contracts/data-contracts.ts"
+      },
+      "relative_path": "contracts/data-contracts.ts",
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-snapshot",
+      "concept_id": "orbis/buildclimatesnapshot-domains-climate-ts",
+      "concept_name": "buildClimateSnapshot",
+      "declared_symbols": [
+        "ClimateState",
+        "ClimateSolver",
+        "ZonalClimateModel",
+        "buildClimateSnapshot"
+      ],
+      "donor": "orbis",
+      "excerpt": "import type { ClimateConfig, ClimateSnapshot, SimulationReasonCode } from '../kernel/contracts'; export interface ClimateState { temperature: number; albedo: number; solarConstant: number; stefanBoltzmann: number; } export class ClimateSolver { private readonly defaultStefanBoltzmann = 5.67e-8; private readonly defaultSolarConstant = 1361;",
+      "promotion_class": "simulation",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "simulation",
+        "source_concept_name": "buildClimateSnapshot",
+        "source_file_path": "domains/climate.ts"
+      },
+      "relative_path": "domains/climate.ts",
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-domain",
+      "concept_id": "orbis/genesis-domains-genesis-ts",
+      "concept_name": "genesis",
+      "declared_symbols": [
+        "GenesisKernel"
+      ],
+      "donor": "orbis",
+      "excerpt": "import xxhash from 'xxhash-wasm'; import type { GenesisInitRequest, GenesisInitResult, SimulationEventEnvelope } from '../kernel/contracts'; const GENESIS_REASON_CODE = 'ORBIS.GENESIS.INIT'; export class GenesisKernel { private static hasher: Awaited<ReturnType<typeof xxhash>> | null = null; static async init(): Promise<void> { if",
+      "promotion_class": "simulation",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "simulation",
+        "source_concept_name": "genesis",
+        "source_file_path": "domains/genesis.ts"
+      },
+      "relative_path": "domains/genesis.ts",
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-contract",
+      "concept_id": "orbis/voxel-domains-voxel-ts",
+      "concept_name": "voxel",
+      "declared_symbols": [],
+      "donor": "orbis",
+      "excerpt": "export * from '../../src/world/voxel';",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "voxel",
+        "source_file_path": "domains/voxel.ts"
+      },
+      "relative_path": "domains/voxel.ts",
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "entity-template",
+      "concept_id": "mythforge/index-index-md",
+      "concept_name": "index",
+      "declared_symbols": [],
+      "donor": "mythforge",
+      "excerpt": "# MythosForge Schema Templates > **Status:** Canonical > **Scope:** Category schemas, prompt skeletons, workflow notes, samples, and runtime mapping This folder is the canonical source for Mythforge category schema templates. It defines the schema layer, the",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "index",
+        "source_file_path": "index.md"
+      },
+      "relative_path": "index.md",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-snapshot",
+      "concept_id": "orbis/climatesnapshot-kernel-contracts-ts",
+      "concept_name": "ClimateSnapshot",
+      "declared_symbols": [
+        "SimulationReasonCode",
+        "SimulationEventEnvelope",
+        "GenesisInitRequest",
+        "DomainSeeds",
+        "GenesisInitResult",
+        "ClimateConfig",
+        "ClimateSnapshot",
+        "DomainRuntimeState",
+        "DomainRuntimeStatus",
+        "SimulationSnapshot",
+        "OrbisKernelState",
+        "DashboardHeaderViewModel",
+        "AuditLogEntry"
+      ],
+      "donor": "orbis",
+      "excerpt": "import type { DashboardMode, OrbisDomainConfig, OrbisDomainFidelity, OrbisDomainId, OrbisWorldProfile, SimulationLayerToggle, } from '../contracts/data-contracts'; export type SimulationReasonCode = | 'ORBIS.GENESIS.INIT' | 'ORBIS.CLIMATE.INIT' | 'ORBIS.CLIMATE.STEP' | 'ORBIS.DOMAIN.DISABLED'; export interface SimulationEventEnvelope { id: string; worldId: string; domain: OrbisDomainId | 'core';",
+      "promotion_class": "simulation",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "simulation",
+        "source_concept_name": "ClimateSnapshot",
+        "source_file_path": "kernel/contracts.ts"
+      },
+      "relative_path": "kernel/contracts.ts",
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-contract",
+      "concept_id": "orbis/orbis-kernel-kernel-orbis-kernel-ts",
+      "concept_name": "orbis-kernel",
+      "declared_symbols": [
+        "OrbisKernel"
+      ],
+      "donor": "orbis",
+      "excerpt": "import type { OrbisDomainId, OrbisWorldProfile } from '../contracts/data-contracts'; import { buildDomainConfigs, normalizeWorldProfile } from '../contracts/data-contracts'; import { buildDashboardViewModel } from '../dashboard-components/view-model'; import { ClimateSolver, buildClimateSnapshot } from '../domains/climate'; import { GenesisKernel } from '../domains/genesis'; import type",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "orbis-kernel",
+        "source_file_path": "kernel/orbis-kernel.ts"
+      },
+      "relative_path": "kernel/orbis-kernel.ts",
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/arcane-schema-schemas-arcane-schema-json",
+      "concept_name": "Arcane.schema",
+      "declared_symbols": [
+        "Arcane Artifact"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Arcane Artifact\", \"description\": \"Container vocabulary: the Arcane Artifact payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.\", \"type\": \"object\", \"required\": [",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Arcane.schema",
+        "source_file_path": "schemas/Arcane.schema.json"
+      },
+      "relative_path": "schemas/Arcane.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/artifact-schema-schemas-artifact-schema-json",
+      "concept_name": "Artifact.schema",
+      "declared_symbols": [
+        "Artifact"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Artifact\", \"description\": \"Container vocabulary: the Artifact payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.\",",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Artifact.schema",
+        "source_file_path": "schemas/Artifact.schema.json"
+      },
+      "relative_path": "schemas/Artifact.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/artifactenvelope-schema-schemas-artifactenvelope-schema-json",
+      "concept_name": "ArtifactEnvelope.schema",
+      "declared_symbols": [
+        "Artifact Envelope"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Artifact Envelope\", \"description\": \"Container vocabulary: the Generic Artifact payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "ArtifactEnvelope.schema",
+        "source_file_path": "schemas/ArtifactEnvelope.schema.json"
+      },
+      "relative_path": "schemas/ArtifactEnvelope.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/coremysteryelements-schema-schemas-coremysteryelements-schema-json",
+      "concept_name": "CoreMysteryElements.schema",
+      "declared_symbols": [
+        "CoreMysteryElements"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"CoreMysteryElements\", \"description\": \"Container vocabulary: the Core Mystery Elements payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.\", \"type\": \"object\", \"required\": [",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "CoreMysteryElements.schema",
+        "source_file_path": "schemas/CoreMysteryElements.schema.json"
+      },
+      "relative_path": "schemas/CoreMysteryElements.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/dungeonassembly-schema-schemas-dungeonassembly-schema-json",
+      "concept_name": "DungeonAssembly.schema",
+      "declared_symbols": [
+        "Dungeon Assembly"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Dungeon Assembly\", \"description\": \"A fully assembled dungeon built from modular DungeonPart bricks. The dungeon field is the container; parts[] are the lego bricks. Container vocabulary: the Dungeon Assembly payload is the projection",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "DungeonAssembly.schema",
+        "source_file_path": "schemas/DungeonAssembly.schema.json"
+      },
+      "relative_path": "schemas/DungeonAssembly.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/dungeonpart-schema-schemas-dungeonpart-schema-json",
+      "concept_name": "DungeonPart.schema",
+      "declared_symbols": [
+        "Dungeon Part"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Dungeon Part\", \"description\": \"A single modular dungeon element — room, corridor, feature, concept, or layout note. Parts snap together to form any dungeon topology. Container vocabulary: the Dungeon Part payload is the",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "DungeonPart.schema",
+        "source_file_path": "schemas/DungeonPart.schema.json"
+      },
+      "relative_path": "schemas/DungeonPart.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/heistenvelope-schema-schemas-heistenvelope-schema-json",
+      "concept_name": "HeistEnvelope.schema",
+      "declared_symbols": [
+        "Heist Envelope"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Heist Envelope\", \"description\": \"Container vocabulary: the Heist Plan payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "HeistEnvelope.schema",
+        "source_file_path": "schemas/HeistEnvelope.schema.json"
+      },
+      "relative_path": "schemas/HeistEnvelope.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/heistplan-schema-schemas-heistplan-schema-json",
+      "concept_name": "HeistPlan.schema",
+      "declared_symbols": [
+        "HeistPlan"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"HeistPlan\", \"description\": \"Container vocabulary: the Heist Plan payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "HeistPlan.schema",
+        "source_file_path": "schemas/HeistPlan.schema.json"
+      },
+      "relative_path": "schemas/HeistPlan.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/matrix-schema-schemas-matrix-schema-json",
+      "concept_name": "Matrix.schema",
+      "declared_symbols": [
+        "Matrix"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Matrix\", \"description\": \"Container vocabulary: the Matrix payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.\",",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Matrix.schema",
+        "source_file_path": "schemas/Matrix.schema.json"
+      },
+      "relative_path": "schemas/Matrix.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/matrixenvelope-schema-schemas-matrixenvelope-schema-json",
+      "concept_name": "MatrixEnvelope.schema",
+      "declared_symbols": [
+        "Matrix Envelope"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Matrix Envelope\", \"description\": \"Container vocabulary: the Matrix payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope retained",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "MatrixEnvelope.schema",
+        "source_file_path": "schemas/MatrixEnvelope.schema.json"
+      },
+      "relative_path": "schemas/MatrixEnvelope.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/mysterynode-schema-schemas-mysterynode-schema-json",
+      "concept_name": "MysteryNode.schema",
+      "declared_symbols": [
+        "Mystery Node"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Mystery Node\", \"description\": \"Container vocabulary: the Mystery Node payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.\", \"type\": \"object\", \"required\": [",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [
+          "entity",
+          "node",
+          "object"
+        ],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "MysteryNode.schema",
+        "source_file_path": "schemas/MysteryNode.schema.json"
+      },
+      "relative_path": "schemas/MysteryNode.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/nodeconnections-schema-schemas-nodeconnections-schema-json",
+      "concept_name": "NodeConnections.schema",
+      "declared_symbols": [
+        "NodeConnections"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"NodeConnections\", \"description\": \"Container vocabulary: the Node Connections payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [
+          "entity",
+          "node",
+          "object"
+        ],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "NodeConnections.schema",
+        "source_file_path": "schemas/NodeConnections.schema.json"
+      },
+      "relative_path": "schemas/NodeConnections.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/nodeconnectionsenvelope-schema-schemas-nodeconnectionsenvelope-schema-json",
+      "concept_name": "NodeConnectionsEnvelope.schema",
+      "declared_symbols": [
+        "Node Connections Envelope"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Node Connections Envelope\", \"description\": \"Container vocabulary: the Node Connections payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [
+          "entity",
+          "node",
+          "object"
+        ],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "NodeConnectionsEnvelope.schema",
+        "source_file_path": "schemas/NodeConnectionsEnvelope.schema.json"
+      },
+      "relative_path": "schemas/NodeConnectionsEnvelope.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/quest-mission-schema-schemas-quest-schema-json",
+      "concept_name": "Quest / Mission Schema",
+      "declared_symbols": [
+        "Quest / Mission Schema"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Quest / Mission Schema\", \"description\": \"Container vocabulary: the Quest / Mission Schema payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.\",",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Quest / Mission Schema",
+        "source_file_path": "schemas/Quest.schema.json"
+      },
+      "relative_path": "schemas/Quest.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/table-schema-schemas-table-schema-json",
+      "concept_name": "Table.schema",
+      "declared_symbols": [
+        "Table"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Table\", \"description\": \"Container vocabulary: the Table payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.\",",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "Table.schema",
+        "source_file_path": "schemas/Table.schema.json"
+      },
+      "relative_path": "schemas/Table.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/tableenvelope-schema-schemas-tableenvelope-schema-json",
+      "concept_name": "TableEnvelope.schema",
+      "declared_symbols": [
+        "Table Envelope"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Table Envelope\", \"description\": \"Container vocabulary: the Table payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope retained",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "TableEnvelope.schema",
+        "source_file_path": "schemas/TableEnvelope.schema.json"
+      },
+      "relative_path": "schemas/TableEnvelope.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "schema-contract",
+      "concept_id": "mythforge/vividdescription-schema-schemas-vividdescription-schema-json",
+      "concept_name": "VividDescription.schema",
+      "declared_symbols": [
+        "Vivid Description"
+      ],
+      "donor": "mythforge",
+      "excerpt": "{ \"$schema\": \"http://json-schema.org/draft-07/schema#\", \"title\": \"Vivid Description\", \"description\": \"A sensory-rich rewrite of a bland description. Container vocabulary: the Vivid Description payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live",
+      "promotion_class": "core",
+      "provenance": {
+        "alias_history": [],
+        "donor": "mythforge",
+        "promotion_class": "core",
+        "source_concept_name": "VividDescription.schema",
+        "source_file_path": "schemas/VividDescription.schema.json"
+      },
+      "relative_path": "schemas/VividDescription.schema.json",
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/simpleadventureschema-schemas-adventure-ts",
+      "concept_name": "SimpleAdventureSchema",
+      "declared_symbols": [
+        "SimpleAdventureSchema",
+        "DetailedAdventureSchema",
+        "GeneratedAdventureSchema",
+        "SimpleAdventure",
+        "DetailedAdventure",
+        "GeneratedAdventure",
+        "AdventureOutlineSchema",
+        "AdventureOutline"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { SceneSchema } from \"./scene\"; import { LocationSchema } from \"./location\"; import { NpcSchema } from \"./npc\"; import { FactionSchema } from \"./faction\"; // --- Adventure Hooks --- export",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "SimpleAdventureSchema",
+        "source_file_path": "schemas/adventure.ts"
+      },
+      "relative_path": "schemas/adventure.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/airequestentryschema-schemas-ailedger-ts",
+      "concept_name": "AiRequestEntrySchema",
+      "declared_symbols": [
+        "AiRequestEntrySchema",
+        "AiRequestEntry"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from 'zod'; export const AiRequestEntrySchema = z.object({ id: z.string().uuid(), timestamp: z.date(), input: z.string(), output: z.string(), model: z.string(), provider: z.enum(['gemini', 'ollama', 'dummy', 'unknown']).default('unknown'), estimatedInputTokens: z.number().default(0), estimatedOutputTokens: z.number().default(0), cost: z.number().default(0), details: z.record(z.any()).optional(), }); export",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "AiRequestEntrySchema",
+        "source_file_path": "schemas/aiLedger.ts"
+      },
+      "relative_path": "schemas/aiLedger.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "location-linkage",
+      "concept_id": "adventure-generator/campaignconfigurationschema-schemas-campaign-ts",
+      "concept_name": "CampaignConfigurationSchema",
+      "declared_symbols": [
+        "CampaignConfigurationSchema",
+        "CampaignStateExportSchema"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from 'zod'; import { SavedMonsterSchema } from './npc'; import { BiomeDataSchema } from './location'; export const CampaignConfigurationSchema = z.object({ language: z.string().optional(), genre: z.string().optional(), ruleset: z.string().optional(), crRange: z.string().optional(), tone: z.string().optional(), complexity: z.string().optional(), artStyle:",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "CampaignConfigurationSchema",
+        "source_file_path": "schemas/campaign.ts"
+      },
+      "relative_path": "schemas/campaign.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/locationtypeenum-schemas-common-ts",
+      "concept_name": "LocationTypeEnum",
+      "declared_symbols": [
+        "BiomeTypeEnum",
+        "LocationTypeEnum",
+        "DiscoveryStatusEnum",
+        "NpcTypeEnum",
+        "FactionCategoryEnum",
+        "SceneTypeEnum",
+        "DateSchema",
+        "IdSchema",
+        "OriginContextSchema",
+        "OriginContext"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; // --- Shared Enums --- export const BiomeTypeEnum = z.enum([ 'arctic', 'coastal', 'desert', 'forest', 'grassland', 'hill', 'jungle', 'mountain', 'swamp', 'underdark', 'underwater', 'urban', 'planar', 'wasteland', 'volcanic', 'ocean', 'lake' ]); export const",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [
+          "location",
+          "region",
+          "site"
+        ],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "LocationTypeEnum",
+        "source_file_path": "schemas/common.ts"
+      },
+      "relative_path": "schemas/common.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/compendiumstateexportschema-schemas-compendium-ts",
+      "concept_name": "CompendiumStateExportSchema",
+      "declared_symbols": [
+        "CompendiumStateExportSchema"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from 'zod'; import { LoreEntrySchema, CompendiumEntrySchema } from './lore'; export const CompendiumStateExportSchema = z.object({ loreEntries: z.array(LoreEntrySchema).optional().default([]), compendiumEntries: z.array(CompendiumEntrySchema).optional().default([]), });",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "CompendiumStateExportSchema",
+        "source_file_path": "schemas/compendium.ts"
+      },
+      "relative_path": "schemas/compendium.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/sensorypackageschema-schemas-delve-ts",
+      "concept_name": "SensoryPackageSchema",
+      "declared_symbols": [
+        "DelveThemeEnum",
+        "DelveRoomTypeEnum",
+        "MonsterTierEnum",
+        "DelveViewStateEnum",
+        "SensoryPackageSchema",
+        "MechanicsPackageSchema",
+        "DelveSceneNodeSchema",
+        "DelveConceptSchema",
+        "DelveSchema"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from 'zod'; export const DelveThemeEnum = z.enum(['crypt', 'ruin', 'cavern', 'tower', 'sewer', 'haunted_mansion']); export const DelveRoomTypeEnum = z.enum(['guardian', 'puzzle', 'trick', 'climax', 'reward']); export const MonsterTierEnum = z.enum(['tier1', 'tier2', 'tier3', 'tier4']); export const DelveViewStateEnum",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "SensoryPackageSchema",
+        "source_file_path": "schemas/delve.ts"
+      },
+      "relative_path": "schemas/delve.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/combatantschema-schemas-encounter-ts",
+      "concept_name": "CombatantSchema",
+      "declared_symbols": [
+        "ConditionEnum",
+        "CombatantTypeEnum",
+        "CombatantSchema",
+        "Combatant",
+        "Condition",
+        "EncounterStageEnum",
+        "EncounterStage",
+        "EncounterSensorySchema",
+        "EncounterSensory",
+        "EncounterMonsterSchema",
+        "EncounterMechanicsSchema",
+        "EncounterMechanics",
+        "EncounterSceneNodeSchema",
+        "EncounterSceneNode",
+        "EncounterWorkflowStateSchema",
+        "EncounterWorkflowState",
+        "AINarrativeResponseSchema",
+        "AINarrativeResponse",
+        "FactionContextSchema",
+        "FactionContext",
+        "FactionImpactSchema",
+        "FactionImpact",
+        "EncounterOutcomeSchema",
+        "EncounterOutcome",
+        "EncounterWithFactionsSchema",
+        "EncounterWithFactions",
+        "EncounterTacticSchema",
+        "EncounterTactic"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { IdSchema } from \"./common\"; export const ConditionEnum = z.enum([ \"Blinded\", \"Charmed\", \"Deafened\", \"Frightened\", \"Grappled\", \"Incapacitated\", \"Invisible\", \"Paralyzed\", \"Petrified\", \"Poisoned\", \"Prone\", \"Restrained\", \"Stunned\", \"Unconscious\", \"Exhaustion\" ]); export const CombatantTypeEnum",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "CombatantSchema",
+        "source_file_path": "schemas/encounter.ts"
+      },
+      "relative_path": "schemas/encounter.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/combatencounterbalancerconfigschema-schemas-encounters-index-ts",
+      "concept_name": "CombatEncounterBalancerConfigSchema",
+      "declared_symbols": [
+        "CombatEncounterBalancerConfigSchema",
+        "CombatEncounterBalancerConfig",
+        "CombatEncounterBalancerResultSchema",
+        "CombatEncounterBalancerResult",
+        "CombatEncounterV2ConfigSchema",
+        "CombatEncounterV2Config",
+        "CombatEncounterV2ResultSchema",
+        "CombatEncounterV2Result",
+        "CombatEncounterConfigSchema",
+        "CombatEncounterConfig",
+        "CombatEncounterResultSchema",
+        "CombatEncounterResult",
+        "EncounterdesignOlderV1ConfigSchema",
+        "EncounterdesignOlderV1Config",
+        "EncounterdesignOlderV1ResultSchema",
+        "EncounterdesignOlderV1Result",
+        "EncounterdesignV1ConfigSchema",
+        "EncounterdesignV1Config",
+        "EncounterdesignV1ResultSchema",
+        "EncounterdesignV1Result",
+        "EncounterdesignV1DeprecatedConfigSchema",
+        "EncounterdesignV1DeprecatedConfig",
+        "EncounterdesignV1DeprecatedResultSchema",
+        "EncounterdesignV1DeprecatedResult",
+        "EncounterGenricBetaConfigSchema",
+        "EncounterGenricBetaConfig",
+        "EncounterGenricBetaResultSchema",
+        "EncounterGenricBetaResult",
+        "RpgadventureScenecraftingV1ConfigSchema",
+        "RpgadventureScenecraftingV1Config",
+        "RpgadventureScenecraftingV1ResultSchema",
+        "RpgadventureScenecraftingV1Result",
+        "SocialEventConfigSchema",
+        "SocialEventConfig",
+        "SocialEventResultSchema",
+        "SocialEventResult",
+        "TrapPrepConfigSchema",
+        "TrapPrepConfig",
+        "TrapPrepResultSchema",
+        "TrapPrepResult",
+        "UrbanCrawlConfigSchema",
+        "UrbanCrawlConfig",
+        "UrbanCrawlResultSchema",
+        "UrbanCrawlResult"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from 'zod'; export const CombatEncounterBalancerConfigSchema = z.object({ title: z.string().describe('The title of the encounter'), level: z.number().int().default(1), }); export type CombatEncounterBalancerConfig = z.infer<typeof CombatEncounterBalancerConfigSchema>; export const CombatEncounterBalancerResultSchema = z.object({ description: z.string().describe('Sensory description'), }); export",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "CombatEncounterBalancerConfigSchema",
+        "source_file_path": "schemas/encounters/index.ts"
+      },
+      "relative_path": "schemas/encounters/index.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/clockeventschema-schemas-faction-ts",
+      "concept_name": "ClockEventSchema",
+      "declared_symbols": [
+        "ClockEventSchema",
+        "ClockEvent",
+        "ResolutionMethodEnum",
+        "ResolutionMethod",
+        "FactionClockSchema",
+        "FactionClock",
+        "FactionDetailsSchema",
+        "FactionSchema",
+        "Faction",
+        "FactionDetails"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { IdSchema, FactionCategoryEnum } from \"./common\"; export { FactionCategoryEnum }; // ClockEvent Schema - For tracking progress events on clocks export const ClockEventSchema = z.object({ segment: z.number().int().min(1), description: z.string(),",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "ClockEventSchema",
+        "source_file_path": "schemas/faction.ts"
+      },
+      "relative_path": "schemas/faction.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "workflow-schema",
+      "concept_id": "adventure-generator/loadingstateschema-schemas-generator-ts",
+      "concept_name": "LoadingStateSchema",
+      "declared_symbols": [
+        "LoadingStateSchema",
+        "LoadingState",
+        "DetailingEntitySchema",
+        "DetailingEntity",
+        "GenerationHistorySchema",
+        "GenerationHistory",
+        "GeneratorStateSchema",
+        "GeneratorState",
+        "GeneratorStateCleanedSchema",
+        "GeneratorStateCleaned"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { DateSchema, IdSchema, SceneTypeEnum } from \"./common\"; import { GeneratedAdventureSchema } from \"./adventure\"; import { SceneSchema, SceneDetailsSchema } from \"./scene\"; import { LocationSchema, LocationDetailsSchema } from \"./location\"; import {",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "LoadingStateSchema",
+        "source_file_path": "schemas/generator.ts"
+      },
+      "relative_path": "schemas/generator.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/index-schemas-index-ts",
+      "concept_name": "index",
+      "declared_symbols": [],
+      "donor": "adventure_generator",
+      "excerpt": "export * from './common'; export * from './location'; export * from './campaign'; export * from './compendium'; export * from './session'; export * from './delve'; export * from './npc'; export * from './faction'; export * from './scene';",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "index",
+        "source_file_path": "schemas/index.ts"
+      },
+      "relative_path": "schemas/index.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "location-linkage",
+      "concept_id": "adventure-generator/hexcoordinateschema-schemas-location-ts",
+      "concept_name": "HexCoordinateSchema",
+      "declared_symbols": [
+        "LayerTypeEnum",
+        "LayerType",
+        "HexCoordinateSchema",
+        "HexCoordinate",
+        "DungeonRoomSchema",
+        "DungeonDetailsSchema",
+        "BattlefieldSchema",
+        "BattlemapDetailsSchema",
+        "SettlementDetailsSchema",
+        "SpecialLocationDetailsSchema",
+        "LocationDetailsSchema",
+        "LocationDetails",
+        "LocationSchema",
+        "Location",
+        "ManagedLocationSchema",
+        "ManagedLocation",
+        "BoundingBoxSchema",
+        "RegionSchema",
+        "Region",
+        "WorldMapSchema",
+        "WorldMap",
+        "LayerThemeSchema",
+        "MapLayerSchema",
+        "ViewSettingsSchema",
+        "LocationStateExportSchema",
+        "BiomeEncounterDataSchema",
+        "BiomeDataSchema"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { BiomeTypeEnum, DateSchema, DiscoveryStatusEnum, IdSchema, LocationTypeEnum } from \"./common\"; export { LocationTypeEnum }; export const LayerTypeEnum = z.enum(['surface', 'underdark', 'feywild', 'shadowfell', 'elemental', 'custom']); export type LayerType = z.infer<typeof LayerTypeEnum>;",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "HexCoordinateSchema",
+        "source_file_path": "schemas/location.ts"
+      },
+      "relative_path": "schemas/location.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/lootschema-schemas-loot-ts",
+      "concept_name": "LootSchema",
+      "declared_symbols": [
+        "LootDials",
+        "RawLootItem",
+        "RawLootResult",
+        "LootSchema",
+        "Loot"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; // --- Dials (Input) --- export interface LootDials { partyLevel: number; lootValue: 'poor' | 'standard' | 'rich' | 'hoard'; magicDensity: number; // 0.0 - 1.0 rarityBias: 'mundane' | 'balanced' |",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "LootSchema",
+        "source_file_path": "schemas/loot.ts"
+      },
+      "relative_path": "schemas/loot.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/loreentryschema-schemas-lore-ts",
+      "concept_name": "LoreEntrySchema",
+      "declared_symbols": [
+        "LoreTypeEnum",
+        "CompendiumCategoryEnum",
+        "VisibilityEnum",
+        "ImportanceEnum",
+        "LoreEntrySchema",
+        "LoreEntry",
+        "CompendiumEntrySchema",
+        "CompendiumEntry"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { IdSchema, DateSchema, OriginContextSchema } from \"./common\"; // --- Enums --- export const LoreTypeEnum = z.enum([ 'legend', 'history', 'culture', 'religion', 'organization', 'custom' ]); export const CompendiumCategoryEnum = z.enum([ 'npc',",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "LoreEntrySchema",
+        "source_file_path": "schemas/lore.ts"
+      },
+      "relative_path": "schemas/lore.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/minornpcdetailsschema-schemas-npc-ts",
+      "concept_name": "MinorNpcDetailsSchema",
+      "declared_symbols": [
+        "MinorNpcDetailsSchema",
+        "MajorNpcDetailsSchema",
+        "CreatureDetailsSchema",
+        "NpcDetailsSchema",
+        "NpcDetails",
+        "NpcSchema",
+        "NPC",
+        "SavedMonsterSchema",
+        "SavedMonster",
+        "NpcPersonaSchema",
+        "NpcPersona"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { IdSchema, NpcTypeEnum, OriginContextSchema } from \"./common\"; export { NpcTypeEnum }; // --- NPC Details Sub-schemas --- export const MinorNpcDetailsSchema = z.object({ race: z.string(), name: z.string(), gender: z.string(), sexualPreference:",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "MinorNpcDetailsSchema",
+        "source_file_path": "schemas/npc.ts"
+      },
+      "relative_path": "schemas/npc.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "location-linkage",
+      "concept_id": "adventure-generator/scenedetailsschema-schemas-scene-ts",
+      "concept_name": "SceneDetailsSchema",
+      "declared_symbols": [
+        "SceneDetailsSchema",
+        "SceneSchema",
+        "Scene",
+        "SceneDetails"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; import { IdSchema, SceneTypeEnum } from \"./common\"; export { SceneTypeEnum }; export const SceneDetailsSchema = z.object({ introduction: z.string(), interactionPoints: z.array(z.string()), npcs: z.array(z.object({ name: z.string(), description: z.string(), motivation: z.string() })), dmNotes:",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "SceneDetailsSchema",
+        "source_file_path": "schemas/scene.ts"
+      },
+      "relative_path": "schemas/scene.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "workflow-schema",
+      "concept_id": "adventure-generator/sessionstatev2schema-schemas-session-ts",
+      "concept_name": "SessionStateV2Schema",
+      "declared_symbols": [
+        "SessionStateV2Schema"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from 'zod'; import { CampaignStateExportSchema } from './campaign'; import { LocationStateExportSchema } from './location'; import { CompendiumStateExportSchema } from './compendium'; import { GeneratorStateCleanedSchema } from './generator'; export const SessionStateV2Schema = z.object({ version:",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "SessionStateV2Schema",
+        "source_file_path": "schemas/session.ts"
+      },
+      "relative_path": "schemas/session.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/jobpostschema-schemas-tavern-ts",
+      "concept_name": "JobPostSchema",
+      "declared_symbols": [
+        "JobPostSchema",
+        "JobPost",
+        "OracleOutcomeSchema",
+        "OracleResponseSchema",
+        "OracleOutcome",
+        "OracleResponse"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; export const JobPostSchema = z.object({ title: z.string().describe(\"A catchy title for the job posting\"), summary: z.string().describe(\"The core description of the task or quest\"), complications: z.array(z.string()).describe(\"Potential twists or difficulties\"), rewards: z.array(z.string()).describe(\"Payment, loot,",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "JobPostSchema",
+        "source_file_path": "schemas/tavern.ts"
+      },
+      "relative_path": "schemas/tavern.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/trapruleschema-schemas-trap-ts",
+      "concept_name": "TrapRuleSchema",
+      "declared_symbols": [
+        "TrapTierEnum",
+        "TrapRuleSchema",
+        "TrapCountermeasuresSchema",
+        "GeneratedTrapSchema",
+        "TrapTier",
+        "TrapRule",
+        "GeneratedTrap"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { z } from \"zod\"; export const TrapTierEnum = z.enum(['1-4', '5-10', '11-16', '17-20']); export const TrapRuleSchema = z.object({ type: z.enum(['Attack Roll', 'Saving Throw']), stat: z.enum(['Strength', 'Dexterity', 'Constitution', 'Wisdom']).optional(), dc: z.number().int().optional(), attackBonus: z.number().int().optional(), damage: z.string(), condition:",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "TrapRuleSchema",
+        "source_file_path": "schemas/trap.ts"
+      },
+      "relative_path": "schemas/trap.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "domain-schema",
+      "concept_id": "adventure-generator/historystore-stores-historystore-ts",
+      "concept_name": "historyStore",
+      "declared_symbols": [
+        "HistoryState",
+        "HistoryActions",
+        "useHistoryStore"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { create } from 'zustand'; import { GenerationHistory } from '../schemas'; import { generateId } from '../utils/helpers'; import { CONFIG } from '../data/constants'; import { useWorkflowStore } from './workflowStore'; import { useAdventureDataStore } from './adventureDataStore';",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "adventure_generator",
+        "promotion_class": "reference_only",
+        "source_concept_name": "historyStore",
+        "source_file_path": "stores/historyStore.ts"
+      },
+      "relative_path": "stores/historyStore.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "workflow-schema",
+      "concept_id": "adventure-generator/workflowstate-stores-workflowstore-ts",
+      "concept_name": "WorkflowState",
+      "declared_symbols": [
+        "WorkflowState",
+        "WorkflowActions",
+        "useWorkflowStore"
+      ],
+      "donor": "adventure_generator",
+      "excerpt": "import { create } from 'zustand'; import { GeneratorState, LoadingState, DetailingEntity } from '../schemas'; import { GeneratedAdventure } from '../schemas'; import { useCampaignStore } from './campaignStore'; import { useCompendiumStore } from './compendiumStore'; import { useGeneratorConfigStore }",
+      "promotion_class": "workflow",
+      "provenance": {
+        "alias_history": [
+          "workflow",
+          "activity",
+          "session-flow"
+        ],
+        "donor": "adventure_generator",
+        "promotion_class": "workflow",
+        "source_concept_name": "WorkflowState",
+        "source_file_path": "stores/workflowStore.ts"
+      },
+      "relative_path": "stores/workflowStore.ts",
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src",
+      "ui_surface": false
+    }
+  ],
+  "manifests": [
+    {
+      "default_promotion_class": "workflow",
+      "donor": "adventure_generator",
+      "excluded_paths": [
+        "components",
+        "tests",
+        "lib"
+      ],
+      "expected_concept_families": [
+        "workflow-schema",
+        "location-linkage",
+        "domain-schema"
+      ],
+      "included_paths": [
+        "schemas",
+        "stores/workflowStore.ts",
+        "stores/historyStore.ts"
+      ],
+      "source_kind": "typescript",
+      "source_root": "../../../../antigravity/dnd adventure generator/src"
+    },
+    {
+      "default_promotion_class": "core",
+      "donor": "mythforge",
+      "excluded_paths": [
+        "prompts",
+        "samples",
+        "methods"
+      ],
+      "expected_concept_families": [
+        "identity-history",
+        "schema-contract",
+        "entity-template"
+      ],
+      "included_paths": [
+        "UUID_CONTAINER_ARCHITECTURE.md",
+        "UUID_CONTAINER_IMPLEMENTATION_PLAN.md",
+        "index.md",
+        "schemas",
+        "Campaign.md",
+        "Character.md",
+        "Settlement.md",
+        "Region.md",
+        "Artifact.md",
+        "Item.md",
+        "Faction.md",
+        "NPC.md",
+        "Landmark.md"
+      ],
+      "source_kind": "schema_template",
+      "source_root": "../mythforge/docs/schema-templates"
+    },
+    {
+      "default_promotion_class": "simulation",
+      "donor": "orbis",
+      "excluded_paths": [
+        "dashboard-components",
+        "__tests__",
+        "world-model.ts",
+        "world-model-harness.ts",
+        "index.ts"
+      ],
+      "expected_concept_families": [
+        "simulation-profile",
+        "simulation-snapshot",
+        "simulation-domain",
+        "simulation-event"
+      ],
+      "included_paths": [
+        "contracts",
+        "kernel",
+        "domains"
+      ],
+      "source_kind": "typescript",
+      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime"
+    }
+  ],
+  "promoted_concepts": [
+    {
+      "adapter_mapping_key": "mythforge.world",
+      "canonical_schema_name": "WorldRecord",
+      "concept_name": "World",
+      "description": "Canonical world trunk promoted from Mythforge UUID container architecture.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "world_id",
+          "disposition": "promoted",
+          "field_name": "world_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "metadata",
+          "disposition": "promoted",
+          "field_name": "metadata",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "root_event_ledger",
+          "disposition": "promoted",
+          "field_name": "root_event_ledger",
+          "field_type": "array",
+          "notes": "Append-only event truth surface.",
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "root_schema_binding",
+          "disposition": "promoted",
+          "field_name": "root_schema_binding",
+          "field_type": "reference",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Arcane.schema",
+              "source_file_path": "schemas/Arcane.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Artifact.schema",
+              "source_file_path": "schemas/Artifact.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "ArtifactEnvelope.schema",
+              "source_file_path": "schemas/ArtifactEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "CoreMysteryElements.schema",
+              "source_file_path": "schemas/CoreMysteryElements.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonAssembly.schema",
+              "source_file_path": "schemas/DungeonAssembly.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonPart.schema",
+              "source_file_path": "schemas/DungeonPart.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistEnvelope.schema",
+              "source_file_path": "schemas/HeistEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistPlan.schema",
+              "source_file_path": "schemas/HeistPlan.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Matrix.schema",
+              "source_file_path": "schemas/Matrix.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MatrixEnvelope.schema",
+              "source_file_path": "schemas/MatrixEnvelope.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MysteryNode.schema",
+              "source_file_path": "schemas/MysteryNode.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnections.schema",
+              "source_file_path": "schemas/NodeConnections.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnectionsEnvelope.schema",
+              "source_file_path": "schemas/NodeConnectionsEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Quest / Mission Schema",
+              "source_file_path": "schemas/Quest.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Table.schema",
+              "source_file_path": "schemas/Table.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "TableEnvelope.schema",
+              "source_file_path": "schemas/TableEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "VividDescription.schema",
+              "source_file_path": "schemas/VividDescription.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "AiRequestEntrySchema",
+              "source_file_path": "schemas/aiLedger.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "CampaignConfigurationSchema",
+              "source_file_path": "schemas/campaign.ts"
+            },
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LocationTypeEnum",
+              "source_file_path": "schemas/common.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CompendiumStateExportSchema",
+              "source_file_path": "schemas/compendium.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "SensoryPackageSchema",
+              "source_file_path": "schemas/delve.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatantSchema",
+              "source_file_path": "schemas/encounter.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatEncounterBalancerConfigSchema",
+              "source_file_path": "schemas/encounters/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "ClockEventSchema",
+              "source_file_path": "schemas/faction.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "index",
+              "source_file_path": "schemas/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LootSchema",
+              "source_file_path": "schemas/loot.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LoreEntrySchema",
+              "source_file_path": "schemas/lore.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "MinorNpcDetailsSchema",
+              "source_file_path": "schemas/npc.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SceneDetailsSchema",
+              "source_file_path": "schemas/scene.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "JobPostSchema",
+              "source_file_path": "schemas/tavern.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "TrapRuleSchema",
+              "source_file_path": "schemas/trap.ts"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "simulation_attachment",
+          "disposition": "promoted",
+          "field_name": "simulation_attachment",
+          "field_type": "reference",
+          "notes": "Optional attachment; not trunk-owned.",
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_IMPLEMENTATION_PLAN",
+              "source_file_path": "UUID_CONTAINER_IMPLEMENTATION_PLAN.md"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "top_level_entity_index",
+          "disposition": "promoted",
+          "field_name": "top_level_entity_index",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "world",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Campaign",
+          "source_file_path": "Campaign.md"
+        },
+        {
+          "alias_history": [
+            "world",
+            "container",
+            "root-world"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+          "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+        },
+        {
+          "alias_history": [
+            "world",
+            "container",
+            "root-world"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "UUID_CONTAINER_IMPLEMENTATION_PLAN",
+          "source_file_path": "UUID_CONTAINER_IMPLEMENTATION_PLAN.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "index",
+          "source_file_path": "index.md"
+        }
+      ],
+      "rust_type_name": "WorldRecord",
+      "schema_id": "core/world",
+      "target": "world_record"
+    },
+    {
+      "adapter_mapping_key": "mythforge.entity",
+      "canonical_schema_name": "EntityRecord",
+      "concept_name": "Entity",
+      "description": "Canonical entity container promoted from Mythforge UUID and category templates.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "entity_id",
+          "disposition": "promoted",
+          "field_name": "entity_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "world_id",
+          "disposition": "promoted",
+          "field_name": "world_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "entity_type",
+          "disposition": "promoted",
+          "field_name": "entity_type",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "schema_binding",
+          "disposition": "promoted",
+          "field_name": "schema_binding",
+          "field_type": "reference",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Arcane.schema",
+              "source_file_path": "schemas/Arcane.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Artifact.schema",
+              "source_file_path": "schemas/Artifact.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "ArtifactEnvelope.schema",
+              "source_file_path": "schemas/ArtifactEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "CoreMysteryElements.schema",
+              "source_file_path": "schemas/CoreMysteryElements.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonAssembly.schema",
+              "source_file_path": "schemas/DungeonAssembly.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonPart.schema",
+              "source_file_path": "schemas/DungeonPart.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistEnvelope.schema",
+              "source_file_path": "schemas/HeistEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistPlan.schema",
+              "source_file_path": "schemas/HeistPlan.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Matrix.schema",
+              "source_file_path": "schemas/Matrix.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MatrixEnvelope.schema",
+              "source_file_path": "schemas/MatrixEnvelope.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MysteryNode.schema",
+              "source_file_path": "schemas/MysteryNode.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnections.schema",
+              "source_file_path": "schemas/NodeConnections.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnectionsEnvelope.schema",
+              "source_file_path": "schemas/NodeConnectionsEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Quest / Mission Schema",
+              "source_file_path": "schemas/Quest.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Table.schema",
+              "source_file_path": "schemas/Table.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "TableEnvelope.schema",
+              "source_file_path": "schemas/TableEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "VividDescription.schema",
+              "source_file_path": "schemas/VividDescription.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "AiRequestEntrySchema",
+              "source_file_path": "schemas/aiLedger.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "CampaignConfigurationSchema",
+              "source_file_path": "schemas/campaign.ts"
+            },
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LocationTypeEnum",
+              "source_file_path": "schemas/common.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CompendiumStateExportSchema",
+              "source_file_path": "schemas/compendium.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "SensoryPackageSchema",
+              "source_file_path": "schemas/delve.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatantSchema",
+              "source_file_path": "schemas/encounter.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatEncounterBalancerConfigSchema",
+              "source_file_path": "schemas/encounters/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "ClockEventSchema",
+              "source_file_path": "schemas/faction.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "index",
+              "source_file_path": "schemas/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LootSchema",
+              "source_file_path": "schemas/loot.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LoreEntrySchema",
+              "source_file_path": "schemas/lore.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "MinorNpcDetailsSchema",
+              "source_file_path": "schemas/npc.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SceneDetailsSchema",
+              "source_file_path": "schemas/scene.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "JobPostSchema",
+              "source_file_path": "schemas/tavern.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "TrapRuleSchema",
+              "source_file_path": "schemas/trap.ts"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "relation_references",
+          "disposition": "promoted",
+          "field_name": "relation_references",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [],
+          "required": true
+        },
+        {
+          "canonical_field": "location_attachment",
+          "disposition": "promoted",
+          "field_name": "location_attachment",
+          "field_type": "reference",
+          "notes": "Spatial identity remains attached, not parallel.",
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Settlement",
+              "source_file_path": "Settlement.md"
+            },
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Region",
+              "source_file_path": "Region.md"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "event_history",
+          "disposition": "promoted",
+          "field_name": "event_history",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "entity",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Character",
+          "source_file_path": "Character.md"
+        },
+        {
+          "alias_history": [
+            "location",
+            "region",
+            "site"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Region",
+          "source_file_path": "Region.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Settlement",
+          "source_file_path": "Settlement.md"
+        },
+        {
+          "alias_history": [
+            "world",
+            "container",
+            "root-world"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+          "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+        }
+      ],
+      "rust_type_name": "EntityRecord",
+      "schema_id": "core/entity",
+      "target": "entity_record"
+    },
+    {
+      "adapter_mapping_key": "mythforge.schema-binding",
+      "canonical_schema_name": "SchemaBindingRecord",
+      "concept_name": "Schema Binding",
+      "description": "Canonical binding between external donor schema and canonical record.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "schema_id",
+          "disposition": "promoted",
+          "field_name": "schema_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Arcane.schema",
+              "source_file_path": "schemas/Arcane.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Artifact.schema",
+              "source_file_path": "schemas/Artifact.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "ArtifactEnvelope.schema",
+              "source_file_path": "schemas/ArtifactEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "CoreMysteryElements.schema",
+              "source_file_path": "schemas/CoreMysteryElements.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonAssembly.schema",
+              "source_file_path": "schemas/DungeonAssembly.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonPart.schema",
+              "source_file_path": "schemas/DungeonPart.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistEnvelope.schema",
+              "source_file_path": "schemas/HeistEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistPlan.schema",
+              "source_file_path": "schemas/HeistPlan.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Matrix.schema",
+              "source_file_path": "schemas/Matrix.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MatrixEnvelope.schema",
+              "source_file_path": "schemas/MatrixEnvelope.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MysteryNode.schema",
+              "source_file_path": "schemas/MysteryNode.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnections.schema",
+              "source_file_path": "schemas/NodeConnections.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnectionsEnvelope.schema",
+              "source_file_path": "schemas/NodeConnectionsEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Quest / Mission Schema",
+              "source_file_path": "schemas/Quest.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Table.schema",
+              "source_file_path": "schemas/Table.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "TableEnvelope.schema",
+              "source_file_path": "schemas/TableEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "VividDescription.schema",
+              "source_file_path": "schemas/VividDescription.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "AiRequestEntrySchema",
+              "source_file_path": "schemas/aiLedger.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "CampaignConfigurationSchema",
+              "source_file_path": "schemas/campaign.ts"
+            },
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LocationTypeEnum",
+              "source_file_path": "schemas/common.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CompendiumStateExportSchema",
+              "source_file_path": "schemas/compendium.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "SensoryPackageSchema",
+              "source_file_path": "schemas/delve.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatantSchema",
+              "source_file_path": "schemas/encounter.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatEncounterBalancerConfigSchema",
+              "source_file_path": "schemas/encounters/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "ClockEventSchema",
+              "source_file_path": "schemas/faction.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "index",
+              "source_file_path": "schemas/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LootSchema",
+              "source_file_path": "schemas/loot.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LoreEntrySchema",
+              "source_file_path": "schemas/lore.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "MinorNpcDetailsSchema",
+              "source_file_path": "schemas/npc.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SceneDetailsSchema",
+              "source_file_path": "schemas/scene.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "JobPostSchema",
+              "source_file_path": "schemas/tavern.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "TrapRuleSchema",
+              "source_file_path": "schemas/trap.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "schema_class",
+          "disposition": "promoted",
+          "field_name": "schema_class",
+          "field_type": "enum",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "promoted_schema_ref",
+          "disposition": "promoted",
+          "field_name": "promoted_schema_ref",
+          "field_type": "reference",
+          "notes": "Preferred canonical promoted schema id when available.",
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "external_schema_ref",
+          "disposition": "promoted",
+          "field_name": "external_schema_ref",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Arcane.schema",
+              "source_file_path": "schemas/Arcane.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Artifact.schema",
+              "source_file_path": "schemas/Artifact.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "ArtifactEnvelope.schema",
+              "source_file_path": "schemas/ArtifactEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "CoreMysteryElements.schema",
+              "source_file_path": "schemas/CoreMysteryElements.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonAssembly.schema",
+              "source_file_path": "schemas/DungeonAssembly.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "DungeonPart.schema",
+              "source_file_path": "schemas/DungeonPart.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistEnvelope.schema",
+              "source_file_path": "schemas/HeistEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "HeistPlan.schema",
+              "source_file_path": "schemas/HeistPlan.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Matrix.schema",
+              "source_file_path": "schemas/Matrix.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MatrixEnvelope.schema",
+              "source_file_path": "schemas/MatrixEnvelope.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "MysteryNode.schema",
+              "source_file_path": "schemas/MysteryNode.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnections.schema",
+              "source_file_path": "schemas/NodeConnections.schema.json"
+            },
+            {
+              "alias_history": [
+                "entity",
+                "node",
+                "object"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NodeConnectionsEnvelope.schema",
+              "source_file_path": "schemas/NodeConnectionsEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Quest / Mission Schema",
+              "source_file_path": "schemas/Quest.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Table.schema",
+              "source_file_path": "schemas/Table.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "TableEnvelope.schema",
+              "source_file_path": "schemas/TableEnvelope.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "VividDescription.schema",
+              "source_file_path": "schemas/VividDescription.schema.json"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "AiRequestEntrySchema",
+              "source_file_path": "schemas/aiLedger.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "CampaignConfigurationSchema",
+              "source_file_path": "schemas/campaign.ts"
+            },
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LocationTypeEnum",
+              "source_file_path": "schemas/common.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CompendiumStateExportSchema",
+              "source_file_path": "schemas/compendium.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "SensoryPackageSchema",
+              "source_file_path": "schemas/delve.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatantSchema",
+              "source_file_path": "schemas/encounter.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "CombatEncounterBalancerConfigSchema",
+              "source_file_path": "schemas/encounters/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "ClockEventSchema",
+              "source_file_path": "schemas/faction.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "index",
+              "source_file_path": "schemas/index.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LootSchema",
+              "source_file_path": "schemas/loot.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "LoreEntrySchema",
+              "source_file_path": "schemas/lore.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "MinorNpcDetailsSchema",
+              "source_file_path": "schemas/npc.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SceneDetailsSchema",
+              "source_file_path": "schemas/scene.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "JobPostSchema",
+              "source_file_path": "schemas/tavern.ts"
+            },
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "TrapRuleSchema",
+              "source_file_path": "schemas/trap.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "version",
+          "disposition": "promoted",
+          "field_name": "version",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_IMPLEMENTATION_PLAN",
+              "source_file_path": "UUID_CONTAINER_IMPLEMENTATION_PLAN.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "migration_lineage",
+          "disposition": "promoted",
+          "field_name": "migration_lineage",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "schema-binding",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [
+            "world",
+            "container",
+            "root-world"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+          "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "index",
+          "source_file_path": "index.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Arcane.schema",
+          "source_file_path": "schemas/Arcane.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Artifact.schema",
+          "source_file_path": "schemas/Artifact.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "ArtifactEnvelope.schema",
+          "source_file_path": "schemas/ArtifactEnvelope.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "CoreMysteryElements.schema",
+          "source_file_path": "schemas/CoreMysteryElements.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "DungeonAssembly.schema",
+          "source_file_path": "schemas/DungeonAssembly.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "DungeonPart.schema",
+          "source_file_path": "schemas/DungeonPart.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "HeistEnvelope.schema",
+          "source_file_path": "schemas/HeistEnvelope.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "HeistPlan.schema",
+          "source_file_path": "schemas/HeistPlan.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Matrix.schema",
+          "source_file_path": "schemas/Matrix.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "MatrixEnvelope.schema",
+          "source_file_path": "schemas/MatrixEnvelope.schema.json"
+        },
+        {
+          "alias_history": [
+            "entity",
+            "node",
+            "object"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "MysteryNode.schema",
+          "source_file_path": "schemas/MysteryNode.schema.json"
+        },
+        {
+          "alias_history": [
+            "entity",
+            "node",
+            "object"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "NodeConnections.schema",
+          "source_file_path": "schemas/NodeConnections.schema.json"
+        },
+        {
+          "alias_history": [
+            "entity",
+            "node",
+            "object"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "NodeConnectionsEnvelope.schema",
+          "source_file_path": "schemas/NodeConnectionsEnvelope.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Quest / Mission Schema",
+          "source_file_path": "schemas/Quest.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Table.schema",
+          "source_file_path": "schemas/Table.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "TableEnvelope.schema",
+          "source_file_path": "schemas/TableEnvelope.schema.json"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "VividDescription.schema",
+          "source_file_path": "schemas/VividDescription.schema.json"
+        }
+      ],
+      "rust_type_name": "SchemaBindingRecord",
+      "schema_id": "core/schema-binding",
+      "target": "schema_binding_record"
+    },
+    {
+      "adapter_mapping_key": "mythforge.event-envelope",
+      "canonical_schema_name": "EventEnvelope",
+      "concept_name": "Event Envelope",
+      "description": "Canonical append-only event contract promoted from Mythforge event architecture.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "event_id",
+          "disposition": "promoted",
+          "field_name": "event_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "owner",
+          "disposition": "promoted",
+          "field_name": "owner",
+          "field_type": "reference",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "event_type",
+          "disposition": "promoted",
+          "field_name": "event_type",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "payload",
+          "disposition": "promoted",
+          "field_name": "payload",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "causation",
+          "disposition": "promoted",
+          "field_name": "causation",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "event-envelope",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [
+            "world",
+            "container",
+            "root-world"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+          "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "index",
+          "source_file_path": "index.md"
+        }
+      ],
+      "rust_type_name": "EventEnvelope",
+      "schema_id": "core/event-envelope",
+      "target": "event_envelope"
+    },
+    {
+      "adapter_mapping_key": "mythforge.projection",
+      "canonical_schema_name": "ProjectionRecord",
+      "concept_name": "Projection",
+      "description": "Canonical projection cache contract promoted from Mythforge projection semantics.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "projection_id",
+          "disposition": "promoted",
+          "field_name": "projection_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "owner",
+          "disposition": "promoted",
+          "field_name": "owner",
+          "field_type": "reference",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "derived_state",
+          "disposition": "promoted",
+          "field_name": "derived_state",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "source_event_range",
+          "disposition": "promoted",
+          "field_name": "source_event_range",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "world",
+                "container",
+                "root-world"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+              "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "projection",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [
+            "world",
+            "container",
+            "root-world"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "UUID_CONTAINER_ARCHITECTURE",
+          "source_file_path": "UUID_CONTAINER_ARCHITECTURE.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "index",
+          "source_file_path": "index.md"
+        }
+      ],
+      "rust_type_name": "ProjectionRecord",
+      "schema_id": "core/projection",
+      "target": "projection_record"
+    },
+    {
+      "adapter_mapping_key": "mythforge.relation",
+      "canonical_schema_name": "RelationRecord",
+      "concept_name": "Relation",
+      "description": "Canonical relation edge contract promoted from Mythforge linked-entity model.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "source_entity_id",
+          "disposition": "promoted",
+          "field_name": "source_entity_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Faction",
+              "source_file_path": "Faction.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "target_entity_id",
+          "disposition": "promoted",
+          "field_name": "target_entity_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "NPC",
+              "source_file_path": "NPC.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "relation_type",
+          "disposition": "promoted",
+          "field_name": "relation_type",
+          "field_type": "enum",
+          "notes": null,
+          "provenance": [],
+          "required": true
+        },
+        {
+          "canonical_field": "provenance",
+          "disposition": "promoted",
+          "field_name": "provenance",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "relation",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Faction",
+          "source_file_path": "Faction.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "NPC",
+          "source_file_path": "NPC.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "index",
+          "source_file_path": "index.md"
+        }
+      ],
+      "rust_type_name": "RelationRecord",
+      "schema_id": "core/relation",
+      "target": "relation_record"
+    },
+    {
+      "adapter_mapping_key": "mythforge.asset",
+      "canonical_schema_name": "AssetRecord",
+      "concept_name": "Asset",
+      "description": "Canonical asset attachment contract promoted from Mythforge artifact and asset handling.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "asset_id",
+          "disposition": "promoted",
+          "field_name": "asset_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Artifact",
+              "source_file_path": "Artifact.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "owner",
+          "disposition": "promoted",
+          "field_name": "owner",
+          "field_type": "reference",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Artifact",
+              "source_file_path": "Artifact.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "asset_kind",
+          "disposition": "promoted",
+          "field_name": "asset_kind",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Item",
+              "source_file_path": "Item.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "source_ref",
+          "disposition": "promoted",
+          "field_name": "source_ref",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "index",
+              "source_file_path": "index.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "asset",
+      "outcome": "promoted",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Artifact",
+          "source_file_path": "Artifact.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Item",
+          "source_file_path": "Item.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "index",
+          "source_file_path": "index.md"
+        }
+      ],
+      "rust_type_name": "AssetRecord",
+      "schema_id": "core/asset",
+      "target": "asset_record"
+    },
+    {
+      "adapter_mapping_key": "mythforge.location",
+      "canonical_schema_name": "LocationAttachment",
+      "concept_name": "Location",
+      "description": "Location semantics are split between Mythforge entity-spatial identity and Adventure regional/linkage schema.",
+      "donor": "mythforge",
+      "field_records": [
+        {
+          "canonical_field": "map_anchor",
+          "disposition": "promoted",
+          "field_name": "map_anchor",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Settlement",
+              "source_file_path": "Settlement.md"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "hex_or_cell_ref",
+          "disposition": "promoted",
+          "field_name": "hex_or_cell_ref",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Region",
+              "source_file_path": "Region.md"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "coordinate_ref",
+          "disposition": "promoted",
+          "field_name": "coordinate_ref",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Landmark",
+              "source_file_path": "Landmark.md"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "layer_membership",
+          "disposition": "promoted",
+          "field_name": "layer_membership",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "location",
+                "region",
+                "site"
+              ],
+              "donor": "mythforge",
+              "promotion_class": "core",
+              "source_concept_name": "Region",
+              "source_file_path": "Region.md"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "location",
+      "outcome": "split",
+      "promotion_class": "core",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Landmark",
+          "source_file_path": "Landmark.md"
+        },
+        {
+          "alias_history": [
+            "location",
+            "region",
+            "site"
+          ],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Region",
+          "source_file_path": "Region.md"
+        },
+        {
+          "alias_history": [],
+          "donor": "mythforge",
+          "promotion_class": "core",
+          "source_concept_name": "Settlement",
+          "source_file_path": "Settlement.md"
+        }
+      ],
+      "rust_type_name": "LocationAttachment",
+      "schema_id": "core/location",
+      "target": "location_attachment"
+    },
+    {
+      "adapter_mapping_key": "orbis.simulation_attachment",
+      "canonical_schema_name": "SimulationAttachment",
+      "concept_name": "Orbis Simulation Attachment",
+      "description": "Optional simulation attachment promoted from Orbis runtime contracts.",
+      "donor": "orbis",
+      "field_records": [
+        {
+          "canonical_field": "profile_id",
+          "disposition": "promoted",
+          "field_name": "profile_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "AbsTimeSchema",
+              "source_file_path": "contracts/data-contracts.ts"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "enabled_domains",
+          "disposition": "promoted",
+          "field_name": "enabled_domains",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "AbsTimeSchema",
+              "source_file_path": "contracts/data-contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "dashboard_mode",
+          "disposition": "promoted",
+          "field_name": "dashboard_mode",
+          "field_type": "enum",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "ClimateSnapshot",
+              "source_file_path": "kernel/contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "latest_snapshot_refs",
+          "disposition": "promoted",
+          "field_name": "latest_snapshot_refs",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "provenance",
+          "disposition": "promoted",
+          "field_name": "provenance",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "ClimateSnapshot",
+              "source_file_path": "kernel/contracts.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "orbis-simulation-attachment",
+      "outcome": "promoted",
+      "promotion_class": "simulation",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "simulation",
+          "source_concept_name": "AbsTimeSchema",
+          "source_file_path": "contracts/data-contracts.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "simulation",
+          "source_concept_name": "ClimateSnapshot",
+          "source_file_path": "kernel/contracts.ts"
+        }
+      ],
+      "rust_type_name": "SimulationAttachment",
+      "schema_id": "simulation/orbis-attachment",
+      "target": "simulation_attachment"
+    },
+    {
+      "adapter_mapping_key": "orbis.domain_profile",
+      "canonical_schema_name": "PromotedDomainProfileContract",
+      "concept_name": "Orbis Domain Profile",
+      "description": "Promoted Orbis world profile contract for simulation configuration.",
+      "donor": "orbis",
+      "field_records": [
+        {
+          "canonical_field": "world_id",
+          "disposition": "promoted",
+          "field_name": "world_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "AbsTimeSchema",
+              "source_file_path": "contracts/data-contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "seed_hint",
+          "disposition": "promoted",
+          "field_name": "seed_hint",
+          "field_type": "string",
+          "notes": "BigInt seeds are serialized as strings in the promoted schema.",
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "genesis",
+              "source_file_path": "domains/genesis.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "enabled_domains",
+          "disposition": "promoted",
+          "field_name": "enabled_domains",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "AbsTimeSchema",
+              "source_file_path": "contracts/data-contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "fidelity_by_domain",
+          "disposition": "promoted",
+          "field_name": "fidelity_by_domain",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "AbsTimeSchema",
+              "source_file_path": "contracts/data-contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "dashboard_mode",
+          "disposition": "promoted",
+          "field_name": "dashboard_mode",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "ClimateSnapshot",
+              "source_file_path": "kernel/contracts.ts"
+            }
+          ],
+          "required": false
+        }
+      ],
+      "normalized_name": "orbis-domain-profile",
+      "outcome": "promoted",
+      "promotion_class": "simulation",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "simulation",
+          "source_concept_name": "AbsTimeSchema",
+          "source_file_path": "contracts/data-contracts.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "simulation",
+          "source_concept_name": "ClimateSnapshot",
+          "source_file_path": "kernel/contracts.ts"
+        }
+      ],
+      "rust_type_name": "PromotedDomainProfileContract",
+      "schema_id": "simulation/domain-profile",
+      "target": "domain_profile_contract"
+    },
+    {
+      "adapter_mapping_key": "orbis.simulation_snapshot",
+      "canonical_schema_name": "PromotedSimulationSnapshotContract",
+      "concept_name": "Orbis Simulation Snapshot",
+      "description": "Promoted Orbis snapshot contract for durable simulation outputs.",
+      "donor": "orbis",
+      "field_records": [
+        {
+          "canonical_field": "world_id",
+          "disposition": "promoted",
+          "field_name": "world_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "ClimateSnapshot",
+              "source_file_path": "kernel/contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "tick",
+          "disposition": "promoted",
+          "field_name": "tick",
+          "field_type": "integer",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "enabled_domains",
+          "disposition": "promoted",
+          "field_name": "enabled_domains",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "ClimateSnapshot",
+              "source_file_path": "kernel/contracts.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "snapshot_refs",
+          "disposition": "promoted",
+          "field_name": "snapshot_refs",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "trace_ids",
+          "disposition": "promoted",
+          "field_name": "trace_ids",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "reason_codes",
+          "disposition": "promoted",
+          "field_name": "reason_codes",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "orbis-simulation-snapshot",
+      "outcome": "promoted",
+      "promotion_class": "simulation",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "simulation",
+          "source_concept_name": "ClimateSnapshot",
+          "source_file_path": "kernel/contracts.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "reference_only",
+          "source_concept_name": "orbis-kernel",
+          "source_file_path": "kernel/orbis-kernel.ts"
+        }
+      ],
+      "rust_type_name": "PromotedSimulationSnapshotContract",
+      "schema_id": "simulation/snapshot",
+      "target": "simulation_snapshot_contract"
+    },
+    {
+      "adapter_mapping_key": "orbis.simulation_event_payload",
+      "canonical_schema_name": "PromotedSimulationEventPayloadContract",
+      "concept_name": "Orbis Simulation Event Payload",
+      "description": "Promoted Orbis simulation event payload contract with trace and reason metadata.",
+      "donor": "orbis",
+      "field_records": [
+        {
+          "canonical_field": "domain",
+          "disposition": "promoted",
+          "field_name": "domain",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "tick",
+          "disposition": "promoted",
+          "field_name": "tick",
+          "field_type": "integer",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "reason_code",
+          "disposition": "promoted",
+          "field_name": "reason_code",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "genesis",
+              "source_file_path": "domains/genesis.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "trace_id",
+          "disposition": "promoted",
+          "field_name": "trace_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "simulation",
+              "source_concept_name": "genesis",
+              "source_file_path": "domains/genesis.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "payload",
+          "disposition": "promoted",
+          "field_name": "payload",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "orbis",
+              "promotion_class": "reference_only",
+              "source_concept_name": "orbis-kernel",
+              "source_file_path": "kernel/orbis-kernel.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "orbis-simulation-event-payload",
+      "outcome": "promoted",
+      "promotion_class": "simulation",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "simulation",
+          "source_concept_name": "genesis",
+          "source_file_path": "domains/genesis.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "orbis",
+          "promotion_class": "reference_only",
+          "source_concept_name": "orbis-kernel",
+          "source_file_path": "kernel/orbis-kernel.ts"
+        }
+      ],
+      "rust_type_name": "PromotedSimulationEventPayloadContract",
+      "schema_id": "simulation/event-payload",
+      "target": "simulation_event_payload_contract"
+    },
+    {
+      "adapter_mapping_key": "adventure.workflow_attachment",
+      "canonical_schema_name": "WorkflowAttachment",
+      "concept_name": "Adventure Workflow Attachment",
+      "description": "Promoted guided workflow attachment from Adventure Generator session and workflow schemas.",
+      "donor": "adventure_generator",
+      "field_records": [
+        {
+          "canonical_field": "workflow_id",
+          "disposition": "promoted",
+          "field_name": "workflow_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "workflow",
+                "activity",
+                "session-flow"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "WorkflowState",
+              "source_file_path": "stores/workflowStore.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "activity_type",
+          "disposition": "promoted",
+          "field_name": "activity_type",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "step_state",
+          "disposition": "promoted",
+          "field_name": "step_state",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "workflow",
+                "activity",
+                "session-flow"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "WorkflowState",
+              "source_file_path": "stores/workflowStore.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "checkpoints",
+          "disposition": "promoted",
+          "field_name": "checkpoints",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "progress_ratio",
+          "disposition": "promoted",
+          "field_name": "progress_ratio",
+          "field_type": "number",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "output_references",
+          "disposition": "promoted",
+          "field_name": "output_references",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "adventure-workflow-attachment",
+      "outcome": "promoted",
+      "promotion_class": "workflow",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "LoadingStateSchema",
+          "source_file_path": "schemas/generator.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "SessionStateV2Schema",
+          "source_file_path": "schemas/session.ts"
+        },
+        {
+          "alias_history": [
+            "workflow",
+            "activity",
+            "session-flow"
+          ],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "WorkflowState",
+          "source_file_path": "stores/workflowStore.ts"
+        }
+      ],
+      "rust_type_name": "WorkflowAttachment",
+      "schema_id": "workflow/adventure-generator",
+      "target": "workflow_attachment"
+    },
+    {
+      "adapter_mapping_key": "adventure.workflow_step",
+      "canonical_schema_name": "PromotedWorkflowStepContract",
+      "concept_name": "Adventure Workflow Step",
+      "description": "Promoted step contract for guided Adventure Generator workflows.",
+      "donor": "adventure_generator",
+      "field_records": [
+        {
+          "canonical_field": "step_key",
+          "disposition": "promoted",
+          "field_name": "step_key",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "workflow",
+                "activity",
+                "session-flow"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "WorkflowState",
+              "source_file_path": "stores/workflowStore.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "state",
+          "disposition": "promoted",
+          "field_name": "state",
+          "field_type": "object",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "LoadingStateSchema",
+              "source_file_path": "schemas/generator.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "status",
+          "disposition": "promoted",
+          "field_name": "status",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [
+                "workflow",
+                "activity",
+                "session-flow"
+              ],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "WorkflowState",
+              "source_file_path": "stores/workflowStore.ts"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "checkpoint_key",
+          "disposition": "promoted",
+          "field_name": "checkpoint_key",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            }
+          ],
+          "required": false
+        }
+      ],
+      "normalized_name": "adventure-workflow-step",
+      "outcome": "promoted",
+      "promotion_class": "workflow",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "LoadingStateSchema",
+          "source_file_path": "schemas/generator.ts"
+        },
+        {
+          "alias_history": [
+            "workflow",
+            "activity",
+            "session-flow"
+          ],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "WorkflowState",
+          "source_file_path": "stores/workflowStore.ts"
+        }
+      ],
+      "rust_type_name": "PromotedWorkflowStepContract",
+      "schema_id": "workflow/step",
+      "target": "workflow_step_contract"
+    },
+    {
+      "adapter_mapping_key": "adventure.workflow_checkpoint",
+      "canonical_schema_name": "PromotedWorkflowCheckpointContract",
+      "concept_name": "Adventure Workflow Checkpoint",
+      "description": "Promoted checkpoint contract for resumable Adventure Generator sessions.",
+      "donor": "adventure_generator",
+      "field_records": [
+        {
+          "canonical_field": "checkpoint_key",
+          "disposition": "promoted",
+          "field_name": "checkpoint_key",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SessionStateV2Schema",
+              "source_file_path": "schemas/session.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "reached_at",
+          "disposition": "promoted",
+          "field_name": "reached_at",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "reference_only",
+              "source_concept_name": "historyStore",
+              "source_file_path": "stores/historyStore.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "adventure-workflow-checkpoint",
+      "outcome": "promoted",
+      "promotion_class": "workflow",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "SessionStateV2Schema",
+          "source_file_path": "schemas/session.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "reference_only",
+          "source_concept_name": "historyStore",
+          "source_file_path": "stores/historyStore.ts"
+        }
+      ],
+      "rust_type_name": "PromotedWorkflowCheckpointContract",
+      "schema_id": "workflow/checkpoint",
+      "target": "workflow_checkpoint_contract"
+    },
+    {
+      "adapter_mapping_key": "adventure.generated_output_reference",
+      "canonical_schema_name": "PromotedGeneratedOutputReferenceContract",
+      "concept_name": "Adventure Generated Output Reference",
+      "description": "Promoted contract for Adventure Generator outputs that become canonical world-model owners or references.",
+      "donor": "adventure_generator",
+      "field_records": [
+        {
+          "canonical_field": "owner_kind",
+          "disposition": "promoted",
+          "field_name": "owner_kind",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "owner_id",
+          "disposition": "promoted",
+          "field_name": "owner_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "reference_kind",
+          "disposition": "promoted",
+          "field_name": "reference_kind",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SceneDetailsSchema",
+              "source_file_path": "schemas/scene.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "adventure-generated-output-reference",
+      "outcome": "promoted",
+      "promotion_class": "workflow",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "SimpleAdventureSchema",
+          "source_file_path": "schemas/adventure.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "HexCoordinateSchema",
+          "source_file_path": "schemas/location.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "SceneDetailsSchema",
+          "source_file_path": "schemas/scene.ts"
+        }
+      ],
+      "rust_type_name": "PromotedGeneratedOutputReferenceContract",
+      "schema_id": "workflow/output-reference",
+      "target": "generated_output_reference_contract"
+    }
+  ],
+  "split_concepts": [
+    {
+      "adapter_mapping_key": "adventure.location_adventure_linkage",
+      "canonical_schema_name": "PromotedLocationAdventureLinkageContract",
+      "concept_name": "Adventure Location Linkage",
+      "description": "Split linkage contract between Adventure location schemas and canonical spatial entities.",
+      "donor": "adventure_generator",
+      "field_records": [
+        {
+          "canonical_field": "entity_id",
+          "disposition": "promoted",
+          "field_name": "location_entity_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            }
+          ],
+          "required": true
+        },
+        {
+          "canonical_field": "entity_id",
+          "disposition": "promoted",
+          "field_name": "adventure_entity_id",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SimpleAdventureSchema",
+              "source_file_path": "schemas/adventure.ts"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "hex_or_cell_ref",
+          "disposition": "promoted",
+          "field_name": "region_ref",
+          "field_type": "string",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "HexCoordinateSchema",
+              "source_file_path": "schemas/location.ts"
+            }
+          ],
+          "required": false
+        },
+        {
+          "canonical_field": "output_references",
+          "disposition": "promoted",
+          "field_name": "scene_refs",
+          "field_type": "array",
+          "notes": null,
+          "provenance": [
+            {
+              "alias_history": [],
+              "donor": "adventure_generator",
+              "promotion_class": "workflow",
+              "source_concept_name": "SceneDetailsSchema",
+              "source_file_path": "schemas/scene.ts"
+            }
+          ],
+          "required": true
+        }
+      ],
+      "normalized_name": "adventure-location-linkage",
+      "outcome": "split",
+      "promotion_class": "workflow",
+      "provenance": [
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "SimpleAdventureSchema",
+          "source_file_path": "schemas/adventure.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "CampaignConfigurationSchema",
+          "source_file_path": "schemas/campaign.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "HexCoordinateSchema",
+          "source_file_path": "schemas/location.ts"
+        },
+        {
+          "alias_history": [],
+          "donor": "adventure_generator",
+          "promotion_class": "workflow",
+          "source_concept_name": "SceneDetailsSchema",
+          "source_file_path": "schemas/scene.ts"
+        }
+      ],
+      "rust_type_name": "PromotedLocationAdventureLinkageContract",
+      "schema_id": "workflow/location-adventure-linkage",
+      "target": "location_adventure_linkage_contract"
+    }
+  ],
+  "unresolved_conflicts": []
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "enum": [
+    "core",
+    "simulation",
+    "workflow",
+    "donor_local",
+    "reference_only"
+  ],
+  "title": "PromotionClass",
+  "type": "string"
+}

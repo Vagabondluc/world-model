@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "OwnerRef": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "World": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "World"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Entity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Entity"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Asset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Asset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Workflow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Workflow"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "from_schema_version": {
+      "type": "string"
+    },
+    "migration_id": {
+      "type": "string"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "owner": {
+      "$ref": "#/definitions/OwnerRef"
+    },
+    "to_schema_version": {
+      "type": "string"
+    },
+    "triggered_by_event_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "from_schema_version",
+    "migration_id",
+    "owner",
+    "to_schema_version",
+    "triggered_by_event_id"
+  ],
+  "title": "MigrationRecord",
+  "type": "object"
+}

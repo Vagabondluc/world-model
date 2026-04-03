@@ -1,0 +1,19 @@
+donor = "adventure_generator"
+source_root = "../../../../antigravity/dnd adventure generator/src"
+source_kind = "typescript"
+included_paths = [
+  "schemas",
+  "stores/workflowStore.ts",
+  "stores/historyStore.ts",
+]
+excluded_paths = [
+  "components",
+  "tests",
+  "lib",
+]
+expected_concept_families = [
+  "workflow-schema",
+  "location-linkage",
+  "domain-schema",
+]
+default_promotion_class = "workflow"

@@ -1,0 +1,1207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AppendOnlyEventLedger": {
+      "properties": {
+        "event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "event_ids"
+      ],
+      "type": "object"
+    },
+    "AssetRecord": {
+      "properties": {
+        "asset_id": {
+          "type": "string"
+        },
+        "asset_kind": {
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/HumanMetadata"
+        },
+        "owner": {
+          "$ref": "#/definitions/OwnerRef"
+        },
+        "payload": true,
+        "source_ref": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "asset_id",
+        "asset_kind",
+        "metadata",
+        "owner",
+        "payload",
+        "source_ref"
+      ],
+      "type": "object"
+    },
+    "CanonicalBundle": {
+      "properties": {
+        "assets": {
+          "additionalProperties": {
+            "$ref": "#/definitions/AssetRecord"
+          },
+          "type": "object"
+        },
+        "entities": {
+          "additionalProperties": {
+            "$ref": "#/definitions/EntityRecord"
+          },
+          "type": "object"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/definitions/EventEnvelope"
+          },
+          "type": "array"
+        },
+        "migrations": {
+          "items": {
+            "$ref": "#/definitions/MigrationRecord"
+          },
+          "type": "array"
+        },
+        "projections": {
+          "additionalProperties": {
+            "$ref": "#/definitions/ProjectionRecord"
+          },
+          "type": "object"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/definitions/RelationRecord"
+          },
+          "type": "array"
+        },
+        "workflows": {
+          "additionalProperties": {
+            "$ref": "#/definitions/WorkflowRecord"
+          },
+          "type": "object"
+        },
+        "world": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/WorldRecord"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "assets",
+        "entities",
+        "events",
+        "migrations",
+        "projections",
+        "relations",
+        "workflows"
+      ],
+      "type": "object"
+    },
+    "DashboardMode": {
+      "enum": [
+        "Hidden",
+        "Summary",
+        "Diagnostic"
+      ],
+      "type": "string"
+    },
+    "EntityRecord": {
+      "properties": {
+        "asset_attachments": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "entity_id": {
+          "type": "string"
+        },
+        "entity_type": {
+          "type": "string"
+        },
+        "event_history": {
+          "$ref": "#/definitions/AppendOnlyEventLedger"
+        },
+        "latest_projection_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location_attachment": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/LocationAttachment"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "metadata": {
+          "$ref": "#/definitions/HumanMetadata"
+        },
+        "payload": true,
+        "relation_references": {
+          "items": {
+            "$ref": "#/definitions/RelationRecord"
+          },
+          "type": "array"
+        },
+        "schema_binding": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SchemaBindingRecord"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflow_attachment": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/WorkflowAttachment"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "world_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "asset_attachments",
+        "entity_id",
+        "entity_type",
+        "event_history",
+        "metadata",
+        "payload",
+        "relation_references",
+        "world_id"
+      ],
+      "type": "object"
+    },
+    "EventCausation": {
+      "properties": {
+        "causation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trace_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "EventEnvelope": {
+      "properties": {
+        "causation": {
+          "$ref": "#/definitions/EventCausation"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "occurred_at": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/definitions/OwnerRef"
+        },
+        "payload": {
+          "$ref": "#/definitions/EventPayloadRef"
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "causation",
+        "event_id",
+        "event_type",
+        "occurred_at",
+        "owner",
+        "payload",
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "EventPayloadRef": {
+      "properties": {
+        "inline_payload": true,
+        "payload_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "EventRange": {
+      "properties": {
+        "end_event_id": {
+          "type": "string"
+        },
+        "start_event_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "end_event_id",
+        "start_event_id"
+      ],
+      "type": "object"
+    },
+    "ExternalSchemaRef": {
+      "properties": {
+        "migration_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        },
+        "source_uri": {
+          "type": "string"
+        },
+        "validation_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "source_system",
+        "source_uri"
+      ],
+      "type": "object"
+    },
+    "FidelityLevel": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "type": "string"
+    },
+    "HumanMetadata": {
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "tags"
+      ],
+      "type": "object"
+    },
+    "LocationAttachment": {
+      "properties": {
+        "coordinate_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hex_or_cell_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "layer_membership": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "map_anchor": {
+          "type": "string"
+        },
+        "spatial_scope": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "layer_membership",
+        "map_anchor",
+        "spatial_scope"
+      ],
+      "type": "object"
+    },
+    "MigrationLineage": {
+      "properties": {
+        "migration_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "previous_schema_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "MigrationRecord": {
+      "properties": {
+        "from_schema_version": {
+          "type": "string"
+        },
+        "migration_id": {
+          "type": "string"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner": {
+          "$ref": "#/definitions/OwnerRef"
+        },
+        "to_schema_version": {
+          "type": "string"
+        },
+        "triggered_by_event_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "from_schema_version",
+        "migration_id",
+        "owner",
+        "to_schema_version",
+        "triggered_by_event_id"
+      ],
+      "type": "object"
+    },
+    "OwnerRef": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "World": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "World"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Entity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Entity"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Asset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Asset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Workflow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Workflow"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "ProjectionRecord": {
+      "properties": {
+        "derived_state": true,
+        "owner": {
+          "$ref": "#/definitions/OwnerRef"
+        },
+        "projection_id": {
+          "type": "string"
+        },
+        "projection_version": {
+          "type": "string"
+        },
+        "schema_binding_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_event_range": {
+          "$ref": "#/definitions/EventRange"
+        }
+      },
+      "required": [
+        "derived_state",
+        "owner",
+        "projection_id",
+        "projection_version",
+        "source_event_range"
+      ],
+      "type": "object"
+    },
+    "RelationKind": {
+      "oneOf": [
+        {
+          "enum": [
+            "ParentOf",
+            "ChildOf",
+            "LocatedIn",
+            "MemberOf",
+            "Owns",
+            "References"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Custom": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Custom"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "RelationProvenance": {
+      "properties": {
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "RelationRecord": {
+      "properties": {
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effective_to": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/definitions/RelationProvenance"
+        },
+        "relation_type": {
+          "$ref": "#/definitions/RelationKind"
+        },
+        "source_entity_id": {
+          "type": "string"
+        },
+        "target_entity_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "provenance",
+        "relation_type",
+        "source_entity_id",
+        "target_entity_id"
+      ],
+      "type": "object"
+    },
+    "SchemaBindingRecord": {
+      "properties": {
+        "activation_event_id": {
+          "type": "string"
+        },
+        "external_schema_ref": {
+          "$ref": "#/definitions/ExternalSchemaRef"
+        },
+        "migration_lineage": {
+          "$ref": "#/definitions/MigrationLineage"
+        },
+        "promoted_schema_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schema_class": {
+          "$ref": "#/definitions/SchemaClass"
+        },
+        "schema_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "activation_event_id",
+        "external_schema_ref",
+        "migration_lineage",
+        "schema_class",
+        "schema_id",
+        "version"
+      ],
+      "type": "object"
+    },
+    "SchemaClass": {
+      "enum": [
+        "NativeSchema",
+        "ProjectSchema",
+        "SimulationSchema",
+        "WorkflowSchema"
+      ],
+      "type": "string"
+    },
+    "SimulationAttachment": {
+      "properties": {
+        "dashboard_mode": {
+          "$ref": "#/definitions/DashboardMode"
+        },
+        "enabled_domains": {
+          "items": {
+            "$ref": "#/definitions/SimulationDomainConfig"
+          },
+          "type": "array"
+        },
+        "latest_snapshot_refs": {
+          "items": {
+            "$ref": "#/definitions/SimulationSnapshotRef"
+          },
+          "type": "array"
+        },
+        "profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/definitions/SimulationProvenance"
+        }
+      },
+      "required": [
+        "dashboard_mode",
+        "enabled_domains",
+        "latest_snapshot_refs",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "SimulationDomainConfig": {
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "fidelity": {
+          "$ref": "#/definitions/FidelityLevel"
+        },
+        "id": {
+          "$ref": "#/definitions/SimulationDomainId"
+        },
+        "tick_mode": {
+          "$ref": "#/definitions/TickMode"
+        }
+      },
+      "required": [
+        "enabled",
+        "fidelity",
+        "id",
+        "tick_mode"
+      ],
+      "type": "object"
+    },
+    "SimulationDomainId": {
+      "oneOf": [
+        {
+          "enum": [
+            "Genesis",
+            "Climate"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Custom": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Custom"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SimulationProvenance": {
+      "properties": {
+        "profile_version": {
+          "type": "string"
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "profile_version",
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "SimulationSnapshotRef": {
+      "properties": {
+        "domain_id": {
+          "$ref": "#/definitions/SimulationDomainId"
+        },
+        "snapshot_ref": {
+          "type": "string"
+        },
+        "trace_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain_id",
+        "snapshot_ref",
+        "trace_id"
+      ],
+      "type": "object"
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "TickMode": {
+      "enum": [
+        "Disabled",
+        "OnDemand",
+        "Continuous",
+        "Stepped"
+      ],
+      "type": "string"
+    },
+    "WorkflowAttachment": {
+      "properties": {
+        "activity_type": {
+          "type": "string"
+        },
+        "checkpoints": {
+          "items": {
+            "$ref": "#/definitions/WorkflowCheckpoint"
+          },
+          "type": "array"
+        },
+        "output_references": {
+          "items": {
+            "$ref": "#/definitions/OwnerRef"
+          },
+          "type": "array"
+        },
+        "progress_ratio": {
+          "format": "float",
+          "type": "number"
+        },
+        "resumable": {
+          "type": "boolean"
+        },
+        "status": {
+          "$ref": "#/definitions/WorkflowStatus"
+        },
+        "step_state": {
+          "items": {
+            "$ref": "#/definitions/WorkflowStepState"
+          },
+          "type": "array"
+        },
+        "workflow_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "activity_type",
+        "checkpoints",
+        "output_references",
+        "progress_ratio",
+        "resumable",
+        "status",
+        "step_state",
+        "workflow_id"
+      ],
+      "type": "object"
+    },
+    "WorkflowCheckpoint": {
+      "properties": {
+        "checkpoint_key": {
+          "type": "string"
+        },
+        "reached_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "checkpoint_key",
+        "reached_at"
+      ],
+      "type": "object"
+    },
+    "WorkflowRecord": {
+      "properties": {
+        "asset_attachments": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "attachment": {
+          "$ref": "#/definitions/WorkflowAttachment"
+        },
+        "event_history": {
+          "$ref": "#/definitions/AppendOnlyEventLedger"
+        },
+        "metadata": {
+          "$ref": "#/definitions/HumanMetadata"
+        },
+        "payload": true,
+        "schema_binding": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SchemaBindingRecord"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "workflow_id": {
+          "type": "string"
+        },
+        "world_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "asset_attachments",
+        "attachment",
+        "event_history",
+        "metadata",
+        "payload",
+        "workflow_id",
+        "world_id"
+      ],
+      "type": "object"
+    },
+    "WorkflowStatus": {
+      "enum": [
+        "Idle",
+        "Running",
+        "Paused",
+        "Completed",
+        "Failed"
+      ],
+      "type": "string"
+    },
+    "WorkflowStepState": {
+      "properties": {
+        "state": true,
+        "step_key": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "step_key"
+      ],
+      "type": "object"
+    },
+    "WorldCommand": {
+      "oneOf": [
+        {
+          "properties": {
+            "kind": {
+              "enum": [
+                "create_world"
+              ],
+              "type": "string"
+            },
+            "world": {
+              "$ref": "#/definitions/WorldRecord"
+            }
+          },
+          "required": [
+            "kind",
+            "world"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "entity": {
+              "$ref": "#/definitions/EntityRecord"
+            },
+            "kind": {
+              "enum": [
+                "upsert_entity"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "entity",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "entity_id": {
+              "type": "string"
+            },
+            "kind": {
+              "enum": [
+                "delete_entity"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "entity_id",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "binding": {
+              "$ref": "#/definitions/SchemaBindingRecord"
+            },
+            "kind": {
+              "enum": [
+                "bind_schema"
+              ],
+              "type": "string"
+            },
+            "owner": {
+              "$ref": "#/definitions/OwnerRef"
+            }
+          },
+          "required": [
+            "binding",
+            "kind",
+            "owner"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "event": {
+              "$ref": "#/definitions/EventEnvelope"
+            },
+            "kind": {
+              "enum": [
+                "append_event"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "event",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "kind": {
+              "enum": [
+                "add_relation"
+              ],
+              "type": "string"
+            },
+            "relation": {
+              "$ref": "#/definitions/RelationRecord"
+            }
+          },
+          "required": [
+            "kind",
+            "relation"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "asset": {
+              "$ref": "#/definitions/AssetRecord"
+            },
+            "kind": {
+              "enum": [
+                "attach_asset"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "asset",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "kind": {
+              "enum": [
+                "attach_workflow"
+              ],
+              "type": "string"
+            },
+            "workflow": {
+              "$ref": "#/definitions/WorkflowRecord"
+            }
+          },
+          "required": [
+            "kind",
+            "workflow"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "attachment": {
+              "$ref": "#/definitions/SimulationAttachment"
+            },
+            "kind": {
+              "enum": [
+                "attach_simulation"
+              ],
+              "type": "string"
+            },
+            "world_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "attachment",
+            "kind",
+            "world_id"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "binding": {
+              "$ref": "#/definitions/SchemaBindingRecord"
+            },
+            "kind": {
+              "enum": [
+                "migrate_binding"
+              ],
+              "type": "string"
+            },
+            "migration": {
+              "$ref": "#/definitions/MigrationRecord"
+            },
+            "owner": {
+              "$ref": "#/definitions/OwnerRef"
+            }
+          },
+          "required": [
+            "binding",
+            "kind",
+            "migration",
+            "owner"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "WorldRecord": {
+      "properties": {
+        "asset_attachments": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "metadata": {
+          "$ref": "#/definitions/HumanMetadata"
+        },
+        "payload": true,
+        "root_event_ledger": {
+          "$ref": "#/definitions/AppendOnlyEventLedger"
+        },
+        "root_schema_binding": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SchemaBindingRecord"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "simulation_attachment": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SimulationAttachment"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "top_level_entity_index": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "workflow_registry_references": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "world_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "asset_attachments",
+        "metadata",
+        "payload",
+        "root_event_ledger",
+        "top_level_entity_index",
+        "workflow_registry_references",
+        "world_id"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "bundle": {
+      "$ref": "#/definitions/CanonicalBundle"
+    },
+    "command": {
+      "$ref": "#/definitions/WorldCommand"
+    },
+    "command_id": {
+      "type": "string"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "source_system": {
+      "$ref": "#/definitions/SourceSystem"
+    }
+  },
+  "required": [
+    "bundle",
+    "command",
+    "command_id",
+    "issued_at",
+    "source_system"
+  ],
+  "title": "WorldCommandRequest",
+  "type": "object"
+}

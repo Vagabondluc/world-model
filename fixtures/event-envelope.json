@@ -1,0 +1,21 @@
+{
+  "event_id": "evt-entity-created",
+  "owner": {
+    "Entity": "entity-capital"
+  },
+  "event_type": "entity.created",
+  "occurred_at": "2026-04-02T12:00:00Z",
+  "source_system": "Mythforge",
+  "payload": {
+    "inline_payload": {
+      "entity_type": "location",
+      "label": "Aster Gate"
+    },
+    "payload_ref": null
+  },
+  "causation": {
+    "causation_id": null,
+    "correlation_id": "corr-world-bootstrap",
+    "trace_id": "trace-world-bootstrap"
+  }
+}

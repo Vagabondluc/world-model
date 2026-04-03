@@ -1,0 +1,467 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AliasGroup": {
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "canonical": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "aliases",
+        "canonical"
+      ],
+      "type": "object"
+    },
+    "ConceptAliasMap": {
+      "properties": {
+        "groups": {
+          "items": {
+            "$ref": "#/definitions/AliasGroup"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "groups"
+      ],
+      "type": "object"
+    },
+    "DroppedConceptRecord": {
+      "properties": {
+        "concept_id": {
+          "type": "string"
+        },
+        "concept_name": {
+          "type": "string"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "provenance": {
+          "$ref": "#/definitions/SchemaProvenance"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "concept_id",
+        "concept_name",
+        "donor",
+        "provenance",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "FieldDisposition": {
+      "enum": [
+        "promoted",
+        "dropped",
+        "split",
+        "reference_only"
+      ],
+      "type": "string"
+    },
+    "FieldTypeHint": {
+      "enum": [
+        "string",
+        "integer",
+        "number",
+        "boolean",
+        "array",
+        "object",
+        "enum",
+        "reference",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "PromotedConceptTarget": {
+      "enum": [
+        "world_record",
+        "entity_record",
+        "location_attachment",
+        "schema_binding_record",
+        "event_envelope",
+        "projection_record",
+        "relation_record",
+        "asset_record",
+        "simulation_attachment",
+        "simulation_event_payload_contract",
+        "simulation_snapshot_contract",
+        "domain_profile_contract",
+        "workflow_attachment",
+        "workflow_step_contract",
+        "workflow_checkpoint_contract",
+        "generated_output_reference_contract",
+        "location_adventure_linkage_contract"
+      ],
+      "type": "string"
+    },
+    "PromotedFieldRecord": {
+      "properties": {
+        "canonical_field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disposition": {
+          "$ref": "#/definitions/FieldDisposition"
+        },
+        "field_name": {
+          "type": "string"
+        },
+        "field_type": {
+          "$ref": "#/definitions/FieldTypeHint"
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/definitions/SchemaProvenance"
+          },
+          "type": "array"
+        },
+        "required": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "disposition",
+        "field_name",
+        "field_type",
+        "provenance",
+        "required"
+      ],
+      "type": "object"
+    },
+    "PromotedSchemaRecord": {
+      "properties": {
+        "adapter_mapping_key": {
+          "type": "string"
+        },
+        "canonical_schema_name": {
+          "type": "string"
+        },
+        "concept_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "field_records": {
+          "items": {
+            "$ref": "#/definitions/PromotedFieldRecord"
+          },
+          "type": "array"
+        },
+        "normalized_name": {
+          "type": "string"
+        },
+        "outcome": {
+          "$ref": "#/definitions/PromotionOutcome"
+        },
+        "promotion_class": {
+          "$ref": "#/definitions/PromotionClass"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/definitions/SchemaProvenance"
+          },
+          "type": "array"
+        },
+        "rust_type_name": {
+          "type": "string"
+        },
+        "schema_id": {
+          "type": "string"
+        },
+        "target": {
+          "$ref": "#/definitions/PromotedConceptTarget"
+        }
+      },
+      "required": [
+        "adapter_mapping_key",
+        "canonical_schema_name",
+        "concept_name",
+        "description",
+        "donor",
+        "field_records",
+        "normalized_name",
+        "outcome",
+        "promotion_class",
+        "provenance",
+        "rust_type_name",
+        "schema_id",
+        "target"
+      ],
+      "type": "object"
+    },
+    "PromotionClass": {
+      "enum": [
+        "core",
+        "simulation",
+        "workflow",
+        "donor_local",
+        "reference_only"
+      ],
+      "type": "string"
+    },
+    "PromotionConflict": {
+      "properties": {
+        "concept_key": {
+          "type": "string"
+        },
+        "losing_donors": {
+          "items": {
+            "$ref": "#/definitions/SpecDonor"
+          },
+          "type": "array"
+        },
+        "provenance_links": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "resolution": {
+          "type": "string"
+        },
+        "winning_donor": {
+          "$ref": "#/definitions/SpecDonor"
+        }
+      },
+      "required": [
+        "concept_key",
+        "losing_donors",
+        "provenance_links",
+        "resolution",
+        "winning_donor"
+      ],
+      "type": "object"
+    },
+    "PromotionOutcome": {
+      "enum": [
+        "promoted",
+        "split"
+      ],
+      "type": "string"
+    },
+    "SchemaProvenance": {
+      "properties": {
+        "alias_history": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "promotion_class": {
+          "$ref": "#/definitions/PromotionClass"
+        },
+        "source_concept_name": {
+          "type": "string"
+        },
+        "source_file_path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "alias_history",
+        "donor",
+        "promotion_class",
+        "source_concept_name",
+        "source_file_path"
+      ],
+      "type": "object"
+    },
+    "SpecDonor": {
+      "enum": [
+        "mythforge",
+        "orbis",
+        "adventure_generator"
+      ],
+      "type": "string"
+    },
+    "SpecFragment": {
+      "properties": {
+        "concept_family": {
+          "type": "string"
+        },
+        "concept_id": {
+          "type": "string"
+        },
+        "concept_name": {
+          "type": "string"
+        },
+        "declared_symbols": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "excerpt": {
+          "type": "string"
+        },
+        "promotion_class": {
+          "$ref": "#/definitions/PromotionClass"
+        },
+        "provenance": {
+          "$ref": "#/definitions/SchemaProvenance"
+        },
+        "relative_path": {
+          "type": "string"
+        },
+        "source_kind": {
+          "$ref": "#/definitions/SpecSourceKind"
+        },
+        "source_root": {
+          "type": "string"
+        },
+        "ui_surface": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "concept_family",
+        "concept_id",
+        "concept_name",
+        "declared_symbols",
+        "donor",
+        "excerpt",
+        "promotion_class",
+        "provenance",
+        "relative_path",
+        "source_kind",
+        "source_root",
+        "ui_surface"
+      ],
+      "type": "object"
+    },
+    "SpecSourceKind": {
+      "enum": [
+        "doc",
+        "typescript",
+        "json",
+        "schema_template"
+      ],
+      "type": "string"
+    },
+    "SpecSourceManifest": {
+      "properties": {
+        "default_promotion_class": {
+          "$ref": "#/definitions/PromotionClass"
+        },
+        "donor": {
+          "$ref": "#/definitions/SpecDonor"
+        },
+        "excluded_paths": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "expected_concept_families": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "included_paths": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "source_kind": {
+          "$ref": "#/definitions/SpecSourceKind"
+        },
+        "source_root": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "default_promotion_class",
+        "donor",
+        "excluded_paths",
+        "expected_concept_families",
+        "included_paths",
+        "source_kind",
+        "source_root"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "alias_map": {
+      "$ref": "#/definitions/ConceptAliasMap"
+    },
+    "dropped_concepts": {
+      "items": {
+        "$ref": "#/definitions/DroppedConceptRecord"
+      },
+      "type": "array"
+    },
+    "fragments": {
+      "items": {
+        "$ref": "#/definitions/SpecFragment"
+      },
+      "type": "array"
+    },
+    "manifests": {
+      "items": {
+        "$ref": "#/definitions/SpecSourceManifest"
+      },
+      "type": "array"
+    },
+    "promoted_concepts": {
+      "items": {
+        "$ref": "#/definitions/PromotedSchemaRecord"
+      },
+      "type": "array"
+    },
+    "split_concepts": {
+      "items": {
+        "$ref": "#/definitions/PromotedSchemaRecord"
+      },
+      "type": "array"
+    },
+    "unresolved_conflicts": {
+      "items": {
+        "$ref": "#/definitions/PromotionConflict"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "alias_map",
+    "dropped_concepts",
+    "fragments",
+    "manifests",
+    "promoted_concepts",
+    "split_concepts",
+    "unresolved_conflicts"
+  ],
+  "title": "SpecPromotionReport",
+  "type": "object"
+}

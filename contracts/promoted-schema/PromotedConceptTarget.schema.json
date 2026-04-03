@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "enum": [
+    "world_record",
+    "entity_record",
+    "location_attachment",
+    "schema_binding_record",
+    "event_envelope",
+    "projection_record",
+    "relation_record",
+    "asset_record",
+    "simulation_attachment",
+    "simulation_event_payload_contract",
+    "simulation_snapshot_contract",
+    "domain_profile_contract",
+    "workflow_attachment",
+    "workflow_step_contract",
+    "workflow_checkpoint_contract",
+    "generated_output_reference_contract",
+    "location_adventure_linkage_contract"
+  ],
+  "title": "PromotedConceptTarget",
+  "type": "string"
+}

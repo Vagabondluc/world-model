@@ -1,0 +1,488 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AppendOnlyEventLedger": {
+      "properties": {
+        "event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "event_ids"
+      ],
+      "type": "object"
+    },
+    "ExternalSchemaRef": {
+      "properties": {
+        "migration_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        },
+        "source_uri": {
+          "type": "string"
+        },
+        "validation_contract_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "source_system",
+        "source_uri"
+      ],
+      "type": "object"
+    },
+    "HumanMetadata": {
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "tags"
+      ],
+      "type": "object"
+    },
+    "LocationAttachment": {
+      "properties": {
+        "coordinate_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hex_or_cell_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "layer_membership": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "map_anchor": {
+          "type": "string"
+        },
+        "spatial_scope": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "layer_membership",
+        "map_anchor",
+        "spatial_scope"
+      ],
+      "type": "object"
+    },
+    "MigrationLineage": {
+      "properties": {
+        "migration_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "previous_schema_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "OwnerRef": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "World": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "World"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Entity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Entity"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Asset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Asset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Workflow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Workflow"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "RelationKind": {
+      "oneOf": [
+        {
+          "enum": [
+            "ParentOf",
+            "ChildOf",
+            "LocatedIn",
+            "MemberOf",
+            "Owns",
+            "References"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "Custom": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Custom"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "RelationProvenance": {
+      "properties": {
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_system": {
+          "$ref": "#/definitions/SourceSystem"
+        }
+      },
+      "required": [
+        "source_system"
+      ],
+      "type": "object"
+    },
+    "RelationRecord": {
+      "properties": {
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effective_to": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/definitions/RelationProvenance"
+        },
+        "relation_type": {
+          "$ref": "#/definitions/RelationKind"
+        },
+        "source_entity_id": {
+          "type": "string"
+        },
+        "target_entity_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "provenance",
+        "relation_type",
+        "source_entity_id",
+        "target_entity_id"
+      ],
+      "type": "object"
+    },
+    "SchemaBindingRecord": {
+      "properties": {
+        "activation_event_id": {
+          "type": "string"
+        },
+        "external_schema_ref": {
+          "$ref": "#/definitions/ExternalSchemaRef"
+        },
+        "migration_lineage": {
+          "$ref": "#/definitions/MigrationLineage"
+        },
+        "promoted_schema_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schema_class": {
+          "$ref": "#/definitions/SchemaClass"
+        },
+        "schema_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "activation_event_id",
+        "external_schema_ref",
+        "migration_lineage",
+        "schema_class",
+        "schema_id",
+        "version"
+      ],
+      "type": "object"
+    },
+    "SchemaClass": {
+      "enum": [
+        "NativeSchema",
+        "ProjectSchema",
+        "SimulationSchema",
+        "WorkflowSchema"
+      ],
+      "type": "string"
+    },
+    "SourceSystem": {
+      "oneOf": [
+        {
+          "enum": [
+            "Mythforge",
+            "Orbis",
+            "AdventureGenerator",
+            "Neutral"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "External": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "External"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "WorkflowAttachment": {
+      "properties": {
+        "activity_type": {
+          "type": "string"
+        },
+        "checkpoints": {
+          "items": {
+            "$ref": "#/definitions/WorkflowCheckpoint"
+          },
+          "type": "array"
+        },
+        "output_references": {
+          "items": {
+            "$ref": "#/definitions/OwnerRef"
+          },
+          "type": "array"
+        },
+        "progress_ratio": {
+          "format": "float",
+          "type": "number"
+        },
+        "resumable": {
+          "type": "boolean"
+        },
+        "status": {
+          "$ref": "#/definitions/WorkflowStatus"
+        },
+        "step_state": {
+          "items": {
+            "$ref": "#/definitions/WorkflowStepState"
+          },
+          "type": "array"
+        },
+        "workflow_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "activity_type",
+        "checkpoints",
+        "output_references",
+        "progress_ratio",
+        "resumable",
+        "status",
+        "step_state",
+        "workflow_id"
+      ],
+      "type": "object"
+    },
+    "WorkflowCheckpoint": {
+      "properties": {
+        "checkpoint_key": {
+          "type": "string"
+        },
+        "reached_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "checkpoint_key",
+        "reached_at"
+      ],
+      "type": "object"
+    },
+    "WorkflowStatus": {
+      "enum": [
+        "Idle",
+        "Running",
+        "Paused",
+        "Completed",
+        "Failed"
+      ],
+      "type": "string"
+    },
+    "WorkflowStepState": {
+      "properties": {
+        "state": true,
+        "step_key": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "step_key"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "asset_attachments": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "entity_type": {
+      "type": "string"
+    },
+    "event_history": {
+      "$ref": "#/definitions/AppendOnlyEventLedger"
+    },
+    "latest_projection_reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "location_attachment": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/LocationAttachment"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "metadata": {
+      "$ref": "#/definitions/HumanMetadata"
+    },
+    "payload": true,
+    "relation_references": {
+      "items": {
+        "$ref": "#/definitions/RelationRecord"
+      },
+      "type": "array"
+    },
+    "schema_binding": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/SchemaBindingRecord"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "workflow_attachment": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/WorkflowAttachment"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "world_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_attachments",
+    "entity_id",
+    "entity_type",
+    "event_history",
+    "metadata",
+    "payload",
+    "relation_references",
+    "world_id"
+  ],
+  "title": "EntityRecord",
+  "type": "object"
+}

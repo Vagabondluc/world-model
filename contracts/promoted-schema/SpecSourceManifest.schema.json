@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "PromotionClass": {
+      "enum": [
+        "core",
+        "simulation",
+        "workflow",
+        "donor_local",
+        "reference_only"
+      ],
+      "type": "string"
+    },
+    "SpecDonor": {
+      "enum": [
+        "mythforge",
+        "orbis",
+        "adventure_generator"
+      ],
+      "type": "string"
+    },
+    "SpecSourceKind": {
+      "enum": [
+        "doc",
+        "typescript",
+        "json",
+        "schema_template"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "default_promotion_class": {
+      "$ref": "#/definitions/PromotionClass"
+    },
+    "donor": {
+      "$ref": "#/definitions/SpecDonor"
+    },
+    "excluded_paths": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "expected_concept_families": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "included_paths": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source_kind": {
+      "$ref": "#/definitions/SpecSourceKind"
+    },
+    "source_root": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "default_promotion_class",
+    "donor",
+    "excluded_paths",
+    "expected_concept_families",
+    "included_paths",
+    "source_kind",
+    "source_root"
+  ],
+  "title": "SpecSourceManifest",
+  "type": "object"
+}

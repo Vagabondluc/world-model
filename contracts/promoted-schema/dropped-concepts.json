@@ -1,0 +1,214 @@
+[
+  {
+    "concept_id": "orbis/voxel-domains-voxel-ts",
+    "concept_name": "voxel",
+    "donor": "orbis",
+    "provenance": {
+      "alias_history": [],
+      "donor": "orbis",
+      "promotion_class": "reference_only",
+      "source_concept_name": "voxel",
+      "source_file_path": "domains/voxel.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "orbis/orbis-kernel-kernel-orbis-kernel-ts",
+    "concept_name": "orbis-kernel",
+    "donor": "orbis",
+    "provenance": {
+      "alias_history": [],
+      "donor": "orbis",
+      "promotion_class": "reference_only",
+      "source_concept_name": "orbis-kernel",
+      "source_file_path": "kernel/orbis-kernel.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/airequestentryschema-schemas-ailedger-ts",
+    "concept_name": "AiRequestEntrySchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "AiRequestEntrySchema",
+      "source_file_path": "schemas/aiLedger.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/locationtypeenum-schemas-common-ts",
+    "concept_name": "LocationTypeEnum",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [
+        "location",
+        "region",
+        "site"
+      ],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "LocationTypeEnum",
+      "source_file_path": "schemas/common.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/compendiumstateexportschema-schemas-compendium-ts",
+    "concept_name": "CompendiumStateExportSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "CompendiumStateExportSchema",
+      "source_file_path": "schemas/compendium.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/sensorypackageschema-schemas-delve-ts",
+    "concept_name": "SensoryPackageSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "SensoryPackageSchema",
+      "source_file_path": "schemas/delve.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/combatantschema-schemas-encounter-ts",
+    "concept_name": "CombatantSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "CombatantSchema",
+      "source_file_path": "schemas/encounter.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/combatencounterbalancerconfigschema-schemas-encounters-index-ts",
+    "concept_name": "CombatEncounterBalancerConfigSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "CombatEncounterBalancerConfigSchema",
+      "source_file_path": "schemas/encounters/index.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/clockeventschema-schemas-faction-ts",
+    "concept_name": "ClockEventSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "ClockEventSchema",
+      "source_file_path": "schemas/faction.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/index-schemas-index-ts",
+    "concept_name": "index",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "index",
+      "source_file_path": "schemas/index.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/lootschema-schemas-loot-ts",
+    "concept_name": "LootSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "LootSchema",
+      "source_file_path": "schemas/loot.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/loreentryschema-schemas-lore-ts",
+    "concept_name": "LoreEntrySchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "LoreEntrySchema",
+      "source_file_path": "schemas/lore.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/minornpcdetailsschema-schemas-npc-ts",
+    "concept_name": "MinorNpcDetailsSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "MinorNpcDetailsSchema",
+      "source_file_path": "schemas/npc.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/jobpostschema-schemas-tavern-ts",
+    "concept_name": "JobPostSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "JobPostSchema",
+      "source_file_path": "schemas/tavern.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/trapruleschema-schemas-trap-ts",
+    "concept_name": "TrapRuleSchema",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "TrapRuleSchema",
+      "source_file_path": "schemas/trap.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "adventure-generator/historystore-stores-historystore-ts",
+    "concept_name": "historyStore",
+    "donor": "adventure_generator",
+    "provenance": {
+      "alias_history": [],
+      "donor": "adventure_generator",
+      "promotion_class": "reference_only",
+      "source_concept_name": "historyStore",
+      "source_file_path": "stores/historyStore.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  }
+]

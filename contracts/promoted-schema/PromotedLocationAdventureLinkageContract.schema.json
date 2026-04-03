@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "adventure_entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "location_entity_id": {
+      "type": "string"
+    },
+    "region_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scene_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "location_entity_id",
+    "scene_refs"
+  ],
+  "title": "PromotedLocationAdventureLinkageContract",
+  "type": "object"
+}

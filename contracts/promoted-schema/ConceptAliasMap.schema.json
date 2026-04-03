@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AliasGroup": {
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "canonical": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "aliases",
+        "canonical"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "groups": {
+      "items": {
+        "$ref": "#/definitions/AliasGroup"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "groups"
+  ],
+  "title": "ConceptAliasMap",
+  "type": "object"
+}

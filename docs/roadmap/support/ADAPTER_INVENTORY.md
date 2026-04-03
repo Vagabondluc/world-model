@@ -93,7 +93,7 @@ This document provides an exhaustive snapshot inventory for the three donor adap
 | Field | Value |
 |-------|-------|
 | Manifest Path | `world-model/adapters/adventure-generator/manifest.yaml` |
-| Source Root | `antigravity/dnd adventure generator/src` (OUTSIDE WORKSPACE) |
+| Source Root | `antigravity/dnd adventure generator/src` (external local source root; copy-only eligible) |
 | Promotion Class | Workflow |
 
 **Include Paths (Expected):**
@@ -119,13 +119,13 @@ This document provides an exhaustive snapshot inventory for the three donor adap
 - PromotedLocationAdventureLinkageContract
 
 **Reference-Only Candidates:**
-- None inside workspace (SOURCE NOT ACCESSIBLE). Any available examples must be copied into adapter `source-snapshot/` during snapshot creation.
+- None inside `world-model/` itself. If reference examples are needed, copy them into adapter `source-snapshot/` during snapshot creation.
 
-**Risks / Ambiguities:**
-- ⚠️ SOURCE NOT ACCESSIBLE - path outside workspace; snapshot creation requires external access
+- **Risks / Ambiguities:**
+- External local source root must be copied before runtime use; do not assume it is a direct dependency
 - No manifest exists yet (manifest must be created before promotion)
 - Unknown schema formats without source access (Zod -> JSON-schema translation required)
-- Build process must have access to external directory to produce a reliable snapshot
+- Build process must be able to read the external local path during snapshot creation
 
 ---
 
@@ -135,4 +135,3 @@ This document provides an exhaustive snapshot inventory for the three donor adap
 - Adapter snapshots are copy-only artifacts; runtime code MUST NOT import directly from donor source roots.
 - Concept mapping decisions must reference the Canonical Mapping Targets listed above; mapping gaps must be recorded in `world-model/adapters/<donor>/mappings/concept-map.yaml` with explicit transformation rules.
 - For each adapter, produce a `source-snapshot/` directory under `world-model/adapters/<donor>/` containing only the included paths.
-

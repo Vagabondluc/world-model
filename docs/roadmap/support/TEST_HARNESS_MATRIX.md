@@ -58,7 +58,7 @@ Unit Tests:
 Adapter Tests:
 - `test_mythforge_snapshot_integrity()` - Mythforge snapshot files match manifest
 - `test_orbis_snapshot_integrity()` - Orbis snapshot files match manifest
-- `test_adventure_generator_snapshot_integrity()` - Adventure Generator snapshot files match manifest (or skip if source unavailable)
+- `test_adventure_generator_snapshot_integrity()` - Adventure Generator snapshot files match manifest and copied source snapshot
 
 Exit Criteria:
 - All adapter manifests validate
@@ -100,7 +100,7 @@ Unit Tests:
 Adapter Tests:
 - `test_mythforge_import()` - Mythforge concepts import to canonical model
 - `test_orbis_import()` - Orbis concepts import to canonical model
-- `test_adventure_generator_import()` - Adventure Generator concepts import to canonical model
+- `test_adventure_generator_import()` - Adventure Generator concepts import to canonical model from copied snapshot
 
 Migration Tests:
 - `test_migration_produces_valid_bundle()` - Migration produces valid CanonicalBundle
@@ -152,4 +152,3 @@ Exit Criteria:
 - All release criteria in `world-model/docs/release/RELEASE_CRITERIA.md` met
 - No critical bugs
 - Documentation complete
-

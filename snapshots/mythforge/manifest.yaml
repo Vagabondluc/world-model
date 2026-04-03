@@ -1,0 +1,21 @@
+# Minimal stub created by run_harness.py --bootstrap
+# Fill in every REPLACE_ value before Phase 2 gates pass.
+# Full field reference: world-model/docs/templates/adapter-manifest-template.md
+id: mythforge
+name: "Mythforge"
+version: "0.0.1"
+source:
+  repo: "https://github.com/REPLACE_ORG/mythforge"
+  commit: "REPLACE_SHA"
+snapshot: "snapshots/mythforge/"
+mappings:
+  - "mappings/mythforge/mapping.yaml"
+fixtures:
+  - "fixtures/mythforge/"
+tests:
+  - "tests/mythforge/"
+concepts:
+  - "REPLACE_CONCEPT_1"
+  - "REPLACE_CONCEPT_2"
+owner: "REPLACE_OWNER"
+notes: "Auto-generated stub — update REPLACE_ fields before merging."

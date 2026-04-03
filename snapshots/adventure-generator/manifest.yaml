@@ -1,0 +1,21 @@
+# Minimal stub created by run_harness.py --bootstrap
+# Fill in every REPLACE_ value before Phase 2 gates pass.
+# Full field reference: world-model/docs/templates/adapter-manifest-template.md
+id: adventure-generator
+name: "Adventure Generator"
+version: "0.0.1"
+source:
+  repo: "https://github.com/REPLACE_ORG/adventure-generator"
+  commit: "REPLACE_SHA"
+snapshot: "snapshots/adventure-generator/"
+mappings:
+  - "mappings/adventure-generator/mapping.yaml"
+fixtures:
+  - "fixtures/adventure-generator/"
+tests:
+  - "tests/adventure-generator/"
+concepts:
+  - "REPLACE_CONCEPT_1"
+  - "REPLACE_CONCEPT_2"
+owner: "REPLACE_OWNER"
+notes: "Auto-generated stub — update REPLACE_ fields before merging."

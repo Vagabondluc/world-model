@@ -74,7 +74,7 @@ Create copy-only adapter snapshots and manifests for each donor, validate manife
 
 ## Dependencies
 - Phase 1 complete
-- Access to donor source files (or external snapshot artifacts)
+- Access to donor source files, including the external local Adventure Generator source root and other donor source roots
 
 ## Deliverables
 - `adapters/<donor>/manifest.yaml` for Mythforge, Orbis, Adventure Generator
@@ -96,7 +96,7 @@ Create copy-only adapter snapshots and manifests for each donor, validate manife
 ## Failure Cases
 - Missing or incomplete snapshots
 - Manifest validation failures
-- Inaccessible donor source (Adventure Generator external path) causing incomplete snapshot
+- Adventure Generator source root was not copied into a local adapter snapshot
 
 ---
 
@@ -220,4 +220,3 @@ Stabilize, performance-test, document, and gate the release behind a determinist
 - Performance regressions under load
 - Unresolved critical bugs
 - Missing or incomplete release documentation
-

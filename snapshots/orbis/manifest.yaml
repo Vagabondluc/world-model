@@ -1,0 +1,21 @@
+# Minimal stub created by run_harness.py --bootstrap
+# Fill in every REPLACE_ value before Phase 2 gates pass.
+# Full field reference: world-model/docs/templates/adapter-manifest-template.md
+id: orbis
+name: "Orbis"
+version: "0.0.1"
+source:
+  repo: "https://github.com/REPLACE_ORG/orbis"
+  commit: "REPLACE_SHA"
+snapshot: "snapshots/orbis/"
+mappings:
+  - "mappings/orbis/mapping.yaml"
+fixtures:
+  - "fixtures/orbis/"
+tests:
+  - "tests/orbis/"
+concepts:
+  - "REPLACE_CONCEPT_1"
+  - "REPLACE_CONCEPT_2"
+owner: "REPLACE_OWNER"
+notes: "Auto-generated stub — update REPLACE_ fields before merging."

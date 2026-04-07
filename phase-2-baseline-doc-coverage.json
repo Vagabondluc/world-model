@@ -1,0 +1,17 @@
+{
+  "doc_count": 4,
+  "coverage": {
+    "ADAPTER_COPY_POLICY.md": {
+      "references_adapters_path": true
+    },
+    "ADVENTURE_GENERATOR_ADAPTER.md": {
+      "references_adapters_path": true
+    },
+    "MYTHFORGE_ADAPTER.md": {
+      "references_adapters_path": true
+    },
+    "ORBIS_ADAPTER.md": {
+      "references_adapters_path": true
+    }
+  }
+}

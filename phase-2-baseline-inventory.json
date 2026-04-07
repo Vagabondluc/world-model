@@ -1,0 +1,19 @@
+{
+  "spec_source_files": [
+    "world-model/spec-sources/adventure-generator.toml",
+    "world-model/spec-sources/mythforge.toml",
+    "world-model/spec-sources/orbis.toml"
+  ],
+  "legacy_snapshot_manifests": [
+    "world-model/snapshots/adventure-generator/manifest.yaml",
+    "world-model/snapshots/donor-xyz/manifest.yaml",
+    "world-model/snapshots/mythforge/manifest.yaml",
+    "world-model/snapshots/orbis/manifest.yaml"
+  ],
+  "legacy_manifest_placeholder_counts": {
+    "world-model/snapshots/adventure-generator/manifest.yaml": 7,
+    "world-model/snapshots/donor-xyz/manifest.yaml": 0,
+    "world-model/snapshots/mythforge/manifest.yaml": 7,
+    "world-model/snapshots/orbis/manifest.yaml": 7
+  }
+}

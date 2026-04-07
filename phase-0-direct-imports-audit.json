@@ -1,0 +1,377 @@
+[
+  {
+    "path": "mythforge/docs/research/pi-mono/packages/ai/src/utils/oauth/index.ts",
+    "line": 37,
+    "text": "import { antigravityOAuthProvider } from \"./google-antigravity.js\";"
+  },
+  {
+    "path": "mythforge/src-tauri/src/commands/ollama.rs",
+    "line": 1,
+    "text": "use std::path::PathBuf;"
+  },
+  {
+    "path": "mythforge/src-tauri/src/core/error.rs",
+    "line": 1,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mythforge/src-tauri/src/ollama/client.rs",
+    "line": 1,
+    "text": "use directories::ProjectDirs;"
+  },
+  {
+    "path": "mythforge/src-tauri/src/ollama/mod.rs",
+    "line": 4,
+    "text": "pub use client::{OllamaClient, OllamaError, OllamaModel, OllamaRuntime, OllamaSettings};"
+  },
+  {
+    "path": "mythforge/src-tauri/tests/contract_tests.rs",
+    "line": 3,
+    "text": "use std::fs;"
+  },
+  {
+    "path": "mythforge/src-tauri/tests/ollama_generate.rs",
+    "line": 1,
+    "text": "use std::fs;"
+  },
+  {
+    "path": "mythforge/src-tauri/tests/harness/assertions.rs",
+    "line": 1,
+    "text": "use serde_json::Value;"
+  },
+  {
+    "path": "mythforge/src-tauri/tests/harness/database.rs",
+    "line": 1,
+    "text": "use sqlx::{sqlite::SqlitePoolOptions, SqlitePool};"
+  },
+  {
+    "path": "mythforge/src-tauri/tests/harness/mock_server.rs",
+    "line": 1,
+    "text": "use httpmock::prelude::*;"
+  },
+  {
+    "path": "mythforge/src-tauri/tests/harness/mod.rs",
+    "line": 5,
+    "text": "pub use assertions::{assert_has_error, assert_is_ok};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/benches/database_benchmarks.rs",
+    "line": 3,
+    "text": "use criterion::{black_box, criterion_group, criterion_main, Criterion};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/lib.rs",
+    "line": 8,
+    "text": "pub use db::client::DatabaseClient;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/main.rs",
+    "line": 4,
+    "text": "use tauri::Manager;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/backend_proxy.rs",
+    "line": 4,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/backup_commands.rs",
+    "line": 3,
+    "text": "use crate::db::backup::{BackupInfo, BackupManager, BackupType, RestoreMode};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/faction_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/flora_fauna_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/graph_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/language_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/location_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/loot_table_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/mod.rs",
+    "line": 19,
+    "text": "pub use npc_commands::*;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/monster_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/npc_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/player_notes_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/quest_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/settlement_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/timeline_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/commands/weather_commands.rs",
+    "line": 3,
+    "text": "use tauri::State;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/db/backup.rs",
+    "line": 3,
+    "text": "use anyhow::{Context, Result};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/db/client.rs",
+    "line": 3,
+    "text": "use anyhow::{Context, Result};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/db/migrations.rs",
+    "line": 3,
+    "text": "use anyhow::{Context, Result};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/db/mod.rs",
+    "line": 8,
+    "text": "pub use client::DatabaseClient;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/dungeon.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/entity.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/faction.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/flora_fauna.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/item.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/language.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/location.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/loot_table.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/lore.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/mod.rs",
+    "line": 20,
+    "text": "pub use entity::Entity;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/monster.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/npc.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/player_notes.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/quest.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/settlement.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/timeline.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/models/weather.rs",
+    "line": 3,
+    "text": "use serde::{Deserialize, Serialize};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/dungeon_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/entity_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/faction_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/flora_fauna_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/item_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/language_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/location_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/loot_table_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/lore_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/mod.rs",
+    "line": 20,
+    "text": "pub use entity_repository::Repository;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/monster_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/npc_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/player_notes_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/quest_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/settlement_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/timeline_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/repositories/weather_repository.rs",
+    "line": 3,
+    "text": "use async_trait::async_trait;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/backup_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::db::backup::{BackupManager, BackupType, RestoreMode};"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/command_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::commands::npc_commands;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/database_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::db::client::DatabaseClient;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/graph_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::db::client::DatabaseClient;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/migration_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::db::client::DatabaseClient;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/model_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::models::npc::NPC;"
+  },
+  {
+    "path": "mechanical-sycophant/src-tauri/src/tests/repository_tests.rs",
+    "line": 5,
+    "text": "    use super::super::super::db::client::DatabaseClient;"
+  }
+]

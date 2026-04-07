@@ -1341,7 +1341,7 @@ mod tests {
                 && matches!(fragment.promotion_class, PromotionClass::Simulation)
                 && fragment
                     .relative_path
-                    .contains("contracts/data-contracts.ts")
+                    .contains("types/session.ts")
         }));
         assert!(fragments.iter().any(|fragment| {
             fragment.donor == SpecDonor::AdventureGenerator

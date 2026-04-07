@@ -1,0 +1,154 @@
+{
+  "donor": "mythforge",
+  "snapshot_root": "adapters/mythforge/source-snapshot",
+  "source_root": "mythforge/docs/schema-templates",
+  "file_count": 29,
+  "fingerprint": "3c8eea9dd6508a6c4ed9db8adc9b3fda13d62e531f758b717f2de7536eba9116",
+  "files": [
+    {
+      "path": "Artifact.md",
+      "size": 961,
+      "sha256": "03c478e4a200c5f0000ff8a142a318072a37220098dd96712dc9bdbca8a0bd0e"
+    },
+    {
+      "path": "Campaign.md",
+      "size": 1106,
+      "sha256": "bab19136edb79c510ee1c0fdd4413dbf34b90b2db8b6d71837c5751d593ca3cc"
+    },
+    {
+      "path": "Character.md",
+      "size": 1003,
+      "sha256": "10dab3415531446b58f69609df5f1284e7bcf28e480d55c0d861f08cb43a52c7"
+    },
+    {
+      "path": "Faction.md",
+      "size": 1025,
+      "sha256": "596e4543e4eb3b5fd62eadeb770376b5b7e46ba9828d978c28fa22d2dcde1c5e"
+    },
+    {
+      "path": "index.md",
+      "size": 9591,
+      "sha256": "62af6b79ac74a903d78e7296b03ecd60d354bf5f29982d0d2f6b1bc206895f39"
+    },
+    {
+      "path": "Item.md",
+      "size": 1213,
+      "sha256": "52f79a80d5d3d152da5f1fc1cdd3205e91ae48856dc17936c8324090fde5e698"
+    },
+    {
+      "path": "Landmark.md",
+      "size": 626,
+      "sha256": "a236b336193719b9799f4fbd6e60a113803661ad4e846783452f7d0a45176704"
+    },
+    {
+      "path": "NPC.md",
+      "size": 1957,
+      "sha256": "2725fe1421d391e3fca41de4ffbdbfa9881b35eaaa221591442d3b7cb44a6ac3"
+    },
+    {
+      "path": "Region.md",
+      "size": 631,
+      "sha256": "72f715088da72e3274c40cdff9e21c9a9adae1a858b09e795e3f58ffbf41d91d"
+    },
+    {
+      "path": "schemas/Arcane.schema.json",
+      "size": 1490,
+      "sha256": "a8ad1db98cffcfa56caab8be9c8c7a6c0425866a517e215b031443358a211940"
+    },
+    {
+      "path": "schemas/Artifact.schema.json",
+      "size": 932,
+      "sha256": "c5f0544781b297805279ba0f5f36c313690869a2247c79a95de889b52bc731d2"
+    },
+    {
+      "path": "schemas/ArtifactEnvelope.schema.json",
+      "size": 679,
+      "sha256": "c09ab52e22780a430970604fba763418625b0f19e494f4c0ac0b806126f25fed"
+    },
+    {
+      "path": "schemas/CoreMysteryElements.schema.json",
+      "size": 931,
+      "sha256": "ca652ef7bc02c58a39ea1ad96f0ce15502cd81d66656f9b0e62c19f080e94e00"
+    },
+    {
+      "path": "schemas/DungeonAssembly.schema.json",
+      "size": 4143,
+      "sha256": "b29c0b7bfa8da403de9bfa110ca51b491010a54113b22b38ef00ec8bc4c2e1bf"
+    },
+    {
+      "path": "schemas/DungeonPart.schema.json",
+      "size": 3176,
+      "sha256": "1d21c031f12af34a59827f1b72fcae7d93aada5da4e653fcc1e451e7943aa927"
+    },
+    {
+      "path": "schemas/HeistEnvelope.schema.json",
+      "size": 1023,
+      "sha256": "e8704b1636d4e96d3b5019a5516220b738baee88efb301963ba6d2047bb266d8"
+    },
+    {
+      "path": "schemas/HeistPlan.schema.json",
+      "size": 2883,
+      "sha256": "f85ee92f031cebefccc1d49c0cbc31fff6387946baea167cfb0c82dc5aeae534"
+    },
+    {
+      "path": "schemas/Matrix.schema.json",
+      "size": 1209,
+      "sha256": "3a278d182235950d199f4865770491bb3905a3d80e2a56c5f1d8a6c79b58e09a"
+    },
+    {
+      "path": "schemas/MatrixEnvelope.schema.json",
+      "size": 878,
+      "sha256": "be1c1a4c3e15a9f00521ade5bad93242680b44a8bc73e9a87652499b52ac361c"
+    },
+    {
+      "path": "schemas/MysteryNode.schema.json",
+      "size": 1893,
+      "sha256": "62901dda42e3dc8f9b778d468b5935a00c347989b04542081f2f0814e98ce324"
+    },
+    {
+      "path": "schemas/NodeConnections.schema.json",
+      "size": 1239,
+      "sha256": "56936944bc631af061d5e4714ba6cc0db0488e91c9a99b5270288c5500ac1f3f"
+    },
+    {
+      "path": "schemas/NodeConnectionsEnvelope.schema.json",
+      "size": 923,
+      "sha256": "aa3a7c6739138f0736cad16cf6dc3585fc4258a9b35973ebd025aaaea115c835"
+    },
+    {
+      "path": "schemas/Quest.schema.json",
+      "size": 3162,
+      "sha256": "b7b161f3167552f9a624ad2e7c124661e83c551e7ba3e083da616f090f543fb8"
+    },
+    {
+      "path": "schemas/Table.schema.json",
+      "size": 1467,
+      "sha256": "a02a95881099175b78178c80c9caa94e634dd28ef6a7a58ab8641e627e0abccd"
+    },
+    {
+      "path": "schemas/TableEnvelope.schema.json",
+      "size": 803,
+      "sha256": "32a1afb7c5b21592996e957c51a7edd36fb1ffc31f19c0e27c095e5ca355fbfa"
+    },
+    {
+      "path": "schemas/VividDescription.schema.json",
+      "size": 1947,
+      "sha256": "4964a168516132b72e0133086fd64c522c8d1095338da594611e4d2996ef8260"
+    },
+    {
+      "path": "Settlement.md",
+      "size": 5285,
+      "sha256": "f1db62218c49f0b743f84175a33f8a3ab80f6bc1b337512db4582fe135c78af2"
+    },
+    {
+      "path": "UUID_CONTAINER_ARCHITECTURE.md",
+      "size": 14290,
+      "sha256": "2fafebdd1450ba2542ecc5488c58aaf74478e0796223752caa94b39299ca4749"
+    },
+    {
+      "path": "UUID_CONTAINER_IMPLEMENTATION_PLAN.md",
+      "size": 12226,
+      "sha256": "88b1c626b44d909b4ab49d9dfe041030437efa78858a8e38ea2e3dd008ef3f07"
+    }
+  ]
+}

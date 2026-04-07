@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "world_model_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "adapters_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/adapters",
+  "registry_path": "D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/concept-family-registry.yaml",
+  "results": [
+    {
+      "donor": "mythforge",
+      "ok": true,
+      "manifest": "D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/mythforge/manifest.yaml",
+      "snapshot_files": 29,
+      "errors": []
+    },
+    {
+      "donor": "orbis",
+      "ok": true,
+      "manifest": "D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/orbis/manifest.yaml",
+      "snapshot_files": 6,
+      "errors": []
+    },
+    {
+      "donor": "adventure-generator",
+      "ok": true,
+      "manifest": "D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/adventure-generator/manifest.yaml",
+      "snapshot_files": 21,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "mandatory_coverage_missing": []
+}

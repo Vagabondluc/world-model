@@ -1,0 +1,30 @@
+concept_families:
+  - identity-history
+  - schema-contract
+  - entity-template
+  - simulation-profile
+  - simulation-snapshot
+  - simulation-domain
+  - simulation-event
+  - workflow-schema
+  - location-linkage
+  - domain-schema
+  - spatial-stack
+  - event-projection
+
+mandatory_coverage:
+  - world
+  - entity
+  - location
+  - city/settlement
+  - region
+  - biome
+  - dungeon
+  - landmark
+  - relation
+  - asset
+  - workflow
+  - simulation
+  - event
+  - projection
+  - schema-binding

@@ -1,0 +1,36 @@
+{
+  "workspace_root": "world-model",
+  "phase": 0,
+  "generated_at": "2026-04-07T22:30:00Z",
+  "boundary_artifacts": {
+    "roadmap": "world-model/docs/roadmap/phase-0-boundaries.md",
+    "architecture": "world-model/docs/architecture/FINAL_APP_ARCHITECTURE.md",
+    "repository_layout": "world-model/docs/architecture/REPOSITORY_LAYOUT.md",
+    "adapter_copy_policy": "world-model/docs/adapters/ADAPTER_COPY_POLICY.md",
+    "harness_checks": "world-model/docs/harness_checks.md"
+  },
+  "core_roots": [
+    "world-model/contracts",
+    "world-model/crates",
+    "world-model/docs",
+    "world-model/scripts",
+    "world-model/adapters",
+    "world-model/spec-sources",
+    "world-model/snapshots"
+  ],
+  "adapter_roots": [
+    "world-model/adapters/mythforge",
+    "world-model/adapters/orbis",
+    "world-model/adapters/adventure-generator"
+  ],
+  "legacy_donor_roots": [
+    "mythforge",
+    "mechanical-sycophant",
+    "to be merged"
+  ],
+  "notes": [
+    "Phase 0 treats world-model as the deliverable surface.",
+    "Legacy donor roots remain frozen source material and are audited separately.",
+    "Adapter snapshots are copy-only and must not depend on runtime donor imports."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "mode": "deliverable",
+  "scan_roots": [
+    "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model"
+  ],
+  "deliverable_root": "world-model",
+  "frozen_donor_roots": [
+    "mythforge",
+    "mechanical-sycophant",
+    "to be merged"
+  ],
+  "count": 12,
+  "matches": [
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-adapters/src/lib.rs",
+      "line": 1,
+      "text": "use schemars::JsonSchema;"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-core/src/bundle.rs",
+      "line": 1,
+      "text": "use crate::{"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-core/src/commands.rs",
+      "line": 1,
+      "text": "use crate::*;"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-core/src/ids.rs",
+      "line": 1,
+      "text": "use schemars::JsonSchema;"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-core/src/lib.rs",
+      "line": 6,
+      "text": "pub use bundle::*;"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-core/src/records.rs",
+      "line": 1,
+      "text": "use crate::{"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-driver/src/main.rs",
+      "line": 1,
+      "text": "use std::{"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-schema/src/lib.rs",
+      "line": 1,
+      "text": "use schemars::{schema::RootSchema, schema_for};"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-schema/src/bin/export-schemas.rs",
+      "line": 1,
+      "text": "use std::{fs, path::PathBuf};"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-specs/src/lib.rs",
+      "line": 1,
+      "text": "use regex::Regex;"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/crates/world-model-specs/src/bin/export-promoted-schemas.rs",
+      "line": 1,
+      "text": "use std::{fs, path::PathBuf};"
+    },
+    {
+      "classification": "runtime",
+      "path": "world-model/scripts/tests/test_phase0_scope.py",
+      "line": 73,
+      "text": "included.write_text(\"use super::super::db::client::DatabaseClient;\\n\", encoding=\"utf-8\")"
+    }
+  ],
+  "notes": [
+    "All matches are inside the world-model deliverable surface.",
+    "No runtime donor imports outside deliverable scope were detected in this scan.",
+    "Frozen donor roots are audited separately by world-model/phase-0-direct-imports-audit.json."
+  ]
+}

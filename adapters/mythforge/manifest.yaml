@@ -1,0 +1,40 @@
+id: mythforge
+name: Mythforge
+version: 1.0.0
+source:
+  repo: local://mythforge
+  commit: workspace-local
+  path: docs/schema-templates
+source_kind: schema_template
+default_promotion_class: core
+snapshot:
+  root: adapters/mythforge/source-snapshot
+  fingerprint: 3c8eea9dd6508a6c4ed9db8adc9b3fda13d62e531f758b717f2de7536eba9116
+  file_count: 29
+included_paths:
+- UUID_CONTAINER_ARCHITECTURE.md
+- UUID_CONTAINER_IMPLEMENTATION_PLAN.md
+- index.md
+- schemas
+- Campaign.md
+- Character.md
+- Settlement.md
+- Region.md
+- Artifact.md
+- Item.md
+- Faction.md
+- NPC.md
+- Landmark.md
+excluded_paths:
+- prompts
+- samples
+- methods
+concepts:
+- identity-history
+- schema-contract
+- entity-template
+mappings:
+- adapters/mythforge/mappings/concept-map.yaml
+provenance:
+  generated_at: '2026-04-07T22:20:22Z'
+  generated_by: vagab

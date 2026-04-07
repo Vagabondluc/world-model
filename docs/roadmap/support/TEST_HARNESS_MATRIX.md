@@ -54,6 +54,7 @@ Unit Tests:
 - `test_adapter_manifest_validates()` - Each adapter manifest passes validation script
 - `test_snapshot_files_exist()` - All declared snapshot files exist
 - `test_concept_mapping_complete()` - All concept mappings reference valid canonical targets
+- `test_snapshot_fingerprint_stable()` - Snapshot fingerprint matches deterministic file inventory
 
 Adapter Tests:
 - `test_mythforge_snapshot_integrity()` - Mythforge snapshot files match manifest
@@ -64,6 +65,7 @@ Exit Criteria:
 - All adapter manifests validate
 - All snapshot files copied and accounted for
 - Concept mappings documented
+- `python world-model/scripts/check_phase_2_snapshots.py` passes
 
 ---
 

@@ -1,0 +1,54 @@
+entries:
+  - donor_concept: Session Snapshot
+    source_family: simulation-snapshot
+    canonical_key: simulation
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Simulation state and snapshots are owned by the simulation donor lane.
+    provenance: src/types/session.ts
+
+  - donor_concept: Session Snapshot Event Type
+    source_family: simulation-event
+    canonical_key: simulation/event
+    canonical_target: EventEnvelope
+    status: mapped
+    winner: orbis
+    rationale: Simulation lifecycle events map into canonical event envelopes.
+    provenance: src/types/session.ts
+
+  - donor_concept: Climate State Store
+    source_family: simulation-domain
+    canonical_key: simulation/biome
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Biome and climate simulation parameters are part of simulation domain state.
+    provenance: src/stores/weatherStore.ts
+
+  - donor_concept: Map Climate Store
+    source_family: simulation-profile
+    canonical_key: simulation/location
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Spatial climate profile complements canonical location attachments.
+    provenance: src/stores/mapStore.ts
+
+  - donor_concept: Map Location Climate
+    source_family: simulation-domain
+    canonical_key: simulation/region
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Regional simulation parameters attach through simulation profile and domain state.
+    provenance: src/stores/mapLocationStore.ts
+
+  - donor_concept: Social Event Contract
+    source_family: simulation-event
+    canonical_key: simulation/relation
+    canonical_target: EventEnvelope
+    status: reference-only
+    winner: orbis
+    rationale: Social event payloads are preserved as non-trunk simulation event references.
+    provenance: src/contracts/forms/social_event.schema.ts

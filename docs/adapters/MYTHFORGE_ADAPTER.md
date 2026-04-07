@@ -2,6 +2,12 @@
 
 Mythforge is the trunk donor. Its adapter contributes the canonical identity and world-ownership shape for the final app.
 
+Source of truth:
+
+- `world-model/adapters/mythforge/manifest.yaml`
+- `world-model/adapters/mythforge/mappings/concept-map.yaml`
+- `world-model/adapters/mythforge/source-snapshot/`
+
 ## What Is Copied
 
 Copy the Mythforge material that defines:
@@ -36,6 +42,14 @@ The adapter maps Mythforge concepts into:
 - `RelationRecord`
 - `AssetRecord`
 - `LocationAttachment`
+
+Spatial semantics explicitly covered in mapping:
+
+- city/settlement
+- region
+- biome
+- dungeon
+- landmark
 
 ## Final App Role
 

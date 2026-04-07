@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Artifact",
+  "description": "Container vocabulary: the Artifact payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "content",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "content": {
+      "type": "object"
+    },
+    "version": {
+      "type": "string"
+    },
+    "approval_required": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "x-mythforge-schema-class": "entity",
+  "x-mythforge-legacy-companion": "ArtifactEnvelope.schema.json"
+}

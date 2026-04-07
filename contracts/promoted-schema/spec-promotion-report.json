@@ -40,28 +40,28 @@
   },
   "dropped_concepts": [
     {
-      "concept_id": "orbis/voxel-domains-voxel-ts",
-      "concept_name": "voxel",
+      "concept_id": "orbis/socialeventschema-contracts-forms-social-event-schema-ts",
+      "concept_name": "SocialEventSchema",
       "donor": "orbis",
       "provenance": {
         "alias_history": [],
         "donor": "orbis",
         "promotion_class": "reference_only",
-        "source_concept_name": "voxel",
-        "source_file_path": "domains/voxel.ts"
+        "source_concept_name": "SocialEventSchema",
+        "source_file_path": "contracts/forms/social_event.schema.ts"
       },
       "reason": "Reference-only concept stays outside canonical contracts."
     },
     {
-      "concept_id": "orbis/orbis-kernel-kernel-orbis-kernel-ts",
-      "concept_name": "orbis-kernel",
+      "concept_id": "orbis/social-event-types-contracts-forms-social-event-types-ts",
+      "concept_name": "social_event.types",
       "donor": "orbis",
       "provenance": {
         "alias_history": [],
         "donor": "orbis",
         "promotion_class": "reference_only",
-        "source_concept_name": "orbis-kernel",
-        "source_file_path": "kernel/orbis-kernel.ts"
+        "source_concept_name": "social_event.types",
+        "source_file_path": "contracts/forms/social_event.types.ts"
       },
       "reason": "Reference-only concept stays outside canonical contracts."
     },
@@ -248,6 +248,49 @@
         "promotion_class": "reference_only",
         "source_concept_name": "historyStore",
         "source_file_path": "stores/historyStore.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "orbis/maplocation-stores-maplocationstore-ts",
+      "concept_name": "MapLocation",
+      "donor": "orbis",
+      "provenance": {
+        "alias_history": [
+          "location",
+          "region",
+          "site"
+        ],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "MapLocation",
+        "source_file_path": "stores/mapLocationStore.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "orbis/mapstore-stores-mapstore-ts",
+      "concept_name": "mapStore",
+      "donor": "orbis",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "mapStore",
+        "source_file_path": "stores/mapStore.ts"
+      },
+      "reason": "Reference-only concept stays outside canonical contracts."
+    },
+    {
+      "concept_id": "orbis/weatherstore-stores-weatherstore-ts",
+      "concept_name": "weatherStore",
+      "donor": "orbis",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "weatherStore",
+        "source_file_path": "stores/weatherStore.ts"
       },
       "reason": "Reference-only concept stays outside canonical contracts."
     }
@@ -486,131 +529,51 @@
       "ui_surface": false
     },
     {
-      "concept_family": "simulation-profile",
-      "concept_id": "orbis/abstimeschema-contracts-data-contracts-ts",
-      "concept_name": "AbsTimeSchema",
+      "concept_family": "simulation-event",
+      "concept_id": "orbis/socialeventschema-contracts-forms-social-event-schema-ts",
+      "concept_name": "SocialEventSchema",
       "declared_symbols": [
-        "AbsTimeSchema",
-        "AbsTime",
-        "DomainIdSchema",
-        "DomainModeSchema",
-        "SimEventSchema",
-        "SimEvent",
-        "WORKER_JOB_KINDS",
-        "WorkerJobKindV1",
-        "WorkerJobKindSchema",
-        "SIM_WORKER_PRIORITIES",
-        "SimWorkerPriorityV1",
-        "SimWorkerPrioritySchema",
-        "SimWorkerRequestV1Schema",
-        "SimWorkerRequestV1",
-        "SIM_WORKER_STATUSES",
-        "SimWorkerStatusV1",
-        "SimWorkerStatusSchema",
-        "SimWorkerResponseV1Schema",
-        "SimWorkerResponseV1",
-        "ORBIS_DOMAIN_IDS",
-        "OrbisDomainId",
-        "OrbisDomainIdSchema",
-        "ORBIS_DOMAIN_FIDELITIES",
-        "OrbisDomainFidelity",
-        "OrbisDomainFidelitySchema",
-        "ORBIS_DOMAIN_TICK_MODES",
-        "OrbisDomainTickMode",
-        "OrbisDomainTickModeSchema",
-        "DASHBOARD_MODES",
-        "DashboardMode",
-        "DashboardModeSchema",
-        "OrbisDomainConfigSchema",
-        "OrbisDomainConfig",
-        "SimulationLayerToggleSchema",
-        "SimulationLayerToggle",
-        "OrbisWorldProfileSchema",
-        "OrbisWorldProfile",
-        "DEFAULT_DOMAIN_CONFIGS",
-        "buildDomainConfigs",
-        "normalizeWorldProfile"
+        "SocialEventSchema",
+        "SocialEventFormData"
       ],
       "donor": "orbis",
-      "excerpt": "import { z } from 'zod'; export const AbsTimeSchema = z.bigint().nonnegative(); export type AbsTime = z.infer<typeof AbsTimeSchema>; export enum DomainId { CORE_TIME = 0, PLANET_PHYSICS = 10, CLIMATE = 20, HYDROLOGY = 30, BIOSPHERE_CAPACITY = 40,",
-      "promotion_class": "simulation",
-      "provenance": {
-        "alias_history": [],
-        "donor": "orbis",
-        "promotion_class": "simulation",
-        "source_concept_name": "AbsTimeSchema",
-        "source_file_path": "contracts/data-contracts.ts"
-      },
-      "relative_path": "contracts/data-contracts.ts",
-      "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
-      "ui_surface": false
-    },
-    {
-      "concept_family": "simulation-snapshot",
-      "concept_id": "orbis/buildclimatesnapshot-domains-climate-ts",
-      "concept_name": "buildClimateSnapshot",
-      "declared_symbols": [
-        "ClimateState",
-        "ClimateSolver",
-        "ZonalClimateModel",
-        "buildClimateSnapshot"
-      ],
-      "donor": "orbis",
-      "excerpt": "import type { ClimateConfig, ClimateSnapshot, SimulationReasonCode } from '../kernel/contracts'; export interface ClimateState { temperature: number; albedo: number; solarConstant: number; stefanBoltzmann: number; } export class ClimateSolver { private readonly defaultStefanBoltzmann = 5.67e-8; private readonly defaultSolarConstant = 1361;",
-      "promotion_class": "simulation",
-      "provenance": {
-        "alias_history": [],
-        "donor": "orbis",
-        "promotion_class": "simulation",
-        "source_concept_name": "buildClimateSnapshot",
-        "source_file_path": "domains/climate.ts"
-      },
-      "relative_path": "domains/climate.ts",
-      "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
-      "ui_surface": false
-    },
-    {
-      "concept_family": "simulation-domain",
-      "concept_id": "orbis/genesis-domains-genesis-ts",
-      "concept_name": "genesis",
-      "declared_symbols": [
-        "GenesisKernel"
-      ],
-      "donor": "orbis",
-      "excerpt": "import xxhash from 'xxhash-wasm'; import type { GenesisInitRequest, GenesisInitResult, SimulationEventEnvelope } from '../kernel/contracts'; const GENESIS_REASON_CODE = 'ORBIS.GENESIS.INIT'; export class GenesisKernel { private static hasher: Awaited<ReturnType<typeof xxhash>> | null = null; static async init(): Promise<void> { if",
-      "promotion_class": "simulation",
-      "provenance": {
-        "alias_history": [],
-        "donor": "orbis",
-        "promotion_class": "simulation",
-        "source_concept_name": "genesis",
-        "source_file_path": "domains/genesis.ts"
-      },
-      "relative_path": "domains/genesis.ts",
-      "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
-      "ui_surface": false
-    },
-    {
-      "concept_family": "simulation-contract",
-      "concept_id": "orbis/voxel-domains-voxel-ts",
-      "concept_name": "voxel",
-      "declared_symbols": [],
-      "donor": "orbis",
-      "excerpt": "export * from '../../src/world/voxel';",
+      "excerpt": "/** * Zod Schema for social_event * * Auto-generated by Contract Sync Generator v1.0.0 * DO NOT EDIT MANUALLY - changes will be overwritten * * Generated: 2026-03-01T17:19:23.227Z */ import { z } from 'zod'; export",
       "promotion_class": "reference_only",
       "provenance": {
         "alias_history": [],
         "donor": "orbis",
         "promotion_class": "reference_only",
-        "source_concept_name": "voxel",
-        "source_file_path": "domains/voxel.ts"
+        "source_concept_name": "SocialEventSchema",
+        "source_file_path": "contracts/forms/social_event.schema.ts"
       },
-      "relative_path": "domains/voxel.ts",
+      "relative_path": "contracts/forms/social_event.schema.ts",
       "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
+      "source_root": "../mechanical-sycophant/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-event",
+      "concept_id": "orbis/social-event-types-contracts-forms-social-event-types-ts",
+      "concept_name": "social_event.types",
+      "declared_symbols": [
+        "SocialEventFields",
+        "SocialEventFieldId",
+        "SocialEventRequiredFieldId",
+        "SocialEventOptionalFieldId"
+      ],
+      "donor": "orbis",
+      "excerpt": "/** * TypeScript Types for social_event * * Auto-generated by Contract Sync Generator v1.0.0 * DO NOT EDIT MANUALLY - changes will be overwritten * * Generated: 2026-03-01T17:19:23.227Z */ /** * Field definitions for social_event form.",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "social_event.types",
+        "source_file_path": "contracts/forms/social_event.types.ts"
+      },
+      "relative_path": "contracts/forms/social_event.types.ts",
+      "source_kind": "typescript",
+      "source_root": "../mechanical-sycophant/src",
       "ui_surface": false
     },
     {
@@ -631,62 +594,6 @@
       "relative_path": "index.md",
       "source_kind": "schema_template",
       "source_root": "../mythforge/docs/schema-templates",
-      "ui_surface": false
-    },
-    {
-      "concept_family": "simulation-snapshot",
-      "concept_id": "orbis/climatesnapshot-kernel-contracts-ts",
-      "concept_name": "ClimateSnapshot",
-      "declared_symbols": [
-        "SimulationReasonCode",
-        "SimulationEventEnvelope",
-        "GenesisInitRequest",
-        "DomainSeeds",
-        "GenesisInitResult",
-        "ClimateConfig",
-        "ClimateSnapshot",
-        "DomainRuntimeState",
-        "DomainRuntimeStatus",
-        "SimulationSnapshot",
-        "OrbisKernelState",
-        "DashboardHeaderViewModel",
-        "AuditLogEntry"
-      ],
-      "donor": "orbis",
-      "excerpt": "import type { DashboardMode, OrbisDomainConfig, OrbisDomainFidelity, OrbisDomainId, OrbisWorldProfile, SimulationLayerToggle, } from '../contracts/data-contracts'; export type SimulationReasonCode = | 'ORBIS.GENESIS.INIT' | 'ORBIS.CLIMATE.INIT' | 'ORBIS.CLIMATE.STEP' | 'ORBIS.DOMAIN.DISABLED'; export interface SimulationEventEnvelope { id: string; worldId: string; domain: OrbisDomainId | 'core';",
-      "promotion_class": "simulation",
-      "provenance": {
-        "alias_history": [],
-        "donor": "orbis",
-        "promotion_class": "simulation",
-        "source_concept_name": "ClimateSnapshot",
-        "source_file_path": "kernel/contracts.ts"
-      },
-      "relative_path": "kernel/contracts.ts",
-      "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
-      "ui_surface": false
-    },
-    {
-      "concept_family": "simulation-contract",
-      "concept_id": "orbis/orbis-kernel-kernel-orbis-kernel-ts",
-      "concept_name": "orbis-kernel",
-      "declared_symbols": [
-        "OrbisKernel"
-      ],
-      "donor": "orbis",
-      "excerpt": "import type { OrbisDomainId, OrbisWorldProfile } from '../contracts/data-contracts'; import { buildDomainConfigs, normalizeWorldProfile } from '../contracts/data-contracts'; import { buildDashboardViewModel } from '../dashboard-components/view-model'; import { ClimateSolver, buildClimateSnapshot } from '../domains/climate'; import { GenesisKernel } from '../domains/genesis'; import type",
-      "promotion_class": "reference_only",
-      "provenance": {
-        "alias_history": [],
-        "donor": "orbis",
-        "promotion_class": "reference_only",
-        "source_concept_name": "orbis-kernel",
-        "source_file_path": "kernel/orbis-kernel.ts"
-      },
-      "relative_path": "kernel/orbis-kernel.ts",
-      "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime",
       "ui_surface": false
     },
     {
@@ -1695,6 +1602,86 @@
       "ui_surface": false
     },
     {
+      "concept_family": "simulation-contract",
+      "concept_id": "orbis/maplocation-stores-maplocationstore-ts",
+      "concept_name": "MapLocation",
+      "declared_symbols": [
+        "MapLocation",
+        "MapLocationState",
+        "MapLocationActions",
+        "MapLocationStore",
+        "useMapLocationStore"
+      ],
+      "donor": "orbis",
+      "excerpt": "import { create } from 'zustand'; export interface MapLocation { id: string; createdAt: string; updatedAt?: string; [key: string]: unknown; } export interface MapLocationState { locationName: string; mapType: string; scale: string; terrain: string; pointsOfInterest: string[]; climate: string;",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [
+          "location",
+          "region",
+          "site"
+        ],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "MapLocation",
+        "source_file_path": "stores/mapLocationStore.ts"
+      },
+      "relative_path": "stores/mapLocationStore.ts",
+      "source_kind": "typescript",
+      "source_root": "../mechanical-sycophant/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-contract",
+      "concept_id": "orbis/mapstore-stores-mapstore-ts",
+      "concept_name": "mapStore",
+      "declared_symbols": [
+        "Map",
+        "MapState",
+        "MapActions",
+        "useMapStore"
+      ],
+      "donor": "orbis",
+      "excerpt": "import { create } from 'zustand'; export interface Map { id: string; locationName: string; mapType: string; scale: string; terrain: string; pointsOfInterest: string; climate: string; features: string[]; promptContext: string; createdAt: string; updatedAt?: string; } export interface MapState",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "mapStore",
+        "source_file_path": "stores/mapStore.ts"
+      },
+      "relative_path": "stores/mapStore.ts",
+      "source_kind": "typescript",
+      "source_root": "../mechanical-sycophant/src",
+      "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-contract",
+      "concept_id": "orbis/weatherstore-stores-weatherstore-ts",
+      "concept_name": "weatherStore",
+      "declared_symbols": [
+        "Weather",
+        "WeatherState",
+        "WeatherActions",
+        "useWeatherStore"
+      ],
+      "donor": "orbis",
+      "excerpt": "import { create } from 'zustand'; import { weatherDb, isDatabaseAvailable, type DBWeather } from '../services/db'; /** * Weather Store - Weather state management * * Manages state for weather generation and editing. * Connected to Tauri",
+      "promotion_class": "reference_only",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "reference_only",
+        "source_concept_name": "weatherStore",
+        "source_file_path": "stores/weatherStore.ts"
+      },
+      "relative_path": "stores/weatherStore.ts",
+      "source_kind": "typescript",
+      "source_root": "../mechanical-sycophant/src",
+      "ui_surface": false
+    },
+    {
       "concept_family": "workflow-schema",
       "concept_id": "adventure-generator/workflowstate-stores-workflowstore-ts",
       "concept_name": "WorkflowState",
@@ -1721,6 +1708,55 @@
       "source_kind": "typescript",
       "source_root": "../../../../antigravity/dnd adventure generator/src",
       "ui_surface": false
+    },
+    {
+      "concept_family": "simulation-snapshot",
+      "concept_id": "orbis/session-types-session-ts",
+      "concept_name": "Session",
+      "declared_symbols": [
+        "Session",
+        "SessionMetadata",
+        "SessionSnapshot",
+        "AppState",
+        "AppSettings",
+        "GenerationPreferences",
+        "UIPreferences",
+        "SidebarPreferences",
+        "UIStateSnapshot",
+        "OpenModal",
+        "ToastState",
+        "DialogState",
+        "SelectionStateSnapshot",
+        "FilterStateSnapshot",
+        "SnapshotMetadata",
+        "SessionHistoryEntry",
+        "HistoryEntryMetadata",
+        "SessionHistory",
+        "GenerationHistoryEntry",
+        "GenerationHistoryMetadata",
+        "ResumeTimeline",
+        "TimelineEvent",
+        "ResumeOptions",
+        "SessionExport",
+        "SessionImportResult",
+        "SessionImportError",
+        "SessionStatistics",
+        "SessionFilterOptions"
+      ],
+      "donor": "orbis",
+      "excerpt": "/** * Session Management Types * * This module defines types for session persistence, state capture, * and session restoration for the Mechanical Sycophant application. */ import type { SessionId, Id } from './ids'; import type",
+      "promotion_class": "simulation",
+      "provenance": {
+        "alias_history": [],
+        "donor": "orbis",
+        "promotion_class": "simulation",
+        "source_concept_name": "Session",
+        "source_file_path": "types/session.ts"
+      },
+      "relative_path": "types/session.ts",
+      "source_kind": "typescript",
+      "source_root": "../mechanical-sycophant/src",
+      "ui_surface": false
     }
   ],
   "manifests": [
@@ -1744,6 +1780,33 @@
       ],
       "source_kind": "typescript",
       "source_root": "../../../../antigravity/dnd adventure generator/src"
+    },
+    {
+      "default_promotion_class": "simulation",
+      "donor": "orbis",
+      "excluded_paths": [
+        "components",
+        "__tests__",
+        "test",
+        "tests",
+        "app"
+      ],
+      "expected_concept_families": [
+        "simulation-profile",
+        "simulation-snapshot",
+        "simulation-domain",
+        "simulation-event"
+      ],
+      "included_paths": [
+        "types/session.ts",
+        "stores/weatherStore.ts",
+        "stores/mapStore.ts",
+        "stores/mapLocationStore.ts",
+        "contracts/forms/social_event.schema.ts",
+        "contracts/forms/social_event.types.ts"
+      ],
+      "source_kind": "typescript",
+      "source_root": "../mechanical-sycophant/src"
     },
     {
       "default_promotion_class": "core",
@@ -1775,30 +1838,6 @@
       ],
       "source_kind": "schema_template",
       "source_root": "../mythforge/docs/schema-templates"
-    },
-    {
-      "default_promotion_class": "simulation",
-      "donor": "orbis",
-      "excluded_paths": [
-        "dashboard-components",
-        "__tests__",
-        "world-model.ts",
-        "world-model-harness.ts",
-        "index.ts"
-      ],
-      "expected_concept_families": [
-        "simulation-profile",
-        "simulation-snapshot",
-        "simulation-domain",
-        "simulation-event"
-      ],
-      "included_paths": [
-        "contracts",
-        "kernel",
-        "domains"
-      ],
-      "source_kind": "typescript",
-      "source_root": "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime"
     }
   ],
   "promoted_concepts": [
@@ -4058,15 +4097,7 @@
           "field_name": "profile_id",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "AbsTimeSchema",
-              "source_file_path": "contracts/data-contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": false
         },
         {
@@ -4075,15 +4106,7 @@
           "field_name": "enabled_domains",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "AbsTimeSchema",
-              "source_file_path": "contracts/data-contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4092,15 +4115,7 @@
           "field_name": "dashboard_mode",
           "field_type": "enum",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "ClimateSnapshot",
-              "source_file_path": "kernel/contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4109,15 +4124,7 @@
           "field_name": "latest_snapshot_refs",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4126,37 +4133,14 @@
           "field_name": "provenance",
           "field_type": "object",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "ClimateSnapshot",
-              "source_file_path": "kernel/contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         }
       ],
       "normalized_name": "orbis-simulation-attachment",
       "outcome": "promoted",
       "promotion_class": "simulation",
-      "provenance": [
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "simulation",
-          "source_concept_name": "AbsTimeSchema",
-          "source_file_path": "contracts/data-contracts.ts"
-        },
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "simulation",
-          "source_concept_name": "ClimateSnapshot",
-          "source_file_path": "kernel/contracts.ts"
-        }
-      ],
+      "provenance": [],
       "rust_type_name": "SimulationAttachment",
       "schema_id": "simulation/orbis-attachment",
       "target": "simulation_attachment"
@@ -4174,15 +4158,7 @@
           "field_name": "world_id",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "AbsTimeSchema",
-              "source_file_path": "contracts/data-contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4191,15 +4167,7 @@
           "field_name": "seed_hint",
           "field_type": "string",
           "notes": "BigInt seeds are serialized as strings in the promoted schema.",
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "genesis",
-              "source_file_path": "domains/genesis.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4208,15 +4176,7 @@
           "field_name": "enabled_domains",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "AbsTimeSchema",
-              "source_file_path": "contracts/data-contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4225,15 +4185,7 @@
           "field_name": "fidelity_by_domain",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "AbsTimeSchema",
-              "source_file_path": "contracts/data-contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4242,37 +4194,14 @@
           "field_name": "dashboard_mode",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "ClimateSnapshot",
-              "source_file_path": "kernel/contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": false
         }
       ],
       "normalized_name": "orbis-domain-profile",
       "outcome": "promoted",
       "promotion_class": "simulation",
-      "provenance": [
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "simulation",
-          "source_concept_name": "AbsTimeSchema",
-          "source_file_path": "contracts/data-contracts.ts"
-        },
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "simulation",
-          "source_concept_name": "ClimateSnapshot",
-          "source_file_path": "kernel/contracts.ts"
-        }
-      ],
+      "provenance": [],
       "rust_type_name": "PromotedDomainProfileContract",
       "schema_id": "simulation/domain-profile",
       "target": "domain_profile_contract"
@@ -4290,15 +4219,7 @@
           "field_name": "world_id",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "ClimateSnapshot",
-              "source_file_path": "kernel/contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4307,15 +4228,7 @@
           "field_name": "tick",
           "field_type": "integer",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4324,15 +4237,7 @@
           "field_name": "enabled_domains",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "ClimateSnapshot",
-              "source_file_path": "kernel/contracts.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4341,15 +4246,7 @@
           "field_name": "snapshot_refs",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4358,15 +4255,7 @@
           "field_name": "trace_ids",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4375,37 +4264,14 @@
           "field_name": "reason_codes",
           "field_type": "array",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         }
       ],
       "normalized_name": "orbis-simulation-snapshot",
       "outcome": "promoted",
       "promotion_class": "simulation",
-      "provenance": [
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "simulation",
-          "source_concept_name": "ClimateSnapshot",
-          "source_file_path": "kernel/contracts.ts"
-        },
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "reference_only",
-          "source_concept_name": "orbis-kernel",
-          "source_file_path": "kernel/orbis-kernel.ts"
-        }
-      ],
+      "provenance": [],
       "rust_type_name": "PromotedSimulationSnapshotContract",
       "schema_id": "simulation/snapshot",
       "target": "simulation_snapshot_contract"
@@ -4423,15 +4289,7 @@
           "field_name": "domain",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4440,15 +4298,7 @@
           "field_name": "tick",
           "field_type": "integer",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4457,15 +4307,7 @@
           "field_name": "reason_code",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "genesis",
-              "source_file_path": "domains/genesis.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4474,15 +4316,7 @@
           "field_name": "trace_id",
           "field_type": "string",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "simulation",
-              "source_concept_name": "genesis",
-              "source_file_path": "domains/genesis.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         },
         {
@@ -4491,37 +4325,14 @@
           "field_name": "payload",
           "field_type": "object",
           "notes": null,
-          "provenance": [
-            {
-              "alias_history": [],
-              "donor": "orbis",
-              "promotion_class": "reference_only",
-              "source_concept_name": "orbis-kernel",
-              "source_file_path": "kernel/orbis-kernel.ts"
-            }
-          ],
+          "provenance": [],
           "required": true
         }
       ],
       "normalized_name": "orbis-simulation-event-payload",
       "outcome": "promoted",
       "promotion_class": "simulation",
-      "provenance": [
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "simulation",
-          "source_concept_name": "genesis",
-          "source_file_path": "domains/genesis.ts"
-        },
-        {
-          "alias_history": [],
-          "donor": "orbis",
-          "promotion_class": "reference_only",
-          "source_concept_name": "orbis-kernel",
-          "source_file_path": "kernel/orbis-kernel.ts"
-        }
-      ],
+      "provenance": [],
       "rust_type_name": "PromotedSimulationEventPayloadContract",
       "schema_id": "simulation/event-payload",
       "target": "simulation_event_payload_contract"

@@ -1,17 +1,20 @@
 donor = "orbis"
-source_root = "../to be merged/Orbis Spec 2.0/Orbis 2.0/runtime"
+source_root = "../mechanical-sycophant/src"
 source_kind = "typescript"
 included_paths = [
-  "contracts",
-  "kernel",
-  "domains",
+  "types/session.ts",
+  "stores/weatherStore.ts",
+  "stores/mapStore.ts",
+  "stores/mapLocationStore.ts",
+  "contracts/forms/social_event.schema.ts",
+  "contracts/forms/social_event.types.ts",
 ]
 excluded_paths = [
-  "dashboard-components",
+  "components",
   "__tests__",
-  "world-model.ts",
-  "world-model-harness.ts",
-  "index.ts",
+  "test",
+  "tests",
+  "app",
 ]
 expected_concept_families = [
   "simulation-profile",

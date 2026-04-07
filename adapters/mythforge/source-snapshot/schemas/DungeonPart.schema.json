@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dungeon Part",
+  "description": "A single modular dungeon element — room, corridor, feature, concept, or layout note. Parts snap together to form any dungeon topology. Container vocabulary: the Dungeon Part payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.",
+  "type": "object",
+  "required": [
+    "part"
+  ],
+  "properties": {
+    "part": {
+      "type": "object",
+      "required": [
+        "id",
+        "part_type",
+        "label",
+        "description",
+        "seed"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "part_type": {
+          "type": "string",
+          "enum": [
+            "room",
+            "corridor",
+            "feature",
+            "concept",
+            "layout",
+            "level"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "entrance",
+            "challenge",
+            "combat",
+            "scenic",
+            "reward",
+            "boss",
+            "connector",
+            "environmental",
+            "twist",
+            "guardian",
+            "transition"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "sensory": {
+          "type": "object",
+          "properties": {
+            "sight": {
+              "type": "string"
+            },
+            "sound": {
+              "type": "string"
+            },
+            "smell": {
+              "type": "string"
+            },
+            "touch": {
+              "type": "string"
+            }
+          }
+        },
+        "exits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "direction": {
+                "type": "string"
+              },
+              "target_id": {
+                "type": "string"
+              },
+              "locked": {
+                "type": "boolean"
+              },
+              "secret": {
+                "type": "boolean"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "contents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "challenges": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "npcs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "treasure": {
+          "type": "string"
+        },
+        "gm_notes": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "entity"
+}

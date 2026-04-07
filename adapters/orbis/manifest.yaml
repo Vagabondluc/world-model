@@ -1,0 +1,36 @@
+id: orbis
+name: Orbis
+version: 1.0.0
+source:
+  repo: local://mechanical-sycophant
+  commit: workspace-local
+  path: src
+source_kind: typescript
+default_promotion_class: simulation
+snapshot:
+  root: adapters/orbis/source-snapshot
+  fingerprint: 501b5f8089461abbc638a4a7857c4f6fd40559a2a90f72350d5fda052347ec43
+  file_count: 6
+included_paths:
+- types/session.ts
+- stores/weatherStore.ts
+- stores/mapStore.ts
+- stores/mapLocationStore.ts
+- contracts/forms/social_event.schema.ts
+- contracts/forms/social_event.types.ts
+excluded_paths:
+- components
+- __tests__
+- test
+- tests
+- app
+concepts:
+- simulation-profile
+- simulation-snapshot
+- simulation-domain
+- simulation-event
+mappings:
+- adapters/orbis/mappings/concept-map.yaml
+provenance:
+  generated_at: '2026-04-07T22:20:22Z'
+  generated_by: vagab

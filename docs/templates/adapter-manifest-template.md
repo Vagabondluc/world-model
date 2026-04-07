@@ -1,57 +1,68 @@
 # Adapter Manifest Template
 
-This is the canonical template for adapter manifests consumed by the Phase 0 harness checks.
-Include one manifest per donor snapshot. Manifests MUST be YAML and include the following required top-level fields.
+Phase 2 source of truth: strict manifests live at `adapters/<donor>/manifest.yaml` and are validated by:
 
-Required fields
+- `python world-model/scripts/validate_adapter_manifest.py adapters/<donor>/manifest.yaml`
+- `python world-model/scripts/check_phase_2_snapshots.py`
 
-- `id`: short identifier (string)
-- `name`: human-friendly name (string)
-- `version`: manifest version (semver-like string)
-- `source`: object with source provenance
-  - `repo`: origin repository URL (string)
-  - `commit`: commit SHA/tag (string)
-  - `path`: path inside repo used (optional)
-- `snapshot`: path to local snapshot directory (string)
-- `mappings`: list of mapping files or directories (array)
-- `fixtures`: list of fixture directories (array)
-- `tests`: list of test paths (array)
-- `concepts`: list of concept families (array)
+Required top-level fields:
 
-Optional fields
+- `id`: `mythforge` | `orbis` | `adventure-generator`
+- `name`: donor display name
+- `version`: adapter manifest version
+- `source`: donor provenance object
+  - `repo`
+  - `commit`
+  - `path`
+- `source_kind`: `doc` | `typescript` | `json` | `schema_template`
+- `default_promotion_class`: `core` | `simulation` | `workflow` | `donor_local` | `reference_only`
+- `snapshot`: deterministic snapshot metadata
+  - `root` (must be under `adapters/<donor>/source-snapshot`)
+  - `fingerprint` (sha256 of sorted file inventory)
+  - `file_count`
+- `included_paths`: non-empty list copied from donor source
+- `excluded_paths`: non-empty list explicitly excluded from snapshot
+- `concepts`: non-empty list of concept families from `adapters/concept-family-registry.yaml`
+- `mappings`: non-empty list of mapping files (e.g. `adapters/<donor>/mappings/concept-map.yaml`)
+- `provenance`: generation metadata
+  - `generated_at` (UTC ISO-8601 with `Z`)
+  - `generated_by`
 
-- `owner`: team or person responsible (string)
-- `notes`: freeform notes (string)
-
-Example manifest
+Template:
 
 ```yaml
-id: donor-xyz
-name: "Donor XYZ"
+id: mythforge
+name: "Mythforge"
 version: "1.0.0"
 source:
-  repo: "https://github.com/org/donor-xyz"
-  commit: "abc123def"
-  path: "src/"
-snapshot: "snapshots/donor-xyz/2026-04-02/"
-mappings:
-  - "mappings/donor-xyz/mapping.yaml"
-fixtures:
-  - "fixtures/donor-xyz/"
-tests:
-  - "tests/donor-xyz/"
+  repo: "local://mythforge"
+  commit: "workspace-local"
+  path: "docs/schema-templates"
+source_kind: "schema_template"
+default_promotion_class: "core"
+snapshot:
+  root: "adapters/mythforge/source-snapshot"
+  fingerprint: "sha256..."
+  file_count: 123
+included_paths:
+  - "UUID_CONTAINER_ARCHITECTURE.md"
+  - "schemas"
+excluded_paths:
+  - "prompts"
+  - "samples"
 concepts:
-  - "character"
-  - "location"
-  - "item"
-owner: "adapter-team@org"
-notes: "Snapshot taken by adapter pipeline on 2026-04-02"
+  - "identity-history"
+  - "schema-contract"
+mappings:
+  - "adapters/mythforge/mappings/concept-map.yaml"
+provenance:
+  generated_at: "2026-04-07T15:00:00Z"
+  generated_by: "codex"
 ```
 
-Validation rules
+Validation rules:
 
-- `id`, `name`, `source`, `snapshot`, and `mappings` are required.
-- `source` should include `repo` and either `commit` or `tag` for reproducibility.
-- `snapshot` should be a relative path under `snapshots/` or a documented storage location.
-
-Place manifests alongside snapshots, e.g.: `snapshots/donor-xyz/manifest.yaml`.
+- No `REPLACE_` placeholders are allowed.
+- Mapping files listed in `mappings` must exist.
+- `snapshot.file_count` and `snapshot.fingerprint` must match actual `source-snapshot/` contents.
+- Every concept listed in `concepts` must be represented in the adapter concept map.

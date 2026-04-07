@@ -1,0 +1,33 @@
+name: Phase 2 Snapshots
+
+on:
+  push:
+    paths:
+      - "**"
+  pull_request:
+    paths:
+      - "**"
+
+jobs:
+  phase2-snapshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: world-model
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install -r world-model/requirements.txt
+      - name: Run Phase 2 integrity checker
+        run: python world-model/scripts/check_phase_2_snapshots.py
+      - name: Run Phase 2 gate
+        run: python world-model/scripts/run_harness.py --only 2
+      - name: Upload Phase 2 reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-2-reports
+          path: |
+            world-model/phase-2-snapshot-build-report.json
+            world-model/phase-2-snapshot-integrity-report.json

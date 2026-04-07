@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dungeon Assembly",
+  "description": "A fully assembled dungeon built from modular DungeonPart bricks. The dungeon field is the container; parts[] are the lego bricks. Container vocabulary: the Dungeon Assembly payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.",
+  "type": "object",
+  "required": [
+    "dungeon"
+  ],
+  "properties": {
+    "dungeon": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "theme",
+        "topology",
+        "goal",
+        "parts",
+        "seed"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        },
+        "topology": {
+          "type": "string",
+          "enum": [
+            "5room",
+            "10room",
+            "xandered",
+            "megadungeon",
+            "pointyhat",
+            "freeform",
+            "layered"
+          ]
+        },
+        "goal": {
+          "type": "string"
+        },
+        "creator_lore": {
+          "type": "string"
+        },
+        "mechanics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "global_features": {
+          "type": "object",
+          "properties": {
+            "illumination": {
+              "type": "string"
+            },
+            "atmosphere": {
+              "type": "string"
+            },
+            "wall_material": {
+              "type": "string"
+            },
+            "ceiling_height": {
+              "type": "string"
+            },
+            "sounds": {
+              "type": "string"
+            },
+            "temperature": {
+              "type": "string"
+            }
+          }
+        },
+        "parts": {
+          "type": "array",
+          "description": "Ordered list of DungeonPart objects assembled into this dungeon.",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "part_type",
+              "label"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "part_type": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "passage_type": {
+                "type": "string"
+              },
+              "locked": {
+                "type": "boolean"
+              },
+              "secret": {
+                "type": "boolean"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "factions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "treasure_summary": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "random_encounter_table": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "corridor_themes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gm_advice": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "entity"
+}

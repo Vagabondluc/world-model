@@ -35,7 +35,7 @@ world-model/
 │   └── ...
 ├── fixtures/                  # Test fixtures
 ├── scripts/                   # Utility scripts
-├── snapshots/                 # Example adapter snapshots
+├── snapshots/                 # Legacy audit-only manifests (non-blocking for Phase 2)
 └── spec-sources/              # Donor TOML configs
 ```
 

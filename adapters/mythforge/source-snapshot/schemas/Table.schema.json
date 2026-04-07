@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Table",
+  "description": "Container vocabulary: the Table payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.",
+  "type": "object",
+  "required": [
+    "name",
+    "dice",
+    "entries"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dice": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "roll",
+          "description"
+        ],
+        "properties": {
+          "roll": {
+            "type": [
+              "string",
+              "number"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "weight": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "distribution": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "x-mythforge-schema-class": "entity",
+  "x-mythforge-legacy-companion": "TableEnvelope.schema.json"
+}

@@ -2,6 +2,12 @@
 
 Adventure Generator is the workflow donor. Its adapter contributes guided creation and session semantics to the final app.
 
+Source of truth:
+
+- `world-model/adapters/adventure-generator/manifest.yaml`
+- `world-model/adapters/adventure-generator/mappings/concept-map.yaml`
+- `world-model/adapters/adventure-generator/source-snapshot/`
+
 ## What Is Copied
 
 Copy the Adventure Generator material that defines:

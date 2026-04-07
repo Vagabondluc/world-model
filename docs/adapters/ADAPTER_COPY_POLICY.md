@@ -2,13 +2,19 @@
 
 The final app is built from copied donor material, not from live donor imports.
 
+Source of truth:
+
+- `world-model/scripts/build_adapter_snapshots.py`
+- `world-model/scripts/check_phase_2_snapshots.py`
+- `world-model/scripts/gates/phase_2_gate.py`
+
 ## Policy
 
 For each donor source:
 
 1. identify the minimal useful source files
 2. copy them into `adapters/<donor>/source-snapshot`
-3. describe the copy in `adapters/<donor>/manifest.toml`
+3. describe the copy in `adapters/<donor>/manifest.yaml`
 4. map the copied material into canonical `world-model` concepts
 5. test the copied snapshot locally
 
@@ -44,6 +50,7 @@ Every copied file must be traceable back to:
 - original path
 - copy date
 - adapter manifest entry
+- snapshot fingerprint
 
 ## Maintenance Rule
 
@@ -52,6 +59,7 @@ The copied snapshot is frozen unless:
 - the manifest is updated intentionally
 - the copy is refreshed from the donor source
 - the test matrix is updated to match the new snapshot
+- `snapshot.file_count` and `snapshot.fingerprint` are regenerated deterministically
 
 ## Runtime Rule
 

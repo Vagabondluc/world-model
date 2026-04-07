@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Arcane Artifact",
+  "description": "Container vocabulary: the Arcane Artifact payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.",
+  "type": "object",
+  "required": [
+    "arcane"
+  ],
+  "properties": {
+    "arcane": {
+      "type": "object",
+      "required": [
+        "id",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "npcs": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "scenes": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "entity"
+}

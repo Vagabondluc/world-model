@@ -2,6 +2,12 @@
 
 Orbis is the simulation donor. Its adapter contributes optional simulation depth to the final app.
 
+Source of truth:
+
+- `world-model/adapters/orbis/manifest.yaml`
+- `world-model/adapters/orbis/mappings/concept-map.yaml`
+- `world-model/adapters/orbis/source-snapshot/`
+
 ## What Is Copied
 
 Copy the Orbis material that defines:

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "world-model/crates/world-model-adapters/src/lib.rs",
+    "line": 1,
+    "text": "use schemars::JsonSchema;"
+  },
+  {
+    "path": "world-model/crates/world-model-core/src/bundle.rs",
+    "line": 1,
+    "text": "use crate::{"
+  },
+  {
+    "path": "world-model/crates/world-model-core/src/commands.rs",
+    "line": 1,
+    "text": "use crate::*;"
+  },
+  {
+    "path": "world-model/crates/world-model-core/src/ids.rs",
+    "line": 1,
+    "text": "use schemars::JsonSchema;"
+  },
+  {
+    "path": "world-model/crates/world-model-core/src/lib.rs",
+    "line": 6,
+    "text": "pub use bundle::*;"
+  },
+  {
+    "path": "world-model/crates/world-model-core/src/records.rs",
+    "line": 1,
+    "text": "use crate::{"
+  },
+  {
+    "path": "world-model/crates/world-model-driver/src/main.rs",
+    "line": 1,
+    "text": "use std::{"
+  },
+  {
+    "path": "world-model/crates/world-model-schema/src/lib.rs",
+    "line": 1,
+    "text": "use schemars::{schema::RootSchema, schema_for};"
+  },
+  {
+    "path": "world-model/crates/world-model-schema/src/bin/export-schemas.rs",
+    "line": 1,
+    "text": "use std::{fs, path::PathBuf};"
+  },
+  {
+    "path": "world-model/crates/world-model-specs/src/lib.rs",
+    "line": 1,
+    "text": "use regex::Regex;"
+  },
+  {
+    "path": "world-model/crates/world-model-specs/src/bin/export-promoted-schemas.rs",
+    "line": 1,
+    "text": "use std::{fs, path::PathBuf};"
+  },
+  {
+    "path": "world-model/scripts/tests/test_phase0_scope.py",
+    "line": 73,
+    "text": "            included.write_text(\"use super::super::db::client::DatabaseClient;\\n\", encoding=\"utf-8\")"
+  }
+]

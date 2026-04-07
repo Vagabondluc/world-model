@@ -21,22 +21,29 @@ _MANIFEST_STUB = textwrap.dedent("""\
     # Full field reference: world-model/docs/templates/adapter-manifest-template.md
     id: {donor}
     name: "{donor_title}"
-    version: "0.0.1"
+    version: "1.0.0"
     source:
       repo: "https://github.com/REPLACE_ORG/{donor}"
       commit: "REPLACE_SHA"
-    snapshot: "snapshots/{donor}/"
+      path: "REPLACE_SOURCE_PATH"
+    source_kind: "REPLACE_SOURCE_KIND"
+    default_promotion_class: "REPLACE_PROMOTION_CLASS"
+    snapshot:
+      root: "adapters/{donor}/source-snapshot"
+      fingerprint: "REPLACE_FINGERPRINT"
+      file_count: 0
+    included_paths:
+      - "REPLACE_INCLUDE_PATH"
+    excluded_paths:
+      - "REPLACE_EXCLUDE_PATH"
     mappings:
-      - "mappings/{donor}/mapping.yaml"
-    fixtures:
-      - "fixtures/{donor}/"
-    tests:
-      - "tests/{donor}/"
+      - "adapters/{donor}/mappings/concept-map.yaml"
     concepts:
       - "REPLACE_CONCEPT_1"
       - "REPLACE_CONCEPT_2"
-    owner: "REPLACE_OWNER"
-    notes: "Auto-generated stub — update REPLACE_ fields before merging."
+    provenance:
+      generated_at: "REPLACE_UTC_TIMESTAMP"
+      generated_by: "REPLACE_GENERATOR"
 """)
 
 # ── migration plan stub ───────────────────────────────────────────────────────
@@ -98,10 +105,10 @@ def _write(path: str, content: str) -> str:
 # ── per-phase scaffold functions ──────────────────────────────────────────────
 
 def scaffold_phase_2() -> List[str]:
-    """Create missing donor manifest stubs under world-model/snapshots/."""
+    """Create missing donor manifest stubs under world-model/adapters/."""
     results = []
     for donor in _DONORS:
-        path = f"{WM}/snapshots/{donor}/manifest.yaml"
+        path = f"{WM}/adapters/{donor}/manifest.yaml"
         title = donor.replace("-", " ").title()
         content = _MANIFEST_STUB.format(donor=donor, donor_title=title)
         results.append(_write(path, content))

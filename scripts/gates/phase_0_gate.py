@@ -4,6 +4,7 @@ Checks that ownership, app scope, adapter contracts, and repo layout are locked.
 """
 from __future__ import annotations
 import glob
+import json
 import os
 from .base import GateReport, Remediation, load_manifest_validator
 
@@ -57,18 +58,18 @@ def run() -> GateReport:
         ),
     )
 
-    # 0.3 Adapter boundary: every snapshot dir has a valid manifest
-    snapshot_dirs = sorted([
-        d for d in glob.glob(f"{WM}/snapshots/*/")
+    # 0.3 Adapter boundary: each adapter directory has a manifest
+    adapter_dirs = sorted([
+        d for d in glob.glob(f"{WM}/adapters/*/")
         if os.path.isdir(d)
     ])
-    if not snapshot_dirs:
-        r.fail("0.3 Snapshot directories exist",
-               f"no directories found under {WM}/snapshots/")
+    if not adapter_dirs:
+        r.fail("0.3 Adapter directories exist",
+               f"no directories found under {WM}/adapters/")
     else:
-        r.ok("0.3 Snapshot directories exist",
-             f"{len(snapshot_dirs)} found")
-        for s in snapshot_dirs:
+        r.ok("0.3 Adapter directories exist",
+             f"{len(adapter_dirs)} found")
+        for s in adapter_dirs:
             donor = os.path.basename(s.rstrip("/\\"))
             manifest = os.path.join(s, "manifest.yaml")
             if not os.path.isfile(manifest):
@@ -92,13 +93,87 @@ def run() -> GateReport:
         "0.3 No runtime donor repo URLs in crate source",
     )
 
+    r.assert_file(
+        f"{WM}/phase-0-inventory.json",
+        "0.3 Phase 0 inventory JSON is committed",
+        remediation=Remediation(
+            action="create",
+            target=f"{WM}/phase-0-inventory.json",
+            rerun_cmd=_RERUN0,
+            notes="Promote the generated inventory from phase-0-inventory.temp.json into the committed inventory file.",
+        ),
+    )
+
+    r.assert_file(
+        f"{WM}/phase-0-scan-scope.json",
+        "0.3 Phase 0 scan scope config is committed",
+        remediation=Remediation(
+            action="create",
+            target=f"{WM}/phase-0-scan-scope.json",
+            rerun_cmd=_RERUN0,
+            notes="Declare the deliverable scope and frozen donor roots so the scan/gate agree on what blocks Phase 0.",
+        ),
+    )
+
+    triage_path = f"{WM}/phase-0-direct-imports-triage.json"
+    if os.path.isfile(triage_path):
+        try:
+            with open(triage_path, "r", encoding="utf-8") as fh:
+                triage = json.load(fh)
+        except Exception as e:
+            r.fail(
+                "0.3 Direct-import triage JSON is readable",
+                f"failed to parse {triage_path}: {e}",
+            )
+        else:
+            runtime_outside_world_model = []
+            for match in triage.get("matches", []):
+                if match.get("classification") != "runtime":
+                    continue
+                path = str(match.get("path", "")).replace("\\", "/")
+                if not path.startswith("world-model/"):
+                    runtime_outside_world_model.append(match)
+
+            if runtime_outside_world_model:
+                samples = runtime_outside_world_model[:5]
+                sample_text = "; ".join(
+                    f"{m.get('path')}:{m.get('line')} -> {m.get('text')}"
+                    for m in samples
+                )
+                r.fail(
+                    "0.3 No runtime donor imports outside deliverable scope",
+                    f"{len(runtime_outside_world_model)} runtime matches are outside the deliverable scope; samples: {sample_text}",
+                    remediation=Remediation(
+                        action="edit",
+                        target=f"{WM}/docs/roadmap/phase-0/PHASE_0_TRIAGE_REMEDIATION.md",
+                        rerun_cmd=_RERUN0,
+                        notes="Move deliverable-scope runtime imports into adapter snapshots or vendor/canonicalize them before rerunning the harness. Frozen donor roots remain audit-only.",
+                    ),
+                )
+            else:
+                r.ok(
+                    "0.3 No runtime donor imports outside deliverable scope",
+                    "runtime matches are confined to the world-model deliverable surface",
+                )
+    else:
+        r.fail(
+            "0.3 Direct-import triage JSON exists",
+            f"missing: {triage_path}",
+            remediation=Remediation(
+                action="create",
+                target=triage_path,
+                rerun_cmd=_RERUN0,
+                notes="Run the phase-0 direct-import triage step before enforcing the runtime donor-import gate.",
+            ),
+        )
+
     # 0.4 Repository layout: required top-level folders exist
     for folder, label in [
         (f"{WM}/docs",      "0.4 docs/ exists"),
         (f"{WM}/contracts", "0.4 contracts/ exists"),
         (f"{WM}/crates",    "0.4 crates/ exists"),
         (f"{WM}/scripts",   "0.4 scripts/ exists"),
-        (f"{WM}/snapshots", "0.4 snapshots/ exists"),
+        (f"{WM}/adapters",  "0.4 adapters/ exists"),
     ]:
         r.assert_dir(folder, label)
 

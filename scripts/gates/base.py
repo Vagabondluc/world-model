@@ -120,7 +120,8 @@ class GateReport:
             self.fail(label, f"file not found: {path}", remediation)
             return False
         try:
-            content = open(path, encoding="utf-8", errors="ignore").read()
+            with open(path, encoding="utf-8", errors="ignore") as fh:
+                content = fh.read()
             if re.search(pattern, content):
                 self.ok(label, "found")
                 return True

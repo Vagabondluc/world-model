@@ -1,3 +1,7 @@
+mod migration;
+
+pub use migration::*;
+
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use std::path::Path;

@@ -80,6 +80,7 @@ Acceptance:
 
 ## Harness
 
+- `python world-model/scripts/check_phase_4_migration.py`
 - migration round-trip test
 - provenance retention test
 - invalid-input rejection test
@@ -99,3 +100,4 @@ Acceptance:
 - rollback is incomplete
 - imports still depend on donor runtime code
 - audit metadata is missing
+- replay migration is non-deterministic

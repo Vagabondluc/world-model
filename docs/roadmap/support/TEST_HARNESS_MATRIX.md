@@ -77,10 +77,15 @@ Unit Tests:
 - `test_context_bar_present()` - Top context bar exists
 - `test_workspace_present()` - Center workspace exists
 - `test_inspector_present()` - Right inspector exists
+- `test_bottom_drawer_present()` - Optional bottom drawer exists by default
+- `test_mode_switch_preserves_world_context()` - Switching modes keeps the selected world visible
+- `test_canonical_bundle_roundtrip()` - Canonical bundle load/save roundtrip preserves JSON
+- `test_overlay_state_isolation()` - Overlay state does not leak into saved bundles
 
 Contract Tests:
 - `test_app_reads_only_canonical()` - App only imports from canonical model
 - `test_no_donor_runtime_imports()` - No imports from donor repos
+- `test_contract_version_matches()` - App contract version matches emitted schema version
 
 Integration Tests:
 - `test_app_loads_canonical_bundle()` - App can load a CanonicalBundle
@@ -90,6 +95,7 @@ Exit Criteria:
 - App shell renders
 - No runtime imports from donor repos
 - Canonical bundle load/save works
+- Guided, Studio, and Architect modes render and switch cleanly
 
 ---
 

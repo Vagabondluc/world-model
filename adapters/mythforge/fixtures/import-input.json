@@ -1,0 +1,405 @@
+{
+  "donor": "mythforge",
+  "snapshot_fingerprint": "3c8eea9dd6508a6c4ed9db8adc9b3fda13d62e531f758b717f2de7536eba9116",
+  "adapter_version": "1.0.0",
+  "records": [
+    {
+      "concept_key": "world",
+      "record_key": "world:sample",
+      "source_path": "docs/schema-templates/UUID_CONTAINER_ARCHITECTURE.md",
+      "source_hash": "c1a2d3e4f5a6978899aabbccddeeff00112233445566778899aabbccddeeff00",
+      "payload": {
+        "record": {
+          "world_id": "world:sample",
+          "metadata": {
+            "label": "Sample World",
+            "summary": "Canonical migration world for Mythforge",
+            "tags": ["sample", "mythforge", "phase-4"]
+          },
+          "payload": {
+            "description": "Mythforge canonical migration fixture."
+          },
+          "root_event_ledger": {
+            "event_ids": ["event:bootstrap"]
+          },
+          "root_schema_binding": {
+            "schema_id": "schema-world",
+            "schema_class": "ProjectSchema",
+            "promoted_schema_ref": "core/world",
+            "external_schema_ref": {
+              "source_system": "Mythforge",
+              "source_uri": "docs/schema-templates/UUID_CONTAINER_ARCHITECTURE.md",
+              "validation_contract_ref": "world.schema.json",
+              "migration_contract_ref": "world.migrations.json"
+            },
+            "version": "1.0.0",
+            "activation_event_id": "event:bootstrap",
+            "migration_lineage": {
+              "previous_schema_version": null,
+              "migration_ref": null
+            }
+          },
+          "workflow_registry_references": ["workflow:create-world"],
+          "simulation_attachment": null,
+          "asset_attachments": ["asset:city-sigil"],
+          "top_level_entity_index": [
+            "entity:sample-city",
+            "entity:sample-region",
+            "entity:sample-biome",
+            "entity:sample-dungeon",
+            "entity:sample-landmark"
+          ],
+          "donor_ui_state": {
+            "current_panel": "world-overview"
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "city/settlement",
+      "record_key": "entity:sample-city",
+      "source_path": "docs/schema-templates/Settlement.md",
+      "source_hash": "b2a3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091",
+      "payload": {
+        "record": {
+          "entity_id": "entity:sample-city",
+          "world_id": "world:sample",
+          "entity_type": "city",
+          "metadata": {
+            "label": "Aster Gate",
+            "summary": "City settlement attached to the map.",
+            "tags": ["city", "settlement", "capital"]
+          },
+          "payload": {
+            "description": "City settlement from Mythforge.",
+            "donor_only_panel": "city-form"
+          },
+          "schema_binding": {
+            "schema_id": "schema-city",
+            "schema_class": "ProjectSchema",
+            "promoted_schema_ref": "core/location",
+            "external_schema_ref": {
+              "source_system": "Mythforge",
+              "source_uri": "docs/schema-templates/Settlement.md",
+              "validation_contract_ref": "Settlement.schema.json",
+              "migration_contract_ref": null
+            },
+            "version": "1.0.0",
+            "activation_event_id": "event:city-created",
+            "migration_lineage": {
+              "previous_schema_version": null,
+              "migration_ref": null
+            }
+          },
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:overworld",
+            "hex_or_cell_ref": "A12",
+            "coordinate_ref": "12,7",
+            "spatial_scope": "city",
+            "layer_membership": ["settlements", "capitals"]
+          },
+          "asset_attachments": ["asset:city-sigil"],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:city-created"]
+          },
+          "latest_projection_reference": "projection:city-latest",
+          "ui_tab": "summary"
+        }
+      }
+    },
+    {
+      "concept_key": "region",
+      "record_key": "entity:sample-region",
+      "source_path": "docs/schema-templates/Region.md",
+      "source_hash": "c3b4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809112",
+      "payload": {
+        "record": {
+          "entity_id": "entity:sample-region",
+          "world_id": "world:sample",
+          "entity_type": "region",
+          "metadata": {
+            "label": "Aster Reach",
+            "summary": "Region boundary for the canonical sample.",
+            "tags": ["region", "territory"]
+          },
+          "payload": {
+            "description": "Region boundary data."
+          },
+          "schema_binding": null,
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:overworld",
+            "hex_or_cell_ref": "A00",
+            "coordinate_ref": "0,0",
+            "spatial_scope": "region",
+            "layer_membership": ["regions"]
+          },
+          "asset_attachments": [],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:region-created"]
+          },
+          "latest_projection_reference": null,
+          "donor_tree_panel": "region-outline"
+        }
+      }
+    },
+    {
+      "concept_key": "biome",
+      "record_key": "entity:sample-biome",
+      "source_path": "docs/schema-templates/index.md",
+      "source_hash": "d4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3",
+      "payload": {
+        "record": {
+          "entity_id": "entity:sample-biome",
+          "world_id": "world:sample",
+          "entity_type": "biome",
+          "metadata": {
+            "label": "Temperate Belt",
+            "summary": "Biome attachment for climate metadata.",
+            "tags": ["biome", "temperate"]
+          },
+          "payload": {
+            "description": "Biome metadata."
+          },
+          "schema_binding": null,
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:overworld",
+            "hex_or_cell_ref": "B02",
+            "coordinate_ref": "2,0",
+            "spatial_scope": "biome",
+            "layer_membership": ["biomes"]
+          },
+          "asset_attachments": [],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:biome-created"]
+          },
+          "latest_projection_reference": null,
+          "donor_palette_state": "forest-green"
+        }
+      }
+    },
+    {
+      "concept_key": "dungeon",
+      "record_key": "entity:sample-dungeon",
+      "source_path": "docs/schema-templates/Artifact.md",
+      "source_hash": "e5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4",
+      "payload": {
+        "record": {
+          "entity_id": "entity:sample-dungeon",
+          "world_id": "world:sample",
+          "entity_type": "dungeon",
+          "metadata": {
+            "label": "Glass Vault",
+            "summary": "Dungeon attachment for the sample world.",
+            "tags": ["dungeon", "vault"]
+          },
+          "payload": {
+            "description": "Dungeon metadata."
+          },
+          "schema_binding": null,
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:underworld",
+            "hex_or_cell_ref": null,
+            "coordinate_ref": "42,99",
+            "spatial_scope": "dungeon",
+            "layer_membership": ["dungeons"]
+          },
+          "asset_attachments": [],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:dungeon-created"]
+          },
+          "latest_projection_reference": null,
+          "donor_drawer_state": "hidden"
+        }
+      }
+    },
+    {
+      "concept_key": "landmark",
+      "record_key": "entity:sample-landmark",
+      "source_path": "docs/schema-templates/Landmark.md",
+      "source_hash": "f6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5",
+      "payload": {
+        "record": {
+          "entity_id": "entity:sample-landmark",
+          "world_id": "world:sample",
+          "entity_type": "landmark",
+          "metadata": {
+            "label": "Sun Spire",
+            "summary": "A landmark used for canonical spatial attachment.",
+            "tags": ["landmark", "spire"]
+          },
+          "payload": {
+            "description": "Landmark metadata."
+          },
+          "schema_binding": null,
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:overworld",
+            "hex_or_cell_ref": "C07",
+            "coordinate_ref": "7,9",
+            "spatial_scope": "landmark",
+            "layer_membership": ["landmarks"]
+          },
+          "asset_attachments": [],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:landmark-created"]
+          },
+          "latest_projection_reference": null,
+          "donor_marker": "landmark-form"
+        }
+      }
+    },
+    {
+      "concept_key": "asset",
+      "record_key": "asset:city-sigil",
+      "source_path": "docs/schema-templates/Artifact.md",
+      "source_hash": "a7b8c9d0e1f2031425364758697a8b9c0d1e2f30415263748596a7b8c9d0e1f20",
+      "payload": {
+        "record": {
+          "asset_id": "asset:city-sigil",
+          "owner": {
+            "Entity": "entity:sample-city"
+          },
+          "asset_kind": "symbol",
+          "source_ref": "assets/city-sigil.svg",
+          "metadata": {
+            "label": "City Sigil",
+            "summary": "Asset attached to the sample city.",
+            "tags": ["asset", "symbol"]
+          },
+          "payload": {
+            "image_url": "assets/city-sigil.svg"
+          },
+          "donor_asset_panel": "asset-picker"
+        }
+      }
+    },
+    {
+      "concept_key": "relation",
+      "record_key": "relation:city-to-region",
+      "source_path": "docs/schema-templates/index.md",
+      "source_hash": "b8c9d0e1f2031425364758697a8b9c0d1e2f30415263748596a7b8c9d0e1f203",
+      "payload": {
+        "record": {
+          "source_entity_id": "entity:sample-city",
+          "target_entity_id": "entity:sample-region",
+          "relation_type": "LocatedIn",
+          "effective_from": "2026-04-02T12:10:00Z",
+          "effective_to": null,
+          "provenance": {
+            "source_system": "Mythforge",
+            "note": "Spatial linkage from source template"
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "schema-binding",
+      "record_key": "binding:world-sample",
+      "source_path": "docs/schema-templates/schemas",
+      "source_hash": "c9d0e1f2031425364758697a8b9c0d1e2f30415263748596a7b8c9d0e1f20314",
+      "payload": {
+        "record": {
+          "owner": {
+            "World": "world:sample"
+          },
+          "binding": {
+            "schema_id": "schema-world",
+            "schema_class": "ProjectSchema",
+            "promoted_schema_ref": "core/world",
+            "external_schema_ref": {
+              "source_system": "Mythforge",
+              "source_uri": "docs/schema-templates/UUID_CONTAINER_ARCHITECTURE.md",
+              "validation_contract_ref": "world.schema.json",
+              "migration_contract_ref": "world.migrations.json"
+            },
+            "version": "1.0.0",
+            "activation_event_id": "event:bootstrap",
+            "migration_lineage": {
+              "previous_schema_version": "0.9.0",
+              "migration_ref": "migration:world-0-9-to-1-0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "event",
+      "record_key": "event:bootstrap",
+      "source_path": "docs/schema-templates/UUID_CONTAINER_ARCHITECTURE.md",
+      "source_hash": "d0e1f2031425364758697a8b9c0d1e2f30415263748596a7b8c9d0e1f2031425",
+      "payload": {
+        "record": {
+          "event_id": "event:bootstrap",
+          "event_type": "WorldBootstrapped",
+          "occurred_at": "2026-04-02T12:00:00Z",
+          "owner": {
+            "World": "world:sample"
+          },
+          "payload": {
+            "inline_payload": {
+              "kind": "bootstrap"
+            },
+            "payload_ref": null
+          },
+          "source_system": "Mythforge",
+          "causation": {
+            "causation_id": null,
+            "correlation_id": null,
+            "trace_id": null
+          }
+        },
+        "ui_state": {
+          "drawer": "closed"
+        }
+      }
+    },
+    {
+      "concept_key": "projection",
+      "record_key": "projection:city-latest",
+      "source_path": "docs/schema-templates/UUID_CONTAINER_IMPLEMENTATION_PLAN.md",
+      "source_hash": "e1f2031425364758697a8b9c0d1e2f30415263748596a7b8c9d0e1f203142536",
+      "payload": {
+        "record": {
+          "projection_id": "projection:city-latest",
+          "owner": {
+            "Entity": "entity:sample-city"
+          },
+          "projection_version": "1",
+          "derived_state": {
+            "label": "Aster Gate",
+            "population": 12000,
+            "schemaVersion": "1.0.0"
+          },
+          "source_event_range": {
+            "start_event_id": "event:city-created",
+            "end_event_id": "event:bootstrap"
+          },
+          "schema_binding_version": "1.0.0"
+        }
+      }
+    },
+    {
+      "concept_key": "location",
+      "record_key": "form-shell:city-gazetteer",
+      "source_path": "docs/schema-templates/City.md",
+      "source_hash": "f2031425364758697a8b9c0d1e2f30415263748596a7b8c9d0e1f20314253647",
+      "payload": {
+        "record": {
+          "note": "Reference-only city gazetteer shell",
+          "donor_ui_state": {
+            "form": "city-gazetteer"
+          }
+        }
+      }
+    }
+  ]
+}

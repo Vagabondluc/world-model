@@ -1,0 +1,191 @@
+{
+  "donor": "orbis",
+  "snapshot_fingerprint": "501b5f8089461abbc638a4a7857c4f6fd40559a2a90f72350d5fda052347ec43",
+  "adapter_version": "1.0.0",
+  "records": [
+    {
+      "concept_key": "simulation",
+      "record_key": "simulation:sample",
+      "source_path": "src/types/session.ts",
+      "source_hash": "e2d3c4b5a6978899aabbccddeeff00112233445566778899aabbccddeeff0011",
+      "payload": {
+        "record": {
+          "world_id": "world:sample",
+          "attachment": {
+            "profile_id": "profile:orbis-sample",
+            "enabled_domains": [
+              {
+                "id": "Genesis",
+                "enabled": true,
+                "fidelity": "Medium",
+                "tick_mode": "OnDemand"
+              },
+              {
+                "id": "Climate",
+                "enabled": true,
+                "fidelity": "Low",
+                "tick_mode": "Stepped"
+              }
+            ],
+            "dashboard_mode": "Summary",
+            "latest_snapshot_refs": [
+              {
+                "domain_id": "Climate",
+                "snapshot_ref": "snapshot://orbis/world:sample/climate/0001",
+                "trace_id": "trace:climate-0001"
+              }
+            ],
+            "provenance": {
+              "source_system": "Orbis",
+              "profile_version": "0.1.0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "simulation/event",
+      "record_key": "event:simulation-started",
+      "source_path": "src/contracts/forms/social_event.schema.ts",
+      "source_hash": "d3c4b5a6978899aabbccddeeff00112233445566778899aabbccddeeff001122",
+      "payload": {
+        "record": {
+          "event_id": "event:simulation-started",
+          "event_type": "simulation.started",
+          "occurred_at": "2026-04-02T12:00:00Z",
+          "owner": {
+            "World": "world:sample"
+          },
+          "payload": {
+            "inline_payload": {
+              "kind": "simulation-start"
+            },
+            "payload_ref": null
+          },
+          "source_system": "Orbis",
+          "causation": {
+            "causation_id": "simulation-started",
+            "correlation_id": "simulation-started",
+            "trace_id": "trace:simulation-started"
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "simulation/biome",
+      "record_key": "simulation:climate-biome",
+      "source_path": "src/stores/weatherStore.ts",
+      "source_hash": "c4b5a6978899aabbccddeeff00112233445566778899aabbccddeeff00112233",
+      "payload": {
+        "record": {
+          "world_id": "world:sample",
+          "attachment": {
+            "profile_id": "profile:orbis-sample",
+            "enabled_domains": [
+              {
+                "id": "Climate",
+                "enabled": true,
+                "fidelity": "Low",
+                "tick_mode": "Stepped"
+              }
+            ],
+            "dashboard_mode": "Summary",
+            "latest_snapshot_refs": [
+              {
+                "domain_id": "Climate",
+                "snapshot_ref": "snapshot://orbis/world:sample/climate/0002",
+                "trace_id": "trace:climate-0002"
+              }
+            ],
+            "provenance": {
+              "source_system": "Orbis",
+              "profile_version": "0.1.0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "simulation/location",
+      "record_key": "simulation:location-profile",
+      "source_path": "src/stores/mapStore.ts",
+      "source_hash": "b5a6978899aabbccddeeff00112233445566778899aabbccddeeff0011223344",
+      "payload": {
+        "record": {
+          "world_id": "world:sample",
+          "attachment": {
+            "profile_id": "profile:orbis-sample",
+            "enabled_domains": [
+              {
+                "id": "Genesis",
+                "enabled": true,
+                "fidelity": "Medium",
+                "tick_mode": "OnDemand"
+              }
+            ],
+            "dashboard_mode": "Diagnostic",
+            "latest_snapshot_refs": [
+              {
+                "domain_id": "Genesis",
+                "snapshot_ref": "snapshot://orbis/world:sample/genesis/0001",
+                "trace_id": "trace:genesis-0001"
+              }
+            ],
+            "provenance": {
+              "source_system": "Orbis",
+              "profile_version": "0.1.0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "simulation/region",
+      "record_key": "simulation:region-profile",
+      "source_path": "src/stores/mapLocationStore.ts",
+      "source_hash": "a6978899aabbccddeeff00112233445566778899aabbccddeeff001122334455",
+      "payload": {
+        "record": {
+          "world_id": "world:sample",
+          "attachment": {
+            "profile_id": "profile:orbis-sample",
+            "enabled_domains": [
+              {
+                "id": "Genesis",
+                "enabled": true,
+                "fidelity": "High",
+                "tick_mode": "OnDemand"
+              }
+            ],
+            "dashboard_mode": "Summary",
+            "latest_snapshot_refs": [
+              {
+                "domain_id": "Genesis",
+                "snapshot_ref": "snapshot://orbis/world:sample/genesis/0002",
+                "trace_id": "trace:genesis-0002"
+              }
+            ],
+            "provenance": {
+              "source_system": "Orbis",
+              "profile_version": "0.1.0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "simulation/relation",
+      "record_key": "social-event-schema",
+      "source_path": "src/contracts/forms/social_event.types.ts",
+      "source_hash": "8899aabbccddeeff00112233445566778899aabbccddeeff0011223344556677",
+      "payload": {
+        "record": {
+          "note": "Reference-only social event contract",
+          "donor_ui_state": {
+            "panel": "social-event"
+          }
+        }
+      }
+    }
+  ]
+}

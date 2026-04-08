@@ -14,7 +14,7 @@ The app has three interaction depths over one canonical world model:
   - map, workspace, inspectors, and edits
 - `Architect`
   - expert surface
-  - schemas, adapter inspection, migrations, and batch operations
+  - schemas, adapter inspection, migration reports, and batch operations
 
 All three depths edit the same canonical records.
 
@@ -36,13 +36,25 @@ The final app must only depend on:
 
 - `world-model` crates and emitted contracts
 - copied adapter snapshots stored inside this workspace
-- local app code under `apps/unified-app`
+- local app code under `world-model/apps/unified-app`
 
 It must not import runtime logic from:
 
 - `mythforge`
+- `mechanical-sycophant`
 - `to be merged`
 - `antigravity`
+
+## Canonical State Bridge
+
+The app shell loads and saves canonical bundles through a dedicated bridge:
+
+- load canonical bundle JSON before hydration
+- validate the bundle against the emitted `CanonicalBundle` contract
+- hydrate durable canonical state separately from overlay UI state
+- serialize only canonical state back to JSON
+- keep selection, drawer, and mode state local to the app shell
+- Architect mode may load migration report JSON for inspection, but reports remain non-canonical and local to the UI
 
 ## Ownership Rule
 

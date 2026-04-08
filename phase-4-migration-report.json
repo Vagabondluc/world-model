@@ -1,0 +1,84 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "donor": "mythforge",
+      "mode": "write",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/mythforge-write.json",
+      "output_bundle_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/mythforge-write.bundle.json",
+      "mapped_count": 11,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": null
+    },
+    {
+      "donor": "mythforge",
+      "mode": "dry-run",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/mythforge-dry-run.json",
+      "output_bundle_path": null,
+      "mapped_count": 11,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": null
+    },
+    {
+      "donor": "orbis",
+      "mode": "write",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/orbis-write.json",
+      "output_bundle_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/orbis-write.bundle.json",
+      "mapped_count": 5,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": null
+    },
+    {
+      "donor": "orbis",
+      "mode": "dry-run",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/orbis-dry-run.json",
+      "output_bundle_path": null,
+      "mapped_count": 5,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": null
+    },
+    {
+      "donor": "adventure-generator",
+      "mode": "write",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/adventure-generator-write.json",
+      "output_bundle_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/adventure-generator-write.bundle.json",
+      "mapped_count": 6,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": null
+    },
+    {
+      "donor": "adventure-generator",
+      "mode": "dry-run",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/adventure-generator-dry-run.json",
+      "output_bundle_path": null,
+      "mapped_count": 6,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": null
+    },
+    {
+      "donor": "adventure-generator",
+      "mode": "replay",
+      "ok": true,
+      "report_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/adventure-generator-replay.json",
+      "output_bundle_path": "C:/Users/vagab/AppData/Local/Temp/phase4-migration-vc7ki5w5/adventure-generator-replay.bundle.json",
+      "mapped_count": 6,
+      "dropped_count": 1,
+      "conflict_count": 0,
+      "replay_equivalent": true
+    }
+  ],
+  "errors": [],
+  "report_path": "D:/coding/AI/Chat-Gpt-Agent/world-model/phase-4-migration-report.json"
+}

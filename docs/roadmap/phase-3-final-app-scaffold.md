@@ -4,6 +4,8 @@
 
 Create the final app shell and make it hydrate from canonical state only.
 
+The executable app scaffold lives at `world-model/apps/unified-app`.
+
 ## Dependencies
 
 - Phase 1 complete
@@ -27,6 +29,7 @@ Acceptance:
 
 - app structure matches the documented repository layout
 - app can be bootstrapped without donor imports
+- app package exposes `lint`, `typecheck`, `test`, and `build` scripts
 
 ### 3.2 Canonical state bridge
 
@@ -41,6 +44,7 @@ Acceptance:
 
 - canonical state and UI overlays are separated
 - app can restart from canonical state only
+- load/save roundtrip preserves canonical bundle JSON
 
 ### 3.3 Guided mode scaffold
 

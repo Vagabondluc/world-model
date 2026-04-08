@@ -6,9 +6,13 @@ license.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+chrono.workspace = true
 jsonschema.workspace = true
 serde.workspace = true
 serde_json.workspace = true
+sha2.workspace = true
+tempfile.workspace = true
 world-model-core = { path = "../world-model-core" }
+world-model-adapters = { path = "../world-model-adapters" }
 world-model-schema = { path = "../world-model-schema" }
 world-model-specs = { path = "../world-model-specs" }

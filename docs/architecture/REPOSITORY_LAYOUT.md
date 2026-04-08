@@ -26,21 +26,21 @@ world-model/
       public/
   adapters/
     mythforge/
-      manifest.toml
+      manifest.yaml
       source-snapshot/
       mappings/
       fixtures/
       tests/
       docs/
     orbis/
-      manifest.toml
+      manifest.yaml
       source-snapshot/
       mappings/
       fixtures/
       tests/
       docs/
     adventure-generator/
-      manifest.toml
+      manifest.yaml
       source-snapshot/
       mappings/
       fixtures/

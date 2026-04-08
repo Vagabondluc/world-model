@@ -60,3 +60,13 @@ All adapters should be validated for:
 - conflict handling
 - import/export symmetry
 - round-trip stability
+
+## Phase 4 Migration Tests
+
+The migration backbone must also prove:
+
+- adapter fixture input loading
+- deterministic replay equivalence
+- rollback/quarantine report generation
+- canonical bundle validation after migration
+- migration report schema completeness

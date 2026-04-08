@@ -1,0 +1,19 @@
+:root {
+  color-scheme: dark;
+  font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --bg: #0b1020;
+  --bg-soft: #11182b;
+  --panel: rgba(16, 23, 40, 0.9);
+  --panel-strong: #18233a;
+  --panel-border: rgba(167, 179, 214, 0.2);
+  --text: #eef2ff;
+  --text-muted: #a7b0cb;
+  --accent: #f97316;
+  --accent-soft: rgba(249, 115, 22, 0.16);
+  --success: #22c55e;
+  --warning: #facc15;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}

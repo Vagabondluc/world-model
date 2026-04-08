@@ -30,6 +30,7 @@ Test the end-to-end path through the canonical driver:
 - canonical bundle -> hydrate -> app state
 - promoted schema references resolve correctly
 - model-to-model round-trips preserve canonical fields
+- Phase 8 cross-donor integration covers the unified product surface, donor route transitions, shared concept lens switching, and context retention
 
 ## 4. UI and E2E Tests
 
@@ -64,6 +65,7 @@ Recommended order:
 7. integration tests
 8. E2E tests
 9. release-hardening checks
-10. release gate
+10. Phase 8 cross-donor integration checks
+11. release gate
 
 If any earlier gate fails, later gates should not run.

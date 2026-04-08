@@ -1,0 +1,46 @@
+{
+  "donor": "mythforge",
+  "label": "Mythforge",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "sourceInventory": [
+    {
+      "relativePath": "mythforge/package.json",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\mythforge\\package.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "relativePath": "mythforge/src/app/page.tsx",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\mythforge\\src\\app\\page.tsx",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "relativePath": "mythforge/src/components/mythosforge/TopNav.tsx",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\mythforge\\src\\components\\mythosforge\\TopNav.tsx",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "relativePath": "mythforge/src/components/mythosforge/ExplorerTree.tsx",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\mythforge\\src\\components\\mythosforge\\ExplorerTree.tsx",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "relativePath": "mythforge/src/components/mythosforge/Workspace.tsx",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\mythforge\\src\\components\\mythosforge\\Workspace.tsx",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 5,
+    "existingSources": 5,
+    "missingSources": 0
+  },
+  "parityTarget": "exact+adapted",
+  "unstableSurfaces": []
+}

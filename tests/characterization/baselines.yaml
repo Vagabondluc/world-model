@@ -1,0 +1,19 @@
+donors:
+  mythforge:
+    classification: app donor
+    methodology: behavioral capture
+    basis: captured
+    route: /donor/mythforge
+    characterization: executable source capture
+  orbis:
+    classification: semantic-only donor
+    methodology: designed intent authoring
+    basis: designed
+    route: /donor/orbis
+    characterization: adapter and workspace residue capture
+  adventure-generator:
+    classification: fragment donor
+    methodology: intent reconstruction
+    basis: reconstructed
+    route: /donor/adventure-generator
+    characterization: compiled residue and adapter capture

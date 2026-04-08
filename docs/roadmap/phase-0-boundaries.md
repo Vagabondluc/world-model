@@ -50,21 +50,21 @@ Acceptance:
 Deliverables:
 
 - final app lives in `apps/unified-app`
-- three interaction depths are defined:
-  - `Guided`
-  - `Studio`
-  - `Architect`
 - shell layout is fixed:
   - left nav
   - top context bar
   - center workspace
   - right inspector
   - optional bottom drawer
+- internal scaffolding depths (`Guided`, `Studio`, `Architect`) exist to validate the canonical data layer only; they are not donor-faithful surfaces
+- the real UI contract is per-donor: each donor app has its own faithful surface hosted inside the unified app
+- donor-faithful surface routes are Phase 7 scope (`/donor/mythforge`, `/donor/orbis`, `/donor/adventure-generator`)
 
 Acceptance:
 
 - no alternate top-level app shell is introduced
-- mode names and responsibilities are recorded in the roadmap
+- scaffolding depth names are not treated as the final product UX
+- donor surface ownership is recorded and not merged into a generic shell
 
 ### 0.3 Adapter boundary freeze
 
@@ -79,6 +79,8 @@ Acceptance:
 
 - no donor can be used without a manifest
 - no copied file is untraceable
+
+Note: adapter `excluded_paths` define data-extraction scope only. Component code, screen structure, and routing in excluded paths are not extracted into the adapter snapshot but remain accessible in the donor source repo for Phase 7 characterization. Exclusion from the snapshot does not mean exclusion from the UI contract.
 
 ### 0.4 Repository layout freeze
 

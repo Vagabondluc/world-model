@@ -26,6 +26,17 @@ describe("app shell", () => {
     expect(screen.getByRole("heading", { name: /Role \/ World/ })).toBeInTheDocument();
   });
 
+  it("renders the comparison surface with public and prototype families", () => {
+    renderAt("/compare");
+
+    expect(screen.getByRole("heading", { name: /Compare product integration/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Unified product surface/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Shared concept matrix/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Cross-donor journeys/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Language boundary/ })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Open product home/ })).toBeInTheDocument();
+  });
+
   it("switches taxonomy families and tabs without losing selected world context", () => {
     renderAt("/world");
 

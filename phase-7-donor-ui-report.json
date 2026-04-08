@@ -1,0 +1,182 @@
+{
+  "ok": true,
+  "workspace_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "app_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+  "checks": [
+    {
+      "name": "doc exists: DONOR_UI_AUDIT.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/DONOR_UI_AUDIT.md"
+    },
+    {
+      "name": "doc exists: DONOR_CHARACTERIZATION_MATRIX.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/DONOR_CHARACTERIZATION_MATRIX.md"
+    },
+    {
+      "name": "doc exists: DONOR_UI_CONFORMANCE_MATRIX.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/DONOR_UI_CONFORMANCE_MATRIX.md"
+    },
+    {
+      "name": "doc exists: phase-7-donor-ui-conformance.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/roadmap/phase-7-donor-ui-conformance.md"
+    },
+    {
+      "name": "audit fixes Mythforge methodology",
+      "ok": true
+    },
+    {
+      "name": "audit fixes Adventure methodology",
+      "ok": true
+    },
+    {
+      "name": "audit fixes Orbis methodology",
+      "ok": true
+    },
+    {
+      "name": "characterization matrix has basis column",
+      "ok": true
+    },
+    {
+      "name": "conformance matrix has basis column",
+      "ok": true
+    },
+    {
+      "name": "conformance matrix names the shared-concept round-trip stress case",
+      "ok": true
+    },
+    {
+      "name": "manifest exists: baselines.yaml",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/baselines.yaml"
+    },
+    {
+      "name": "manifest exists: waivers.yaml",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/conformance/waivers.yaml"
+    },
+    {
+      "name": "baselines register Mythforge captured basis",
+      "ok": true
+    },
+    {
+      "name": "baselines register Orbis designed basis",
+      "ok": true
+    },
+    {
+      "name": "baselines register Adventure reconstructed basis",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Orbis",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Adventure Generator",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:mythforge",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:orbis",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:adventure",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:mythforge",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:orbis",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:adventure",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance",
+      "ok": true
+    },
+    {
+      "name": "donor route handler exists",
+      "ok": true
+    },
+    {
+      "name": "donor compare route exists",
+      "ok": true
+    },
+    {
+      "name": "navigation links to donor compare",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Mythforge donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Orbis donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Adventure Generator donor route",
+      "ok": true
+    },
+    {
+      "name": "test exists: mythforge.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/mythforge.characterization.test.ts"
+    },
+    {
+      "name": "test exists: orbis.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/orbis.characterization.test.ts"
+    },
+    {
+      "name": "test exists: adventure-generator.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/adventure-generator.characterization.test.ts"
+    },
+    {
+      "name": "test exists: mythforge.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: orbis.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: adventure-generator.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "donor characterization",
+      "ok": true,
+      "command": "npm.cmd run test:characterize",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 test:characterize\n> npm run test:characterize:mythforge && npm run test:characterize:orbis && npm run test:characterize:adventure\n\n\n> unified-app@0.1.0 test:characterize:mythforge\n> node scripts/characterize-donor.mjs mythforge && vitest run tests/characterization/mythforge.characterization.test.ts\n\n{\n  \"donor\": \"mythforge\",\n  \"label\": \"Mythforge\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"mythforge/package.json\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\package.json\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/app/page.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\app\\\\page.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/components/mythosforge/TopNav.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\components\\\\mythosforge\\\\TopNav.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/components/mythosforge/ExplorerTree.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\components\\\\mythosforge\\\\ExplorerTree.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/components/mythosforge/Workspace.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\components\\\\mythosforge\\\\Workspace.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 5,\n    \"existingSources\": 5,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/mythforge.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:30\n\u001b[2m   Duration \u001b[22m 2.23s\u001b[2m (transform 40ms, setup 363ms, collect 77ms, tests 4ms, environment 1.35s, prepare 159ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:orbis\n> node scripts/characterize-donor.mjs orbis && vitest run tests/characterization/orbis.characterization.test.ts\n\n{\n  \"donor\": \"orbis\",\n  \"label\": \"Orbis\",\n  \"classification\": \"semantic-only donor\",\n  \"methodology\": \"designed intent authoring\",\n  \"basis\": \"designed\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"world-model/docs/adapters/ORBIS_ADAPTER.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\adapters\\\\ORBIS_ADAPTER.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"to be merged/Orbis Spec 2.0/Orbis 1.0/.env.local\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\Orbis Spec 2.0\\\\Orbis 1.0\\\\.env.local\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 2,\n    \"existingSources\": 2,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"adapted+waived\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/orbis.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:33\n\u001b[2m   Duration \u001b[22m 2.48s\u001b[2m (transform 49ms, setup 384ms, collect 28ms, tests 4ms, environment 1.63s, prepare 151ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:adventure\n> node scripts/characterize-donor.mjs adventure-generator && vitest run tests/characterization/adventure-generator.characterization.test.ts\n\n{\n  \"donor\": \"adventure-generator\",\n  \"label\": \"Adventure Generator\",\n  \"classification\": \"fragment donor\",\n  \"methodology\": \"intent reconstruction\",\n  \"basis\": \"reconstructed\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"world-model/docs/adapters/ADVENTURE_GENERATOR_ADAPTER.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\adapters\\\\ADVENTURE_GENERATOR_ADAPTER.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"to be merged/dungeon generator/zai2/next-env.d.ts\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\dungeon generator\\\\zai2\\\\next-env.d.ts\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"to be merged/dungeon generator/zai2/.next\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\dungeon generator\\\\zai2\\\\.next\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 3,\n    \"existingSources\": 3,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"adapted+waived\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/adventure-generator.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:37\n\u001b[2m   Duration \u001b[22m 2.37s\u001b[2m (transform 40ms, setup 360ms, collect 120ms, tests 4ms, environment 1.39s, prepare 170ms)\u001b[22m"
+    },
+    {
+      "name": "donor conformance",
+      "ok": true,
+      "command": "npm.cmd run test:conformance",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 test:conformance\n> npm run test:conformance:mythforge && npm run test:conformance:orbis && npm run test:conformance:adventure\n\n\n> unified-app@0.1.0 test:conformance:mythforge\n> vitest run tests/conformance/mythforge.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 269\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:40\n\u001b[2m   Duration \u001b[22m 3.20s\u001b[2m (transform 330ms, setup 348ms, collect 801ms, tests 269ms, environment 1.33s, prepare 165ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:orbis\n> vitest run tests/conformance/orbis.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 122\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:45\n\u001b[2m   Duration \u001b[22m 3.12s\u001b[2m (transform 329ms, setup 356ms, collect 804ms, tests 122ms, environment 1.41s, prepare 169ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:adventure\n> vitest run tests/conformance/adventure-generator.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 124\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:49\n\u001b[2m   Duration \u001b[22m 3.07s\u001b[2m (transform 282ms, setup 368ms, collect 807ms, tests 124ms, environment 1.35s, prepare 153ms)\u001b[22m"
+    }
+  ],
+  "errors": []
+}

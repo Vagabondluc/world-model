@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
+import { NavLink } from "react-router-dom";
 import type { CanonicalBundle, EntityRecord, WorldRecord } from "@/domain/canonical";
+import { SharedConceptLensPanel } from "@/product/SharedConceptLensPanel";
 import type { TaxonomyFamily } from "@/taxonomy/config";
 import { getTaxonomyDefinition } from "@/taxonomy/config";
 import { slugify } from "@/services/canonical-ops";
@@ -165,6 +167,30 @@ export function TaxonomyPage({ family, tab }: { family: TaxonomyFamily; tab: str
       </section>
 
       {family === "role" ? (
+        <section className="card-grid">
+          <div className="card">
+            <h3>Shared canonical concept</h3>
+            <p>Switch lenses on the same biome/location record without mutating canonical state.</p>
+            <SharedConceptLensPanel family="biome-location" />
+          </div>
+          <div className="card">
+            <h3>Cross-donor journeys</h3>
+            <p>Continue into the donor comparison or the product integration surface from the same bundle.</p>
+            <div className="stack">
+              <NavLink to="/compare" className="nav-link nav-family">
+                <span>Compare product integration</span>
+                <span className="nav-meta">Shared concept matrix</span>
+              </NavLink>
+              <NavLink to="/compare/donors" className="nav-link nav-family">
+                <span>Compare donors</span>
+                <span className="nav-meta">Faithful donor rehosts</span>
+              </NavLink>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {family === "role" ? (
         <>
           {activeTab === "world" ? (
             <WorldSurface
@@ -264,6 +290,11 @@ function WorldSurface({
           ))}
         </ul>
       </div>
+      <div className="card">
+        <h3>Spatial lens</h3>
+        <p>Inspect the same biome/location concept through donor lenses from the world surface.</p>
+        <SharedConceptLensPanel family="biome-location" compact />
+      </div>
       <MetadataEditor
         title="Selected entity"
         values={entityDraftFrom(selectedEntity)}
@@ -335,6 +366,11 @@ function SchemaSurface({ bundle }: { bundle: CanonicalBundle }) {
             Open migration report
           </button>
         </div>
+      </div>
+      <div className="card">
+        <h3>Shared concept lens</h3>
+        <p>Switch between donor lenses without mutating the canonical bundle.</p>
+        <SharedConceptLensPanel family="projections" compact />
       </div>
       <div className="card">
         <h3>Schema notes</h3>

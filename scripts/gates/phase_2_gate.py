@@ -19,8 +19,8 @@ _BUILD_REPORT = Path(WM) / "phase-2-snapshot-build-report.json"
 
 
 def _run_integrity_check() -> tuple[bool, str]:
-    proc = subprocess.run(_CHECK_CMD, capture_output=True, text=True, check=False)
-    output = "\n".join(part for part in (proc.stdout.strip(), proc.stderr.strip()) if part).strip()
+    proc = subprocess.run(_CHECK_CMD, capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)
+    output = "\n".join(part for part in ((proc.stdout or "").strip(), (proc.stderr or "").strip()) if part).strip()
     if proc.returncode == 0:
         return True, output or "phase-2 snapshot integrity checker passed"
     if _INTEGRITY_REPORT.is_file():

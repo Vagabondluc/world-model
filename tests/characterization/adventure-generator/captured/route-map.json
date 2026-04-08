@@ -1,0 +1,10 @@
+{
+  "donor": "adventure-generator",
+  "label": "Adventure Generator",
+  "classification": "fragment donor",
+  "methodology": "intent reconstruction",
+  "basis": "reconstructed",
+  "routes": [
+    "/donor/adventure-generator"
+  ]
+}

@@ -1,12 +1,12 @@
 """Phase-gate harness runner.
 
 Usage:
-  python world-model/scripts/run_harness.py                     # all phases 0-6
+  python world-model/scripts/run_harness.py                     # all phases 0-8
   python world-model/scripts/run_harness.py --phase 2           # phases 0 → 2 (strict)
   python world-model/scripts/run_harness.py --only 2            # phase 2 only (no ordering)
   python world-model/scripts/run_harness.py --bootstrap         # scaffold stubs, then all phases
   python world-model/scripts/run_harness.py --bootstrap --phase 2  # scaffold then phases 0-2
-  python world-model/scripts/run_harness.py --phase 6 --cleanup --cleanup-scope safe
+  python world-model/scripts/run_harness.py --phase 8 --cleanup --cleanup-scope safe
   python world-model/scripts/run_harness.py --cleanup-only
 
 Exit codes:
@@ -36,7 +36,7 @@ from cleanup_runtime import (  # noqa: E402
 )
 from gates import (  # noqa: E402
     phase_0_gate, phase_1_gate, phase_2_gate,
-    phase_3_gate, phase_4_gate, phase_5_gate, phase_6_gate,
+    phase_3_gate, phase_4_gate, phase_5_gate, phase_6_gate, phase_7_gate, phase_8_gate,
 )
 from gates.base import GateReport  # noqa: E402
 from gates.scaffold import run_bootstrap  # noqa: E402
@@ -44,7 +44,8 @@ from gates import checklist as _checklist  # noqa: E402
 
 ALL_GATES = [
     phase_0_gate, phase_1_gate, phase_2_gate,
-    phase_3_gate, phase_4_gate, phase_5_gate, phase_6_gate,
+    phase_3_gate, phase_4_gate, phase_5_gate, phase_6_gate, phase_7_gate,
+    phase_8_gate,
 ]
 
 WIDTH = 72
@@ -201,8 +202,8 @@ def main() -> int:
     reports: list[GateReport] = []
     try:
         if args.only is not None:
-            if not (0 <= args.only <= 6):
-                print(f"error: phase must be 0-6, got {args.only}", file=sys.stderr)
+            if not (0 <= args.only <= 8):
+                print(f"error: phase must be 0-8, got {args.only}", file=sys.stderr)
                 return 1
             if args.bootstrap:
                 run_bootstrap(args.only)
@@ -210,8 +211,8 @@ def main() -> int:
             print(f"Running Phase {args.only} gate only (ordering not enforced)\n")
             code, reports = run_gates(gates, stop_on_fail=False)
         elif args.phase is not None:
-            if not (0 <= args.phase <= 6):
-                print(f"error: phase must be 0-6, got {args.phase}", file=sys.stderr)
+            if not (0 <= args.phase <= 8):
+                print(f"error: phase must be 0-8, got {args.phase}", file=sys.stderr)
                 return 1
             if args.bootstrap:
                 run_bootstrap(args.phase)
@@ -220,9 +221,9 @@ def main() -> int:
             code, reports = run_gates(gates)
         else:
             if args.bootstrap:
-                run_bootstrap(6)
+                run_bootstrap(8)
             gates = ALL_GATES
-            print("Running all phase gates (strict ordering: 0 → 6)\n")
+            print("Running all phase gates (strict ordering: 0 → 8)\n")
             code, reports = run_gates(gates)
     finally:
         if args.cleanup:

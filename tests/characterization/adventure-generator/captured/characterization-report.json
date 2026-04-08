@@ -1,0 +1,34 @@
+{
+  "donor": "adventure-generator",
+  "label": "Adventure Generator",
+  "classification": "fragment donor",
+  "methodology": "intent reconstruction",
+  "basis": "reconstructed",
+  "sourceInventory": [
+    {
+      "relativePath": "world-model/docs/adapters/ADVENTURE_GENERATOR_ADAPTER.md",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\adapters\\ADVENTURE_GENERATOR_ADAPTER.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "relativePath": "to be merged/dungeon generator/zai2/next-env.d.ts",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\dungeon generator\\zai2\\next-env.d.ts",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "relativePath": "to be merged/dungeon generator/zai2/.next",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\dungeon generator\\zai2\\.next",
+      "exists": true,
+      "kind": "directory"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 3,
+    "existingSources": 3,
+    "missingSources": 0
+  },
+  "parityTarget": "adapted+waived",
+  "unstableSurfaces": []
+}

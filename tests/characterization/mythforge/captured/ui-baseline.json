@@ -1,0 +1,22 @@
+{
+  "donor": "mythforge",
+  "basis": "captured",
+  "panels": [
+    "TopNav",
+    "ExplorerTree",
+    "Workspace"
+  ],
+  "controls": [
+    "New World",
+    "Open World",
+    "Save Canonical",
+    "New Entity",
+    "Grid",
+    "Graph"
+  ],
+  "visibleStates": [
+    "loading canonical bundle",
+    "saving canonical bundle",
+    "no entities yet"
+  ]
+}

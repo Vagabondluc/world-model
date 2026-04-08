@@ -1,0 +1,291 @@
+{
+  "ok": true,
+  "workspace_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "app_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+  "checks": [
+    {
+      "name": "doc exists: UNIFIED_PRODUCT_DESIGN.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/architecture/UNIFIED_PRODUCT_DESIGN.md"
+    },
+    {
+      "name": "doc exists: CROSS_DONOR_INTEGRATION_MATRIX.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/CROSS_DONOR_INTEGRATION_MATRIX.md"
+    },
+    {
+      "name": "doc exists: phase-8-unified-product-surface.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/roadmap/phase-8-unified-product-surface.md"
+    },
+    {
+      "name": "UNIFIED_PRODUCT_DESIGN documents /world route",
+      "ok": true
+    },
+    {
+      "name": "UNIFIED_PRODUCT_DESIGN documents /story route",
+      "ok": true
+    },
+    {
+      "name": "UNIFIED_PRODUCT_DESIGN documents /schema route",
+      "ok": true
+    },
+    {
+      "name": "UNIFIED_PRODUCT_DESIGN distinguishes donor-faithful surfaces",
+      "ok": true
+    },
+    {
+      "name": "UNIFIED_PRODUCT_DESIGN draws the product/donor language boundary",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX records the characterization basis column",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX names the biome/location family",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX names the entities family",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX names the workflows family",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX names the simulation-events family",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX names the projections family",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX names the attachments family",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX covers Mythforge and Orbis lenses",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX covers Adventure Generator lens",
+      "ok": true
+    },
+    {
+      "name": "CROSS_DONOR_INTEGRATION_MATRIX records the explicit lens-switch smoke test",
+      "ok": true
+    },
+    {
+      "name": "arch doc exists: FINAL_APP_ARCHITECTURE.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/architecture/FINAL_APP_ARCHITECTURE.md"
+    },
+    {
+      "name": "arch doc exists: REPOSITORY_LAYOUT.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/architecture/REPOSITORY_LAYOUT.md"
+    },
+    {
+      "name": "arch doc registers /donor/mythforge route",
+      "ok": true
+    },
+    {
+      "name": "arch doc registers /donor/orbis route",
+      "ok": true
+    },
+    {
+      "name": "arch doc registers /donor/adventure-generator route",
+      "ok": true
+    },
+    {
+      "name": "arch doc registers /compare/donors route",
+      "ok": true
+    },
+    {
+      "name": "arch doc describes cross-donor surfaces",
+      "ok": true
+    },
+    {
+      "name": "arch doc classifies legacy redirects",
+      "ok": true
+    },
+    {
+      "name": "layout doc registers tests/integration folder",
+      "ok": true
+    },
+    {
+      "name": "layout doc registers UNIFIED_PRODUCT_DESIGN artifact",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:integration:journeys",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:integration:lens-switch",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:integration",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:integration:round-trip",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes wires the product home route",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes wires the public product route family",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes resolves the public product family through a dedicated route component",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes uses the role family as the public product default",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes wires the product compare surface",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes wires the donor compare surface",
+      "ok": true
+    },
+    {
+      "name": "AppRoutes uses the unified landing page",
+      "ok": true
+    },
+    {
+      "name": "product boundary contract exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/product/surface-contract.ts"
+    },
+    {
+      "name": "product boundary contract exists content",
+      "ok": true
+    },
+    {
+      "name": "unified landing page exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/product/UnifiedLandingPage.tsx"
+    },
+    {
+      "name": "unified landing page exists content",
+      "ok": true
+    },
+    {
+      "name": "shared concept lens panel exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/product/SharedConceptLensPanel.tsx"
+    },
+    {
+      "name": "shared concept lens panel exists content",
+      "ok": true
+    },
+    {
+      "name": "surface contract defines the product/donor boundary",
+      "ok": true
+    },
+    {
+      "name": "surface contract defines shared concept families",
+      "ok": true
+    },
+    {
+      "name": "surface contract defines cross-donor journeys",
+      "ok": true
+    },
+    {
+      "name": "surface contract names the biome/location family",
+      "ok": true
+    },
+    {
+      "name": "surface contract names the entities family",
+      "ok": true
+    },
+    {
+      "name": "surface contract names the workflows family",
+      "ok": true
+    },
+    {
+      "name": "surface contract names the simulation-events family",
+      "ok": true
+    },
+    {
+      "name": "surface contract names the projections family",
+      "ok": true
+    },
+    {
+      "name": "surface contract names the attachments family",
+      "ok": true
+    },
+    {
+      "name": "surface contract exposes bundle-aware landing recommendation",
+      "ok": true
+    },
+    {
+      "name": "surface contract enumerates the unified product surfaces",
+      "ok": true
+    },
+    {
+      "name": "surface contract includes the world surface",
+      "ok": true
+    },
+    {
+      "name": "surface contract includes the story surface",
+      "ok": true
+    },
+    {
+      "name": "surface contract includes the schema surface",
+      "ok": true
+    },
+    {
+      "name": "test exists: cross-donor-world-flow.integration.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "test exists: cross-donor-adventure-flow.integration.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "test exists: shared-concept-round-trip.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "test exists: context-retention.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "test exists: lens-switch.smoke.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "cross-donor integration suite",
+      "ok": true,
+      "command": "npm.cmd run test:integration",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 test:integration\n> npm run test:integration:journeys && npm run test:integration:lens-switch\n\n\n> unified-app@0.1.0 test:integration:journeys\n> vitest run tests/integration/cross-donor-world-flow.integration.test.tsx tests/integration/cross-donor-adventure-flow.integration.test.tsx tests/integration/context-retention.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-adventure-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 243\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/context-retention.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 354\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor context retention\u001b[2m > \u001b[22mretains selected world and entity context across public, compare, and donor routes \u001b[33m 353\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-world-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 378\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor world flow\u001b[2m > \u001b[22mkeeps the selected world and entity context while moving through donor and product surfaces \u001b[33m 377\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m3 passed\u001b[39m\u001b[22m\u001b[90m (3)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m3 passed\u001b[39m\u001b[22m\u001b[90m (3)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:53\n\u001b[2m   Duration \u001b[22m 3.80s\u001b[2m (transform 325ms, setup 1.28s, collect 2.79s, tests 975ms, environment 4.80s, prepare 524ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:integration:lens-switch\n> vitest run tests/integration/lens-switch.smoke.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/integration/lens-switch.smoke.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 142\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:27:58\n\u001b[2m   Duration \u001b[22m 3.54s\u001b[2m (transform 597ms, setup 369ms, collect 1.22s, tests 142ms, environment 1.35s, prepare 183ms)\u001b[22m"
+    },
+    {
+      "name": "shared-concept round-trip suite",
+      "ok": true,
+      "command": "npm.cmd run test:integration:round-trip",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 test:integration:round-trip\n> vitest run tests/integration/shared-concept-round-trip.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/integration/shared-concept-round-trip.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 13:28:03\n\u001b[2m   Duration \u001b[22m 2.24s\u001b[2m (transform 53ms, setup 360ms, collect 74ms, tests 5ms, environment 1.34s, prepare 147ms)\u001b[22m"
+    }
+  ],
+  "errors": []
+}

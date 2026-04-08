@@ -24,6 +24,10 @@ All prototype variants must share:
 - no donor-runtime dependency
 - no duplicated source of truth
 
+The final public app surface is `World / Story / Schema`.
+`Task` and `Flow` are comparison-only prototype families.
+`Guided / Studio / Architect` are compatibility redirects only.
+
 Modal tools, including the Markov name generator, must:
 
 - be launchable from relevant surfaces
@@ -301,6 +305,48 @@ Each prototype should include:
 - one report viewer surface
 - one global save/load entry point
 - one consistent location for selected-world context
+
+## Current Shell Map
+
+The unified app shell is layered the same way across the active and prototype surfaces:
+
+- navigation layer
+  - family switcher
+  - tab links
+  - tools menu
+- context layer
+  - current family/tab
+  - selected world/entity
+  - save status
+- workspace layer
+  - the active taxonomy page
+- inspector layer
+  - bundle and selection details
+- modal layer
+  - wizards, generators, import preview, and report viewer
+
+The active public routes are:
+
+- `/world`
+- `/story`
+- `/schema`
+
+The compare route is:
+
+- `/compare`
+  - shows the public product surface and the prototype families side-by-side
+
+Comparison-only routes are:
+
+- `/prototype/role/*`
+- `/prototype/task/*`
+- `/prototype/flow/*`
+
+Legacy compatibility redirects are:
+
+- `/guided` -> `/world`
+- `/studio` -> `/story`
+- `/architect` -> `/schema`
 
 ## Evaluation Criteria
 

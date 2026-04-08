@@ -1,0 +1,19 @@
+{
+  "donor": "adventure-generator",
+  "basis": "reconstructed",
+  "panels": [
+    "Workflow registry",
+    "Guided steps",
+    "Checkpoints",
+    "Generated outputs"
+  ],
+  "controls": [
+    "Create linked entity",
+    "Start generator"
+  ],
+  "visibleStates": [
+    "no workflow records",
+    "no checkpoints",
+    "no outputs"
+  ]
+}

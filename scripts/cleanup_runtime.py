@@ -33,6 +33,7 @@ DURABLE_REPORTS = [
     WORLD_MODEL_ROOT / "phase-2-snapshot-integrity-report.json",
     WORLD_MODEL_ROOT / "phase-4-migration-report.json",
     WORLD_MODEL_ROOT / "phase-6-release-report.json",
+    WORLD_MODEL_ROOT / "phase-8-integration-report.json",
     WORLD_MODEL_ROOT / "phase-checklist.json",
 ]
 

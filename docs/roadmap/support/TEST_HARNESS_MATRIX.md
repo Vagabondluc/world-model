@@ -164,3 +164,48 @@ Exit Criteria:
 - `python world-model/scripts/check_phase_6_release.py` passes
 - No critical bugs
 - Documentation complete
+
+---
+
+## Phase 7: Donor UI Conformance
+
+Characterization Tests:
+- `mythforge.characterization.test.ts` - captured Mythforge route, panels, and controls exist
+- `orbis.characterization.test.ts` - designed Orbis baseline exists with designed basis
+- `adventure-generator.characterization.test.ts` - reconstructed Adventure baseline exists with reconstructed basis
+
+Conformance Tests:
+- `mythforge.conformance.test.tsx` - donor explorer and workspace project canonical entities
+- `orbis.conformance.test.tsx` - simulation profile, domains, and snapshots project from canonical state
+- `adventure-generator.conformance.test.tsx` - workflow, checkpoints, and outputs project from canonical state
+
+Gate Checks:
+- `python world-model/scripts/check_phase_7_donor_ui.py`
+- `python world-model/scripts/run_harness.py --phase 7`
+
+Exit Criteria:
+- donor methodologies are fixed and documented
+- characterization baselines exist for every donor class
+- donor routes render
+- donor conformance passes
+
+---
+
+## Phase 8: Unified Product Surface and Cross-Donor Integration
+
+Integration Tests:
+- `cross-donor-world-flow.integration.test.tsx` - world surface survives donor and product transitions
+- `cross-donor-adventure-flow.integration.test.tsx` - workflow-heavy donor surface survives product compare transitions
+- `context-retention.test.tsx` - selected world and entity persist across product/donor route changes
+- `lens-switch.smoke.test.tsx` - shared concept lens switching is read-only and keeps the canonical key stable
+- `shared-concept-round-trip.test.tsx` - every shared concept family projects through all donor lenses without mutation
+
+Gate Checks:
+- `python world-model/scripts/check_phase_8_integration.py`
+- `python world-model/scripts/run_harness.py --phase 8`
+
+Exit Criteria:
+- unified product design doc exists and names the code-side boundary
+- cross-donor integration matrix lists the six shared concept families and basis values
+- lens-switch smoke test passes
+- donor and product transition flows preserve canonical state and context

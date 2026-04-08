@@ -32,7 +32,7 @@ These are safe to remove after a harness run:
 Run the full harness with cleanup:
 
 ```powershell
-python world-model/scripts/run_harness.py --phase 6 --cleanup --cleanup-scope safe
+python world-model/scripts/run_harness.py --phase 7 --cleanup --cleanup-scope safe
 ```
 
 Run cleanup without executing phases:

@@ -13,8 +13,9 @@ Make the final app defensible for release and future extension.
 
 ## Public release shape
 
-- Public navigation remains `World`, `Story`, and `Schema`.
-- Legacy `/guided`, `/studio`, and `/architect` routes remain compatibility redirects only.
+- Public navigation (`World`, `Story`, `Schema`) is the intended product entry point but is not the complete product surface at Phase 6.
+- Donor-faithful surfaces (`/donor/mythforge`, `/donor/orbis`, `/donor/adventure-generator`, `/compare/donors`) are added by Phase 7 and are part of the release-complete product.
+- Legacy `/guided`, `/studio`, and `/architect` routes are scaffolding stubs from Phase 3/5; they become compatibility redirects after Phase 7 donor surfaces are live.
 - Modal tools remain contextual or shell-launched utilities, not separate runtime apps.
 
 ## Subphases
@@ -28,10 +29,12 @@ Deliverables:
 - adapter mapping drift checks
 - snapshot hash comparison and replay consistency checks
 - mode/tab switching state-retention coverage
+- Phase 7 conformance suite wired into regression gates (once Phase 7 is complete)
 
 Acceptance:
 
 - future changes cannot quietly reopen donor dependencies or drift from the canonical contract
+- future changes cannot silently break donor-surface UI fidelity without a conformance gate failing
 
 ### 6.2 Scale and performance
 
@@ -111,3 +114,5 @@ Acceptance:
 - accessibility is ignored
 - release criteria are ambiguous
 - release maintenance is undocumented
+- Phase 7 conformance suite is not included in regression gates after Phase 7 completes
+- donor-surface UI fidelity regression is undetected by the gate

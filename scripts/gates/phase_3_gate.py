@@ -27,8 +27,16 @@ def _run_app_cmd(command: list[str]) -> tuple[bool, str]:
     if resolved and resolved[0] == "npm":
         npm = shutil.which("npm") or shutil.which("npm.cmd") or "npm.cmd"
         resolved[0] = npm
-    proc = subprocess.run(resolved, cwd=APP, capture_output=True, text=True, check=False)
-    output = "\n".join(part for part in (proc.stdout.strip(), proc.stderr.strip()) if part).strip()
+    proc = subprocess.run(
+        resolved,
+        cwd=APP,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    output = "\n".join(part for part in ((proc.stdout or "").strip(), (proc.stderr or "").strip()) if part).strip()
     return proc.returncode == 0, output or "ok"
 
 

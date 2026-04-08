@@ -7,7 +7,7 @@ This file documents the current gate commands used by the roadmap harness.
 Run the full ordered harness with the default cleanup policy:
 
 ```powershell
-python world-model/scripts/run_harness.py --phase 6 --cleanup --cleanup-scope safe
+python world-model/scripts/run_harness.py --phase 8 --cleanup --cleanup-scope safe
 ```
 
 Cleanup only, without executing any phases:
@@ -148,3 +148,93 @@ What blocks Phase 6:
 - missing `world-model/docs/release/CHANGELOG.md`
 - missing `world-model/apps/unified-app/tests/release-hardening.test.tsx`
 - failing app verification, snapshot integrity, or migration replay checks
+
+## Phase 7 Donor UI Conformance Checks
+
+Run donor characterization from the unified app root:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:characterize
+```
+
+Run donor conformance:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:conformance
+```
+
+Run the phase-7 checker:
+
+```powershell
+python world-model/scripts/check_phase_7_donor_ui.py
+```
+
+Run the gate:
+
+```powershell
+python world-model/scripts/run_harness.py --phase 7
+```
+
+What blocks Phase 7:
+
+- missing donor audit or characterization/conformance matrices
+- missing `basis` columns or unresolved donor methodology
+- missing characterization baselines or waiver manifest
+- missing donor routes
+- failing characterization or conformance suites
+
+## Phase 8 Unified Product Surface and Cross-Donor Integration Checks
+
+Run the cross-donor integration suite from the unified app root:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:integration
+```
+
+Run the cross-donor journey subset explicitly:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:integration:journeys
+```
+
+Run the lens-switch smoke test explicitly:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:integration:lens-switch
+```
+
+Run the shared-concept round-trip suite:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:integration:round-trip
+```
+
+Run the phase-8 checker:
+
+```powershell
+python world-model/scripts/check_phase_8_integration.py
+```
+
+Run the gate:
+
+```powershell
+python world-model/scripts/run_harness.py --phase 8
+```
+
+What blocks Phase 8:
+
+- missing `world-model/docs/architecture/UNIFIED_PRODUCT_DESIGN.md`
+- missing `world-model/docs/testing/CROSS_DONOR_INTEGRATION_MATRIX.md`
+- `UNIFIED_PRODUCT_DESIGN.md` does not draw the product/donor language boundary
+- `CROSS_DONOR_INTEGRATION_MATRIX.md` does not cover the explicit shared concept families or lens-switch smoke test
+- `FINAL_APP_ARCHITECTURE.md` still describes Phase 3 stub interaction model (missing donor routes, cross-donor surfaces, legacy redirect classification)
+- missing integration npm scripts (`test:integration`, `test:integration:journeys`, `test:integration:lens-switch`, `test:integration:round-trip`)
+- missing required integration test files under `apps/unified-app/tests/integration/`
+- `/` is not a canonical-bundle-aware landing page or the product compare surface is missing
+- failing cross-donor integration or round-trip suites

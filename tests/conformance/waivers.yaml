@@ -1,0 +1,10 @@
+waivers:
+  - donor: mythforge
+    scope: donor-only AI copilot and external dashboard surfaces
+    reason: excluded from canonical product scope
+  - donor: orbis
+    scope: exact DOM parity with original donor UI
+    reason: no runnable donor UI root is present in the workspace
+  - donor: adventure-generator
+    scope: exact source-level parity with the original donor app
+    reason: only compiled residue is present in the workspace

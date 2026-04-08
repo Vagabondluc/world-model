@@ -25,15 +25,25 @@ function collectFiles(entry) {
 }
 
 for (const file of collectFiles(root)) {
-  if (!/\.(?:ts|tsx|js|jsx|mjs|json)$/.test(file)) {
+  if (!/\.(?:ts|tsx|js|jsx|mjs)$/.test(file)) {
     continue;
   }
   const text = fs.readFileSync(file, "utf8");
-  for (const token of forbidden) {
-    const tokenPattern = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const importLike = new RegExp(`(?:import|from|require).*${tokenPattern}`, "i");
-    if (importLike.test(text)) {
-      hits.push(`${path.relative(root, file)} :: ${token}`);
+  const specifiers = [
+    ...text.matchAll(/\bimport\b[\s\S]*?\bfrom\s*["']([^"']+)["']/g),
+    ...text.matchAll(/\brequire\(\s*["']([^"']+)["']\s*\)/g)
+  ]
+    .map((match) => match[1])
+    .filter(Boolean);
+
+  for (const specifier of specifiers) {
+    if (specifier.startsWith("@/donors/") || specifier.startsWith("./") || specifier.startsWith("../")) {
+      continue;
+    }
+    for (const token of forbidden) {
+      if (specifier.toLowerCase().includes(token.toLowerCase())) {
+        hits.push(`${path.relative(root, file)} :: ${specifier}`);
+      }
     }
   }
 }

@@ -23,9 +23,11 @@ def _run_migration_check() -> tuple[bool, str]:
         ["python", _SCRIPT],
         capture_output=True,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         check=False,
     )
-    output = "\n".join(part for part in (proc.stdout.strip(), proc.stderr.strip()) if part).strip()
+    output = "\n".join(part for part in ((proc.stdout or "").strip(), (proc.stderr or "").strip()) if part).strip()
     if proc.returncode == 0:
         return True, output or "phase-4 migration checker passed"
     if _REPORT.is_file():

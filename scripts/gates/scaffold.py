@@ -75,16 +75,23 @@ _RELEASE_CRITERIA_STUB = textwrap.dedent("""\
     # Release Criteria
     <!-- Auto-generated stub. Fill in all criteria before Phase 5/6 gates pass. -->
 
-    ## MVP acceptance criteria
-    - Beginner loop completes end-to-end.
-    - Studio loop completes end-to-end.
-    - Architect loop completes end-to-end.
+    ## Shipped UI
+    - The public app uses the World, Story, and Schema taxonomy.
+    - Legacy guided, studio, and architect routes redirect to public routes.
 
     ## Quality gates
     - No donor repo required at runtime.
     - All adapter manifests valid.
-    - All regression checks pass.
+    - All regression, performance, and accessibility checks pass.
     - Release criteria reviewed and signed off.
+
+    ## Verification commands
+    - cd world-model/apps/unified-app && npm run verify
+    - python world-model/scripts/check_phase_2_snapshots.py
+    - python world-model/scripts/check_phase_4_migration.py
+    - python world-model/scripts/check_phase_6_release.py
+    - python world-model/scripts/run_harness.py --phase 6
+    - python world-model/scripts/run_harness.py --phase 6 --cleanup --cleanup-scope safe
 """)
 
 # ── helpers ───────────────────────────────────────────────────────────────────

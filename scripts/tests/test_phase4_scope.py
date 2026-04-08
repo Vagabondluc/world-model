@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -62,6 +63,36 @@ class Phase4ScopeTests(unittest.TestCase):
         self.assertEqual(donors, {"mythforge", "orbis", "adventure-generator"})
         self.assertIn(("adventure-generator", "replay"), modes)
 
+    def test_normalized_bundle_check_rejects_donor_ui_leaks(self) -> None:
+        errors = phase4_check._assert_normalized_bundle(
+            "mythforge",
+            {
+                "world": {"world_id": "world:sample"},
+                "entities": {},
+                "workflows": {},
+                "projections": {},
+                "assets": {},
+                "events": [],
+                "donor_ui_state": {"panel": "world"},
+            },
+        )
+
+        self.assertTrue(any("donor-local keys" in error for error in errors))
+
+    def test_normalized_bundle_check_accepts_minimal_orbis_shape(self) -> None:
+        errors = phase4_check._assert_normalized_bundle(
+            "orbis",
+            {
+                "world": {"simulation_attachment": {"profile_id": "profile:sample"}},
+                "entities": {},
+                "workflows": {},
+                "projections": {},
+                "events": [{"event_id": "event:1"}],
+            },
+        )
+
+        self.assertEqual(errors, [])
+
     def test_gate_routes_migration_checker_failures_to_remediation(self) -> None:
         with mock.patch("gates.phase_4_gate._run_migration_check", return_value=(False, "replay drift")):
             report = phase_4_gate.run()
@@ -71,6 +102,20 @@ class Phase4ScopeTests(unittest.TestCase):
         self.assertIsNotNone(check.remediation)
         self.assertIn("check_phase_4_migration.py", check.remediation.target)
         self.assertIn("run_harness.py --phase 4", check.remediation.rerun_cmd)
+
+    def test_check_uses_explicit_scratch_root(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            scratch = Path(tmp)
+            report_path = scratch / "report.json"
+
+            report = phase4_check.check(scratch_root=scratch, report_path=report_path)
+
+            self.assertTrue(report["ok"])
+            self.assertTrue(report_path.is_file())
+            result_paths = {
+                Path(item["report_path"]).parent for item in report["results"] if item.get("report_path")
+            }
+            self.assertEqual(result_paths, {scratch / "phase-4-migration"})
 
 
 if __name__ == "__main__":

@@ -6,6 +6,8 @@ Usage:
   python world-model/scripts/run_harness.py --only 2            # phase 2 only (no ordering)
   python world-model/scripts/run_harness.py --bootstrap         # scaffold stubs, then all phases
   python world-model/scripts/run_harness.py --bootstrap --phase 2  # scaffold then phases 0-2
+  python world-model/scripts/run_harness.py --phase 6 --cleanup --cleanup-scope safe
+  python world-model/scripts/run_harness.py --cleanup-only
 
 Exit codes:
   0    all requested phases passed
@@ -16,11 +18,22 @@ from __future__ import annotations
 import argparse
 import os
 import sys
+from pathlib import Path
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 if _HERE not in sys.path:
     sys.path.insert(0, _HERE)
 
+from cleanup_runtime import (  # noqa: E402
+    build_run_root,
+    cleanup_phase_outputs,
+    normalize_cleanup_scope,
+    register_artifact,
+    resolve_scratch_root,
+    runtime_env,
+    should_preserve_report,
+    world_model_root,
+)
 from gates import (  # noqa: E402
     phase_0_gate, phase_1_gate, phase_2_gate,
     phase_3_gate, phase_4_gate, phase_5_gate, phase_6_gate,
@@ -37,6 +50,7 @@ ALL_GATES = [
 WIDTH = 72
 _BAR = "=" * WIDTH
 _DOUBLE = "═" * WIDTH
+_CHECKLIST_PATH = world_model_root() / "phase-checklist.json"
 
 
 def _print_report(report: GateReport) -> None:
@@ -89,6 +103,32 @@ def run_gates(gates: list, stop_on_fail: bool = True) -> tuple:
     return 0, reports
 
 
+def _report_retention_mode(args: argparse.Namespace) -> str:
+    if args.delete_success_reports:
+        return "delete-success"
+    if args.keep_failure_reports_only:
+        return "keep-failure-only"
+    return "keep"
+
+
+def _print_cleanup_summary(summary: dict) -> None:
+    if not summary.get("requested"):
+        return
+    print(_DOUBLE)
+    print("  CLEANUP SUMMARY")
+    print(_DOUBLE)
+    print(f"  Scope            : {summary['cleanup_scope']}")
+    print(f"  Report retention : {summary['report_retention']}")
+    print(f"  Scratch root     : {summary['scratch_root']}")
+    print(f"  Deleted          : {len(summary.get('deleted', []))}")
+    print(f"  Preserved        : {len(summary.get('preserved', []))}")
+    print(f"  Failures         : {len(summary.get('failed', []))}")
+    if summary.get("failed"):
+        first = summary["failed"][0]
+        print(f"  First failure    : {first['path']} -> {first['error']}")
+    print(_DOUBLE + "\n")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         prog="run_harness",
@@ -100,6 +140,19 @@ def main() -> int:
         "--bootstrap", action="store_true",
         help="Create missing stubs before running gates",
     )
+    parser.add_argument("--cleanup", action="store_true", help="Auto-clean harness-owned ephemeral outputs after the run")
+    parser.add_argument(
+        "--cleanup-scope",
+        default="safe",
+        choices=["safe", "balanced", "aggressive"],
+        help="Cleanup policy for harness-owned outputs (default: safe)",
+    )
+    parser.add_argument("--cleanup-only", action="store_true", help="Remove harness-owned ephemeral outputs without running any phases")
+    parser.add_argument("--scratch-root", help="Override the harness scratch root")
+    retention = parser.add_mutually_exclusive_group()
+    retention.add_argument("--keep-reports", action="store_true", help="Keep durable phase reports after the run")
+    retention.add_argument("--delete-success-reports", action="store_true", help="Delete durable phase reports after a successful run")
+    retention.add_argument("--keep-failure-reports-only", action="store_true", help="Keep durable phase reports only when the run fails")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--phase", type=int, metavar="N",
                        help="Run phases 0 through N (strict ordering)")
@@ -107,32 +160,90 @@ def main() -> int:
                        help="Run only phase N (no ordering enforcement)")
     args = parser.parse_args()
 
-    if args.only is not None:
-        if not (0 <= args.only <= 6):
-            print(f"error: phase must be 0-6, got {args.only}", file=sys.stderr)
-            return 1
-        if args.bootstrap:
-            run_bootstrap(args.only)
-        gates = [ALL_GATES[args.only]]
-        print(f"Running Phase {args.only} gate only (ordering not enforced)\n")
-        code, reports = run_gates(gates, stop_on_fail=False)
-    elif args.phase is not None:
-        if not (0 <= args.phase <= 6):
-            print(f"error: phase must be 0-6, got {args.phase}", file=sys.stderr)
-            return 1
-        if args.bootstrap:
-            run_bootstrap(args.phase)
-        gates = ALL_GATES[: args.phase + 1]
-        print(f"Running gates for phases 0 → {args.phase} (strict ordering)\n")
-        code, reports = run_gates(gates)
-    else:
-        if args.bootstrap:
-            run_bootstrap(6)
-        gates = ALL_GATES
-        print("Running all phase gates (strict ordering: 0 → 6)\n")
-        code, reports = run_gates(gates)
+    if args.cleanup_only and (args.phase is not None or args.only is not None or args.bootstrap):
+        print("error: --cleanup-only cannot be combined with --phase, --only, or --bootstrap", file=sys.stderr)
+        return 1
 
-    _checklist.save(reports)
+    cleanup_summary = {"requested": False}
+    cleanup_scope = normalize_cleanup_scope(args.cleanup_scope)
+    report_retention = _report_retention_mode(args)
+    scratch_root = resolve_scratch_root(args.scratch_root)
+
+    if args.cleanup_only:
+        cleanup_summary = cleanup_phase_outputs(
+            scratch_root=scratch_root,
+            scope=cleanup_scope,
+            report_retention=report_retention,
+            run_succeeded=True,
+            current_run_root=None,
+        )
+        _print_cleanup_summary(cleanup_summary)
+        return 0 if not cleanup_summary["failed"] else 1
+
+    run_root: Path | None = None
+    old_env: dict[str, str | None] = {}
+    if args.cleanup or args.scratch_root:
+        run_root = build_run_root(scratch_root)
+        run_root.mkdir(parents=True, exist_ok=True)
+        for key, value in runtime_env(scratch_root, run_root).items():
+            old_env[key] = os.environ.get(key)
+            os.environ[key] = value
+        register_artifact(
+            run_root,
+            phase="harness",
+            kind="quarantine",
+            created_by="run_harness",
+            preserve_on_success=False,
+            preserve_on_failure=True,
+        )
+
+    code = 1
+    reports: list[GateReport] = []
+    try:
+        if args.only is not None:
+            if not (0 <= args.only <= 6):
+                print(f"error: phase must be 0-6, got {args.only}", file=sys.stderr)
+                return 1
+            if args.bootstrap:
+                run_bootstrap(args.only)
+            gates = [ALL_GATES[args.only]]
+            print(f"Running Phase {args.only} gate only (ordering not enforced)\n")
+            code, reports = run_gates(gates, stop_on_fail=False)
+        elif args.phase is not None:
+            if not (0 <= args.phase <= 6):
+                print(f"error: phase must be 0-6, got {args.phase}", file=sys.stderr)
+                return 1
+            if args.bootstrap:
+                run_bootstrap(args.phase)
+            gates = ALL_GATES[: args.phase + 1]
+            print(f"Running gates for phases 0 → {args.phase} (strict ordering)\n")
+            code, reports = run_gates(gates)
+        else:
+            if args.bootstrap:
+                run_bootstrap(6)
+            gates = ALL_GATES
+            print("Running all phase gates (strict ordering: 0 → 6)\n")
+            code, reports = run_gates(gates)
+    finally:
+        if args.cleanup:
+            cleanup_summary = cleanup_phase_outputs(
+                scratch_root=scratch_root,
+                scope=cleanup_scope,
+                report_retention=report_retention,
+                run_succeeded=(code == 0),
+                current_run_root=run_root,
+            )
+            _print_cleanup_summary(cleanup_summary)
+        for key, value in old_env.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value
+
+    _checklist.save(reports, cleanup_summary=cleanup_summary)
+    if args.cleanup and not should_preserve_report(report_retention, code == 0) and _CHECKLIST_PATH.exists():
+        _CHECKLIST_PATH.unlink()
+        cleanup_summary.setdefault("deleted", []).append(_CHECKLIST_PATH.as_posix())
     _checklist.print_summary(reports)
     return code
 

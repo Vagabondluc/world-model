@@ -145,18 +145,22 @@ Exit Criteria:
 ## Phase 6: Hardening and Release
 
 Unit Tests:
-- `test_error_handling()` - All error paths handled gracefully
-- `test_validation_errors()` - Validation errors are user-friendly
+- `test_release_shell_controls_are_keyboard_reachable()` - Release-critical controls are keyboard reachable
+- `test_modal_focus_returns_to_trigger()` - Modal focus returns to the triggering control after close
+- `test_large_bundle_roundtrip_performance()` - Large canonical bundles roundtrip within release thresholds
 
 Integration Tests:
-- `test_performance_under_load()` - App handles large canonical bundles
-- `test_concurrent_edits()` - Concurrent edits handled correctly
+- `test_release_app_verification()` - App verification passes with lint, typecheck, tests, and build
+- `test_phase2_snapshot_integrity()` - Snapshot hashes and adapter mapping checks remain stable
+- `test_phase4_migration_replay()` - Migration replay remains deterministic under release checks
 
 E2E Tests:
 - `test_release_checklist()` - All release criteria verified
-- `test_documentation_complete()` - All docs present and accurate
+- `test_documentation_complete()` - All release docs present and accurate
+- `test_legacy_routes_redirect()` - Legacy routes redirect to public routes
 
 Exit Criteria:
 - All release criteria in `world-model/docs/release/RELEASE_CRITERIA.md` met
+- `python world-model/scripts/check_phase_6_release.py` passes
 - No critical bugs
 - Documentation complete

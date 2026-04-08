@@ -290,6 +290,8 @@ impl ConceptTranslator {
             }
         }
 
+        sanitize_canonical_bundle(&mut state.bundle)?;
+
         Ok(state)
     }
 }
@@ -899,6 +901,37 @@ fn ensure_world_index(bundle: &mut CanonicalBundle, entity_id: &EntityId) {
     }
 }
 
+fn sanitize_canonical_bundle(bundle: &mut CanonicalBundle) -> Result<(), String> {
+    let mut bundle_value = serde_json::to_value(&*bundle).map_err(|err| err.to_string())?;
+    sanitize_unknown_value(&mut bundle_value);
+    *bundle = serde_json::from_value(bundle_value).map_err(|err| err.to_string())?;
+    Ok(())
+}
+
+fn sanitize_unknown_value(value: &mut Value) {
+    match value {
+        Value::Object(map) => {
+            map.retain(|key, nested| {
+                if is_donor_local_key(key) {
+                    return false;
+                }
+                sanitize_unknown_value(nested);
+                true
+            });
+        }
+        Value::Array(items) => {
+            for item in items {
+                sanitize_unknown_value(item);
+            }
+        }
+        _ => {}
+    }
+}
+
+fn is_donor_local_key(key: &str) -> bool {
+    key.starts_with("donor_") || key == "ui_tab"
+}
+
 fn validate_canonical_bundle(bundle: &Value) -> Result<(), String> {
     let schemas = schema_bundle_as_json();
     let schema = schemas
@@ -1102,7 +1135,10 @@ fn phase_rank(concept_key: &str) -> u8 {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::collections::BTreeSet;
     use tempfile::tempdir;
+
+    const DONORS: &[&str] = &["mythforge", "orbis", "adventure-generator"];
 
     fn fixture_path(donor: &str) -> PathBuf {
         workspace_root()
@@ -1112,9 +1148,41 @@ mod tests {
             .join("import-input.json")
     }
 
+    fn concept_map_path(donor: &str) -> PathBuf {
+        workspace_root()
+            .join("adapters")
+            .join(donor)
+            .join("mappings")
+            .join("concept-map.yaml")
+    }
+
     fn load_fixture_input(donor: &str) -> MigrationInput {
         let text = fs::read_to_string(fixture_path(donor)).unwrap();
         serde_json::from_str(&text).unwrap()
+    }
+
+    fn load_concept_map(donor: &str) -> ConceptMapFile {
+        let text = fs::read_to_string(concept_map_path(donor)).unwrap();
+        serde_yaml::from_str(&text).unwrap()
+    }
+
+    fn migrate_fixture(donor: &str) -> (MigrationReport, CanonicalBundle, String) {
+        let dir = tempdir().unwrap();
+        let output = dir.path().join("bundle.json");
+        let report = dir.path().join("report.json");
+        let result = MigrationRunner::execute(MigrationRequest {
+            donor: donor.into(),
+            input_path: fixture_path(donor),
+            output_path: Some(output.clone()),
+            report_path: report,
+            dry_run: false,
+            replay: false,
+        })
+        .unwrap();
+
+        let bundle_text = fs::read_to_string(&output).unwrap();
+        let bundle: CanonicalBundle = serde_json::from_str(&bundle_text).unwrap();
+        (result, bundle, bundle_text)
     }
 
     #[test]
@@ -1213,5 +1281,135 @@ mod tests {
         .unwrap();
         assert_eq!(result.replay_equivalent, Some(true));
         assert!(result.mapped_count > 0);
+    }
+
+    #[test]
+    fn donor_matrix_respects_mapping_outcomes_after_normalization() {
+        for donor in DONORS {
+            let input = load_fixture_input(donor);
+            let concept_map = load_concept_map(donor);
+            let (report, bundle, bundle_text) = migrate_fixture(donor);
+            let bundle_value: Value = serde_json::from_str(&bundle_text).unwrap();
+
+            validate_canonical_bundle(&bundle_value).unwrap();
+            assert_eq!(report.conflict_count, 0, "{donor}");
+            assert!(
+                !report
+                    .issues
+                    .iter()
+                    .any(|issue| matches!(issue.severity, MigrationSeverity::Error)),
+                "{donor}"
+            );
+
+            let expected_dropped = input
+                .records
+                .iter()
+                .filter(|record| {
+                    concept_map
+                        .entries
+                        .iter()
+                        .find(|entry| entry.canonical_key == record.concept_key)
+                        .map(|entry| {
+                            matches!(
+                                entry.status,
+                                ConceptMapStatus::ReferenceOnly | ConceptMapStatus::Dropped
+                            )
+                        })
+                        .unwrap_or(false)
+                })
+                .count();
+
+            assert_eq!(report.dropped_count, expected_dropped, "{donor}");
+            assert_eq!(
+                report.mapped_count + report.dropped_count + report.conflict_count,
+                input.records.len(),
+                "{donor}"
+            );
+            assert_eq!(
+                report.provenance_refs.len(),
+                report.mapped_count + report.dropped_count,
+                "{donor}"
+            );
+
+            match *donor {
+                "mythforge" => {
+                    let scopes: BTreeSet<_> = bundle
+                        .entities
+                        .values()
+                        .filter_map(|entity| {
+                            entity
+                                .location_attachment
+                                .as_ref()
+                                .map(|attachment| attachment.spatial_scope.as_str())
+                        })
+                        .collect();
+                    for scope in ["city", "region", "biome", "dungeon", "landmark"] {
+                        assert!(scopes.contains(scope), "{donor} missing scope {scope}");
+                    }
+                    assert!(bundle.world.is_some(), "{donor}");
+                    assert!(!bundle.assets.is_empty(), "{donor}");
+                    assert!(!bundle.projections.is_empty(), "{donor}");
+                }
+                "orbis" => {
+                    let world = bundle.world.as_ref().expect("orbis world should exist");
+                    assert!(world.simulation_attachment.is_some(), "{donor}");
+                    assert!(bundle.entities.is_empty(), "{donor}");
+                    assert!(bundle.workflows.is_empty(), "{donor}");
+                    assert!(!bundle.events.is_empty(), "{donor}");
+                }
+                "adventure-generator" => {
+                    let scopes: BTreeSet<_> = bundle
+                        .entities
+                        .values()
+                        .filter_map(|entity| {
+                            entity
+                                .location_attachment
+                                .as_ref()
+                                .map(|attachment| attachment.spatial_scope.as_str())
+                        })
+                        .collect();
+                    assert!(scopes.contains("city"), "{donor}");
+                    assert!(scopes.contains("dungeon"), "{donor}");
+                    assert!(!bundle.workflows.is_empty(), "{donor}");
+                    assert!(!bundle.projections.is_empty(), "{donor}");
+                }
+                _ => unreachable!(),
+            }
+        }
+    }
+
+    #[test]
+    fn donor_matrix_strips_donor_local_ui_fields_from_canonical_bundle() {
+        for donor in DONORS {
+            let input_text = fs::read_to_string(fixture_path(donor)).unwrap();
+            let (_report, _bundle, bundle_text) = migrate_fixture(donor);
+
+            assert!(
+                input_text.contains("donor_") || input_text.contains("\"ui_tab\""),
+                "{donor} fixture should exercise donor-local UI fields"
+            );
+            assert!(!bundle_text.contains("donor_"), "{donor}");
+            assert!(!bundle_text.contains("\"ui_tab\""), "{donor}");
+        }
+    }
+
+    #[test]
+    fn donor_matrix_uses_deterministic_canonical_ids_in_provenance() {
+        for donor in DONORS {
+            let (report, _bundle, _bundle_text) = migrate_fixture(donor);
+            let donor_system = donor_from_str(donor).unwrap();
+            for reference in &report.provenance_refs {
+                let expected_id =
+                    canonical_id(&donor_system, &reference.concept_key, &reference.record_key);
+                assert_eq!(reference.donor, *donor);
+                assert_eq!(
+                    reference.canonical_id.as_deref(),
+                    Some(expected_id.as_str()),
+                    "{donor}:{}:{}",
+                    reference.concept_key,
+                    reference.record_key
+                );
+            }
+        }
     }
 }

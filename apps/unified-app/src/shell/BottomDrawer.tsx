@@ -1,7 +1,11 @@
+import { useLocation } from "react-router-dom";
+import { resolveRouteContext } from "@/taxonomy/config";
 import { useAppStore } from "@/state/app-store";
 
 export function BottomDrawer() {
   const { state } = useAppStore();
+  const location = useLocation();
+  const routeContext = resolveRouteContext(location.pathname);
 
   return (
     <div className="panel-body stack">
@@ -11,8 +15,8 @@ export function BottomDrawer() {
       </div>
       <div className="status-grid">
         <div className="status-row">
-          <span>Mode</span>
-          <span>{state.overlay.mode}</span>
+          <span>Taxonomy</span>
+          <span>{routeContext.family}</span>
         </div>
         <div className="status-row">
           <span>Selected world</span>
@@ -21,6 +25,10 @@ export function BottomDrawer() {
         <div className="status-row">
           <span>Selected entity</span>
           <span>{state.overlay.selectedEntityId ?? "none"}</span>
+        </div>
+        <div className="status-row">
+          <span>Active modal</span>
+          <span>{state.overlay.activeModal ?? "none"}</span>
         </div>
       </div>
     </div>

@@ -70,3 +70,12 @@ The migration backbone must also prove:
 - rollback/quarantine report generation
 - canonical bundle validation after migration
 - migration report schema completeness
+
+## Phase 6 Release Hardening
+
+Release hardening reuses the adapter and migration surfaces to prove:
+
+- Phase 2 snapshot hashes still match after refresh
+- Phase 4 replay remains deterministic
+- release documentation stays aligned with the shipped taxonomy
+- no donor runtime imports reappear in the app surface

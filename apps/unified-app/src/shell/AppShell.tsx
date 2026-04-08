@@ -1,3 +1,4 @@
+import { ModalHost } from "@/components/ModalHost";
 import type { ReactNode } from "react";
 import { BottomDrawer } from "@/shell/BottomDrawer";
 import { ContextBar } from "@/shell/ContextBar";
@@ -25,6 +26,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <BottomDrawer />
         </footer>
       ) : null}
+      <ModalHost />
     </div>
   );
 }

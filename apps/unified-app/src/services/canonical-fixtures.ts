@@ -13,7 +13,7 @@ export const SAMPLE_BUNDLE: CanonicalBundle = {
       metadata: {
         label: "Sample City",
         summary: "A minimal world entity used to exercise the scaffold.",
-        tags: ["city", "sample", "phase-3"]
+        tags: ["city", "sample", "role", "task", "flow"]
       },
       payload: {
         description: "A hand-authored sample entity for the unified app scaffold."
@@ -77,7 +77,7 @@ export const SAMPLE_BUNDLE: CanonicalBundle = {
     metadata: {
       label: "Sample World",
       summary: "Canonical scaffold world for Phase 3.",
-      tags: ["sample", "guided", "studio", "architect"]
+      tags: ["sample", "world", "story", "schema"]
     },
     payload: {
       description: "Phase 3 scaffold world."

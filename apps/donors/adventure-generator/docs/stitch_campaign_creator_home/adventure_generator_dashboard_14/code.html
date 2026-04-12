@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Dungeon Map Creator</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .grid-overlay {
+                background-image: 
+                    linear-gradient(to right, rgba(58, 45, 29, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(58, 45, 29, 0.05) 1px, transparent 1px);
+                background-size: 40px 40px;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 5;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 8px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .node-ink {
+                filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30 h-screen overflow-hidden">
+<div class="flex h-full">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-[#f5e8c3]">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-[#922610] text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">fort</span>
+<span class="font-header tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-header tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="font-header tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQI93RoqLtj3lgNwqqP4w5n69pvTSZlJcoZrFXbtKqO2FkaJdi-BhyEEYNZHUkCWYZcAgvT7DHiX-BHjgFYc5h6L73QwVUOWGSoP8OtwZN3Cey8DH6Hpz6IoV3dWVyg5nBCJyQ1cyZU_ShaXRiAIQ9ddT3b-B8TDDPbJaOLfj-p4mqGdqH78eMZCzWky1PtLjuXeGxWIszUJlHqevpuF0Qv4zA7qvhnLwbmGNcRNVAFFny_3Y5xmGUgvq5RgZNWPDpSUVhzOk2');"></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-[#922610] hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">gavel</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col parchment-texture relative grit-overlay overflow-hidden">
+<header class="z-10 px-8 py-4 bg-white/10 backdrop-blur-sm border-b-2 border-medium-brown/30 flex justify-between items-center">
+<h2 class="font-header text-3xl text-ink-dark">Dungeon Map Creator: <span class="text-chronicle-red opacity-80">Node-Link Editor</span></h2>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1 bg-white/20 border border-medium-brown/30 rounded">
+<span class="font-body text-xs font-bold uppercase tracking-wider opacity-60">Status:</span>
+<span class="font-header text-ink-dark text-sm">SAVED TO SCROLL</span>
+</div>
+</div>
+</header>
+<div class="z-10 px-8 py-2 bg-medium-brown/10 border-b border-medium-brown/20 flex gap-8 items-center">
+<div class="flex items-center gap-4">
+<label class="font-body text-xs font-bold uppercase tracking-widest opacity-60">Scale</label>
+<select class="bg-transparent border-b border-medium-brown text-sm font-body focus:ring-0 focus:border-chronicle-red py-0 px-1">
+<option>1 inch = 5 feet</option>
+<option>1 inch = 10 feet</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<label class="font-body text-xs font-bold uppercase tracking-widest opacity-60">Grid</label>
+<button class="size-6 bg-medium-brown/20 rounded flex items-center justify-center border border-medium-brown/40">
+<span class="material-symbols-outlined text-sm">grid_4x4</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<label class="font-body text-xs font-bold uppercase tracking-widest opacity-60">Layers</label>
+<button class="px-2 py-1 bg-medium-brown/20 rounded flex items-center gap-2 border border-medium-brown/40 text-xs font-body">
+<span>Base Blueprint</span>
+<span class="material-symbols-outlined text-sm">layers</span>
+</button>
+</div>
+<div class="flex items-center gap-2 ml-auto">
+<label class="font-body text-xs font-bold uppercase tracking-widest opacity-60">Seed</label>
+<input class="bg-transparent border-b border-medium-brown text-sm font-body focus:ring-0 focus:border-chronicle-red py-0 px-1 w-32 uppercase tracking-tighter" type="text" value="FOUNDRY-77-X"/>
+</div>
+</div>
+<div class="flex-1 relative flex">
+<div class="absolute left-6 top-6 z-20 w-44">
+<div class="bg-[#fef9eb] border border-medium-brown rounded shadow-xl overflow-hidden">
+<div class="bg-chronicle-red p-2">
+<h3 class="font-header text-white text-center text-sm tracking-widest">TOOLS</h3>
+</div>
+<div class="p-2 grid grid-cols-1 gap-1">
+<button class="flex items-center gap-3 px-3 py-2 bg-medium-brown/10 hover:bg-medium-brown/20 rounded transition-colors group">
+<span class="material-symbols-outlined text-sm text-medium-brown group-hover:text-ink-dark">back_hand</span>
+<span class="font-body text-xs font-bold uppercase tracking-tighter">Select</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-medium-brown/10 rounded transition-colors group">
+<span class="material-symbols-outlined text-sm text-medium-brown group-hover:text-ink-dark">add_circle</span>
+<span class="font-body text-xs font-bold uppercase tracking-tighter">Room</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-medium-brown/10 rounded transition-colors group">
+<span class="material-symbols-outlined text-sm text-medium-brown group-hover:text-ink-dark">horizontal_rule</span>
+<span class="font-body text-xs font-bold uppercase tracking-tighter">Link</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-medium-brown/10 rounded transition-colors group">
+<span class="material-symbols-outlined text-sm text-medium-brown group-hover:text-ink-dark">loop</span>
+<span class="font-body text-xs font-bold uppercase tracking-tighter">Xander Loop</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-medium-brown/10 rounded transition-colors group">
+<span class="material-symbols-outlined text-sm text-medium-brown group-hover:text-ink-dark">token</span>
+<span class="font-body text-xs font-bold uppercase tracking-tighter">Legend Sym</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex-1 grid-overlay relative cursor-crosshair">
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none">
+<h2 class="font-header text-[12rem] text-ink-dark">THE SUNKEN FOUNDRY</h2>
+</div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-80">
+<line stroke="#3a2d1d" stroke-dasharray="8 4" stroke-width="3" x1="400" x2="600" y1="300" y2="300"></line>
+<line stroke="#3a2d1d" stroke-width="4" x1="600" x2="800" y1="300" y2="200"></line>
+<line stroke="#3a2d1d" stroke-width="4" x1="600" x2="800" y1="300" y2="400"></line>
+<line stroke="#3a2d1d" stroke-width="2" x1="800" x2="1000" y1="200" y2="200"></line>
+</svg>
+<div class="absolute left-[370px] top-[270px] w-16 h-16 rounded-full border-4 border-ink-dark flex items-center justify-center bg-white/20 shadow-lg group hover:scale-110 transition-transform cursor-pointer">
+<span class="font-header text-2xl font-bold">1</span>
+<div class="absolute -top-10 bg-chronicle-red text-white px-2 py-0.5 rounded text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">ENTRY</div>
+</div>
+<div class="absolute left-[560px] top-[260px] w-20 h-20 rounded-full border-[6px] border-chronicle-red flex items-center justify-center bg-white shadow-[0_0_20px_rgba(146,38,16,0.4)] cursor-pointer">
+<span class="font-header text-3xl font-bold text-chronicle-red">2</span>
+<div class="absolute -right-4 top-0 size-8 bg-[#fef9eb] border-2 border-ink-dark flex items-center justify-center font-header font-bold text-sm rounded shadow-md">[D]</div>
+<div class="absolute -right-4 bottom-0 size-8 bg-[#fef9eb] border-2 border-chronicle-red flex items-center justify-center font-header font-bold text-sm rounded shadow-md text-chronicle-red">[T]</div>
+</div>
+<div class="absolute left-[770px] top-[170px] w-16 h-16 rounded-full border-4 border-ink-dark flex items-center justify-center bg-white/20 cursor-pointer">
+<span class="font-header text-2xl font-bold">3</span>
+<div class="absolute -top-6 -right-6 size-8 bg-[#fef9eb] border-2 border-blue-800 flex items-center justify-center font-header font-bold text-lg rounded-sm shadow-md text-blue-800 font-bold">[!]</div>
+</div>
+<div class="absolute left-[770px] top-[370px] w-16 h-16 rounded-full border-4 border-ink-dark flex items-center justify-center bg-white/20 cursor-pointer">
+<span class="font-header text-2xl font-bold">4</span>
+</div>
+<div class="absolute left-[970px] top-[170px] w-14 h-14 rounded-full border-4 border-ink-dark flex items-center justify-center bg-white/20 cursor-pointer">
+<span class="font-header text-xl font-bold">5</span>
+</div>
+</div>
+</div>
+<div class="h-64 z-10 grid grid-cols-2 gap-0 border-t-2 border-medium-brown/40 bg-white/5 backdrop-blur-md">
+<div class="border-r border-medium-brown/20 p-6 overflow-y-auto custom-scrollbar">
+<div class="flex items-center gap-4 mb-4">
+<h3 class="font-header text-xl text-ink-dark tracking-widest uppercase">LEGEND</h3>
+<div class="h-px flex-1 bg-medium-brown/20"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-[#fef9eb] border-2 border-ink-dark flex items-center justify-center font-header font-bold text-xs rounded">[D]</div>
+<span class="font-body text-xs font-bold uppercase opacity-80">Reinforced Door</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-8 bg-[#fef9eb] border-2 border-chronicle-red flex items-center justify-center font-header font-bold text-xs text-chronicle-red rounded">[T]</div>
+<span class="font-body text-xs font-bold uppercase opacity-80">Active Trap</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-8 bg-[#fef9eb] border-2 border-blue-800 flex items-center justify-center font-header font-bold text-sm text-blue-800 rounded">[!]</div>
+<span class="font-body text-xs font-bold uppercase opacity-80">Secret Pass</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-8 bg-[#fef9eb] border-2 border-stone-500 border-dashed flex items-center justify-center font-header font-bold text-xs text-stone-500 rounded">...</div>
+<span class="font-body text-xs font-bold uppercase opacity-80">Incomplete</span>
+</div>
+</div>
+</div>
+<div class="p-6 overflow-y-auto custom-scrollbar bg-black/5">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-header text-xl text-chronicle-red tracking-widest uppercase">PROPERTIES</h3>
+<span class="font-header text-sm px-2 py-0.5 bg-chronicle-red text-white rounded">ROOM 2</span>
+</div>
+<div class="space-y-4">
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] font-bold tracking-[0.2em] text-medium-brown">NAME</label>
+<input class="bg-transparent border-b border-medium-brown/40 text-sm font-body focus:ring-0 focus:border-chronicle-red py-1 px-0" type="text" value="Intersection Hall"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] font-bold tracking-[0.2em] text-medium-brown">SHAPE</label>
+<select class="bg-transparent border-b border-medium-brown/40 text-sm font-body focus:ring-0 focus:border-chronicle-red py-1 px-0">
+<option>Circular Hub</option>
+<option>Square Hall</option>
+<option>Irregular Cave</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] font-bold tracking-[0.2em] text-medium-brown">SIZE</label>
+<input class="bg-transparent border-b border-medium-brown/40 text-sm font-body focus:ring-0 focus:border-chronicle-red py-1 px-0" type="text" value="30ft Rad."/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] font-bold tracking-[0.2em] text-medium-brown">FLOW</label>
+<input class="bg-transparent border-b border-medium-brown/40 text-sm font-body focus:ring-0 focus:border-chronicle-red py-1 px-0" type="text" value="Bottleneck"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] font-bold tracking-[0.2em] text-medium-brown">STORYTELLER</label>
+<span class="text-[10px] font-bold text-chronicle-red uppercase py-1 border-b border-chronicle-red/20">Enabled</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

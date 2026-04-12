@@ -1,0 +1,26 @@
+id: dawn-of-worlds
+name: Dawn of Worlds
+version: 0.1.0
+source:
+  repo: local://dawn-of-worlds
+  commit: workspace-local
+  path: src
+source_kind: typescript
+default_promotion_class: donor_local
+snapshot:
+  root: adapters/dawn-of-worlds/source-snapshot
+  fingerprint: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  file_count: 0
+included_paths:
+- schemas
+- src
+excluded_paths:
+- tests
+concepts:
+- domain-schema
+- workflow-schema
+mappings:
+- adapters/dawn-of-worlds/mappings/concept-map.yaml
+provenance:
+  generated_at: '2026-04-08T00:00:00Z'
+  generated_by: copilot

@@ -1,39 +1,18 @@
 # Donor Characterization Matrix
 
-Every donor uses a resolved characterization methodology. There are no runtime branches in this phase.
+Every donor has a frozen characterization baseline before conformance runs.
 
-| Donor | Class | Methodology | Basis | Source | Baseline artifact root | Gate meaning |
+| Donor | Class | Methodology | Basis | Source | Baseline artifact root | Parity target |
 |---|---|---|---|---|---|---|
-| Mythforge | app donor | behavioral capture | captured | live donor source and tests | `world-model/tests/characterization/mythforge/captured/` | Coverage means captured donor routes, panels, controls, and states exist. |
-| Adventure Generator | fragment donor | intent reconstruction | reconstructed | surviving app residue plus workflow semantics | `world-model/tests/characterization/adventure-generator/captured/` | Coverage means the reconstructed workflow baseline is complete enough to drive rehost parity. |
-| Orbis | semantic-only donor | designed intent authoring | designed | adapter snapshot plus simulation semantics | `world-model/tests/characterization/orbis/captured/` | Coverage means the designed simulation baseline is explicit, frozen, and testable. |
+| Mythforge | app donor | behavioral capture | captured | runnable donor app | `world-model/tests/characterization/mythforge/captured/` | exact + adapted |
+| Orbis | app donor | behavioral capture | captured | runnable donor source root | `world-model/tests/characterization/orbis/captured/` | exact + adapted |
+| Adventure Generator | app donor | behavioral capture | captured | runnable donor source root | `world-model/tests/characterization/adventure-generator/captured/` | exact + adapted |
+| Mappa Imperium | app donor | behavioral capture | captured | runnable donor source root | `world-model/tests/characterization/mappa-imperium/captured/` | exact + adapted |
+| Dawn of Worlds | app donor | behavioral capture | captured | runnable donor source root | `world-model/tests/characterization/dawn-of-worlds/captured/` | exact + adapted |
+| Faction Image | app donor | behavioral capture | captured | runnable donor source root | `world-model/tests/characterization/faction-image/captured/` | exact + adapted |
+| Watabou City | clean-room app donor | clean-room app capture | clean-room implementation | clean-room app source | `world-model/tests/characterization/watabou-city/captured/` | exact clean-room rehost |
+| Encounter Balancer | scaffold-copy donor | representative baseline + clone-equivalence | reconstructed | scaffold-copy roots | `world-model/tests/characterization/encounter-balancer/captured/` | adapted + waived |
 
-## Mythforge characterization
+## Coverage rule
 
-Required captured artifacts:
-
-- route inventory
-- panel inventory
-- primary controls
-- empty/loading/error states
-- keyboard and modal behavior
-
-## Adventure Generator characterization
-
-Required reconstructed artifacts:
-
-- workflow definitions
-- step sequences
-- checkpoint semantics
-- generated-output visibility rules
-- location/adventure linkage expectations
-
-## Orbis characterization
-
-Required designed artifacts:
-
-- simulation profile surface
-- enabled-domain toggle surface
-- snapshot inspection surface
-- event-stream inspection surface
-- designed control and state model for simulation review
+Characterization coverage is complete only when route map, panel inventory, controls, and visible states are present for each donor row above.

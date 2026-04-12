@@ -1,10 +1,11 @@
 {
   "donor": "orbis",
   "label": "Orbis",
-  "classification": "semantic-only donor",
-  "methodology": "designed intent authoring",
-  "basis": "designed",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
   "routes": [
+    "/",
     "/donor/orbis"
   ]
 }

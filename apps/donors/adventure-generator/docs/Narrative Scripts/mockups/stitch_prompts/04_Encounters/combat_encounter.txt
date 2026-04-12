@@ -1,0 +1,100 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Combat Encounter".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Tactical Encounter & Combat Studio
+
+```text
++--------------------------------------------------------------------------------+
+|  [Tactical Encounter & Combat Studio]                                 [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ COMBAT ARENA ] [ BALANCER ] [ TRAP MATRIX ] [ SOCIAL HUB ] [ SCENE FLOW ]   |
++--------------------------------------------------------------------------------+
+|  COMBAT ARENA: [ Icy Canyon ]          |  XP BALANCER (Rank: SILVER)           |
+|  Hazard: [ Sinking Ice ] DC: [ 15 ]    |  Player Lvl: [ 4 ]  Count: [ 4 ]      |
+|  Effect: [ 2d10 Cold + Restricted ]    |  Enemies: [ 2 Frost Wraiths ]         |
+|  [Trigger: Every 3 rounds]             |  Status: [ MEDIUM ] (85% of Cap)      |
++----------------------------------------+---------------------------------------+
+|  TRAP MATRIX                           |  SCENE FLOW (Adventure Stage: 2/5)    |
+|  [3] Clue: [ Faint clicking ]          |  [x] Intro  [>] Challenges  [ ] Twist  |
+|  [2] Trigger: [ Pressure plate ]       |  Current View: "The Crossing"         |
+|  [5] Danger: [ Volley of arrows ]      |  Action: [ Skill Challenge: DC 14 ]    |
+|  [1] Obscure: [ Hidden in shadow ]     |  XP Reward: [ 450 XP ]                |
++----------------------------------------+---------------------------------------+
+|  SOCIAL HUB (Event: The Scribe's Gala)                                         |
+|  Guest: [ Silas Vane ] Rel: [ Rival ]  Topic: [ The Exiled Verb ]              |
++--------------------------------------------------------------------------------+
+|  [Generate Statblocks] [Export Scene JSON] [Simulate Tactics]          [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Tactical Encounter & Combat Studio
+
+## Component Architecture
+- **Geographical Arena Editor:** A specialized UI based on `combat_encounter - V2.txt` that forces the GM to define "Physical Features" (Lava, Ice) alongside their "Mechanical Impacts." It separates "Starting Conditions" from "Dynamic Changes."
+- **Threshold-Driven Balancer:** Implements the `combat-encounter-balancer.txt` logic, allowing GMs to "Review and Playtest" virtually by comparing total XP (with multipliers) to Party XP Thresholds.
+- **Recursive Trap Generator:** A 6x6 matrix tool based on `trap_prep.txt`. It generates 3 unique traps using the specified "Clue-Trigger-Danger-Obscure" logic, ensuring "Fairness" (Not instantly lethal).
+- **Urban & Social Flow Manager:** A dual-purpose module.
+    - **Urban Crawl:** Keying districts to thematic "Layers" (Vampires, Heists) as per `urban_crawl.txt`.
+    - **Social Event:** Managing guest lists and "Topic Tracks" as per `social_event.txt`.
+
+## Interaction Logic
+- **Tactical Synergy:** While in the Arena Editor, selecting an "Enemy Type" triggers the "Detailed Tactics" engine, which suggests how that creature would exploit the current environment (e.g., throwing boulders from a specific cliff).
+- **Real-Time Difficulty Adjustment:** Moving a slider for "Difficulty Rank" (Easy to Deadly) automatically suggests adding or removing monster minions (via `Reference_CreatureRoles_v1.txt`) to hit the XP target.
+- **Scene Continuity Guard:** The "Scene Flow" tool monitors the adventure stages (`RPGAdventure_SceneCrafting_v1.txt`), ensuring every scene contributes "Cohesively to an overarching storyline."
+
+## Visual Design
+- **Combat-Ready UI:** High-contrast layout with dark backgrounds and vibrant status indicators (Red for Hazard, Blue for Buff, Yellow for Trigger).
+- **Tactical Icons:** Small icons representing creature roles (Ambusher, Artillery, Brute, Solo) for quick visual scanning of a battle's composition.
+- **Flow State Visualization:** The Scene Flow tool uses a "Node-and-Line" diagram to show the linear or branching paths of the adventure stages.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: The Frozen Chasm Encounter
+
+### **1. Combat Arena: The Weeping Gorge**
+- **Location:** An icy canyon where walls are constantly shedding slabs of frost.
+- **Physical Features:** Slippery Ledge (DC 13 Acrobatics), Icy Stream (Difficult Terrain).
+- **Environmental Hazard:** Falling Ice Slabs (Erupt every 3 rounds).
+    - **Trigger:** Roll a d6; on a 5-6, the ledge on the East side collapses.
+    - **Effect:** 3d6 bludgeoning damage, DC 14 Dex save for half.
+- **Detailed Tactics:** Frost Wraiths (Artillery) stay 30ft away, firing 'Soul Bolts.' They move *behind* the Falling Ice Slab triggers, luring players into the danger zone.
+
+---
+
+### **2. Encounter Balance (Silver Rank)**
+- **Party:** 4 players at level 4.
+- **Thresholds:** Easy (500), Medium (1000), Hard (1500).
+- **Enemies:** 2x Frost Wraiths (450 XP each) + 2x Ice Mephits (100 XP each).
+- **Multiplier:** x2 (Small Group).
+- **Total Adjusted XP:** 2,200 XP.
+- **Status:** **HARD** (Pushing the limits for a Silver rank session).
+
+---
+
+### **3. Generated Trap: The Clicking Floor**
+- **Clue:** A rhythmic, faint clicking sound from beneath the tiles.
+- **Trigger:** Heavy pressure (Placing a pack or stepping firmly on a primary tile).
+- **Danger:** Volley of poisoned crossbow bolts (2d8 piercing + poisoned condition).
+- **Obscure:** The trigger tile is textured exactly like the surrounding slate.
+- **GM Note:** Give the players one "Stage" of reaction: "The floor clicks and you feel the tile sink 2 inches. What do you do?"
+
+---
+
+### **4. Urban Crawl Layer: The Scribe's District**
+- **Layer:** 'The Exiled Verb' Mystery.
+- **Investigation Action:** A DC 14 Investigation check reveals that Theron the Inky was seen meeting a hooded figure at the 'Ink & Talon' tavern.
+- **Triggered Event:** If the players enter the Shadow Market, they are immediately approached by a collection agent of the Faction 'Copper-Vane.'
+

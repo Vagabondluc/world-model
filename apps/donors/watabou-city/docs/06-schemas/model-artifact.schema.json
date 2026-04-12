@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "clean-room/model-artifact.schema.json",
+  "title": "ModelArtifact",
+  "type": "object",
+  "required": ["boundary", "gates", "roads", "districts", "parcels", "buildings", "rural", "labels", "landmarks", "bridges", "parkFeatures"],
+  "properties": {
+    "boundary": { "$ref": "#/$defs/polygon" },
+    "gates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/point" }
+    },
+    "roads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "path"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "enum": ["trunk", "secondary", "local"] },
+          "path": { "$ref": "#/$defs/polyline" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "districts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "polygon"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "polygon": { "$ref": "#/$defs/polygon" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "parcels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "polygon"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "polygon": { "$ref": "#/$defs/polygon" },
+          "roadFrontage": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "buildings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "polygon"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "polygon": { "$ref": "#/$defs/polygon" },
+          "parcelId": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "rural": {
+      "type": "object",
+      "required": ["farms", "trees"],
+      "properties": {
+        "farms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["polygon", "hatchAngle", "hatchSpacing"],
+            "properties": {
+              "polygon": { "$ref": "#/$defs/polygon" },
+              "hatchAngle": { "type": "number" },
+              "hatchSpacing": { "type": "number" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "trees": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "x", "y"],
+        "properties": {
+          "text": { "type": "string", "minLength": 1 },
+          "x": { "type": "number" },
+          "y": { "type": "number" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "landmarks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "poiId", "parcelId", "kind", "polygon"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "poiId": { "type": "integer", "minimum": 1 },
+          "parcelId": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "enum": ["fortress", "landmark"] },
+          "polygon": { "$ref": "#/$defs/polygon" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "bridges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "point", "angle", "kind", "roadEdgeId", "riverSegmentIndex"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "point": { "$ref": "#/$defs/point" },
+          "angle": { "type": "number" },
+          "kind": { "type": "string", "enum": ["trunk", "secondary", "local"] },
+          "roadEdgeId": { "type": "string", "minLength": 1 },
+          "riverSegmentIndex": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "parkFeatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "parcelId", "featureType", "polygon"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "parcelId": { "type": "string", "minLength": 1 },
+          "featureType": { "type": "string", "enum": ["green", "plaza", "path", "node", "quay"] },
+          "polygon": { "$ref": "#/$defs/polygon" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "polyline": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/point" }
+    },
+    "polygon": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "$ref": "#/$defs/point" }
+    }
+  },
+  "additionalProperties": false
+}

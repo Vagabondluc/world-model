@@ -1,0 +1,10 @@
+{
+  "donor": "encounter-balancer",
+  "label": "Encounter Balancer Scaffold",
+  "classification": "scaffold-copy donor",
+  "methodology": "representative baseline + clone-equivalence",
+  "basis": "reconstructed",
+  "routes": [
+    "/donor/encounter-balancer"
+  ]
+}

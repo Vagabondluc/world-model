@@ -45,7 +45,21 @@
         {
           "enum": [
             "Genesis",
-            "Climate"
+            "Climate",
+            "Topography",
+            "Hydrology",
+            "Ecology",
+            "Population",
+            "Economy",
+            "Culture",
+            "Conflict",
+            "Magic",
+            "Resources",
+            "Infrastructure",
+            "Transportation",
+            "Governance",
+            "Technology",
+            "Demographics"
           ],
           "type": "string"
         },
@@ -104,6 +118,11 @@
             "Mythforge",
             "Orbis",
             "AdventureGenerator",
+            "MappaImperium",
+            "DawnOfWorlds",
+            "FactionImage",
+            "WatabouCity",
+            "EncounterBalancerScaffold",
             "Neutral"
           ],
           "type": "string"

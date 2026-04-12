@@ -1,0 +1,78 @@
+# LLM Guidelines for Transforming Heist Prep into a Runnable Scenario
+
+As an LLM, your task is to take the heist preparation document (heist_prep) provided by the user and transform it into a comprehensive, ready-to-run heist scenario. Your role is to expand upon the preparation details, fill in gaps, and create a dynamic, playable heist adventure.
+
+## Input
+- Expect a heist_prep document as input, containing initial planning and setup for a heist scenario.
+
+## Output
+Generate a file named "runnable_heist_scenario.md" with the following structure:
+
+1. Scenario Overview
+2. Detailed Location Description
+3. Security Measures in Action
+4. Objective Specifics
+5. NPC and Adversary Profiles
+6. Player Options and Resources
+7. Running the Heist
+8. Dynamic Elements
+9. Aftermath and Consequences
+
+## Section Details
+
+For each section, follow these guidelines to transform the heist_prep input into a fully realized scenario:
+
+### 1. Scenario Overview
+- Expand the heist objective into a compelling narrative hook.
+- Develop the context and background of the heist.
+- Create a brief timeline of events leading up to the heist opportunity.
+
+### 2. Detailed Location Description
+- Use the blueprint information to craft a vivid, atmospheric description of the location.
+- Develop each area of the location, adding sensory details and points of interest.
+- Create a table of key locations, their functions, and any special features.
+
+### 3. Security Measures in Action
+- Transform the listed security measures into dynamic, interactive elements.
+- Develop specific behaviors and routines for guards and security systems.
+- Create a timeline or flowchart of security operations throughout a typical day/night.
+
+### 4. Objective Specifics
+- Flesh out the primary and secondary objectives with rich detail.
+- Develop any lore or background for the target items/information.
+- Create specific challenges associated with each objective (e.g., how to safely extract a fragile artifact).
+
+### 5. NPC and Adversary Profiles
+- Develop full profiles for key NPCs mentioned in the prep document.
+- Create additional minor NPCs to populate the location.
+- Design stat blocks or skill lists for adversaries, tailored to the game system being used.
+
+### 6. Player Options and Resources
+- Expand on the team composition suggestions to create specific role descriptions.
+- Develop a list of specialized equipment or skills that would be useful for the heist.
+- Create a menu of potential preparatory actions players could take, with associated benefits.
+
+### 7. Running the Heist
+- Develop a step-by-step guide for GMs to facilitate each phase of the heist.
+- Create tables of potential outcomes for common player actions.
+- Design a timing system or tension meter to keep the heist exciting.
+
+### 8. Dynamic Elements
+- Develop a list of random events or complications that could occur during the heist.
+- Create a set of "suspicion" levels with associated consequences as the heist progresses.
+- Design a few major plot twists that could dramatically alter the course of the heist.
+
+### 9. Aftermath and Consequences
+- Develop a range of possible endings based on player actions and success levels.
+- Create tables of potential rewards and complications for post-heist resolution.
+- Design hooks for future adventures based on the outcome of the heist.
+
+## Additional Instructions
+
+1. Always refer back to the heist_prep document to ensure consistency with the initial concept.
+2. Where the prep document lacks detail, use creative liberty to fill in gaps in a way that enhances the scenario.
+3. Maintain a consistent tone and style throughout the document.
+4. Use markdown formatting for clarity and organization.
+5. Include GM tips and alternate suggestions throughout to increase the scenario's flexibility.
+
+Remember, your task is to transform the initial prep into a fully realized, ready-to-run heist scenario. Focus on expanding, detailing, and operationalizing the information provided in the heist_prep document.

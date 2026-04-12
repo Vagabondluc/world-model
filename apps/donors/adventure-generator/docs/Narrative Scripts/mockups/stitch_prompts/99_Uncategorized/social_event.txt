@@ -1,0 +1,45 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Social Event".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Social Event Hub (social_event)
+
+```text
++--------------------------------------------------------------------------------+
+|  [Social Hub: The Grand Soiree]                                       [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Location: [ The Royal Conservatory ]  |  Current Event: [ 3. The Grand Toast ] |
++--------------------------------------------------------------------------------+
+|  ZONES OF ACTIVITY                       |  GUEST LIST (Intrigue Grid)         |
+|  [ ] MAIN HALL: (80% Capacity)           |  - [X] Elara Thorne [Neutral] [Clue] |
+|  [X] BALCONY:   (2 NPCs)                 |  - [ ] Count Vax    [Wary]    [Hook] |
+|  [ ] THE VAULT: (Secret Meeting)         |  - [ ] Mirt         [Friendly][Lore] |
+|                                          |                                     |
+|  [Shift Groups] [Trigger Next Event]     |  [View Universal NPC Template]      |
++------------------------------------------+-------------------------------------+
+|  TOPICS OF CONVERSATION                  |  EVENT SEQUENCE TRACK               |
+|  - Topic A: The Missing Signet           |  [x] 1. Arrival & Entry             |
+|  - Topic B: The Rising Taxes             |  [x] 2. Rumors of War               |
+|  - Topic C: [ Add Custom Gossip ]        |  [>] 3. THE GRAND TOAST (Active)     |
+|                                          |  [ ] 4. The Sabotaged Lights        |
++------------------------------------------+-------------------------------------+
+|  [Export Guest Handout] [Log Clue Log] [End Social Session]           [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+[MISSING FILE: docs\mockups\ui-docs\social_event-ui.md]
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+[MISSING FILE: docs\mockups\samples\social_event-sample.md]

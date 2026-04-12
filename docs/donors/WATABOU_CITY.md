@@ -6,28 +6,26 @@
 |---|---|
 | Donor Name | Watabou City Generator |
 | Internal ID | `watabou-city` (provisional) |
-| Class | **source-fragment (GPL)** |
+| Class | **clean-room app donor** |
 | Adapter ID | none — not registered |
 | Manifest | not yet created |
-| Source Root | `to be merged/watabou-city-clean-room/gpl_source/` |
-| Source Kind | Haxe (OpenFL + Lime) |
-| License | GPL |
+| Source Root | `to be merged/watabou-city-clean-room/2nd/` |
+| Source Kind | React/Vite clean-room implementation |
+| License | clean-room implementation; GPL reference tree is not the Phase 9 rehost source |
 | Original Author | Watabou (Peter Dmitriev) |
 | Canonical Lane | procedural-city-layout (candidate) |
-| Phase 7 Methodology | designed intent authoring |
+| Phase 7/9 Methodology | clean-room app characterization and exact rehost parity |
 | Adapter Status | **unregistered** |
 
 ## What It Is
 
-The Watabou Medieval Fantasy City Generator is a procedural city-generation tool originally written by Watabou in Haxe (OpenFL). The GPL source has been placed in this repository as a clean-room reference for algorithm and concept extraction.
+The Watabou Medieval Fantasy City Generator lane now uses the clean-room implementation under `to be merged/watabou-city-clean-room/2nd/` as the Phase 9 UI source. The older GPL reference tree remains historical reference material, not the runtime or rehost source.
+
+**Scope note:** This is a procedural-layout generator that could extend Adventure Generator's `LocationAttachment` with settlement/city topology, similar to how Orbis extends with biosphere simulation. Phase 9 may vendor the clean-room implementation; it must not vendor the GPL reference tree.
 
 The application generates a top-down map of a medieval fantasy city from a seed and a city size. It uses Voronoi partitioning to divide the city into patches (city blocks), assigns ward types to each block, builds walls, gates, roads, and the citadel, and renders the result as a 2D vector graphic.
 
-The react-app subfolder (`watabou-city-clean-room/react-app/`) contains only `dist/` and `node_modules/` — no React source survives.
-
-**GPL constraint:** Because the source is licensed GPL, no code may be incorporated into the `world-model` canonical layer or the final app directly. Only *concept extractions* (data shapes, structural vocabulary, domain terms) are permitted. The GPL license does not restrict documentation of algorithms or data structures; it restricts code copying.
-
-The `docs/` subfolder inside `gpl_source/` contains detailed reverse-engineering documentation produced specifically for this purpose.
+The `2nd/` folder contains the clean-room React/Vite implementation with source, tests, artifacts, and deterministic replay assets. The `gpl_source/` folder is retained only as reference documentation/source material and must not be copied into the Phase 9 rehost.
 
 ## Generation Pipeline (Algorithm Summary)
 
@@ -117,16 +115,16 @@ All candidates require a world-model change + new promoted-schema contracts.
 
 ## What Is Extracted
 
-For a future adapter, suggested approach:
+For the Phase 9 rehost, the clean-room implementation is the source that may be vendored into `world-model`:
 
 | Material | What to Copy |
 |---|---|
-| `gpl_source/docs/` | the reverse-engineering documentation (algorithm + data structure analysis) |
-| `gpl_source/Source/com/watabou/towngenerator/building/` | type/interface analysis (concept extraction only) |
-| `gpl_source/Source/com/watabou/towngenerator/wards/` | ward type enumeration and structure |
-| `gpl_source/Source/com/watabou/geom/` | geometric primitive vocabulary |
+| `2nd/src/` | clean-room React/Vite app code and city-layout implementation |
+| `2nd/docs/06-schemas/` | schema assets required by the clean-room runtime |
+| `2nd/tests/propertyTestGenerator.ts` | deterministic/property-test support used by the clean-room implementation |
+| `gpl_source/docs/` | historical algorithm notes only; useful for concept review, not runtime code |
 
-**Do not copy:** any `.hx` source files directly into the app codebase. Concept extraction only.
+**Do not copy:** any GPL `.hx` source files directly into the app codebase. The Phase 9 rehost source is the clean-room `2nd/` implementation.
 
 ## What Is Not Extracted
 
@@ -134,21 +132,21 @@ For a future adapter, suggested approach:
 |---|---|
 | All `.hx` source files (except as reference) | GPL license — no code copy |
 | `react-app/dist/` | compiled artifact, no source |
-| `Assets/` | bitmap assets (font only) |
-| Rendering / view code | donor-specific UI layer; not canonical |
+| GPL `Assets/` | GPL reference material; not the clean-room rehost source |
+| Clean-room editor/session UI state | donor-local transient state; must not persist into canonical bundles |
 
 ## UI Characterization Methodology
 
-**Designed intent authoring.** There is no TypeScript/React source to run. Phase 7 characterization:
+**Clean-room app characterization.** Phase 7/9 characterization now uses the runnable clean-room implementation under `to be merged/watabou-city-clean-room/2nd/`:
 
-1. Consult the `gpl_source/docs/` reverse-engineering documentation
-2. Consult the original donor app online (Watabou's fantasy city generator) for behavioral reference
-3. Design the canonical city-layout surface authoritatively, using ward types and generation parameters as the structural vocabulary
-4. All Phase 7 requirements carry `basis: designed`
+1. Capture the clean-room route, DOM shape, accessibility tree, keyboard/focus behavior, and core controls.
+2. Compare the vendored `world-model/apps/donors/watabou-city/` route against that clean-room baseline.
+3. Treat GPL reference material as historical concept support only, not as runtime or rehost source.
+4. Use `basis: clean-room-captured` for UI requirements and `basis: reference-note` only for non-runtime GPL concept notes.
 
 Pre-registered waivers:
-- **WC-W01**: Source is GPL and cannot be run as an integrated part of the app. Behavioral capture is not applicable. Mitigation: use the live online version of the generator for behavioral reference only; all canonical decisions are designed intent.
-- **WC-W02**: No React source survives in `react-app/`. Mitigation: city-layout surface design must start from scratch using the algorithm documentation as domain reference.
+- **WC-W01**: GPL reference source is not the Phase 9 runtime source. Mitigation: vendor only the clean-room `2nd/` implementation.
+- **WC-W02**: GPL `react-app/dist/` remains excluded because it is a compiled/reference artifact. Mitigation: use the clean-room React/Vite source for UI parity.
 
 ## Relation to Other Donors
 
@@ -158,16 +156,16 @@ Pre-registered waivers:
 
 ## Registration Steps Required
 
-1. Confirm GPL allows concept extraction (it does — GPL restricts code copying, not documentation of data structures)
-2. Create `adapters/watabou-city/manifest.yaml` with `source_kind: haxe_reference` and appropriate included paths
-3. Copy selected algorithm documentation into `adapters/watabou-city/source-snapshot/`
-4. Design `CityLayoutAttachment` and `WardType` contracts
-5. Promote contracts into `contracts/promoted-schema/watabou-city/`
+1. Register `adapters/watabou-city/manifest.yaml` against the clean-room source snapshot, not the GPL Haxe tree.
+2. Add `CityLayoutAttachment` and `WardType` contracts for canonical folding.
+3. Add projector/action-translator tests that mutate seed, size, generated layout, wards, roads, walls, and diagnostics.
+4. Promote contracts into `contracts/promoted-schema/watabou-city/` once convergence is settled.
+5. Keep GPL reference notes out of runtime vendoring and use them only for concept review.
 
 ## Open Questions
 
 - Should `CityLayoutAttachment` be a canonical record type, or should it always be a sub-structure within `LocationAttachment` when `location_type = city`?
 - Does the six ward-type classification map meaningfully to Mythforge entity types (e.g., `AdministrationWard` → organization entities)?
 - Is the Voronoi-patch structure part of the canonical model, or is it a generation-time artifact that should not be stored?
-- Are there newer versions of the Watabou city generator source with more structural detail than what is in `gpl_source/`?
-- What is the `2nd/` folder in `watabou-city-clean-room/`? Does it contain a second iteration?
+- Which parts of the clean-room diagnostics/export surface should be canonical attachments versus donor-local UI state?
+- What visual threshold should the Playwright nonblank city-render check use before promoting Watabou to `exact-vendored`?

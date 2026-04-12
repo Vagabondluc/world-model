@@ -1,0 +1,44 @@
+Creature_Name Mob
+Swarm of [Original Size] [Creature_Type], Gargantuan
+[Alignment]
+
+Armor Class: [AC from Creature]
+Hit Points: [Base HP] x [Scaling Factor] ([Scaling Factor] x [Hit Die of Creature])
+Speed: [Speed from Creature]
+
+STR: [STR from Creature], DEX: [DEX from Creature], CON: [CON from Creature], INT: [INT from Creature], WIS: [WIS from Creature], CHA: [CHA from Creature]
+
+Damage Immunities: [As per individual creature or modified for swarm]
+Condition Immunities: [As per individual creature or modified for swarm]
+Senses: [Senses from Creature]
+Languages: [Languages from Creature]
+Proficiency Bonus: [Proficiency Bonus from Creature]
+
+Swarm Characteristics:
+The mob can occupy another creature's space and move through any opening large enough for a [Original Size] [Creature_Type]. The mob can't regain hit points or gain temporary hit points.
+
+Size Reduction and Token Dynamics:
+- Gargantuan: [Base HP] x 16
+- Huge: [Base HP] x 9
+- Large: [Base HP] x 4
+- Medium: [Base HP]
+
+For every [Damage Threshold for Token Loss] points of damage, the mob loses tokens, reducing the mob's size and damage output accordingly. Size transitions occur when the mob's hit points fall below the next threshold.
+
+Actions:
+
+- Primary Melee Attack (Group Attack): [Attack Type]: +[To Hit from Creature], reach [as appropriate], multiple targets.
+  - Gargantuan: Hit: [Base Damage] x 4
+  - Huge: Hit: [Base Damage] x 3
+  - Large: Hit: [Base Damage] x 2
+  - Medium: Hit: [Base Damage]
+
+- Primary Ranged Attack (Group Attack converted to Saving Throw):
+  - Gargantuan: [Save DC] = 8 + [Proficiency Bonus] + [Creature's DEX or other relevant modifier], Damage: [Base Ranged Damage] x 4 on a failed save, half on a successful one.
+  - Huge: [Save DC] as above, Damage: [Base Ranged Damage] x 3 on a failed save, half on a successful one.
+  - Large: [Save DC] as above, Damage: [Base Ranged Damage] x 2 on a failed save, half on a successful one.
+
+Challenge Rating (CR):
+Adjust CR based on the difficulty level of the mob and the number of hit points. Use the D&D guidelines to estimate the CR for a mob.
+
+(Note: The CR estimation should be refined based on playtesting and the actual challenge the mob presents during gameplay.)

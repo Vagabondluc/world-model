@@ -1,0 +1,100 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Wilderness Travel Long".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: wilderness_travel_long
+
+```text
++--------------------------------------------------------------------------------+
+|  [Wilderness Master: Chapter Architect]                               [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Chapter: [ The Frozen Waste of Zann ]  [Viper-V7 Engine]    [Save] [Export]   |
++--------------------------------------------------------------------------------+
+|  [ BIOMES ] [ MECHANICS ] [ TABLES ] [ SEQUENCES ] [ FACTIONS ] [ INTEGRATE ]  |
++--------------------------------------------------------------------------------+
+|  ACTIVE SECTION: SEQUENCES (Linked 2d6 Results)                                |
+|  Roll Range: [ 6 - 8 (Common) ]                                                |
+|  Current Mini-Story: [ The Ghost of the Caravan ]                              |
+|                                                                                |
+|  [Scene 1: Approach] -> [Scene 2: Challenge] -> [Scene 3: Climax/Exit]          |
+|  * The Omen.        | * The Ambush.        | * The Revenant's Peace.           |
++--------------------------------------------------------------------------------+
+|  SURVIVAL CHALLENGES                   |  WEATHER CALENDAR (Winter)            |
+|  Condition: [ Extreme Cold ]           |  [ Dec ] [ Jan ] [ Feb ]              |
+|  Save: [ Con DC 14 (Hourly) ]          |  - 1-10: Blizzard                     |
+|  Effect: [ Level 1 Exhaustion ]        |  - 11-20: Clear Skies (Rare)          |
++----------------------------------------+---------------------------------------+
+|  [Generate Appendices] [Validate Scaling] [Simulate 14-Day Trip]       [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: wilderness_travel_long
+
+## Component Architecture
+- **Multi-Tab Workspace Navigation:** Organizes the 14+ sections of the script into logical workstreams:
+    - **Foundation:** Biomes and Factions.
+    - **Systems:** Travel Mechanics, Survival Challenges, and Equipment.
+    - **Content:** Encounter Design and Linked Sequences.
+    - **Appendices:** Maps, Stat Blocks, and Quick References.
+- **Sequence Visualizer (Logic Flow):** A tool specifically for the 6-8 (Common) results. DMs can drag scenes to create "Mini-stories" that unfold over multiple travel days.
+- **Seasonal Weather Matrix:** A calendar-based input where the impacts on navigation, speed, and foraging are automatically calculated based on the current "Month".
+- **Scene Anatomy Editor:** Replaces the standard text box with structured fields for "Entrance," "Challenge," "Reward," and "Exit," forcing the DM to follow the systematic approach.
+- **Scaling Dashboard:** A global slider that adjusts all DCs, CRs, and Hazard Damage across the entire chapter simultaneously.
+
+## Interaction Logic
+- **Mini-Story Linkage:** If a PC handles "Scene 1" of a sequence peacefully, the UI suggests a "Grateful NPC" path for "Scene 2". If they were hostile, it suggests a "Retaliation" path.
+- **Exhaustion Simulation:** A "Simulate Trip" feature that calculates the average number of exhaustion checks and HP lost for a party of [X] level over [Y] days.
+- **Inventory/Gear Impact:** Equipping "Essential Gear" in the UI automatically adds bonuses to the underlying survival roll simulations.
+
+## Visual Design
+- **Encyclopedia Aesthetic:** Designed to look like a professional RPG layout (multi-column text, sidebar boxes, call-to-action alerts).
+- **Functional Density:** High information density, but managed through progressive disclosure (expandable sections).
+- **Status Indicators:** Icons for "Linked Sequence" (Chain-link), "Hazard" (Danger triangle), and "Plot Advancement" (Book icon).
+- **Thematic Consistency:** The UI "Theme" (color palette and icons) shifts when a different Biome is selected (e.g., Ice-blue for Arctic, Sandy-tan for Desert).
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: The Glistening Barrens Expedition
+
+### **1. Expedition State**
+- **Location:** Hex 45-B (The Dune-Sea).
+- **Current Day:** 14 of 30.
+- **Logistics:**
+    - **Supplies:** 15 Days remaining (Consuming 1/day).
+    - **Stamina:** 60% (Weary).
+    - **Morale:** High (The party found an oasis yesterday).
+- **Weather:** Blistering Heat (DC 13 Con saves required or gain Exhaustion).
+
+---
+
+### **2. Recent Journey History**
+- **Day 11:** Heavy sandstorm. Spent the day hunkered down. (Supplies -1, Morale -1).
+- **Day 12:** Discovered a burial mound of an ancient Giant. (Perception check succeeded: Found a +1 Bronze Spear).
+- **Day 13:** Reached the Oasis of Valen. (Water Refilled, Morale +2).
+
+---
+
+### **3. Current Active Encounter: "The Mirage of the Oasis"**
+- **Description:** You see a lush green garden shimmering in the distance. Is it real, or a trick of the light?
+- **Option 1: Investigate (Intelligence/Nature DC 15).** If successful, you realize it's a mirage and avoid the trap. If failed, you waste 4 hours walking in the wrong direction (Stamina -10%).
+- **Option 2: Pathfind (Survival/Perception DC 14).** You ignore the visual and stick to your compass. No risk, but no potential reward.
+
+---
+
+### **4. Resolution & Consequences**
+- **Outcome:** The party successfully navigated Hex 45-B.
+- **XP Gained:** 450 XP (Survival Challenge).
+- **Next Destination:** The Granite Spires (Hex 46-B).
+

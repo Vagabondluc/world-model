@@ -1,0 +1,46 @@
+# Faction Conflict Simulator
+
+## Objective
+Simulate dynamic interactions between dungeon factions to create evolving scenarios.
+
+## Instructions
+1. Create Faction List:
+   - Identify all factions in the dungeon
+   - Assign a number to each faction
+
+2. Develop Faction Profiles:
+   - Define each faction's goals and resources
+   - Note current territory and key NPCs
+
+3. Create Random Faction Table:
+   - List factions with corresponding die rolls
+   - Include "Wandering Adventurers" and "Outsiders" options
+   - Add "Roll Again Twice" for multi-party conflicts
+
+4. Establish Conflict Check Frequency:
+   - Decide how often to check (e.g., between sessions)
+   - Roll 1d6, with 1 indicating conflict occurs
+
+5. Determine Involved Factions:
+   - Roll twice on faction table to select participants
+   - Reroll or assume civil strife if same faction rolled twice
+
+6. Create Conflict Outcome Table:
+   - Include results like "Stalemate," "Faction Damaged," "Factions Unite"
+   - Assign probabilities to each outcome
+
+7. Resolve Conflict:
+   - Roll on outcome table to determine result
+   - Interpret result based on involved factions
+
+8. Implement Changes:
+   - Update faction territories and resources
+   - Modify adversary rosters to reflect losses or gains
+
+9. Generate Narrative:
+   - Create brief description of conflict and aftermath
+   - Consider how this affects dungeon dynamics
+
+10. Update Dungeon State:
+    - Revise maps to show territory changes
+    - Adjust encounter tables based on new faction standings

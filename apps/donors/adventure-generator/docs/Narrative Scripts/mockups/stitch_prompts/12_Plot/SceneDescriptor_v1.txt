@@ -1,0 +1,90 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Scenedescriptor V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: SceneDescriptor_v1
+
+```text
++--------------------------------------------------------------------------------+
+|  [Scene Architect: Narrative & Mechanics]                             [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Genre: [ Gothic Horror ]  Location: [ Crumbling Chapel ]                      |
++--------------------------------------------------------------------------------+
+|  SCENE ELEMENTS                        |  ATMOSPHERE (Sensory)                 |
+|  NPCs/Objects: [ Gargoyle, Chalice ]   |  Sight: [ Flickering candles ]        |
+|  Goal:  [ Retrieve the relic ]         |  Sound: [ Heavy rain on stone ]       |
+|  Event: [ gargoyle awakens ]           |  Smell: [ Old incense and ozone ]     |
++----------------------------------------+---------------------------------------+
+|  PLAYER DESCRIPTION (Vivid Prose)                                              |
+|  * Rain hammers against the stained glass like thousands of tiny fingers...    |
+|  * The gargoyle's stone eyes seem to track your movement in the candlelight... |
+|  [Regenerate Prose]                                                            |
++--------------------------------------------------------------------------------+
+|  GAMEMASTER INFORMATION                                                        |
+|  How to Run: [ Atmosphere is key. Emphasize the sound of rain. ]               |
+|  Key Points: [ Relic is trapped. Gargoyle has 18 AC. ]                         |
++--------------------------------------------------------------------------------+
+|  [Generate Scene Page] [Export Handout] [Sync to Campaign]             [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: SceneDescriptor_v1
+
+## Component Architecture
+- **Context Configurator:** The top section where the DM defines the "What and Where." It anchors the AI's descriptive style to the chosen Genre and Location.
+- **Entity & Event Ledger:** A dedicated space to list the "Chess Pieces" (NPCs/Objects) and the "Momentum" (Goals/Events) of the scene.
+- **Atmospheric Palette:** A structured sensory input board. It ensures the resulting prose isn't just visual, but engages sound, smell, and feeling.
+- **Dual-View Narrative Engine:**
+    - **Vivid Player Description:** The output of the expanded bullet points, focused on immersion.
+    - **GM Strategy Panel:** The mechanical and tactical side of the scene, derived from the same inputs.
+- **Refinement Controls:** Buttons for "Regenerate Prose" allow for tone shifts without losing the core information.
+
+## Interaction Logic
+- **Bullet-to-Prose Transformation:** The core feature is taking raw facts (e.g., "It's raining," "Gargoyle is there") and weaving them into the specific [EXPLANATION OF BULLET POINTS] required by the script.
+- **GM Integration:** The system identifies mechanical keywords (like "AC," "Trapped," or "Goal") and automatically moves them into the "Key Points for Running" section.
+- **Consistency Auditor:** Ensures that if a "Chalice" is mentioned in the Entities, it appears naturally in both the Player Description and the GM notes.
+
+## Visual Design
+- **Authorial & Immersive:** Uses a clean, serif font style for the "Player Description" sections to distinguish them from the utility/input sections.
+- **Status Indicator Colors:**
+    - **Blue:** Narrative/Atmospheric inputs.
+    - **Amber:** GM-only mechanical notes.
+- **Pacing Cues:** Short, punchy labels that encourage the DM to provide "Vivid" rather than just "Functional" descriptions.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: SceneDescriptor_v1
+
+# Scene: The Whispering Library
+
+### Scene Description:
+- **Ancient stone shelves stretching into the gloom.**
+- **The smell of vanilla and rotting parchment.**
+- **A single, flickering lantern illuminating a central desk.**
+- **The rhythmic thumping of a heavy tome closing itself.**
+
+*The library is a cathedral of silence, where the walls are formed of leather-bound memories stretching into the lightless heights. The air hangs heavy with the sweet, cloying scent of vanilla—the signature smell of slowly decaying scrolls—and the sharp bite of cold stone. In the center of the chamber, a lone brass lantern casts long, jittery shadows across a mahogany desk. Every few seconds, the silence is broken by a hollow 'thump' as one of the books on the high shelves slams shut of its own accord, as if refusing to be read.*
+
+---
+
+### Game Master Information:
+This scene is a tension-builder. The players need to find the "Codex of Echoes" while avoiding the notice of the **Silent Librarian** (a spectral entity). The library is a maze, and the books closing is a warning that the Librarian is getting closer.
+
+**Key Points for Running the Scene:**
+- **Atmosphere:** Describe the shadows first. Make the lantern feel like the only safe place.
+- **The Goal:** Finding the Codex requires a DC 15 Investigation check.
+- **The Challenge:** Every 3 rounds of noise, the **Silent Librarian** appears.
+- **Sensory Cue:** The smell of vanilla intensifies when the spectral entity is within 30 feet.
+

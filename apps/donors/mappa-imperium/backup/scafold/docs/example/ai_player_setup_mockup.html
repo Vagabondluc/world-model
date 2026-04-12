@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Imperium - AI Player Setup Mockup</title>
+    <style>
+        :root {
+            --bg-primary: #f4f1e8; --bg-secondary: #fefcf7; --bg-accent: #f0ead6;
+            --header-bg: #5a2d0c; --header-text: #f4f1e8; --text-primary: #3d2914;
+            --text-secondary: #8b6914; --color-primary: #8b4513; --color-secondary: #cd853f;
+            --color-accent: #daa520; --border-color: #d2b48c; --shadow: rgba(139, 69, 19, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.6; font-size: 16px; padding: 2rem; }
+        .page-card { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 15px; padding: 2rem; box-shadow: 0 5px 25px var(--shadow); max-width: 900px; margin: auto; }
+        .page-header { text-align: center; margin-bottom: 2rem; }
+        .page-header h1 { font-size: 2.5em; color: var(--color-primary); }
+        .page-header p { color: var(--text-secondary); }
+        .form-label { display: block; font-weight: bold; margin-bottom: 0.5rem; }
+        .input-base { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background-color: #fff; font-family: 'Georgia', serif; font-size: 1rem; }
+        .input-range { width: 100%; -webkit-appearance: none; appearance: none; height: 8px; background: var(--bg-accent); border-radius: 4px; outline: none; }
+        .input-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: var(--color-primary); cursor: pointer; border-radius: 50%; }
+        .input-range::-moz-range-thumb { width: 20px; height: 20px; background: var(--color-primary); cursor: pointer; border-radius: 50%; }
+        .btn { padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: all 0.2s ease-in-out; }
+        .btn-primary { background-color: var(--color-primary); color: white; }
+        .btn-secondary { background-color: #6c757d; color: white; }
+        .btn-ai { background-color: #6f42c1; color: white; }
+        .btn:disabled { background-color: #adb5bd; cursor: not-allowed; }
+        details { border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+        summary { font-weight: bold; cursor: pointer; color: var(--color-primary); user-select: none; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .form-actions { display: flex; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+    </style>
+</head>
+<body>
+    <div class="page-card">
+        <div class="page-header">
+            <h1>AI Player Configuration</h1>
+            <p>Define the personalities of the AI players who will join your world.</p>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <label for="ai-select" class="form-label">Configure Player</label>
+                <select id="ai-select" class="input-base">
+                    <option>AI Player 2 (Aggressive Warlord)</option>
+                    <option>AI Player 3</option>
+                </select>
+            </div>
+            <div>
+                <label for="profile-select" class="form-label">Load Profile</label>
+                <select id="profile-select" class="input-base">
+                    <option value="">-- Load a template --</option>
+                    <option>Randomize Traits</option>
+                    <option>Aggressive Warlord</option>
+                    <option>Cautious Diplomat</option>
+                    <option>Eccentric Mage</option>
+                </select>
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            <div class="grid-2" style="align-items: center;">
+                 <div>
+                    <label for="ai-name" class="form-label">Custom Name</label>
+                    <input type="text" id="ai-name" class="input-base" value="Aggressive Warlord">
+                 </div>
+                 <div style="padding-top: 1.5rem;">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" style="width: 1.25em; height: 1.25em; margin-right: 0.5rem;">
+                        <span style="font-weight: bold;">Is Meta Character?</span>
+                    </label>
+                    <p style="font-size: 0.8em; color: var(--text-secondary); margin-top: 0.25rem;">Meta characters may use alternate, more powerful rules for creating their world elements.</p>
+                 </div>
+            </div>
+
+            <details open>
+                <summary>Personality Traits</summary>
+                <div style="padding-top: 1rem;">
+                    <div class="grid-2">
+                        <div>
+                            <label class="form-label">Openness: <span style="font-weight: bold; color: var(--color-primary);">20</span></label>
+                            <input type="range" class="input-range" value="20" min="0" max="100">
+                        </div>
+                        <div>
+                            <label class="form-label">Conscientiousness: <span style="font-weight: bold; color: var(--color-primary);">80</span></label>
+                            <input type="range" class="input-range" value="80" min="0" max="100">
+                        </div>
+                        <div>
+                            <label class="form-label">Extraversion: <span style="font-weight: bold; color: var(--color-primary);">90</span></label>
+                            <input type="range" class="input-range" value="90" min="0" max="100">
+                        </div>
+                         <div>
+                            <label class="form-label">Agreeableness: <span style="font-weight: bold; color: var(--color-primary);">10</span></label>
+                            <input type="range" class="input-range" value="10" min="0" max="100">
+                        </div>
+                         <div>
+                            <label class="form-label">Neuroticism: <span style="font-weight: bold; color: var(--color-primary);">70</span></label>
+                            <input type="range" class="input-range" value="70" min="0" max="100">
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Biography & Persona</summary>
+                <div style="padding-top: 1rem;">
+                    <div>
+                        <label for="ai-persona" class="form-label">Persona Summary</label>
+                        <textarea id="ai-persona" rows="2" class="input-base">A ruthless conqueror who sees diplomacy as a tool for eventual domination.</textarea>
+                    </div>
+                     <div style="margin-top: 1rem;">
+                        <label for="ai-bio" class="form-label">Biography</label>
+                        <textarea id="ai-bio" rows="3" class="input-base">Raised in a land of constant conflict, this leader believes that strength is the only true virtue. They respect power and despise weakness, always looking for the next battle to prove their might.</textarea>
+                    </div>
+                     <details style="margin-top: 1rem; border-color: #a855f7;">
+                        <summary style="color: #6f42c1;">✨ AI-Powered Generation</summary>
+                        <div style="padding-top: 1rem;">
+                            <label class="form-label">Inject Ideas into Generation</label>
+                            <textarea class="input-base" rows="2" placeholder="e.g., 'themed around fire', 'from a lost lineage'..."></textarea>
+                            <button class="btn btn-ai" style="width: 100%; margin-top: 1rem;">Generate Name, Persona & Bio</button>
+                        </div>
+                    </details>
+                </div>
+            </details>
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-secondary" style="flex-basis: 33%;">← Back to Setup</button>
+            <button class="btn btn-primary" style="flex-grow: 1;">Finalize & Continue</button>
+        </div>
+    </div>
+</body>
+</html>

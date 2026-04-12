@@ -56,7 +56,7 @@ def run() -> GateReport:
     )
     r.assert_file_contains(
         f"{WM}/docs/testing/DONOR_UI_AUDIT.md",
-        r"app donor|fragment donor|semantic-only donor|behavioral capture|intent reconstruction|designed intent authoring",
+        r"app donor|source-fragment|scaffold-copy|behavioral capture|reference baseline|clone-equivalence",
         "7.0 donor classifications and methodologies are fixed",
         remediation=Remediation(
             action="edit",

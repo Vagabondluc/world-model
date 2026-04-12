@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Imperium - Style Guide</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            
+            /* Harmonized color system - warm undertones throughout */
+            --bg-primary: light-dark(#fefdfb, #0f0e0c);
+            --bg-secondary: light-dark(#faf8f5, #1a1814);
+            --bg-tertiary: light-dark(#f5f2ed, #252017);
+            
+            --text-primary: light-dark(#1c1917, #f7f4f0);
+            --text-secondary: light-dark(#44403c, #d6d3d1);
+            --text-muted: light-dark(#78716c, #a8a29e);
+            
+            --border-primary: light-dark(#d6d3d1, #44403c);
+            --border-secondary: light-dark(#e7e5e4, #292524);
+            
+            /* Amber system - more consistent hue */
+            --accent-amber: light-dark(#d97706, #fbbf24);
+            --accent-amber-light: light-dark(#fef3c7, #451a03);
+            --accent-amber-dark: light-dark(#92400e, #f59e0b);
+            
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --info: #3b82f6;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            background-color: var(--bg-secondary);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-primary);
+        }
+        
+        .section h2 {
+            margin-top: 0;
+            color: var(--accent-amber);
+            border-bottom: 2px solid var(--accent-amber-light);
+            padding-bottom: 10px;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        /* Color Swatches */
+        .color-swatch {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background-color: var(--bg-tertiary);
+            border-radius: 6px;
+            border: 1px solid var(--border-secondary);
+        }
+        
+        .color-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid var(--border-primary);
+        }
+        
+        .color-info {
+            flex: 1;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .color-value {
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        /* Typography */
+        .typography-sample {
+            padding: 12px;
+            background-color: var(--bg-tertiary);
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        
+        /* Buttons */
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-amber);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-primary);
+        }
+        
+        .btn-era {
+            background-color: var(--info);
+            color: white;
+            border-bottom: 3px solid #2563eb;
+        }
+        
+        .btn-era-current {
+            background-color: var(--accent-amber);
+            border-bottom-color: var(--accent-amber-dark);
+            box-shadow: 0 0 0 3px var(--accent-amber-light);
+        }
+        
+        .btn-era-completed {
+            background-color: var(--success);
+            border-bottom-color: #047857;
+        }
+        
+        .btn-era-locked {
+            background-color: var(--text-muted);
+            color: var(--bg-secondary);
+            border-bottom-color: var(--border-primary);
+        }
+        
+        /* Form Elements */
+        .form-control {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border-primary);
+            border-radius: 6px;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-amber);
+            box-shadow: 0 0 0 2px var(--accent-amber-light);
+        }
+        
+        /* Cards */
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        
+        .card-header {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: 8px 8px 0 0;
+            padding: 16px;
+            border-top: 4px solid var(--accent-amber);
+        }
+        
+        /* Tables */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-primary);
+        }
+        
+        .table th {
+            background-color: var(--accent-amber-light);
+            color: var(--accent-amber-dark);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-primary);
+        }
+        
+        .table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-secondary);
+            color: var(--text-secondary);
+        }
+        
+        .table tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            background-color: var(--bg-tertiary);
+            padding: 4px;
+            border-radius: 8px;
+            gap: 4px;
+        }
+        
+        .nav-tab {
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-tab.active {
+            background-color: var(--bg-primary);
+            color: var(--accent-amber);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Progress */
+        .progress {
+            width: 100%;
+            height: 8px;
+            background-color: var(--border-primary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--success);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        /* Badges */
+        .badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .badge-primary {
+            background-color: var(--accent-amber-light);
+            color: var(--accent-amber-dark);
+        }
+        
+        .badge-success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        
+        .badge-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        /* Header */
+        .header-demo {
+            background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+            color: #fef3c7;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">ðŸŒ™</div>
+    
+    <div class="container">
+        <div class="header-demo">
+            <h1 style="margin: 0;">Mappa Imperium Style Guide</h1>
+            <p style="margin: 8px 0 0 0; opacity: 0.9;">Complete UI component library and design system</p>
+        </div>
+
+        <!-- Color System -->
+        <div class="section">
+            <h2>Color System</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Primary Colors</h3>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--accent-amber);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Amber Primary</div>
+                            <div class="color-value">light-dark(#d97706, #f59e0b)</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--accent-amber-light);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Amber Light</div>
+                            <div class="color-value">light-dark(#fef3c7, #451a03)</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--accent-amber-dark);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Amber Dark</div>
+                            <div class="color-value">light-dark(#92400e, #fbbf24)</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Semantic Colors</h3>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--success);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Success</div>
+                            <div class="color-value">#10b981</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--warning);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Warning</div>
+                            <div class="color-value">#f59e0b</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--error);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Error</div>
+                            <div class="color-value">#ef4444</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: var(--info);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Info</div>
+                            <div class="color-value">#3b82f6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="section">
+            <h2>Typography</h2>
+            <div class="typography-sample">
+                <div class="text-3xl">Heading 1 - Era Title</div>
+                <div class="text-2xl">Heading 2 - Section Title</div>
+                <div class="text-xl">Heading 3 - Subsection</div>
+                <div class="text-lg">Large Text - Important Info</div>
+                <div class="text-base">Body Text - Default reading text</div>
+                <div class="text-sm">Small Text - Secondary info</div>
+                <div class="text-xs">Caption - Metadata and labels</div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="section">
+            <h2>Buttons</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Standard Buttons</h3>
+                    <div>
+                        <button class="btn btn-primary">Primary Action</button>
+                        <button class="btn btn-secondary">Secondary Action</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>Era Navigation Buttons</h3>
+                    <div>
+                        <button class="btn btn-era btn-era-completed">âœ… Age of Creation</button>
+                        <button class="btn btn-era btn-era-current">âš¡ Age of Discovery</button>
+                        <button class="btn btn-era btn-era-locked">ðŸ”’ Age of Collapse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="section">
+            <h2>Form Elements</h2>
+            <div class="grid grid-2">
+                <div>
+                    <label>Text Input</label>
+                    <input type="text" class="form-control" placeholder="Enter resource name...">
+                    
+                    <label>Select Dropdown</label>
+                    <select class="form-control">
+                        <option>Choose geography type...</option>
+                        <option>Mountains</option>
+                        <option>Forest</option>
+                        <option>Plains</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Textarea</label>
+                    <textarea class="form-control" rows="4" placeholder="Describe your element..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="section">
+            <h2>Cards & Panels</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Basic Card</h3>
+                    <p>Standard content container with border and padding.</p>
+                </div>
+                <div>
+                    <div class="card-header">
+                        <h3 style="margin: 0;">Header Card</h3>
+                        <p style="margin: 8px 0 0 0; color: var(--text-muted);">With amber top border accent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tables -->
+        <div class="section">
+            <h2>Tables</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Era</th>
+                        <th>Focus</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Age of Creation</td>
+                        <td>World Building</td>
+                        <td>Years 1-10</td>
+                        <td><span class="badge badge-success">Complete</span></td>
+                    </tr>
+                    <tr>
+                        <td>Age of Discovery</td>
+                        <td>Exploration</td>
+                        <td>Years 31-40</td>
+                        <td><span class="badge badge-warning">Current</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Navigation -->
+        <div class="section">
+            <h2>Navigation</h2>
+            <div class="nav-tabs">
+                <button class="nav-tab active">Rules</button>
+                <button class="nav-tab">Gameplay</button>
+                <button class="nav-tab">Elements</button>
+            </div>
+        </div>
+
+        <!-- Progress & Status -->
+        <div class="section">
+            <h2>Progress & Status</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Progress Bars</h3>
+                    <div style="margin-bottom: 12px;">
+                        <div style="margin-bottom: 4px;">Era Progress (75%)</div>
+                        <div class="progress">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-bottom: 4px;">Current Task (40%)</div>
+                        <div class="progress">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Status Badges</h3>
+                    <div>
+                        <span class="badge badge-primary">You</span>
+                        <span class="badge badge-success">âœ… Complete</span>
+                        <span class="badge badge-warning">â³ In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS Classes Reference -->
+        <div class="section">
+            <h2>CSS Classes Reference</h2>
+            <div class="grid grid-3">
+                <div>
+                    <h3>Layout</h3>
+                    <code>.header-main<br>
+                    .content-box-main<br>
+                    .page-card<br>
+                    .filter-bar<br>
+                    .modal-overlay</code>
+                </div>
+                <div>
+                    <h3>Components</h3>
+                    <code>.btn-primary<br>
+                    .btn-era-current<br>
+                    .input-base<br>
+                    .table-base<br>
+                    .nav-button-active</code>
+                </div>
+                <div>
+                    <h3>Utilities</h3>
+                    <code>.pill-badge<br>
+                    .section-header<br>
+                    .form-label<br>
+                    .error-text<br>
+                    .reference-link</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Principles -->
+        <div class="section">
+            <h2>Design Principles</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Color Usage</h3>
+                    <ul>
+                        <li><strong>Amber:</strong> Primary actions, current states, focus</li>
+                        <li><strong>Green:</strong> Completed states, success messages</li>
+                        <li><strong>Blue:</strong> Available actions, information</li>
+                        <li><strong>Gray:</strong> Disabled/locked states</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Spacing</h3>
+                    <ul>
+                        <li><strong>4px:</strong> Small gaps, badges</li>
+                        <li><strong>8px:</strong> Form elements, button padding</li>
+                        <li><strong>16px:</strong> Card padding, section gaps</li>
+                        <li><strong>32px:</strong> Major section spacing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? 'â˜€ï¸' : 'ðŸŒ™';
+        }
+
+        // Initialize theme
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.querySelector('.theme-toggle').textContent = 'â˜€ï¸';
+        }
+    </script>
+</body>
+</html>

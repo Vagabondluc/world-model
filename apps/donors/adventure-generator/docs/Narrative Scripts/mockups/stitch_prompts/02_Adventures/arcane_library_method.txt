@@ -1,0 +1,86 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Arcane Library Method".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Arcane Library Adventure Generator
+
+```text
++--------------------------------------------------------------------------------+
+|  [Arcane Library: Adventure Idea Engine]                              [?] [X]  |
++--------------------------------------------------------------------------------+
+|  GENERATION SETTINGS:                                                          |
+|  [ Roll 5 New Ideas ] [ Theme Filter: None ] [V]  [ Level: 3-5 ] [V]           |
++--------------------------------------------------------------------------------+
+|  GENERATED PREMISES (Choose One)                                               |
+|  1. [ x ] RESCUE THE GOBLET from the clutches of a dark sorcerer.              |
+|  2. [   ] UNRAVEL THE PROPHECY through the chronomancer's rift.               |
+|  3. [   ] SABOTAGE THE WAR MACHINE at the warfront's core.                     |
+|  4. [   ] EXPUNGE THE CURSE that haunts the royal lineage.                     |
+|  5. [   ] FIND THE PRISONER within the shifting dunes.                         |
++--------------------------------------------------------------------------------+
+|  CONTEXTUAL DEVELOPMENT (Chosen Idea #1)                                       |
+|  Origin: [ The sorcerer stole the Goblet of Life to reach immortality. ]        |
+|  Positioning: [ The party possesses the only shield resistant to his fire. ]   |
+|  Stakes: [ If they fail, the entire valley will wither and die in 3 days. ]     |
++--------------------------------------------------------------------------------+
+|  CREATIVITY TOOLS                                                              |
+|  [ Re-rollMcGuffin ] [ Re-roll Subject ] [ Suggest Personal PC Hook ]          |
++--------------------------------------------------------------------------------+
+|  [Generate One-Pager] [Save to Campaign] [Share with Players]          [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Arcane Library Adventure Generator
+
+## Component Architecture
+- **Tri-Fold Premise Randomizer:** A math-driven engine that pull from the script's d100 table (Action, McGuffin, Subject). It allows for batch generation (5 ideas) to provide the DM with variety.
+- **The Selection Gallery:** A clean, card-based interface where the DM selects the most compelling premise. Selecting a card "locks" it into the detail editor.
+- **Expansion Studio (The Core 3):** Three mandatory fields (Origin, Positioning, Stakes) that force the DM to ground the random idea in the actual campaign world.
+- **Column-Specific Override:** A set of buttons that allow the DM to manually "Re-Roll" only one part of the premise (e.g., keeping "Rescue the Goblet" but changing the "Subject" to "In the City's Underbelly").
+- **Direct Involvement (Hooks) Panel:** A tool to suggest "Personal Stakes," as required by the script, by pulling from PC bio data.
+
+## Interaction Logic
+- **Iterative Ideation:** The UI facilitates the Selection Process (Step 71-75 in the script) by automating the "Dice simulation" and presenting clear options.
+- **Creativity Prompting:** If an "Unusual Combination" occurs, the UI presents a "Creative Challenge" tooltip to help the DM bridge the narrative gap.
+- **Weighting (Optional):** The UI can be set to weight specific Actions or Subjects higher based on the current campaign biome (e.g., more "Ocean's Abyss" subjects if in a Nautical campaign).
+
+## Visual Design
+- **Arcane & Scholarly:** The UI uses a deep leather and gold-foil aesthetic, looking like a magical tome or a set of divination cards.
+- **Grid-Aligned Precision:** Despite the scholarly theme, the data entry is precise and grid-aligned to make the 5-option selection easy to parse.
+- **Call-to-Action Emphasis:** The "Selection" step is highlighted with high-contrast borders and checkboxes to ensure the DM knows the next required step in the workflow.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Arcane Library Adventure - "The Vessel of Withering"
+
+### **Initial Premise:**
+**RESCUE THE GOBLET** (Roll: 1-2) from **the clutches of a dark sorcerer** (Roll: 1-2).
+
+---
+
+### **Contextual Development:**
+- **Origin of Problem:**
+The Sorcerer Malakor has stolen the *Goblet of Life* from the Sun-Temple. He intends to use its restorative essence to fuel a ritual of lichdom, essentially draining the land's vitality to sustain his own undead soul.
+- **Unique Positioning:**
+The heroes are currently escorting the temple's fleeing acolytes and are the only ones close enough to Malakor's obsidian spire before the celestial alignment begins.
+- **The Stakes:**
+If the ritual is completed, the valley of Valen will become a barren wasteland, and Malakor will become an immortal, unstoppable tyrant leading a legion of shadows.
+
+---
+
+### **Personal Stakes / Direct Involvement:**
+- **The Call to Action:** The dying High Priest hands the heroes a shard of the temple's sun-shield, which is the only thing that can bypass Malakor's necrotic barrier.
+- **Personal Hook:** One of the characters (the Cleric) was a former student of Malakor before the sorcerer turned to darkness; this is their chance to finish what was started years ago.
+

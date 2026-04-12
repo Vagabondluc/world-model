@@ -1,0 +1,81 @@
+Heist Preparation Guidelines for an LLM:
+
+1. Overview and Purpose:
+   - As the LLM, your role is to create a detailed heist preparation document that outlines the key elements for a compelling heist scenario.
+   - Heist scenarios challenge players to survey a target location, formulate a strategic plan, and execute a high-stakes theft or infiltration operation.
+
+2. Heist Objective Selection:
+   - Determine the primary objective of the heist, which can include:
+     - Stealing a valuable object (e.g., artwork, jewelry, data)
+     - Retrieving sensitive information (e.g., documents, computer files, secrets)
+     - Sabotaging critical infrastructure or resources
+     - Assassinating or kidnapping a high-profile target
+   - Consider incorporating multiple or tiered objectives to increase the complexity and challenge.
+   - Ensure the objective is compelling enough to drive the players to undertake the risky heist.
+
+3. Heist Location Design:
+   a. Surveying the Target:
+      - Determine the location that houses the heist objective, such as a museum, bank, manor house, or corporate facility.
+      - Establish the key features of the location that can be surveyed by the players, including entrances, exits, security measures, and the objective's placement.
+      - Decide which elements of the location will be trivial, challenging, or impossible for the players to survey beforehand.
+
+   b. Entry Points:
+      - Incorporate multiple entry points to the location, each with its own security features and potential complications.
+      - Ensure at least two entries are available, with one or more being secured (requiring skill checks) and one or more being hidden (requiring discovery).
+      - Consider the strategic implications of the entry point choices for the players' heist plan.
+
+   c. Layered Defenses:
+      - Design a series of security measures and obstacles the players must overcome to reach the objective.
+      - Include passive obstacles (locks, traps, physical challenges) and active forces (guards, patrols, alarm systems).
+      - Organize the defenses in a way that forces the players to navigate multiple layers of security.
+
+   d. Objective Placement:
+      - Determine the location of the heist objective within the secured facility.
+      - Consider placing the objective in a heavily fortified or remote area to increase the challenge.
+      - Alternatively, positioning the objective behind a single heavily secured entry point can create a different type of challenge.
+
+4. Blueprint Creation:
+   - Prepare a detailed blueprint or floorplan depicting the heist location.
+   - Incorporate the results of the players' survey, including both known and unknown/hidden elements.
+   - The blueprint should serve as a valuable tool for the players to plan their heist strategy.
+
+5. Team Composition and Roles:
+   - Determine the ideal composition of the heist crew, considering the complementary skills and abilities required.
+   - Assign specialized roles to the players, such as:
+     - Lookout
+     - Safecracker
+     - Technical specialist
+     - Getaway driver
+     - Muscle
+   - Ensure the team has the necessary expertise to execute the various aspects of the heist plan.
+
+6. Preparation Activities:
+   - Outline the steps the players can take to gather intelligence, acquire resources, and rehearse the heist plan.
+   - Consider opportunities for the players to:
+     - Conduct additional reconnaissance of the target location
+     - Obtain specialized equipment or tools
+     - Cultivate contacts or allies who can provide assistance
+     - Practice the execution of the heist plan in a controlled environment
+
+7. Heist Preparation Document Template:
+   Heist Objective:
+     - Description of the primary goal of the heist
+
+   Heist Location:
+     - Details on the target facility, including its layout, security features, and objective placement
+     - Breakdown of trivial, challenging, and impossible survey elements
+
+   Entry Points:
+     - Description of the multiple entry options, including secured and hidden access points
+
+   Layered Defenses:
+     - Overview of the passive obstacles and active security forces protecting the location
+
+   Blueprint:
+     - Details on the blueprint or floorplan provided to the players, including both known and hidden elements
+
+   Heist Crew:
+     - Composition of the player characters and their assigned specialized roles
+
+   Preparation Activities:
+     - Suggestions for how the players can gather intelligence, acquire resources, and rehearse the heist plan

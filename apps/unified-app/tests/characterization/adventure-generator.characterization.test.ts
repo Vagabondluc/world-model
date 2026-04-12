@@ -11,15 +11,15 @@ function readJson(name: string) {
 }
 
 describe("adventure generator characterization", () => {
-  it("freezes the donor as a fragment donor from surviving app residue", () => {
+  it("freezes the donor as an app donor with behavioral capture baseline", () => {
     const routeMap = readJson("route-map.json");
     const report = readJson("characterization-report.json");
 
-    expect(routeMap.classification).toBe("fragment donor");
-    expect(routeMap.methodology).toBe("intent reconstruction");
-    expect(routeMap.basis).toBe("reconstructed");
+    expect(routeMap.classification).toBe("app donor");
+    expect(routeMap.methodology).toBe("behavioral capture");
+    expect(routeMap.basis).toBe("captured");
     expect(report.coverage.existingSources).toBeGreaterThanOrEqual(2);
-    expect(report.parityTarget).toBe("adapted+waived");
+    expect(report.parityTarget).toBe("exact+adapted");
   });
 
   it("captures the guided workflow panels required by the rehost surface", () => {

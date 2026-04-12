@@ -1,0 +1,52 @@
+**Pointy Hat Traveling Event System (TES)**
+
+**Purpose:**
+The Traveling Event System is designed to enhance the role-playing experience of travel in games by focusing on drama and excitement over realism. It simplifies mundane travel details, like distance and food rationing, to concentrate on creating engaging narratives and memorable encounters.
+
+**Document Storage:**
+For ease of use, this document can be copied and saved into your personal Google Drive.
+
+**Distance Measurement:**
+Distance in TES is abstract, categorized into three brackets:
+- **Close**
+- **Far**
+- **Very Far**
+
+These are intentionally undefined to allow flexibility in storytelling and are determined by the Game Master based on the narrative's needs.
+
+**Event Occurrence:**
+Events are the core of TES, occurring as follows based on the travel distance:
+- **Close:** 1 Event
+- **Far:** 2 Events
+- **Very Far:** 3 Events
+
+Game Masters are encouraged to modify these numbers to suit the story's pace and intensity.
+
+**Event Categories:**
+
+1. **Red - Combat Events:**
+   - Purpose: Enhance narrative tension through direct confrontations.
+   - Examples include ambushes by main antagonists, territorial monsters, or encounters with rival parties.
+
+2. **Blue - Roleplay Events:**
+   - Purpose: Develop character and story depth through social interactions.
+   - Examples include diplomatic encounters, cultural misunderstandings, or negotiations with spirits and other entities.
+
+3. **Yellow - Exploration Events:**
+   - Purpose: Showcase the game world's environment and challenge players with navigation and survival skills.
+   - Examples include traversing dangerous terrain, solving environmental puzzles, or interacting with mystical elements of the landscape.
+
+**Combo Events:**
+These events combine elements from two or more categories, offering a versatile approach to encounter design:
+- **Purple (Roleplay and Combat):** Negotiations that could escalate into combat.
+- **Green (Exploration and Roleplay):** Interactions that involve exploration and dialogue, like aiding a lost creature in a dangerous area.
+- **Orange (Combat and Exploration):** Tasks requiring both combat readiness and exploration skills to overcome obstacles or enemies.
+- **White (Combat, Roleplay, and Exploration):** Complex scenarios involving negotiation, combat, and significant interaction with the environment.
+
+**Guidelines for Use:**
+- Focus on what each journey will feel like rather than adhering strictly to mechanics.
+- Adjust event frequency and type based on the narrative's demands and the desired dramatic impact.
+- Use events not only to challenge players but also to deepen the narrative and develop the game world.
+
+**Conclusion:**
+TES aims to transform travel into a dynamic and integral part of the gaming experience, prioritizing story and player engagement over the simulation of realistic travel logistics.

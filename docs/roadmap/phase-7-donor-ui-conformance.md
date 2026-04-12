@@ -1,6 +1,6 @@
 # Phase 7: Donor UI Capture, Characterization, Rehost, and Conformance
 
-Phase 7 rehosts donor surfaces over canonical state and proves parity against donor-specific characterization baselines. Every donor UI is part of the contract. The UI above the canonical data layer must behave faithfully to the original donor app — only the data layer underneath it is shared.
+Phase 7 establishes donor-ui conformance over canonical state and proves parity against donor-specific characterization baselines. Every donor UI is part of the contract. The UI above the canonical data layer must behave faithfully to the original donor app — only the data layer underneath it is shared.
 
 ## Dependencies
 
@@ -11,7 +11,7 @@ Phase 7 rehosts donor surfaces over canonical state and proves parity against do
 
 ## Fixed donor methodologies
 
-The donor classifications and characterization methodologies are resolved before any implementation work starts. There are no execution-time classification branches.
+The initial donor classifications and characterization methodologies are resolved before implementation work starts. There are no execution-time classification branches for the initial set. Phase 9 expands this framework to the full donor inventory.
 
 | Donor | Class | Characterization methodology |
 |---|---|---|
@@ -64,12 +64,12 @@ Deliverables:
 
 Acceptance:
 
-- all three donors have a recorded methodology
+- all initial donors have a recorded methodology
 - waivers are present before gate evaluation
 
 ### 7.1 Characterization — three tracks
 
-Characterization runs on all three donors before any rehost work starts. Conformance work cannot begin before characterization baselines are frozen.
+Characterization runs on all initial donors before any rehost work starts. Conformance work cannot begin before characterization baselines are frozen.
 
 #### Track A: Mythforge (behavioral capture)
 
@@ -186,12 +186,16 @@ Phase 7 fails if any of the following are missing:
 - `tests/characterization/baselines.yaml`
 - `tests/conformance/waivers.yaml`
 - donor routes: `/donor/mythforge`, `/donor/orbis`, `/donor/adventure-generator`, `/compare/donors`
-- characterization suite passes for all three donors
-- conformance suite passes for all three donors
+- characterization suite passes for all donors in scope for this phase
+- conformance suite passes for all donors in scope for this phase
 
 ## Round-trip rule
 
 For every shared canonical concept that appears in more than one donor surface, at least one test must prove the same canonical bundle state projects into all donor views without data loss, field misinterpretation, or donor-local persistence leakage.
+
+## Phase 9 linkage
+
+Phase 7 defines the initial conformance framework. Phase 9 extends this framework to the exhaustive donor inventory in `docs/donors/INDEX.md`.
 
 ## Failure Cases
 

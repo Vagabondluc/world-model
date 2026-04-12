@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Persona Manager: Ed Greenwood</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d43211",
+                        "background-light": "#f5e8c3",
+                        "background-dark": "#221310",
+                        "parchment-dark": "#e7d3cf",
+                        "ink": "#1b100d",
+                        "gold": "#d4af37",
+                        "sidebar-brown": "#3a2d1d",
+                        "parchment-white": "#f5e8c3"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "medieval": ["MedievalSharp", "cursive"],
+                        "serif": ["Lora", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .parchment-texture {
+            background-color: #f5e8c3;
+            background-image: radial-gradient(#d4c4a8 0.5px, transparent 0.5px);
+            background-size: 10px 10px;
+        }
+        .scroll-inner-shadow {
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }.sidebar-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar-scroll::-webkit-scrollbar-thumb {
+            background: rgba(245, 232, 195, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-ink min-h-screen flex overflow-hidden">
+<aside class="w-64 bg-sidebar-brown h-screen flex flex-col shrink-0 z-50">
+<div class="p-6 flex flex-col items-center gap-2 border-b border-white/10">
+<div class="size-12 bg-primary flex items-center justify-center rounded-lg shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl">menu_book</span>
+</div>
+<h1 class="font-medieval text-parchment-white text-xl tracking-widest mt-2 uppercase">Chronicler</h1>
+</div>
+<nav class="flex-1 px-4 py-8 space-y-2 overflow-y-auto sidebar-scroll">
+<a class="flex items-center gap-4 px-4 py-3 text-parchment-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-medieval text-lg">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-parchment-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-medieval text-lg">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-parchment-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-medieval text-lg">Maps</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-white bg-primary/20 border border-primary/20 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined text-primary">person</span>
+<span class="font-medieval text-lg">Persona</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-parchment-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medieval text-lg">Settings</span>
+</a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-medieval text-xl py-4 rounded shadow-xl transition-all flex items-center justify-center gap-2 border border-white/10">
+<span class="material-symbols-outlined">auto_fix_high</span>
+                FORGE
+            </button>
+</div>
+</aside>
+<div class="flex-1 flex flex-col overflow-y-auto h-screen parchment-texture">
+<header class="sticky top-0 z-40 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-10 py-4 shadow-sm">
+<div class="flex items-center gap-4 text-ink dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-medieval text-2xl font-bold leading-tight tracking-[-0.015em]">Chronicler Persona Manager</h2>
+<p class="text-xs uppercase tracking-widest text-primary font-bold">Arcane Interface v4.0</p>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<div class="flex flex-col items-end">
+<span class="text-[10px] uppercase text-ink/50 dark:text-white/50 font-bold">Active Persona</span>
+<a class="font-medieval text-primary text-lg font-medium leading-none" href="#">Ed Greenwood</a>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] uppercase text-ink/50 dark:text-white/50 font-bold">Domain Knowledge</span>
+<a class="font-medieval text-ink dark:text-white text-lg font-medium leading-none" href="#">FR Lore</a>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">save</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-ink text-white hover:bg-black transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col gap-6 p-6 lg:px-10 max-w-[1400px] mx-auto w-full">
+<div class="flex flex-col lg:flex-row gap-6 min-h-[600px]">
+<aside class="w-full lg:w-1/3 flex flex-col gap-4">
+<div class="bg-white/40 dark:bg-background-dark/40 border border-primary/10 rounded-xl p-6 backdrop-blur-sm">
+<h3 class="font-medieval text-xl text-ink dark:text-white mb-6 flex items-center gap-2 border-b border-primary/20 pb-2">
+<span class="material-symbols-outlined text-primary">tune</span>
+                            Persona Configuration
+                        </h3>
+<div class="mb-8">
+<div class="flex w-full items-center justify-between mb-4">
+<p class="text-ink dark:text-white text-base font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">thermostat</span>
+                                    Narrative Temperature
+                                </p>
+<p class="text-primary font-medieval text-lg">0.7</p>
+</div>
+<div class="flex h-6 w-full items-center gap-4">
+<div class="flex h-2 flex-1 rounded-full bg-parchment-dark dark:bg-white/10 overflow-hidden relative">
+<div class="h-full w-[70%] bg-primary"></div>
+<div class="absolute left-[70%] top-1/2 -translate-y-1/2 size-4 rounded-full bg-primary border-2 border-background-light shadow-md cursor-pointer"></div>
+</div>
+</div>
+<p class="text-[11px] text-ink/60 dark:text-white/60 mt-2 italic">Higher values yield more whimsical, Greenwood-esque digressions.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between bg-background-light/50 dark:bg-white/5 p-4 rounded-lg border border-primary/5">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-white dark:bg-ink shrink-0 size-10 shadow-sm">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div>
+<p class="text-ink dark:text-white text-sm font-bold">DALL-E Visualization</p>
+<p class="text-[10px] text-ink/60 dark:text-white/60 uppercase font-bold tracking-tight">Generate Scene Art</p>
+</div>
+</div>
+<label class="relative flex h-[28px] w-[50px] cursor-pointer items-center rounded-full bg-parchment-dark dark:bg-white/10 p-1 has-[:checked]:bg-primary transition-colors">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="h-5 w-5 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-[22px]"></div>
+</label>
+</div>
+<div class="flex items-center justify-between bg-background-light/50 dark:bg-white/5 p-4 rounded-lg border border-primary/5">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-white dark:bg-ink shrink-0 size-10 shadow-sm">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div>
+<p class="text-ink dark:text-white text-sm font-bold">External Investigation</p>
+<p class="text-[10px] text-ink/60 dark:text-white/60 uppercase font-bold tracking-tight">Verify Against Lore</p>
+</div>
+</div>
+<label class="relative flex h-[28px] w-[50px] cursor-pointer items-center rounded-full bg-parchment-dark dark:bg-white/10 p-1 has-[:checked]:bg-primary transition-colors">
+<input class="sr-only peer" type="checkbox"/>
+<div class="h-5 w-5 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-[22px]"></div>
+</label>
+</div>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-4">
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-dashed border-primary/20 hover:border-primary/40 transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">description</span>
+<span class="font-medieval text-xs">Lore Details</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-dashed border-primary/20 hover:border-primary/40 transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">swords</span>
+<span class="font-medieval text-xs">Conflict Chains</span>
+</div>
+</div>
+</div>
+</aside>
+<section class="w-full lg:w-2/3 flex flex-col gap-4">
+<div class="flex-1 bg-[#fcf5e5] dark:bg-zinc-900 border-[12px] border-[#e8dfc7] dark:border-zinc-800 rounded-xl shadow-2xl relative overflow-hidden flex flex-col">
+<div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-black/10 to-transparent pointer-events-none"></div>
+<div class="px-8 pt-8 pb-4 flex justify-between items-end border-b border-primary/10 border-dashed mx-8">
+<h2 class="font-medieval text-3xl text-ink/80 dark:text-white/80">The Vault of Seven Keys</h2>
+<span class="text-xs uppercase font-bold tracking-widest text-primary/60 italic">Manuscript Draft</span>
+</div>
+<div class="flex-1 overflow-y-auto p-12 scroll-inner-shadow">
+<article class="font-serif text-xl leading-relaxed text-ink/90 dark:text-white/90 space-y-6 max-w-2xl mx-auto italic">
+<p>
+                                    "The silvered light of Selûne bled through the cracks of the mountain, illuminating dust motes that danced like tiny, forgotten spells. Mirt adjusted his belt, the leather creaking in a silence so heavy it felt like physical weight. 'Deeper we go,' he grunted, his voice a gravel-drag across a tombstone."
+                                </p>
+<p>
+                                    "Elminster had warned him of the Seven Keys, but warned him in that maddeningly oblique way of Wizards—all riddles and pipe-smoke. The first key, the Sage of Shadowdale had claimed, was not forged of iron or gold, but of a memory of a scent of a rose that never bloomed in the Realms."
+                                </p>
+<p>
+                                    "As they approached the great obsidian archway of the Shadowdark, the air grew colder than a banshee's breath. Here, the laws of Mystra felt thin, frayed like an old tapestry left in a damp cellar. The shadows didn't just lack light; they seemed to actively drink it, reaching out with obsidian fingers to stroke the edges of their lanterns..."
+                                </p>
+</article>
+</div>
+<div class="p-4 bg-parchment-dark/30 dark:bg-black/20 border-t border-primary/10">
+<div class="flex justify-between items-center mb-1 px-4">
+<span class="text-[10px] uppercase font-bold text-ink/50 dark:text-white/50 tracking-tighter">Current Word Count: 482 / 1000</span>
+<span class="text-[10px] uppercase font-bold text-primary tracking-tighter">Draft 48% Complete</span>
+</div>
+<div class="h-1.5 w-full bg-ink/5 dark:bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary/80 w-[48%]"></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pb-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-medieval text-xl text-ink dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">collections</span>
+                        Generated Visuals
+                    </h4>
+<div class="flex gap-4">
+<div class="flex-1 group relative overflow-hidden rounded-xl border-4 border-white dark:border-zinc-800 shadow-lg aspect-video">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Dark misty cavern with purple magical energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu38dU_mqGI1zMh0kH92X44SdKu5u8iMQuT7GzU6iHdW96btf4Xp8c_HtTOTwI5pV8Cp4hWx-A99M5YXq1lx1wQ7qGk4MBYXp1_wJ9U_s7rvKLBDCXycw-5gyRsyNVYBXqVDqVPZqamqS4Q6eaERNUCwTCIykbztSWbMdeU--QYkcwZFVCDCXlEOMxSnWa2TYijRwEKTJ0uAmHqry4eNqP61Uz20y1ry8TnB_8lfFZlefv9YWchhPOzNhp1r17412s42BPt6ZX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+<span class="text-white font-medieval text-sm">Shadowdark Scene</span>
+<span class="text-white/60 text-[10px] uppercase tracking-widest font-bold">Concept Art</span>
+</div>
+</div>
+<div class="flex-1 group relative overflow-hidden rounded-xl border-4 border-white dark:border-zinc-800 shadow-lg aspect-video">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Portrait of a jovial stout man with a large mustache in medieval attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmfyPpeCDGxszm2xvOzub0lpVTtor_OMkEt1vaFcHS6MBTK49SlHMV9rY9i1zP9Rt2uYGDZ5i184G_tFaHkT94SpzRf6Ltb96DTkzulmY_ZIHTs_Q2y6tEEdTqpSEHOif-11WZNsMDWJ_yvZyiCSrEDs0xtz8xsPJiYc_ZR9AJezseKvFDInZ30xTKgfb1pxzgG7JqZEcWASHvoc7z8biRbOto-ijvZRu9LqpI8oawkmrtU8NzYqLVTX1Kd-O1oQWaxwA5_6qP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+<span class="text-white font-medieval text-sm">Mirt the Moneylender</span>
+<span class="text-white/60 text-[10px] uppercase tracking-widest font-bold">Character Render</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-medieval text-xl text-ink dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_fix_high</span>
+                        Lore: Magic Items
+                    </h4>
+<div class="overflow-hidden rounded-xl border border-primary/20 shadow-lg">
+<table class="w-full text-left border-collapse font-display text-sm">
+<thead>
+<tr class="bg-primary text-white">
+<th class="py-3 px-4 font-medieval font-normal">Item Name</th>
+<th class="py-3 px-4 font-medieval font-normal">Classification</th>
+<th class="py-3 px-4 font-medieval font-normal">Lore Status</th>
+</tr>
+</thead>
+<tbody class="bg-white/60 dark:bg-black/20">
+<tr class="border-b border-primary/10 bg-background-light/30">
+<td class="py-3 px-4 font-bold text-primary">Ring of Winter</td>
+<td class="py-3 px-4 italic text-ink/70 dark:text-white/70">Artifact</td>
+<td class="py-3 px-4"><span class="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-[10px] font-bold uppercase">Verified</span></td>
+</tr>
+<tr class="border-b border-primary/10">
+<td class="py-3 px-4 font-bold text-primary">Staff of Magius</td>
+<td class="py-3 px-4 italic text-ink/70 dark:text-white/70">Wondrous Item</td>
+<td class="py-3 px-4"><span class="px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-700 text-[10px] font-bold uppercase">Cross-Domain</span></td>
+</tr>
+<tr class="bg-background-light/30">
+<td class="py-3 px-4 font-bold text-primary">The Art of Fire</td>
+<td class="py-3 px-4 italic text-ink/70 dark:text-white/70">Spell Scroll</td>
+<td class="py-3 px-4"><span class="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-[10px] font-bold uppercase">Verified</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

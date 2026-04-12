@@ -1,0 +1,104 @@
+City Gazetteer Creation Guidelines for an LLM:
+
+1. Overview and Purpose:
+   - As the LLM, your role is to create a detailed city gazetteer to support an urban campaign setting.
+   - The gazetteer serves as an encyclopedic reference for the city, complementing the city map and providing depth and texture to the environment.
+
+2. City Map and Transportation:
+   a. Entry and Exit Points:
+      - Identify the primary ways that characters can enter and leave the city, such as major roads, waterways, airship docks, or transportation hubs.
+      - Describe the key features and significance of these entry/exit points.
+
+   b. Intra-City Transportation:
+      - Determine the major routes and thoroughfares that connect the various districts of the city.
+      - Note the names and characteristics of these connecting roads, including prominent landmarks, mode of transportation, and potential obstacles.
+      - Detail any advanced transportation systems, such as subterranean tunnels, aerial cable cars, or magical transportation methods.
+
+   c. District Connections:
+      - For each district, describe how characters can travel to and from it using the major routes.
+      - Provide specific directions or guidance, noting any unique transportation methods or challenges specific to certain districts.
+
+3. District Descriptions:
+   - Prepare a description for each district or major neighborhood in the city.
+   - Include details about the district's general character, such as predominant businesses, architecture, ethnic demographics, and noteworthy history.
+
+4. Landmark Entries:
+   - Create entries for 3-5 notable landmarks within each district.
+   - Landmarks can include prominent buildings, public spaces, businesses, or other locations of interest.
+   - For each landmark, provide a brief description highlighting its significance, unique features, and potential relevance to the campaign.
+
+5. City Services:
+   - Compile a list of common services available within the city, such as inns, shops, banks, medical facilities, and entertainment venues.
+   - For each service category, include 2-3 distinct options, describing their quality, cost, and other distinguishing factors.
+
+6. Adventure Sites:
+   - Note any specific adventure locations, dungeons, or other points of interest within the city.
+   - Determine which of these sites warrant a full entry in the gazetteer, based on their importance or likelihood of being explored by the player characters.
+   - Provide details about the nature, history, and potential significance of these adventure sites.
+
+7. Scenic Encounters:
+   a. Purpose of Scenic Encounters:
+      - Scenic encounters are used to create a sense of constant activity and life within the city, providing small slices of local color and incidental interactions.
+      - They contribute to the impression that the city is a bustling, living environment beyond just the player characters' immediate activities.
+
+   b. Encounter Types:
+      - Scenic encounters should not involve hostile or combat-oriented encounters, but rather focus on everyday events, interactions, and observations.
+      - Examples include lost travelers, street vendors, arguments between locals, unusual sights or sounds, minor criminal activities, and other slice-of-life moments.
+
+   c. Encounter Preparation:
+      - Prepare a table of 20-30 potential scenic encounters that can be used across the various districts of the city.
+      - Alternatively, create separate encounter tables for each district, customizing the encounters to fit the district's unique character and demographics.
+      - For each encounter, prepare a brief description that can be easily incorporated into the narrative when the encounter is triggered.
+
+   d. Encounter Deployment:
+      - As the player characters travel through the city, periodically check for a scenic encounter by rolling a d6 (or other appropriate die).
+      - On a result of 1, a scenic encounter occurs, which the LLM can then describe and introduce into the scene.
+      - Scenic encounters can be placed at landmarks, district entry points, or along the route the characters are taking.
+
+8. Background Events:
+   a. Purpose of Background Events:
+      - Background events are a separate timeline of ongoing occurrences in the campaign world that do not directly involve the player characters.
+      - They provide depth and a sense of a living, persistent world beyond the characters' immediate activities.
+
+   b. Event Types:
+      - Background events can include local news, regional or global happenings, cultural developments, and other noteworthy occurrences.
+      - Examples include political elections, scientific breakthroughs, natural disasters, cultural events, and other significant events that are shaping the campaign world.
+
+   c. Event Presentation:
+      - Background events can be presented to the players in various ways, such as newspaper headlines, overheard conversations, television/radio broadcasts, or information gleaned from NPCs.
+      - These events can serve as backdrops for the characters' adventures, provide context and foreshadowing, or potentially lead to the players pursuing further investigation.
+
+   d. Ongoing Maintenance:
+      - Maintain a separate list of background events, updating it regularly as the campaign progresses.
+      - Periodically transfer relevant background events from this list to the campaign status document to ensure they are incorporated into the ongoing narrative.
+
+9. Gazetteer Entry Template:
+   Each entry in the city gazetteer should follow a consistent format, such as:
+
+   District Name:
+   Description:
+     - General character and features of the district
+   Transportation:
+     - Entry/exit points
+     - Major routes and connections to other districts
+   Landmarks:
+     - Landmark 1 Name:
+       - Description
+     - Landmark 2 Name:
+       - Description
+   Services:
+     - Service 1 Name:
+       - Description
+     - Service 2 Name:
+       - Description
+   Adventure Sites:
+     - Site 1 Name:
+       - Description
+   Scenic Encounters:
+     - Encounter 1 Description
+     - Encounter 2 Description
+
+10. Ongoing Gazetteer Expansion:
+    - As the campaign progresses, be prepared to expand the city gazetteer by adding new district descriptions, landmark entries, service options, adventure sites, and scenic encounters.
+    - The city gazetteer should serve as a living document, evolving alongside the campaign and the PCs' interactions with the city.
+    - Maintain a separate archive of previous versions of the gazetteer to ensure no relevant information is lost.

@@ -1,0 +1,99 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Npc Description V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Detailed NPC Architect
+
+```text
++--------------------------------------------------------------------------------+
+|  [Detailed NPC Architect: Lore & Psyche Suite]                        [?] [X]  |
++--------------------------------------------------------------------------------+
+|  QUICK CONFIG:                                                                 |
+|  Card: [ King of Spades ]  Name: [ Elara Vane ]  Race:[ Half-Elf ]  Role:[Spy] |
++--------------------------------------------------------------------------------+
+|  PHASE 1: THE DATA GRID (TABLE)        |  PHASE 2: THE BACKSTORY               |
+|  Appearance: [ Scarred, wears velvet]  |  "Elara was born to a family of       |
+|  Alignment:  [ Lawful Neutral       ]  |  disgraced nobles in the North..."    |
+|  Catchphrase: [ "Information is coin" ]|                                       |
+|  Mannerisms: [ Checks watch often   ]  |                                       |
+|  [+] Edit Full 16-Field Table          |  [GENERATED: 120 words]               |
++----------------------------------------+---------------------------------------+
+|  PHASE 3: THE PSYCHE (DETAILED)                                                |
+|  1. MOTIVATIONS: [ Reclaim her family title through espionage ]                |
+|  2. MORALS/ETHICS: [ Strictly professional; avoids killing if possible ]       |
+|  3. PERSONALITY: [ Cold, precise, and intensely private ]                      |
+|  4. FLAWS: [ Over-calculates risks; lacks spontaneity ]                       |
++--------------------------------------------------------------------------------+
+|  WORD COUNT: [ 342 / 500 ]  [|||||||...]                                       |
++--------------------------------------------------------------------------------+
+|  [Export Full Dossier] [Copy Character Table] [Generate Portrait]      [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Detailed NPC Architect
+
+## Component Architecture
+- **Multi-Tabbed Generation Workflow:** To prevent overwhelming the DM (as mentioned in the script), the UI is split into three phases: Data Grid, Backstory, and Psyche.
+- **The "Data Grid" (16-Field Table):** A specialized editor that handles the structured requirements of the script, including "Card Value," "Available Knowledge," and "Catchphrases."
+- **Backstory Narrative Module:** A focused text editor with AI assistance to generate the "concise backstory" where each sentence introduces a new, distinct fact.
+- **Psyche Breakdown Panel:** A rigid four-section editor (Motivations, Morals, Personality, Flaws) that ensures the DM follows the script's specific psychological framework.
+- **Budget Monitor (Word Count):** A prominent progress bar that tracks the 500-word limit in real-time.
+
+## Interaction Logic
+- **Incremental Expansion:** The UI encourages the DM to fill the table first, which then "Hydrates" or seeds the backstory and personality sections with keywords and themes.
+- **Brevity Policing:** Both the backstory and persona sections include visual markers to ensure they remain "concise" yet "vivid" as per the roleplay requirements.
+- **The "Card Value" Seed:** Choosing a card value (like "Ace of Hearts") shifts the initial random generation toward specific character archetypes (e.g., Royalty vs. Commoner).
+
+## Visual Design
+- **Literary & Sophisticated:** Uses a more traditional book-layout aesthetic with serif typography and parchment-colored accents, reflecting the "professional creative writer" role.
+- **Progressive Disclosure:** Advanced fields (like "Hidden Knowledge" or "Secret Flaws") are tucked into expandable drawers to keep the main view clean.
+- **Visual Word Count:** The word count isn't just a number; it's a bar that changes color (Green -> Yellow -> Red) as it approaches the 500-word limit.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Detailed NPC Dossier (Elara Vane)
+
+| Category | Details |
+|:---|:---|
+| **Card Value** | Queen of Diamonds |
+| **Name** | Elara Vane |
+| **Race** | Half-Elf |
+| **Role/Profession** | Information Broker (Spy) |
+| **Appearance** | Tall, with a jagged scar across her left cheek; wears deep indigo velvet. |
+| **Alignment** | Lawful Neutral |
+| **Motivations** | To reclaim her family's disgraced title and restores their manor. |
+| **Personality** | Business-like, intensely private, and meticulously organized. |
+| **Flaws** | She trusts nobody, even her closest associates, leading to isolation. |
+| **Catchphrase** | "Every secret has a shelf life." |
+| **Mannerisms** | Habitually checks her silver pocket-watch every few minutes. |
+| **Speech** | Clipped, precise, and devoid of unnecessary pleasantries. |
+| **Knowledge** | Location of the secret smuggling tunnels under the city docks. |
+| **Secret Intel** | The local Baron is currently being blackmailed by a cult. |
+| **Bonds** | Loyal to a retired master-spy who mentored her in the capital. |
+| **Cues** | Avoids direct eye contact; speaks in a hushed, steady tone. |
+
+---
+
+### Backstory:
+Elara was born to the disgraced Vane family, whose estate was seized after a false accusation of treason. She spent her youth in the capital's sewers, learning the value of a well-placed secret. She eventually caught the eye of a royal spymaster who sharpened her intellect into a weapon. She now operates her own network of informants, gathering the leverage needed to buy back her family's honor.
+
+---
+
+### Personality:
+1. **Motivations:** She is driven by the singular goal of restoration, viewing every interaction as a transaction toward that end.
+2. **Morals:** While she operates in shadows, she holds a strict code against unnecessary violence and never sells out a mentor.
+3. **Personality:** She is cold and calculative, masking her deep-seated insecurities with a veneer of professional indifference.
+4. **Flaws:** Her inability to form genuine emotional bonds makes her vulnerable to manipulation by those who simulate a shared grudge.
+

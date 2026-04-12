@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "name": "social_event",
+    "category": "Encounters",
+    "description": "Generates a detailed social event, complete with location, guest list, main event sequence, and conversational topics, for a dynamic urban campaign.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "campaign_context",
+      "type": "string",
+      "label": "Campaign Context",
+      "description": "A brief overview of the overall setting, factions, and current state of the campaign.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "player_characters",
+      "type": "list",
+      "label": "Player Characters",
+      "description": "A list of the player characters involved, including their goals, reputations, and relationships to key NPCs.",
+      "default": null,
+      "item_schema": {
+        "name": "pc",
+        "type": "string",
+        "label": "Player Character",
+        "description": "Name and key details of a single player character.",
+        "default": null,
+        "item_schema": null,
+        "fields": null,
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "event_purpose",
+      "type": "string",
+      "label": "Event Purpose",
+      "description": "The primary goal or theme of the social event (e.g., a fundraising gala, a political rally, a secret underworld meeting).",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "seed_npcs",
+      "type": "list",
+      "label": "Seed NPCs",
+      "description": "A list ofNPC names or roles to be fleshed out. Provide 10-20 key figures relevant to the PCs.",
+      "default": null,
+      "item_schema": {
+        "name": "npc",
+        "type": "string",
+        "label": "Seed NPC",
+        "description": "A name or short description of an NPC to be expanded upon.",
+        "default": null,
+        "item_schema": null,
+        "fields": null,
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "desired_tone",
+      "type": "enum",
+      "label": "Desired Tone",
+      "description": "The general atmosphere the event should evoke.",
+      "default": "Intrigue",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "Intrigue",
+        "Celebration",
+        "Tense",
+        "Formal",
+        "Rowdy",
+        "Mysterious"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "social_event_blueprint",
+      "type": "object",
+      "label": "Social Event Blueprint",
+      "description": "A comprehensive plan for a dynamic social encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "event_name",
+          "type": "string",
+          "label": "Event Name",
+          "description": "A fitting name for the social event.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "location",
+          "type": "object",
+          "label": "Location Details",
+          "description": "A detailed breakdown of the event's location.",
+          "default": null,
+          "item_schema": null,
+          "fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "label": "Location Name",
+              "description": null,
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "General Description",
+              "description": null,
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "areas",
+              "type": "list",
+              "label": "Distinct Areas",
+              "description": "A list of specific zones within the location (e.g., Grand Ballroom, West Terrace, Private Study).",
+              "default": null,
+              "item_schema": {
+                "name": "area",
+                "type": "object",
+                "label": null,
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": [
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "label": "Area Name",
+                    "description": null,
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  },
+                  {
+                    "name": "description",
+                    "type": "string",
+                    "label": "Description",
+                    "description": null,
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  },
+                  {
+                    "name": "privacy",
+                    "type": "boolean",
+                    "label": "Is Private?",
+                    "description": "True if this area is suited for secret conversations.",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  }
+                ],
+                "options": null
+              },
+              "fields": null,
+              "options": null
+            }
+          ],
+          "options": null
+        },
+        {
+          "name": "guest_list",
+          "type": "list",
+          "label": "Guest List",
+          "description": "Detailed profiles for the key NPCs attending the event.",
+          "default": null,
+          "item_schema": {
+            "name": "npc_profile",
+            "type": "object",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "name",
+                "type": "string",
+                "label": "Name",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "role",
+                "type": "string",
+                "label": "Role/Title",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "attitude_towards_pcs",
+                "type": "enum",
+                "label": "Attitude towards PCs",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": [
+                  "Friendly",
+                  "Neutral",
+                  "Suspicious",
+                  "Hostile",
+                  "Unaware"
+                ]
+              },
+              {
+                "name": "goals",
+                "type": "string",
+                "label": "Goals at the Event",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "potential_clues",
+                "type": "string",
+                "label": "Potential Clues",
+                "description": "Information this NPC might reveal.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "scenario_hooks",
+                "type": "string",
+                "label": "Scenario Hooks",
+                "description": "How this NPC could pull the players into future adventures.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "event_sequence",
+          "type": "list",
+          "label": "Main Event Sequence",
+          "description": "A series of major events that will unfold during the party.",
+          "default": null,
+          "item_schema": {
+            "name": "event_point",
+            "type": "object",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "title",
+                "type": "string",
+                "label": "Event Title",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "description",
+                "type": "string",
+                "label": "Description",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "trigger",
+                "type": "string",
+                "label": "Trigger",
+                "description": "What causes this event to occur.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "is_opener",
+                "type": "boolean",
+                "label": "Is Opening Hook?",
+                "description": "True if this is the initial event to grab players' attention.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "conversation_topics",
+          "type": "list",
+          "label": "Key Conversation Topics",
+          "description": "The major topics being discussed by guests.",
+          "default": null,
+          "item_schema": {
+            "name": "topic",
+            "type": "object",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "topic_summary",
+                "type": "string",
+                "label": "Topic Summary",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "viewpoints",
+                "type": "list",
+                "label": "Common Viewpoints",
+                "description": "2-3 general opinions NPCs might hold about this topic.",
+                "default": null,
+                "item_schema": {
+                  "name": "viewpoint",
+                  "type": "string",
+                  "label": null,
+                  "description": null,
+                  "default": null,
+                  "item_schema": null,
+                  "fields": null,
+                  "options": null
+                },
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

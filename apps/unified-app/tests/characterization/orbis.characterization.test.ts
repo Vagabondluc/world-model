@@ -11,14 +11,14 @@ function readJson(name: string) {
 }
 
 describe("orbis characterization", () => {
-  it("freezes the donor as a semantic-only source in the current workspace", () => {
+  it("freezes the donor as an app donor with behavioral capture baseline", () => {
     const routeMap = readJson("route-map.json");
     const report = readJson("characterization-report.json");
 
-    expect(routeMap.classification).toBe("semantic-only donor");
-    expect(routeMap.methodology).toBe("designed intent authoring");
-    expect(routeMap.basis).toBe("designed");
-    expect(report.parityTarget).toBe("adapted+waived");
+    expect(routeMap.classification).toBe("app donor");
+    expect(routeMap.methodology).toBe("behavioral capture");
+    expect(routeMap.basis).toBe("captured");
+    expect(report.parityTarget).toBe("exact+adapted");
     expect(report.coverage.existingSources).toBeGreaterThanOrEqual(1);
   });
 

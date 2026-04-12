@@ -1,6 +1,6 @@
 {
   "donor": "adventure-generator",
-  "basis": "reconstructed",
+  "basis": "captured",
   "panels": [
     "Workflow registry",
     "Guided steps",
@@ -9,7 +9,9 @@
   ],
   "controls": [
     "Create linked entity",
-    "Start generator"
+    "Start generator",
+    "Resume",
+    "Inspect output"
   ],
   "visibleStates": [
     "no workflow records",

@@ -209,3 +209,31 @@ Exit Criteria:
 - cross-donor integration matrix lists the six shared concept families and basis values
 - lens-switch smoke test passes
 - donor and product transition flows preserve canonical state and context
+
+---
+
+## Phase 9: Exhaustive Donor UI
+
+Unit and Integration Tests:
+- `bridge-harness.test.ts` - every donor has executable bridge-test evidence
+- `donor-subapp-host.mount.test.tsx` - donor routes mount `DonorSubappHost`, Watabou reports `rehost-mounted`, and unrehosted donors remain explicit `scaffold-mounted` placeholders
+- `donor-manifest.exactness.test.ts` - manifest-backed exactness rules stay synchronized with donor inventory
+- `cross-donor-world-flow.integration.test.tsx` - donor/product transitions preserve context
+- `context-retention.test.tsx` - selected world/entity context survives donor and product route changes
+
+Gate Checks:
+- `python world-model/scripts/check_phase_9_exhaustive_donors.py`
+- `python world-model/scripts/check_phase_9_exact_donor_ui.py`
+- `python world-model/scripts/check_phase_9_rehost_matrix.py`
+- `python world-model/scripts/run_harness.py --only 9`
+- `python world-model/scripts/run_harness.py --phase 9`
+
+Execution Ledger:
+- `world-model/docs/roadmap/support/PHASE_9_EXECUTION_CHECKLIST.md`
+- `world-model/phase-9-rehost-matrix-report.json`
+
+Exit Criteria:
+- inventory report is complete
+- exactness report is red for the right reasons until vendored runtimes and bridge evidence exist
+- rehost matrix shows source-vendored, route-mounted, bridge-wired, parity-certified, e2e-enabled, and exact-mounted status per donor
+- repeated failures are logged and decomposed in the execution checklist

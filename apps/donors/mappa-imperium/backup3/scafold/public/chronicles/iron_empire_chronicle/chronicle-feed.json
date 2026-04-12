@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "gameName": "Chronicle of the Iron Empire",
+    "version": "1.0",
+    "exportedBy": "SilverQueen (Player 2)",
+    "timestamp": "2023-10-26T18:00:00Z",
+    "elementCount": 12,
+    "gameSettings": {
+      "players": 3,
+      "length": "Short",
+      "turnDuration": 15
+    }
+  },
+  "players": [
+    { "playerNumber": 1, "name": "IronKing" },
+    { "playerNumber": 2, "name": "SilverQueen" },
+    { "playerNumber": 3, "name": "MOFO" }
+  ],
+  "elements": [
+    { "id": "iron-p1-r1", "type": "Resource", "name": "Cinder-Iron Veins", "owner": 1, "era": 1, "data": { "id": "iron-p1-r1-data", "name": "Cinder-Iron Veins", "type": "mineral", "properties": "Iron ore that must be smelted with volcanic heat.", "symbol": "🔥" } },
+    { "id": "iron-p1-r2", "type": "Resource", "name": "Magma Pearls", "owner": 1, "era": 1, "data": { "id": "iron-p1-r2-data", "name": "Magma Pearls", "type": "magical", "properties": "Rare pearls found in lava tubes that retain immense heat.", "symbol": "🟠" } },
+    { "id": "iron-p1-d1", "type": "Deity", "name": "The Great Forge", "owner": 1, "era": 2, "data": { "id": "iron-p1-d1-data", "name": "The Great Forge", "domain": "Craft and Fire", "symbol": "A volcano with an anvil at its peak", "emoji": "🌋", "description": "A deity representing the creative and destructive power of the volcano." } },
+    { "id": "iron-p1-l1", "type": "Location", "name": "The Anvil Peak", "owner": 1, "era": 2, "data": { "id": "iron-p1-l1-data", "name": "The Anvil Peak", "siteType": "volcano", "description": "The central volcano, considered a holy site for all smiths.", "symbol": "🌋" } },
+    { "id": "iron-p2-r1", "type": "Resource", "name": "Moonwood Grove", "owner": 2, "era": 1, "data": { "id": "iron-p2-r1-data", "name": "Moonwood Grove", "type": "flora", "properties": "A forest of trees with luminescent sap, best harvested at night.", "symbol": "🌳" } },
+    { "id": "iron-p2-r2", "type": "Resource", "name": "Sungrass Plains", "owner": 2, "era": 1, "data": { "id": "iron-p2-r2-data", "name": "Sungrass Plains", "type": "flora", "properties": "Fields of grass that store sunlight, providing a potent food source.", "symbol": "🌾" } },
+    { "id": "iron-p2-d1", "type": "Deity", "name": "Lyra, the Moonmaiden", "owner": 2, "era": 2, "data": { "id": "iron-p2-d1-data", "name": "Lyra, the Moonmaiden", "domain": "Night and Secrets", "symbol": "A silver arrow", "emoji": "🏹", "description": "Goddess of the hunt and the mysteries of the night." } },
+    { "id": "iron-p2-l1", "type": "Location", "name": "The Silver Falls", "owner": 2, "era": 2, "data": { "id": "iron-p2-l1-data", "name": "The Silver Falls", "siteType": "river", "description": "A waterfall whose spray glows under the moonlight.", "symbol": "💧" } },
+    { "id": "iron-p3-r1", "type": "Resource", "name": "Bloodroot Swamp", "owner": 3, "era": 1, "data": { "id": "iron-p3-r1-data", "name": "Bloodroot Swamp", "type": "flora", "properties": "A swamp where the roots of trees produce a blood-red, life-giving sap.", "symbol": "🩸" } },
+    { "id": "iron-p3-r2", "type": "Resource", "name": "Wyvern Nests", "owner": 3, "era": 1, "data": { "id": "iron-p3-r2-data", "name": "Wyvern Nests", "type": "fauna", "properties": "High cliffs where wyverns nest. Their eggs and venom are valuable.", "symbol": "🐲" } },
+    { "id": "iron-p3-d1", "type": "Deity", "name": "Grak, the Skull-Taker", "owner": 3, "era": 2, "data": { "id": "iron-p3-d1-data", "name": "Grak, the Skull-Taker", "domain": "Conquest", "symbol": "A pile of skulls", "emoji": "💀", "description": "The brutal god worshipped by the orcish clans." } },
+    { "id": "iron-p3-l1", "type": "Location", "name": "The Proving Grounds", "owner": 3, "era": 2, "data": { "id": "iron-p3-l1-data", "name": "The Proving Grounds", "siteType": "canyon", "description": "A dangerous canyon where young orcs prove their strength.", "symbol": "🧱" } }
+  ]
+}

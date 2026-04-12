@@ -1,53 +1,88 @@
-export type DonorId = "mythforge" | "orbis" | "adventure-generator";
+import exactnessManifest from "./exactness-manifest.json";
 
-export type DonorClassification = "app donor" | "fragment donor" | "semantic-only donor";
+export type DonorId =
+  | "mythforge"
+  | "orbis"
+  | "adventure-generator"
+  | "mappa-imperium"
+  | "dawn-of-worlds"
+  | "faction-image"
+  | "watabou-city"
+  | "encounter-balancer";
+
+export type DonorClassification = "app donor" | "clean-room app donor" | "scaffold-copy donor";
+export type DonorMountKind =
+  | "vendored-subapp"
+  | "rehost-mounted"
+  | "scaffold-mounted"
+  | "representative-scaffold";
+export type DonorImplementationStatus =
+  | "exact-vendored"
+  | "rehost-mounted"
+  | "scaffold-mounted"
+  | "representative-scaffold-placeholder";
+
+export interface DonorCanonicalBridgeDefinition {
+  projector: string;
+  actionTranslator: string;
+  tests: string[];
+}
 
 export interface DonorDefinition {
   id: DonorId;
   label: string;
   classification: DonorClassification;
   route: string;
+  vendoredRoot: string;
+  mountKind: DonorMountKind;
+  implementationStatus: DonorImplementationStatus;
+  canonicalBridge: DonorCanonicalBridgeDefinition;
+  characterizationBaseline: string;
+  conformanceSuite: string;
   compareHint: string;
   summary: string;
   sourceStatus: string;
+  sourceRoot: string;
+  sourceUiUrl?: string;
 }
 
-export const DONOR_DEFINITIONS: Record<DonorId, DonorDefinition> = {
-  mythforge: {
-    id: "mythforge",
-    label: "Mythforge",
-    classification: "app donor",
-    route: "/donor/mythforge",
-    compareHint: "Runnable donor UI with real tests and recoverable panel structure.",
-    summary: "World authoring donor with explorer, workspace, dialogs, and canonical save/open affordances.",
-    sourceStatus: "Full donor app exists in the workspace."
-  },
-  orbis: {
-    id: "orbis",
-    label: "Orbis",
-    classification: "semantic-only donor",
-    route: "/donor/orbis",
-    compareHint: "No runnable donor UI in the workspace; surface is derived from adapter semantics.",
-    summary: "Simulation donor defining domain toggles, fidelity, snapshots, and event-stream review.",
-    sourceStatus: "Adapter docs and snapshots exist, but no runnable UI root was found."
-  },
-  "adventure-generator": {
-    id: "adventure-generator",
-    label: "Adventure Generator",
-    classification: "fragment donor",
-    route: "/donor/adventure-generator",
-    compareHint: "Guided workflow donor reconstructed from surviving app residue and adapter contracts.",
-    summary: "Workflow donor defining guided steps, checkpoints, progress, and generated-output review.",
-    sourceStatus: "Compiled app residue exists, but complete source and package metadata are missing."
-  }
+type ExactnessManifest = {
+  donorOrder: DonorId[];
+  donors: Record<DonorId, DonorDefinition>;
 };
 
-export const DONOR_ORDER: DonorId[] = ["mythforge", "orbis", "adventure-generator"];
+const EXACTNESS_MANIFEST = exactnessManifest as ExactnessManifest;
+
+export const DONOR_DEFINITIONS: Record<DonorId, DonorDefinition> = EXACTNESS_MANIFEST.donors;
+
+export const DONOR_ORDER: DonorId[] = EXACTNESS_MANIFEST.donorOrder;
 
 export function isDonorId(value: string): value is DonorId {
-  return value === "mythforge" || value === "orbis" || value === "adventure-generator";
+  return DONOR_ORDER.includes(value as DonorId);
 }
 
 export function donorLabel(donor: DonorId): string {
   return DONOR_DEFINITIONS[donor].label;
 }
+
+export const DONOR_ROUTE_LABELS = [
+  "Mythforge",
+  "Orbis",
+  "Adventure Generator",
+  "Mappa Imperium",
+  "Dawn of Worlds",
+  "Sacred Sigil Generator",
+  "Watabou City",
+  "Encounter Balancer Scaffold",
+] as const;
+
+export const DONOR_ROUTE_LABEL_HINTS = [
+  { label: "Mythforge", route: "/donor/mythforge" },
+  { label: "Orbis", route: "/donor/orbis" },
+  { label: "Adventure Generator", route: "/donor/adventure-generator" },
+  { label: "Mappa Imperium", route: "/donor/mappa-imperium" },
+  { label: "Dawn of Worlds", route: "/donor/dawn-of-worlds" },
+  { label: "Sacred Sigil Generator", route: "/donor/faction-image" },
+  { label: "Watabou City", route: "/donor/watabou-city" },
+  { label: "Encounter Balancer Scaffold", route: "/donor/encounter-balancer" },
+] as const;

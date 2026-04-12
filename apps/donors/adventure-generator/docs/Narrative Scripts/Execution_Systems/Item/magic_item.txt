@@ -1,0 +1,73 @@
+# LLM Guidelines for Conceptualizing and Describing a Magic Item
+
+As an LLM, your task is to create a comprehensive document that conceptualizes and describes a magic item for a tabletop roleplaying game. This document should provide a detailed description of the item, its properties, and its role in the game world.
+
+## Output File
+Generate a file named "magic_item_concept.md" with the following structure:
+
+1. Item Name and Type
+2. Purpose and Function
+3. Physical Description
+4. Magical Properties
+5. Activation and Usage
+6. Rarity and Value
+7. History and Lore
+8. Special Considerations
+
+## Section Details
+
+### 1. Item Name and Type
+- Create a unique and evocative name for the magic item.
+- Specify the type of magic item (Armor, Potion, Ring, Rod, Scroll, Staff, Wand, Weapon, or Wondrous item).
+- If applicable, specify the subtype (e.g., for weapons: longsword, warhammer; for armor: chain mail, shield).
+
+### 2. Purpose and Function
+- Describe the original purpose for which the item was created.
+- Explain the primary function of the item in gameplay terms.
+- If the item replicates a spell effect, specify which spell and any modifications to its normal function.
+
+### 3. Physical Description
+- Provide a vivid description of the item's appearance.
+- Include details on size, weight, material, and any unique visual features.
+- Describe any changes in appearance when the item is activated or in use.
+
+### 4. Magical Properties
+- List and describe all magical effects and bonuses provided by the item.
+- Include any permanent effects on the wielder.
+- Specify if the item grants new abilities or enhances existing ones.
+- If applicable, detail any negative effects or drawbacks of using the item.
+
+### 5. Activation and Usage
+- Explain how the item is activated (command word, physical action, mental command, etc.).
+- Specify if the item uses charges, and if so, how many and how they recharge.
+- Detail any limitations on usage (times per day, specific conditions, etc.).
+- If the item requires attunement, state this and any class or other restrictions on who can attune to it.
+
+### 6. Rarity and Value
+- Assign a rarity level (Common, Uncommon, Rare, Very Rare, Legendary, Artifact, or Fabled).
+- Provide an estimated value range based on the rarity.
+- If the item is an Artifact or Fabled item, note that it is priceless.
+
+### 7. History and Lore
+- Create a brief history of the item, including its creation and notable past wielders.
+- For Artifacts, include its significant impact on the world and a unique method of destruction.
+- For Fabled items, describe how it grows in power with the wielder.
+
+### 8. Special Considerations
+- If the item is cursed, describe the nature and effects of the curse.
+- For sentient items, provide:
+  - Intelligence, Wisdom, and Charisma scores
+  - Methods of communication
+  - Senses the item possesses
+  - Personality traits, motivations, and goals
+
+## Additional Instructions
+
+1. Use clear, evocative language throughout the document.
+2. Ensure the item's power level is appropriate for its rarity (refer to the Magic Item Rarity table in the source text).
+3. For items with spell effects, don't exceed the highest spell circle listed for the item's rarity.
+4. Use markdown formatting for better readability and organization.
+5. Keep the total description concise but comprehensive, aiming for 300-500 words.
+6. Ensure that the item description provides enough detail for a game master to easily incorporate it into their game.
+
+Remember, your task is to generate a complete, ready-to-use document describing a magic item. This description should provide all necessary information for understanding the item's function, role in the game world, and mechanical effects in gameplay.

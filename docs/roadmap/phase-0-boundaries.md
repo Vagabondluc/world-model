@@ -58,7 +58,7 @@ Deliverables:
   - optional bottom drawer
 - internal scaffolding depths (`Guided`, `Studio`, `Architect`) exist to validate the canonical data layer only; they are not donor-faithful surfaces
 - the real UI contract is per-donor: each donor app has its own faithful surface hosted inside the unified app
-- donor-faithful surface routes are Phase 7 scope (`/donor/mythforge`, `/donor/orbis`, `/donor/adventure-generator`)
+- donor-faithful surface routes are Phase 7+ scope and are expanded exhaustively in Phase 9 according to `docs/donors/INDEX.md`
 
 Acceptance:
 

@@ -1,0 +1,524 @@
+# 5th Edition D&D Monster Templates Guide
+
+## What is a Template?
+
+A template is a set of modifications that can be applied to an existing creature to create a new variant with specific themes or abilities. Templates allow Dungeon Masters to quickly customize monsters or NPCs, adding depth and variety to their game without creating entirely new creatures from scratch.
+
+## How to Apply a Template
+
+1. Choose a base creature to modify.
+2. Select an appropriate template.
+3. Apply the changes specified in the template to the base creature's statistics.
+4. Add new features, actions, or traits as described in the template.
+5. Recalculate the creature's Challenge Rating based on its new abilities and stats.
+
+## Anatomy of a Template
+
+A typical template includes:
+
+1. **Prerequisite**: Conditions that must be met for the template to be applied.
+2. **Type**: Any changes to the creature's type (e.g., from humanoid to undead).
+3. **Ability Score Changes**: Modifications to the creature's ability scores.
+4. **New Senses**: Additional senses the creature gains.
+5. **New Skills**: Any skill proficiencies the creature acquires.
+6. **Damage Resistances/Immunities/Vulnerabilities**: Changes to the creature's damage interactions.
+7. **Condition Immunities**: New conditions the creature becomes immune to.
+8. **New Features**: Special abilities or traits the creature gains.
+9. **New Actions**: Additional actions the creature can take.
+
+## Dealing with Conflicting Monster Features
+
+When a template grants a feature that conflicts with an existing feature of the base creature:
+
+1. Use the higher value for numerical bonuses.
+2. Keep both features if they provide different benefits.
+3. Replace the existing feature if the new one is strictly better.
+4. Use your discretion as DM to decide which fits better thematically.
+
+## Functional Templates vs. Class Templates
+
+**Functional Templates** modify a creature to fit a specific role or theme, such as "undead commander" or "fey-touched being." They often change fundamental aspects of the creature, including its type or core abilities.
+
+**Class Templates** add features and abilities based on player character classes. They typically grant class features, spellcasting abilities, or other powers associated with a particular class, allowing you to create NPC versions of class archetypes.
+
+Both types of templates provide ways to customize creatures, but they approach it from different angles - one focusing on thematic modifications, the other on class-based enhancements.
+
+| Functional Templates     | Class Templates |
+|--------------------------|-----------------|
+| Battle champion           | Cleric          |
+| Bodyguard                 | Fighter         |
+| Death knight              | Paladin         |
+| Death master              | Ranger          |
+| Demagogue                 | Rogue           |
+| Demonic acolyte           | Warlock         |
+| Devastator                | Warlord         |
+| Feyborn                   | Wizard          |
+| Frost adept               |                 |
+| Lich                      |                 |
+| Mummy lord                |                 |
+| Mummy champion            |                 |
+| Savage berserker          |                 |
+| Scion of flame            |                 |
+| Shadowborn stalker        |                 |
+| Vampire lord              |                 |
+
+
+# 5th Edition D&D Functional Monster Templates
+
+## Battle Champion
+
+**Prerequisite:** Any humanoid creature
+
+The Battle Champion is a paragon of martial prowess, honed through countless conflicts and rigorous training. These individuals rise above their peers, not just in skill, but in their ability to inspire and lead others in combat. Battle Champions are often found at the forefront of armies, serving as elite guards for rulers, or as the champions of their people in times of strife. Their presence on the battlefield can turn the tide of war, as allies fight with renewed vigor in their presence and foes quail before their martial skill.
+
+**Changes:**
+- Increase Strength and Constitution scores by 2 (maximum 20).
+- Gain proficiency in all armor and martial weapons.
+- Gain proficiency in Athletics and Intimidation skills.
+- Add the following features:
+  - **Indomitable** (Recharges after a Short or Long Rest): The battle champion can reroll a failed saving throw. It must use the new roll.
+  - **Rallying Cry** (1/Day): As a bonus action, the battle champion can bolster nearby allies. Each friendly creature within 30 feet of the battle champion that can hear it gains temporary hit points equal to 1d10 + the battle champion's Charisma modifier.
+- Add the following action:
+  - **Sweeping Strike**: The battle champion makes a melee weapon attack against any number of creatures within 5 feet of it, with a separate attack roll for each target.
+
+## Bodyguard
+
+**Prerequisite:** Any humanoid creature
+
+Bodyguards are the ultimate protectors, individuals who have dedicated their lives to ensuring the safety of others. They possess an uncanny ability to anticipate threats and position themselves to intercept danger before it reaches their charges. More than just skilled fighters, bodyguards are masters of situational awareness, constantly scanning for potential threats and escape routes. Their unwavering loyalty and willingness to sacrifice themselves for their charges make them both respected and feared.
+
+**Changes:**
+- Increase Constitution score by 2 (maximum 20).
+- Gain proficiency in Constitution saving throws.
+- Gain proficiency in Perception and Athletics skills.
+- Add the following features:
+  - **Vigilant Defender**: The bodyguard can take two reactions each round, but only one per turn.
+  - **Interposing Defense**: When a creature the bodyguard can see attacks a target other than the bodyguard that is within 5 feet of it, the bodyguard can use its reaction to become the target of the attack instead.
+- Add the following action:
+  - **Protective Strike**: The bodyguard makes one melee weapon attack. If the attack hits, the bodyguard can move up to half its speed without provoking opportunity attacks, positioning itself between the target and another creature of the bodyguard's choice.
+
+## Death Knight
+
+**Prerequisite:** Any humanoid creature of 9th level or higher
+
+Death Knights are fallen warriors who have been granted a terrible form of undeath, either as punishment for their misdeeds or as a reward for their service to dark powers. These formidable combatants retain all of their martial skill from life, now enhanced by necromantic energies that allow them to bolster undead allies and strike fear into the hearts of the living. Death Knights are often found leading armies of the undead or serving as the elite guard for powerful liches or vampire lords. Their very presence can corrupt the land around them, turning verdant fields into blighted wastelands.
+
+**Changes:**
+- The creature's type changes to undead.
+- Increase Strength and Charisma scores by 2 (maximum 20).
+- Gain immunity to cold, necrotic, and poison damage.
+- Gain immunity to exhaustion, frightened, and poisoned conditions.
+- Add the following features:
+  - **Undead Nature**: The death knight doesn't require air, food, drink, or sleep.
+  - **Marshal Undead**: When an undead creature that isn't hostile to the death knight starts its turn within 60 feet of the death knight, it gains a +2 bonus to its attack rolls until the start of its next turn.
+- Add the following actions:
+  - **Hellfire Orb** (1/Day): The death knight hurls a magical ball of fire that explodes at a point it can see within 120 feet. Each creature in a 20-foot-radius sphere centered on that point must make a DC 15 Dexterity saving throw. The sphere spreads around corners. A creature takes 10d6 fire damage and 10d6 necrotic damage on a failed save, or half as much damage on a successful one.
+  - **Soul-Stealing Strike**: Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage plus 9 (2d8) necrotic damage. The target must succeed on a DC 15 Constitution saving throw or its hit point maximum is reduced by an amount equal to the necrotic damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+
+## Death Master
+
+**Prerequisite:** Any humanoid creature with spellcasting ability
+
+Death Masters are the pinnacle of necromantic power, individuals who have delved so deeply into the secrets of death that they stand at the threshold between life and the grave. These sinister spellcasters command legions of undead, raising fallen foes to serve them and using necromantic energy to devastate their enemies. Death Masters often seek to unlock the secrets of immortality, viewing undeath as the ultimate form of existence. Their lairs are grim places filled with the remnants of their dark experiments and the mindless undead that serve them.
+
+**Changes:**
+- Gain resistance to necrotic damage.
+- Gain proficiency in the Arcana and Religion skills.
+- Add the following features:
+  - **Grave Calling** (3/Day): As an action, the death master can target one dead humanoid within 60 feet. The target returns to life as a zombie under the death master's control. The zombie turns to dust when the death master uses this feature again or after 1 hour.
+  - **Dark Resurrection**: When the death master is reduced to 0 hit points, it turns into a wraith under the DM's control. Its body turns to dust.
+- Add the following actions:
+  - **Life Drain**: Melee Spell Attack: +7 to hit, reach 5 ft., one creature. Hit: 4d8 necrotic damage. The target must succeed on a DC 15 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+  - **Necrotic Burst** (Recharge 5-6): The death master releases a burst of necrotic energy. Each creature within 30 feet must make a DC 15 Constitution saving throw, taking 6d8 necrotic damage on a failed save, or half as much damage on a successful one. Undead creatures the death master controls are unaffected by this burst.
+
+## Demagogue
+
+**Prerequisite:** Any humanoid creature with Charisma 13 or higher
+
+Demagogues are charismatic leaders who possess an uncanny ability to sway the masses through their words and presence. They can incite riots with a whisper or quell uprisings with a gesture, their influence over others bordering on the supernatural. Demagogues are often found at the head of cults, radical political movements, or as the power behind the throne in corrupt regimes. Their followers display a fanatical devotion, willing to sacrifice everything for their leader's cause.
+
+**Changes:**
+- Increase Charisma score by 4 (maximum 20).
+- Gain proficiency in the Deception, Intimidation, and Persuasion skills.
+- Add the following features:
+  - **Aura of Fanaticism**: Allies within 30 feet of the demagogue have advantage on saving throws against being charmed and frightened.
+  - **Zealous Followers**: The demagogue is always accompanied by 2d4 fanatics (use the Cultist stat block, but they have advantage on saving throws while within 30 feet of the demagogue).
+- Add the following actions:
+  - **Incite Violence** (Recharge 5-6): The demagogue delivers an impassioned speech. Each creature of the demagogue's choice within 60 feet that can hear the demagogue must succeed on a DC 15 Wisdom saving throw or be compelled to use its reaction to make a melee attack against a target of the demagogue's choice.
+  - **Compelling Command**: The demagogue targets one creature it can see within 30 feet. The target must succeed on a DC 15 Wisdom saving throw or be charmed by the demagogue for 1 minute. While charmed, the target regards the demagogue's words as absolute truth and will carry out any verbal commands the demagogue gives that don't cause direct harm to the target.
+
+## Demonic Acolyte
+
+**Prerequisite:** Any humanoid creature with spellcasting ability
+
+Demonic Acolytes are mortals who have pledged their souls to demon lords, gaining infernal powers in exchange for their servitude. These corrupted individuals serve as the intermediaries between the mortal realm and the Abyss, leading cults dedicated to their demonic patrons. Demonic Acolytes undergo physical and spiritual transformations as they delve deeper into abyssal magic, their bodies warping to reflect their inner corruption. They are often tasked with spreading chaos and destruction in the material plane, paving the way for demonic invasions.
+
+**Changes:**
+- The creature gains the fiend type in addition to its other types.
+- Increase Constitution and Charisma scores by 2 (maximum 20).
+- Gain resistance to fire damage and one other damage type of your choice.
+- Gain advantage on saving throws against spells and other magical effects.
+- Add the following features:
+  - **Demonic Blessing**: The demonic acolyte can add 1d6 to any ability check, attack roll, or saving throw it makes. Once this feature is used, it can't be used again until the demonic acolyte finishes a short or long rest.
+  - **Abyssal Conduit**: The demonic acolyte can cast the summon lesser demons spell once per day without using a spell slot (spell save DC 15).
+- Add the following actions:
+  - **Corrupting Touch**: Melee Spell Attack: +7 to hit, reach 5 ft., one target. Hit: 3d6 necrotic damage, and the target must succeed on a DC 15 Constitution saving throw or be poisoned until the end of its next turn.
+  - **Demonic Rage** (Recharge 5-6): For 1 minute, the demonic acolyte enters a rage empowered by its patron. It gains resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks, and its melee weapon attacks deal an extra 1d6 fire damage.
+
+## Devastator
+
+**Prerequisite:** Any humanoid creature with spellcasting ability
+
+Devastators are the epitome of destructive magic, spellcasters who have honed their craft for the singular purpose of wreaking havoc on the battlefield. These individuals can unleash barrages of elemental fury, shatter defenses with a word, and reduce entire formations to ash with a gesture. Devastators are highly sought after by armies and often serve as living weapons of mass destruction. Their presence in a conflict can shift the balance of power dramatically, as few conventional defenses can withstand their arcane onslaught.
+
+**Changes:**
+- Increase Intelligence score by 2 (maximum 20).
+- Gain proficiency in the Arcana skill.
+- Add the following features:
+  - **Arcane Recovery** (1/Day): When the devastator finishes a short rest, it can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half the devastator's level (rounded up), and none of the slots can be 6th level or higher.
+  - **Sculpt Spells**: When the devastator casts an evocation spell that affects other creatures that it can see, it can choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.
+- Add the following actions:
+  - **Arcane Burst** (Recharge 5-6): The devastator releases a burst of raw magical energy. Each creature in a 20-foot radius must make a DC 15 Dexterity saving throw, taking 8d6 force damage on a failed save, or half as much damage on a successful one.
+  - **Empowered Evocation**: When the devastator deals damage with an evocation spell, it can add its Intelligence modifier to one damage roll of that spell.
+
+## Feyborn
+
+**Prerequisite:** Any beast or humanoid creature
+
+Feyborn are mortals who have been touched by the wild magic of the Feywild, their very essence altered by prolonged exposure to this realm of chaos and beauty. These individuals straddle the line between the mortal world and the fey realms, possessing an otherworldly allure and unpredictable nature. Feyborn often exhibit physical changes that hint at their connection to the Feywild, such as vibrant hair colors, shimmering skin, or eyes that change color with their mood. Their innate connection to fey magic grants them abilities that blur the lines between reality and illusion.
+
+**Changes:**
+- The creature gains the fey type in addition to its other types.
+- Increase Charisma score by 2 (maximum 20).
+- Gain proficiency in the Deception and Persuasion skills.
+- Add the following features:
+  - **Fey Ancestry**: The feyborn has advantage on saving throws against being charmed, and magic can't put it to sleep.
+  - **Misty Escape** (Recharge 5-6): As a bonus action, the feyborn can teleport up to 30 feet to an unoccupied space it can see. It is then invisible until the start of its next turn or until it attacks or casts a spell.
+- Add the following actions:
+  - **Fey Charm**: The feyborn targets one humanoid it can see within 30 feet of it. If the target can see the feyborn, it must succeed on a DC 15 Wisdom saving throw or be magically charmed for 1 minute. The charmed creature regards the feyborn as a trusted friend to be heeded and protected. Although the target isn't under the feyborn's control, it takes the feyborn's requests or actions in the most favorable way it can.
+  - **Glamour Weaving** (1/Day): The feyborn magically weaves an illusion to alter its appearance or that of up to three willing creatures within 30 feet. Each target can appear up to 1 foot shorter or taller and can appear thin, fat, or in between. The illusion can't change a target's body type, so each target must adopt a form that has the same basic arrangement of limbs. The illusion lasts for 8 hours or until the feyborn uses this feature again.
+
+## Frost Adept
+
+**Prerequisite:** Any humanoid creature with spellcasting ability
+
+Frost Adepts are individuals who have forged a deep connection with the elemental power of ice and cold. These winter-touched beings can conjure blizzards with a thought, shape ice into deadly weapons, and freeze their foes solid with a touch. Frost Adepts are often found in arctic regions, serving as guardians of ancient glacial temples or as the champions of primordial ice elementals. Their presence can dramatically alter local weather patterns, bringing unseasonable cold and frost wherever they go.
+
+**Changes:**
+- Gain resistance to cold damage.
+- Gain immunity to the Frozen condition (if using optional rules for extreme cold).
+- Add the following features:
+  - **Ice Walk**: The frost adept can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
+  - **Frozen Armor**: As a bonus action, the frost adept can coat itself in magical ice, gaining a +2 bonus to AC for 1 minute or until it is hit by a fire damage attack.
+- Add the following actions:
+  - **Frost Bolt**: Ranged Spell Attack: +7 to hit, range 60 ft., one target. Hit: 3d6 cold damage, and the target's speed is reduced by 10 feet until the end of its next turn.
+  - **Blizzard** (Recharge 5-6): The frost adept magically creates a blizzard in a 20-foot radius centered on a point it can see within 120 feet. The area becomes difficult terrain and is heavily obscured. Each creature in the area when the blizzard appears or that ends its turn there must make a DC 15 Constitution saving throw, taking 4d6 cold damage on a failed save, or half as much damage on a successful one. The blizzard lasts for 1 minute or until the frost adept uses a bonus action to end it.
+
+## Lich
+
+**Prerequisite:** Any humanoid spellcaster of 17th level or higher
+
+Liches are the ultimate expression of the necromancer's art, spellcasters who have conquered death through dark rituals and the creation of a phylactery to house their soul. These undead archmages possess vast magical power and knowledge accumulated over centuries of unlife. Liches are driven by an insatiable hunger for arcane secrets and power, often conducting horrific experiments and amassing vast libraries of forbidden lore. Their very presence can warp reality, and the areas around their lairs often become warped by necromantic energies.
+
+**Changes:**
+- The creature's type changes to undead.
+- Increase Intelligence and Wisdom scores by 2 (maximum 20).
+- Gain immunity to cold, lightning, necrotic and poison damage.
+- Gain immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+- Gain immunity to charmed, exhaustion, frightened, paralyzed, and poisoned conditions.
+- Add the following features:
+  - **Legendary Resistance** (3/Day): If the lich fails a saving throw, it can choose to succeed instead.
+  - **Rejuvenation**: If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.
+  - **Turn Resistance**: The lich has advantage on saving throws against any effect that turns undead.
+- Add the following actions:
+  - **Paralyzing Touch**: Melee Spell Attack: +12 to hit, reach 5 ft., one creature. Hit: 3d6 cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+  - **Frightening Gaze**: The lich targets one creature it can see within 10 feet of it. If the target can see the lich, it must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.
+
+## Mummy Lord
+
+**Prerequisite:** Any humanoid creature of 13th level or higher
+
+Mummy Lords are the preserved remains of ancient rulers or high priests, sustained through powerful necromantic rituals to serve as eternal guardians. These undead lords retain much of their knowledge and power from life, enhanced by the dark magics that animate them. Mummy Lords are often found guarding ancient tombs, lost cities, or sites of great religious significance. They possess a terrifying array of necromantic and divine powers, and their curse can linger for generations, affecting those who dare to disturb their rest.
+
+**Changes:**
+- The creature's type changes to undead.
+- Increase Strength and Wisdom scores by 2 (maximum 20).
+- Gain immunity to necrotic and poison damage.
+- Gain immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+- Gain immunity to charmed, exhaustion, frightened, paralyzed, and poisoned conditions.
+- Gain vulnerability to fire damage.
+- Add the following features:
+  - **Magic Resistance**: The mummy lord has advantage on saving throws against spells and other magical effects.
+  - **Rejuvenation**: A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart.
+- Add the following actions:
+  - **Dreadful Glare**: The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw or become frightened until the end of the mummy lord's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours.
+  - **Blasphemous Word** (1/Day): The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be stunned until the end of the mummy lord's next turn.
+
+## Mummy Champion
+
+**Prerequisite:** Any humanoid creature of 7th level or higher
+
+Mummy Champions are the elite warriors of ancient cultures, preserved through sacred mummification rites to serve as eternal protectors. Unlike their priestly counterparts, Mummy Champions retain their martial prowess, combining it with necromantic durability and divine wrath. These undead warriors are often found guarding the tombs of great rulers or serving as the vanguard for more powerful undead masters. Their presence inspires dread in their enemies, and their strikes carry the weight of ancient curses.
+
+**Changes:**
+- The creature's type changes to undead.
+- Increase Strength and Constitution scores by 2 (maximum 20).
+- Gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.
+- Gain immunity to necrotic and poison damage.
+- Gain immunity to charmed, exhaustion, frightened, paralyzed, and poisoned conditions.
+- Gain vulnerability to fire damage.
+- Add the following features:
+  - **Undead Fortitude**: If damage reduces the mummy champion to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the mummy champion drops to 1 hit point instead.
+  - **Aura of Dread**: Any creature hostile to the mummy champion that starts its turn within 10 feet of the mummy champion must make a DC 15 Wisdom saving throw, unless the mummy champion is incapacitated. On a failed save, the creature is frightened until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the mummy champion's Aura of Dread for the next 24 hours.
+- Add the following actions:
+  - **Desiccating Strike**: Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage plus 10 (3d6) necrotic damage. If the target is a creature, it must succeed on a DC 15 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.
+  - **Command Undead** (1/Day): The mummy champion targets up to three undead creatures it can see within 30 feet of it. Each target must succeed on a DC 15 Wisdom saving throw or fall under the mummy champion's control for 24 hours. An undead that has a CR higher than the mummy champion's level is immune to this effect.
+
+## Savage Berserker
+
+**Prerequisite:** Any humanoid creature
+
+Savage Berserkers are warriors who have tapped into primal fury, channeling rage and bloodlust to become unstoppable forces on the battlefield. These individuals eschew armor and finesse in favor of raw power and aggression, often entering a trance-like state of battle frenzy. Savage Berserkers are feared for their unpredictability and seemingly inhuman endurance, shrugging off wounds that would fell lesser warriors. They are often found leading warbands of barbaric tribes or serving as shock troops for more organized armies.
+
+**Changes:**
+- Increase Strength and Constitution scores by 2 (maximum 20).
+- Gain proficiency in Athletics and Intimidation skills.
+- Add the following features:
+  - **Rage** (3/Day): As a bonus action, the savage berserker can enter a rage for 1 minute. While raging, it gains the following benefits:
+    - Advantage on Strength checks and Strength saving throws.
+    - When it makes a melee weapon attack using Strength, it gains a +2 bonus to the damage roll.
+    - It has resistance to bludgeoning, piercing, and slashing damage.
+  - **Reckless Attack**: At the start of its turn, the savage berserker can choose to attack recklessly. Doing so gives it advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against it have advantage until its next turn.
+- Add the following action:
+  - **Frenzied Strikes**: The savage berserker makes three melee weapon attacks. If at least two of these attacks hit, the target must succeed on a DC 15 Constitution saving throw or be stunned until the end of its next turn.
+
+## Scion of Flame
+
+**Prerequisite:** Any humanoid creature with spellcasting ability
+
+Scions of Flame are individuals who have forged a deep connection with elemental fire, either through arcane study, divine blessing, or exposure to powerful fire elementals. These living embodiments of flame can conjure and control fire at will, their very presence raising the temperature of their surroundings. Scions of Flame are often worshipped as living gods by fire-revering cults or serve as the champions of fire elementals in the mortal realm. Their mastery over flame allows them to burn away both physical and magical defenses, making them formidable opponents.
+
+**Changes:**
+- Gain resistance to fire damage.
+- Add the following features:
+  - **Ignite** (Recharge 5-6): As a bonus action, the scion of flame causes all flammable objects within 30 feet that aren't being worn or carried to burst into flame.
+  - **Fire Absorption**: Whenever the scion of flame is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to half the fire damage dealt.
+- Add the following actions:
+  - **Firebolt**: Ranged Spell Attack: +7 to hit, range 120 ft., one target. Hit: 2d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.
+  - **Wall of Fire** (1/Day): The scion of flame creates a wall of fire on a solid surface within 120 feet. The wall can be up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall lasts for 1 minute or until the scion's concentration ends. When the wall appears, each creature within its area must make a DC 15 Dexterity saving throw, taking 5d8 fire damage on a failed save, or half as much damage on a successful one. One side of the wall deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there.
+
+## Shadowborn Stalker
+
+**Prerequisite:** Any humanoid creature
+
+Shadowborn Stalkers are individuals who have been touched by the essence of the Shadowfell, granting them supernatural stealth and control over darkness. These enigmatic figures can meld with shadows, teleport through darkened areas, and strike with the swiftness of a flickering shadow. Shadowborn Stalkers often serve as elite assassins, spies, or thieves, their abilities making them nearly impossible to detect or capture. Their prolonged exposure to the Shadowfell often leaves them with a grim outlook and an affinity for darkness that unnerves even their allies.
+
+**Changes:**
+- Gain darkvision 60 ft. If the creature already has darkvision, its range increases by 30 ft.
+- Gain proficiency in Stealth skill. If already proficient, gain expertise (double proficiency bonus).
+- Add the following features:
+  - **Shadow Stealth**: While in dim light or darkness, the shadowborn stalker can take the Hide action as a bonus action.
+  - **Shadow Jump** (Recharge 4-6): As a bonus action, the shadowborn stalker can teleport up to 30 feet to an unoccupied space it can see that is in dim light or darkness.
+- Add the following actions:
+  - **Shadow Strike**: Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 7 (2d6) necrotic damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or its speed is reduced by 10 feet until the end of its next turn.
+  - **Envelope in Darkness** (1/Day): The shadowborn stalker magically creates an area of darkness in a 15-foot radius sphere centered on a point it can see within 60 feet. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it. If any of the area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled. The darkness lasts for 10 minutes or until the shadowborn stalker dismisses it as an action.
+
+## Vampire Lord
+
+**Prerequisite:** Any humanoid creature of 11th level or higher
+
+Vampire Lords are the apex predators of the undead world, having mastered their bloodlust and unlocked the full potential of their vampiric powers. These charismatic and terrifying individuals possess supernatural strength, speed, and charm, able to enthrall mortals with a glance and heal grievous wounds by feeding on the living. Vampire Lords often rule over networks of lesser vampires and thralls, building shadow empires that span generations. Their immortality and cunning make them patient and dangerous foes, capable of orchestrating schemes that unfold over centuries.
+
+**Changes:**
+- The creature's type changes to undead.
+- Increase Strength, Dexterity, and Charisma scores by 2 (maximum 20).
+- Gain resistance to necrotic damage and bludgeoning, piercing, and slashing damage from nonmagical attacks.
+- Gain the following weaknesses: sunlight hypersensitivity, running water, stake to the heart, invitation only.
+- Add the following features:
+  - **Regeneration**: The vampire lord regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire lord takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire lord's next turn.
+  - **Shapechanger**: If the vampire lord isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat, a Medium cloud of mist, or back into its true form. While in bat form, the vampire lord can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. While in mist form, the vampire lord can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. If air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight.
+- Add the following actions:
+  - **Bite**: Melee Weapon Attack: +9 to hit, reach 5 ft., one willing creature, or a creature that is grappled by the vampire lord, incapacitated, or restrained. Hit: 7 (1d6 + 4) piercing damage plus 10 (3d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire lord regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire lord's control.
+  - **Charm**: The vampire lord targets one humanoid it can see within 30 feet of it. If the target can see the vampire lord, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire lord. The charmed target regards the vampire lord as a trusted friend to be heeded and protected. Although the target isn't under the vampire lord's control, it takes the vampire lord's requests or actions in the most favorable way it can, and it is a willing target for the vampire lord's bite attack. Each time the vampire lord or the vampire lord's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire lord is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.
+  - **Children of the Night** (1/Day): The vampire lord magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the vampire lord can call 3d6 wolves instead. The called creatures arrive in 1d4 rounds, acting as allies of the vampire lord and obeying its spoken commands. The beasts remain for 1 hour, until the vampire lord dies, or until the vampire lord dismisses them as a bonus action.
+
+
+
+  # 5th Edition D&D Class Monster Templates
+
+# 5th Edition D&D Class Templates Guide
+
+Class templates allow you to add features of a specific character class to a monster or NPC. The following templates represent the classes in the Player's Handbook.
+
+Adding a class to an existing monster is a matter of overlaying the appropriate template. If you want to advance the monster in a class, first adjust its Challenge Rating (CR) as desired, then add the relevant class template.
+
+This method works best with existing monster stat blocks. Use the rules for creating new monsters if you are adding class levels to creatures of your own design.
+
+If the effect of a class feature depends on level, such as a cleric's Channel Divinity, use the monster's CR as its effective level. As usual, the monster retains its own abilities and features unless they contradict or duplicate those provided by the template.
+
+## Choosing Class Features and Spells
+
+The core of applying a class template is choosing suitable features and spells for the monster. Use the following guidelines:
+
+- **Class Features**: Choose class features up to the level equivalent to the monster's CR. For example, a monster with CR 5 would gain class features up to 5th level.
+
+- **Spellcasting**: If the class grants spellcasting, use the monster's CR to determine its spellcasting level. Choose an appropriate number of cantrips and spells known or prepared based on that level.
+
+- **Spell Slots**: Use the class's spell slot progression up to the level equivalent to the monster's CR.
+
+## How to Read a Class Template
+
+Class templates follow the same general format as functional templates. Categories of information that appear only in class templates are explained below:
+
+- **Ability Score Increase**: This indicates which ability scores should be increased when applying the template.
+
+- **Skills**: If the monster already has proficiency in a skill granted by the template, it can choose another skill from the class's skill list.
+
+- **Class Features**: Refer to the relevant entries in the Player's Handbook for descriptions of class features.
+
+- **Spellcasting**: If the class grants spellcasting, this section describes how to implement it for the monster.
+
+- **Proficiencies**: This lists additional weapon, armor, or tool proficiencies granted by the class. If the monster already has proficiency with an item type granted by the template, it doesn't gain any additional benefit.
+
+## Adjusting Challenge Rating
+
+After applying a class template, reassess the monster's Challenge Rating. The additional features and abilities may increase its CR, particularly if they grant significant offensive or defensive capabilities.
+
+Remember that the goal is to create interesting and challenging monsters, not to strictly adhere to player character creation rules. Feel free to adjust the template as needed to fit your game and maintain balance.
+
+## Cleric Template
+
+**Prerequisite:** Any creature with Intelligence 10 or higher
+
+**Changes:**
+- Increase Wisdom score by 2 (maximum 20).
+- Gain proficiency in Wisdom saving throws.
+- Gain proficiency in two of the following skills: History, Insight, Medicine, Persuasion, Religion.
+- Gain proficiency with all armor, simple weapons, and shields.
+- Add the following features:
+  - **Spellcasting**: The creature gains the ability to cast cleric spells. Its spellcasting ability is Wisdom (spell save DC = 8 + proficiency bonus + Wisdom modifier, spell attack modifier = proficiency bonus + Wisdom modifier). It knows the following cleric cantrips: light, sacred flame, thaumaturgy. Prepare a number of 1st-level and higher cleric spells equal to its Wisdom modifier + its CR (minimum of one spell).
+  - **Channel Divinity** (1/Short Rest): The creature gains one of the following Channel Divinity options:
+    - **Turn Undead**: As an action, present your holy symbol and speak a prayer. Each undead within 30 feet that can see or hear you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.
+  - **Divine Domain**: Choose one cleric domain (e.g., Life, Light, Knowledge). The creature gains the 1st-level feature of that domain.
+- Add the following action:
+  - **Divine Strike** (1/Turn): When the creature hits with a weapon attack, it can deal an extra 1d8 radiant damage (2d8 at CR 14+).
+
+## Fighter Template
+
+**Prerequisite:** Any creature with Strength or Dexterity 13 or higher
+
+**Changes:**
+- Increase Strength or Dexterity score by 2 (maximum 20).
+- Gain proficiency in Strength and Constitution saving throws.
+- Gain proficiency in two of the following skills: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival.
+- Gain proficiency with all armor, shields, simple weapons, and martial weapons.
+- Add the following features:
+  - **Fighting Style**: Choose one of the following options:
+    - **Defense**: While wearing armor, gain a +1 bonus to AC.
+    - **Dueling**: When wielding a melee weapon in one hand and no other weapons, gain a +2 bonus to damage rolls with that weapon.
+    - **Great Weapon Fighting**: When rolling a 1 or 2 on a damage die for an attack made with a two-handed melee weapon, reroll the die and use the new roll.
+  - **Second Wind** (1/Short Rest): As a bonus action, regain 1d10 + CR hit points.
+  - **Action Surge** (1/Short Rest): On its turn, the creature can take one additional action.
+- Add the following action:
+  - **Extra Attack**: The creature can attack twice, instead of once, whenever it takes the Attack action on its turn. If the creature's CR is 11 or higher, it can attack three times.
+
+## Paladin Template
+
+**Prerequisite:** Any creature with Strength 13 and Charisma 13 or higher
+
+**Changes:**
+- Increase Strength and Charisma scores by 1 (maximum 20).
+- Gain proficiency in Wisdom and Charisma saving throws.
+- Gain proficiency in two of the following skills: Athletics, Insight, Intimidation, Medicine, Persuasion, Religion.
+- Gain proficiency with all armor, shields, simple weapons, and martial weapons.
+- Add the following features:
+  - **Divine Sense** (Charisma modifier/Long Rest): As an action, detect good and evil. Until the end of your next turn, know the location of any celestial, fiend, or undead within 60 feet that is not behind total cover.
+  - **Lay on Hands**: The creature has a pool of healing power that replenishes when it takes a long rest. With that pool, it can restore a total number of hit points equal to its CR × 5. As an action, it can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in the pool.
+  - **Fighting Style**: Choose one option from the Fighter's Fighting Style feature.
+  - **Spellcasting**: The creature gains the ability to cast paladin spells. Its spellcasting ability is Charisma (spell save DC = 8 + proficiency bonus + Charisma modifier, spell attack modifier = proficiency bonus + Charisma modifier). It knows the following paladin spells: bless, cure wounds, detect magic, divine favor, shield of faith. It has spell slots as if it were a paladin of a level equal to its CR.
+- Add the following action:
+  - **Divine Smite**: When the creature hits with a melee weapon attack, it can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8.
+
+## Ranger Template
+
+**Prerequisite:** Any creature with Dexterity 13 and Wisdom 13 or higher
+
+**Changes:**
+- Increase Dexterity and Wisdom scores by 1 (maximum 20).
+- Gain proficiency in Strength and Dexterity saving throws.
+- Gain proficiency in three of the following skills: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival.
+- Gain proficiency with light and medium armor, shields, simple weapons, and martial weapons.
+- Add the following features:
+  - **Favored Enemy**: Choose a type of favored enemy. The creature has advantage on Wisdom (Survival) checks to track favored enemies, as well as on Intelligence checks to recall information about them.
+  - **Natural Explorer**: Choose one type of favored terrain. When making an Intelligence or Wisdom check related to the favored terrain, the creature's proficiency bonus is doubled if using a skill it's proficient in.
+  - **Fighting Style**: Choose one option from the Fighter's Fighting Style feature.
+  - **Spellcasting**: The creature gains the ability to cast ranger spells. Its spellcasting ability is Wisdom (spell save DC = 8 + proficiency bonus + Wisdom modifier, spell attack modifier = proficiency bonus + Wisdom modifier). It knows the following ranger spells: animal friendship, cure wounds, detect magic, hunter's mark, longstrider. It has spell slots as if it were a ranger of a level equal to its CR.
+- Add the following action:
+  - **Extra Attack**: The creature can attack twice, instead of once, whenever it takes the Attack action on its turn.
+
+## Rogue Template
+
+**Prerequisite:** Any creature with Dexterity 13 or higher
+
+**Changes:**
+- Increase Dexterity score by 2 (maximum 20).
+- Gain proficiency in Dexterity and Intelligence saving throws.
+- Gain proficiency in four of the following skills: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth.
+- Gain proficiency with light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords.
+- Add the following features:
+  - **Expertise**: Choose two of the creature's skill proficiencies. Its proficiency bonus is doubled for any ability check it makes that uses either of the chosen proficiencies.
+  - **Sneak Attack** (1/Turn): The creature deals an extra 1d6 damage when it hits a target with a Dexterity-based attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the creature that isn't incapacitated and the creature doesn't have disadvantage on the attack roll. The extra damage increases by 1d6 for every two CR the creature has (2d6 at CR 3, 3d6 at CR 5, etc.).
+  - **Cunning Action**: The creature can take a bonus action on each of its turns to take the Dash, Disengage, or Hide action.
+- Add the following action:
+  - **Uncanny Dodge** (Reaction): When an attacker the creature can see hits it with an attack, the creature can halve the attack's damage against it.
+
+## Warlock Template
+
+**Prerequisite:** Any creature with Charisma 13 or higher
+
+**Changes:**
+- Increase Charisma score by 2 (maximum 20).
+- Gain proficiency in Wisdom and Charisma saving throws.
+- Gain proficiency in two of the following skills: Arcana, Deception, History, Intimidation, Investigation, Nature, Religion.
+- Gain proficiency with light armor and simple weapons.
+- Add the following features:
+  - **Otherworldly Patron**: Choose one patron (e.g., Archfey, Fiend, Great Old One). The creature gains the 1st-level feature of that patron.
+  - **Pact Magic**: The creature gains the ability to cast warlock spells. Its spellcasting ability is Charisma (spell save DC = 8 + proficiency bonus + Charisma modifier, spell attack modifier = proficiency bonus + Charisma modifier). It knows the following warlock cantrips: eldritch blast, minor illusion. It knows two 1st-level warlock spells. It has spell slots as if it were a warlock of a level equal to its CR (all slots are of the highest level it can cast).
+  - **Eldritch Invocations**: The creature knows two eldritch invocations of its choice, for which it meets the prerequisites.
+- Add the following action:
+  - **Eldritch Blast**: Ranged Spell Attack: +[Charisma modifier + proficiency bonus] to hit, range 120 ft., one target. Hit: 1d10 force damage. The creature can make multiple beams when it reaches higher CR: two beams at CR 5, three beams at CR 11, and four beams at CR 17.
+
+## Warlord Template (Adapted from 4e concepts)
+
+**Prerequisite:** Any creature with Strength 13 and Charisma 13 or higher
+
+**Changes:**
+- Increase Strength and Charisma scores by 1 (maximum 20).
+- Gain proficiency in Strength and Charisma saving throws.
+- Gain proficiency in three of the following skills: Athletics, History, Intimidation, Insight, Persuasion.
+- Gain proficiency with all armor, shields, simple weapons, and martial weapons.
+- Add the following features:
+  - **Tactical Presence**: Allies within 30 feet of the warlord gain a +1 bonus to attack rolls and saving throws.
+  - **Inspiring Word** (2/Short Rest): As a bonus action, the warlord can choose an ally within 60 feet. That ally can spend one of its hit dice to heal, adding the warlord's Charisma modifier to the amount healed.
+  - **Combat Leader**: At the start of each of the warlord's turns, it can choose one ally it can see within 30 feet. That ally can use its reaction to make one weapon attack.
+- Add the following actions:
+  - **Commander's Strike**: When the warlord takes the Attack action, it can forgo one of its attacks to allow an ally within 30 feet to make one weapon attack as a reaction, adding the warlord's Charisma modifier to the damage roll.
+  - **Tactical Maneuver**: The warlord chooses up to three allies it can see within 30 feet. Each of those allies can immediately use their reaction to move up to half their speed without provoking opportunity attacks.
+
+## Wizard Template
+
+**Prerequisite:** Any creature with Intelligence 13 or higher
+
+**Changes:**
+- Increase Intelligence score by 2 (maximum 20).
+- Gain proficiency in Intelligence and Wisdom saving throws.
+- Gain proficiency in two of the following skills: Arcana, History, Insight, Investigation, Medicine, Religion.
+- Gain proficiency with daggers, darts, slings, quarterstaffs, light crossbows.
+- Add the following features:
+  - **Spellcasting**: The creature gains the ability to cast wizard spells. Its spellcasting ability is Intelligence (spell save DC = 8 + proficiency bonus + Intelligence modifier, spell attack modifier = proficiency bonus + Intelligence modifier). It knows the following wizard cantrips: fire bolt, mage hand, prestidigitation. Prepare a number of 1st-level and higher wizard spells equal to its Intelligence modifier + its CR (minimum of one spell).
+  - **Arcane Recovery** (1/Day): After a short rest, the creature can recover expended spell slots. The slots can have a combined level equal to or less than half its CR (rounded up), and none of the slots can be 6th level or higher.
+  - **Arcane Tradition**: Choose one school of magic (e.g., Evocation, Abjuration). The creature gains the 2nd-level feature of that school.
+- Add the following action:
+  - **Arcane Deflection** (Reaction): When the creature is hit by an attack or fails a saving throw, it can gain a +2 bonus to its AC against that attack or +4 bonus to that saving throw. After using this feature, the creature can only cast cantrips until the end of its next turn.
+
+Note: For spellcasting in all class templates, the DM should select an appropriate number of spells known or prepared based on the creature's CR and the needs of the encounter. The spell lists provided are suggestions and can be modified as needed.

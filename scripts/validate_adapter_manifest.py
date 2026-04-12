@@ -141,13 +141,15 @@ def validate_manifest_detailed(
             errors.append(f"placeholder token `{PLACEHOLDER_TOKEN}` found in manifest")
             break
 
-    donor = donor_slug(str(manifest.get("id", "")))
-    if donor and donor not in {"mythforge", "orbis", "adventure-generator"}:
-        errors.append(f"id must be one of mythforge|orbis|adventure-generator, got {manifest.get('id')}")
-
     if manifest_path:
         manifest_p = Path(manifest_path).resolve()
         root = Path(wm_root).resolve() if wm_root else world_model_root().resolve()
+        donor = donor_slug(str(manifest.get("id", "")))
+        allowed_donors = {
+            path.name for path in (root / "adapters").iterdir() if path.is_dir()
+        }
+        if donor and donor not in allowed_donors:
+            errors.append(f"id must match an adapter directory, got {manifest.get('id')}")
 
         # Paths in manifest are world-model-relative.
         for raw_path in manifest.get("mappings", []):

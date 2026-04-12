@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Encounterdesign V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: EncounterDesign_v1
+
+```text
++--------------------------------------------------------------------------------+
+|  [Encounter Card Builder: v1]                                         [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Title: [ Crossroads Ambush ]  Goal: [ Break the Barricade ] [AI Fast-Fill]    |
++--------------------------------------------------------------------------------+
+|  DESCRIPTION (Sensory)                                                         |
+|  [ "Rain-slicked mud. Smells of wet fur and iron. A fallen log blocks the... ] |
++--------------------------------------------------------------------------------+
+|  ENVIRONMENT MODIFIER              |  CHALLENGE STEPS                          |
+|  * Muddy Ground: -10ft Speed.      |  [1] Perception DC 13 (Spots Archers)     |
+|  * Heavy Rain: Disadv. on Ranged.  |  [2] Strength DC 15 (Level the Log)       |
++--------------------------------------------------------------------------------+
+|  OPPONENTS & TACTICS                                                           |
+|  [ 4x Bandits ] [ 1x Captain ]     |  * Archers stay behind log.               |
+|  Motive: [ Steal the Cargo ]       |  * Captain charges if melee occurs.       |
++--------------------------------------------------------------------------------+
+|  OUTCOMES                          |  XP REWARDS                               |
+|  Win: [ Cargo safe; Hook: Map found]|  * Challenges: 500 XP                     |
+|  Lose:[ Cargo stolen; Hook: Pursuit]|  * Combat: 1,500 XP                       |
+|                                    |  [ Total: 2,000 XP ]                      |
++--------------------------------------------------------------------------------+
+|  [Export Small Card] [Push to Campaign] [Preview Tabletop]            [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: EncounterDesign_v1
+
+## Component Architecture
+- **Compact Header:** Combines Title and Primary Goal into a single line to maximize vertical space.
+- **AI Fast-Fill Button:** A prominent action that drafts a complete encounter based on the Title alone.
+- **Tiled Data Blocks:** Uses a two-column grid for Environment and Challenge steps, allowing the DM to read both simultaneously.
+- **Tactics Bullet-List:** Specifically designed for "IF/THEN" logic, making NPCs easier to run in the heat of combat.
+- **XP Summary Footer:** A sticky footer that shows the breakdown of Challenge XP vs Combat XP.
+
+## Interaction Logic
+- **Quick-Entry Mode:** Tabbing through fields focuses on the most essential "Practical Guidelines" first.
+- **Inline Math:** When a monster is added to the "Opponents" list, its XP is automatically added to the "Combat" tally.
+- **One-Click Hook:** The "Hook" areas are pre-populated with "Success/Failure" presets that can be swapped with a single click.
+
+## Visual Design
+- **Tabletop Focused:** Optimized for high-contrast viewing on small screens (tablets or phones) frequently used at the table.
+- **Action-Oriented Symbols:** Bullet points use functional icons (e.g., crosshairs for tactics, a d20 for skill checks).
+- **Cheat-Sheet Formatting:** Avoids long paragraphs in favor of bolded keywords and short sentences.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: EncounterDesign_v1
+
+# Scene: Crossroads Ambush
+**Goal:** Break through the bandit barricade and secure the supply wagon.
+
+### 1. Description
+Rain-slicked mud churned by wheels. The sharp tang of wet fur and cold iron. A massive fallen pine blocks the road, its branches stripped bare. Bandits lurk in the treeline, bows drawn.
+
+### 2. Environment Hacks
+- **Muddy Ground:** Difficult terrain (-10ft movement).
+- **Heavy Rain:** Disadvantage on all Ranged Attacks beyond 30ft.
+
+### 3. Challenge Steps
+1. **Perception (DC 13):** Spot the archers hidden behind the fallen pine.
+2. **Strength (DC 15):** A group effort to lever the log off the road (requires 2 successes).
+3. **Intimidation (DC 14):** Attempt to scare the bandits into parley by displaying the Captain's severed banner.
+
+### 4. Opponents & Tactics
+- **4x Bandits:** Stay in the treeline; focus fire on anyone attempting to move the log.
+- **1x Bandit Captain:** Stays mounted; charges the wagon if the log is moved.
+
+### 5. Outcomes
+- **Success (Log Moved):** Cargo reaches the village. **Hook:** The village elder reveals the bandits were actually local militia in disguise.
+- **Failure (Wagon Stalled):** Cargo is looted. **Hook:** The party follows the wagon tracks to a hidden camp in the forest.
+
+### 6. XP Rewards
+- **Challenges:** 500 XP
+- **Combat:** 1,500 XP
+- **Total:** 2,000 XP
+

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "name": "trap_prep",
+    "category": "Encounters",
+    "description": "Generates a comprehensive guide for creating and running traps in a tabletop RPG, including component tables, a number matrix, and sample traps.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "theme",
+      "type": "string",
+      "label": "Trap Theme",
+      "description": "An optional theme to apply consistently to the generated traps, e.g., 'ancient temple', 'steampunk dungeon'.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "guide_content",
+      "type": "string",
+      "label": "Trap Generation Guide",
+      "description": "The full markdown content for the 'trap_generator_and_runner.md' file, containing tables, matrices, generated traps, and GM advice.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    }
+  ]
+}

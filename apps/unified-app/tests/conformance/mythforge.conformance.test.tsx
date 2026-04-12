@@ -1,6 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { App } from "@/App";
+import { DONOR_DEFINITIONS } from "@/donors/config";
 
 function renderAt(pathname: string) {
   window.history.pushState({}, "", pathname);
@@ -8,23 +9,23 @@ function renderAt(pathname: string) {
 }
 
 describe("mythforge conformance", () => {
-  it("mounts the donor route with explorer and workspace controls", () => {
-    renderAt("/donor/mythforge");
+  it("mounts the donor route through the non-exact subapp scaffold", () => {
+    const definition = DONOR_DEFINITIONS.mythforge;
+    renderAt(definition.route);
+
+    const host = screen.getByTestId("donor-subapp-host");
 
     expect(screen.getByRole("heading", { name: "Mythforge" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Explorer" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "New World" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "New Entity" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Grid" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Graph" })).toBeInTheDocument();
+    expect(host).toHaveAttribute("data-donor-id", "mythforge");
+    expect(host).toHaveAttribute("data-mount-kind", "scaffold-mounted");
+    expect(host).toHaveAttribute("data-implementation-status", "scaffold-mounted");
+    expect(screen.getByText(definition.vendoredRoot)).toBeInTheDocument();
   });
 
-  it("projects canonical entities into the donor explorer and workspace", () => {
+  it("keeps the donor route stable without placeholder preview panels", () => {
     renderAt("/donor/mythforge");
 
-    fireEvent.click(screen.getByRole("button", { name: /Harbor Warden/i }));
-
-    expect(screen.getAllByText(/Harbor Warden/).length).toBeGreaterThan(0);
-    expect(screen.getByText(/Graph detail|Entity card/)).toBeInTheDocument();
+    expect(screen.getByText(/Phase 9 rehost pending/)).toBeInTheDocument();
+    expect(screen.queryByTestId("source-ui-preview")).not.toBeInTheDocument();
   });
 });

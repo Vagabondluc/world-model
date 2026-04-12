@@ -4,16 +4,21 @@ pub use migration::*;
 
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
-use std::path::Path;
+use std::{collections::BTreeMap, path::Path, sync::LazyLock};
 use world_model_specs::{
     build_promotion_report, workspace_root, PromotedSchemaRecord, PromotionClass, SpecDonor,
 };
 
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize, JsonSchema)]
 pub enum DonorSystem {
     Mythforge,
     Orbis,
     AdventureGenerator,
+    MappaImperium,
+    DawnOfWorlds,
+    FactionImage,
+    WatabouCity,
+    EncounterBalancerScaffold,
 }
 
 impl From<SpecDonor> for DonorSystem {
@@ -22,6 +27,11 @@ impl From<SpecDonor> for DonorSystem {
             SpecDonor::Mythforge => Self::Mythforge,
             SpecDonor::Orbis => Self::Orbis,
             SpecDonor::AdventureGenerator => Self::AdventureGenerator,
+            SpecDonor::MappaImperium => Self::MappaImperium,
+            SpecDonor::DawnOfWorlds => Self::DawnOfWorlds,
+            SpecDonor::FactionImage => Self::FactionImage,
+            SpecDonor::WatabouCity => Self::WatabouCity,
+            SpecDonor::EncounterBalancerScaffold => Self::EncounterBalancerScaffold,
         }
     }
 }
@@ -31,27 +41,28 @@ pub enum Winner {
     Mythforge,
     Orbis,
     AdventureGenerator,
+    MappaImperium,
+    DawnOfWorlds,
+    FactionImage,
+    WatabouCity,
+    EncounterBalancerScaffold,
     NeutralCore,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, JsonSchema)]
 pub struct ComparisonRow {
-    pub dimension: &'static str,
-    pub mythforge: &'static str,
-    pub orbis: &'static str,
-    pub adventure_generator: &'static str,
+    pub dimension: String,
+    pub donor_notes: BTreeMap<DonorSystem, String>,
     pub winner: Winner,
-    pub rationale: &'static str,
+    pub rationale: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, JsonSchema)]
 pub struct CanonicalFieldTrace {
-    pub canonical_field: &'static str,
+    pub canonical_field: String,
     pub winner: Winner,
-    pub mythforge_source: Option<&'static str>,
-    pub orbis_source: Option<&'static str>,
-    pub adventure_generator_source: Option<&'static str>,
-    pub notes: &'static str,
+    pub donor_sources: BTreeMap<DonorSystem, String>,
+    pub notes: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, JsonSchema)]
@@ -84,115 +95,214 @@ pub struct AdapterLookupTable {
     pub entries: Vec<PromotedSchemaLookupEntry>,
 }
 
-pub const MODEL_COMPARISON: &[ComparisonRow] = &[
-    ComparisonRow {
-        dimension: "Identity model",
-        mythforge: "UUID container identity is explicit and durable.",
-        orbis: "World-profile and simulation state focus, weaker entity identity emphasis.",
-        adventure_generator: "Workflow/session-centric identity with UI-owned state.",
-        winner: Winner::Mythforge,
-        rationale: "Canonical trunk needs durable identity first.",
-    },
-    ComparisonRow {
-        dimension: "State model",
-        mythforge: "Schema binding plus projection over entity history.",
-        orbis: "Deterministic runtime state and snapshots.",
-        adventure_generator: "Guided workflow state and mutable UI progress.",
-        winner: Winner::Mythforge,
-        rationale: "Core state must survive beyond one flow or one simulation step.",
-    },
-    ComparisonRow {
-        dimension: "History/event model",
-        mythforge: "Append-only event model is explicit.",
-        orbis: "Trace and simulation event envelopes are strong.",
-        adventure_generator: "Checkpoint history exists but is secondary to workflow progress.",
-        winner: Winner::Mythforge,
-        rationale: "Append-only history is the canonical truth rule.",
-    },
-    ComparisonRow {
-        dimension: "Schema model",
-        mythforge: "Schema binding and external schema references are first-class.",
-        orbis: "Domain contracts exist, but not as the trunk binding model.",
-        adventure_generator: "Schemas support generation/UI but are not the durable trunk.",
-        winner: Winner::Mythforge,
-        rationale: "External schema binding is closer to the desired platform model.",
-    },
-    ComparisonRow {
-        dimension: "Workflow model",
-        mythforge: "Workflow is present but not the strongest surface.",
-        orbis: "Runtime tasks are simulation-oriented rather than guided-user oriented.",
-        adventure_generator: "Guided steps, checkpoints, and resumable progress are strong.",
-        winner: Winner::AdventureGenerator,
-        rationale: "Workflow attachment should come from the best guided-flow donor.",
-    },
-    ComparisonRow {
-        dimension: "Simulation model",
-        mythforge: "Not the strongest source for simulation depth.",
-        orbis: "World profile, domain toggles, snapshots, and diagnostics are strong.",
-        adventure_generator: "Limited simulation emphasis.",
-        winner: Winner::Orbis,
-        rationale: "Simulation attachment should come from the simulation donor.",
-    },
-    ComparisonRow {
-        dimension: "Spatial model",
-        mythforge: "Locations can be treated as entities with spatial attachment.",
-        orbis: "Spatial data exists mainly in service of simulation.",
-        adventure_generator: "Strong map/location UX, but not the canonical identity model.",
-        winner: Winner::Mythforge,
-        rationale: "Spatial data should attach to entities, not replace them.",
-    },
-    ComparisonRow {
-        dimension: "Asset model",
-        mythforge: "Asset attachment to entities/world fits the trunk.",
-        orbis: "Assets are secondary.",
-        adventure_generator: "Assets are often UI or content outputs.",
-        winner: Winner::Mythforge,
-        rationale: "Asset ownership should follow canonical identity.",
-    },
-];
+fn donor_notes(entries: &[(DonorSystem, &str)]) -> BTreeMap<DonorSystem, String> {
+    entries
+        .iter()
+        .map(|(donor, note)| (donor.clone(), (*note).to_string()))
+        .collect()
+}
 
-pub const CANONICAL_FIELD_TRACES: &[CanonicalFieldTrace] = &[
-    CanonicalFieldTrace {
-        canonical_field: "WorldRecord.world_id",
-        winner: Winner::Mythforge,
-        mythforge_source: Some("UUID_CONTAINER_ARCHITECTURE.md"),
-        orbis_source: None,
-        adventure_generator_source: None,
-        notes: "World identity comes from the trunk donor.",
-    },
-    CanonicalFieldTrace {
-        canonical_field: "EntityRecord.entity_id",
-        winner: Winner::Mythforge,
-        mythforge_source: Some("UUID_CONTAINER_ARCHITECTURE.md"),
-        orbis_source: None,
-        adventure_generator_source: None,
-        notes: "Entities remain UUID containers.",
-    },
-    CanonicalFieldTrace {
-        canonical_field: "SchemaBindingRecord",
-        winner: Winner::Mythforge,
-        mythforge_source: Some("docs/schema-templates"),
-        orbis_source: None,
-        adventure_generator_source: Some("src/schemas/index.ts"),
-        notes: "Binding stays canonical; donor schemas remain external.",
-    },
-    CanonicalFieldTrace {
-        canonical_field: "SimulationAttachment",
-        winner: Winner::Orbis,
-        mythforge_source: None,
-        orbis_source: Some("runtime/kernel/contracts.ts"),
-        adventure_generator_source: None,
-        notes: "Simulation is optional and non-owning.",
-    },
-    CanonicalFieldTrace {
-        canonical_field: "WorkflowAttachment",
-        winner: Winner::AdventureGenerator,
-        mythforge_source: Some("workflow attachment points in docs"),
-        orbis_source: None,
-        adventure_generator_source: Some("src/stores/workflowStore.ts"),
-        notes: "Guided workflow state is an attached model, not the trunk.",
-    },
-];
+pub static MODEL_COMPARISON: LazyLock<Vec<ComparisonRow>> = LazyLock::new(|| {
+    vec![
+        ComparisonRow {
+            dimension: "Identity model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "UUID container identity is explicit and durable.",
+                ),
+                (
+                    DonorSystem::Orbis,
+                    "World-profile and simulation state focus, weaker entity identity emphasis.",
+                ),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Workflow/session-centric identity with UI-owned state.",
+                ),
+            ]),
+            winner: Winner::Mythforge,
+            rationale: "Canonical trunk needs durable identity first.".into(),
+        },
+        ComparisonRow {
+            dimension: "State model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "Schema binding plus projection over entity history.",
+                ),
+                (DonorSystem::Orbis, "Deterministic runtime state and snapshots."),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Guided workflow state and mutable UI progress.",
+                ),
+            ]),
+            winner: Winner::Mythforge,
+            rationale: "Core state must survive beyond one flow or one simulation step.".into(),
+        },
+        ComparisonRow {
+            dimension: "History/event model".into(),
+            donor_notes: donor_notes(&[
+                (DonorSystem::Mythforge, "Append-only event model is explicit."),
+                (
+                    DonorSystem::Orbis,
+                    "Trace and simulation event envelopes are strong.",
+                ),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Checkpoint history exists but is secondary to workflow progress.",
+                ),
+            ]),
+            winner: Winner::Mythforge,
+            rationale: "Append-only history is the canonical truth rule.".into(),
+        },
+        ComparisonRow {
+            dimension: "Schema model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "Schema binding and external schema references are first-class.",
+                ),
+                (
+                    DonorSystem::Orbis,
+                    "Domain contracts exist, but not as the trunk binding model.",
+                ),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Schemas support generation/UI but are not the durable trunk.",
+                ),
+            ]),
+            winner: Winner::Mythforge,
+            rationale: "External schema binding is closer to the desired platform model.".into(),
+        },
+        ComparisonRow {
+            dimension: "Workflow model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "Workflow is present but not the strongest surface.",
+                ),
+                (
+                    DonorSystem::Orbis,
+                    "Runtime tasks are simulation-oriented rather than guided-user oriented.",
+                ),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Guided steps, checkpoints, and resumable progress are strong.",
+                ),
+            ]),
+            winner: Winner::AdventureGenerator,
+            rationale: "Workflow attachment should come from the best guided-flow donor.".into(),
+        },
+        ComparisonRow {
+            dimension: "Simulation model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "Not the strongest source for simulation depth.",
+                ),
+                (
+                    DonorSystem::Orbis,
+                    "World profile, domain toggles, snapshots, and diagnostics are strong.",
+                ),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Limited simulation emphasis.",
+                ),
+            ]),
+            winner: Winner::Orbis,
+            rationale: "Simulation attachment should come from the simulation donor.".into(),
+        },
+        ComparisonRow {
+            dimension: "Spatial model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "Locations can be treated as entities with spatial attachment.",
+                ),
+                (
+                    DonorSystem::Orbis,
+                    "Spatial data exists mainly in service of simulation.",
+                ),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Strong map/location UX, but not the canonical identity model.",
+                ),
+            ]),
+            winner: Winner::Mythforge,
+            rationale: "Spatial data should attach to entities, not replace them.".into(),
+        },
+        ComparisonRow {
+            dimension: "Asset model".into(),
+            donor_notes: donor_notes(&[
+                (
+                    DonorSystem::Mythforge,
+                    "Asset attachment to entities/world fits the trunk.",
+                ),
+                (DonorSystem::Orbis, "Assets are secondary."),
+                (
+                    DonorSystem::AdventureGenerator,
+                    "Assets are often UI or content outputs.",
+                ),
+            ]),
+            winner: Winner::Mythforge,
+            rationale: "Asset ownership should follow canonical identity.".into(),
+        },
+    ]
+});
+
+fn donor_sources(entries: &[(DonorSystem, &str)]) -> BTreeMap<DonorSystem, String> {
+    entries
+        .iter()
+        .map(|(donor, source)| (donor.clone(), (*source).to_string()))
+        .collect()
+}
+
+pub static CANONICAL_FIELD_TRACES: LazyLock<Vec<CanonicalFieldTrace>> = LazyLock::new(|| {
+    vec![
+        CanonicalFieldTrace {
+            canonical_field: "WorldRecord.world_id".into(),
+            winner: Winner::Mythforge,
+            donor_sources: donor_sources(&[
+                (DonorSystem::Mythforge, "UUID_CONTAINER_ARCHITECTURE.md"),
+            ]),
+            notes: "World identity comes from the trunk donor.".into(),
+        },
+        CanonicalFieldTrace {
+            canonical_field: "EntityRecord.entity_id".into(),
+            winner: Winner::Mythforge,
+            donor_sources: donor_sources(&[
+                (DonorSystem::Mythforge, "UUID_CONTAINER_ARCHITECTURE.md"),
+            ]),
+            notes: "Entities remain UUID containers.".into(),
+        },
+        CanonicalFieldTrace {
+            canonical_field: "SchemaBindingRecord".into(),
+            winner: Winner::Mythforge,
+            donor_sources: donor_sources(&[
+                (DonorSystem::Mythforge, "docs/schema-templates"),
+                (DonorSystem::AdventureGenerator, "src/schemas/index.ts"),
+            ]),
+            notes: "Binding stays canonical; donor schemas remain external.".into(),
+        },
+        CanonicalFieldTrace {
+            canonical_field: "SimulationAttachment".into(),
+            winner: Winner::Orbis,
+            donor_sources: donor_sources(&[
+                (DonorSystem::Orbis, "runtime/kernel/contracts.ts"),
+            ]),
+            notes: "Simulation is optional and non-owning.".into(),
+        },
+        CanonicalFieldTrace {
+            canonical_field: "WorkflowAttachment".into(),
+            winner: Winner::AdventureGenerator,
+            donor_sources: donor_sources(&[
+                (DonorSystem::Mythforge, "workflow attachment points in docs"),
+                (DonorSystem::AdventureGenerator, "src/stores/workflowStore.ts"),
+            ]),
+            notes: "Guided workflow state is an attached model, not the trunk.".into(),
+        },
+    ]
+});
 
 pub const ADAPTER_RULES: &[AdapterRule] = &[
     AdapterRule {

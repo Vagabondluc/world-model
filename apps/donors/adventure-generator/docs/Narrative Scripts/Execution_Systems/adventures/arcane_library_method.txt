@@ -1,0 +1,89 @@
+## Method for Adventure Idea Generation in D&D
+
+### Introduction
+Create unique and compelling adventure ideas for Dungeons & Dragons campaigns that prompt decisive action and are tailored to the heroes' abilities.
+
+### Objective
+Randomly Create five expended adventure ideas using the framework provided, simulating dice roll on each columns of the Adventure Adventure Generator Table. Each idea should be expanded to include context and challenges that make it a complete premise for a D&D session.
+
+### Adventure Idea Framework
+The framework consists of three core elements combined to form the initial adventure premise:
+
+- **Action**: The verb that sets the adventure's primary objective.
+- **McGuffin**: The object, person, or entity central to the quest.
+- **Subject**: The context or setting that grounds the adventure in the game world.
+
+### Adventure Generator Table
+
+| Roll | Action | McGuffin | Subject |
+|---|---|---|---|
+| 1-2 | Rescue the | Goblet | From the clutches of a dark sorcerer |
+| 3-4 | Uncover the | Artifact | Inside the forsaken sanctuary |
+| 5-6 | Thwart the | Conspiracy | Across the high council's chambers |
+| 7-8 | Salvage the | Relic | From the ocean's abyss |
+| 9-10 | Quell the | Rebellion | Over the barren outskirts |
+| 11-12 | Decipher the | Runes | Below the monolithic obelisk |
+| 13-14 | Protect the | Heir | During the grand melee |
+| 15-16 | Expunge the | Curse | That haunts the royal lineage |
+| 17-18 | Navigate the | Maze | Concealed within the primeval forest |
+| 19-20 | Unravel the | Prophecy | Through the chronomancer's rift |
+| 21-22 | Sabotage the | War machine | At the warfront's core |
+| 23-24 | Find the | Prisoner | Within the shifting dunes |
+| 25-26 | Destroy the | Sword | At the river's deepest point |
+| 27-28 | Infiltrate the | Vault | Throughout the subterranean city |
+| 29-30 | Bypass the | Cult | Across the scarred battlegrounds |
+| 31-32 | Return the | Spirit | Of a once-gallant champion |
+| 33-34 | Defeat the | Killer | Amidst the arcane stacks |
+| 35-36 | Spy on the | Demon | Within the royal court's shadows |
+| 37-38 | Bribe the | Noble | From a lineage of the ages |
+| 39-40 | Deliver the | Hunter | To the pinnacle of the mage's spire |
+| 41-42 | Retrieve the | Stolen tome | From the archmage's chamber |
+| 43-44 | Exorcise the | Haunt | Inside the abandoned estate |
+| 45-46 | Seal the | Rift | Amongst the frost-covered peaks |
+| 47-48 | Chart the | Expedition | To the islands unknown |
+| 49-50 | Repel the | Invaders | At the metropolis' boundary |
+| 51-52 | Solve the | Murder | During the masked revelry |
+| 53-54 | Endure the | Trial | Atop the summit's wrath |
+| 55-56 | Restore the | Harmony | Between the warring factions |
+| 57-58 | Dissolve the | Alliance | With the dusk operatives |
+| 59-60 | Ascend the | Throne | Amidst the stars' alignment |
+| 61-62 | Forge the | Pact | Beneath the crimson eclipse |
+| 63-64 | Awaken the | Guardian | In the crystalline depths |
+| 65-66 | Vanquish the | Tyrant | In the subjugated hamlet |
+| 67-68 | Reclaim the | Birthright | From the guild of shadows |
+| 69-70 | Annul the | Enchantment | Within the mystical woodland |
+| 71-72 | Construct the | Stronghold | On the untamed frontier |
+| 73-74 | Discover the | Lost city | At the arid core of the wasteland |
+| 75-76 | Shatter the | Illusion | During the grand illusionist's performance |
+| 77-78 | Escape the | Hostage | From the depths of the murky woods |
+| 79-80 | Imprison the | Thief | Beneath the city's underbelly |
+| 81-82 | Stop the | Spy | Of the mountain kings |
+| 83-84 | Befriend the | Werewolf | Within the forgotten crypt |
+| 85-86 | Pacify the | Relic | Held by the noble order |
+| 87-88 | Face the | High priest | In the midst of the ritual sacrifice |
+| 89-90 | Steal the | Merchant | Through the labyrinthine catacombs |
+| 91-92 | Escort the | Witch | Whilst challenging the nobleman |
+| 93-94 | Banish the | Ritual | Within the thieves' consortium |
+| 95-96 | Free the | Vampire | Amidst the village upheaval |
+| 97-98 | Negotiate the | Treaty | In the hall of whispers |
+| 99-100 | Illuminate the | Secret | Within the everlasting dusk |
+
+### Selection Process
+1. Utilize a randomization method (simulate rolling a 50-faced die, be sure the results are random) to select five options from each of the three categories (Action, McGuffin, Subject).
+2. Combine these selections to form the basis of the adventure premise, you should have 5 premises. Expand them in the context of a D&D adventure. 
+3. Ask the user to choose the premise.
+
+### Contextual Development
+Once the basic premise is established, further develop the context:
+- **Origin of Problem**: How did the problem arise?
+- **Unique Positioning**: Why are the characters uniquely positioned to resolve it?
+- **Stakes**: What are the stakes if the characters fail?
+
+### Direct Involvement
+Ensure the adventure directly involves the characters through personal stakes, a call to action from an NPC, or an immediate threat to their well-being.
+
+### Encouraging Creativity
+If the combination seems unusual or unconventional, use it as an opportunity to foster creativity and explore how these elements can be woven into the campaign's world and narrative.
+
+### Implementation
+This method generates a variety of adventure prompts that incite interest and participation from players, catering to a range of themes and scenarios within the D&D universe.

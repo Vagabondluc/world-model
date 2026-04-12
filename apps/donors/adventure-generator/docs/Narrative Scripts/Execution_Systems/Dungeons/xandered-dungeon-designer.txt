@@ -1,0 +1,45 @@
+# Xandered Dungeon Designer
+
+## Objective
+Create a non-linear, complex dungeon that encourages exploration and strategic play.
+
+## Instructions
+1. Implement Multiple Entrances:
+   - Design at least two distinct entry points
+   - Vary difficulty and approach for each entrance
+
+2. Create Interconnected Loops:
+   - Design paths that circle back to previous areas
+   - Ensure multiple routes between key locations
+
+3. Develop Vertical Complexity:
+   - Include multiple levels with various connections
+   - Use stairs, chutes, elevators for level transitions
+
+4. Incorporate Discontinuous Connections:
+   - Add shortcuts that skip levels or areas
+   - Design one-way passages for added complexity
+
+5. Design Secret and Unusual Paths:
+   - Hide alternative routes behind secret doors or puzzles
+   - Create unconventional paths (e.g., underwater tunnels)
+
+6. Add Sub-Levels and Pocket Dimensions:
+   - Design small, self-contained areas off main paths
+   - Use magical or technological means for access
+
+7. Implement Divided Levels:
+   - Create levels that require visiting other levels to fully explore
+   - Use barriers or puzzles to segment individual levels
+
+8. Incorporate Minor Elevation Shifts:
+   - Use short stairs or slopes within single levels
+   - Create illusion of continuous space across multiple levels
+
+9. Design for Exploration:
+   - Reward thorough exploration with secrets and treasures
+   - Ensure multiple solutions for major obstacles
+
+10. Balance Complexity:
+    - Ensure dungeon remains navigable despite complexity
+    - Include landmarks for player orientation

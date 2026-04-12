@@ -1,0 +1,65 @@
+
+**Guide de Codification des Missions**
+
+Bienvenue dans le guide de rédaction standardisé des missions pour notre guilde d'aventuriers. Ci-dessous se trouve le modèle et les instructions pour la codification et la publication des missions sur le tableau des quêtes de la guilde. Cela garantira la cohérence et la clarté des détails des missions, aidant les aventuriers à se préparer efficacement et à évaluer leur adéquation pour les tâches à venir.
+
+### Modèle de Mission en Markdown
+
+Voici le modèle markdown pour créer de nouvelles publications de missions :
+
+### ID de la Mission : {Abréviation du Type}-{Code à Cinq Chiffres}
+**Titre :** {Titre Descriptif de la Mission}
+**Rang :** {Niveau de Difficulté/Rang Requis}
+**Objectif :** {Énoncé Clair et Concis de l'Objectif}
+**Récompenses :** {Liste des Récompenses, y compris la compensation monétaire et les objets si applicable}
+**Exigences :** {Compétences spécifiques, sorts ou conditions nécessaires}
+**Tags de Mission :** {Combat, Discrétion, Social, Connaissance, Miséricorde}
+**Prérequis :** {Prérequis spécifiques pour entreprendre la mission}
+
+### Types de Missions et Leurs Codifications
+
+Voici la liste des types de missions ainsi que leurs identifiants uniques :
+
+1. **Escorte (ESC)** - Escorter une personne ou un objet vers une destination spécifique.
+2. **Défense (DEF)** - Protéger un lieu, un objet ou une personne contre des attaques ou des menaces.
+3. **Offensive (OFF)** - Attaquer activement une cible, telle qu'une forteresse ou un groupe ennemi.
+4. **Investigations Enigmatiques (IE)** - Résoudre des énigmes, déchiffrer des indices et élucider des mystères.
+5. **Récupération (REC)** - Récupérer un objet, une personne ou des informations.
+6. **Reconnaissance (RCON)** - Collecter des informations ou explorer une zone sans engagement direct.
+7. **Sauvetage (SAU)** - Sauver une personne ou un groupe d'une situation dangereuse.
+8. **Diplomatie (DIP)** - Participer à des négociations, des pourparlers de paix ou des manœuvres politiques.
+9. **Sabotage (SAB)** - Perturber ou détruire les opérations ou les ressources d'un ennemi.
+10. **Expédition (EXP)** - Explorer des régions inconnues, y compris des fouilles archéologiques, des explorations en haute mer ou des études scientifiques.
+11. **Missions de Miséricorde (MM)** - Fournir de l'aide, du soulagement ou de l'assistance sans combat direct.
+12. **Missions Rituelles (RIT)** - Participer à ou empêcher des cérémonies magiques ou religieuses importantes.
+13. **Contrebande (CONT)** - Transporter illégalement des biens ou des personnes à travers des points de contrôle ou des frontières.
+14. **Rébellion (REB)** - Renverser ou saper l'autorité en place.
+15. **Transport (TRP)** - Déplacer des marchandises sensibles ou précieuses à travers des territoires dangereux.
+16. **Découverte (DEC)** - Découvrir des vérités cachées, des cités perdues, des reliques anciennes ou mener des recherches magiques.
+17. **Compétition (CMP)** - Participer ou gagner des concours qui peuvent impliquer l'habileté, la force ou la ruse.
+18. **Garde (GAR)** - Assurer la sécurité d'un lieu ou d'un artefact sur une longue période.
+19. **Quête de Collecte (QC)** - Collecter des objets ou des composants spécifiques, souvent depuis des lieux dangereux.
+20. **Implantation (IMP)** - Placer discrètement un objet ou des informations dans une zone sécurisée.
+21. **Usurpation d'Identité (USU)** - Assumer l'identité de quelqu'un d'autre pour accéder à des zones ou des informations restreintes.
+22. **Vol qualifié (VOL)** - Réaliser un vol bien planifié d'un objet de grande valeur dans un lieu sécurisé.
+23. **Montage (MON)** - Organiser un scénario pour faussement impliquer quelqu'un dans un crime.
+24. **Rendre Justice (RJ)** - Appréhender et livrer un criminel ou un fugitif pour qu'il soit jugé.
+25. **Chasse (CHA)** - Pister et éliminer une créature dangereuse menaçant la région.
+26. **Récupération d'Artéfacts (RA)** - Localiser et récupérer des artefacts anciens ou magiques.
+27. **Recherche Magique (RM)** - Aider ou mener des expériences magiques et des études.
+28. **Interventions Divines (ID)** - Effectuer des tâches pour ou contre des divinités ou leurs adeptes.
+29. **Énigmes Cryptiques (EC)** - Résoudre des puzzles anciens ou arcaniques.
+30. **Efforts de Conservation (ECO)** - Préserver des créatures magiques en danger ou réhabiliter des terres.
+31. **Espionnage et Intrigues (EI)** - Collecter des renseignements, espionner des factions rivales ou dévoiler des complots politiques.
+
+### Système de Récompense Basé sur le Niveau et le Type de Mission
+
+Alignez les récompenses avec la complexité de la mission et les compétences requises :
+
+| **Niveau**    | **Rang** | **Récompense Unique**                                       |
+|---------------|----------|------------------------------------------------------------|
+| **Cuivre**    | 1-3      | 10-50 po, tirage sur la table d'Objets Magiques Consommables Communs   |
+| **Argent**    | 4-6      | 50-100 po, tirage sur la table d'Objets Magiques Consommables Peu Communs |
+| **Électrum**  | 7-9      | 100-200 po, tirage sur la table d'Objets Magiques Consommables Rares   |
+| **Or**        | 10-12    | 200-500 po, tirage sur la table d'Objets Magiques Consommables Très Rares |
+| **Platine**   | 13+      | 500-1000 po, tirage sur la table d'Objets Magiques Consommables Légendaires |

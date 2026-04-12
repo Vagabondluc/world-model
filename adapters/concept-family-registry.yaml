@@ -11,6 +11,16 @@ concept_families:
   - domain-schema
   - spatial-stack
   - event-projection
+  - asset-sigil
+  - icon-discovery
+  - biosphere-state
+  - civilization-state
+  - planetary-state
+  - narrative-artifact
+  - hex-spatial
+  - terrain-config
+  - species-template
+  - domain-clock
 
 mandatory_coverage:
   - world

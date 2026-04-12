@@ -1,0 +1,88 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Ed Greenwood".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Persona Manager (ed_greenwood)
+
+```text
++--------------------------------------------------------------------------------+
+|  [AI Persona: Ed Greenwood]                                           [?] [X]  |
++--------------------------------------------------------------------------------+
+|  ACTIVE PERSONA: [ Ed Greenwood ]  |  DOMAIN: [ FR Lore / World-Building ]     |
++--------------------------------------------------------------------------------+
+|  PERSONA SETTINGS                      |  LIVE OUTPUT PREVIEW                  |
+|  Temp: [ 0.9 (Creating) ]              |  "Elminster leaned against the...     |
+|  Mode: [ Multi-Layered Narrative ]     |   The silver-fire crackled in his     |
+|  Min Length: [ 800+ Words ]            |   pipe as the shadows of Waterdeep    |
+|                                        |   lengthened..."                      |
+|  [V] Enable DALL-E Visualization       |                                       |
+|  [V] External Source Investigation     |  [ Word Count: 842 ] [ TARGET: OK ]   |
++----------------------------------------+---------------------------------------+
+|  GENERATED VISUALS                     |  STRUCTURED DATA                      |
+|  +----------------+  +----------------+|  [TABLE: Magic Items]                 |
+|  | [ Scene:     ]  |  | [ Character: ]||  Item    | Power | Rarity | Crafter | |
+|  | [ Shadowdark ]  |  | [ Mirt      ]||  ------------------------------------  |
+|  +----------------+  +----------------+|  [X] Use Bullets (Summary Mode)       |
++----------------------------------------+---------------------------------------+
+|  [Consult Lore] [Run Simulation] [Export Masterwork]                  [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Persona Manager (ed_greenwood)
+
+## Component Architecture
+- **Persona Context Header:** Displays the active persona identity, domain expertise, and a brief "Motive" (e.g., "Bring epic adventures to life").
+- **Dynamic Parameter Console:** Slider-based inputs for Temperature (Scaling between 0.1 for Lore accuracy and 1.0 for creative prose).
+- **Prose Analytics Panel:** A real-time word counter with a progress bar targeting the "800+ Words" script requirement. 
+- **Layered Artifact Gallery:** Visual slots for DALL-E generated characters and scenes, alongside structured data tables for magic items and NPCs.
+
+## Interaction Logic
+- **Task-Based Temp Auto-Switch:** The UI automatically suggests a temperature shift if the user switches from "Research Lore" to "Draft Narrative".
+- **Structured-Only Toggle:** A footer switch that restricts the AI to the "Brief Bullet Point" summary mode mentioned in the script.
+- **Investigation Pulse:** A visual indicator that activates when the AI is processing external web links provided by the user.
+
+## Visual Design
+- **Literary & Sophisticated:** Uses serif typography (resembling an old manuscript), earthy color palettes (Parchment, Ink-Black, Gold), and soft border shadows.
+- **Content-First Layout:** Maximizes the central prose area to accommodate long-form storytelling.
+- **Status Icons for Logic:** Small "Parchment" icons for world-building details and "Crossed Swords" for cause-and-effect conflict chains.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Persona Manager (ed_greenwood)
+
+# Scene: The Vault of Seven Keys
+**Persona:** Ed Greenwood
+**Temp:** 0.85 (Narrative Generation)
+
+### 1. Narrative Prose (Excerpt)
+Elminster stroked his long, white beard, the silver-fire in his pipe dancing with an inner light that cast long, flickering shadows across the obsidian walls of the vault. "You see, Mirt," he rumbled, his voice like grinding stones polished by centuries of secrets, "the keys aren't just iron and magic. They are memories. Every time a lock turns in the Vault of Seven Keys, a secret is lost to the world of Toril, consumed by the very wards meant to protect it."
+
+The air here smelled of old paper and ozone. Elminster gestured to the first pedestal, where a key made of frozen lightning hummed with a low-frequency vibration that rattled the teeth of his companion. "This," he continued, "is the Key of the Unspoken Vow. It was forged in the heat of a betrayal that nearly tore the Silver Marches asunder..."
+
+### 2. Structured Data: Items of the Vault
+| Item Name | Lore Origin | Power Tier | DM Note |
+| :--- | :--- | :--- | :--- |
+| **Silent Key** | Shadowfell Echo | Rare | Prevents verbal components within 30ft. |
+| **Vengeance Blade** | Red Plume Forge | Very Rare | +3 to hit against traitors; glows red. |
+| **Tome of Whispers** | Candlekeep Restricted| Legendary | Grant 1 casting of *Divination* daily. |
+
+### 3. Visualizations (DALL-E Prompt Links)
+- [Scene: The Obsidian Vault with Floating Keys]
+- [Character: Elminster explaining lore to Mirt]
+
+### 4. Metrics
+- **Word Count:** 842 Words
+- **Cause & Effect:** Mirt's decision to touch the Silent Key (Cause) leads to the immediate silencing of the party's Wizard (Effect).
+

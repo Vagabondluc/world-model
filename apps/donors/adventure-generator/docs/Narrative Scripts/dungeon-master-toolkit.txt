@@ -1,0 +1,49 @@
+# Dungeon Master's Toolkit
+
+## Purpose
+This document maps the ASCII-menu flows from `Narrative Scripts/entry.py` onto the real files and folders already in `Narrative Scripts`. It highlights how each numbered tool relates to existing directories (`Adventures/`, `Execution_Systems/`, `Output/`, etc.), describes where generated artifacts get saved, and explains how the CLI keeps everything in sync with the manifest/index files.
+
+## Key folders inside `Narrative Scripts`
+- `Adventures/`: high-level guides, tutorials, and supplemental references (`dungeon-master-guide.txt`, `dungeon-master-toolkit.txt`, and related resources).
+- `Execution_Systems/`: structured toolkits sorted by domain; `Dungeons/` contains most of the numbered toolkit entries, while `Encounters/`, `Travel/`, `NPCs/`, and `Factions/` expose supporting generators.
+- `Output/`, `Handouts/`, and `Prose/`: finished prose, handouts, and prompts referenced by the manifest/index and produced (or appended) via the CLI’s generation steps.
+- `AI_Behavior/` and `Payloads/`: reusable behaviors, NPC templates, and faction simulators that the CLI may surface when building background context.
+- `ttrpg-master/`: target directory where the CLI creates working folders, logs, metadata, and generated outputs that can later be synced with Firestore-inspired structures (`database_schema.md`).
+- `index.json`, `manifest.json`, `manifest.yaml`: catalogs for discovery; every CLI action refers to these files to register new outputs or locate existing ones.
+
+## Tool reference table
+Each numbered tool in the CLI menu is backed by a file inside `Execution_Systems/` (mostly `Dungeons/`, with supporting entries in other subfolders). Use these references when you need to inspect or edit the instructions that power the CLI steps.
+
+| Menu step | File | Location | Notes |
+| --- | --- | --- | --- |
+| Concept Brainstormer | `dungeon-concept-brainstormer.txt` | `Execution_Systems/Dungeons/` | Define themes, stakes, factions, tags, and emotional beats. |
+| Dungeon Map Creator | `dungeon-map-creator.txt` | `Execution_Systems/Dungeons/` | Capture layout, corridors, and anchor points. |
+| Dungeon Key Writer | `dungeon-key-writer.txt` | `Execution_Systems/Dungeons/` | Detail reactions, treasures, and lore for each room. |
+| Room Designer | `dungeon-room-designer.txt` | `Execution_Systems/Dungeons/` | Build interactions, puzzles, and scene beats tied to nodes. |
+| Corridor Themes | `corridor-themes-generator.txt` | `Execution_Systems/Dungeons/` | Turn feature summaries into atmospheric corridor prompts. |
+| Features Summarizer | `dungeon-features-summarizer.txt` | `Execution_Systems/Dungeons/` | Condense hazards, sensory cues, and signature elements. |
+| Encounter Balancer | `combat-encounter-balancer.txt` | `Execution_Systems/Encounters/` | Balance threats generated for rooms and patrols. |
+| Random Encounters | `random-encounter-table-generator.txt` | `Execution_Systems/Travel/` | Build tables keyed to concept + dungeon key data. |
+| Xandered Designer | `xandered-dungeon-designer.txt` | `Execution_Systems/Dungeons/` | Introduce loops, verticality, and branching arcs. |
+| Megadungeon Planner | `megadungeon-planner.txt` | `Execution_Systems/Dungeons/` | Scale current dungeon to a campaign-style megadungeon. |
+| Supporting references | `Archived dungeon notes` | `Adventures/` or other folders | `dungeon-master-guide.txt`, toolkit notes, and additional step-by-step references live here.
+
+Because some earlier toolkit steps (e.g., restocking, faction simulation) are documented elsewhere, the CLI refers back to `Adventures/` and `Execution_Systems/Factions/` files when necessary.
+
+## CLI workflow with folder alignment
+1. Launch `python Narrative Scripts/entry.py` from the repository root.
+2. Select **Create new working folder** to create `Narrative Scripts/ttrpg-master/<name>`; the CLI enforces naming rules (no existing folder, valid characters) and writes metadata/logs in that folder, mirroring the document structure from `database_schema.md`.
+3. Use **Generate or append files** to call Ollama (`olmo:3:7b-instruct` for directives, `olmo:3:7b-thinking` for opaque auxiliary notes). The subprocess/HTTP wrapper prompts for the destination path (both relative to the current working folder) so outputs live next to the relevant tool reference.
+4. Choose **Discover & run narrative scripts** to scan the entire `Narrative Scripts` tree (`*.py`, executables). The CLI records stdout/stderr/exit codes inside the working folder’s log directory together with a manifest reference so you can audit which script corresponds to which catalog entry.
+
+## Controls & logging
+- `R`: Return to the main menu for another selection or to regenerate the toolkit description.
+- `0`: Exit the CLI while leaving the working folder and logs intact.
+- `Logs`: Each action logs the timestamp, tool name, Ollama model, file paths, and manifest references into `ttrpg-master/<name>/logs`.
+- `Manifest updates`: Generated artifacts should reference `index.json`, `manifest.json`, and `manifest.yaml` so discovery scripts can locate files across the repository.
+
+## Usage reminders
+- Revisit numbered tools whenever needed; the CLI stores output filenames in the working folder, and each file can be traced back to the referenced file path in `Execution_Systems/`.
+- Maintain consistent naming conventions (e.g., `maps/<name>.txt`, `rosters/<name>.txt`, `logs/<step>-<timestamp>.md`) so the manifest/index remain accurate for discovery scripts.
+- Treat `olmo:3:7b-thinking` responses as opaque: save them, log them, but do not surface their reasoning in shared exports.
+- After code changes, run the minimal test hook in `Narrative Scripts/ttrpg-master/tests` to ensure the CLI still imports the tools you reference.

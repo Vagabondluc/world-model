@@ -25,10 +25,10 @@ export function ContextBar() {
   } else if (isDonorRoute) {
     const definition = DONOR_DEFINITIONS[resolvedDonor];
     title = `${definition.label} / Donor`;
-    subtitle = `${definition.classification} · donor rehost route`;
+    subtitle = `${definition.classification} · donor runtime route`;
   } else if (isDonorCompare) {
     title = "Compare / Donors";
-    subtitle = "Internal donor comparison route";
+    subtitle = "Donor inventory and comparison surface";
   } else if (isProductCompare) {
     title = "Compare / Product";
     subtitle = "Shared concepts, journeys, and language boundary";

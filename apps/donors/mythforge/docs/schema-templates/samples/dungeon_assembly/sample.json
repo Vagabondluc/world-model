@@ -1,0 +1,74 @@
+{
+  "loom": {
+    "stage": "finalize",
+    "seed": "A half-buried shrine beneath the ossuary"
+  },
+  "text": "A five-room shrine dungeon assembled from modular parts.",
+  "dungeon": {
+    "id": "dungeon-ossuary-shrine",
+    "title": "The Ossuary Shrine",
+    "theme": "Sacred ruin buried under the city",
+    "topology": "5room",
+    "goal": "Recover the buried relic before the warding spirit awakens the dead.",
+    "creator_lore": "Built by a vanished priesthood to guard a relic, later sealed by collapse and time.",
+    "mechanics": ["warded altar", "partial collapse", "spirits react to loud noise"],
+    "global_features": {
+      "illumination": "Dim green fungus and guttering relic candles",
+      "atmosphere": "Sacred, damp, and uneasy",
+      "wall_material": "Old stone mortared with bone dust",
+      "ceiling_height": "Low and uneven in the deeper rooms",
+      "sounds": "Drips, distant stone settling, and faint whispering",
+      "temperature": "Cold and clammy"
+    },
+    "parts": [
+      {
+        "id": "part-shrine-01",
+        "part_type": "room",
+        "role": "entrance",
+        "label": "The Half-Buried Shrine",
+        "description": "A cracked shrine chamber half swallowed by the earth."
+      },
+      {
+        "id": "part-shrine-02",
+        "part_type": "corridor",
+        "role": "connector",
+        "label": "Root-Crowded Passage",
+        "description": "A narrow passage threaded with roots and old votive niches."
+      },
+      {
+        "id": "part-shrine-03",
+        "part_type": "room",
+        "role": "reward",
+        "label": "The Reliquary Vault",
+        "description": "A sealed vault holding the relic behind carved stone and warding bones."
+      }
+    ],
+    "connections": [
+      {
+        "from": "part-shrine-01",
+        "to": "part-shrine-02",
+        "passage_type": "passage",
+        "locked": false,
+        "secret": false,
+        "notes": "Primary entrance route"
+      },
+      {
+        "from": "part-shrine-02",
+        "to": "part-shrine-03",
+        "passage_type": "door",
+        "locked": true,
+        "secret": false,
+        "notes": "Bone-inlaid seal that opens with the right rite"
+      }
+    ],
+    "factions": ["Restless shrine spirit", "Grave robbers"],
+    "treasure_summary": [
+      { "name": "Silver incense box", "value": "modest" },
+      { "name": "Buried relic", "value": "major" }
+    ],
+    "random_encounter_table": ["A whispering dead priest", "Rubble collapse", "A lost grave robber"],
+    "corridor_themes": ["Roots through stone", "Cold air from sealed chambers"],
+    "gm_advice": "Use the shrine spirit to pace the reveal and keep the dungeon sacred rather than generic.",
+    "seed": "A half-buried shrine beneath the ossuary"
+  }
+}

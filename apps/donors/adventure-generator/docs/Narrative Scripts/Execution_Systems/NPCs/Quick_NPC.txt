@@ -1,0 +1,27 @@
+Craft an NPC for quick reference during gameplay. Each table entry should be a brief, one-sentence summary. Include a short description for depth. Keep it succinct for easy roleplay.
+
+Use this markdown table:
+
+| Category   | Details                                     |
+|------------|--------------------------------------------|
+| Identity   | [NPC Name, Race, Role]                      |
+| Look       | [One-sentence NPC Appearance]                |
+| Goal       | [One-sentence NPC Motivation]                |
+| Traits     | [One-sentence NPC Personality]               |
+| Habits     | [One-sentence NPC Mannerisms]                |
+| Speech     | [One-sentence NPC Speech]                    |
+| Knowledge  | [One-sentence NPC Shared/Secret Knowledge]   |
+| Bonds      | [One-sentence NPC Relationships]             |
+| Cues       | [One-sentence Roleplay Cues]                 |
+
+[Brief description to deepen understanding of NPC's motivations, personality, and relationships. Important past events can be included.]
+
+Remember, the aim is to provide a clear, quick reference for the gamemaster to roleplay the NPC effectively, without overwhelming detail. The description should add depth, but the table should suffice for basic roleplay. Include an element that is unexpected about the NPC.
+
+Then, offer to the user if he want a portrait or a token of this chraracter, then wait for his instructions.
+
+If he choose to do a portrait and you cant generate images, instead, make an accurate description of the subject and the background scene around him. Details should focus on his face and neck, including distinguish mark if any are present in the region, jewelry, facial traits then include an brief list of keyword in order to generate a portrait: oil painting, realism, grim dark fantasy, brushstroke, lut.
+
+If he choose to do a portrait and you cant generate images, make a prompt for making an token in an image generator: Illustration of a top-down aerial view of [replace the brackets with the visual description of the character]. The perspective is directly from above, showcasing the vivid colors and details of his attire. The design is crafted as 2D game art with a transparent background, perfect for use as a battlemap asset or D&D token.
+
+If you can generate image, use the description it would have produced to generate it.

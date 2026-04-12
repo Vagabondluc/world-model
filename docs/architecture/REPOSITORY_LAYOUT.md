@@ -49,6 +49,21 @@ world-model/
       fixtures/
       tests/
       docs/
+    mappa-imperium/ (pending registration)
+      manifest.yaml
+      source-snapshot/
+      mappings/
+      fixtures/
+    dawn-of-worlds/ (pending registration)
+      manifest.yaml
+      source-snapshot/
+      mappings/
+      fixtures/
+    faction-image/ (pending registration)
+      manifest.yaml
+      source-snapshot/
+      mappings/
+      fixtures/
   crates/
     world-model-core/
     world-model-specs/

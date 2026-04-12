@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of Copy of Mappa Imperium - alpha shit",
+  "description": "A collaborative digital worldbuilding application based on the tabletop game.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

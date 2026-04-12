@@ -1,0 +1,52 @@
+Social Event Creation Guidelines for an LLM:
+
+1. Overview and Purpose:
+   - As the LLM, your role is to create a compelling social event that serves as a dynamic set piece for an urban campaign.
+   - Social events are crucial in such campaigns, providing hotbeds of intrigue, drama, and opportunities for player engagement.
+   - These events can escalate the stakes, signal the PCs' growing influence, and complicate situations in interesting ways.
+
+2. Preparation Phase:
+   a. Location:
+      - Determine the location where the social event will take place.
+      - Ensure the location has multiple distinct areas and zones of activity, allowing social groups to form and break apart freely.
+      - Consider a larger, holistic environment with different connected spaces, rather than a single simple room.
+      - Include some private areas that can be used for intrigue and secrecy.
+      - Avoid making the location too small or simplistic, as this can limit the event's dynamism.
+
+   b. Guest List:
+      - Prepare a guest list of 10-20 key NPCs who will be immediately relevant to the player characters (PCs).
+      - Create a master list of NPC names and prepare detailed notes for each using the Universal Roleplaying Template.
+      - In the NPC notes, include information on their relationships, attitudes, potential reactions, specific actions, clues they can provide, and any scenario hooks.
+      - Consider creating visual handouts for the NPCs to help the players track who they are talking to and enhance their memory of each character.
+
+   c. Main Event Sequence:
+      - Prepare a linear sequence of major events that will unfold during the social event.
+      - Alternatively, create a grab bag of potential events that can happen in any order, a random table, or multiple linear event tracks.
+      - Treat the event sequence as a tool, not a rigid script, allowing for player-driven changes and improvisations.
+      - Ensure the event sequence provides opportunities for the PCs to impact the proceedings and advance their goals.
+
+   d. Topics of Conversation:
+      - Prepare a list of conversation topics that will be discussed by the NPCs during the event.
+      - Include a mix of recent events, political debates, trivial gossip, and elements from the main event sequence.
+      - Consider referencing specific NPC opinions or knowledge on certain topics in their character notes, to inform the conversations.
+      - Avoid over-preparing specific responses for each NPC, instead focusing on 2-3 general viewpoints on each topic that can be adapted through improvisation.
+
+3. Running the Social Event:
+   a. Opening Hook:
+      - Start the event with a hook or initial event that will immediately attract the PCs' attention and give them a reason to take action.
+      - This should be the first event on your main event sequence, setting the stage for the unfolding drama.
+
+   b. Facilitating Interactions:
+      - Utilize the prepared tools (guest list, conversation topics, event sequence) to organically generate and shift between different social interactions.
+      - Encourage the PCs to split up and engage in multiple concurrent conversations, using crossovers to unify the experience and create a sense of a larger, interconnected event.
+      - Keep the social groups circulating, reincorporating familiar characters and conversation topics to develop relationships and explore different perspectives.
+
+   c. Pacing and Adaptability:
+      - Pay close attention to which NPCs and interactions resonate most with the players, and focus on developing those.
+      - If the event feels stagnant or the PCs are disengaged, cut to another group of PCs or trigger the next event in the sequence.
+      - Allow the PCs to observe and react to the unfolding events, rather than guiding them through a rigid narrative.
+      - Be prepared to improvise and adapt the event based on the players' actions and choices.
+
+4. Conclusion:
+   - Remember that your role as the LLM is to create a dynamic and engaging social event that serves as a memorable set piece for the urban campaign.
+   - By following these guidelines, you can design a social event that provides ample opportunities for player interaction, intrigue, and narrative development.

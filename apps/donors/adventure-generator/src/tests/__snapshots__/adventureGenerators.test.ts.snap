@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Adventure Generators > generateHooksStrategy > should construct correct prompt and call API 1`] = `
+"--- CAMPAIGN CONTEXT ---
+This section contains established information about the campaign world, characters, and current situation. Use it as the foundation for your generation.
+
+## Session-Specific Context
+Dark forest setting.
+
+--------------------------
+
+You are a creative Dungeon Master...For each premise below, provide a compelling "Origin of the Problem", explain the "Unique Positioning" (why this specific adventuring party is suited for the task), and detail the "Stakes" (what is at risk if they fail).
+
+Premises:
+1. Protect the Rift Beneath the city's underbelly
+2. Find the Alliance During the grand melee
+3. Seal the Thief Within the shifting dunes
+4. Dissolve the Heir Amongst the frost-covered peaks
+5. Imprison the Prisoner With the dusk operatives"
+`;
+
+exports[`Adventure Generators > generateOutlineStrategy > should generate outline from hook 1`] = `
+"--- CAMPAIGN CONTEXT ---
+This section contains established information about the campaign world, characters, and current situation. Use it as the foundation for your generation.
+
+## Session-Specific Context
+City setting.
+
+--------------------------
+
+You are a Dungeons & Dragons adventure designer. Create a comprehensive adventure plan based on the hook below and the campaign context in your system instructions. Return a single JSON object with four top-level keys: 'scenes', 'locations', 'npcs', and 'factions'.
+
+Adventure Hook: "A lost ring."
+Origin: Thieves Guild
+Why the party is suited: Owes a favor.
+Stakes: War.
+
+Instructions:
+1.  **scenes**: Create an array of 6-8 scene objects. For each, include a 'title', 'type' (Exploration, NPC Interaction, or Combat), 'challenge', and a 'locationName' which MUST match one of the names from your generated 'locations' list.
+2.  **locations**: Create an array of 2-4 key location objects. For each, provide a 'name', a brief 'description', and a 'type' ('Battlemap', 'Dungeon', 'Settlement', 'or 'Special Location').
+3.  **npcs**: Create an array of 2-4 key NPC objects. For each, provide a 'name', 'description', a 'type' ('Minor', 'Major', 'Antagonist', or 'Creature'), and optionally the 'faction' they belong to (matching a name from the factions list). The 'type' is crucial for later steps.
+4.  **factions**: Create an array of 1-3 key faction objects. For each, provide a 'name', their primary 'goal', and a 'category' from the following list: [Government & Authority, Religious Organizations, Criminal Enterprises, Economic & Trade, Arcane & Scholarly, Adventuring & Mercenary, Racial & Cultural, Ideological & Revolutionary, Secret & Shadow, Planar & Extraplanar, Environmental & Territorial]."
+`;

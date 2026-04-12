@@ -1,0 +1,45 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Token".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Token Studio (CreateToken)
+
+```text
++--------------------------------------------------------------------------------+
+|  [Token Studio: Aerial Asset Gen]                                     [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Description: [ A grizzled dwarf fighter in golden plate with a red cape ]    |
++--------------------------------------------------------------------------------+
+|  PROMPT PREVIEW (DALL-E)               |  TOKEN MOCKUP (Top-Down)              |
+|  "Illustration of a top-down aerial    |  +---------------------------------+  |
+|   view of a grizzled dwarf fighter     |  |          /         \           |  |
+|   in golden plate... 2D game art,      |  |        /   (O)       \          |  |
+|   transparent background..."           |  |       |    / \        |         |  |
+|                                        |  |        \   \_/       /          |  |
+|  [Regenerate Prompt]                   |  |          \ _ _ _ _ /           |  |
+|  [Bypass Background]                   |  +---------------------------------+  |
++----------------------------------------+---------------------------------------+
+|  BATCH SETTINGS                        |  GALLERY (Workspace: /tokens)         |
+|  [ ] Round Frame     [V] Square Frame  |  [T1: Dwarf] [T2: Orc] [T3: Rogue]     |
+|  [V] Direct Top-Down [ ] Isometric     |  [View in Battlemap Mode]             |
++--------------------------------------------------------------------------------+
+|  [Generate via DALL-E] [Save PNG] [Export to FoundryVTT]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+[MISSING FILE: docs\mockups\ui-docs\token-ui.md]
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+[MISSING FILE: docs\mockups\samples\token-sample.md]

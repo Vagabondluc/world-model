@@ -21,7 +21,7 @@ export function Navigation() {
     <nav className="shell-nav panel" aria-label="left navigation">
       <div className="brand">
         <h1>Unified App</h1>
-        <p>Canonical shell for public product routes, donor rehosts, modal tools, and prototype families.</p>
+        <p>Canonical shell for public product routes, donor surfaces, modal tools, and prototype families.</p>
         <NavLink to="/" className="nav-link nav-family">
           <span>Product home</span>
           <span className="nav-meta">Unified landing page</span>
@@ -32,7 +32,7 @@ export function Navigation() {
         </NavLink>
         <NavLink to="/compare/donors" className="nav-link nav-family">
           <span>Compare donors</span>
-          <span className="nav-meta">Faithful donor rehosts</span>
+          <span className="nav-meta">Donor surfaces</span>
         </NavLink>
       </div>
 
@@ -89,7 +89,7 @@ export function Navigation() {
       </div>
 
       <div className="stack">
-        <p className="eyebrow">Donor rehosts</p>
+        <p className="eyebrow">Donor surfaces</p>
         <div className="nav-links" aria-label="donor routes">
           {DONOR_ORDER.map((donor) => {
             const definition = DONOR_DEFINITIONS[donor];

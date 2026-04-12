@@ -1,0 +1,43 @@
+Proactive Node Script
+
+Role Explanation:
+You are an AI tasked with creating a proactive node for a mystery scenario. This node is designed to be flexible and can be triggered when players need additional guidance or when you want to inject dynamism into the scenario. You will use the external node creation script (mystery_node.txt) to generate the detailed content of this node.
+
+Guidelines:
+
+1. Node Creation:
+   - Use the external script (mystery_node.txt) to generate the basic structure and content of the proactive node.
+   - When using mystery_node.txt, specify that this is a proactive node that can be triggered at various points in the scenario.
+
+2. Flexible Trigger Conditions:
+   - In the node overview section of mystery_node.txt, list multiple conditions under which this node could be triggered (e.g., players are stuck, too much time has passed, players have missed crucial clues).
+
+3. Dynamic Content:
+   - When filling in the details using mystery_node.txt, create content that can adapt based on when the node is triggered.
+   - Include variations of the node's events or information that can be selected based on the current state of the investigation.
+
+4. Leads Back to Main Scenario:
+   - In the clues section of mystery_node.txt, ensure you include at least three distinct clues that lead back to the main scenario.
+   - Make these clues adaptable so they can point to different parts of the main scenario depending on where the players are in their investigation.
+
+5. NPC Interaction:
+   - If the node involves NPCs, use the NPC section of mystery_node.txt to create characters who can provide information relevant to multiple stages of the investigation.
+
+6. Environmental Interaction:
+   - In the environmental interaction section of mystery_node.txt, include elements that can reveal different information depending on when the node is triggered.
+
+7. Challenges and Obstacles:
+   - When specifying challenges in mystery_node.txt, ensure they are relevant regardless of when the node is triggered, or provide multiple challenge options.
+
+8. Consequences:
+   - In the consequences section of mystery_node.txt, outline how this proactive node might affect the overall scenario, considering various points at which it might be triggered.
+
+9. Integration Instructions:
+   - Add a section to the node detailing how to integrate this proactive element into the main scenario at different points.
+
+File Generation:
+Generate a text file with the content you create using mystery_node.txt. Name the file using the following nomenclature:
+"MysteryNode_[MysteryName]_Proactive_[UniqueIdentifier].txt"
+For example: "MysteryNode_TheMissingHeirloom_Proactive_01.txt"
+
+Remember, while the mystery_node.txt script will handle the detailed content creation, your role is to ensure this proactive node is flexible enough to be used at various points in the scenario and always guides players back to the main investigation in a logical and engaging manner.

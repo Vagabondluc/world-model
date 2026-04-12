@@ -1,0 +1,36 @@
+# Dungeon Master's Guide to Creation and Management
+
+## Purpose
+This guide now pairs with the Python CLI in `Narrative Scripts/entry.py`, which provides an ASCII-menu workflow for sequencing the dungeon-creation steps, managing workspace folders, orchestrating Ollama-driven generation, and executing narrative scripts from the wider catalog (`index.json`, `manifest.json`, `manifest.yaml`).
+
+## Getting started
+1. Run `python Narrative Scripts/entry.py` from the repository root to launch the CLI.
+2. Create or select a working folder under `Narrative Scripts/ttrpg-master/<name>`; everything you generate, log, or discover will be tracked alongside this workspace to align with the Firestore-inspired schema in `database_schema.md`.
+3. Choose whether to generate content via `olmo:3:7b-instruct` for instructions or `olmo:3:7b-thinking` for auxiliary outputs; both responses are stored as files while keeping thinking output opaque.
+4. Use the “Discover & run narrative scripts” option when you are ready to invoke `.py` helpers or other executables scattered under `Narrative Scripts`, capturing their stdout/stderr/exit codes for review.
+
+## Step-by-step dungeon workflow
+Each numbered step below corresponds to a menu option in the toolkit, letting you reuse data from earlier stages. Generate artifacts in the working folder so the CLI can link them to the manifest, and save metadata for downstream discovery.
+
+1. **Conceptualize your dungeon** – Run the dungeon concept brainstormer to produce the high-level premise, tags, and categories for the manifest.
+2. **Create the dungeon map** – Capture corridors, rooms, and key locations; the CLI stores maps beside the working folder so later steps can reference them.
+3. **Write the dungeon key** – Expand area summaries, hazards, and scripted reactions; these coordinates feed encounter balancing.
+4. **Generate random encounters** – Produce tables that read from the concept + key; log them for future reference.
+5. **Create the adversary roster** – Build living NPCs and monsters tied to the key and encounter tables.
+6. **Summarize dungeon features** – Capture environmental descriptors, sensory cues, and hazards for corridor theming.
+7. **Generate corridor themes** – Turn summary data into sequences of moods, lighting, and sensory detail.
+8. **Design individual rooms** – Layer in interactions, traps, treasures, and choreography while staying consistent with the map.
+9. **Balance combat encounters** – Take room designs + adversary rosters to calibrate difficulty and pacing.
+10. **Prepare for restocking** – Note patrols, loot refreshes, and reinforcements that keep the dungeon alive.
+11. **Set up faction conflicts** – Simulate factions via deterministic or Ollama-supported prompts, logging outcomes for future sessions.
+12. **Prepare dynamic management** – Author encounter decks, state trackers, and contingency rules that adapt during play.
+13. **Enhance dungeon complexity** – Introduce loops, verticality, and branching arcs using the xandered designer prompts.
+14. **Expand to megadungeon (optional)** – Scale the current layout into a campaign-level megadungeon with new subcircuits.
+15. **Customize dungeon turns** – Wrap up by tailoring turn order mechanics, pacing drivers, and narrative cadence notes.
+
+## Final steps
+1. Review the generated files, metadata, and logs created under the working folder for consistency (e.g., manifest references to `Execution_Systems/Dungeons/...` entries) and update the Firestore schema fields as needed.
+2. Use the script-execution menu choice to batch-run supporting narrative scripts and store their outputs for GM reference.
+3. Export summaries or handouts from the toolkit, relying on the CLI-created folder structure for sharing or version control.
+
+Keep iterating: any step can be rerun, Ollama prompts can be tweaked, and new scripts can be registered with the manifest as the dungeon evolves.

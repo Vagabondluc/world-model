@@ -1,0 +1,1 @@
+First person past point of view of [main character], show don't tell, deep point of view. Realistic dialogue. Stronger verbs. Lots of conflict, drama, and description. Avoid mushy descriptions/dialogue.

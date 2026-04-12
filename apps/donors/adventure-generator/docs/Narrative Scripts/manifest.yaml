@@ -1,0 +1,194 @@
+Engines:
+  Golden_Compass:
+  - Engines/Golden_Compass/Golden Compass Adventure Template.txt
+  - Engines/Golden_Compass/Golden Compass Challenge Framework.txt
+  - Engines/Golden_Compass/Golden Compass Danger and Combat Framework.txt
+  - Engines/Golden_Compass/Golden Compass Wealth and Vehicle System.txt
+  - Engines/Golden_Compass/Three-Pass Adventure Creation Method.txt
+  prompt creator:
+  - Engines/prompt creator/PromptCreator_v1.txt
+  - Engines/prompt creator/whimsy.txt
+Payloads: {}
+Execution_Systems:
+  adventures:
+  - Execution_Systems/adventures/AI_QuestCreation_v1.txt
+  - Execution_Systems/adventures/arcane_library_method.txt
+  - Execution_Systems/adventures/arcane_library_method2.txt
+  - Execution_Systems/adventures/pointyhat travel adventure.txt
+  Dungeons:
+  - Execution_Systems/Dungeons/DungeonCreation_PointyHat_v1.txt
+  - Execution_Systems/Dungeons/DungeonDesign_5Room_Alternate_v1.txt
+  - Execution_Systems/Dungeons/DungeonDesign_5Room_v1.txt
+  - Execution_Systems/Dungeons/corridor-themes-generator.txt
+  - Execution_Systems/Dungeons/dungeon-concept-brainstormer.txt
+  - Execution_Systems/Dungeons/dungeon-features-summarizer.txt
+  - Execution_Systems/Dungeons/dungeon-key-writer.txt
+  - Execution_Systems/Dungeons/dungeon-map-creator.txt
+  - Execution_Systems/Dungeons/dungeon-room-designer.txt
+  - Execution_Systems/Dungeons/jp cooper 10 room dungeon.txt
+  - Execution_Systems/Dungeons/megadungeon-planner.txt
+  - Execution_Systems/Dungeons/xandered-dungeon-designer.txt
+  Encounters:
+  - Execution_Systems/Encounters/EncounterDesign_Older_v1.txt
+  - Execution_Systems/Encounters/EncounterDesign_v1.txt
+  - Execution_Systems/Encounters/EncounterDesign_v1_DEPRECATED.txt
+  - Execution_Systems/Encounters/Encounter_genric_beta.txt
+  - Execution_Systems/Encounters/RPGAdventure_SceneCrafting_v1.txt
+  - Execution_Systems/Encounters/combat-encounter-balancer.txt
+  - Execution_Systems/Encounters/combat_encounter - V2.txt
+  - Execution_Systems/Encounters/combat_encounter.txt
+  - Execution_Systems/Encounters/social_event.txt
+  - Execution_Systems/Encounters/trap_prep.txt
+  - Execution_Systems/Encounters/urban_crawl.txt
+  Factions:
+  - Execution_Systems/Factions/faction-conflict-simulator.txt
+  - Execution_Systems/Factions/faction_downtime.txt
+  - Execution_Systems/Factions/factions_creation.txt
+  Heists:
+  - Execution_Systems/Heists/heist_prep.txt
+  - Execution_Systems/Heists/heist_running.txt
+  - Execution_Systems/Heists/raid_execution.txt
+  - Execution_Systems/Heists/raid_prep.txt
+  Item:
+  - Execution_Systems/Item/magic weapon basic.txt
+  - Execution_Systems/Item/magic_item.txt
+  Locations:
+  - Execution_Systems/Locations/CreateFantasyCity_v1.txt
+  - Execution_Systems/Locations/Make a settlement.txt
+  - Execution_Systems/Locations/Quick_settlement.txt
+  - Execution_Systems/Locations/battlefield_generation.txt
+  - Execution_Systems/Locations/city_gazetteer.txt
+  - Execution_Systems/Locations/fantastic_location.txt
+  Mysteries:
+  - Execution_Systems/Mysteries/5_node_mystery.txt
+  - Execution_Systems/Mysteries/5x5_mystery_campaign.txt
+  - Execution_Systems/Mysteries/mystery_node.txt
+  - Execution_Systems/Mysteries/node_cloud_mystery.txt
+  - Execution_Systems/Mysteries/non-linear_mystery.txt
+  - Execution_Systems/Mysteries/proactive_mystery_node.txt
+  - Execution_Systems/Mysteries/revelations_dm_aid.txt
+  - Execution_Systems/Mysteries/swap_mystery.txt
+  NPCs:
+  - Execution_Systems/NPCs/CreateNPC_Alternate_v1.txt
+  - Execution_Systems/NPCs/NPC_Description_Simple_v1.txt
+  - Execution_Systems/NPCs/NPC_Description_v1.txt
+  - Execution_Systems/NPCs/QuickNPC_Creation_v1.txt
+  - Execution_Systems/NPCs/Quick_NPC.txt
+  - Execution_Systems/NPCs/npc_creator_bot.txt
+  plot:
+  - Execution_Systems/plot/SceneDescriptor_v1.txt
+  - Execution_Systems/plot/campaign_prep.txt
+  - Execution_Systems/plot/crafting scenes.txt
+  - Execution_Systems/plot/create_hook.txt
+  - Execution_Systems/plot/rumors.txt
+  - Execution_Systems/plot/vivid_description.txt
+  riddles:
+  - Execution_Systems/riddles/CreateRiddle_v1.txt
+  - Execution_Systems/riddles/CreateRiddle_v2.txt
+  - Execution_Systems/riddles/CreateToken_v1.txt
+  - Execution_Systems/riddles/createToken_v2.txt
+  Travel:
+  - Execution_Systems/Travel/random-encounter-table-generator.txt
+  - Execution_Systems/Travel/wilderness_travel.txt
+  - Execution_Systems/Travel/wilderness_travel_long.txt
+  Westmarsh:
+  - Execution_Systems/Westmarsh/Eldwyn_instant_generator.txt
+  - Execution_Systems/Westmarsh/Eldwyn_mission_prompt.txt
+  - Execution_Systems/Westmarsh/Eldwyn_pointyhat_travel_adventure.txt
+  - Execution_Systems/Westmarsh/Eldwyn_profil_npc_westmarsh.txt
+  - Execution_Systems/Westmarsh/Eldwyn_prompt_mission_fr.txt
+  - Execution_Systems/Westmarsh/Eldwyn_rail_road_quest_generator.txt
+  - Execution_Systems/Westmarsh/instant generator.txt
+  - Execution_Systems/Westmarsh/mission prompt.txt
+  - Execution_Systems/Westmarsh/profil_npc_westmarsh.txt
+  - Execution_Systems/Westmarsh/prompt mission francais.txt
+  - Execution_Systems/Westmarsh/rail road quest  generator.txt
+Output:
+  export:
+  - Output/export/Template_ImportFoundry_v1.txt
+  - Output/export/html template.html
+  - Output/export/scene_html.txt
+  Handouts_Images:
+  - Output/Handouts_Images/CreateRiddle_v1.txt
+  - Output/Handouts_Images/CreateRiddle_v2.txt
+  - Output/Handouts_Images/CreateToken_v1.txt
+  - Output/Handouts_Images/artist_styles.txt
+  - Output/Handouts_Images/createToken_v2.txt
+  - Output/Handouts_Images/image_prompt_sword_and_sorcery.txt
+  - Output/Handouts_Images/text2art.md
+  - Output/Handouts_Images/themed_image_v01.txt
+  homebrew 5e:
+  - Output/homebrew 5e/DraftStatblock_v1.txt
+  - Output/homebrew 5e/StatblockExpended_v1-pc-creature.txt
+  - Output/homebrew 5e/Statblockexpended_v1.txt
+  - Output/homebrew 5e/Subclass/Barbarians/Barbarian_path_balance.txt
+  - Output/homebrew 5e/Subclass/Barbarians/Barbarians_path_reference.txt
+  - Output/homebrew 5e/Subclass/Barbarians/barbarian_path_template.txt
+  - Output/homebrew 5e/Subclass/Bard/bard_base_class.txt
+  - Output/homebrew 5e/Subclass/Bard/bard_college_balance.txt
+  - Output/homebrew 5e/Subclass/Bard/bard_subclass_reference.txt
+  - Output/homebrew 5e/Subclass/Clerics/Cleric_domains.txt
+  - Output/homebrew 5e/Subclass/Druid/Druid_circle_balance.txt
+  - Output/homebrew 5e/Subclass/Druid/Druid_subclass_reference.txt
+  - Output/homebrew 5e/Subclass/Druid/Template_DruidCircle_v1.txt
+  - Output/homebrew 5e/Subclass/Druid/assembled_druid_subclaas_prompt.txt
+  - Output/homebrew 5e/Subclass/Druid/drui_balance.old
+  - Output/homebrew 5e/Subclass/Druid/druid_base_class.txt
+  - Output/homebrew 5e/Subclass/Fighter/fighter_archetype.txt
+  - Output/homebrew 5e/Subclass/Monks/monk_way.txt
+  - Output/homebrew 5e/Subclass/Paladin/Paladin_oath_balance.txt
+  - Output/homebrew 5e/Subclass/Paladin/Paladin_oath_template.txt
+  - Output/homebrew 5e/Subclass/Paladin/Paladin_subclass_reference.txt
+  - Output/homebrew 5e/Subclass/Rangers/ranger_archetype.txt
+  - Output/homebrew 5e/Subclass/Rogues/rogue_archetype.txt
+  - Output/homebrew 5e/Subclass/Sorcerers/sorcerer_origin.txt
+  - Output/homebrew 5e/Subclass/Warlocks/warlocks_pact.txt
+  - Output/homebrew 5e/Subclass/Wizards/wizard_traditon.txt
+  - Output/homebrew 5e/Subclass/druids/Druid_circle_balance.txt
+  - Output/homebrew 5e/Subclass/druids/Druid_subclass_reference.txt
+  - Output/homebrew 5e/Subclass/druids/Template_DruidCircle_v1.txt
+  - Output/homebrew 5e/Subclass/druids/druid_base_class.txt
+  - Output/homebrew 5e/Subclass/master prompt.txt
+  - Output/homebrew 5e/convert to mob.txt
+  - Output/homebrew 5e/misc 5e/ConvertPC_to_NPC_v1.txt
+  - Output/homebrew 5e/misc 5e/QuickNPC_to_MD_v1.txt
+  - Output/homebrew 5e/misc 5e/Template Stat Block Homebrewery.txt
+  - Output/homebrew 5e/misc 5e/convert to mob.txt
+  - Output/homebrew 5e/statblock july 24 v.2.txt
+  - Output/homebrew 5e/statblock new.july_24.txt
+  - Output/homebrew 5e/statblock_oldest.txt
+AI_Behavior:
+- AI_Behavior/dont_talk_but_do.txt
+- AI_Behavior/ed_greenwood.txt
+- AI_Behavior/encyclopedic_TextEntry_v1.txt
+- AI_Behavior/hivemind/HiveMindConcept_v1.txt
+- AI_Behavior/hivemind/Hivemind companion.txt
+- AI_Behavior/hivemind/NarrativeMasterAI_v1.txt
+- AI_Behavior/hivemind/personality_questionnaire.txt
+- AI_Behavior/hivemind/roles.json
+- AI_Behavior/new_behavior.txt
+Other:
+- Prose/Story_beat_adv.md
+- Prose/Structures/HeroJourneyPlot_v1.txt
+- Prose/Structures/StoryStructure_101_v1.txt
+- Prose/bring_ur_outline.md
+- Prose/character_profile.md
+- Prose/simple_style_prompt.md
+- Prose/story_beat_simple.md
+- Prose/story_hacker.md
+- Prose/style_prompt_example.md
+- Ressources/Chain-statblock-to-md.txt
+- Ressources/Reference_CreatureRoles_v1.txt
+- Ressources/Reference_Minigames_v1.txt
+- Ressources/Reference_TerrainFeatures_v1.txt
+- Ressources/big_list_rpg.md
+- Ressources/game master apply template.txt
+- Ressources/monster features raw.txt
+- Ressources/monster template.txt
+- Ressources/monster_features.txt
+- database_schema.md
+- dungeon-master-guide.txt
+- dungeon-master-toolkit.txt
+- index.json
+- manifest.json
+- manifest.yaml

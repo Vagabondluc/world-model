@@ -95,6 +95,11 @@
             "Mythforge",
             "Orbis",
             "AdventureGenerator",
+            "MappaImperium",
+            "DawnOfWorlds",
+            "FactionImage",
+            "WatabouCity",
+            "EncounterBalancerScaffold",
             "Neutral"
           ],
           "type": "string"

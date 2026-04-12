@@ -1,0 +1,76 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Magic-Weapon-Basic".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: magic-weapon-basic
+
+```text
++--------------------------------------------------------------------------------+
+|  [Magic Weapon Architect]                                              [?] [X]  |
++--------------------------------------------------------------------------------+
+|  WEAPON SOURCE DESCRIPTION:                                                    |
+|  [ "A sword forged from the frozen heart of a frost giant, pulsing with  " ]   |
+|  [ "pale blue light and freezing the ground wherever the tip touches..."    ]   |
++--------------------------------------------------------------------------------+
+|  SETTINGS                                   |  PREVIEW (Live Rendering)        |
+|  Name: [ Frost-Heart Blade ]                |  Frost-Heart Blade               |
+|  Rarity: [Rare] (Limit: 2 Features)         |  Rarity: Rare | Type: Longsword  |
+|  Type: [Longsword]                          |  Damage: 1d8 / 1d10 slashing     |
+|  [X] Use Online Ref.  [X] Auto-Balance      |  ------------------------------  |
+|                                             |  - Chill of the Grave (Feature 1)|
+|  [Generate Stat Block]                      |  - Giant's Might (Feature 2)     |
++---------------------------------------------+----------------------------------+
+|  [Download Markdown] [VTT Export] [Create Item Card]                   [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: magic-weapon-basic
+
+## Component Architecture
+- **Description Input Field:** A large text area for the user to paste lore or descriptions.
+- **Rarity & Rules Controller:** A dedicated settings panel to set Rarity, Weapon Type, and toggle automation like "Auto-Balance" or "Online Reference."
+- **Live Preview Panel:** A side-by-side view that renders the weapon's stat block in real-time as the agent processes the description.
+- **Feature Budget Tracker:** A small UI element that displays "X of Y features used," enforcing the script's rules for rarity-based complexity.
+
+## Interaction Logic
+- **Rarity-Driven Constraints:** Selecting a rarity level (e.g., Uncommon) immediately restricts the generator to only 1 major feature, ensuring balance.
+- **Thematic Extraction:** The AI analyzes the input description (e.g., "frozen heart") and suggests damage types (Cold) and properties (Heavy, Versatile) automatically.
+- **VTT Sync:** Buttons at the bottom allow for one-click transfers to popular Virtual Tabletop formats.
+
+## Visual Design
+- **Clean & Professional:** Focused on readability and rapid iteration.
+- **System-Compliant Formatting:** The preview panel uses a design that mimics official D&D 5e item blocks for familiarity.
+- **Modern Dark Theme:** Reduces eye strain during long DM prep sessions.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: magic-weapon-basic
+
+# Frost-Heart Blade
+*Weapon (Longsword), Rare*
+
+- **Cost:** 4,500 GP
+- **Damage:** 1d8 (1d10) Slashing + 1d6 Cold
+- **Properties:** Versatile, Magic
+- **Weight:** 3 lbs.
+- **Ability Bonus:** +1 to Attack and Damage rolls.
+
+### Features
+1. **Chill of the Grave:** On a critical hit, the target must succeed on a DC 15 Constitution saving throw or be *Restrained* until the end of its next turn as ice encases its limbs.
+2. **Giant's Breath:** Once per long rest, you can use an action to exhale a 15ft cone of frost. Each creature in that area must make a DC 15 Dexterity saving throw, taking 4d6 cold damage on a failed save, or half as much on a successful one.
+
+### Flavor Text
+*“Forged from the frozen heart of a frost giant, this blade pulses with a pale blue light. The ground freezes wherever the tip touches, and the air growls with the memory of an ancient winter.”*
+

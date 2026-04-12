@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Quest &amp; Travel Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#db143c",
+                        "background-light": "#f5e8c3",
+                        "background-dark": "#211114",
+                        "deep-brown": "#3a2d1d",
+                        "parchment-white": "#fcf8f9",
+                        "ink-blue": "#2b4c7e",
+                        "ink-purple": "#5e3a7d"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "serif": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>.parchment-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDgIik1-qS-xmKiIwDXWN5BwWAS4J4NpTvI1EwSjqhjkyERU1yw8xVBzFAMcFcwbB9dBzHwW1buXAyfmdfYQLivhiQv-FGo6ZJGUIou3RTVYS4ltYaxiQUXFCu8Y3JNu9a6DLO7lUWjDoROuXwNOAuHzcpAL-cr7RlyrTJI4Fol6dtqGfoOuxUNsqk14_zGK_aDlUJmkhaTlkiacXEpjWpsJDRL9UYSR0LmQaXkGGod2B818aWeTz8ZKnz11qe6RZRbRHNMoMea);
+    background-color: #f5e8c3
+    }
+.scroll-gradient {
+    background: linear-gradient(to bottom, #f5e8c3 0%, #e8d9b0 100%)
+    }
+.ink-splat {
+    mask-image: url(https://placeholder.pics/svg/100);
+    mask-size: contain;
+    mask-repeat: no-repeat
+    }</style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen flex overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-deep-brown text-parchment-white flex flex-col shrink-0 border-r border-black/20 shadow-2xl z-20">
+<div class="p-6 flex flex-col gap-8 h-full">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl">menu_book</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-xl font-extrabold tracking-tight leading-none italic uppercase">Chronicler</h1>
+<p class="text-xs text-primary font-medium opacity-80 uppercase tracking-widest">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 grow">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-primary">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-all text-sm font-medium opacity-70" href="#">
+<span class="material-symbols-outlined">library_books</span>
+                    Library
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/20 border border-primary/30 text-primary-foreground transition-all text-sm font-bold shadow-sm" href="#">
+<span class="material-symbols-outlined fill-1">swords</span>
+                    Quest Builder
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-all text-sm font-medium opacity-70" href="#">
+<span class="material-symbols-outlined">map</span>
+                    Travel Map
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/10 transition-all text-sm font-medium opacity-70" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+                    Archives
+                </a>
+</nav>
+<button class="w-full py-4 bg-primary hover:bg-primary/90 text-white font-extrabold rounded-lg shadow-lg shadow-primary/20 transition-all uppercase tracking-widest text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">auto_fix_high</span>
+                Forge Adventure
+            </button>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 flex flex-col relative parchment-texture overflow-hidden">
+<!-- Parchment Overlay Grit -->
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/felt.png')]"></div>
+<!-- Top Header & Tabs -->
+<header class="w-full border-b border-deep-brown/10 bg-background-light/50 backdrop-blur-sm px-8 pt-6 z-10">
+<div class="flex items-end gap-12">
+<a class="border-b-4 border-primary pb-3 text-deep-brown font-extrabold text-sm tracking-widest uppercase flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    Seed Generator
+                </a>
+<a class="border-b-4 border-transparent pb-3 text-deep-brown/40 hover:text-deep-brown font-bold text-sm tracking-widest uppercase transition-colors" href="#">
+                    Travel
+                </a>
+<a class="border-b-4 border-transparent pb-3 text-deep-brown/40 hover:text-deep-brown font-bold text-sm tracking-widest uppercase transition-colors" href="#">
+                    Co-Pilot
+                </a>
+</div>
+</header>
+<!-- Dynamic Content Area -->
+<div class="flex-1 overflow-y-auto p-8 flex flex-col gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Seed Generator Section -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="text-3xl font-extrabold text-deep-brown italic">Seed Generator</h2>
+<button class="p-2 rounded-full hover:bg-deep-brown/5 text-deep-brown transition-transform hover:rotate-180 duration-500">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<!-- Action Reel -->
+<div class="bg-white/40 border-2 border-deep-brown/10 rounded-xl p-1 flex flex-col gap-1 shadow-inner relative overflow-hidden group">
+<div class="bg-primary/10 py-2 text-center text-[10px] font-black tracking-tighter uppercase text-primary border-b border-deep-brown/5">Action</div>
+<div class="flex flex-col gap-1 p-2">
+<div class="p-3 bg-white rounded-lg shadow-sm border border-deep-brown/5 text-center text-sm font-bold text-deep-brown">Infiltrate</div>
+<div class="p-3 bg-white/60 rounded-lg text-center text-sm font-medium text-deep-brown/60">Rescue</div>
+<div class="p-3 bg-white/60 rounded-lg text-center text-sm font-medium text-deep-brown/60">Escort</div>
+</div>
+<div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-white/80 to-transparent pointer-events-none"></div>
+</div>
+<!-- McGuffin Reel -->
+<div class="bg-white/40 border-2 border-deep-brown/10 rounded-xl p-1 flex flex-col gap-1 shadow-inner relative overflow-hidden">
+<div class="bg-primary/10 py-2 text-center text-[10px] font-black tracking-tighter uppercase text-primary border-b border-deep-brown/5">McGuffin</div>
+<div class="flex flex-col gap-1 p-2">
+<div class="p-3 bg-white rounded-lg shadow-sm border border-deep-brown/5 text-center text-sm font-bold text-deep-brown">Shattered Crown</div>
+<div class="p-3 bg-white/60 rounded-lg text-center text-sm font-medium text-deep-brown/60">Void Essence</div>
+<div class="p-3 bg-white/60 rounded-lg text-center text-sm font-medium text-deep-brown/60">Ancient Scroll</div>
+</div>
+<div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-white/80 to-transparent pointer-events-none"></div>
+</div>
+<!-- Subject Reel -->
+<div class="bg-white/40 border-2 border-deep-brown/10 rounded-xl p-1 flex flex-col gap-1 shadow-inner relative overflow-hidden">
+<div class="bg-primary/10 py-2 text-center text-[10px] font-black tracking-tighter uppercase text-primary border-b border-deep-brown/5">Subject</div>
+<div class="flex flex-col gap-1 p-2">
+<div class="p-3 bg-white rounded-lg shadow-sm border border-deep-brown/5 text-center text-sm font-bold text-deep-brown">Fallen Paladin</div>
+<div class="p-3 bg-white/60 rounded-lg text-center text-sm font-medium text-deep-brown/60">Merchant Prince</div>
+<div class="p-3 bg-white/60 rounded-lg text-center text-sm font-medium text-deep-brown/60">Exiled Druid</div>
+</div>
+<div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-white/80 to-transparent pointer-events-none"></div>
+</div>
+</div>
+<div class="bg-deep-brown text-parchment-white p-4 rounded-xl shadow-lg relative overflow-hidden">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl opacity-10 rotate-12">format_quote</span>
+<p class="italic text-lg font-medium relative z-10 leading-relaxed">
+                            "The <span class="text-primary font-bold">Fallen Paladin</span> has hidden the <span class="text-primary font-bold">Shattered Crown</span> within the Iron Bastion. You must <span class="text-primary font-bold">Infiltrate</span> the fortress before the moon rises."
+                        </p>
+</div>
+</section>
+<!-- Travel Event Map Section -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="text-3xl font-extrabold text-deep-brown italic">Travel Map</h2>
+<div class="flex gap-2 text-[10px] font-bold uppercase tracking-widest text-deep-brown/60">
+<span class="flex items-center gap-1"><span class="size-2 rounded-full bg-ink-blue"></span> Roleplay</span>
+<span class="flex items-center gap-1"><span class="size-2 rounded-full bg-ink-purple"></span> Hybrid</span>
+</div>
+</div>
+<div class="relative bg-white/30 border-2 border-deep-brown/5 rounded-2xl p-6 h-[260px] flex items-center overflow-hidden">
+<!-- Connecting Line -->
+<div class="absolute top-1/2 left-10 right-10 h-1 bg-deep-brown/10 -translate-y-1/2"></div>
+<!-- Travel Nodes -->
+<div class="flex justify-between w-full relative z-10">
+<!-- Node 1 -->
+<div class="flex flex-col items-center gap-4 group">
+<div class="size-12 rounded-full bg-deep-brown text-parchment-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-black uppercase text-deep-brown tracking-tighter">Ironstead</p>
+<p class="text-[10px] text-deep-brown/60 italic font-bold">Start</p>
+</div>
+</div>
+<!-- Event 1 -->
+<div class="flex flex-col items-center gap-4 mt-8">
+<div class="w-32 bg-ink-blue p-3 rounded-lg shadow-xl border border-white/20 transform hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-white text-xs">theater_comedy</span>
+<p class="text-[9px] font-black text-white uppercase tracking-widest">Roleplay</p>
+</div>
+<p class="text-[11px] text-white/90 leading-tight">The Wandering Bard's Tale</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex flex-col items-center gap-4 -mt-8">
+<div class="w-32 bg-ink-purple p-3 rounded-lg shadow-xl border border-white/20 transform hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-white text-xs">psychology</span>
+<p class="text-[9px] font-black text-white uppercase tracking-widest">Hybrid</p>
+</div>
+<p class="text-[11px] text-white/90 leading-tight">Ambush in the Mist</p>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col items-center gap-4">
+<div class="size-12 rounded-full border-4 border-deep-brown bg-parchment-white text-deep-brown flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<div class="text-center">
+<p class="text-xs font-black uppercase text-deep-brown tracking-tighter">Weeping Wastes</p>
+<p class="text-[10px] text-deep-brown/60 italic font-bold">Destination</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Co-Pilot Console (Scroll Style) -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-deep-brown">ink_pen</span>
+<h2 class="text-2xl font-extrabold text-deep-brown italic">Co-Pilot Console</h2>
+</div>
+<div class="relative bg-parchment-white border-x-8 border-deep-brown/5 rounded-lg shadow-inner min-h-[300px] flex flex-col overflow-hidden">
+<!-- Text Log -->
+<div class="flex-1 p-6 flex flex-col gap-6 overflow-y-auto max-h-[400px]">
+<!-- Storyteller Entry -->
+<div class="flex gap-4">
+<div class="size-8 rounded bg-primary shrink-0 flex items-center justify-center text-white font-black text-xs">S</div>
+<div class="flex flex-col gap-1">
+<p class="text-[10px] font-black uppercase text-primary tracking-widest">Storyteller</p>
+<div class="text-deep-brown leading-relaxed font-medium italic opacity-80">
+                                    The wind howls through the ruins, carrying the scent of ozone and ancient decay. Before you stands the Altar of Silent Oaths, its surface etched with glyphs that seem to bleed shadows.
+                                </div>
+</div>
+</div>
+<!-- Protagonist Entry -->
+<div class="flex gap-4">
+<div class="size-8 rounded bg-deep-brown shrink-0 flex items-center justify-center text-parchment-white font-black text-xs">P</div>
+<div class="flex flex-col gap-1">
+<p class="text-[10px] font-black uppercase text-deep-brown tracking-widest opacity-60">Protagonist</p>
+<div class="text-deep-brown leading-relaxed font-bold">
+                                    "I approach the altar and brush away the dust. I search for any hidden inscriptions or mechanisms that might reveal the location of the crown."
+                                </div>
+</div>
+</div>
+<!-- Modal Overlay for Decision -->
+<div class="my-4 flex justify-center">
+<div class="max-w-md w-full bg-deep-brown text-parchment-white p-6 rounded-xl border-t-4 border-primary shadow-2xl relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-tighter">Challenge Initiated</div>
+<div class="flex items-center gap-6">
+<div class="size-16 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
+<span class="material-symbols-outlined text-5xl">casino</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-extrabold italic leading-none">DC 14 Religion Check</h3>
+<p class="text-xs opacity-70 leading-relaxed font-medium">Roll to determine your knowledge of the Old Gods and unlock the altar's secret compartment.</p>
+<button class="mt-2 py-2 px-4 bg-primary rounded-lg text-sm font-black uppercase tracking-widest hover:brightness-110 transition-all">Roll D20</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-4 border-t-2 border-deep-brown/5 bg-deep-brown/5 flex gap-4">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-deep-brown placeholder:text-deep-brown/30 font-bold italic text-lg" placeholder="Tell your story..." type="text"/>
+<button class="size-12 bg-deep-brown rounded-full text-parchment-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Decorative Ink Splatter Background Accents -->
+<div class="absolute -bottom-10 -right-10 size-64 bg-deep-brown opacity-[0.03] pointer-events-none mix-blend-multiply rounded-full blur-3xl"></div>
+<div class="absolute -top-10 -left-10 size-48 bg-primary opacity-[0.03] pointer-events-none mix-blend-multiply rounded-full blur-2xl"></div>
+</main>
+</body></html>

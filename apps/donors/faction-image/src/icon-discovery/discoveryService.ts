@@ -1,0 +1,1 @@
+export { LocalIconIndexProvider } from "./providers";

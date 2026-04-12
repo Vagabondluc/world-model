@@ -1,0 +1,93 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeon-Features-Summarizer".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: dungeon-features-summarizer
+
+```text
++--------------------------------------------------------------------------------+
+|  [Dungeon Features Summarizer]                                        [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Global Preset: [ Dwarven Fort      ] [Load]  Seed: [ 10293 ] [AI Sync All]    |
++--------------------------------------------------------------------------------+
+|  ILLUMINATION & CLIMATE                                                        |
+|  Light: [ Dim / Sconces      ]  Heat: [ Cold & Drafty     ]                    |
+|  Smell: [ Rusted Iron        ]  Sound: [ Distant Machinery ]                    |
++--------------------------------------------------------------------------------+
+|  ARCHITECTURE                                                                  |
+|  Walls: [ Granite Blocks     ]  Floor: [ Smooth Stone      ]                    |
+|  Ceiling: [ 15ft Vaulted     ]  Doors: [ Heavy Iron / Push ]                    |
+|  Corridors: [ 10ft Wide      ]                                                 |
++--------------------------------------------------------------------------------+
+|  UNIQUE SYSTEMS                                                                |
+|  - Runic communication nodes in every room.                                    |
+|  - Automated fire suppression (water jets).                                    |
++--------------------------------------------------------------------------------+
+|  QUICK REFERENCE SUMMARY (Markdown)                                            |
+|  > **Walls:** Granite Blocks. **Light:** Sconces. **Vibe:** Machinery.         |
++--------------------------------------------------------------------------------+
+|  [Copy Reference Card] [Export to VTT]                                [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: dungeon-features-summarizer
+
+## Component Architecture
+- **Global Preset Header:** Allows loading pre-defined sets (e.g., "Frozen Fortress", "Infected Hive").
+- **Grid Layout:** 
+    - **Physical Attributes:** Wall material, floor type, ceiling height, corridor width.
+    - **Sensory Factors:** Light level, temperature, ambient sound/smell.
+    - **Architectural Details:** Common door types (locked/unlocked/trapped), secret passage frequency.
+- **Reference Card Preview:** A stylized, formatted text block that updates in real-time as inputs are changed.
+
+## Interaction Logic
+- **Linked Parameters:** Changing the "Base Style" to "Cave" might automatically set walls to "Unworked Rock" and floors to "Uneven Earth" as a smart default.
+- **RNG Buttons:** Each individual feature has a "DICE" icon to randomize just that specific element based on the Global Preset's weighting.
+- **AI Sync:** The "AI Sync All" button attempts to bridge the features with the current dungeon narrative context.
+
+## Visual Design
+- **Information Density:** High density, low friction. Designed for quick scanning during live gameplay.
+- **Markdown Highlighting:** The Reference Card uses bolding and bullet points to ensure the DM's eyes hit the key words first.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: dungeon-features-summarizer
+
+### Global Settings: The Obsidian Citadel
+**Base Style:** Volcanic Fortress
+
+**1. Illumination**
+- **Type:** Low light.
+- **Source:** Floating embers and veins of glowing magma behind reinforced glass.
+- **Vibe:** Pulsing, flickering shadows.
+
+**2. Physical Dimensions**
+- **Ceiling Height:** Average 20ft (Vaulted).
+- **Corridor Width:** 15ft (Designed for marching soldiers).
+- **Wall Material:** Polished obsidian blocks, cold to the touch.
+- **Floor Material:** Smooth basalt slabs.
+
+**3. Environment**
+- **Temperature:** Oppressively hot (Sweltering).
+- **Sound:** The rhythmic "thrum" of a geothermal generator.
+- **Smell:** Sulfur and burnt ozone.
+
+**4. Architectural Details**
+- **Doors:** Heavy stone slabs that slide vertically into the ceiling. Operated by pressure plates or lever-pulley systems.
+- **Secret Passages:** Rare. Usually hidden behind wall tapestries or False Magma veins.
+
+**5. Unique Feature**
+- **Magical Gravity:** Every 10 minutes, gravity shifts slightly, making wall-walking possible for those attuned to the Citadel's core.
+

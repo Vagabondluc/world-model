@@ -1,0 +1,268 @@
+<html class="light" lang="en"><head></head><body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30 overflow-hidden">```html
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Megadungeon Planner</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 8px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .geometric-overlay {
+                background-image: radial-gradient(#3a2d1d 0.5px, transparent 0.5px);
+                background-size: 20px 20px;
+                opacity: 0.05;
+            }
+        }
+    </style>
+
+
+<div class="flex h-screen">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-parchment-base">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1 font-noto">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-[#922610] text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">castle</span>
+<span class="font-header tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-header tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="font-header tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOgKoX8-X3uR69Mxf_JeQA4Ufg8-rppOW5fJYnrVqStlP-DnIyZsZXDQC4SVWoOWvuzm_PEHGaDKFURkM9bJIdrV6o5-yc4Bwrq403XQdHPA17LhZcSPmzrAodop6mtJB07an4d9Y50_gnS0acqs10yJ27qpru6Jt6Iq_EsYc8b2awLWQcsqodm2MiOdCX57vqQkayvLQm6uaRchbPoyLwiQdGZSlzSHuUg1rkWHUaqCd4sLPYdYLXXQ1n-18EsqA-VYFn48Mq');"></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest font-noto">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-[#922610] hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">humerus</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 parchment-texture overflow-y-auto custom-scrollbar relative grit-overlay">
+<div class="absolute inset-0 geometric-overlay pointer-events-none"></div>
+<div class="relative z-10 px-12 py-10 flex flex-col gap-8 max-w-7xl mx-auto">
+<header class="border-b-2 border-medium-brown/30 pb-6">
+<h2 class="font-header text-5xl text-ink-dark drop-shadow-sm">Megadungeon Planner: The Underlevels of Valen</h2>
+</header>
+<nav class="flex items-center gap-1 overflow-x-auto pb-4 scrollbar-hide">
+<div class="flex-none flex items-center gap-1">
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-parchment-base border border-medium-brown/40 opacity-60">L1</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#f0dab0] border border-medium-brown/40 opacity-60">L2</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#ebcc9d] border border-medium-brown/40 opacity-60">L3</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#e6be8a] border border-medium-brown/40 opacity-60">L4</div>
+<div class="w-12 h-14 flex items-center justify-center font-header text-xl bg-[#dnd-red] text-white border-2 border-chronicle-red shadow-lg transform -translate-y-1 z-10 scale-110">L5</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#dfa46e] border border-medium-brown/40">L6</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#d99560] border border-medium-brown/40">L7</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#d48652] border border-medium-brown/40">L8</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#ce7744] border border-medium-brown/40">L9</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#c96836] border border-medium-brown/40 text-white">L10</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#c35928] border border-medium-brown/40 text-white">L11</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#be4a1a] border border-medium-brown/40 text-white">L12</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#b83b0c] border border-medium-brown/40 text-white">L13</div>
+<div class="w-10 h-12 flex items-center justify-center font-header text-sm bg-[#b32c00] border border-medium-brown/40 text-white font-bold">L20</div>
+</div>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-[#fef9eb]/80 border border-medium-brown p-8 shadow-sm">
+<span class="font-noto text-[10px] tracking-[0.25em] text-medium-brown uppercase font-bold">STORYTELLER</span>
+<h3 class="font-header text-3xl text-chronicle-red mt-2 mb-6 uppercase">Level 5: The Sunless Sea</h3>
+<div class="space-y-6">
+<div>
+<p class="text-sm font-noto tracking-widest text-medium-brown uppercase mb-1">Theme</p>
+<p class="text-xl font-body italic">Aqueous Decay</p>
+</div>
+<div>
+<div class="flex justify-between items-end mb-2">
+<p class="text-sm font-noto tracking-widest text-medium-brown uppercase">Difficulty Index</p>
+<p class="font-header text-chronicle-red">60%</p>
+</div>
+<div class="w-full h-3 bg-medium-brown/10 rounded-full overflow-hidden border border-medium-brown/20">
+<div class="h-full bg-chronicle-red" style="width: 60%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#fef9eb]/80 border border-medium-brown p-8 shadow-sm">
+<span class="font-noto text-[10px] tracking-[0.25em] text-medium-brown uppercase font-bold">STORYTELLER</span>
+<h3 class="font-header text-3xl text-ink-dark mt-2 mb-6 uppercase">Faction Territorial Dashboard</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center justify-between p-4 bg-white/50 border border-medium-brown/20">
+<div>
+<p class="font-header text-lg text-ink-dark">Cult of Silence</p>
+<p class="text-xs font-body opacity-70">Sector: 5A, 5B</p>
+</div>
+<span class="px-2 py-1 bg-chronicle-red/10 text-chronicle-red border border-chronicle-red/20 text-[10px] font-noto tracking-tighter uppercase font-bold">Hostile</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white/50 border border-medium-brown/20">
+<div>
+<p class="font-header text-lg text-ink-dark">Scrapper Guild</p>
+<p class="text-xs font-body opacity-70">Sector: 5C (Docks)</p>
+</div>
+<span class="px-2 py-1 bg-stone-200 text-stone-600 border border-stone-300 text-[10px] font-noto tracking-tighter uppercase font-bold">Neutral</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#fef9eb]/80 border border-medium-brown p-8 shadow-sm">
+<span class="font-noto text-[10px] tracking-[0.25em] text-medium-brown uppercase font-bold">STORYTELLER</span>
+<h3 class="font-header text-3xl text-ink-dark mt-2 mb-8 uppercase">Ecosystem &amp; Resource Flow</h3>
+<div class="flex flex-wrap items-center justify-around gap-8">
+<div class="flex flex-col items-center">
+<div class="size-20 bg-white/40 border-2 border-medium-brown/40 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-chronicle-red text-4xl">bug_report</span>
+</div>
+<p class="font-header text-lg">Giant Crabs</p>
+<p class="text-xs text-medium-brown font-noto uppercase">Migration: L6</p>
+</div>
+<span class="material-symbols-outlined text-medium-brown/40 text-4xl">arrow_forward</span>
+<div class="flex flex-col items-center">
+<div class="size-24 bg-chronicle-red/5 border-2 border-chronicle-red/40 rounded-full flex items-center justify-center mb-4 relative">
+<span class="material-symbols-outlined text-chronicle-red text-5xl">water_drop</span>
+<div class="absolute -top-2 -right-2 bg-chronicle-red text-white text-[10px] px-2 py-1 rounded-full font-bold">ACTIVE</div>
+</div>
+<p class="font-header text-lg">Subterranean Lake</p>
+<p class="text-xs text-medium-brown font-noto uppercase tracking-widest">Level 5 Node</p>
+</div>
+<span class="material-symbols-outlined text-medium-brown/40 text-4xl">arrow_forward</span>
+<div class="flex flex-col items-center">
+<div class="size-20 bg-white/40 border-2 border-medium-brown/40 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-chronicle-red text-4xl">humidity_mid</span>
+</div>
+<p class="font-header text-lg">Fresh Water</p>
+<p class="text-xs text-medium-brown font-noto uppercase">Deposit: L4</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-[#fef9eb]/80 border border-medium-brown p-8 shadow-sm">
+<h3 class="font-header text-2xl text-ink-dark mb-6 uppercase border-b border-medium-brown/20 pb-4">Quest Arcs &amp; Mysteries</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="mt-1 size-5 border border-chronicle-red flex items-center justify-center text-chronicle-red">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div>
+<p class="font-body font-bold text-ink-dark leading-tight">The Kraken's Tithe</p>
+<p class="text-sm opacity-70">Players have negotiated with the deep-dwellers.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="mt-1 size-5 border border-medium-brown/40"></div>
+<div>
+<p class="font-body font-bold text-ink-dark leading-tight">Salt-Stained Scrolls</p>
+<p class="text-sm opacity-70">Recover the lost library of Valen from the flooded archive.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="mt-1 size-5 border border-medium-brown/40"></div>
+<div>
+<p class="font-body font-bold text-ink-dark leading-tight">The Black Tide Rises</p>
+<p class="text-sm opacity-70">Investigate the origin of the sludge polluting the lower levels.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-[#fef9eb]/80 border border-medium-brown p-8 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold border border-red-200">
+<span class="material-symbols-outlined text-sm">priority_high</span>
+                            ALERT: AREA 5.2
+                        </span>
+</div>
+<h3 class="font-header text-2xl text-ink-dark mb-6 uppercase border-b border-medium-brown/20 pb-4">Dynamic Restoration Engine</h3>
+<div class="space-y-4">
+<div class="p-4 bg-chronicle-red/5 border-l-4 border-chronicle-red">
+<p class="font-noto text-[10px] text-chronicle-red tracking-widest uppercase mb-1">AI Suggestion</p>
+<p class="text-sm font-body italic">Area 5.2 (The Grotto) has been cleared for 48 hours. Suggest restocking with <strong>2x Deep-Sea Stalkers</strong> and <strong>Refilling the Poison Dart Trap</strong> to maintain level difficulty.</p>
+</div>
+<button class="w-full border border-chronicle-red text-chronicle-red hover:bg-chronicle-red hover:text-white transition-colors py-3 font-header uppercase text-sm tracking-widest">
+                            Apply Restock Protocol
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto px-12 py-10 bg-black/5 flex justify-between items-center border-t border-medium-brown/20 relative z-10">
+<p class="font-header text-sm text-ink-dark/60 tracking-[0.2em] uppercase">© 1492 DR - Chronicler Archive Systems</p>
+<div class="flex gap-8 opacity-40">
+<span class="material-symbols-outlined text-chronicle-red text-3xl">shield</span>
+<span class="material-symbols-outlined text-chronicle-red text-3xl">swords</span>
+<span class="material-symbols-outlined text-chronicle-red text-3xl">skull</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

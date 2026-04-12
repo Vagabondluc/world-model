@@ -1,0 +1,77 @@
+# LLM Guidelines for Conceptualizing and Describing Fantastical Locations
+
+As an LLM, your task is to create a comprehensive document that conceptualizes and describes a fantastical location for use in a tabletop roleplaying game or storytelling scenario. This document should provide a vivid, engaging, and mechanically useful description of a unique and memorable location.
+
+## Output File
+Generate a file with the following structure:
+
+1. Evocative Name
+2. Location Aspects
+3. Scale and Age
+4. Sensory Details
+5. Potential Interactions
+6. Hidden Secrets or Lore
+7. Connections to Character Backgrounds (if applicable)
+
+## Section Details
+
+### 1. Evocative Name
+- Create a compelling and imaginative name for the location that immediately captures attention.
+- The name should be brief (3-5 words) but highly descriptive.
+- Examples: "The Bridge of Teeth," "Fang of the First Wyrm," "Crucified Titan"
+
+### 2. Location Aspects
+- Provide exactly three aspects that describe key features of the location.
+- Each aspect should be a short phrase (5-10 words) that highlights a unique, interactive, or notable element of the location.
+- Ensure these aspects can be used for storytelling or mechanical purposes in a game.
+- Examples: 
+  - "Huge saber-toothed bestial skull bursting out of the ground"
+  - "Bones tied together with cracked and splitting leather and sinew"
+  - "Deep hole in the earth below the geode like an infected wound"
+
+### 3. Scale and Age
+- Describe the size of the location, emphasizing its grandiosity or uniqueness.
+- Indicate the age of the location or its key features, focusing on ancient or primordial elements.
+- Use specific measurements or time periods to convey scale and age effectively.
+- Examples:
+  - "Mile-high waterfall cascading for millennia"
+  - "Thirty-foot-high fang thrust up out of the ground, predating known civilization"
+
+### 4. Sensory Details
+- Provide vivid descriptions engaging at least three senses (sight, sound, smell, touch, taste).
+- Use evocative language to make the location feel alive and present.
+- Examples:
+  - "Howling wind sounds like moaning through the bone bridge"
+  - "Noxious fumes perpetually flowing from the crater, carrying a sulfurous stench"
+
+### 5. Potential Interactions
+- Describe 2-3 ways characters might interact with the location or its aspects.
+- Include potential challenges, opportunities, or points of interest.
+- Examples:
+  - "The circle of glyphs on the skull's forehead beckons magical investigation"
+  - "Razor-sharp emerald deposits offer both danger and potential wealth"
+
+### 6. Hidden Secrets or Lore
+- Suggest 1-2 hidden elements or pieces of lore connected to the location.
+- These should provide hooks for further exploration or storytelling.
+- Examples:
+  - "Rumors speak of a hidden chamber beneath the titan's feet"
+  - "Ancient texts refer to this location as a nexus of otherworldly energy"
+
+### 7. Connections to Character Backgrounds (if applicable)
+- If character backgrounds are provided, suggest 1-2 ways the location might tie into a character's history or knowledge.
+- These connections should be loose enough to adapt to various characters.
+- Examples:
+  - "The iconography might be recognized by a character with religious training"
+  - "A character with a background in archeology could identify the age of the ruins"
+
+## Additional Instructions
+
+1. Emphasize the fantastic nature of the location through scale, age, or otherworldly elements.
+2. Use clear, vivid language throughout the document.
+3. Aim for a description that could fit a single scene or encounter, rather than an entire dungeon or city.
+4. Use markdown formatting for better readability and organization.
+5. Keep the total description concise, aiming for no more than 300-400 words in total.
+6. Ensure that the location description leaves room for improvisation and adaptation in gameplay.
+
+Remember, your task is to generate a complete, ready-to-use document describing a fantastical location. This description should inspire imagination, provide clear visual and sensory cues, and offer potential for meaningful interaction in a game or story context.

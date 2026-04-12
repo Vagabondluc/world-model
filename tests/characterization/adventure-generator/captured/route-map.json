@@ -1,10 +1,11 @@
 {
   "donor": "adventure-generator",
   "label": "Adventure Generator",
-  "classification": "fragment donor",
-  "methodology": "intent reconstruction",
-  "basis": "reconstructed",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
   "routes": [
+    "/",
     "/donor/adventure-generator"
   ]
 }

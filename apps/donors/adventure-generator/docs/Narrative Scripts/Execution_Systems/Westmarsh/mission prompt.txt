@@ -1,0 +1,67 @@
+**Mission Codification Guide**
+
+Welcome to the standardized mission drafting guide for our adventurer's guild. Below is the template and instructions for codifying and posting missions on the guild quest board. This will ensure consistency and clarity in mission details, helping adventurers to effectively prepare and assess their suitability for the tasks ahead.
+
+### Mission Template in Markdown
+
+Here is the markdown template for creating new mission posts:
+
+```markdown
+### Mission ID: {Type Abbreviation}-{Five Digit Code}
+**Title:** {Descriptive Title of the Mission}
+**Rank:** {Difficulty Level/Rank Required}
+**Objective:** {Clear, Concise Statement of the Goal}
+**Rewards:** {List of Rewards, including monetary compensation and items if applicable}
+**Requirements:** {Any specific skills, spells, or conditions needed}
+**Mission Tags:** {Combat, Stealth, Social, Knowledge, Mercy}
+**Difficulty Rating:** {Easy, Medium, Hard, Expert}
+**Prerequisites:** {Specific prerequisites for undertaking the mission}
+```
+
+### Mission Types and Their Codifications
+
+Here is the list of mission types along with their unique identifiers:
+
+1. **Escort (ESC)** - Safeguard a person or object to a specific destination.
+2. **Defense (DEF)** - Protect a location, object, or person from attacks or threats.
+3. **Offense (OFF)** - Actively attack a target, such as a stronghold or enemy group.
+4. **Puzzle Investigations (PI)** - Solve puzzles, decipher clues, and unravel mysteries.
+5. **Recovery (REC)** - Retrieve an object, person, or information from a location or group.
+6. **Reconnaissance (RCON)** - Gather information or scout an area without engaging in direct conflict.
+7. **Rescue (RS)** - Save a person or group from a dangerous situation.
+8. **Diplomatic (DIP)** - Engage in negotiations, peace talks, political maneuvering, or covert espionage.
+9. **Sabotage (SAB)** - Disrupt or destroy an enemy’s operations or resources.
+10. **Expedition (EXP)** - Explore unknown regions, including archaeological digs, deep-sea explorations, or scientific studies.
+11. **Mercy Missions (MM)** - Provide aid, relief, or assistance without direct combat.
+12. **Ritual Missions (RTM)** - Participate in or prevent significant magical or religious ceremonies.
+13. **Smuggling (SMG)** - Illegally transport goods or people past checkpoints or borders.
+14. **Rebellion (RBL)** - Overthrow or undermine a current authority or government.
+15. **Transport (TRP)** - Move sensitive or valuable cargo through dangerous territories.
+16. **Discovery (DSC)** - Uncover hidden truths, lost cities, ancient relics, or conduct magical research.
+17. **Competition (CMP)** - Participate in or win contests that may involve skill, strength, or cunning.
+18. **Guardian (GRD)** - Maintain the safety of a place or artifact over an extended period.
+19. **Fetch Quest (FQ)** - Collect specific items or components, often from dangerous locations.
+20. **Planting (PLT)** - Covertly place an object or information within a secured area.
+21. **Impersonation (IMP)** - Assume someone else's identity to access restricted areas or information.
+22. **Heist (HST)** - Execute a well-planned theft of a high-value object from a secured location.
+23. **Framing (FRM)** - Set up a scenario to falsely implicate someone in a crime or misconduct.
+24. **Bringing to Justice (BTJ)** - Apprehend and deliver a criminal or fugitive to face justice.
+25. **Hunting (HNT)** - Track and eliminate a dangerous creature threatening the region.
+26. **Artifact Recovery (AR)** - Locate and retrieve ancient or magical artifacts.
+27. **Magical Research (MR)** - Assist in or conduct magical experiments and studies.
+28. **Divine Interventions (DI)** - Perform tasks for or against deities or their followers.
+29. **Cryptic Enigmas (CE)** - Engage in solving ancient or arcane puzzles.
+30. **Conservation Efforts (CON)** - Preserve endangered magical creatures or rehabilitate lands.
+31. **Espionage and Intrigue (EI)** - Conduct intelligence gathering and spy on rival factions.
+
+### Reward System Based on Tier and Mission Type
+
+Align rewards with the mission's complexity and the skills required:
+
+| **Tier**      | **Level** | **One-Shot Reward**                                           |
+|---------------|-----------|--------------------------------------------------------------|
+| **Copper**    | 1-3       | 10-50 gp, roll on Common Consumable Magic Item Table         |
+| **Silver**    | 4-6       | 50-100 gp, roll on Uncommon Consumable Magic Item Table      |
+| **Electrum**  | 7-9       | 100-200 gp, roll on Rare Consumable Magic Item Table         |
+| **Gold**      | 10-12     | 200-500 gp, roll on Very Rare Consumable Magic Item Table    |
+| **Platinum**  | 13+       | 500-1000 gp, roll on Legendary Consumable Magic Item Table   |

@@ -1,0 +1,59 @@
+Urban Crawl Creation Guidelines for an LLM:
+
+1. Overview and Purpose:
+   - As the LLM, your role is to create an urban crawl that leverages the city gazetteer to provide a structured, exploratory campaign experience for the player characters.
+   - The urban crawl treats the city as the core focus, with the player characters investigating and engaging with the various layers of content keyed to the different districts.
+
+2. Keying Districts:
+   - Review the city gazetteer and identify key locations, scenarios, and narrative elements that can be tied to each district.
+   - These keyed elements can include:
+     - Standalone scenes or short scenarios (e.g., a vampire den, a gang conflict, a political debate)
+     - Ongoing storylines or faction-based activities (e.g., a heist plot, a missing persons investigation, a patron offering jobs)
+     - Points of interest, NPCs, or adventure sites that can serve as hooks for further exploration
+
+3. Layered Content:
+   - Consider organizing the keyed district content into thematic "layers" or metascenarios.
+   - Examples of potential layers include:
+     - Vampire blood den activities
+     - Noir gang operations
+     - Opportunities for lucrative heists
+     - Patrons offering jobs or quests
+     - Potential contacts or allies to be recruited
+   - Maintain a "base layer" of general content that doesn't fit into a specific citywide theme.
+   - Layers can be added, retired, or expanded as the campaign progresses.
+
+4. Investigation Actions:
+   - Establish the investigation action as the primary means for player characters to access the keyed district content.
+   - When the players state they want to investigate a specific district, resolve it as follows:
+     - If they are investigating a general layer, randomly or arbitrarily determine which layer's content they encounter.
+     - If they are investigating a specific layer or storyline, pull the relevant content from that layer.
+   - Investigate actions can have mechanical components, such as skill checks or costs, depending on the layer being accessed.
+
+5. Triggered Districts:
+   - Some districts may have content that automatically triggers when the players enter the area, without requiring a separate investigation action.
+   - Treat these triggered districts similarly to random encounters, with the content engaging the players immediately upon arrival.
+   - The distinction between triggered districts and random encounters can be fluid, so use whichever approach works best for the specific content.
+
+6. Running the Urban Crawl:
+   - Seamlessly integrate the urban crawl into the broader campaign structure, allowing the players to move between districts, engage in downtime activities, and respond to faction actions.
+   - Use the city gazetteer and "Life in the City" procedures to describe the players' journeys between districts, including scenic encounters along the way.
+   - When the players initiate an investigation action, resolve it based on the keyed content and the specific layer they are engaging with.
+   - Be prepared to adapt and expand the urban crawl as the campaign progresses, introducing new layers, evolving existing storylines, and responding to the players' choices and interests.
+
+7. Urban Crawl Entry Template:
+   District Name:
+   Layers:
+     - Layer 1 Name:
+       - Keyed Content Description
+     - Layer 2 Name:
+       - Keyed Content Description
+   Triggered Districts:
+     - District Name:
+       - Triggered Content Description
+   Investigation Action Resolution:
+     - General Investigation:
+       - Procedure for randomly determining encountered content
+     - Specific Layer Investigation:
+       - Procedure for resolving content from a targeted layer
+   Faction Impact:
+     - Description of how urban crawl content may affect faction agendas and activities

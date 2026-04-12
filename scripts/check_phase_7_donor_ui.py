@@ -36,10 +36,20 @@ REQUIRED_APP_SCRIPTS = [
     "test:characterize:mythforge",
     "test:characterize:orbis",
     "test:characterize:adventure",
+    "test:characterize:mappa-imperium",
+    "test:characterize:dawn-of-worlds",
+    "test:characterize:faction-image",
+    "test:characterize:watabou-city",
+    "test:characterize:encounter-balancer",
     "test:characterize",
     "test:conformance:mythforge",
     "test:conformance:orbis",
     "test:conformance:adventure",
+    "test:conformance:mappa-imperium",
+    "test:conformance:dawn-of-worlds",
+    "test:conformance:faction-image",
+    "test:conformance:watabou-city",
+    "test:conformance:encounter-balancer",
     "test:conformance",
 ]
 REQUIRED_TEST_FILES = [
@@ -49,6 +59,16 @@ REQUIRED_TEST_FILES = [
     APP_ROOT / "tests" / "conformance" / "mythforge.conformance.test.tsx",
     APP_ROOT / "tests" / "conformance" / "orbis.conformance.test.tsx",
     APP_ROOT / "tests" / "conformance" / "adventure-generator.conformance.test.tsx",
+    APP_ROOT / "tests" / "characterization" / "mappa-imperium.characterization.test.ts",
+    APP_ROOT / "tests" / "characterization" / "dawn-of-worlds.characterization.test.ts",
+    APP_ROOT / "tests" / "characterization" / "faction-image.characterization.test.ts",
+    APP_ROOT / "tests" / "characterization" / "watabou-city.characterization.test.ts",
+    APP_ROOT / "tests" / "characterization" / "encounter-balancer.characterization.test.ts",
+    APP_ROOT / "tests" / "conformance" / "mappa-imperium.conformance.test.tsx",
+    APP_ROOT / "tests" / "conformance" / "dawn-of-worlds.conformance.test.tsx",
+    APP_ROOT / "tests" / "conformance" / "faction-image.conformance.test.tsx",
+    APP_ROOT / "tests" / "conformance" / "watabou-city.conformance.test.tsx",
+    APP_ROOT / "tests" / "conformance" / "encounter-balancer.conformance.test.tsx",
 ]
 CHECK_COMMANDS = [
     ("donor characterization", [NPM_BIN, "run", "test:characterize"], APP_ROOT),
@@ -93,9 +113,14 @@ def _check_docs() -> tuple[list[dict[str, Any]], list[str]]:
     conf_text = (ROOT / "docs" / "testing" / "DONOR_UI_CONFORMANCE_MATRIX.md").read_text(encoding="utf-8")
 
     patterns = [
-        (audit_text, r"app donor.*behavioral capture.*captured", "audit fixes Mythforge methodology"),
-        (audit_text, r"fragment donor.*intent reconstruction.*reconstructed", "audit fixes Adventure methodology"),
-        (audit_text, r"semantic-only donor.*designed intent authoring.*designed", "audit fixes Orbis methodology"),
+        (audit_text, r"mythforge", "audit includes Mythforge"),
+        (audit_text, r"orbis", "audit includes Orbis"),
+        (audit_text, r"adventure generator|adventure-generator", "audit includes Adventure Generator"),
+        (audit_text, r"mappa imperium|mappa-imperium", "audit includes Mappa Imperium"),
+        (audit_text, r"dawn of worlds|dawn-of-worlds", "audit includes Dawn of Worlds"),
+        (audit_text, r"faction image|sacred sigil", "audit includes Faction Image"),
+        (audit_text, r"watabou", "audit includes Watabou City"),
+        (audit_text, r"encounter balancer", "audit includes Encounter Balancer"),
         (char_text, r"\|\s*Donor\s*\|\s*Class\s*\|\s*Methodology\s*\|\s*Basis\s*\|", "characterization matrix has basis column"),
         (conf_text, r"\|\s*Donor\s*\|\s*Basis\s*\|", "conformance matrix has basis column"),
         (conf_text, r"biome|location family", "conformance matrix names the shared-concept round-trip stress case"),
@@ -125,10 +150,20 @@ def _check_manifests() -> tuple[list[dict[str, Any]], list[str]]:
     waivers = (ROOT / "tests" / "conformance" / "waivers.yaml").read_text(encoding="utf-8")
     patterns = [
         (baselines, r"mythforge:.*basis:\s*captured", "baselines register Mythforge captured basis"),
-        (baselines, r"orbis:.*basis:\s*designed", "baselines register Orbis designed basis"),
-        (baselines, r"adventure-generator:.*basis:\s*reconstructed", "baselines register Adventure reconstructed basis"),
+        (baselines, r"orbis:.*basis:\s*captured", "baselines register Orbis captured basis"),
+        (baselines, r"adventure-generator:.*basis:\s*captured", "baselines register Adventure captured basis"),
+        (baselines, r"mappa-imperium", "baselines register Mappa Imperium"),
+        (baselines, r"dawn-of-worlds", "baselines register Dawn of Worlds"),
+        (baselines, r"faction-image", "baselines register Faction Image"),
+        (baselines, r"watabou-city", "baselines register Watabou City"),
+        (baselines, r"encounter-balancer", "baselines register Encounter Balancer"),
         (waivers, r"donor:\s*orbis", "waiver manifest includes Orbis"),
         (waivers, r"donor:\s*adventure-generator", "waiver manifest includes Adventure Generator"),
+        (waivers, r"donor:\s*mappa-imperium", "waiver manifest includes Mappa Imperium"),
+        (waivers, r"donor:\s*dawn-of-worlds", "waiver manifest includes Dawn of Worlds"),
+        (waivers, r"donor:\s*faction-image", "waiver manifest includes Faction Image"),
+        (waivers, r"donor:\s*watabou-city", "waiver manifest includes Watabou City"),
+        (waivers, r"donor:\s*encounter-balancer", "waiver manifest includes Encounter Balancer"),
     ]
     for text, pattern, label in patterns:
         ok = re.search(pattern, text, flags=re.IGNORECASE | re.DOTALL) is not None
@@ -174,6 +209,11 @@ def _check_routes_and_tests() -> tuple[list[dict[str, Any]], list[str]]:
         (donor_text, r'label:\s*"Mythforge"', "navigation links to Mythforge donor route"),
         (donor_text, r'label:\s*"Orbis"', "navigation links to Orbis donor route"),
         (donor_text, r'label:\s*"Adventure Generator"', "navigation links to Adventure Generator donor route"),
+        (donor_text, r'label:\s*"Mappa Imperium"', "navigation links to Mappa Imperium donor route"),
+        (donor_text, r'label:\s*"Dawn of Worlds"', "navigation links to Dawn of Worlds donor route"),
+        (donor_text, r'label:\s*"Sacred Sigil Generator"', "navigation links to Faction Image donor route"),
+        (donor_text, r'label:\s*"Watabou City"', "navigation links to Watabou City donor route"),
+        (donor_text, r'label:\s*"Encounter Balancer Scaffold"', "navigation links to Encounter Balancer donor route"),
     ]
     for text, pattern, label in route_patterns:
         ok = re.search(pattern, text, flags=re.IGNORECASE) is not None

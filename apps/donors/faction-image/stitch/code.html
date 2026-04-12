@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sacred Sigil Generator Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c3bed",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#0d0d14",
+                        "panel-dark": "#141420",
+                        "border-dark": "#2e2839",
+                        "text-muted": "#8888aa",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col overflow-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark px-6 py-3 bg-panel-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h2 class="text-white text-sm font-bold leading-tight tracking-wider uppercase">Sacred Sigil Generator</h2>
+</div>
+<div class="flex flex-1 justify-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:bg-primary/90 transition-colors">
+<span>Generate</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 hover:bg-white/5 text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 hover:bg-white/5 text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined">redo</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+
+<div class="relative inline-block text-left" id="export-container">
+  <button id="btn-export" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 border-[1.5px] border-primary bg-primary/10 hover:bg-primary/20 text-white text-sm font-medium leading-normal transition-colors gap-1">
+    <span>Export</span><span class="material-symbols-outlined text-[16px]">expand_more</span>
+  </button>
+  <div id="export-menu" class="hidden absolute right-0 mt-2 w-48 rounded-lg border border-border-dark bg-panel-dark shadow-xl py-1 text-sm text-slate-300 z-50">
+    <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">content_copy</span>Copy SVG</button>
+    <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">download</span>Download SVG</button>
+    <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">image</span>Download PNG</button>
+    <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">data_object</span>Download JSON</button>
+    <div class="h-px bg-border-dark my-1"></div>
+    <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">code</span>Copy React Code</button>
+  </div>
+</div>
+
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 border border-border-dark bg-transparent hover:bg-white/5 text-white gap-2 text-sm font-medium leading-normal transition-colors">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+<span>Copy SVG</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<aside class="w-80 flex flex-col border-r border-border-dark bg-panel-dark overflow-y-auto">
+<div class="p-4 flex flex-col gap-6">
+<div>
+<h3 class="text-white text-sm font-bold leading-tight mb-3">Symbol</h3>
+<div class="mb-4">
+<label class="flex flex-col w-full h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-border-dark bg-background-dark focus-within:border-primary/50 transition-colors">
+<div class="text-text-muted flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 bg-transparent border-none text-white focus:outline-0 focus:ring-0 placeholder:text-text-muted px-3 text-sm" placeholder="Search symbols..." value=""/>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-3 gap-2 mb-4">
+<button class="aspect-square rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 flex items-center justify-center text-text-muted hover:text-white transition-all">
+<span class="material-symbols-outlined text-[28px]">star</span>
+</button>
+<button class="aspect-square rounded-lg border border-primary bg-primary/10 flex items-center justify-center text-primary transition-all">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</button>
+<button class="aspect-square rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 flex items-center justify-center text-text-muted hover:text-white transition-all">
+<span class="material-symbols-outlined text-[28px]">change_history</span>
+</button>
+<button class="aspect-square rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 flex items-center justify-center text-text-muted hover:text-white transition-all">
+<span class="material-symbols-outlined text-[28px]">water_drop</span>
+</button>
+<button class="aspect-square rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 flex items-center justify-center text-text-muted hover:text-white transition-all">
+<span class="material-symbols-outlined text-[28px]">local_fire_department</span>
+</button>
+<button class="aspect-square rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 flex items-center justify-center text-text-muted hover:text-white transition-all">
+<span class="material-symbols-outlined text-[28px]">bolt</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 rounded-lg border border-border-dark bg-background-dark p-3 mt-4">
+<div class="flex items-center justify-between mb-2">
+<p class="text-white text-xs font-bold uppercase tracking-wider">Symbol Controls</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-text-muted text-sm">Fill Color</span>
+<div class="w-6 h-6 rounded bg-primary border border-white/20"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-text-muted text-sm">Outline</span>
+<div class="w-8 h-4 rounded-full bg-primary/20 relative">
+<div class="w-4 h-4 rounded-full bg-primary absolute right-0"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-text-muted text-sm">Opacity</span>
+<span class="text-white text-sm">100%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-border-dark">
+<h3 class="text-white text-sm font-bold leading-tight mb-3">Look &amp; Feel</h3>
+<div class="space-y-3">
+<div class="flex flex-col gap-1">
+<label class="text-white text-xs">Mood</label>
+<div class="flex items-center justify-between rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm">
+<span>Ethereal</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-white text-xs">Symmetry</label>
+<div class="flex items-center justify-between rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm">
+<span>Radial (8-fold)</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-white text-xs">Domain</label>
+<div class="flex items-center justify-between rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm">
+<span>Arcane</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-border-dark space-y-4">
+<button class="flex items-center justify-between w-full text-text-muted hover:text-white transition-colors pb-2 border-b border-border-dark">
+<span class="text-sm font-bold">Frame</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<div id="content-frame" class="hidden pb-4 px-2 space-y-4">
+  <div class="flex flex-col gap-1">
+    <label class="text-slate-300 text-sm font-medium">Seed</label>
+    <div class="flex items-center gap-2">
+      <input type="text" class="w-full rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm focus:outline-none focus:border-primary/50" placeholder="Randomize...">
+      <button class="h-9 w-9 flex items-center justify-center rounded-lg border border-border-dark bg-background-dark text-text-muted hover:text-white"><span class="material-symbols-outlined text-[18px]">casino</span></button>
+      <button class="h-9 w-9 flex items-center justify-center rounded-lg border border-border-dark bg-background-dark text-text-muted hover:text-white"><span class="material-symbols-outlined text-[18px]">lock_open</span></button>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <label class="text-slate-300 text-sm font-medium">Complexity</label>
+    <div class="flex items-center gap-3">
+        <span class="text-xs text-text-muted">Low</span>
+        <div class="h-1 flex-1 bg-border-dark rounded-full"><div class="h-full bg-primary w-1/2 rounded-full relative"><div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full"></div></div></div>
+        <span class="text-xs text-text-muted">High</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2 mt-2">
+    <label class="flex items-center gap-2 text-slate-300 text-sm"><input type="checkbox" class="rounded border-border-dark bg-background-dark text-primary focus:ring-primary/50" checked> Ornamental Ring</label>
+    <label class="flex items-center gap-2 text-slate-300 text-sm"><input type="checkbox" class="rounded border-border-dark bg-background-dark text-primary focus:ring-primary/50" checked> Halo Wash</label>
+    <label class="flex items-center gap-2 text-slate-300 text-sm"><input type="checkbox" class="rounded border-border-dark bg-background-dark text-primary focus:ring-primary/50" checked> Glyph Dust</label>
+  </div>
+</div>
+<button id="btn-advanced" class="flex items-center justify-between w-full text-text-muted hover:text-white transition-colors">
+<span class="text-sm font-bold">Advanced</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<div id="content-advanced" class="hidden pt-2 pb-4 px-2 space-y-4">
+  <div class="flex flex-col gap-1">
+    <label class="text-slate-300 text-sm font-medium">Main Symbol</label>
+    <div class="relative select-menu">
+        <button class="flex w-full items-center justify-between rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm"><span>None</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="hidden absolute left-0 right-0 mt-1 rounded-lg border border-border-dark bg-panel-dark shadow-xl py-1 z-40 max-h-48 overflow-y-auto">
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-white">None</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Cross</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Star</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Crescent</button>
+        </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <label class="text-slate-300 text-sm font-medium">Background Shape</label>
+    <div class="relative select-menu">
+        <button class="flex w-full items-center justify-between rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm"><span>Square</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="hidden absolute left-0 right-0 mt-1 rounded-lg border border-border-dark bg-panel-dark shadow-xl py-1 z-40 max-h-48 overflow-y-auto">
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">None</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-white">Square</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Hexagon</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Circle</button>
+        </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <label class="text-slate-300 text-sm font-medium">Color Preset</label>
+    <div class="relative select-menu">
+        <button class="flex w-full items-center justify-between rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm"><span>Domain Default</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+        <div class="hidden absolute left-0 right-0 mt-1 rounded-lg border border-border-dark bg-panel-dark shadow-xl py-1 z-40 max-h-48 overflow-y-auto">
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-white">Domain Default</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Vampiric</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Celestial</button>
+            <button class="w-full text-left px-3 py-1.5 hover:bg-white/10 text-slate-300">Abyssal</button>
+        </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-2 mt-2">
+    <div class="flex items-center justify-between"><span class="text-text-muted text-xs">Primary</span><div class="w-5 h-5 rounded bg-primary border border-white/20"></div></div>
+    <div class="flex items-center justify-between"><span class="text-text-muted text-xs">Secondary</span><div class="w-5 h-5 rounded bg-fuchsia-600 border border-white/20"></div></div>
+    <div class="flex items-center justify-between"><span class="text-text-muted text-xs">Accent</span><div class="w-5 h-5 rounded bg-amber-400 border border-white/20"></div></div>
+    <div class="flex items-center justify-between"><span class="text-text-muted text-xs">Background</span><div class="w-5 h-5 rounded bg-slate-900 border border-white/20"></div></div>
+  </div>
+</div>
+</div>
+</div>
+</aside>
+<section class="flex-1 flex flex-col bg-background-dark overflow-y-auto">
+<div class="p-8 flex-1 flex flex-col items-center justify-center">
+<div class="w-full max-w-2xl aspect-square rounded-xl border border-primary/30 bg-panel-dark relative flex items-center justify-center shadow-[0_0_40px_rgba(124,59,237,0.1)] overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,59,237,0.15)_0%,transparent_70%)]"></div>
+<div class="w-3/4 h-3/4 border-2 border-primary/50 rounded-full flex items-center justify-center relative rotate-45">
+<div class="w-full h-full border-2 border-primary/30 rounded-full absolute scale-75"></div>
+<div class="w-full h-[2px] bg-primary/40 absolute"></div>
+<div class="h-full w-[2px] bg-primary/40 absolute"></div>
+<div class="w-1/2 h-1/2 border-4 border-primary rounded-sm rotate-45"></div>
+</div>
+</div>
+<div class="w-full max-w-2xl mt-8">
+<h4 class="text-text-muted text-xs font-bold uppercase tracking-wider mb-3">Select a Variant</h4>
+<div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+<div class="w-24 h-24 rounded-lg border-[2px] border-primary bg-panel-dark flex-shrink-0 flex items-center justify-center relative shadow-[0_0_15px_rgba(124,59,237,0.3)]">
+<div class="w-12 h-12 border border-primary rounded-full"></div>
+</div>
+<div class="w-24 h-24 rounded-lg border border-border-dark bg-panel-dark hover:border-primary/50 flex-shrink-0 flex items-center justify-center transition-colors">
+<div class="w-12 h-12 border border-text-muted rounded-sm rotate-45"></div>
+</div>
+<div class="w-24 h-24 rounded-lg border border-border-dark bg-panel-dark hover:border-primary/50 flex-shrink-0 flex items-center justify-center transition-colors">
+<div class="w-12 h-12 border border-text-muted rounded-full flex items-center justify-center"><div class="w-6 h-6 border border-text-muted rotate-45"></div></div>
+</div>
+<div class="w-24 h-24 rounded-lg border border-border-dark bg-panel-dark hover:border-primary/50 flex-shrink-0 flex items-center justify-center transition-colors">
+<div class="w-12 h-12 border border-text-muted flex items-center justify-center"><div class="w-6 h-6 border border-text-muted rounded-full"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<aside class="w-72 flex flex-col border-l border-border-dark bg-panel-dark overflow-y-auto">
+<div class="p-4 flex flex-col gap-6">
+<div>
+<div class="flex items-center justify-between mb-3"><h3 class="text-white text-sm font-bold leading-tight">Layers</h3><button id="btn-settings" class="text-text-muted hover:text-white relative"><span class="material-symbols-outlined text-[18px]">settings</span></button></div>
+<div id="layer-item-1" class="flex items-center justify-between rounded-lg p-2 bg-primary/10 border border-primary/30 mb-2 cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">visibility</span>
+<span class="text-white text-sm">Layer 1</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px] hover:text-white cursor-pointer">lock_open</span>
+</div>
+<div class="flex justify-center mt-3">
+<button class="flex items-center justify-center w-full max-w-[140px] rounded-lg bg-background-dark hover:bg-white/5 border border-border-dark py-1.5 px-3 text-text-muted hover:text-white transition-all">
+<span class="material-symbols-outlined text-[16px] mr-1">add</span>
+<span class="text-xs font-medium">Add Layer</span>
+</button>
+</div>
+</div>
+<div class="pt-4 border-t border-border-dark">
+<div class="flex items-center justify-between mb-3 text-white">
+<h3 class="text-sm font-bold">Layer Properties</h3>
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col gap-1">
+<label class="text-text-muted text-xs">Name</label>
+<input class="w-full rounded-lg h-9 px-3 border border-border-dark bg-background-dark text-white text-sm focus:outline-none focus:border-primary/50" value="Layer 1"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-text-muted text-sm">Visibility</span>
+<div class="w-8 h-4 rounded-full bg-primary relative">
+<div class="w-4 h-4 rounded-full bg-white absolute right-0"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between">
+<span class="text-text-muted text-sm">Opacity</span>
+<span class="text-white text-sm">100%</span>
+</div>
+<div class="h-1 w-full bg-border-dark rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-border-dark">
+<div class="flex items-center justify-between mb-3 text-white">
+<h3 class="text-sm font-bold">Batch Operations</h3>
+<span class="material-symbols-outlined text-[18px]">expand_less</span>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full rounded-lg py-2 border border-border-dark bg-background-dark text-text-muted hover:text-white text-xs font-medium transition-colors">Merge Visible</button>
+<p class="text-text-muted text-[11px] text-center mt-1 italic">Right-click a layer for more options</p>
+</div>
+</div>
+<div class="pt-4 border-t border-border-dark">
+<button id="btn-transform" class="flex items-center justify-between w-full text-text-muted hover:text-white transition-colors">
+<span class="text-sm font-bold">Transform</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<div id="content-transform" class="hidden pt-4 space-y-3">
+<div class="flex justify-between items-center"><span class="text-slate-300 text-xs">Rotation</span><span class="text-white text-xs">0°</span></div>
+<div class="flex justify-between items-center"><span class="text-slate-300 text-xs">Scale</span><span class="text-white text-xs">100%</span></div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+
+
+<!-- Absolute overlays -->
+<div id="context-menu" class="hidden absolute z-50 w-48 rounded-lg border border-border-dark bg-panel-dark shadow-xl py-1 text-sm text-slate-300">
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">file_copy</span>Duplicate <span class="ml-auto text-xs text-text-muted">Ctrl+D</span></button>
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">folder</span>Group <span class="ml-auto text-xs text-text-muted">Ctrl+G</span></button>
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">edit</span>Rename</button>
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">visibility_off</span>Hide</button>
+  <div class="h-px bg-border-dark my-1"></div>
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">opacity</span>Set 50% Opacity</button>
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">layers</span>Set Blend Overlay</button>
+  <div class="h-px bg-border-dark my-1"></div>
+  <button class="w-full text-left px-4 py-2 hover:bg-white/10 hover:text-white flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">vertical_align_bottom</span>Merge Down</button>
+  <div class="h-px bg-border-dark my-1"></div>
+  <button class="w-full text-left px-4 py-2 hover:bg-red-500/20 text-red-400 hover:text-red-300 flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">delete_forever</span>Delete Selected</button>
+</div></div><span class="text-xs text-text-muted">520</span></div>
+    </div>
+    <div class="flex justify-between items-center">
+      <span class="text-slate-300">Auto-hide Sidebar</span>
+      <div class="w-8 h-4 rounded-full bg-border-dark relative"><div class="w-4 h-4 rounded-full bg-slate-400 absolute left-0"></div></div>
+    </div>
+    <div class="flex justify-between items-center">
+      <span class="text-slate-300">Show Templates</span>
+      <div class="w-8 h-4 rounded-full bg-primary relative"><div class="w-4 h-4 rounded-full bg-white absolute right-0"></div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Context menu
+    const layerItem = document.getElementById('layer-item-1');
+    const ctxMenu = document.getElementById('context-menu');
+    
+    if(layerItem) {
+        layerItem.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            ctxMenu.style.left = e.pageX + 'px';
+            ctxMenu.style.top = e.pageY + 'px';
+            ctxMenu.classList.remove('hidden');
+        });
+    }
+
+    document.addEventListener('click', () => {
+        if(ctxMenu) ctxMenu.classList.add('hidden');
+    });
+
+    // Accordions
+    const sections = [
+        { btnId: 'btn-frame', contentId: 'content-frame' },
+        { btnId: 'btn-advanced', contentId: 'content-advanced' },
+        { btnId: 'btn-transform', contentId: 'content-transform' }
+    ];
+
+    sections.forEach(s => {
+        const btn = document.getElementById(s.btnId);
+        const content = document.getElementById(s.contentId);
+        if(btn && content) {
+            btn.addEventListener('click', () => {
+                content.classList.toggle('hidden');
+                const icon = btn.querySelector('.material-symbols-outlined');
+                if(content.classList.contains('hidden')) {
+                    icon.textContent = 'chevron_right';
+                } else {
+                    icon.textContent = 'expand_more';
+                }
+            });
+        }
+    });
+
+    // Settings popover
+    const gearBtn = document.getElementById('btn-settings');
+    const settingsPop = document.getElementById('settings-popover');
+    if(gearBtn && settingsPop) {
+        gearBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            settingsPop.classList.toggle('hidden');
+            
+            // basic positioning right near the button
+            const rect = gearBtn.getBoundingClientRect();
+            settingsPop.style.top = (rect.bottom + 10) + 'px';
+            settingsPop.style.left = (rect.left - 200) + 'px';
+        });
+        settingsPop.addEventListener('click', (e) => e.stopPropagation());
+        document.addEventListener('click', () => settingsPop.classList.add('hidden'));
+    }
+
+    // Export Menu
+    const btnExport = document.getElementById('btn-export');
+    const exportMenu = document.getElementById('export-menu');
+    if(btnExport && exportMenu) {
+        btnExport.addEventListener('click', (e) => {
+            e.stopPropagation();
+            exportMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', () => exportMenu.classList.add('hidden'));
+    }
+
+    // Custom Select Menus
+    document.querySelectorAll('.select-menu').forEach(menu => {
+        const btn = menu.querySelector('button');
+        const list = menu.querySelector('div');
+        const label = btn.querySelector('span:first-child');
+        
+        if (btn && list) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Close others
+                document.querySelectorAll('.select-menu div').forEach(d => {
+                    if (d !== list) d.classList.add('hidden');
+                });
+                list.classList.toggle('hidden');
+            });
+            
+            list.querySelectorAll('button').forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    label.textContent = option.textContent.trim();
+                    list.classList.add('hidden');
+                    
+                    // Update active styling
+                    list.querySelectorAll('button').forEach(b => {
+                        b.classList.remove('text-white');
+                        b.classList.add('text-slate-300');
+                    });
+                    option.classList.remove('text-slate-300');
+                    option.classList.add('text-white');
+                });
+            });
+        }
+    });
+
+    // Close all menus on document click
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.select-menu div').forEach(d => d.classList.add('hidden'));
+    });
+
+});
+</script>
+
+</body></html>

@@ -1,0 +1,37 @@
+# Dungeon Concept Brainstormer
+
+## Objective
+Generate a compelling scenario concept for a dungeon adventure by brainstorming key elements.
+
+## Instructions
+1. Start with three core components:
+   - Location
+   - Denizens
+   - Goal
+
+2. Choose a focus element:
+   - If you have a location in mind, use it to determine denizens and goal
+   - If you have denizens, use them to inspire location and goal
+   - If you have a goal, use it to suggest location and denizens
+
+3. Brainstorming Techniques:
+   - Monster Manual Scan: Flip through creature lists for inspiration
+   - Creature Pairing: Combine two different types of creatures
+   - Location Twist: Take a real-world location and add a fantastical element
+   - Magic Item Motivation: Use a powerful artifact as the central goal
+
+4. Develop Connections:
+   - Explain why chosen denizens are in the location
+   - Determine how the goal relates to both location and denizens
+
+5. Generate Room Ideas:
+   - List 5-10 unique room concepts related to your scenario
+   - Include both logical necessities and fantastical elements
+
+6. Refine Concept:
+   - Ensure all elements (location, denizens, goal, rooms) form a cohesive whole
+   - Adjust any components that don't fit the overall theme
+
+7. Record Final Concept:
+   - Write a brief paragraph summarizing the dungeon concept
+   - List key points for location, denizens, goal, and unique features

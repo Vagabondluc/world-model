@@ -16,7 +16,19 @@ Promotion classes:
   - owned by Orbis-derived concepts
 - `Workflow`
   - optional guided activity state, step/checkpoint/output linkage contracts
-  - owned by Adventure-derived concepts
+  - owned by Adventure Generator-derived concepts
+- `Era`
+  - optional world-historical time/period attachment
+  - owned by Mappa Imperium-derived concepts
+- `WorldTaxonomy`
+  - optional world-object classification and turn tracking attachment
+  - owned by Dawn of Worlds-derived concepts
+- `Asset-Sigil`
+  - optional SVG layer composition and faction symbol attachment
+  - owned by Sacred Sigil Generator-derived concepts
+- `CollaborativeSession` (cross-donor)
+  - optional multiplayer session state; may be merged from Mappa Imperium and Dawn of Worlds
+  - requires ADR to define merge strategy
 - `DonorLocal`
   - donor-only UI, routing, dashboard, or shell concepts
 - `ReferenceOnly`

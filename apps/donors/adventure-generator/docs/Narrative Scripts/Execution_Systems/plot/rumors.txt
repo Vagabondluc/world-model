@@ -1,0 +1,60 @@
+Here are guidelines for an LLM to create a robust rumor table:
+
+Rumor Table Guidelines:
+
+1. Purpose of the Rumor Table:
+   - The rumor table serves to provide players with tangible information about the campaign setting, enabling them to set specific goals, ask questions, and plan expeditions.
+   - It helps pace the players' discovery of the world, avoiding information overload while allowing them to gradually build their knowledge.
+
+2. Rumor Table Size and Format:
+   - Aim for a rumor table of around 20 entries, using a d20 roll.
+   - Alternatively, a d30 or d100 table can be used, but a larger table may require more effort to maintain.
+
+3. Rumor Source:
+   - Derive rumors from various sources in the campaign setting, such as:
+     - Specific hexes or locations
+     - Random encounter tables
+     - Roads, paths, and trails
+     - Factions
+     - NPCs
+
+4. Rumor Focus:
+   - Ensure each rumor has a clear focus, which can include:
+     - Locations
+     - Creatures
+     - Objects
+     - Actions/Situations (including threats and upcoming events)
+     - Background/Lore
+
+5. Rumor Content:
+   - Make each rumor actionable, providing players with a clear location or lead to follow up on.
+   - Vary the level of specificity, ranging from vague directions to precise map coordinates or contacts.
+   - Ensure the rumor provides enough information for players to pursue it, without overwhelming them.
+
+6. Delivering Rumors:
+   - Use a combination of proactive, reactive, and opportunistic methods to deliver rumors to players:
+     - Proactive: Automatically provide new rumors at regular intervals or in response to specific actions/locations.
+     - Reactive: Allow players to actively seek out rumors through investigation, tavern talk, research, etc.
+     - Opportunistic: Incorporate relevant rumors into ongoing conversations and interactions.
+
+7. Contextualizing Rumors:
+   - When presenting a rumor, consider framing it within a specific context, such as:
+     - Overheard conversation in a tavern
+     - Seeing a notice or bulletin board posting
+     - Receiving a letter or message from an NPC
+     - Outcome of a tarot reading or divine vision
+
+8. Rumor Tracking and Restocking:
+   - Cross off delivered rumors and restock the table periodically to maintain a fresh supply of information.
+   - When restocking, consider incorporating the consequences of players' actions and evolving situations in the campaign world.
+   - Reflect players' notable achievements or events in the rumor table to make them feel their impact on the world.
+
+9. Rumor Costs:
+   - Consider attaching a small cost (e.g., 1d6 gp) to acquiring rumors, which can be optional but provide a bonus to the check.
+   - Add this cost to the equipment list so players are aware of the opportunity to gather information.
+
+10. Rumor Table Integration:
+    - Ensure the rumor table is closely integrated with the overall campaign, advancing the plot and tying into character backstories and campaign themes.
+    - Use the rumor table to reveal lore, foreshadow future events, and provide hooks for further exploration and adventure.
+
+By following these guidelines, the LLM can create a robust and engaging rumor table that serves as a dynamic tool for driving player exploration, discovery, and investment in the campaign world.

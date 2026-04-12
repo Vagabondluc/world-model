@@ -1,0 +1,274 @@
+/**
+ * Compass Overlay Styles
+ * 
+ * Styling for the dual-indicator compass UI with glassmorphism effects,
+ * smooth animations, and responsive design.
+ */
+
+/* ============================================================================
+   MAIN CONTAINER
+   ============================================================================ */
+
+.compass-overlay {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+}
+
+.compass-overlay:focus {
+    outline: 2px solid #7f13ec;
+    outline-offset: 4px;
+}
+
+.compass-overlay:hover {
+    transform: scale(1.05);
+}
+
+.compass-overlay:hover .compass-background {
+    opacity: 0.25;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================================
+   COMPASS CONTAINER
+   ============================================================================ */
+
+.compass-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.compass-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.15s ease-out;
+}
+
+/* ============================================================================
+   COMPASS ROSE (CARDINAL DIRECTIONS)
+   ============================================================================ */
+
+.compass-rose {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.compass-rose .cardinal {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0.8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.compass-rose .north {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.compass-rose .east {
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.compass-rose .south {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.compass-rose .west {
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+/* ============================================================================
+   NEEDLES
+   ============================================================================ */
+
+.compass-needles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.geographic-needle,
+.magnetic-needle {
+    transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* ============================================================================
+   DECLINATION ARC
+   ============================================================================ */
+
+.declination-arc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ============================================================================
+   MODE INDICATOR
+   ============================================================================ */
+
+.mode-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFAA00;
+    opacity: 0.8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .compass-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .compass-rose .cardinal {
+        font-size: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .compass-overlay {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .compass-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .compass-rose .cardinal {
+        font-size: 10px;
+    }
+
+    .mode-indicator {
+        font-size: 9px;
+        bottom: 6px;
+    }
+}
+
+/* ============================================================================
+   HIGH CONTRAST MODE
+   ============================================================================ */
+
+@media (prefers-contrast: high) {
+    .compass-background {
+        background: rgba(0, 0, 0, 0.9);
+        border-color: rgba(255, 255, 255, 1);
+        border-width: 3px;
+        backdrop-filter: none;
+    }
+
+    .compass-rose .cardinal {
+        opacity: 1;
+        font-weight: bold;
+    }
+}
+
+/* ============================================================================
+   REDUCED MOTION
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .compass-overlay,
+    .compass-background,
+    .geographic-needle,
+    .magnetic-needle {
+        transition: none;
+    }
+
+    .compass-overlay:hover {
+        transform: none;
+    }
+}
+
+/* ============================================================================
+   DISPLAY MODE TRANSITIONS
+   ============================================================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+/* Animate mode transitions */
+.compass-overlay[data-mode-changing="true"] {
+    animation: fadeOut 0.1s ease-out, fadeIn 0.1s 0.1s ease-in;
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "id": "deity-sky-001",
+        "type": "Deity",
+        "name": "Ignis the Scorcher",
+        "owner": 0,
+        "era": 1,
+        "data": {
+            "id": "deity-sky-001",
+            "name": "Ignis the Scorcher",
+            "domain": "Fire & War",
+            "symbol": "Burning Sword",
+            "emoji": "🔥",
+            "description": "A wrathful deity who demands tribute in forged steel."
+        },
+        "isDebug": true,
+        "createdYear": 0,
+        "creationStep": "test-data"
+    },
+    {
+        "id": "deity-sea-001",
+        "type": "Deity",
+        "name": "Aethelgard",
+        "owner": 0,
+        "era": 1,
+        "data": {
+            "id": "deity-sea-001",
+            "name": "Aethelgard",
+            "domain": "Oceans & Mysteries",
+            "symbol": "Cracked Conch",
+            "emoji": "🌊",
+            "description": "Keeper of the sunken cities and lost treasures."
+        },
+        "isDebug": true,
+        "createdYear": 0,
+        "creationStep": "test-data"
+    },
+    {
+        "id": "deity-earth-001",
+        "type": "Deity",
+        "name": "Old Root",
+        "owner": 0,
+        "era": 1,
+        "data": {
+            "id": "deity-earth-001",
+            "name": "Old Root",
+            "domain": "Forests & Decay",
+            "symbol": "Rotting Log",
+            "emoji": "🌳",
+            "description": "A silent god who watches over the cycle of life and death."
+        },
+        "isDebug": true,
+        "createdYear": 0,
+        "creationStep": "test-data"
+    }
+]

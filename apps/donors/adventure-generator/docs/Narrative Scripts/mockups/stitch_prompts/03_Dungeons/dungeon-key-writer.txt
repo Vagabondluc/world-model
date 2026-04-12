@@ -1,0 +1,97 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeon-Key-Writer".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Dungeon Architecture & Keying Suite
+
+```text
++--------------------------------------------------------------------------------+
+|  [Dungeon Architect: Map & Narrative Key]                             [?] [X]  |
++--------------------------------------------------------------------------------+
+|  MAP CANVAS (Scale: 1sq = 5ft)         |  ROOM KEY: [ Room 5: The Glass Pit ]  |
+|  +-----------------------------------+ |  HEAD: [ The Glass Pit             ]  |
+|  | [1]-----[2]-----[3]               | |  BOXED TEXT (SENSORY):               |
+|  |  |       |       |                | |  "The air is cold and smells of wet  |
+|  | [4]=====[5]=====[6] (L)           | |  sand. A low hum vibrates your teeth.|
+|  |          |       |                | |  In the center, a 20ft pit shines..."|
+|  |         [7]-----[8] (X)           | |                                      |
+|  +-----------------------------------+ |  SKILL CHECKS:                        |
+|  [Room] [Passage] [Secret] [Elev Shift]|  - Perception (DC 15): [Hidden Trap]   |
++----------------------------------------+---------------------------------------+
+|  ROOM ELEMENTS (3 REQUIRED)            |  DENIZENS & TREASURE                  |
+|  1. [ Shimmering blue crystal statue ] |  Denizen: [ 2x Glass Stalkers (L5) ]   |
+|  2. [ Broken glass floor (Hazard)    ] |  Treasure:[ Silver Key, 50gp gems  ]   |
+|  3. [ Irrelevant: A single blue sock ] |  [+] Add Combat Tactics/Behavior      |
++--------------------------------------------------------------------------------+
+|  [Xandering Audit] [Generate Legend] [Cross-Ref Map/Key]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Dungeon Architecture & Keying Suite
+
+## Component Architecture
+- **Dual-Pane Synchronizer:** The core of the UI. The "Spatial Map Canvas" handles map design (Step 1-11 of Creator script), while the "Narrative Key Sidebar" handles documentation (Step 1-10 of Designer and Key Writer scripts).
+- **Xandering Design Module:** A specialized toolbar for the Map Creator's Step 7, allowing for easy placement of "Elevation Shifts," "Discontinuous Connections," and "Non-linear Loops."
+- **Sensory Prompt Studio:** A rigid UI structure for Step 5 of the Room Designer, requiring the GM to input 3 sensory details and 2 irrelevant-but-cool details before a room is marked "Complete."
+- **Logical Room Hierarchy:** An automated numbering system that keeps the Map and Key in sync. Re-numbering a room on the map instantly re-orders the Key.
+
+## Interaction Logic
+- **Symbol-to-Key Translation:** Drawing a "Secret Door" or "Trap" on the map automatically adds a dedicated "Element" entry in the corresponding Room Key.
+- **Tactical Denizen Manager:** A sub-panel for Step 4 of the Key Writer, where the GM can record combat stats, behavior notes (e.g., "Ambushers," "Cowardly"), and carried treasure.
+- **Treasure Aggregator:** A real-time summary tool (Step 6 of Key Writer) that watches the "Treasure" field in all rooms and builds a master loot table for the dungeon.
+
+## Visual Design
+- **Drafting & Blueprint Esthetic:** High-precision graph-paper background for the canvas, with clean, professional typography for the Key.
+- **Visual Xandering Audit:** A "Heat Map" mode that highlights how well connected the dungeon is, flagging "Dead Ends" vs "Loops" to ensure non-linear exploration.
+- **Interactive Legend:** A sidebar that populates as the GM uses different map symbols, acting as a visual glossary for the dungeon.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Dungeon Key (The Obsidian Hold)
+
+### **Dungeon Overview**
+- **History:** An ancient sorcerer-king's vault, forgotten for eons.
+- **Theme:** Obsidian masonry and magical starlight.
+- **Common Features:** 15ft ceilings, magical dim-light (purple hue), obsidian floors.
+
+---
+
+### **Room 5: The Shimmering Maw**
+**Boxed Text:**
+*The air here is unnaturally cold, carrying the faint scent of crushed lavender and old parchment. Across the center of the room, a jagged pit filled with obsidian shards glints in the purple light. A rhythmic, low-frequency hum vibrates through the soles of your boots.*
+
+**Skill Checks:**
+- **Perception (DC 15):** Notice the silver tripwire at ankle-height near the pit.
+- **Knowledge (Arcana) (DC 18):** Recognize the hum as a proximity sensor for the statues.
+
+**Room Elements:**
+- **Obsidian Maw (Pit):** A 20ft deep drop filled with glass spikes (2d6 piercing).
+- **Starlight Guardian:** A statue of an elf that tracks the players' movement with glowing eyes.
+- **Irrelevant Detail:** A small, discarded wooden child's toy sits in the corner.
+- **Irrelevant Detail:** The walls are damp, but the moisture is warm to the touch.
+
+**Denizens:**
+- **2x Shadow Stalkers:** They cling to the ceiling and drop down if the tripwire is hit. [Aggressive].
+
+**Connections:**
+- **East:** Corridor leading to Room 6 (The Glass Bridge).
+- **South (Secret):** A hidden rotating wall leading to Room 8 (The Inner Sanctum). Requires the 'Star-Sigil' to open.
+
+---
+
+### **Treasure Summary**
+- **Room 5:** 250gp in raw gems, 1x Silver Key (Star-Sigil).
+- **Room 8:** *The Staff of Starlight*, 1200gp in ancient coins.
+

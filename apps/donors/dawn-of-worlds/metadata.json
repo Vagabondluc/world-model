@@ -1,0 +1,5 @@
+{
+  "name": "World Builder UI",
+  "description": "A high-fidelity turn-based strategy game interface with hex grids, complex modals, and deep styling.",
+  "requestFramePermissions": []
+}

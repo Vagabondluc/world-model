@@ -1,0 +1,13 @@
+"Create a scene description for a [GENRE/SETTING] roleplaying game using the following format:
+
+Scene Description:
+
+[BULLET POINTS OF IMPORTANT DETAILS]
+[EXPLANATION OF BULLET POINTS FOR VIVID PLAYER DESCRIPTION]
+Game Master Information:
+
+[INFORMATION FOR THE GAMEMASTER TO RUN THE SCENE]
+Key Points for Running the Scene:
+
+[BULLET POINTS OF IMPORTANT DETAILS FOR RUNNING THE SCENE]
+Ensure that the description provides a vivid portrayal of the [LOCATION/SITUATION] to immerse players in the game world. Include [CHARACTERS/CREATURES/OBJECTS] that players will encounter or interact with, and emphasize the [GOALS/CHALLENGES/EVENTS] that are integral to the scene. Infuse the description with atmospheric details, such as [ATMOSPHERIC DETAILS], to enhance the ambiance."

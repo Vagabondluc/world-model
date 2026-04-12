@@ -2,11 +2,19 @@
 
 Source-analysis document only. Final canonical promotion output now lives under `contracts/promoted-schema/`.
 
-This matrix compares the three primary donor models in the first extraction pass:
+This matrix compares the donor models in discovery order:
 
+**Phase 1 (original 3 donors):**
 - Mythforge
 - Orbis
 - Adventure Generator
+
+**Phase 2 (unregistered donors discovered April 2026):**
+- Mappa Imperium
+- Dawn of Worlds
+- Sacred Sigil Generator (Faction-Image)
+
+Note: The winner rules below remain from the Phase 1 analysis. Phase 2 donors contribute specialized lanes (world-era, world-taxonomy, asset-sigil) without challenging the core ownership model.
 
 ## Winner Rule
 

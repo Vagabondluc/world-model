@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vivid Description",
+  "description": "A sensory-rich rewrite of a bland description. Container vocabulary: the Vivid Description payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.",
+  "type": "object",
+  "required": [
+    "vivid_description"
+  ],
+  "properties": {
+    "vivid_description": {
+      "type": "object",
+      "required": [
+        "id",
+        "base_text",
+        "enhanced_text",
+        "senses_covered",
+        "seed"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "base_text": {
+          "type": "string"
+        },
+        "enhanced_text": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "time_of_day": {
+          "type": "string"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "tone": {
+          "type": "string"
+        },
+        "urgency": {
+          "type": "string"
+        },
+        "senses_covered": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "sense",
+              "detail"
+            ],
+            "properties": {
+              "sense": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "figurative_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "entity"
+}

@@ -1,0 +1,70 @@
+{{Statblock}}
+This template is to format the included statblock in a variant of markdown for a site named homebrewery: 
+{{monster{{leave empty for normal statblock or ,frame or ,frame,wide}}
+### [Creature Name]
+*[Size + Type] [(Subtype if applicable)], [alignment]*
+ ___
+**Armor Class** :: X
+**Hit Points** :: X (XdX+X)
+**Speed** :: X ft.
+___
+ |  STR  |  DEX  |  CON  |  INT  |  WIS  |  CHA  |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| X (X)| X (X)| X (X)| X (X)| X (X)| X (X)|
+___
+**Skills** :: X +X, X +X
+**Damage Resistances** :: X
+**Condition Immunities** :: X
+**Senses** :: X, passive Perception X
+**Languages** :: X
+**Challenge** :: X (XP)
+ ___
+***[Feature].*** X
+ :
+***[Mythic Feature].*** [Condition to Activate Mythic Actions]
+ :
+***Legendary Resistance (3/Day).*** If the [Creature Name] fails a saving throw, it can choose to succeed instead.
+: 
+Innate Spellcasting (Type of Magic). The [Creature Name]’s innate spellcasting ability is X (spell save DC X). It can innately cast the following spells, requiring no components::
+ :
+At will: X, X
+ :
+1/day each: X, X
+ :
+***Spellcasting.*** The [Creature Name] is an Xst/th-level spellcaster. Its spellcasting ability is X (spell save DC X, +X to hit with spell attacks). The [Creature Name] has the following [Spellcaster Class] spells prepared:
+ :
+***Cantrips:*** *X, X*
+ :
+***1st-level:*** (X slots): *X, X*
+ :
+***Xnd-level*** (X slots): *X, X*
+ 
+### Actions
+ :
+***X.*** X
+ :
+***X.*** *Attack Type:* +X to hit, reach X ft./range X ft., # targets. *Hit:* X (XdX + X) damage. (Recharge X/X-X)
+ 
+### Bonus Actions
+ :
+***X.*** X
+ 
+### Reactions
+ :
+***X.*** X
+
+### Legendary Actions
+ 
+The [Creature Name] can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature’s turn. The [Creature Name] regains spent legendary actions at the start of its turn.
+ :
+***X.*** X
+ :
+***X (Costs X Actions).*** X
+ 
+### Mythic Actions
+ 
+If the [Creature Name]'s [Mythic Feature] trait has activated in the last hour, it can use the options below as legendary actions.
+ :
+***X.*** X
+ :
+***X (Costs X Actions).*** X

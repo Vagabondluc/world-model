@@ -1,0 +1,30 @@
+((Please generate a creature stat block for this Creature.
+
+    To calculate CR, considering spellcasting impact:
+    
+    Identify the spellcasting level and class (wizard, warlock, cleric, etc.), use the appropriate spellcasting table.
+    Analyze the stat block spells, consider spell strength, atk/dmg, healing/HP tradeoffs.
+    Consider a 3-round simulation to include spell effects on offensive and defensive CR calculations.
+    Calculate Offensive CR from stat block: Determine DPR, Atk (consider spellcasting).
+    Calculate Defensive CR from stat block: Determine Eff.HP (consider immunities [2x BPS nonmagical], resistances [1.5x BPS nonmagical], healing, and spellcasting), Eff.AC.
+    Avg(Def.CR, Off.CR) = CR.
+    
+    CR calc guidelines:
+    
+    CR 0-1/2: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=HP/3, HP=(ceil(ACCCR)+1)3
+    CR 1-7: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=5+5CR, HP=3Dmg
+    CR 8+: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=5CR, HP=3*Dmg
+    
+    Please make sure the combat-relevant features are included in the stat block, and any non-relevant features should be listed in a creature description at the end for clarity.
+    
+    For the tactics section, provide a simple tactic block for simpler creatures and a more detailed one for high CR or more complicated creatures. Write the tactics in a natural language style without splitting the during combat section. The tactic block should offer optimal ways to deal damage and give advice on how to run the monster, without providing strict round-by-round instructions. For more complicated creatures, include the following categories when appropriate:
+    
+    Before Combat:
+    During Combat:
+    Offensive Strategies:
+    Defensive Strategies:
+    Support Strategies:
+    Morale:
+    Allies:
+    
+    Note: The CR calculation should be performed using the guidelines provided, but the resulting CR should simply be included in the stat block without showing the detailed calculation.))

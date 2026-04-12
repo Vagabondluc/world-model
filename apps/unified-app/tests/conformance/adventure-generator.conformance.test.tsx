@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { App } from "@/App";
+import { DONOR_DEFINITIONS } from "@/donors/config";
 
 function renderAt(pathname: string) {
   window.history.pushState({}, "", pathname);
@@ -8,12 +9,16 @@ function renderAt(pathname: string) {
 }
 
 describe("adventure generator conformance", () => {
-  it("mounts the donor route with workflow, checkpoints, and generated outputs", () => {
-    renderAt("/donor/adventure-generator");
+  it("mounts the donor route through the non-exact subapp scaffold", () => {
+    const definition = DONOR_DEFINITIONS["adventure-generator"];
+    renderAt(definition.route);
+
+    const host = screen.getByTestId("donor-subapp-host");
 
     expect(screen.getByRole("heading", { name: "Adventure Generator" })).toBeInTheDocument();
-    expect(screen.getByText(/Sample Adventure · active · 50%/)).toBeInTheDocument();
-    expect(screen.getByText(/workflow:sample-adventure · start · complete/)).toBeInTheDocument();
-    expect(screen.getByText(/briefing · 2026-01-01T00:15:00.000Z/)).toBeInTheDocument();
+    expect(host).toHaveAttribute("data-donor-id", "adventure-generator");
+    expect(host).toHaveAttribute("data-mount-kind", "scaffold-mounted");
+    expect(host).toHaveAttribute("data-implementation-status", "scaffold-mounted");
+    expect(screen.getByText(definition.vendoredRoot)).toBeInTheDocument();
   });
 });

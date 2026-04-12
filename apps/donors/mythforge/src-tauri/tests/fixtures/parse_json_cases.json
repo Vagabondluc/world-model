@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "name": "simple_cards",
+      "input": "{\"cards\":[{\"id\":\"card-1\",\"type\":\"npc\",\"content\":{\"name\":\"NPC\"}}]}",
+      "expected": {
+        "cards_count": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Corridor Themes Generator
+
+## Objective
+Create a list of descriptive elements to bring dungeon corridors to life.
+
+## Instructions
+1. Develop Base Descriptions:
+   - Create 5-10 basic corridor descriptions
+   - Include details on shape, size, and general appearance
+
+2. Add Sensory Details:
+   - List potential sights, sounds, smells, and textures
+   - Include atmospheric elements (e.g., mist, echoes)
+
+3. Create Environmental Hazards:
+   - Develop a list of minor obstacles or challenges
+   - Include both natural and artificial hazards
+
+4. Incorporate Thematic Elements:
+   - Add details that reinforce dungeon's overall theme
+   - Include hints of dungeon's history or purpose
+
+5. Generate Random Tables:
+   - Create tables for quickly generating corridor descriptions
+   - Include options for combining different elements

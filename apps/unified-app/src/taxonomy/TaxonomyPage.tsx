@@ -183,7 +183,7 @@ export function TaxonomyPage({ family, tab }: { family: TaxonomyFamily; tab: str
               </NavLink>
               <NavLink to="/compare/donors" className="nav-link nav-family">
                 <span>Compare donors</span>
-                <span className="nav-meta">Faithful donor rehosts</span>
+                <span className="nav-meta">Donor surfaces</span>
               </NavLink>
             </div>
           </div>

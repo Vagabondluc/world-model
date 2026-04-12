@@ -1,0 +1,28 @@
+{
+  "donor": "mappa-imperium",
+  "label": "Mappa Imperium",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "sourceInventory": [
+    {
+      "relativePath": "to be merged/mappa imperium/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\mappa imperium",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "world-model/docs/donors/MAPPA_IMPERIUM.md",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\donors\\MAPPA_IMPERIUM.md",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 2,
+    "existingSources": 2,
+    "missingSources": 0
+  },
+  "parityTarget": "exact+adapted",
+  "unstableSurfaces": []
+}

@@ -1,0 +1,1 @@
+Create a set of environmental elements for dungeons and dragons. The set should show elements in a top down view with a white background. Each element should be equally spaced across the image. The theme should be forest. Examples of elements are logs, mushrooms, fungus, trees, bushes, plants, rocks. Each element should be in frame.

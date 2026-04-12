@@ -1,0 +1,19 @@
+Craft an NPC for quick reference during gameplay. Each table entry should be a brief, one-sentence summary. Include a short description for depth. Keep it succinct for easy roleplay.
+
+Use this markdown table:
+
+| Category   | Details                                     |
+|------------|--------------------------------------------|
+| Identity   | [NPC Name, Race, Role]                      |
+| Look       | [One-sentence NPC Appearance]                |
+| Goal       | [One-sentence NPC Motivation]                |
+| Traits     | [One-sentence NPC Personality]               |
+| Habits     | [One-sentence NPC Mannerisms]                |
+| Speech     | [One-sentence NPC Speech]                    |
+| Knowledge  | [One-sentence NPC Shared/Secret Knowledge]   |
+| Bonds      | [One-sentence NPC Relationships]             |
+| Cues       | [One-sentence Roleplay Cues]                 |
+
+[Brief description to deepen understanding of NPC's motivations, personality, and relationships. Important past events can be included.]
+
+Remember, the aim is to provide a clear, quick reference for the gamemaster to roleplay the NPC effectively, without overwhelming detail. The description should add depth, but the table should suffice for basic roleplay. There should be one unexpected detail in their creation.

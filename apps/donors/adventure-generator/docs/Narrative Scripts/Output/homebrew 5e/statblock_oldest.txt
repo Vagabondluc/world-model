@@ -1,0 +1,41 @@
+[Choose target CR.]
+CR 0-1/2:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = HP/3
+HP = (ceil(ACCCR) + 1) * 3
+ 
+CR 1-7:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = 5 + 5CR
+HP = 3Dmg
+ 
+CR 8+:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = 5CR
+HP = 3Dmg
+ 
+Add spellcasting level/attribute and spell selection to CR calculation. Take into account the varying strength of spells and tradeoffs between attack/damage and healing/HP.
+Adjust base stats to fit monster concept, balancing changes to maintain original CR. Adjustments include AC (+/-3), HP (+/-50%, reduce by expected damage avoided over 3 rounds), Atk (+/-2), Dmg (+/-50%, 4x for limited-use, 0.5x for multi-target, 2x for limited multi-target), and DC (+/-2). Save adjustments are less significant for CR balancing, determined by natural abilities with bad saves/skills being any value less. Assign fitting skills (Higher/smarter CR monsters have more skills, max 4 for most. Large+ bruisers may have none. Smart humanoids up to 6. Typical mons: 2 skills- Perc. & Stealth.), rounding down fractional stats. Average adjusted stats for final CR, adjusting based on concept and other details that do not affect CR. Balancing adjustments create the desired concept while maintaining an appropriate challenge level.
+ ))
+and here is the second:
+((
+    To calculate CR, considering spellcasting impact:
+
+    Identify the spellcasting level and class (wizard, warlock, cleric, etc.), use the appropriate spellcasting table.
+    Analyze the stat block spells, consider spell strength, atk/dmg, healing/HP tradeoffs.
+    Consider a 3-round simulation to include spell effects on offensive and defensive CR calculations.
+    Calculate Offensive CR from stat block: Determine DPR, Atk (consider spellcasting).
+    Calculate Defensive CR from stat block: Determine Eff.HP (consider immunities [2x BPS nonmagical], resistances [1.5x BPS nonmagical], healing, and spellcasting), Eff.AC.
+    Avg(Def.CR, Off.CR) = CR.
+
+    CR calc guidelines:
+
+    CR 0-1/2: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=HP/3, HP=(ceil(ACCCR)+1)3
+    CR 1-7: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=5+5CR, HP=3Dmg
+    CR 8+: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=5CR, HP=3*Dmg

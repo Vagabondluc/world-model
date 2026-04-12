@@ -1,0 +1,53 @@
+[
+    {
+        "id": "res-iron-001",
+        "type": "Resource",
+        "name": "Iron Vein",
+        "owner": 0,
+        "era": 1,
+        "data": {
+            "id": "res-iron-001",
+            "name": "Iron Vein",
+            "type": "mineral",
+            "properties": "Durable, Common",
+            "symbol": "Fe"
+        },
+        "isDebug": true,
+        "createdYear": 0,
+        "creationStep": "test-data"
+    },
+    {
+        "id": "res-gold-001",
+        "type": "Resource",
+        "name": "Gold Deposit",
+        "owner": 0,
+        "era": 1,
+        "data": {
+            "id": "res-gold-001",
+            "name": "Gold Deposit",
+            "type": "mineral",
+            "properties": "Precious, Rare",
+            "symbol": "Au"
+        },
+        "isDebug": true,
+        "createdYear": 0,
+        "creationStep": "test-data"
+    },
+    {
+        "id": "res-wheat-001",
+        "type": "Resource",
+        "name": "Wheat Fields",
+        "owner": 0,
+        "era": 1,
+        "data": {
+            "id": "res-wheat-001",
+            "name": "Wheat Fields",
+            "type": "flora",
+            "properties": "Abundant, Food",
+            "symbol": "Wh"
+        },
+        "isDebug": true,
+        "createdYear": 0,
+        "creationStep": "test-data"
+    }
+]

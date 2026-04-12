@@ -1,0 +1,85 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Jp Cooper 10 Room Dungeon".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: jp cooper 10 room dungeon
+
+```text
++--------------------------------------------------------------------------------+
+|  [Conversational 10-Room Generator]                                   [?] [X]  |
++--------------------------------------------------------------------------------+
+|  DUNGEON SO FAR (SIDEBAR)  |  GUIDED CHAT                                      |
+|  [L] Tomb of Ash           |  [AI]: 2. Purpose: What is the dungeon for?       |
+|  [P] Ancient Jail          |                                                   |
+|  [C] The Sun-King          |  [U]: [ "To contain the Void-Fire" ]              |
+|  [T] Magic Artifacts       |                                                   |
+|  [M] Stop the Burn         |  [AI]: Great! 1. Entrance/Guardian:               |
+|  ------------------------- |  Something stops random people from entering.      |
+|  [1] Mirror-Gate           |  (Guardian, Spell, or Hidden?)                    |
+|  [2] Ash Gallery           |                                                   |
+|  [ ] Room 3...             |  +----------------------------------------------+ |
+|  [ ] Room 4...             |  | [Roll Idea] [Roll 3 Ideas] [Roll: Grimdark]  | |
+|                            |  +----------------------------------------------+ |
+|  [Preview Full Dungeon]    |  Input: [_____________________________] [Send]    |
++--------------------------------------------------------------------------------+
+|  [Export Narrative] [Reset All] [Save Draft]                          [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: jp cooper 10 room dungeon
+
+## Component Architecture
+- **Guided Chat Interface:** The central focus. It mimics a messaging app. ChatGPT's prompts are left-aligned; user responses/actions are right-aligned.
+- **Dungeon Ledger (Sidebar):** A vertical list that dynamically builds as the user answers. It shows the high-level "Theme" fields at the top and the "10 Rooms" below.
+- **Smart Toolbar:** A contextual toolbar that appears above the input box.
+    - **Buttons:** [Roll Once], [Roll 3], [Roll Genre...], [Undo Last].
+- **Review Panel:** A full-screen overlay that appears when the user asks to "see the dungeon".
+
+## Interaction Logic
+- **Step-by-Step Flow:** The script forces a linear progression (one question at a time) to prevent cognitive overload.
+- **"Roll" Interception:** When the user clicks "Roll", the UI sends a background command to the LLM to generate one or more creative options based on the previously entered data.
+- **Contextual continuity:** Subsequent rolls are weighted to fit the "Location" and "Purpose" defined in the first section.
+- **Hot-Swapping:** Clicking any room in the Sidebar allows the user to jump back to that point in the chat and change their answer (branching history).
+
+## Visual Design
+- **Theme-Responsive:** The chat bubbles and sidebar accent colors shift based on the "Genre" chosen (e.g., Parchment/Black for High Fantasy, Neon/Blue for Cyberpunk).
+- **Pro-Tip Toasts:** Occasional tooltip popups that remind the user they can ask for "more flesh out" or "genre rolls".
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: jp cooper 10 room dungeon
+
+# The Void-Keepers' Bastille
+**Total Rooms:** 10
+
+### Dungeon Theme
+1. **Location:** A floating island chained above a churning vortex.
+2. **Purpose:** To contain the "Void-Fire", a sentient entropy energy.
+3. **Creator:** The Solari Inquisition (Celestial Order).
+4. **Treasure:** Solar Quartz (used to fuel magic armor).
+5. **Motivation:** The chains are breaking; if the island falls, the vortex consumes the world.
+
+### 10-Room Key
+1. **Entrance/Guardian:** A "Light-Bound Ward". A spell that requires a drop of innocent blood (or a high Arcana check) to pass.
+2. **Logical Location:** The Hall of Cages. High ceilings with empty bronze cages used to hold corrupted souls.
+3. **Environmental Complication:** Gravity Fluctuations. Every round, players may start floating or find their weight tripled.
+4. **Helpful Information:** A dying Solari guard whispers: "The Void-Fire feeds on fear. Do not blink."
+5. **Alternate Threat/Ally:** A Bound Demon who wants the Void-Fire for himself but will offer a safe path if promised freedom.
+6. **Secret Exit:** A drainage pipe for solar-ichor; leads directly to the Chained Cliffs.
+7. **Resource Drain:** The "Soul-Fog" - a mist that drains 1 Hit Die for every hour spent inside.
+8. **Secret Room:** The Armory of Sol. Contains "Sun-Forged Plate" which grants immunity to the Soul-Fog.
+9. **Final Conflict:** The Inquisitor of Embers. A corrupted celestial who has merged with the Void-Fire.
+10. **Reward / Plot Twist:** The Void-Fire isn't actually a threat; it was a power source stolen from another world. The Inquisitors were the villains all along.
+

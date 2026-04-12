@@ -1,6 +1,6 @@
 {
   "donor": "orbis",
-  "basis": "designed",
+  "basis": "captured",
   "panels": [
     "Simulation profile",
     "Enabled domains",
@@ -8,12 +8,14 @@
     "Event stream"
   ],
   "controls": [
-    "Inspect import",
-    "View migration"
+    "Domain toggles",
+    "Run simulation",
+    "Inspect snapshot",
+    "View event stream"
   ],
   "visibleStates": [
-    "no simulation attachment",
-    "no domain toggles",
+    "no domains enabled",
+    "no snapshots",
     "no events"
   ]
 }

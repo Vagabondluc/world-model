@@ -1,19 +1,19 @@
 # Phase 8: Unified Product Surface and Cross-Donor Integration
 
-Phase 8 builds the coherent product experience that sits above the three donor-faithful surfaces. After Phase 7, the product is three proven donor rehosts sharing a canonical data layer. Phase 8 is what makes that product feel like one thing: a unified application whose power comes from all three donors contributing to every view.
+Phase 8 builds the coherent product experience that sits above donor-faithful surfaces. After Phase 7, the product has proven donor rehosts sharing a canonical data layer. Phase 8 makes that system feel like one application while keeping donor behavior fidelity.
 
 The public navigation (`World`, `Story`, `Schema`) gets intentional, designed implementations informed by what Phase 7 proved about how each donor addresses those concepts. Cross-donor flows become first-class features, not accidental consequences of mounting three apps in the same shell.
 
 ## Dependencies
 
 - Phase 7 complete
-- all three donor surfaces live and conformance-passing
+- donor surfaces in scope are live and conformance-passing
 - canonical round-trip tests passing for all shared concepts
 - `/compare/donors` route live
 
 ## The core invariant
 
-Each donor surface behaves like its donor app. The unified product surface behaves like a product that could only exist because all three donors share one data layer. These are two different things. Phase 8 builds the second.
+Each donor surface behaves like its donor app. The unified product surface behaves like a product that could only exist because donor surfaces share one canonical data layer. These are two different things. Phase 8 builds the second.
 
 ## Deliverables
 
@@ -46,16 +46,16 @@ Deliverables:
 - design the top-level navigation with intent, not as a Phase 3 stub
 - `World`, `Story`, and `Schema` entries defined with explicit purpose, scope, and the donor concepts they surface
 - entry-point routing logic that reads the canonical bundle and chooses the most relevant landing surface without relying on separate recency/session history
-- navigation does not pick a single donor's UX; it is a new surface that draws from all three
+- navigation does not pick a single donor's UX; it is a new surface that draws from donor-contributed concepts
 
 Acceptance:
 
 - each nav entry has a documented purpose grounded in canonical concepts, not inherited from one donor
-- a new user landing on `/world` can reach Mythforge, Adventure Generator, and Orbis perspectives on the same canonical record
+- a new user landing on `/world` can reach donor perspectives on the same canonical record
 
 ### 8.2 Shared canonical concept views
 
-Some canonical concepts appear in all three donor surfaces with different visual treatments. Phase 8 makes these explicit.
+Some canonical concepts appear across donor surfaces with different visual treatments. Phase 8 makes these explicit.
 
 Deliverables:
 

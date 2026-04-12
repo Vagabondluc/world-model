@@ -1003,6 +1003,11 @@ fn donor_from_str(value: &str) -> Result<DonorSystem, String> {
         "mythforge" => Ok(DonorSystem::Mythforge),
         "orbis" => Ok(DonorSystem::Orbis),
         "adventure-generator" => Ok(DonorSystem::AdventureGenerator),
+        "mappa-imperium" => Ok(DonorSystem::MappaImperium),
+        "dawn-of-worlds" => Ok(DonorSystem::DawnOfWorlds),
+        "faction-image" => Ok(DonorSystem::FactionImage),
+        "watabou-city" => Ok(DonorSystem::WatabouCity),
+        "encounter-balancer" => Ok(DonorSystem::EncounterBalancerScaffold),
         other => Err(format!("unknown donor `{other}`")),
     }
 }
@@ -1013,6 +1018,11 @@ impl DonorSystem {
             Self::Mythforge => "mythforge",
             Self::Orbis => "orbis",
             Self::AdventureGenerator => "adventure-generator",
+            Self::MappaImperium => "mappa-imperium",
+            Self::DawnOfWorlds => "dawn-of-worlds",
+            Self::FactionImage => "faction-image",
+            Self::WatabouCity => "watabou-city",
+            Self::EncounterBalancerScaffold => "encounter-balancer",
         }
     }
 }

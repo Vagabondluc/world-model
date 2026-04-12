@@ -1,0 +1,45 @@
+# Megadungeon Planner
+
+## Objective
+Design a large-scale, campaign-spanning dungeon with multiple interconnected levels and evolving challenges.
+
+## Instructions
+1. Develop Overarching Concept:
+   - Create a central theme or story for the megadungeon
+   - Determine dungeon's origin and purpose
+
+2. Plan Dungeon Structure:
+   - Outline 10-20 main levels
+   - Sketch connections between levels
+
+3. Design Level Themes:
+   - Assign unique theme to each level
+   - Ensure themes progress logically in difficulty
+
+4. Create Faction Framework:
+   - Develop 3-5 major factions
+   - Determine territory control and inter-faction dynamics
+
+5. Establish Ecosystem:
+   - Design dungeon's internal economy and resource flow
+   - Plan for creature habitats and food chains
+
+6. Develop Storylines:
+   - Create multiple quest arcs spanning several levels
+   - Design secrets and mysteries to uncover
+
+7. Plan Difficulty Progression:
+   - Gradually increase challenges deeper into dungeon
+   - Include occasional "breather" areas for recovery
+
+8. Design Unique Features:
+   - Create signature elements for the megadungeon
+   - Include legendary locations or artifacts
+
+9. Implement Restoration Mechanics:
+   - Design systems for dungeon restocking
+   - Plan how cleared areas might change over time
+
+10. Create Campaign Integration:
+    - Design hooks to lead players into megadungeon
+    - Plan for occasional outside adventures

@@ -36,7 +36,10 @@ Donor comparison routes also exist for Phase 7 rehost work:
 
 - `/donor/mythforge`
 - `/donor/orbis`
-- `/donor/adventure-generator`
+- `/donor/adventure-generator` (note: source is `to be merged/dungeon generator/` folder)
+- `/donor/mappa-imperium`
+- `/donor/dawn-of-worlds`
+- `/donor/faction-image`
 - `/compare/donors`
 
 These are internal donor rehost surfaces, not the public product taxonomy.

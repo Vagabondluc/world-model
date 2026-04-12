@@ -16,9 +16,17 @@ Phase 8 turns the donor-faithful rehosts from Phase 7 into a coherent product su
 
 ## Donor-faithful surfaces
 
+**Phase 1 (registered donors):**
 - `/donor/mythforge`
 - `/donor/orbis`
 - `/donor/adventure-generator`
+
+**Phase 2 (unregistered donors, pending registration):**
+- `/donor/mappa-imperium`
+- `/donor/dawn-of-worlds`
+- `/donor/faction-image`
+
+**Shared:**
 - `/compare/donors`
 
 These surfaces preserve donor language, layout priorities, visible affordances, and interaction order. Their only architectural substitution is the data layer: they project canonical bundle state through explicit facades.

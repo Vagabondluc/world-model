@@ -1,0 +1,46 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Trap Prep".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Trap Architect (trap_prep)
+
+```text
++--------------------------------------------------------------------------------+
+|  [Trap Architect: Hazard Generator]                                   [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Theme: [ Ancient Temple ]  |  Style: [ Complex / Non-Lethal ] [Randomize]     |
++--------------------------------------------------------------------------------+
+|  COMPONENT MATRIX (6x4)                  |  ACTIVE TRAP: [ The Crushing Slab ] |
+|  1. [Clue: Faint Dust   ] [Roll]         |  "As you step on the loose tile,   |
+|  2. [Trigger: Tile      ] [Roll]         |   a faint dust falls from the      |
+|  3. [Danger: Stone Slab ] [Roll]         |   ceiling [STAGED ACT]..."         |
+|  4. [Obscured: Shadow   ] [Roll]         +-------------------------------------+
+|                                          |  RESOLVE CHALLENGE                  |
+|  [Generate 3x4 Matrix] [Apply Theme]     |  Player Skill: [ Deduction/Reason ] |
+|  [View All 6x4 Options]                  |  Character Roll: [ Str DC 14 / Save]|
++------------------------------------------+-------------------------------------+
+|  RUNNING THE TRAP (Sequence)                                                   |
+|  Stage 1 (Warning): [ Dust falls, slight click heard. ]                        |
+|  Stage 2 (Action):  [ The stone ceiling begins to grind downward. ]            |
+|  Stage 3 (Impact):  [ The path is blocked; 1d10 bludgeoning dmg. ]             |
++------------------------------------------+-------------------------------------+
+|  [Export Trap Handout] [Log Hazard Data] [Test with Dummy Party]      [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+[MISSING FILE: docs\mockups\ui-docs\trap_prep-ui.md]
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+[MISSING FILE: docs\mockups\samples\trap_prep-sample.md]

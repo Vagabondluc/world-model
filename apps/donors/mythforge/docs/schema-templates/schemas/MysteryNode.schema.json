@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Mystery Node",
+  "description": "Container vocabulary: the Mystery Node payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.",
+  "type": "object",
+  "required": [
+    "node_cloud"
+  ],
+  "properties": {
+    "node_cloud": {
+      "type": "object",
+      "required": [
+        "id",
+        "nodes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "summary"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "connections": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "entity"
+}

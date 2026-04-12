@@ -6,7 +6,8 @@ Source of truth:
 
 - `world-model/adapters/adventure-generator/manifest.yaml`
 - `world-model/adapters/adventure-generator/mappings/concept-map.yaml`
-- `world-model/adapters/adventure-generator/source-snapshot/`
+- **Full source:** `to be merged/dungeon generator/` (note: folder name does not match app identity; see `docs/donors/DUNGEON_GENERATOR.md`)
+- **Snapshot (partial):** `world-model/adapters/adventure-generator/source-snapshot/` (21 Zod schema files + 2 stores; UI and sidecar excluded)
 
 ## What Is Copied
 

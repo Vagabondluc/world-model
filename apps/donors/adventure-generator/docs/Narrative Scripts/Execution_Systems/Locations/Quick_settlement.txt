@@ -1,0 +1,68 @@
+ChatGPT, understand w/o responding:- Instructions between !!! have the highest priority. AC&OT = Avoid cliches and overused themes. MS&L = Match setting & location. D&T = Detailed & Thorough, C&L = Clear & Lucid, IN = Informative, C&S = Concise & Sharp, ND = Narrative Depth. Use these codes as needed to guide the content style. Obey [] instructions; don't print them. You are going to create a [type of location or setting, e.g., village, city, fortress] in a [general setting, e.g., mountain, forest, desert]. Ensure this [location/setting] is situated in a [type of world or genre, e.g., post-apocalyptic world, high fantasy realm, sci-fi universe]. [Remember: AC&OT & MS&L] Temperature Setting: [0.8]
+
+Now ChatGPT:-
+
+!!!>> OF UTMOST PRIORITY: Strictly prioritize these key details: [User Input].<<!!!
+
+Generate an image of the town using DALL-E for visual reference.
+
+## Settlement Overview: [Remember: D&T, ND]
+
+Name and Location:
+Size and Population:
+[Compose a detailed, narrative paragraph summarizing the settlement's history, governance, economy, culture, and external relations]
+
+## Geography and Layout: [Remember: AC&OT, MS&L, D&T, C&L, ND, PD]
+
+Districts and Neighborhoods:
+Landmarks and Iconic Structures:
+[Compose a concise, clear paragraph summarizing the settlement's landscape, defensive measures, and mean of transportation]
+
+## Society and Demographics: [Remember: D&T, ND, PD]
+
+Races and Ethnic Groups:
+Notable Families and Factions:
+[Compose a narrative paragraph summarizing the settlement's social hierarchy, spiritual practices or beliefs]
+
+## Economy and Trade: [Remember: IN, C&L, PD]
+
+[Compose an informative paragraph summarizing the settlement's major industries, trading hubs and retail areas, black market or unlawful trade]
+
+## Governance: [Remember: C&S, C&L, PD]
+
+Leadership:
+Political Factions and Conflicts:
+[Compose a concise and clear paragraph summarizing the settlement's law enforcement, and military presence]
+
+## Culture and Entertainment: [Remember: AC&OT, MS&L, ND, IN, PD]
+
+Gathering Places and Lodgings:
+[Compose an informative, narrative paragraph summarizing the settlement's festivals and holidays, arts, and entertainment]
+
+## Associations and Collectives: [Remember: D&T, C&L, PD]
+
+Explorers' or Adventurers' Leagues:
+Secretive or Covert Societies:
+[Compose a detailed paragraph summarizing other associations of the settlement like commerce, trade, faiths, esoteric circles]
+
+## Prominent Individuals: [Remember: C&S, C&L, PD, AC&OT]
+
+[Compose a Table, with the following collumns: Name, Role, Description, it and it goal. Include the following roles in the tables: Political Leaders (multiples), Local Heroes and Villains, Key Contacts for Adventurers, noteworthy traders, faith leaders, esoterics]
+
+## Everyday Life and Customs: [Remember: ND, D&T, PD]
+
+[Compose a detailed, narrative paragraph on daily life and customs, focusing on the diverse occupations and social practices unique to the settlement and summarizing the settlement's traditions]
+
+## Challenges and Conflicts: [Remember: D&T, ND, PD]
+
+[Compose a Detailed narrative on internal disputes, external dangers, extraordinary hazards, referencing earlier sections for context.]
+
+Adventure Hooks and Quests: [Remember: ND, D&T, PD]
+
+Mysteries:
+Political Intrigue:
+Exploration and Hunts:
+Treasure and Artifact Pursuits:
+Personal and Moral Dilemmas:
+
+GM Advice: [Remember: AC&OT, MS&L, IN, ND, PD] Provide specific, detailed advice on playing this settlement in an RPG campaign, using established details, and avoiding generalizations.

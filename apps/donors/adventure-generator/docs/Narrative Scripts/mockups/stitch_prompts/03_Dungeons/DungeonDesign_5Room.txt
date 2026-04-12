@@ -1,0 +1,100 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeondesign 5Room".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: 5-Room Dungeon & Narrative Architect
+
+```text
++--------------------------------------------------------------------------------+
+|  [Dungeon Architect: 5-Room & Narrative Flow]                         [?] [X]  |
++--------------------------------------------------------------------------------+
+|  MODE: ( ) Classic 5-Room Dungeon   (x) Narrative/Flexible Order               |
+|  THEME: [ Forsaken Sanctuary of the Chrono-Guard ]  [V]                        |
++--------------------------------------------------------------------------------+
+|  ADVENTURE PIPELINE (DRAG TO REORDER FLEX STAGES)                             |
+|  [1. PREP & INTRO] -> [FLEX: TRIALS] -> [3. MIDPOINT] -> [FLEX: PUZZLES] ...   |
++--------------------------------------------------------------------------------+
+|  SCENE EDITOR: [ 3. MIDPOINT - THE TWIST ]                                     |
+|  Summary: [ The PCs discover the High Priest is a hologram. ]                  |
+|  Setting: [ The shimmering hall of the holographic projector. ]                |
+|  Challenge: [ Hacking the stuttering AI console while statues animate. ]       |
+|  Transitions:                                                                  |
+|  - Success: [ Move to Flex Puzzles (Inner Sanctum) ]                           |
+|  - Failure: [ Move to Trick/Setback (Cell Block B)   ]                          |
++--------------------------------------------------------------------------------+
+|  HERO ROLE SPOTLIGHT                                                           |
+|  [!] Suggestion: Use 'Radiation Hazard' to challenge the Bio-PC's resistance.  |
++--------------------------------------------------------------------------------+
+|  [Generate Map Key] [Visualize Flow] [Export to Foundry]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: 5-Room Dungeon & Narrative Architect
+
+## Component Architecture
+- **Framework Toggle:** A fundamental switch that reconfigures the UI between the "Classic 5-Room" (Room 1-5) and the "Narrative/Flexible" stage-based model.
+- **The Pipeline Ribbon:** A visual representation of the adventure's flow. In Narrative mode, "Flex Stages" can be dragged and reordered to simulate non-linear gameplay.
+- **Context-Aware Scene/Room Editor:** A deep-dive panel that adjusts its fields based on the selected stage (e.g., "The Midpoint" emphasizes twists/setbacks, while "The Entrance" highlights guardians and preservation).
+- **Hero-Spotlight Intelligence:** A sidebar that analyzes the "Challenge" field and PC data to suggest specific obstacles (Traps, Hazards, NPCs) that make players feel like heroes.
+- **Branching Transition Mapper:** A tool to define "Alternative Routes" based on player choices (Success/Failure), supporting the non-linear requirements of the Alternate script.
+
+## Interaction Logic
+- **Recursive Content Generation:** Filling out the "Theme" and "Midpoint" seeds the "AI Suggestions" for all other rooms, ensuring thematic consistency (e.g., Chronomancer theme adds "Snake-infested floors" or "Buzzer panels").
+- **Outcome-to-Transition Wiring:** Success and Failure outcomes are directly linked to specific follow-up scenes, visually mapped in a "Flow" view.
+- **The "Flex" Constraint:** In Narrative mode, the UI ensures that "Prep," "Midpoint," and "Climax" remain static pins, while the intervening trials can be handled dynamically by the GM.
+
+## Visual Design
+- **Architectural & Blueprint-Inspired:** Uses a grid-based layout with "Blueprint Blue" accents and technical diagrams, evoking the feeling of designing a physical or narrative space.
+- **High-Contrast "Twist" Indicators:** The Midpoint/Setback sections use an "Alert Cyan" color to mark their importance as narrative disruptors.
+- **Connection Lines:** Subtle, glowing lines connect the Pipeline stages, showing the DM the path the players will likely take.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: 5-Room Dungeon Key (The Chrono-Guard Sanctuary)
+
+### **Room 1: Entrance & Guard (The Clockwork Gate)**
+- **Mood:** Tense, clicking, smelling of oil.
+- **Guardians:** Two Bronze Golems that only allow entry to those with the 'Sigil of Seconds.'
+- **Hero Spotlight:** **Tech/Hacking:** The golems' control panel is exposed on the side, allowing a skilled PC to disable them without combat.
+- **Transition:** Leads to the 'Flex: Trials' area.
+
+---
+
+### **Room 2: Flex Trial (The Maze of Shifting Sands)**
+- **Challenge:** A non-combat trial where the floor panels rotate based on the sound of a ticking pendulum.
+- **Hero Spotlight:** **Observation/Scholar:** Identifying the rhythmic pattern of the pendulum allows for safe passage.
+- **Outcome:** Success grants a 'Feather of Finesse.' Failure triggers a PIT TRAP leading back to Room 1.
+
+---
+
+### **Room 3: Midpoint - The Twist (The Empty Throne)**
+- **Summary:** The PCs reach the 'Chronomancer,' only to find it is a hollow mechanical shell being operated from the basement.
+- **Setback:** The floor collapses (The 'Snake-infested floors' from the script), dropping them into the lower maintenance tunnels.
+- **Theme:** Deception and Disruption.
+
+---
+
+### **Room 4: Climax/Battle (The Maintenance Core)**
+- **Antagonist:** Master Tinker Vane.
+- **Tactical Element:** Vane uses 'Prep Time' features to flood the room with grease, making the floor difficult terrain.
+- **Hero Spotlight:** **Combat/Guts:** PCs must charge through the grease to reach the control lever while dodging Vane's laser-bots.
+
+---
+
+### **Room 5: Reward/Revelation (The Master Blueprint)**
+- **Reward:** Vane's personal logbook, revealing that he was actually trying to *stop* a greater catastrophe.
+- **Prophecy Revelation:** The log reveals that one of the PCs is mentioned in an ancient Chronomancer scroll.
+- **Epilogue Hook:** "The ticking hasn't stopped... it's just gotten faster."
+

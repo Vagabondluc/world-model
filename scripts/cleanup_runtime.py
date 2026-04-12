@@ -34,6 +34,9 @@ DURABLE_REPORTS = [
     WORLD_MODEL_ROOT / "phase-4-migration-report.json",
     WORLD_MODEL_ROOT / "phase-6-release-report.json",
     WORLD_MODEL_ROOT / "phase-8-integration-report.json",
+    WORLD_MODEL_ROOT / "phase-9-donor-completeness-report.json",
+    WORLD_MODEL_ROOT / "phase-9-exact-donor-ui-report.json",
+    WORLD_MODEL_ROOT / "phase-9-donor-e2e-report.json",
     WORLD_MODEL_ROOT / "phase-checklist.json",
 ]
 

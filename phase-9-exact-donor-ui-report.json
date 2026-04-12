@@ -1,0 +1,1341 @@
+{
+  "ok": false,
+  "workspace_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "app_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+  "scope": "phase-9 exact donor-ui verification",
+  "report_path": "D:/coding/AI/Chat-Gpt-Agent/world-model/phase-9-exact-donor-ui-report.json",
+  "checks": [
+    {
+      "name": "exactness source exists: exactness-manifest.json",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/exactness-manifest.json"
+    },
+    {
+      "name": "exactness source exists: config.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/config.ts"
+    },
+    {
+      "name": "exactness source exists: DonorPage.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorPage.tsx"
+    },
+    {
+      "name": "exactness source exists: DonorSubappHost.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorSubappHost.tsx"
+    },
+    {
+      "name": "exactness source exists: Navigation.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/shell/Navigation.tsx"
+    },
+    {
+      "name": "exactness source exists: ContextBar.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/shell/ContextBar.tsx"
+    },
+    {
+      "name": "config.ts imports the exactness manifest",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/config.ts"
+    },
+    {
+      "name": "DonorPage no longer renders SourceUiPreview",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorPage.tsx"
+    },
+    {
+      "name": "DonorPage no longer uses DonorRuntimeHost as the primary donor route body",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorPage.tsx"
+    },
+    {
+      "name": "DonorSubappHost does not use SourceUiPreview",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorSubappHost.tsx"
+    },
+    {
+      "name": "DonorSubappHost does not use DonorRuntimeHost",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorSubappHost.tsx"
+    },
+    {
+      "name": "Navigation no longer advertises live source UI routes",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/shell/Navigation.tsx"
+    },
+    {
+      "name": "ContextBar no longer labels donor routes as live source UI routes",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/shell/ContextBar.tsx"
+    },
+    {
+      "name": "mechanical-sycophant is excluded from the manifest",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/exactness-manifest.json"
+    },
+    {
+      "name": "manifest donor order covers the frozen donor set",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/exactness-manifest.json"
+    },
+    {
+      "name": "manifest donor keys cover the frozen donor set",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/exactness-manifest.json"
+    },
+    {
+      "name": "mythforge classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "mythforge mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "mythforge vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mythforge characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mythforge conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mythforge projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mythforge actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mythforge bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "mythforge exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "mythforge has behavior-exact implementation status",
+      "ok": false,
+      "message": "mythforge is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "orbis classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "orbis mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "orbis vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "orbis characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "orbis conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "orbis projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "orbis actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "orbis bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "orbis exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "orbis has behavior-exact implementation status",
+      "ok": false,
+      "message": "orbis is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "adventure-generator classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "adventure-generator has behavior-exact implementation status",
+      "ok": false,
+      "message": "adventure-generator is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "mappa-imperium classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "mappa-imperium has behavior-exact implementation status",
+      "ok": false,
+      "message": "mappa-imperium is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "dawn-of-worlds classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "dawn-of-worlds has behavior-exact implementation status",
+      "ok": false,
+      "message": "dawn-of-worlds is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "faction-image classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "faction-image mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "faction-image vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "faction-image characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "faction-image conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "faction-image projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "faction-image actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "faction-image bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "faction-image exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "faction-image has behavior-exact implementation status",
+      "ok": false,
+      "message": "faction-image is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "watabou-city classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "watabou-city mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "watabou-city vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "watabou-city characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "watabou-city conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "watabou-city projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "watabou-city actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "watabou-city bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "watabou-city exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "watabou-city has behavior-exact implementation status",
+      "ok": false,
+      "message": "watabou-city is `rehost-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "watabou-city source root points at the clean-room implementation",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer classification matches donor class",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer mountKind is valid for donor class",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer vendoredRoot follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer characterization baseline follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer conformance suite follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer projector follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer actionTranslator follows donor convention",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer bridge tests follow donor convention",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer exactness status is not self-attesting",
+      "ok": true
+    },
+    {
+      "name": "encounter-balancer has behavior-exact implementation status",
+      "ok": false,
+      "message": "encounter-balancer is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist."
+    },
+    {
+      "name": "mythforge donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mythforge"
+    },
+    {
+      "name": "mythforge donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mythforge"
+    },
+    {
+      "name": "mythforge donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mythforge/package.json"
+    },
+    {
+      "name": "mythforge WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mythforge/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "mythforge style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mythforge"
+    },
+    {
+      "name": "mythforge characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/mythforge/captured"
+    },
+    {
+      "name": "mythforge conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/mythforge/projector.ts"
+    },
+    {
+      "name": "mythforge canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/mythforge/actionTranslator.ts"
+    },
+    {
+      "name": "mythforge canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.bridge.test.ts"
+    },
+    {
+      "name": "orbis donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/orbis"
+    },
+    {
+      "name": "orbis donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/orbis"
+    },
+    {
+      "name": "orbis donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/orbis/package.json"
+    },
+    {
+      "name": "orbis WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/orbis/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "orbis style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/orbis"
+    },
+    {
+      "name": "orbis characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/orbis/captured"
+    },
+    {
+      "name": "orbis conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "orbis canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/orbis/projector.ts"
+    },
+    {
+      "name": "orbis canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/orbis/actionTranslator.ts"
+    },
+    {
+      "name": "orbis canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.bridge.test.ts"
+    },
+    {
+      "name": "adventure-generator donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/adventure-generator"
+    },
+    {
+      "name": "adventure-generator donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/adventure-generator"
+    },
+    {
+      "name": "adventure-generator donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/adventure-generator/package.json"
+    },
+    {
+      "name": "adventure-generator WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/adventure-generator/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "adventure-generator style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/adventure-generator"
+    },
+    {
+      "name": "adventure-generator characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/adventure-generator/captured"
+    },
+    {
+      "name": "adventure-generator conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "adventure-generator canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/adventure-generator/projector.ts"
+    },
+    {
+      "name": "adventure-generator canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/adventure-generator/actionTranslator.ts"
+    },
+    {
+      "name": "adventure-generator canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.bridge.test.ts"
+    },
+    {
+      "name": "mappa-imperium donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mappa-imperium"
+    },
+    {
+      "name": "mappa-imperium donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mappa-imperium"
+    },
+    {
+      "name": "mappa-imperium donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mappa-imperium/package.json"
+    },
+    {
+      "name": "mappa-imperium WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mappa-imperium/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "mappa-imperium style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mappa-imperium"
+    },
+    {
+      "name": "mappa-imperium characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/mappa-imperium/captured"
+    },
+    {
+      "name": "mappa-imperium conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/mappa-imperium/projector.ts"
+    },
+    {
+      "name": "mappa-imperium canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/mappa-imperium/actionTranslator.ts"
+    },
+    {
+      "name": "mappa-imperium canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.bridge.test.ts"
+    },
+    {
+      "name": "dawn-of-worlds donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/dawn-of-worlds"
+    },
+    {
+      "name": "dawn-of-worlds donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/dawn-of-worlds"
+    },
+    {
+      "name": "dawn-of-worlds donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/dawn-of-worlds/package.json"
+    },
+    {
+      "name": "dawn-of-worlds WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/dawn-of-worlds/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "dawn-of-worlds style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/dawn-of-worlds"
+    },
+    {
+      "name": "dawn-of-worlds characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/dawn-of-worlds/captured"
+    },
+    {
+      "name": "dawn-of-worlds conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/dawn-of-worlds/projector.ts"
+    },
+    {
+      "name": "dawn-of-worlds canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/dawn-of-worlds/actionTranslator.ts"
+    },
+    {
+      "name": "dawn-of-worlds canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.bridge.test.ts"
+    },
+    {
+      "name": "faction-image donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/faction-image"
+    },
+    {
+      "name": "faction-image donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/faction-image"
+    },
+    {
+      "name": "faction-image donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/faction-image/package.json"
+    },
+    {
+      "name": "faction-image WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/faction-image/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "faction-image style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/faction-image"
+    },
+    {
+      "name": "faction-image characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/faction-image/captured"
+    },
+    {
+      "name": "faction-image conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/faction-image/projector.ts"
+    },
+    {
+      "name": "faction-image canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/faction-image/actionTranslator.ts"
+    },
+    {
+      "name": "faction-image canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.bridge.test.ts"
+    },
+    {
+      "name": "watabou-city donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/watabou-city"
+    },
+    {
+      "name": "watabou-city donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/watabou-city"
+    },
+    {
+      "name": "watabou-city donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/watabou-city/package.json"
+    },
+    {
+      "name": "watabou-city WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/watabou-city/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "watabou-city style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/watabou-city"
+    },
+    {
+      "name": "watabou-city donor subapp route mount is registered",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/DonorSubappHost.tsx"
+    },
+    {
+      "name": "watabou-city characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/watabou-city/captured"
+    },
+    {
+      "name": "watabou-city conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/watabou-city/projector.ts"
+    },
+    {
+      "name": "watabou-city canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/watabou-city/actionTranslator.ts"
+    },
+    {
+      "name": "watabou-city canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.bridge.test.ts"
+    },
+    {
+      "name": "encounter-balancer donor root exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/encounter-balancer"
+    },
+    {
+      "name": "encounter-balancer donor root is not marker-only",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/encounter-balancer"
+    },
+    {
+      "name": "encounter-balancer donor subapp package metadata exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/encounter-balancer/package.json"
+    },
+    {
+      "name": "encounter-balancer WorldModelDonorApp entrypoint exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/encounter-balancer/src/WorldModelDonorApp.tsx"
+    },
+    {
+      "name": "encounter-balancer style, asset, or visual component evidence exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/encounter-balancer"
+    },
+    {
+      "name": "encounter-balancer characterization baseline exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/encounter-balancer/captured"
+    },
+    {
+      "name": "encounter-balancer conformance suite exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer canonical projector exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/encounter-balancer/projector.ts"
+    },
+    {
+      "name": "encounter-balancer canonical action translator exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/src/donors/bridges/encounter-balancer/actionTranslator.ts"
+    },
+    {
+      "name": "encounter-balancer canonical bridge test exists",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.bridge.test.ts"
+    },
+    {
+      "name": "encounter-balancer clone root exists: apocalypse",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/to be merged/apocalypse"
+    },
+    {
+      "name": "encounter-balancer clone root exists: character-creator",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/to be merged/character-creator"
+    },
+    {
+      "name": "encounter-balancer clone root exists: deity creator",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/to be merged/deity creator"
+    },
+    {
+      "name": "encounter-balancer clone root exists: genesis",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/to be merged/genesis"
+    },
+    {
+      "name": "adventure-generator.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "adventure-generator.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "adventure-generator.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "adventure-generator.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "adventure-generator.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "adventure-generator.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "dawn-of-worlds.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "encounter-balancer.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "faction-image.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mappa-imperium.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "mythforge.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "orbis.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "orbis.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "orbis.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "orbis.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "orbis.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "orbis.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city.conformance.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city.conformance.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city.conformance.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city.conformance.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city.conformance.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "watabou-city.conformance.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "context-retention.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "context-retention.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "context-retention.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "context-retention.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "context-retention.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "context-retention.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/context-retention.test.tsx"
+    },
+    {
+      "name": "cross-donor-adventure-flow.integration.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-adventure-flow.integration.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-adventure-flow.integration.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-adventure-flow.integration.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-adventure-flow.integration.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-adventure-flow.integration.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-adventure-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-world-flow.integration.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-world-flow.integration.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-world-flow.integration.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-world-flow.integration.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-world-flow.integration.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "cross-donor-world-flow.integration.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/cross-donor-world-flow.integration.test.tsx"
+    },
+    {
+      "name": "lens-switch.smoke.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "lens-switch.smoke.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "lens-switch.smoke.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "lens-switch.smoke.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "lens-switch.smoke.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "lens-switch.smoke.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/lens-switch.smoke.test.tsx"
+    },
+    {
+      "name": "shared-concept-round-trip.test.tsx does not contain `source baseline` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "shared-concept-round-trip.test.tsx does not contain `SourceUiPreview` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "shared-concept-round-trip.test.tsx does not contain `sourceUiUrl` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "shared-concept-round-trip.test.tsx does not contain `live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "shared-concept-round-trip.test.tsx does not contain `iframe` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "shared-concept-round-trip.test.tsx does not contain `Open live source UI` placeholder evidence",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/integration/shared-concept-round-trip.test.tsx"
+    },
+    {
+      "name": "phase-9 bridge suite",
+      "command": "npm.cmd run test:conformance:bridges",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:bridges\n> vitest run tests/conformance/bridge-harness.test.ts tests/conformance/mythforge.bridge.test.ts tests/conformance/orbis.bridge.test.ts tests/conformance/adventure-generator.bridge.test.ts tests/conformance/mappa-imperium.bridge.test.ts tests/conformance/dawn-of-worlds.bridge.test.ts tests/conformance/faction-image.bridge.test.ts tests/conformance/watabou-city.bridge.test.ts tests/conformance/encounter-balancer.bridge.test.ts\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:18\n\u001b[2m   Duration \u001b[22m 4.02s\u001b[2m (transform 273ms, setup 6.22s, collect 460ms, tests 35ms, environment 23.80s, prepare 1.98s)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:bridges"
+    },
+    {
+      "name": "phase-9 mount suite",
+      "command": "npm.cmd run test:conformance:mounts",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:mounts\n> vitest run tests/conformance/donor-subapp-host.mount.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 2013\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 1825\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m8 passed\u001b[39m\u001b[22m\u001b[90m (8)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:23\n\u001b[2m   Duration \u001b[22m 4.72s\u001b[2m (transform 1.23s, setup 347ms, collect 660ms, tests 2.01s, environment 1.26s, prepare 154ms)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:mounts"
+    },
+    {
+      "name": "phase-9 exactness suite",
+      "command": "npm.cmd run test:conformance:exactness",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:exactness\n> vitest run tests/conformance tests/integration\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 134\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 136\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 144\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 151\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 153\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/lens-switch.smoke.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 344\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m shared concept lens switch\u001b[2m > \u001b[22mswitches donor lenses in place without mutating the canonical key \u001b[33m 343\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-adventure-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 510\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor adventure flow\u001b[2m > \u001b[22mmoves a workflow-heavy bundle across the donor and product compare surfaces \u001b[33m 509\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-world-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 673\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor world flow\u001b[2m > \u001b[22mkeeps the selected world and entity context while moving through donor and product surfaces \u001b[33m 671\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/context-retention.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 822\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor context retention\u001b[2m > \u001b[22mretains selected world and entity context across public, compare, and donor routes \u001b[33m 821\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3280\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 2969\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3304\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m watabou city conformance\u001b[2m > \u001b[22mmounts the clean-room donor app through the subapp host \u001b[33m 3303\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/shared-concept-round-trip.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 7\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-manifest.exactness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 6\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 127\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 125\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m24 passed\u001b[39m\u001b[22m\u001b[90m (24)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m33 passed\u001b[39m\u001b[22m\u001b[90m (33)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:29\n\u001b[2m   Duration \u001b[22m 12.80s\u001b[2m (transform 3.10s, setup 17.25s, collect 14.27s, tests 9.95s, environment 69.51s, prepare 5.90s)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:exactness"
+    },
+    {
+      "name": "phase-9 phase9b suite",
+      "command": "npm.cmd run test:conformance:phase9b",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:phase9b\n> npm run test:conformance:bridges && npm run test:conformance:mounts && npm run test:conformance:exactness\n\n\n> unified-app@0.1.0 test:conformance:bridges\n> vitest run tests/conformance/bridge-harness.test.ts tests/conformance/mythforge.bridge.test.ts tests/conformance/orbis.bridge.test.ts tests/conformance/adventure-generator.bridge.test.ts tests/conformance/mappa-imperium.bridge.test.ts tests/conformance/dawn-of-worlds.bridge.test.ts tests/conformance/faction-image.bridge.test.ts tests/conformance/watabou-city.bridge.test.ts tests/conformance/encounter-balancer.bridge.test.ts\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:43\n\u001b[2m   Duration \u001b[22m 4.27s\u001b[2m (transform 1.48s, setup 5.21s, collect 3.43s, tests 30ms, environment 23.82s, prepare 2.09s)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:mounts\n> vitest run tests/conformance/donor-subapp-host.mount.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 1924\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 1734\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m8 passed\u001b[39m\u001b[22m\u001b[90m (8)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:49\n\u001b[2m   Duration \u001b[22m 4.66s\u001b[2m (transform 1.24s, setup 336ms, collect 672ms, tests 1.92s, environment 1.28s, prepare 136ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:exactness\n> vitest run tests/conformance tests/integration\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 127\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 151\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 154\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 140\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 151\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/lens-switch.smoke.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 317\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m shared concept lens switch\u001b[2m > \u001b[22mswitches donor lenses in place without mutating the canonical key \u001b[33m 315\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-adventure-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 553\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor adventure flow\u001b[2m > \u001b[22mmoves a workflow-heavy bundle across the donor and product compare surfaces \u001b[33m 552\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-world-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 766\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor world flow\u001b[2m > \u001b[22mkeeps the selected world and entity context while moving through donor and product surfaces \u001b[33m 764\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/context-retention.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 805\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor context retention\u001b[2m > \u001b[22mretains selected world and entity context across public, compare, and donor routes \u001b[33m 804\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3975\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 3649\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3987\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m watabou city conformance\u001b[2m > \u001b[22mmounts the clean-room donor app through the subapp host \u001b[33m 3985\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-manifest.exactness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 6\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/shared-concept-round-trip.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 10\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 120\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 130\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m24 passed\u001b[39m\u001b[22m\u001b[90m (24)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m33 passed\u001b[39m\u001b[22m\u001b[90m (33)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:54\n\u001b[2m   Duration \u001b[22m 12.55s\u001b[2m (transform 3.06s, setup 17.77s, collect 10.60s, tests 11.42s, environment 68.08s, prepare 7.16s)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:phase9b"
+    },
+    {
+      "name": "phase-9 donor e2e suite",
+      "command": "npm run test:e2e:donor-world-model",
+      "ok": false,
+      "returncode": "skipped",
+      "output": "skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donor-harness && npm run test:e2e:donor-world-model"
+    },
+    {
+      "name": "phase-9 donor e2e report fresh for this run",
+      "ok": false,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/phase-9-donor-e2e-report.json",
+      "message": "E2E was skipped because donor routes are not yet exact-mounted and parity-certified; ignore any stale prior E2E report."
+    }
+  ],
+  "commands": [
+    {
+      "name": "phase-9 bridge suite",
+      "command": "npm.cmd run test:conformance:bridges",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:bridges\n> vitest run tests/conformance/bridge-harness.test.ts tests/conformance/mythforge.bridge.test.ts tests/conformance/orbis.bridge.test.ts tests/conformance/adventure-generator.bridge.test.ts tests/conformance/mappa-imperium.bridge.test.ts tests/conformance/dawn-of-worlds.bridge.test.ts tests/conformance/faction-image.bridge.test.ts tests/conformance/watabou-city.bridge.test.ts tests/conformance/encounter-balancer.bridge.test.ts\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:18\n\u001b[2m   Duration \u001b[22m 4.02s\u001b[2m (transform 273ms, setup 6.22s, collect 460ms, tests 35ms, environment 23.80s, prepare 1.98s)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:bridges"
+    },
+    {
+      "name": "phase-9 mount suite",
+      "command": "npm.cmd run test:conformance:mounts",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:mounts\n> vitest run tests/conformance/donor-subapp-host.mount.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 2013\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 1825\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m8 passed\u001b[39m\u001b[22m\u001b[90m (8)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:23\n\u001b[2m   Duration \u001b[22m 4.72s\u001b[2m (transform 1.23s, setup 347ms, collect 660ms, tests 2.01s, environment 1.26s, prepare 154ms)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:mounts"
+    },
+    {
+      "name": "phase-9 exactness suite",
+      "command": "npm.cmd run test:conformance:exactness",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:exactness\n> vitest run tests/conformance tests/integration\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 134\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 136\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 144\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 151\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 153\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/lens-switch.smoke.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 344\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m shared concept lens switch\u001b[2m > \u001b[22mswitches donor lenses in place without mutating the canonical key \u001b[33m 343\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-adventure-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 510\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor adventure flow\u001b[2m > \u001b[22mmoves a workflow-heavy bundle across the donor and product compare surfaces \u001b[33m 509\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-world-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 673\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor world flow\u001b[2m > \u001b[22mkeeps the selected world and entity context while moving through donor and product surfaces \u001b[33m 671\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/context-retention.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 822\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor context retention\u001b[2m > \u001b[22mretains selected world and entity context across public, compare, and donor routes \u001b[33m 821\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3280\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 2969\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3304\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m watabou city conformance\u001b[2m > \u001b[22mmounts the clean-room donor app through the subapp host \u001b[33m 3303\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/shared-concept-round-trip.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 7\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-manifest.exactness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 6\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 127\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 125\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m24 passed\u001b[39m\u001b[22m\u001b[90m (24)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m33 passed\u001b[39m\u001b[22m\u001b[90m (33)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:29\n\u001b[2m   Duration \u001b[22m 12.80s\u001b[2m (transform 3.10s, setup 17.25s, collect 14.27s, tests 9.95s, environment 69.51s, prepare 5.90s)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:exactness"
+    },
+    {
+      "name": "phase-9 phase9b suite",
+      "command": "npm.cmd run test:conformance:phase9b",
+      "ok": true,
+      "returncode": 0,
+      "output": "> unified-app@0.1.0 test:conformance:phase9b\n> npm run test:conformance:bridges && npm run test:conformance:mounts && npm run test:conformance:exactness\n\n\n> unified-app@0.1.0 test:conformance:bridges\n> vitest run tests/conformance/bridge-harness.test.ts tests/conformance/mythforge.bridge.test.ts tests/conformance/orbis.bridge.test.ts tests/conformance/adventure-generator.bridge.test.ts tests/conformance/mappa-imperium.bridge.test.ts tests/conformance/dawn-of-worlds.bridge.test.ts tests/conformance/faction-image.bridge.test.ts tests/conformance/watabou-city.bridge.test.ts tests/conformance/encounter-balancer.bridge.test.ts\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m9 passed\u001b[39m\u001b[22m\u001b[90m (9)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:43\n\u001b[2m   Duration \u001b[22m 4.27s\u001b[2m (transform 1.48s, setup 5.21s, collect 3.43s, tests 30ms, environment 23.82s, prepare 2.09s)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:mounts\n> vitest run tests/conformance/donor-subapp-host.mount.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 1924\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 1734\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m8 passed\u001b[39m\u001b[22m\u001b[90m (8)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:49\n\u001b[2m   Duration \u001b[22m 4.66s\u001b[2m (transform 1.24s, setup 336ms, collect 672ms, tests 1.92s, environment 1.28s, prepare 136ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:exactness\n> vitest run tests/conformance tests/integration\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 127\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 151\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 154\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 140\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 151\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/lens-switch.smoke.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 317\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m shared concept lens switch\u001b[2m > \u001b[22mswitches donor lenses in place without mutating the canonical key \u001b[33m 315\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-adventure-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 553\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor adventure flow\u001b[2m > \u001b[22mmoves a workflow-heavy bundle across the donor and product compare surfaces \u001b[33m 552\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/cross-donor-world-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 766\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor world flow\u001b[2m > \u001b[22mkeeps the selected world and entity context while moving through donor and product surfaces \u001b[33m 764\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/context-retention.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 805\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m cross-donor context retention\u001b[2m > \u001b[22mretains selected world and entity context across public, compare, and donor routes \u001b[33m 804\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-subapp-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m8 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3975\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m donor route subapp mounts\u001b[2m > \u001b[22mmounts watabou-city through the donor subapp host without SourceUiPreview \u001b[33m 3649\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3987\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u2713\u001b[22m\u001b[39m watabou city conformance\u001b[2m > \u001b[22mmounts the clean-room donor app through the subapp host \u001b[33m 3985\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/donor-manifest.exactness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 6\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/integration/shared-concept-round-trip.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 10\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 120\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 130\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m24 passed\u001b[39m\u001b[22m\u001b[90m (24)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m33 passed\u001b[39m\u001b[22m\u001b[90m (33)\u001b[39m\n\u001b[2m   Start at \u001b[22m 02:09:54\n\u001b[2m   Duration \u001b[22m 12.55s\u001b[2m (transform 3.06s, setup 17.77s, collect 10.60s, tests 11.42s, environment 68.08s, prepare 7.16s)\u001b[22m",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app && npm.cmd run test:conformance:phase9b"
+    },
+    {
+      "name": "phase-9 donor e2e suite",
+      "command": "npm run test:e2e:donor-world-model",
+      "ok": false,
+      "returncode": "skipped",
+      "output": "skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity",
+      "rerun": "cd D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donor-harness && npm run test:e2e:donor-world-model"
+    },
+    {
+      "name": "phase-9 donor e2e report fresh for this run",
+      "ok": false,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/phase-9-donor-e2e-report.json",
+      "message": "E2E was skipped because donor routes are not yet exact-mounted and parity-certified; ignore any stale prior E2E report."
+    }
+  ],
+  "errors": [
+    "mythforge is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "orbis is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "adventure-generator is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "mappa-imperium is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "dawn-of-worlds is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "faction-image is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "watabou-city is `rehost-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "encounter-balancer is `scaffold-mounted`; exactness requires `exact-vendored` after a real donor subapp package, route mount, bridge, and parity suite exist.",
+    "phase-9 donor e2e suite skipped: donor routes are not yet exact-mounted and parity-certified"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HeistPlan",
+  "description": "Container vocabulary: the Heist Plan payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.",
+  "type": "object",
+  "required": [
+    "title",
+    "phases"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "estimated_minutes": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "checkpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "time_offset_min": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "condition": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "assigned_to": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "responsibilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "signal": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "escape_routes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safehouses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "backups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cleanup_plan": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "seed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "x-mythforge-schema-class": "entity",
+  "x-mythforge-legacy-companion": "HeistEnvelope.schema.json"
+}

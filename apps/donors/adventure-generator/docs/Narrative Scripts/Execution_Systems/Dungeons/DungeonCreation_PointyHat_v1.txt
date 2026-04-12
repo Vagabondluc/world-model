@@ -1,0 +1,38 @@
+ChatGPT
+Pointy Hat Dungeon Creation Method
+
+Introduction
+System-agnostic guide with a focus on 5e to create thematic dungeons. Editable and savable for personal use.
+
+Step I: Theme
+Choose a one-word theme to set your dungeon's mood and narrative basis. Your theme shapes all subsequent creation aspects.
+
+Your Theme:
+[Insert Here]
+
+Step II: Mechanics
+Select game mechanics that embody and reinforce the dungeon's theme to provide an immersive experience.
+
+Your Mechanics:
+[Insert Here]
+
+Step III: Goal
+Establish a clear objective for players to accomplish within the dungeon, enhancing engagement and variety.
+
+Your Goal:
+[Insert Here]
+
+Step IV: Encounters
+Design encounters around the theme, utilizing combat, puzzles, traps, and roleplay to reflect the mechanics and enrich pacing.
+
+Your Encounters:
+[Insert Here]
+
+Step V: Ending
+Conclude with an encounter that synthesizes theme, mechanics, and narrative, serving as the dungeon's climax.
+
+Your Ending:
+[Insert Here]
+
+Instructions:
+Follow this framework to ensure a cohesive and engaging dungeon experience.

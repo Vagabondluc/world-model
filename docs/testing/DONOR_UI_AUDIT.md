@@ -1,67 +1,26 @@
 # Donor UI Audit
 
-Phase 7 treats donor UI as part of the donation surface when that UI exists.
+Phase 9 treats donor UI as a first-class contract. The donor inventory is exhaustive and fixed to the donor index.
 
-The donor classifications are fixed for this workspace. The audit inventories source roots and test commands; it does not reopen classification.
+## Donor classes and methodologies
 
-## Audit Result
+| Donor | Class | Methodology | Basis | Workspace evidence |
+|---|---|---|---|---|
+| Mythforge | app donor | behavioral capture | captured | `mythforge/` |
+| Orbis | app donor | behavioral capture | captured | `to be merged/true orbis/Orbis Spec 2.0/` |
+| Adventure Generator | app donor | behavioral capture | captured | `to be merged/dungeon generator/` |
+| Mappa Imperium | app donor | behavioral capture | captured | `to be merged/mappa imperium/` |
+| Dawn of Worlds | app donor | behavioral capture | captured | `to be merged/world-builder-ui/` |
+| Faction Image | app donor | behavioral capture | captured | `to be merged/faction-image/` |
+| Watabou City | clean-room app donor | clean-room app capture | clean-room implementation | `to be merged/watabou-city-clean-room/2nd/` |
+| Encounter Balancer | scaffold-copy donor | representative baseline + clone-equivalence | reconstructed | `to be merged/apocalypse/`, `to be merged/character-creator/`, `to be merged/deity creator/`, `to be merged/genesis/` |
 
-| Donor | Class | Methodology | Basis | Workspace evidence | Notes |
-|---|---|---|---|---|---|
-| Mythforge | app donor | behavioral capture | captured | `mythforge/package.json`, `mythforge/src/app/page.tsx`, `mythforge/src/components/mythosforge/*` | Runnable donor app with portable UI tests and recognizable route/panel structure. |
-| Adventure Generator | fragment donor | intent reconstruction | reconstructed | `to be merged/dungeon generator/zai2/.next`, `next-env.d.ts`, adapter docs | Surviving app residue exists, but source root and package metadata are incomplete. Rehost follows reconstructed workflow intent. |
-| Orbis | semantic-only donor | designed intent authoring | designed | `world-model/docs/adapters/ORBIS_ADAPTER.md`, adapter snapshots, stray workspace residue only | No runnable donor UI root exists in the workspace. Rehost is authored from simulation semantics, not captured behavior. |
+## Audit notes
 
-## Mythforge
+- `mechanical-sycophant` is not a donor and is excluded from this inventory.
+- app-donor parity is measured as exact or adapted parity against captured donor baselines.
+- watabou-city parity is measured against the clean-room implementation in `2nd/`; encounter-balancer parity is measured against the representative scaffold baseline with explicit clone-equivalence evidence.
 
-- Runnable app root: `D:\coding\AI\Chat-Gpt-Agent\mythforge`
-- Entry script: `npm run dev`
-- Test commands:
-  - `npm run test`
-  - `npm run test:contracts`
-  - `npm run test:e2e`
-  - `npm run test:rust`
-- Characterization source:
-  - `src/app/page.tsx`
-  - `src/components/mythosforge/TopNav.tsx`
-  - `src/components/mythosforge/ExplorerTree.tsx`
-  - `src/components/mythosforge/Workspace.tsx`
+## Pre-registered waivers
 
-## Adventure Generator
-
-- Workspace residue root: `D:\coding\AI\Chat-Gpt-Agent\to be merged\dungeon generator\zai2`
-- Confirmed residue:
-  - `.next/`
-  - `node_modules/`
-  - `next-env.d.ts`
-- Missing from the current workspace:
-  - root `package.json`
-  - source tree
-  - runnable test entrypoint
-- Characterization source:
-  - adapter docs
-  - surviving residue
-  - workflow semantics in canonical attachments
-
-## Orbis
-
-- No runnable donor app root was found in the current workspace.
-- Visible workspace evidence is limited to:
-  - `world-model/docs/adapters/ORBIS_ADAPTER.md`
-  - adapter snapshot and concept map
-  - `to be merged/Orbis Spec 2.0/Orbis 1.0/.env.local`
-- Characterization source:
-  - adapter docs
-  - adapter snapshot semantics
-  - designed simulation surface requirements
-
-## Pre-Registered Waivers
-
-The following waivers are registered before gate execution:
-
-- Mythforge:
-  - donor-only AI copilot and donor-only external dashboard surfaces
-- Adventure Generator:
-  - exact source-level parity with the original donor app until full source recovery exists
-- Orbis:
-  - exact DOM parity with a donor UI, because no donor UI root exists in the workspace
+Waivers are tracked in `world-model/tests/conformance/waivers.yaml` and must include one row per donor group.

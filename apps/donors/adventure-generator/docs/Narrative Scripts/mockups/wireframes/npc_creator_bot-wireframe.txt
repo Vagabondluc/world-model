@@ -1,0 +1,60 @@
++------------------------------------------------------------------------------+
+| NPC Creator Bot — Random or Prompt-Based with Image Generation Prompt       |
++--------------------------------+---------------------------------------------+
+| Left Nav                       | Main Form                                    |
+| - NPCs (active)                |                                             |
+| - Locations                    | === Generation Mode ===                     |
+| - Adventures                   | ( ) Random  (v) From Prompt                 |
+|                                |                                             |
+| Recent NPCs ↓                  | [Conditional: if From Prompt]               |
+| - Grimnar Ironforge (Random)   | Text Prompt: (textarea)                     |
+| - Elara Moonwhisper (Prompt)  ↘| "Create a half-elf bard who lost her voice |
++--------------------------------+ and now communicates through music..."      |
+|                                |                                             |
+|                                | [Conditional: if Random]                    |
+|                                | Race: (v) Random / Dwarf / Elf / Human...   |
+|                                | Class: (v) Random / Fighter / Wizard...     |
+|                                | Alignment: (v) Random / LG / NG / CG...     |
+|                                |                                             |
+|                                | === Options ===                             |
+|                                | Image Style: (v) Fantasy-art / Realistic... |
+|                                | Seed: [__________]                          |
+|                                |                                             |
+|                                | [Generate (procedural)] [AI Fill] [Clear]   |
++--------------------------------+---------------------------------------------+
+| Preview                                                                      |
+| ┌──────────────────────────────────────────────────────────────────────┐   |
+| │ **Race:** Half-Elf                                                   │   |
+| │ **Class:** Bard                                                      │   |
+| │ **Alignment:** Neutral Good                                          │   |
+| │                                                                      │   |
+| │ **Personality Traits:**                                              │   |
+| │ 1. Expressive through body language                                 │   |
+| │ 2. Deeply empathetic and compassionate                              │   |
+| │ 3. Fiercely determined to overcome adversity                        │   |
+| │ 4. Distrustful of clerics and divine magic                          │   |
+| │ 5. Finds joy in small acts of beauty                                │   |
+| │                                                                      │   |
+| │ **Goals:**                                                           │   |
+| │ Seeks a legendary artifact rumored to restore lost voices; wants to │   |
+| │ prove that music transcends words.                                   │   |
+| │                                                                      │   |
+| │ **Visual Description (Image AI Prompt):**                            │   |
+| │ A slender half-elf woman in her late twenties with long silver hair │   |
+| │ braided with musical note charms, wearing elegant traveling bard     │   |
+| │ robes in deep violet and gold, holding an ornate lute carved with   │   |
+| │ glowing runes, amber eyes filled with determination, standing in a  │   |
+| │ moonlit forest clearing, fantasy art style, detailed character       │   |
+| │ portrait, soft magical lighting                                      │   |
+| │                                                                      │   |
+| │ **Sample Dialog (written, as she cannot speak):**                   │   |
+| │ [Writes on parchment] "The song I play will tell you more than any  │   |
+| │ words could. Listen with your heart, not your ears."                │   |
+| └──────────────────────────────────────────────────────────────────────┘   |
+| [Copy Visual Description] [Copy All] [Save to Cards] [Generate Image]      |
++------------------------------------------------------------------------------+
+| Footer: Mode: From Prompt | Seed: 20260122-bot-elara                        |
++------------------------------------------------------------------------------+
+
+"Generate Image" button → copies visual description to clipboard + opens image AI tool.
+Mobile: mode selector at top; conditional fields stack; preview below.

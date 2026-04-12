@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "name": "combat_encounter_v2",
+    "category": "Encounters",
+    "description": "A structured prompt for creating dynamic, geography-focused D&D combat encounters.",
+    "version": "2.0"
+  },
+  "inputs": [
+    {
+      "name": "environment_type",
+      "type": "string",
+      "label": "Environment Type",
+      "description": "The primary geographical setting for the encounter (e.g., volcanic field, icy fjord, dense jungle).",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "enemy_type",
+      "type": "string",
+      "label": "Enemy Type",
+      "description": "The primary adversaries in the encounter (e.g., goblins, trolls, undead, elementals).",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "player_level",
+      "type": "integer",
+      "label": "Player Party Level",
+      "description": "The average level of the player characters to balance the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "encounter_goal",
+      "type": "enum",
+      "label": "Primary Goal",
+      "description": "The main objective for the players in this encounter.",
+      "default": "defeat_all",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "defeat_all",
+        "escape",
+        "survive",
+        "protect_objective"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "environment_introduction",
+      "type": "object",
+      "label": "Environment Introduction",
+      "description": "A detailed description of the setting, its physical features, and their general impact on gameplay.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "location_description",
+          "type": "string",
+          "label": "Location Description",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "physical_features",
+          "type": "string",
+          "label": "Physical Features",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "gameplay_impact",
+          "type": "string",
+          "label": "Gameplay Impact",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "environmental_mechanics",
+      "type": "list",
+      "label": "Environmental Mechanics",
+      "description": "Specific environmental hazards and their trigger conditions.",
+      "default": null,
+      "item_schema": {
+        "name": "hazard",
+        "type": "object",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": [
+          {
+            "name": "hazard_name",
+            "type": "string",
+            "label": "Hazard Name",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "trigger_condition",
+            "type": "string",
+            "label": "Trigger Condition",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "mechanical_effect",
+            "type": "string",
+            "label": "Mechanical Effect",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          }
+        ],
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "enemy_forces",
+      "type": "object",
+      "label": "Enemy Forces",
+      "description": "Details about the adversaries, their abilities, and tactics.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "overview",
+          "type": "string",
+          "label": "Enemy Overview",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "tactics",
+          "type": "string",
+          "label": "Detailed Tactics",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "detailed_encounter_mechanics",
+      "type": "object",
+      "label": "Encounter Mechanics",
+      "description": "The starting setup, interaction rules, and dynamic changes of the battlefield.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "starting_conditions",
+          "type": "string",
+          "label": "Starting Conditions",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "interaction_rules",
+          "type": "string",
+          "label": "Interaction Rules",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "dynamic_changes",
+          "type": "string",
+          "label": "Dynamic Changes",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "resolution_and_consequences",
+      "type": "object",
+      "label": "Resolution and Consequences",
+      "description": "Possible outcomes and their immediate narrative and gameplay effects.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "potential_outcomes",
+          "type": "string",
+          "label": "Encounter Outcomes",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "immediate_consequences",
+          "type": "string",
+          "label": "Consequences",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "transition_opportunities",
+          "type": "string",
+          "label": "Transition Opportunities",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Rumors".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: rumors
+
+```text
++--------------------------------------------------------------------------------+
+|  [Rumor Table Manager: d20 Information Matrix]                        [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Table Size: [ d20 ] [V]   [Roll d20] [Restock Table] [Check Impact Log]       |
++--------------------------------------------------------------------------------+
+|  RUMOR TABLE (Current)                                                         |
+|  +-----+-----------------------+-----------+----------------+----------------+ |
+|  | Roll| Rumor Content         | Source    | Focus          | Status         | |
+|  +-----+-----------------------+-----------+----------------+----------------+ |
+|  | 01  | [ Dragon in the.. ]   | [ Hex 14 ]| [ Creatures ]  | [ Delivered ]  | |
+|  | 02  | [ Bandit raid..   ]   | [ Road A ]| [ Situation ]  | [ Fresh ]      | |
+|  | 03  | [ Ancient key..   ]   | [ Faction]| [ Objects ]    | [ Fresh ]      | |
++--+-----+-----------------------+-----------+----------------+----------------+ |
++--------------------------------------+-----------------------------------------+
+|  DELIVERY & FRAMING (Result: 02)     |  RUMOR EVOLUTION                        |
+|  Context: [ Overheard in Tavern ] [V]|  Tied to: [ Recent Battle of Oakhaven ] |
+|  "A nervous guard at the bar         |  Effect:  [ +2 DC to investigate ]      |
+|  whispers that the main road is no   |  Restock logic: [ Add fallout rumors ]  |
+|  longer safe after dark..."          |                                         |
++--------------------------------------+-----------------------------------------+
+|  [Generate Handout] [Export to Foundry] [Sync with Local Map]          [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: rumors
+
+## Component Architecture
+- **Master Rumor Grid:** A high-density data table that organizes rumors by roll (d20/d30/d100), source (Faction, Hex, NPC), focus (Object, Threat, Lore), and status (Fresh/Delivered).
+- **Interactive Information Hub:** A central dashboard where the DM can "Roll for Information." It handles both proactive delivery and reactive player investigation.
+- **Contextual Framing Engine:** A creative workspace that takes raw rumor data and wraps it in a "Delivery Context" (e.g., Notice Board, Letters, Vision), providing the DM with ready-to-read narration.
+- **Evolution & Restock Manager:** A tool to maintain the "Freshness" of the table. It identifies "Dead Rumors" (crosses them off) and suggests "Restocks" based on recent PC achievements or world events.
+- **Ledger of Truths:** A background tracker that notes which rumors have been discovered and potentially "Verified" by the players, linking them to the campaign's evolving lore.
+
+## Interaction Logic
+- **Constraint-Based Restocking:** The UI encourages periodically restocking the table to reflect the "Consequences of player actions," as emphasized in the script.
+- **Investigation Check Integration:** Allows the DM to set Rumor Costs (1d6 gp) or difficulty modifiers (DCs) directly within the interface.
+- **Actionability Auditor:** A background process that ensures every generated rumor provides a "Clear lead or location," preventing vague or useless flavor text.
+
+## Visual Design
+- **Information-Dense Archive:** Resembles a professional ledger or investigator's case-file.
+- **Status Color-Coding:**
+    - **Green:** Fresh rumors ready for delivery.
+    - **Grey:** Delivered rumors that may soon be verified or archived.
+    - **Blue:** Rumors tied to specific character backstories.
+- **Tactical Utility Icons:** Small glyphs for the "Focus" column (e.g., a shield for Threats, a scroll for Lore) to allow the DM to scan the table instantly.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: rumors
+
+# Rumor Table: The Borderlands (Spring Season)
+
+| d20 | Rumor Title | Source | Focus | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | **The Wyrm's Wake** | Hex 04: Cinder Peaks | Creatures | Fresh |
+| **02** | **The Red-Iron Embargo** | Faction: Merchant Guild | Situation | Delivered |
+| **03** | **The Sunken Key** | NPC: Old Silas | Objects | Fresh |
+| **04** | **The Ghost-Marchers** | Road: Widow's Way | Threats | Fresh |
+
+---
+
+### Delivery Frame: The Red-Iron Embargo (Result 02)
+**Context:** *Outcome of a Tarot Reading.*  
+"You draw the card of the 'Broken Anvil.' The seer's eyes cloud as they mutter that the flow of iron from the northern mines has been choked off by a new and hungry power. The Guild is offering 500 gold to anyone who can reopen the pass at Hex 09."
+
+### Rumor Evolution:
+*Integration with PC Actions:* Since the players defeated the Bandit King last session, **Rumor 04** has been updated. The "Ghost-Marchers" are no longer simple spirits—they are now said to be the vengeful souls of the bandits seeking their stolen treasure in the Black Woods.
+
+### Restock Suggestions:
+- **New Rumor (d20 #05):** "The Ashen Princess has been spotted near the safehouse." (Tier 2 Plot hook).
+- **Cost:** Silas charges 2 gp for a drink before he spills the details on the **Sunken Key**.
+

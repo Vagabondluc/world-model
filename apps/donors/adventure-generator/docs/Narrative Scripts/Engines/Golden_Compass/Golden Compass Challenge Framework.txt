@@ -1,0 +1,230 @@
+# Golden Compass Challenge Framework
+
+## Introduction
+Challenges are the heart of the Golden Compass adventure system. This framework will help you design and implement engaging, dynamic challenges that drive your adventure forward while creating memorable moments for players.
+
+## Challenge Philosophy
+*"In Golden Compass, failure is not an option - it's a detour."*
+
+Remember these core principles:
+- Challenges advance the story, regardless of success or failure
+- Players always move forward toward their objective
+- Failures create complications, not dead ends
+- Challenge design should offer multiple approaches
+
+## Challenge Types
+
+### Difficulty Levels
+- **BASIC Challenge:** Common tasks with minor risks
+  - *Example:* Climbing a short wall, hitting a stationary target at close range
+  - *Success Requirement:* BASIC Success (two of a kind)
+  
+- **CRITICAL Challenge:** Difficult tasks with significant risks
+  - *Example:* Climbing in poor weather, hitting a moving target
+  - *Success Requirement:* CRITICAL Success (three of a kind)
+  
+- **EXTREME Challenge:** Unlikely tasks with severe risks
+  - *Example:* Climbing a sheer cliff in a storm, shooting a distant target while in motion
+  - *Success Requirement:* EXTREME Success (four of a kind)
+  
+- **IMPOSSIBLE Challenge:** Nearly unachievable tasks
+  - *Example:* Climbing a smooth wall with no equipment, shooting a target you can't see
+  - *Success Requirement:* IMPOSSIBLE Success (five of a kind)
+
+### Challenge Categories
+
+- **Skill Challenges:** Testing a specific skill (Shooting, Climbing, etc.)
+- **Dangers:** Challenges that can cause physical harm or status effects
+- **Enemy Encounters:** Combat challenges against opponents
+
+## Designing Effective Challenges
+
+### Step 1: Define the Objective
+Always clarify what the player is trying to accomplish, not just what they're doing.
+- *Not just:* "Climbing a wall"
+- *But:* "Reaching the temple entrance before guards arrive"
+
+### Step 2: Consider Multiple Approaches
+Design challenges that can be tackled in different ways:
+- **Direct Approach:** Straightforward solution using obvious skills
+- **Creative Approach:** Unexpected solution using alternative skills
+- **Social Approach:** Using interpersonal skills to bypass the challenge
+- **Resource Approach:** Using equipment or wealth to overcome obstacles
+
+### Step 3: Set the Difficulty
+Consider these factors when determining challenge difficulty:
+- Environmental conditions (weather, terrain, visibility)
+- Time pressure
+- Character limitations
+- Story significance
+- Player experience level
+
+### Step 4: Plan Success and Failure Paths
+For each challenge, prepare:
+- **Success Path:** What happens when players succeed
+- **Success with Style:** Additional benefits for exceptional success
+- **Failure with Complications:** How the story continues despite failure
+- **Appropriate Accidents:** Interesting complications that maintain momentum
+
+## Challenge Implementation
+
+### Challenge Script Format
+Present challenges using this structure:
+
+1. **Situation Description:**
+   - Set the scene and establish stakes
+   - Describe environmental factors
+   - Indicate time pressure if applicable
+
+2. **Challenge Statement:**
+   - Clearly state the challenge and its difficulty
+   - "This is a [BASIC/CRITICAL/EXTREME/IMPOSSIBLE] Challenge."
+
+3. **Approach Options:**
+   - Suggest potential approaches
+   - Indicate skills that might apply
+
+4. **Resolution:**
+   - For success: Describe how the objective is achieved
+   - For failure: Introduce appropriate Accidents
+
+### Sample Challenge Structure
+
+```
+FORTUNE MASTER
+[Describe the situation]
+You're facing a [BASIC/CRITICAL/EXTREME] Challenge.
+
+PLAYER
+[Describes their approach]
+
+FORTUNE MASTER
+[Confirms the approach and relevant skill]
+Roll for [SKILL] to see if you succeed.
+
+PLAYER
+[Rolls dice and counts successes]
+
+FORTUNE MASTER
+[For success] You succeed! [Describe outcome]
+[For failure] You don't quite manage it. [Describe Accident]
+```
+
+## Status Effects and Feelings
+
+### Good Feelings
+Good Feelings provide Advantages on future challenges:
+- **POWERFUL:** Advantage in Action
+- **DARING:** Advantage in Guts
+- **FOCUSED:** Advantage in Knowledge
+- **CONFIDENT:** Advantage in Society
+- **FIERCE:** Advantage in Wild
+- **UNTOUCHABLE:** Advantage in Crime
+
+### Bad Feelings
+Bad Feelings impose Disadvantages on future challenges:
+- **BLEEDING:** Disadvantage in Action
+- **SHOCKED:** Disadvantage in Guts
+- **DIZZY:** Disadvantage in Knowledge
+- **EMBARRASSED:** Disadvantage in Society
+- **BROKEN:** Disadvantage in Wild
+- **SCARED:** Disadvantage in Crime
+
+## Accidents and Complications
+
+### Types of Accidents
+- **Delay:** The objective takes longer than expected
+- **Resource Cost:** Success requires spending Wealth Points or items
+- **Status Effect:** Character gains a Bad Feeling
+- **New Challenge:** Creates a new obstacle to overcome
+- **Revelation:** Unwanted information is revealed
+- **Environmental Change:** The situation becomes more dangerous
+
+### Crafting Meaningful Accidents
+Effective Accidents should:
+- Move the story forward in a new direction
+- Create interesting new situations
+- Tie into the character's actions
+- Feel like natural consequences
+- Present new opportunities
+
+## Challenge Flow Chart
+
+1. **Establish Challenge:** Present situation and stakes
+2. **Player Approach:** Player describes their method
+3. **Determine Difficulty:** Set difficulty based on approach
+4. **Skill Selection:** Identify relevant skill and field
+5. **Roll Dice:** Player rolls and counts successes
+6. **Compare Results:** Check if success level meets challenge difficulty
+7. **Resolve Outcome:** Implement success or failure path
+8. **Continue Adventure:** Move to next scene
+
+## Advanced Challenge Techniques
+
+### Escalating Challenges
+Create a series of challenges that increase in difficulty:
+1. BASIC Challenge serves as introduction
+2. CRITICAL Challenge raises stakes
+3. EXTREME Challenge serves as climax
+
+### Timed Challenges
+Add urgency with the Doomsday Clock:
+- Set a specific number of Hours available
+- Define actions that cost Hours
+- Create consequences when time runs out
+
+### Environmental Challenges
+Modify difficulty based on environmental factors:
+- Poor visibility adds Disadvantage
+- Unstable ground increases danger level
+- Extreme weather changes challenge type
+
+### Multi-Stage Challenges
+Break complex objectives into connected stages:
+1. First challenge grants access
+2. Second challenge reveals information
+3. Final challenge achieves objective
+
+## Example Challenge Scenarios
+
+### Infiltration Challenge
+**Situation:** Guards patrol a mansion courtyard with spotlights
+**Objective:** Reach the study without being detected
+**Approaches:**
+- CRITICAL Stealth to move through shadows
+- BASIC Tech to disable spotlights, then BASIC Stealth
+- EXTREME Society to bluff way past guards
+**Accidents:**
+- Guard becomes suspicious and investigates
+- Spotlight temporarily pins player down
+- Must take longer route, losing an Hour
+
+### Investigation Challenge
+**Situation:** Ancient manuscript contains hidden clues
+**Objective:** Decode location of hidden temple
+**Approaches:**
+- CRITICAL Knowledge to translate directly
+- BASIC Observation to find hidden symbols, then BASIC Tech
+- EXTREME Scout to recognize geographical landmarks
+**Accidents:**
+- Translation takes extra time (lose an Hour)
+- Only partial information revealed
+- Translation attracts unwanted attention
+
+### Combat Challenge
+**Situation:** Ambush by Rival's goons
+**Objective:** Defeat enemies and escape
+**Approaches:**
+- CRITICAL Fight to defeat enemies directly
+- BASIC Shoot to create distraction, then BASIC Stealth
+- EXTREME Charm to convince goons to stand down
+**Accidents:**
+- Player suffers BLEEDING or BROKEN
+- Enemies call for reinforcements
+- Valuable equipment is damaged
+
+## Conclusion
+
+Remember that challenges are storytelling tools, not pass/fail gates. They create drama, tension, and excitement while constantly moving the adventure forward. A well-designed challenge system ensures players always have agency and options, regardless of the dice results.
+
+When in doubt, ask: "How does this challenge make the adventure more exciting?" The answer will guide you toward creating memorable gaming moments.

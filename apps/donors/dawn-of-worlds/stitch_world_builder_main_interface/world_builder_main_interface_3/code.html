@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>World Builder - End Turn Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"],
+                        "mono": ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .hex-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 4px;
+            padding: 20px;
+        }
+        .hex {
+            aspect-ratio: 1/1.15;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background: #2d1d3a;
+            transition: all 0.2s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #362348;
+        }
+        .hex:hover {
+            background: #362348;
+        }
+        .hex-active {
+            background: #7f13ec44;
+            border: 2px solid #7f13ec;
+            position: relative;
+        }
+        .hex-ghost {
+            opacity: 0.6;
+            color: #7f13ec;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary/30">
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+<div class="w-full max-w-lg overflow-hidden rounded-xl border border-[#362348] bg-[#1a1122] shadow-2xl">
+<div class="border-b border-[#362348] bg-[#22172b] px-6 py-4 flex items-center justify-between">
+<div>
+<h3 class="text-lg font-bold">End Turn</h3>
+<p class="text-[11px] font-mono text-primary uppercase tracking-widest">Age II, Round 3</p>
+</div>
+<button class="text-[#ad92c9] hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-6 space-y-6">
+<div>
+<h4 class="text-[10px] font-bold uppercase text-[#ad92c9] mb-3 tracking-wider">Turn Summary</h4>
+<div class="space-y-2">
+<div class="flex items-center justify-between rounded bg-[#261933] px-3 py-2 border border-[#362348]">
+<span class="text-sm">Created Race <span class="text-primary font-medium">"Karthi"</span></span>
+<span class="font-mono text-xs text-[#ad92c9]">(2 AP)</span>
+</div>
+<div class="flex items-center justify-between rounded bg-[#261933] px-3 py-2 border border-[#362348]">
+<span class="text-sm">Named Region <span class="text-primary font-medium">"The Frozen Spine"</span></span>
+<span class="font-mono text-xs text-[#ad92c9]">(1 AP)</span>
+</div>
+<div class="flex items-center justify-between rounded bg-primary/10 px-3 py-2 border border-primary/20">
+<span class="text-sm font-semibold">Total AP Spent</span>
+<span class="font-mono text-sm text-primary font-bold">3 of 5</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 rounded-lg bg-amber-500/10 border border-amber-500/20 p-4">
+<span class="material-symbols-outlined text-amber-500 mt-0.5">warning</span>
+<div>
+<p class="text-xs font-bold text-amber-500 uppercase mb-1">Remaining AP</p>
+<p class="text-sm text-amber-100/80">You have <span class="font-mono font-bold">2 AP</span> remaining. These will not carry over to the next round.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 py-2 px-1 border-t border-[#362348]">
+<span class="text-xs text-[#ad92c9]">Next Up:</span>
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-blue-400"></span>
+<span class="text-sm font-bold text-blue-400">Player Blue (P2)</span>
+</div>
+</div>
+</div>
+<div class="bg-[#22172b] px-6 py-4 flex items-center justify-end gap-3">
+<button class="px-4 py-2 text-xs font-bold text-[#ad92c9] hover:text-white transition-colors uppercase tracking-widest">
+                Cancel
+            </button>
+<button class="flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-xs font-bold transition-all hover:bg-primary/90 active:scale-95 shadow-lg shadow-primary/20">
+                SUBMIT TURN
+                <span class="material-symbols-outlined text-sm">check</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex h-screen flex-col overflow-hidden">
+<header class="flex h-14 items-center justify-between border-b border-[#362348] bg-background-light dark:bg-background-dark px-6">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-lg">public</span>
+</div>
+<div>
+<h2 class="text-sm font-bold leading-none">Dawn-01</h2>
+<span class="text-[10px] uppercase tracking-wider text-[#ad92c9]">World Instance</span>
+</div>
+</div>
+<div class="h-6 w-[1px] bg-[#362348]"></div>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase text-[#ad92c9]">Progression</span>
+<div class="flex items-center gap-2 text-sm font-medium">
+<span>Age II</span>
+<span class="text-[#362348]">·</span>
+<span>Round 3</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase text-[#ad92c9]">Current Turn</span>
+<div class="flex items-center gap-2 text-sm font-medium text-red-400">
+<span class="size-2 rounded-full bg-red-400"></span>
+<span>Player Red</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-end">
+<span class="text-[10px] uppercase text-[#ad92c9] mb-1">Action Points</span>
+<div class="flex gap-1.5">
+<div class="size-3 rounded-full bg-primary shadow-[0_0_8px_rgba(127,19,236,0.6)]"></div>
+<div class="size-3 rounded-full bg-primary shadow-[0_0_8px_rgba(127,19,236,0.6)]"></div>
+<div class="size-3 rounded-full border border-[#362348] bg-transparent"></div>
+<div class="size-3 rounded-full border border-[#362348] bg-transparent"></div>
+<div class="size-3 rounded-full border border-[#362348] bg-transparent"></div>
+</div>
+</div>
+<div class="relative w-48">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-sm text-[#ad92c9]">search</span>
+<input class="h-9 w-full rounded-lg border-none bg-[#261933] pl-9 text-xs text-white placeholder:text-[#ad92c9] focus:ring-1 focus:ring-primary" placeholder="Search world..." type="text"/>
+</div>
+<button class="flex h-9 items-center gap-2 rounded-lg bg-primary px-4 text-xs font-bold transition-all hover:bg-primary/90 active:scale-95">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+                END TURN
+            </button>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<aside class="w-64 border-r border-[#362348] bg-[#1a1122] flex flex-col">
+<div class="p-4 border-b border-[#362348]">
+<h1 class="text-sm font-bold uppercase tracking-tight">Actions</h1>
+<p class="text-[11px] text-[#ad92c9]">Age II — Peoples &amp; Cities</p>
+</div>
+<div class="flex-1 overflow-y-auto p-2 space-y-1 text-white/50 grayscale opacity-40">
+<div class="flex items-center justify-between rounded-lg p-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">location_city</span>
+<div>
+<p class="text-xs font-medium">Found City</p>
+<p class="text-[10px]">Requires 3 AP</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-sm">lock</span>
+</div>
+<div class="flex items-center justify-between rounded-lg p-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">groups</span>
+<div>
+<p class="text-xs font-bold">Create Race</p>
+<p class="text-[10px]">2 AP Cost</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-sm">lock</span>
+</div>
+</div>
+</aside>
+<section class="relative flex-1 bg-[#0f0f12] overflow-hidden group">
+<div class="absolute bottom-6 right-6 z-10 flex flex-col gap-2">
+<div class="flex flex-col bg-[#261933] rounded-lg border border-[#362348] overflow-hidden">
+<button class="p-2 hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+<div class="h-[1px] bg-[#362348]"></div>
+<button class="p-2 hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+</div>
+</div>
+<div class="h-full w-full overflow-auto flex items-center justify-center p-20">
+<div class="hex-grid min-w-[1200px]">
+<div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div>
+<div class="hex hex-active">
+<span class="material-symbols-outlined text-4xl hex-ghost">apartment</span>
+</div>
+<div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div><div class="hex"></div>
+</div>
+</div>
+</section>
+<aside class="w-80 border-l border-[#362348] bg-[#1a1122] flex flex-col">
+<div class="p-4 border-b border-[#362348] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded bg-primary/20 text-primary">
+<span class="material-symbols-outlined">apartment</span>
+</div>
+<div>
+<h2 class="text-sm font-bold">City of Ashkel</h2>
+<span class="text-[10px] text-[#ad92c9] uppercase font-semibold">SETTLEMENT · P.Red</span>
+</div>
+</div>
+<button class="text-[#ad92c9] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<div class="p-4 border-b border-[#362348] bg-[#22172b]/30">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">Created</p>
+<p class="text-xs font-medium text-white/90">Age II, Round 2</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary uppercase mb-1">Location</p>
+<p class="text-xs font-medium text-white/90 font-mono">Hex (2, -1)</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-b border-[#362348]">
+<p class="text-[10px] font-bold text-primary uppercase mb-3">Attributes</p>
+<div class="space-y-2">
+<div class="flex justify-between items-center rounded bg-[#261933] p-2">
+<span class="text-[11px] text-[#ad92c9] font-mono">settlementType</span>
+<span class="text-[11px] font-mono text-primary-300">CITY</span>
+</div>
+</div>
+</div>
+<div class="p-4">
+<p class="text-[10px] font-bold text-primary uppercase mb-4">Timeline</p>
+<div class="relative space-y-6 pl-5 before:absolute before:left-[3px] before:top-1 before:bottom-1 before:w-[1px] before:bg-[#362348]">
+<div class="relative">
+<span class="absolute -left-[20px] top-1 size-[7px] rounded-full bg-primary shadow-[0_0_8px_#7f13ec]"></span>
+<div class="flex justify-between items-start mb-1">
+<p class="text-[10px] text-[#ad92c9] font-medium">Age II · Round 3 · P.Red</p>
+<span class="text-[9px] px-1.5 py-0.5 font-mono rounded bg-primary/10 border border-primary/20 text-primary">1 AP</span>
+</div>
+<p class="text-xs text-white/90 font-medium">Modified</p>
+<p class="text-[10px] text-[#ad92c9] mt-1">Expansion of district borders and infrastructure upgrade.</p>
+</div>
+<div class="relative">
+<span class="absolute -left-[20px] top-1 size-[7px] rounded-full bg-[#362348]"></span>
+<div class="flex justify-between items-start mb-1">
+<p class="text-[10px] text-[#ad92c9] font-medium">Age II · Round 2 · P.Red</p>
+<span class="text-[9px] px-1.5 py-0.5 font-mono rounded bg-[#362348] text-white/50">3 AP</span>
+</div>
+<p class="text-xs text-white/90 font-medium">Created</p>
+<p class="text-[10px] text-[#ad92c9] mt-1">Foundation of the Ashkel settlement on the mountain slope.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-[#1a1122] border-t border-[#362348]">
+<div class="flex items-center gap-2 p-3 rounded-lg bg-[#261933]/50 border border-[#362348] opacity-60">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Authority: Read Only</span>
+</div>
+</div>
+</aside>
+</main>
+<footer class="h-12 border-t border-[#362348] bg-[#1a1122] flex items-center px-4">
+<div class="flex-1 flex items-center gap-4">
+<button class="flex items-center gap-2 pr-4 border-r border-[#362348] text-[#ad92c9] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">history</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Log</span>
+</button>
+</div>
+</footer>
+</div>
+
+</body></html>

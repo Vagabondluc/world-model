@@ -1,0 +1,1229 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChroniclerView Snapshots > should render empty state 1`] = `
+<div>
+  <div
+    class="css-11rk1pe"
+  >
+    <div
+      class="css-qvwxw2"
+    >
+      <div
+        class="css-gvl773"
+      >
+        <div
+          class="css-1yq8auq"
+        >
+          <div
+            class="css-1cf1q6e"
+          >
+            <div>
+              <span
+                class="css-1irxbmo"
+              >
+                Title:
+              </span>
+              <div
+                class="css-1hr4oxc"
+              >
+                <h2
+                  class="css-vrfw33"
+                >
+                  NPC Chronicler
+                </h2>
+                <div
+                  class="css-1gr93p8"
+                >
+                  Script V1 Implementation
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-8wf1s3"
+        >
+          <button
+            class="css-5ziine"
+            title="Auto-fill using AI"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-wand-sparkles"
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"
+              />
+              <path
+                d="m14 7 3 3"
+              />
+              <path
+                d="M5 6v4"
+              />
+              <path
+                d="M19 14v4"
+              />
+              <path
+                d="M10 2v2"
+              />
+              <path
+                d="M7 8H3"
+              />
+              <path
+                d="M21 16h-4"
+              />
+              <path
+                d="M11 3H9"
+              />
+            </svg>
+            AI Fast-Fill
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-9uuwpm"
+      >
+        <div
+          class="css-q8xxar"
+        >
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Identity
+            </h3>
+            <div
+              class="css-18t5njw"
+            >
+              <div
+                class="css-9fpsvb"
+              >
+                NPC Identity
+                <button
+                  class="secondary-button"
+                  style="padding: 2px 8px; font-size: 0.7rem;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-wand-sparkles"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="margin-right: 4px;"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"
+                    />
+                    <path
+                      d="m14 7 3 3"
+                    />
+                    <path
+                      d="M5 6v4"
+                    />
+                    <path
+                      d="M19 14v4"
+                    />
+                    <path
+                      d="M10 2v2"
+                    />
+                    <path
+                      d="M7 8H3"
+                    />
+                    <path
+                      d="M21 16h-4"
+                    />
+                    <path
+                      d="M11 3H9"
+                    />
+                  </svg>
+                  Quick Persona
+                </button>
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <label
+                  class="css-3b6b0o"
+                >
+                  Name
+                </label>
+                <input
+                  class="css-1imb0x6"
+                  value="New NPC"
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Race / Ancestry
+                  </label>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Elf, Dwarf, Human"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Role / Profession
+                  </label>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Blacksmith, Guard"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Alignment
+                  </label>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Chaotic Good"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Archetype
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Master Thief"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Motivation
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Seeking Revenge"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Defining Quirk
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Constant fidgeting"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Signature Flaw
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Gullible"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="css-4sow6c"
+            >
+              <div
+                class="css-17lus88"
+              >
+                <strong>
+                  Race
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+                <strong>
+                  Role
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+                <strong>
+                  Alignment
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+                <strong>
+                  Appearance
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Roleplay Cues
+            </h3>
+            <div
+              class="css-1e22mu1"
+            >
+              <p>
+                <strong>
+                  Speech:
+                </strong>
+                 
+                —
+              </p>
+              <p>
+                <strong>
+                  Mannerism:
+                </strong>
+                 
+                —
+              </p>
+              <p>
+                <strong>
+                  Catchphrase:
+                </strong>
+                 
+                <em>
+                  "
+                  —
+                  "
+                </em>
+              </p>
+              <ul
+                style="padding-left: 20px; margin-top: 8px;"
+              />
+            </div>
+          </div>
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Knowledge & Bonds
+            </h3>
+            <p>
+              <strong>
+                Open Knowledge:
+              </strong>
+               
+              —
+            </p>
+            <div
+              class="css-1c4tgic"
+            >
+              <p>
+                <strong>
+                  Secret Knowledge:
+                </strong>
+                 
+                —
+              </p>
+            </div>
+            <p>
+              <strong>
+                Bonds:
+              </strong>
+               
+              —
+            </p>
+          </div>
+        </div>
+        <div
+          class="css-q8xxar"
+        >
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              The Backstory
+            </h3>
+            <div
+              class="css-17bes76"
+            >
+              <em
+                style="color: var(--medium-brown);"
+              >
+                Generate an NPC to read their history...
+              </em>
+            </div>
+          </div>
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Psychological Profile
+            </h3>
+            <div
+              class="css-17lus88"
+              style="margin-bottom: 16px;"
+            >
+              <strong>
+                Motivation
+              </strong>
+               
+              <span>
+                —
+              </span>
+              <strong>
+                Traits
+              </strong>
+               
+              <span>
+                —
+              </span>
+              <strong>
+                Flaws
+              </strong>
+               
+              <span>
+                —
+              </span>
+            </div>
+            <div
+              class="css-17bes76"
+            >
+              <em
+                style="color: var(--medium-brown);"
+              >
+                Deep psychological analysis pending...
+              </em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ChroniclerView Snapshots > should render with onBack handler 1`] = `
+<div>
+  <div
+    class="css-11rk1pe"
+  >
+    <div
+      class="css-qvwxw2"
+    >
+      <div
+        class="css-gvl773"
+      >
+        <div
+          class="css-1yq8auq"
+        >
+          <button
+            class="css-1d30650"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-chevron-left"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 18-6-6 6-6"
+              />
+            </svg>
+            Back
+          </button>
+          <div
+            class="css-1cf1q6e"
+          >
+            <div>
+              <span
+                class="css-1irxbmo"
+              >
+                Title:
+              </span>
+              <div
+                class="css-1hr4oxc"
+              >
+                <h2
+                  class="css-vrfw33"
+                >
+                  NPC Chronicler
+                </h2>
+                <div
+                  class="css-1gr93p8"
+                >
+                  Script V1 Implementation
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-8wf1s3"
+        >
+          <button
+            class="css-5ziine"
+            title="Auto-fill using AI"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-wand-sparkles"
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"
+              />
+              <path
+                d="m14 7 3 3"
+              />
+              <path
+                d="M5 6v4"
+              />
+              <path
+                d="M19 14v4"
+              />
+              <path
+                d="M10 2v2"
+              />
+              <path
+                d="M7 8H3"
+              />
+              <path
+                d="M21 16h-4"
+              />
+              <path
+                d="M11 3H9"
+              />
+            </svg>
+            AI Fast-Fill
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-9uuwpm"
+      >
+        <div
+          class="css-q8xxar"
+        >
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Identity
+            </h3>
+            <div
+              class="css-18t5njw"
+            >
+              <div
+                class="css-9fpsvb"
+              >
+                NPC Identity
+                <button
+                  class="secondary-button"
+                  style="padding: 2px 8px; font-size: 0.7rem;"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-wand-sparkles"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    style="margin-right: 4px;"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"
+                    />
+                    <path
+                      d="m14 7 3 3"
+                    />
+                    <path
+                      d="M5 6v4"
+                    />
+                    <path
+                      d="M19 14v4"
+                    />
+                    <path
+                      d="M10 2v2"
+                    />
+                    <path
+                      d="M7 8H3"
+                    />
+                    <path
+                      d="M21 16h-4"
+                    />
+                    <path
+                      d="M11 3H9"
+                    />
+                  </svg>
+                  Quick Persona
+                </button>
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <label
+                  class="css-3b6b0o"
+                >
+                  Name
+                </label>
+                <input
+                  class="css-1imb0x6"
+                  value="New NPC"
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Race / Ancestry
+                  </label>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Elf, Dwarf, Human"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Role / Profession
+                  </label>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Blacksmith, Guard"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Alignment
+                  </label>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Chaotic Good"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Archetype
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Master Thief"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Motivation
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Seeking Revenge"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Defining Quirk
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Constant fidgeting"
+                  value=""
+                />
+              </div>
+              <div
+                class="css-1ic6cdh"
+              >
+                <div
+                  style="display: flex; justify-content: space-between;"
+                >
+                  <label
+                    class="css-3b6b0o"
+                  >
+                    Signature Flaw
+                  </label>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-refresh-ccw css-11w9jwo"
+                    fill="none"
+                    height="12"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    />
+                    <path
+                      d="M3 3v5h5"
+                    />
+                    <path
+                      d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"
+                    />
+                    <path
+                      d="M16 16h5v5"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="css-1imb0x6"
+                  placeholder="e.g. Gullible"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="css-4sow6c"
+            >
+              <div
+                class="css-17lus88"
+              >
+                <strong>
+                  Race
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+                <strong>
+                  Role
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+                <strong>
+                  Alignment
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+                <strong>
+                  Appearance
+                </strong>
+                 
+                <span>
+                  —
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Roleplay Cues
+            </h3>
+            <div
+              class="css-1e22mu1"
+            >
+              <p>
+                <strong>
+                  Speech:
+                </strong>
+                 
+                —
+              </p>
+              <p>
+                <strong>
+                  Mannerism:
+                </strong>
+                 
+                —
+              </p>
+              <p>
+                <strong>
+                  Catchphrase:
+                </strong>
+                 
+                <em>
+                  "
+                  —
+                  "
+                </em>
+              </p>
+              <ul
+                style="padding-left: 20px; margin-top: 8px;"
+              />
+            </div>
+          </div>
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Knowledge & Bonds
+            </h3>
+            <p>
+              <strong>
+                Open Knowledge:
+              </strong>
+               
+              —
+            </p>
+            <div
+              class="css-1c4tgic"
+            >
+              <p>
+                <strong>
+                  Secret Knowledge:
+                </strong>
+                 
+                —
+              </p>
+            </div>
+            <p>
+              <strong>
+                Bonds:
+              </strong>
+               
+              —
+            </p>
+          </div>
+        </div>
+        <div
+          class="css-q8xxar"
+        >
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              The Backstory
+            </h3>
+            <div
+              class="css-17bes76"
+            >
+              <em
+                style="color: var(--medium-brown);"
+              >
+                Generate an NPC to read their history...
+              </em>
+            </div>
+          </div>
+          <div
+            class="css-lej7by"
+          >
+            <h3
+              class="css-sqpwtl"
+            >
+              Psychological Profile
+            </h3>
+            <div
+              class="css-17lus88"
+              style="margin-bottom: 16px;"
+            >
+              <strong>
+                Motivation
+              </strong>
+               
+              <span>
+                —
+              </span>
+              <strong>
+                Traits
+              </strong>
+               
+              <span>
+                —
+              </span>
+              <strong>
+                Flaws
+              </strong>
+               
+              <span>
+                —
+              </span>
+            </div>
+            <div
+              class="css-17bes76"
+            >
+              <em
+                style="color: var(--medium-brown);"
+              >
+                Deep psychological analysis pending...
+              </em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NarrativeCard Snapshots > should render in compact state 1`] = `
+<div>
+  <div
+    class="css-rjkrpz"
+  >
+    <div>
+      Compact content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NarrativeCard Snapshots > should render with minimal props 1`] = `
+<div>
+  <div
+    class="css-qvwxw2"
+  >
+    <div>
+      Test content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NarrativeCard Snapshots > should render with variant props 1`] = `
+<div>
+  <div
+    class="test-card css-1t19aft"
+  >
+    <div>
+      Full card content
+    </div>
+  </div>
+</div>
+`;

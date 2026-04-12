@@ -1,0 +1,90 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Encounter Genric Beta".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Encounter_genric_beta
+
+```text
++--------------------------------------------------------------------------------+
+|  [Mystical Encounter Hub: Beta]                                       [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Realm: [ Feywild / Prism-Plains  ]   Focus: [ RP / Riddle Scenario ]          |
++--------------------------------------------------------------------------------+
+|  ENVIRONMENTAL TWIST                                                           |
+|  [ Mirror-Rain: All visual perception is reflected. Disadv. on Sight checks. ] |
++--------------------------------------------------------------------------------+
+|  NARRATIVE BUILDER (Target: 500 Words)               [ Current: 342 Words ]    |
+|  [ "The Dryad giggles, her form shimmering like oil on water. 'Answer me       |
+|  this,' she chirps. A combat ensues only if the truth is spoken twice..." ]    |
++--------------------------------------------------------------------------------+
+|  NPC INSIGHTS                          |  XP DYNAMICS                          |
+|  Name: [ Elara the Shimmer ]           |  Result: [ Success ] -> [ 800 XP ]    |
+|  Motive: [ Protect the Glass-Flower ]  |  Result: [ Failure ] -> [ 200 XP ]    |
+|  Tactics: [ Use Mirror Images ]        |                                       |
++--------------------------------------------------------------------------------+
+|  [Share to Discord] [Export Narrative] [Randomize Realm]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Encounter_genric_beta
+
+## Component Architecture
+- **Realm Themed Interface:** A visual selector for "Mystical Realms" that changes the overall UI aesthetic (e.g., starry astral background vs shadow-wrapped border).
+- **Narrative Word-Count Console:** A central text area with a prominent word counter that changes color (Yellow -> Green -> Red) as the user approaches the "500-word" sweet spot.
+- **Twin outcome Panels:** Dedicated fields for "Success Consequences" and "Failure Consequences", presented side-by-side to ensure balance.
+- **NPC Profile Card:** A small, detailed block covering "Motive", "Goal", and "Cunning Tactics".
+
+## Interaction Logic
+- **Success-Based XP Calculations:** The XP fields are mathematically linked. If "Success [800]" is entered, "Failure" can be set as a percentage (e.g., 25%) or a manual value.
+- **Sectioned Formatting:** The UI automatically injects section headers (e.g., "The Environment", "The Challenge") into the final export to ensure the "Methodical Arrangement" required by the script.
+- **AI Inspiration Chips:** Suggests "Mystical Realms" or "Environmental Twists" based on a single seed word.
+
+## Visual Design
+- **High-Phantasy Aesthetic:** Uses glowing borders, serif typography, and translucent panels to evoke a "captivating story" feel.
+- **Status Indicators:** Clear badges for "Environmental Mechanics" and "Combat Stats Reference" ensure the DM doesn't miss key rules during play.
+- **Export Preview:** A stylized view showing how the content will look in a digital adventure log.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Encounter_genric_beta
+
+# Scene: The Prism-Plains (Feywild)
+
+### The Environment: Mirror-Rain
+A light, crystalline drizzle falls from a purple sky. Every drop acts as a tiny prism, reflecting and distorting the landscape.
+- **Effect:** All visual perception is reflected. Creatures have disadvantage on Wisdom (Perception) checks relying on sight. 
+- **Twist:** Any creature that takes a Long Rest in the rain must succeed on a DC 13 Charisma save or their reflection becomes their "dominant" self (purely roleplay change).
+
+### The Narrative Focus: Elara the Shimmer
+The party encounters Elara, a Dryad with bark like polished chrome. She is weaving a crown from "Glass-Flowers" that grow in the Mirror-Rain.
+- **Goal:** Parley with Elara to gain passage through the Prism-Gate.
+- **Challenge:** She asks three "Reflected Riddles" (riddles where the answer is the mirror-opposite of what it seems).
+- **Skill Check:** DC 14 Charisma (Persuasion) or Intelligence (Investigation) to decipher her logic.
+
+### Opponents: Guardian reflections
+If the parley fails or Elara is threatened:
+- **Statblock:** 2x "Mirror Images" (Use *Shadow* statblock but Change damage type to Psychic).
+- **Tactics:** They mirror the players' movements, focusing on the PC with the highest AC first.
+- **Motive:** Elara only wants to protect her Glass-Flowers; the reflections are purely defensive.
+
+### XP Rewards
+- **Total Success (Gate Opened):** 800 XP
+- **Partial Success (Fled, but found path):** 400 XP
+- **Failure (Captured/Forced retreat):** 200 XP
+
+### Outcomes
+- **Success:** Elara gives a Glass-Flower crown. **Consequence:** PCs ignore Mirror-Rain penalties for 24 hours.
+- **Failure:** The Mirror-Rain intensifies. **Consequence:** The party wakes up 1 mile back, missing one non-magical item stolen by reflections.
+

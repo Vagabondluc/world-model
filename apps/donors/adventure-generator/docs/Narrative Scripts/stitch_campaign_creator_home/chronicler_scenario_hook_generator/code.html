@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler - Scenario Hook Generator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1313",
+                        "parchment": "#f4ead5",
+                        "parchment-dark": "#e8dbbc",
+                        "deep-brown": "#3a2d1d",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "gothic": ["MedievalSharp", "cursive"],
+                        "handwritten": ["Lora", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.parchment-texture {
+    background-color: #f4ead5;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAUZLh2uTJV3XUa47RdCkXIjKm3wU_s48HZqVjvoJGIz5Lyz1Xz7625taomxgm4-Q7VxSB_oVZhdVpwrfGi8Xcu2wkGI8Jpv6XeNbK9GbROYPiaxzleAJ3SnYTQrHOXyY5frF_eC6dfbc_XI6JNLp4PTF4I8vGgcoWPIeAURuE-3ZShHBVahF_uMurxQM5y7nSz59V-KjmTodw6ndt9G-Uz46kpLg-waVKMzH3jz9rC2RnqEH9SYjwf79ecSvU-8g7CNRORih8k)
+    }
+.drafting-pad {
+    background-image: linear-gradient(#e5e5e5 1px, transparent 1px);
+    background-size: 100% 2rem
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 transition-colors duration-200">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-deep-brown text-white flex flex-col justify-between shrink-0 border-r border-black/20">
+<div class="p-6">
+<!-- Branding -->
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-2xl">menu_book</span>
+</div>
+<div>
+<h1 class="font-gothic text-xl tracking-wider text-white">CHRONICLER</h1>
+<p class="text-[10px] uppercase tracking-widest text-primary font-bold">Scenario Hook Generator</p>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">home</span>
+<span class="text-sm font-medium">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-primary/10 text-white border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">swords</span>
+<span class="text-sm font-medium">Adventures</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">skull</span>
+<span class="text-sm font-medium">Bestiary</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">map</span>
+<span class="text-sm font-medium">World Map</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+</div>
+<div class="p-6">
+<button class="w-full bg-primary hover:bg-red-700 text-white font-gothic py-3 rounded-lg shadow-xl shadow-black/40 flex items-center justify-center gap-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined">auto_fix_high</span>
+                    Forge Adventure
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto parchment-texture flex flex-col">
+<!-- Page Header -->
+<header class="p-8 border-b border-black/10">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-gothic text-4xl text-deep-brown mb-2 tracking-tight">Scenario Hook Generator</h2>
+<p class="text-gray-700 italic">Craft compelling narrative arcs with the Digital Parchment engine.</p>
+</div>
+<div class="flex items-center gap-2 text-sm font-bold text-primary px-3 py-1 bg-white/50 rounded-full border border-primary/20">
+<span class="material-symbols-outlined text-xs">workspace_premium</span>
+                        PREMIUM ENGINE
+                    </div>
+</div>
+</header>
+<div class="p-8 space-y-8 max-w-7xl mx-auto w-full">
+<!-- Dual Pane Interface -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Left Pane: Foundation -->
+<section class="space-y-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">foundation</span>
+<h3 class="font-gothic text-2xl text-deep-brown">Foundation</h3>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Location Card -->
+<div class="bg-white/60 p-4 rounded-lg border border-black/5 flex gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-20 h-20 bg-center bg-cover rounded border border-black/10 shrink-0" data-alt="Illustration of a cozy medieval tavern interior" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDB7ZTx3Vo6xtUP_SaDd0CpWFrTK2JBJu1HUWSKy1oBlgQQSMk-81QACyLCSfX4hUtLPxpJRFmNQUzg3kS5nJ7JWabUfuulC3_qTHQ92wEgiXV4Lb_3LS9JiQ933T4nz8V-crtQrazZgN-GeC1wwyxwpkfbQQ-q4rugfzGKZLISnoFoez8xHWUZBC14poalWXPuTB8x2wf-vnlUYUN_TDzoGHY8BeCpIKQxbaw_baYZ1xNcSMfTmNa3lgaLQ0Igx5d6sbL7BLb-')"></div>
+<div class="flex-1">
+<h4 class="font-gothic text-primary text-lg">Location</h4>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-sm placeholder:text-gray-400 font-medium" placeholder="e.g. The Whispering Woods" type="text" value="The Whispering Woods"/>
+<p class="text-xs text-gray-500 mt-1">Environment and atmosphere</p>
+</div>
+</div>
+<!-- NPCs Card -->
+<div class="bg-white/60 p-4 rounded-lg border border-black/5 flex gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-20 h-20 bg-center bg-cover rounded border border-black/10 shrink-0" data-alt="Portrait of a hooded mysterious fantasy character" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSmBtJwpYsq8seqmiF8Gpv3ZLO4cRSHQWnz1mHPJvhJPWq8JESNXt3xBl_VTDX1PlrcYlc1kndRvW6BXou2dr5RnUI3IfOf4opaQYWaTJ2RW1GCceW4wJJdjkat8d3CK0VqFo8YcHi5CPYdrwNKP8qT9KQwuB9qqtq_yH4Gs61Vop7B4l1CYfCSDrhc2FN4jsOhK3eBgFneiZSsywspmuppOx5842qy4AL4XB1vukXki3jXN_x8JZbU-3qI15_zUXXas5e0LRa')"></div>
+<div class="flex-1">
+<h4 class="font-gothic text-primary text-lg">NPCs</h4>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-sm placeholder:text-gray-400 font-medium" placeholder="Key figures and motivations" type="text" value="Elara the Blind Seer"/>
+<p class="text-xs text-gray-500 mt-1">Key figures and motivations</p>
+</div>
+</div>
+<!-- Conflict Card -->
+<div class="bg-white/60 p-4 rounded-lg border border-black/5 flex gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="w-20 h-20 bg-center bg-cover rounded border border-black/10 shrink-0" data-alt="Remains of a fantasy battlefield at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_sertp87zSGc0jXxmYlX5kZncbkjwHb_dTz3NDg-kBUpWuDmtWLp22AM7V6FCHv9Y3OPMMOzCxsfAAi8TfMmRHDdUj3QMgvRKHJ6J0yJToKsrcA6r67kmzsfddiV4gcMPhsrGbElX-pmteUfV54U9hvRNOf2WRxr34vitd29MeW1x3Xunt1UUe4gQZvcCZ6qoT9bRUX9BpjIOzRq244aozYepiOWKC_rKXiSFIa_QAervTLnn_7e6jJwmEdZzDjEt0nz8LDrn')"></div>
+<div class="flex-1">
+<h4 class="font-gothic text-primary text-lg">Conflict</h4>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-sm placeholder:text-gray-400 font-medium" placeholder="The immediate threat" type="text" value="A spreading corruption of shadow"/>
+<p class="text-xs text-gray-500 mt-1">The immediate threat</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Pane: Hook Specifics -->
+<section class="space-y-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">psychology_alt</span>
+<h3 class="font-gothic text-2xl text-deep-brown">Twisted Hook Archetype</h3>
+</div>
+<div class="bg-parchment-dark/40 p-6 rounded-xl border border-black/10 space-y-4">
+<div>
+<label class="font-gothic text-primary text-lg block mb-2">The Truth</label>
+<textarea class="w-full bg-white/40 border-black/10 rounded-lg text-sm focus:border-primary focus:ring-primary/20 placeholder:text-gray-400" placeholder="The underlying reality behind the mystery..." rows="3"></textarea>
+</div>
+<div>
+<label class="font-gothic text-primary text-lg block mb-2">The Lie</label>
+<textarea class="w-full bg-white/40 border-black/10 rounded-lg text-sm focus:border-primary focus:ring-primary/20 placeholder:text-gray-400" placeholder="What the players are led to believe..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-4 text-xs font-bold uppercase text-deep-brown/60 pt-2 border-t border-black/5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">balance</span>
+                                    Narrative Balance: Stable
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                                    Complexity: High
+                                </div>
+</div>
+</div>
+</section>
+</div>
+<!-- Central Drafting Pad (Generated Hook) -->
+<section class="mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-gothic text-2xl text-deep-brown px-4">Drafting Pad</h3>
+<div class="flex gap-2">
+<button class="p-2 bg-white/50 rounded hover:bg-white text-gray-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-xl">content_copy</span>
+</button>
+<button class="p-2 bg-white/50 rounded hover:bg-white text-gray-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-xl">print</span>
+</button>
+</div>
+</div>
+<div class="bg-[#fefaf0] drafting-pad min-h-[400px] rounded-xl shadow-2xl p-12 border border-black/5 relative overflow-hidden">
+<!-- Fiber decoration -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcoQGLaxi-JsQSyTpUjoN_CjdzpHxdHBzJF1V3t9EFH5M8IsuN1-klONO7PTe1mL0Ua5zNLqABpOwuXEl5sl9i10Z6OOt-svblm7AlfRNa3PnUYqkoACvc6eguF3LyhUilasvrvGX_sxC0KcEu2vom0wzlXvsvcbap6v0eTRZZYv3q0DYRo0Zrxd5f2Or1Y2lqFAG0UEwkZmxzkcfR-2Evbkwwvp8a4dqpxxfo82Q6ERgPwq3_xw6Yo0yWK-bx4BMUcpeGSZG6');"></div>
+<div class="relative max-w-2xl mx-auto space-y-8 font-handwritten text-xl leading-relaxed text-gray-800">
+<p class="text-2xl font-bold border-b-2 border-primary/20 pb-2 inline-block">The Weaver of Shadows</p>
+<p>
+                                Travelers speak of a blind seer named <span class="text-primary font-bold">Elara</span> who dwells within the depths of the <span class="italic">Whispering Woods</span>. They say her eyes were stolen by a corruption that is now devouring the forest, and only she knows the ritual to stop it.
+                            </p>
+<p class="italic">
+                                But beware, for what is seen is not always what is true. While the wood rots, Elara is not the victim she portrays. She is the anchor, the very vessel through which the shadow feeds, and her 'sight' is clearer now than it ever was in the light.
+                            </p>
+<div class="pt-8 flex justify-center">
+<span class="material-symbols-outlined text-primary/30 text-5xl">auto_stories</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Checklist Area -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-black/10">
+<div>
+<h3 class="font-gothic text-2xl text-deep-brown mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">mystery</span>
+                            Depth &amp; Intrigue
+                        </h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-gray-700">
+<span class="material-symbols-outlined text-primary mt-0.5">double_arrow</span>
+<span class="text-sm">Local wildlife has grown unnaturally aggressive and silent.</span>
+</li>
+<li class="flex items-start gap-3 text-gray-700">
+<span class="material-symbols-outlined text-primary mt-0.5">double_arrow</span>
+<span class="text-sm">The players find a locket belonging to Elara with a strange seal.</span>
+</li>
+<li class="flex items-start gap-3 text-gray-700">
+<span class="material-symbols-outlined text-primary mt-0.5">double_arrow</span>
+<span class="text-sm">Nightmares plague anyone who sleeps within a mile of the grove.</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-gothic text-2xl text-deep-brown mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">assignment_turned_in</span>
+                            Actionable Steps
+                        </h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-white/30 border border-black/5 cursor-pointer hover:bg-white/50 transition-colors">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Establish the rumors at the 'Broken Tankard' Inn.</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-white/30 border border-black/5 cursor-pointer hover:bg-white/50 transition-colors">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Prepare the 'Grasping Shadows' combat encounter map.</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-white/30 border border-black/5 cursor-pointer hover:bg-white/50 transition-colors">
+<input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Create a handout for the Blind Seer's riddles.</span>
+</label>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Spacing -->
+<footer class="p-12"></footer>
+</main>
+</div>
+</body></html>

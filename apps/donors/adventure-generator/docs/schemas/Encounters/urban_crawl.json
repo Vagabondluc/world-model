@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "name": "urban_crawl",
+    "category": "Encounters",
+    "description": "Generates a structured, exploratory campaign plan for a city, organizing content by district and thematic layer.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "city_gazetteer",
+      "type": "string",
+      "label": "City Gazetteer",
+      "description": "The source text containing detailed information about the city, its districts, key locations, factions, and points of interest.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "urban_crawl_plan",
+      "type": "object",
+      "label": "Urban Crawl Plan",
+      "description": "A comprehensive plan for the urban crawl, with detailed content organized for each city district.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "districts",
+          "type": "object",
+          "label": "Districts",
+          "description": "A map of district names to their specific urban crawl content.",
+          "default": null,
+          "item_schema": {
+            "name": "district_plan",
+            "type": "object",
+            "label": "District Plan",
+            "description": "The generated content for a single district.",
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "layers",
+                "type": "list",
+                "label": "Content Layers",
+                "description": "A list of thematic layers of content within the district.",
+                "default": null,
+                "item_schema": {
+                  "name": "layer",
+                  "type": "object",
+                  "label": "Layer",
+                  "description": "A single thematic layer with keyed content.",
+                  "default": null,
+                  "item_schema": null,
+                  "fields": [
+                    {
+                      "name": "name",
+                      "type": "string",
+                      "label": "Layer Name",
+                      "description": "The name of the thematic layer (e.g., 'Vampire Blood Den Activities').",
+                      "default": null,
+                      "item_schema": null,
+                      "fields": null,
+                      "options": null
+                    },
+                    {
+                      "name": "keyed_content",
+                      "type": "string",
+                      "label": "Keyed Content Description",
+                      "description": "A description of the scenes, scenarios, or activities tied to this layer.",
+                      "default": null,
+                      "item_schema": null,
+                      "fields": null,
+                      "options": null
+                    }
+                  ],
+                  "options": null
+                },
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "triggered_content",
+                "type": "string",
+                "label": "Triggered Content",
+                "description": "Description of an event or scene that automatically triggers when players enter the district.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "investigation_procedure",
+                "type": "object",
+                "label": "Investigation Procedure",
+                "description": "Specific rules for resolving investigation actions in this district.",
+                "default": null,
+                "item_schema": null,
+                "fields": [
+                  {
+                    "name": "general_investigation",
+                    "type": "string",
+                    "label": "General Investigation",
+                    "description": "Procedure for randomly determining which layer's content is encountered on a general investigation.",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  },
+                  {
+                    "name": "specific_layer_investigation",
+                    "type": "string",
+                    "label": "Specific Layer Investigation",
+                    "description": "Procedure for resolving content when a targeted layer is investigated.",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  }
+                ],
+                "options": null
+              },
+              {
+                "name": "faction_impact",
+                "type": "string",
+                "label": "Faction Impact",
+                "description": "Description of how the content in this district may affect the agendas and activities of various factions.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

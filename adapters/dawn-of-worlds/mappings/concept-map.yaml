@@ -1,0 +1,18 @@
+entries:
+  - donor_concept: World Object Taxonomy
+    source_family: domain-schema
+    canonical_key: entity
+    canonical_target: EntityRecord
+    status: mapped
+    winner: dawn-of-worlds
+    rationale: WorldObject taxonomy projects to canonical entity records.
+    provenance: docs/donors/DAWN_OF_WORLDS.md
+
+  - donor_concept: Age Turn Workflow
+    source_family: workflow-schema
+    canonical_key: workflow
+    canonical_target: WorkflowAttachment
+    status: mapped
+    winner: dawn-of-worlds
+    rationale: Age-turn and multiplayer progression project to canonical workflow state.
+    provenance: docs/donors/DAWN_OF_WORLDS.md

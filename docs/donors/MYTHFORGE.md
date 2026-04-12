@@ -1,4 +1,4 @@
-# Mythforge — Donor Specification
+# Mythforge — Donor Specification (Schema Layer; Full WIP Surface Pending)
 
 ## Identity
 
@@ -19,6 +19,13 @@
 Mythforge is the primary donor application. It is a worldbuilding authoring tool with schema-aware entities, world ownership, append-only history, and spatial/relational attachments. It is the only donor that defines the core canonical identity of a World and Entity.
 
 All other donors attach to records that Mythforge defines. This means Mythforge's shape is the constraint all other adapters must conform to — it is called the **trunk** donor.
+
+**Donors that attach to Mythforge:**
+- Orbis → `SimulationAttachment`
+- Adventure Generator → `WorkflowAttachment` + `LocationAttachment` extensions
+- Mappa Imperium → `EraAttachment`, `CollaborativeSessionAttachment`
+- Dawn of Worlds → `WorldTurnAttachment`
+- Sacred Sigil Generator → `SigilAttachment`
 
 The adapter copies schema templates only (not application code or UI). The application code lives elsew here in the workspace and is reserved for Phase 7 behavioral capture.
 
@@ -97,3 +104,32 @@ Mythforge explicitly defines these spatial types, all of which fold into `Locati
 - Does Mythforge have a multi-world workspace concept (multiple WorldRecords active at once), or one world at a time?
 - Is the EventEnvelope schema intended for full replay, or is it a partial audit log?
 - Does Mythforge have an entity ownership model (user ↔ entity) that needs a canonical record?
+
+---
+
+## WIP Surface — Gaps Not Yet Documented
+
+> **Note**: The deep source read for this session covered Mappa Imperium, Adventure Generator, and Orbis. The Mythforge **application source** (not schema templates) was not read. This section documents what is known to be absent from this spec.
+
+### `methods/` Folder — Not Read
+The adapter manifest explicitly excludes `methods/` from extraction. This folder likely contains:
+- AI prompt workflow definitions (per-entity-type generation flows)
+- Multi-step authoring flows (wizard-style creation)
+- Session behavior patterns
+
+These are the primary inputs for Phase 7 behavioral capture. Until `methods/` is read, this spec documents only the **schema layer** — the schema templates tell us what data shapes Mythforge owns but not how the user interacts with them.
+
+### Application Source — Not Read
+The full Mythforge application (components, stores, services, routes) lives elsewhere in the workspace. This doc does not currently cover:
+- Which entity types are creatable from the UI vs. only editable
+- What fields are editable vs. computed
+- Whether WorldRecord has a creation wizard or is assumed to exist
+- How `EventEnvelope` is surfaced to the user (timeline, feed, hidden)
+- What `ProjectionRecord` and `RelationRecord` look like from the user's perspective
+- Whether there are any typed-but-unimplemented features (WIP stubs) in the Mythforge app
+
+### Recommended Next Action
+Read `adapters/mythforge/source-snapshot/methods/` (if present) and the full Mythforge app source before Phase 7. Then update this doc with:
+- Per-feature implementation status (confirmed working vs. stub vs. unimplemented)
+- Full entity creation / editing flow per entity type
+- Confirmation or correction of the `LocationAttachment` spatial type list

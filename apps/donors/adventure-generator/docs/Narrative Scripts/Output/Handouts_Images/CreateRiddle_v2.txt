@@ -1,0 +1,30 @@
+### Script: Generating a Riddle for an LLM
+
+#### Objective:
+To generate a riddle without introducing ambiguity or relying on arbitrary answers, ensuring that the riddle’s solution is logically derived and clear, while still maintaining a level of challenge for the solver.
+
+---
+
+### Step-by-Step Breakdown:
+
+1. **Create two distinct words**  
+   - Select two words that are meaningful on their own. Ensure that the words are unrelated in a direct sense but can be combined to form a final answer.
+   
+2. **Define cryptic descriptions for each word**  
+   - Create a distinct, non-ambiguous description for each word, phrased cryptically. These descriptions must still logically lead to the words they represent when considered carefully.
+   
+3. **Set up the structure**  
+   - Use the following line to introduce the riddle and the mechanism for solving it:  
+   **"The two secret words in these lines won't easily yield.  
+   Find them, combine them, and the answer will be unsealed."**
+   
+4. **Present the cryptic descriptions**  
+   - After the introduction, provide the cryptic descriptions for the two words, keeping the tone consistent and the clues specific enough to avoid multiple correct answers.
+
+---
+
+### Guidelines for Cryptic Descriptions:
+
+- **Avoid vagueness**: Ensure each description points directly to the intended word without room for multiple interpretations.
+- **Use wordplay carefully**: Cryptic language should challenge the solver but not obscure the answer with excessive ambiguity.
+- **Keep the solution logical**: When the two words are combined, they must form a single concept, object, or phrase that the players can clearly identify.

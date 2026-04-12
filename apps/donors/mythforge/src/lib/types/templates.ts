@@ -1,0 +1,122 @@
+// =============================================================================
+// MythosForge - Template Constants & Category Definitions
+// =============================================================================
+
+// Category groupings for the explorer tree
+export const CATEGORY_GROUPS: Record<string, string[]> = {
+  'Macro & Cosmos': ['Cosmos', 'Plane', 'Deity', 'Myth'],
+  'Geography': ['Region', 'Biome', 'Settlement', 'City', 'Landmark', 'Dungeon', 'Structure'],
+  'Society & History': ['Faction', 'Guild', 'Religion', 'Noble House', 'Historical Event', 'Era', 'Culture'],
+  'Biology & Entities': ['Species', 'Race', 'Creature', 'Fauna', 'NPC', 'Character', 'Historical Figure'],
+  'Items & Mechanics': ['Artifact', 'Item', 'Resource', 'Material', 'Technology', 'Magic System', 'Spell', 'Rule', 'Calendar'],
+  'Narrative': ['Campaign', 'Adventure', 'Quest', 'Encounter', 'Scene', 'Session Note', 'Lore Note'],
+};
+
+// Category icon mapping
+export const CATEGORY_ICONS: Record<string, string> = {
+  'Cosmos': 'Globe', 'Plane': 'Layers', 'Deity': 'Crown', 'Myth': 'BookOpen',
+  'Region': 'Map', 'Biome': 'TreePine', 'Settlement': 'Home', 'City': 'Building2',
+  'Landmark': 'Mountain', 'Dungeon': 'Dungeon', 'Structure': 'Castle',
+  'Faction': 'Shield', 'Guild': 'Users', 'Religion': 'Church', 'Noble House': 'Landmark',
+  'Historical Event': 'Scroll', 'Era': 'Clock', 'Culture': 'Palette',
+  'Species': 'Bug', 'Race': 'User', 'Creature': 'Skull', 'Fauna': 'Rabbit',
+  'NPC': 'UserCircle', 'Character': 'Sword', 'Historical Figure': 'Feather',
+  'Artifact': 'Gem', 'Item': 'Box', 'Resource': 'Diamond', 'Material': 'Pickaxe',
+  'Technology': 'Cog', 'Magic System': 'Sparkles', 'Spell': 'Wand2', 'Rule': 'Scale',
+  'Campaign': 'BookOpenCheck', 'Adventure': 'Compass', 'Quest': 'Target',
+  'Encounter': 'Swords', 'Scene': 'Clapperboard', 'Session Note': 'ScrollText', 'Calendar': 'CalendarDays', 'Lore Note': 'FileText',
+};
+
+// JSON attribute templates per category
+// CATEGORY_TEMPLATES is extended at runtime with custom categories via the store.
+// Built-in templates are defined below.
+export const CATEGORY_TEMPLATES: Record<string, Record<string, unknown>> = {
+  'Campaign': { current_date: 'Day 1', session_number: 1, player_count: 4, completion_percentage: 0 },
+  'Adventure': { level_range: [1, 5], estimated_duration_hours: 4, difficulty_rating: 5 },
+  'Lore Note': { era_index: 0, secrecy_level: 1, reliability_score: 80 },
+  'Biome': { temp_avg_celsius: 20, precipitation_annual_mm: 800, danger_rating: 3, resource_abundance: 0.5 },
+  'Region': { area_sq_km: 0, population_density: 0, primary_biome: '', political_control: '' },
+  'Settlement': { population: 500, wealth_tier: 2, guard_count: 10, crime_rate: 5 },
+  'City': { population: 10000, wealth_tier: 3, guard_count: 200, crime_rate: 15 },
+  'Dungeon': { total_rooms: 12, average_cr: 3, exploration_time_minutes: 240 },
+  'Landmark': { elevation_meters: 0, visibility_range_km: 5, is_hidden: false },
+  'Structure': { floors: 1, condition: 'Good', owner: '', purpose: '' },
+  'Cosmos': { age_in_years: 0, known_planes: 0, magic_density: 'Medium' },
+  'Plane': { alignment: 'Neutral', element: '', accessibility: 'Difficult' },
+  'Deity': { divine_rank: 1, domains: [], worshippers: 0, alignment: 'True Neutral' },
+  'Myth': { era_origin: '', truthfulness: 'Unknown', spread: 'Local' },
+  'Faction': { member_count: 50, influence: 'Regional', resources: 'Moderate', secrecy: 3 },
+  'Guild': { member_count: 100, headquarters: '', specialty: '', wealth_rating: 3 },
+  'Religion': { follower_count: 0, holy_symbol: '', sacred_sites: 0, orthodoxy: 5 },
+  'Noble House': { current_head: '', territory: '', military_strength: 5, wealth: 'Affluent' },
+  'Historical Event': { year_occurred: 0, significance: 'Major', casualties: 0, lasting_impact: '' },
+  'Era': { start_year: 0, end_year: 0, defining_event: '', technological_level: 'Medieval' },
+  'Culture': { traditionalism_score: 5, belligerence_index: 3, tech_level: 2, trade_openness: 5 },
+  'Species': { avg_lifespan_years: 80, avg_height_cm: 175, population_percentage: 10, base_speed_ft: 30 },
+  'Race': { avg_lifespan_years: 80, avg_height_cm: 175, population_percentage: 10, base_speed_ft: 30 },
+  'Creature': { challenge_rating: 1, xp_value: 200, intelligence_score: 3 },
+  'Fauna': { tameability_pct: 50, reproduction_rate: 'Medium', dietary_needs_kcal: 2000 },
+  'NPC': {
+    name: '',
+    npcName: '',
+    role: '',
+    archetype: '',
+    race: '',
+    class: '',
+    occupation: '',
+    tone: '',
+    mbti: '',
+    enneagram: '',
+    hp: 10,
+    ac: 10,
+    level: 1,
+    age: 25,
+    wealth_gold: 0,
+    disposition: 'Neutral',
+    personalityTraits: '',
+    ideals: '',
+    bonds: '',
+    flaws: '',
+    goals: '',
+    backstory: '',
+    physicalDescription: '',
+    distinguishingMarks: '',
+    clothing: '',
+    mannerisms: '',
+    portraitPrompt: '',
+    voice: '',
+    tags: [],
+    categories: [],
+    seed: '',
+    useTablePicker: false,
+    aiContext: '',
+    arcStage: '',
+    arcBeats: [],
+    happiness: '',
+    fear: '',
+    love: ''
+  },
+  'Character': { hp: 20, ac: 15, level: 3, age: 30, wealth_gold: 150 },
+  'Historical Figure': { birth_year: 0, death_year: 0, legacy: '', significance: 'Notable' },
+  'Artifact': { power_level: 'Legendary', attunement_required: false, curse: '', origin: '' },
+  'Item': { weight_lbs: 1, cost_gold: 10, durability_max: 100, magic_level: 0 },
+  'Resource': { market_value_gold: 5, weight_per_unit_kg: 0.5, rarity_index: 50 },
+  'Material': { hardness: 5, rarity: 'Common', crafting_uses: [], weight_per_unit_kg: 1 },
+  'Technology': { era_level: 3, complexity: 'Moderate', rarity: 'Common', prerequisites: [] },
+  'Magic System': { source: 'Arcane', accessibility: 'Rare', risk_level: 3, max_power_level: 9 },
+  'Spell': { level: 1, school: 'Evocation', casting_time: '1 action', range: '60 ft', components: 'V, S' },
+  'Rule': { category: 'Combat', priority: 'Core', exceptions: [], related_rules: [] },
+  'Quest': { difficulty: 'Medium', rewards_gold: 100, rewards_xp: 300, prerequisites: [] },
+  'Encounter': { difficulty: 'Medium', enemy_count: 3, average_cr: 2, environment: '' },
+  'Scene': { location_id: '', participants: [], mood: 'Tense', duration_minutes: 10 },
+  'Calendar': { current_year: 1, months: [], weekdays: [], design_notes: {} },
+  'Session Note': { session_number: 1, date_played: '', participants: [], gm_notes: '', xp_awarded: 0 },
+};
+
+// Relationship types
+export const RELATIONSHIP_TYPES = [
+  'contains', 'located_in', 'allied_with', 'enemy_of', 'ruler_of',
+  'member_of', 'created_by', 'owns', 'knows_about', 'part_of',
+  'parent_of', 'student_of', 'guardian_of', 'derived_from', 'related_to',
+  'mentioned_in',
+] as const;

@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mappa Imperium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        'fade-in': { from: { opacity: '0' }, to: { opacity: '1' } },
+                        'fade-in-down': { from: { opacity: '0', transform: 'translateY(-10px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                         'fade-in-slide-up': { from: { opacity: '0', transform: 'translateY(10px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                         'indeterminate-progress': { '0%': { transform: 'translateX(-100%)' }, '100%': { transform: 'translateX(100%)' } }
+                    },
+                    animation: {
+                        'fade-in': 'fade-in 0.3s ease-out',
+                        'fade-in-down': 'fade-in-down 0.2s ease-out',
+                        'fade-in-slide-up': 'fade-in-slide-up 0.3s ease-out',
+                        'indeterminate-progress': 'indeterminate-progress 1.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "zustand": "https://aistudiocdn.com/zustand@^5.0.8",
+        "zustand/": "https://aistudiocdn.com/zustand@^5.0.8/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+        "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+        "vite": "https://aistudiocdn.com/vite@^7.2.4",
+        "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+        "path": "https://aistudiocdn.com/path@^0.12.7",
+        "url": "https://aistudiocdn.com/url@^0.11.4",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        window.addEventListener("error", e => {
+            console.log("[GLOBAL ERROR]", e.error?.message, e.error);
+        });
+        window.addEventListener("unhandledrejection", e => {
+            console.log("[PROMISE REJECTION]", e.reason);
+        });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

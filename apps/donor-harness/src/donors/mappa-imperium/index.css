@@ -1,0 +1,8 @@
+/* 
+ * Styles are now handled via the Tailwind CDN script in index.html 
+ * to ensure compatibility with the browser-only environment.
+ * This file is kept for local development tool compatibility.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

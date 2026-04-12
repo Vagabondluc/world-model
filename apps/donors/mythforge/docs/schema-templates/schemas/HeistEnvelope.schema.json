@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Heist Envelope",
+  "description": "Container vocabulary: the Heist Plan payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope retained for compatibility.",
+  "type": "object",
+  "properties": {
+    "heist": {
+      "type": "object",
+      "required": [
+        "id",
+        "objective",
+        "steps"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "objective": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "workflow bundle",
+  "x-mythforge-entity-companion": "HeistPlan.schema.json"
+}

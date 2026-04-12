@@ -1,0 +1,197 @@
+# Golden Compass Adventure Template
+
+## 1. Episode Foundations
+
+**Episode Title:** [Your Title]
+**Subtitle:** [Your Subtitle]
+
+### Core Elements
+- **Setting/Era:** [When and where the story happens]
+- **Main Location:** [Primary setting - train, building, wilderness, etc.]
+- **Objective:** [What players need to accomplish - retrieve item, defeat enemy, rescue someone, etc.]
+- **Key Characters:**
+  - **Rival:** [Main antagonist - motivations and capabilities]
+  - **Crony:** [Rival's lieutenant - personality and combat style]
+  - **Supporting NPCs:** [Other important characters - allies, informants, etc.]
+- **MacGuffin:** [The treasure, artifact, or important object driving the plot]
+- **Transportation:** [Vehicle, animal, or method of travel relevant to the episode]
+- **Wild Place:** [Dangerous or remote location where action takes place]
+
+### Doomsday Clock
+*[Explain time pressure elements and consequences]*
+- Hour penalties for specific actions
+- Clock trigger events (e.g., "If the clock strikes 10, the train leaves")
+- Alternative routes if time runs out
+
+## 2. Character Creation
+
+### Major NPC: [Name]
+*[Brief character description - appearance, age, personality]*
+
+**Background:** [Character history relevant to the adventure]
+**Motivations:** [What drives this character]
+**Special Abilities:** [Unique skills or powers]
+**Knowledge:** [Information they possess about the objective/plot]
+
+**Stats:**
+- Action: [Rating]
+- Guts: [Rating]
+- Knowledge: [Rating]
+- Society: [Rating]
+- Wild: [Rating]
+- Crime: [Rating]
+
+### Special Combat Abilities
+*[For key antagonists]*
+- **Special Attack:** [Description and mechanics]
+- **Special Defense:** [Description and mechanics]
+- **Status Effects:** [What feelings they can inflict and how]
+
+## 3. Episode Structure & Adaptability
+
+### Scene Framework
+Each scene should include:
+- **Location & Environment:** [Description and atmospheric elements]
+- **Entry Points:** [How players can enter the scene]
+- **Key Features:** [Important objects, hazards, or interactive elements]
+- **NPCs Present:** [Who's there and what they're doing]
+- **Initial Situation:** [What's happening when players arrive]
+- **Possible Approaches:** [Different ways players might tackle the scene]
+- **Consequences:** [How the scene changes based on player actions]
+
+### Adaptation Notes
+*[Suggestions for adapting the scene for different settings]*
+- **Alternative Settings:** [How to modify for different locations]
+- **Scaling Difficulty:** [Adjustments for different player experience levels]
+- **Standalone vs. Campaign:** [Modifications if played as one-off vs. campaign]
+
+## 4. Scene Breakdown
+
+### SCENE 1 – [ENTRY POINT] – [INT/EXT]/[TIME OF DAY]
+*[Atmospheric description setting the tone]*
+
+**Initial Situation:**
+- [What players see/encounter upon arrival]
+- [Immediate challenges or opportunities]
+
+**Key Features:**
+- [Important environmental elements]
+- [Interactive objects or hazards]
+
+**Approaches & Challenges:**
+- **Stealth Approach:** [BASIC/CRITICAL Challenge: Skill required]
+- **Direct Approach:** [BASIC/CRITICAL/EXTREME Challenge: Skill required]
+- **Alternative Approach:** [BASIC/CRITICAL Challenge: Skill required]
+
+**Enemies & Obstacles:**
+- [Number and type of opponents]
+- [Environmental dangers]
+
+**Branching Paths:**
+- **Success Path:** [What happens if players succeed]
+- **Failure Path:** [Consequences of failure]
+- **Alternative Path:** [Optional route or approach]
+
+**Time Pressure:**
+- [Hour penalties]
+- [Time-sensitive elements]
+
+### SCENE 2 – [LOCATION] – [INT/EXT]/[TIME OF DAY]
+*[Repeat structure from Scene 1]*
+
+### SCENE 3 – [LOCATION] – [INT/EXT]/[TIME OF DAY]
+*[Repeat structure from Scene 1]*
+
+### SCENE 4 – [CLIMAX LOCATION] – [INT/EXT]/[TIME OF DAY]
+*[Final confrontation scene]*
+
+**Dramatic Elements:**
+- [Ticking clock/immediate danger]
+- [Environmental changes during battle]
+- [Revelations or plot twists]
+
+**Boss Encounter:**
+- [Major enemy abilities and tactics]
+- [Multiple phases of battle]
+- [Special conditions or requirements]
+
+**Resolution:**
+- [How the episode concludes]
+- [Information revealed]
+- [Setup for next episode]
+
+## 5. Challenge System
+
+### Challenge Types
+- **BASIC Challenge:** [Easy - examples of appropriate situations]
+- **CRITICAL Challenge:** [Medium - examples of appropriate situations]
+- **EXTREME Challenge:** [Hard - examples of appropriate situations]
+
+### Danger Types
+- **BASIC Danger:** [Minor environmental hazards - examples]
+- **CRITICAL Danger:** [Major hazards that can cause serious harm - examples]
+- **EXTREME Danger:** [Life-threatening situations - examples]
+
+### Enemy Types
+- **BASIC Enemy:** [Minor opponents - attributes]
+- **CRITICAL Enemy:** [Significant threats - attributes]
+- **EXTREME Enemy:** [Major boss-level opponents - attributes]
+
+## 6. Status Effects & Resources
+
+### Status Effects
+- **DIZZY:** [Effects and recovery conditions]
+- **SHOCKED:** [Effects and recovery conditions]
+- **BROKEN:** [Effects and recovery conditions]
+- **BLEEDING:** [Effects and recovery conditions]
+- **POISONED:** [Effects and recovery conditions]
+- **BRUTAL:** [Effects and benefits]
+- **EMBARRASSED:** [Social effects and recovery]
+
+### Resources
+- **Wealth Points:** [Uses and acquisition]
+- **Hours:** [Time management and consequences]
+- **Safe Place:** [Benefits and establishment requirements]
+- **Advantages/Disadvantages:** [How they're gained and used]
+- **Cover:** [Partial and Total - mechanics and benefits]
+
+## 7. Adaptable Elements
+
+### Environmental Conditions
+- **Weather:** [How different conditions affect challenges]
+- **Terrain:** [How different terrains modify movement/actions]
+- **Time of Day:** [Effects of light/darkness]
+
+### Vehicle/Transportation Options
+- **On Rails:** [Train, tram, etc.]
+- **Road Vehicles:** [Cars, trucks, etc.]
+- **Watercraft:** [Boats, ships, etc.]
+- **Aircraft:** [Planes, airships, etc.]
+- **Animals:** [Horses, camels, etc.]
+
+## 8. Campaign Integration
+
+### Clues & Foreshadowing
+- [Information to reveal about the overall plot]
+- [Hints about future episodes]
+- [Character development opportunities]
+
+### Rewards & Consequences
+- [Items or abilities gained]
+- [Relationship changes with NPCs]
+- [Long-term effects of success/failure]
+
+### Episode Connections
+- [How this episode links to previous ones]
+- [Setup for future episodes]
+- [Recurring elements or themes]
+
+## 9. Game Flow Chart
+
+1. Introduction & Objective → Time Pressure Established
+2. Initial Approach → First Obstacle
+3. Progressive Challenges → Information Gathering
+4. Mid-point Twist or Revelation
+5. Escalating Danger → Final Approach
+6. Climactic Confrontation → Resolution
+7. Escape/Aftermath → Clue Revealed for Next Episode

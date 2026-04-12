@@ -114,6 +114,13 @@ class HarnessCleanupTests(unittest.TestCase):
             self.assertTrue(runs_root.exists())
             self.assertEqual(len(list(runs_root.iterdir())), 1)
 
+    def test_non_strict_only_runs_still_return_failure_code(self) -> None:
+        code, reports = run_harness.run_gates([_failing_gate(9)], stop_on_fail=False)
+
+        self.assertEqual(code, 19)
+        self.assertEqual(len(reports), 1)
+        self.assertFalse(reports[0].passed)
+
 
 if __name__ == "__main__":
     unittest.main()

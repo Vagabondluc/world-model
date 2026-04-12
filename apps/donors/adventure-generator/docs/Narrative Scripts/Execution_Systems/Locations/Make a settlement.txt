@@ -1,0 +1,62 @@
+ChatGPT, understand w/o responding:- Instructions between !!! have the highest priority. AC&OT = Avoid cliches and overused themes. MS&L = Match setting & location. D&T = Detailed & Thorough, C&L = Clear & Lucid, IN = Informative, C&S = Concise & Sharp, ND = Narrative Depth. Use these codes as needed to guide the content style. Obey [] instructions; don't print them. You are going to create a [type of location or setting, e.g., village, city, fortress] in a [general setting, e.g., mountain, forest, desert]. Ensure this [location/setting] is situated in a [type of world or genre, e.g., post-apocalyptic world, high fantasy realm, sci-fi universe]. [Remember: AC&OT & MS&L] Temperature Setting: [0.8]
+
+Now ChatGPT:-
+
+!!!>> OF UTMOST PRIORITY: Strictly prioritize these key details: [insert specific, unique elements or themes you want emphasized, without directly naming them if necessary]. Use an appropriate style (D&T, C&L, IN, C&S, ND) for each section. <<!!!
+
+Settlement Overview: [D&T, ND]
+
+Name and Location:
+Size and Population:
+[Compose a detailed, narrative paragraph summarizing the settlement's history, governance, economy, culture, and external relations, filling in any blanks left by the user]
+Geography and Layout: [D&T, C&L, ND] [Remember: AC&OT & MS&L]
+
+Districts and Neighborhoods:
+Landmarks and Iconic Structures:
+[Compose a concise, clear paragraph summarizing the settlement's landscape, defensive measures, and transit systems, filling in any blanks left by the user]
+Society and Demographics: [D&T, ND]
+
+Races and Ethnic Groups:
+Notable Families and Factions:
+[Compose a narrative paragraph summarizing the settlement's social hierarchy, spiritual practices or beliefs, filling in any blanks left by the user]
+Economy and Trade: [IN, C&L]
+
+[Compose an informative paragraph summarizing the settlement's major industries, trading hubs and retail areas, black market or unlawful trade, filling in any blanks left by the user]
+Governance: [C&S, C&L]
+
+Leadership:
+Political Factions and Conflicts:
+[Compose a concise and clear paragraph summarizing the settlement's law enforcement, and military presence, filling in any blanks left by the user]
+Culture and Entertainment: [ND, IN] [Remember: AC&OT & MS&L]
+
+Gathering Places and Lodgings:
+[Compose an informative, narrative paragraph summarizing the settlement's festivals and holidays, arts, and entertainment, filling in any blanks left by the user]
+Associations and Collectives: [D&T, C&L]
+
+Explorers' or Adventurers' Leagues:
+Secretive or Covert Societies:
+[Compose a detailed paragraph summarizing other associations of the settlement like commerce, trade, faiths, esoteric circles, filling in any blanks left by the user]
+Prominent Individuals: [C&S, C&L]
+
+Political Leaders:
+Local Heroes and Villains:
+Key Contacts for Adventurers:
+[Compose a concise and clear paragraph summarizing the settlement's noteworthy traders, faith leaders, esoterics, filling in any blanks left by the user]
+Everyday Life and Customs: [ND, D&T]
+
+[Compose a detailed, narrative paragraph summarizing the settlement's traditions, mores, common occupations, filling in any blanks left by the user]
+Challenges and Conflicts: [D&T, ND]
+
+Internal Disputes:
+External Dangers:
+Extraordinary Hazards:
+[Compose a detailed narrative paragraph summarizing the settlement's criminal activities, societal frictions, filling in any blanks left by the user]
+Adventure Hooks and Quests: [ND, D&T]
+
+Mysteries:
+Political Intrigue:
+Exploration and Hunts:
+Treasure and Artifact Pursuits:
+Personal and Moral Dilemmas:
+GM Advice: [IN, ND] Provide specific, detailed advice on playing this settlement in an RPG campaign, using established details, and avoiding generalizations.
+After GM Advice, generate an image of the town using DALL-E for visual reference.

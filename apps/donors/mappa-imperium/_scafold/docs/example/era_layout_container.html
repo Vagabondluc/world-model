@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EraLayoutContainer - Reusable Component Architecture</title>
+    <style>
+        :root {
+            --bg-primary: #f4f1e8;
+            --bg-secondary: #fefcf7;
+            --bg-accent: #f0ead6;
+            --header-bg: #5a2d0c;
+            --header-text: #f4f1e8;
+            --text-primary: #3d2914;
+            --text-secondary: #8b6914;
+            --color-primary: #8b4513;
+            --color-secondary: #cd853f;
+            --color-accent: #daa520;
+            --border-color: #d2b48c;
+            --shadow: rgba(139, 69, 19, 0.15);
+            --completed-color: #28a745;
+            --locked-color: #6c757d;
+            --disabled-bg: #f8f9fa;
+            --disabled-text: #adb5bd;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container { max-width: 1600px; margin: 0 auto; padding: 2rem; }
+
+        /* ERA LAYOUT CONTAINER */
+        .era-layout-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* COMPONENT BOXES */
+        .component-box {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .component-box.disabled {
+            background-color: var(--disabled-bg);
+            color: var(--disabled-text);
+            opacity: 0.7;
+        }
+
+        .component-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .component-box-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+
+        .component-box.disabled .component-box-title {
+            color: var(--disabled-text);
+        }
+
+        /* ERA PROGRESS COMPONENT */
+        .era-progress-component {
+            /* Always visible, full width */
+        }
+
+        .era-step-progress { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 1rem; 
+        }
+
+        .era-step { 
+            display: flex; 
+            align-items: center; 
+            gap: 0.75rem; 
+            color: var(--locked-color); 
+            transition: all 0.3s ease; 
+        }
+
+        .era-step-number {
+            width: 40px; height: 40px; border-radius: 50%; background-color: var(--locked-color); color: white;
+            display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2em;
+            border: 2px solid var(--border-color); transition: all 0.3s ease;
+        }
+
+        .era-step-title { font-weight: bold; font-size: 1.1em; }
+        .era-step.current { color: var(--color-primary); }
+        .era-step.current .era-step-number { background-color: var(--color-accent); color: var(--text-primary); border-color: var(--color-accent); transform: scale(1.1); }
+        .era-step-connector { height: 2px; background-color: var(--border-color); flex-grow: 1; max-width: 80px; }
+
+        /* MAIN CONTENT GRID */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* FORM CONTAINER */
+        .form-container {
+            /* This will be filled by era-specific form components */
+            min-height: 400px;
+        }
+
+        /* MINI ELEMENT MANAGER */
+        .mini-element-manager {
+            height: calc(100vh - 20rem);
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .mini-element-manager.disabled {
+            background-color: var(--disabled-bg);
+            border-color: #dee2e6;
+        }
+
+        .mini-element-manager.disabled .component-box-title {
+            color: var(--disabled-text);
+        }
+
+        .element-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border-color) var(--bg-accent);
+            padding-right: 0.5rem;
+        }
+
+        .element-list::-webkit-scrollbar { width: 8px; }
+        .element-list::-webkit-scrollbar-track { background: var(--bg-accent); }
+        .element-list::-webkit-scrollbar-thumb { background-color: var(--border-color); border-radius: 4px; }
+
+        .empty-state {
+            text-align: center;
+            color: var(--disabled-text);
+            padding: 2rem;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        .element-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            border-left: 4px solid var(--color-accent);
+            margin-bottom: 1rem;
+            animation: slideIn 0.4s ease;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .element-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+
+        .element-card.faction { border-left-color: #dc3545; }
+        .element-card.settlement { border-left-color: #28a745; }
+        .element-card.character { border-left-color: #6f42c1; }
+        .element-card.location { border-left-color: #fd7e14; }
+        .element-card.resource { border-left-color: #20c997; }
+
+        .card-header { 
+            font-weight: bold; 
+            font-size: 1.1em; 
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-type-badge {
+            background: var(--color-accent);
+            color: var(--text-primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+
+        .card-details { 
+            font-size: 0.9em; 
+            color: var(--text-secondary); 
+            line-height: 1.4;
+        }
+
+        .element-actions {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-small {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-edit { background: #007bff; color: white; }
+        .btn-delete { background: #dc3545; color: white; }
+
+        /* AI GENERATION COMPONENT */
+        .ai-generation-component {
+            transition: all 0.3s ease;
+        }
+
+        .ai-generation-component.collapsed {
+            background-color: var(--disabled-bg);
+            border-color: #dee2e6;
+        }
+
+        .ai-generation-component.collapsed .component-box-title {
+            color: var(--disabled-text);
+        }
+
+        .ai-toggle {
+            background: none;
+            border: none;
+            color: var(--color-primary);
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .ai-toggle.collapsed {
+            transform: rotate(-90deg);
+            color: var(--disabled-text);
+        }
+
+        .ai-content {
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        .ai-content.expanded {
+            display: block;
+        }
+
+        .ai-form-group {
+            margin-bottom: 1rem;
+        }
+
+        .ai-form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .ai-form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #fff;
+            font-family: 'Georgia', serif;
+            rows: 3;
+        }
+
+        .btn-ai {
+            background-color: #6f42c1;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-ai:hover {
+            background-color: #5a32a3;
+        }
+
+        /* DEMO FORM STYLES */
+        .demo-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .demo-form h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #fff;
+            font-family: 'Georgia', serif;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #6d3410;
+        }
+
+        @keyframes slideDown { from { opacity: 0; max-height: 0; } to { opacity: 1; max-height: 200px; } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+        @media (max-width: 768px) {
+            .main-content-grid { grid-template-columns: 1fr; }
+            .mini-element-manager { position: static; height: auto; order: 2; }
+            .era-step-progress { flex-direction: column; gap: 1rem; }
+            .era-step-connector { width: 2px; height: 20px; max-width: none; }
+        }
+
+        /* ARCHITECTURE DOCUMENTATION */
+        .architecture-note {
+            background: #e3f2fd;
+            border: 1px solid #1976d2;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #0d47a1;
+            font-size: 0.9em;
+        }
+
+        .architecture-note h4 {
+            margin-bottom: 0.5rem;
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="architecture-note">
+            <h4>🏗️ EraLayoutContainer Architecture</h4>
+            <p><strong>Purpose:</strong> Reusable container component that standardizes the UI layout across all eras (III-VI). The form content slot accepts era-specific components like PrimeFactionCreator, DiscoveryEngine, etc.</p>
+            <p><strong>Props:</strong> eraSteps (array), currentStep (number), formComponent (React component), createdElements (array), onElementAction (function), aiEnabled (boolean)</p>
+        </div>
+
+        <!-- ERA LAYOUT CONTAINER -->
+        <div class="era-layout-container">
+            
+            <!-- ERA PROGRESS COMPONENT (Always Full Width) -->
+            <div class="component-box era-progress-component">
+                <div class="component-box-header">
+                    <div class="component-box-title">Era Progress</div>
+                </div>
+                <div class="era-step-progress">
+                    <div class="era-step current">
+                        <div class="era-step-number">1</div>
+                        <div class="era-step-title">Foundation Phase</div>
+                    </div>
+                    <div class="era-step-connector"></div>
+                    <div class="era-step">
+                        <div class="era-step-number">2</div>
+                        <div class="era-step-title">Expansion Phase</div>
+                    </div>
+                    <div class="era-step-connector"></div>
+                    <div class="era-step">
+                        <div class="era-step-number">3</div>
+                        <div class="era-step-title">Consolidation Phase</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAIN CONTENT GRID -->
+            <div class="main-content-grid">
+                
+                <!-- FORM CONTAINER (Left Side - Era-Specific Content) -->
+                <div class="component-box form-container">
+                    <div class="component-box-header">
+                        <div class="component-box-title">Prime Faction Creation</div>
+                    </div>
+                    
+                    <!-- This slot would be filled by era-specific components -->
+                    <!-- Examples: PrimeFactionCreator, DiscoveryEngine, ColonizationPlanner -->
+                    <div class="demo-form">
+                        <h3>Era-Specific Form Component Slot</h3>
+                        <div class="form-group">
+                            <label>Component Examples:</label>
+                            <select>
+                                <option>PrimeFactionCreator (Era III)</option>
+                                <option>DiscoveryEngine (Era IV)</option>
+                                <option>ColonizationPlanner (Era IV)</option>
+                                <option>EraGameplayManager (Era V-VI)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Element Name</label>
+                            <input type="text" placeholder="Enter name...">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea rows="3" placeholder="Enter description..."></textarea>
+                        </div>
+                        <button class="btn-primary" onclick="addElement()">Create Element</button>
+                    </div>
+                </div>
+
+                <!-- MINI ELEMENT MANAGER (Right Side) -->
+                <div class="component-box mini-element-manager disabled" id="mini-manager">
+                    <div class="component-box-header">
+                        <div class="component-box-title">Your Creations</div>
+                    </div>
+                    <div class="element-list" id="element-list">
+                        <div class="empty-state">
+                            <p>Elements you create will appear here.</p>
+                            <p style="font-size: 0.8em; margin-top: 0.5rem;">Mini Element Manager - reuses ElementCardRenderer logic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI GENERATION COMPONENT (Always Full Width) -->
+            <div class="component-box ai-generation-component collapsed" id="ai-component">
+                <div class="component-box-header">
+                    <div class="component-box-title">AI-Powered Generation</div>
+                    <button class="ai-toggle collapsed" id="ai-toggle">▼</button>
+                </div>
+                <div class="ai-content" id="ai-content">
+                    <div class="ai-form-group">
+                        <label for="ai-prompt">Your Ideas (Optional)</label>
+                        <textarea id="ai-prompt" placeholder="e.g., A faction that values honor above all else, with ancient traditions..."></textarea>
+                    </div>
+                    <button class="btn-ai" type="button">Generate Enhanced Content</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="architecture-note">
+            <h4>🔧 Component Integration</h4>
+            <p><strong>Form Slot:</strong> Era-specific components (PrimeFactionCreator, DiscoveryEngine, etc.) plug into the form-container slot.</p>
+            <p><strong>Mini Element Manager:</strong> Reuses ElementCardRenderer.tsx and filtering logic from the main Element Manager.</p>
+            <p><strong>AI Integration:</strong> Uses AIContext.tsx, AIContextInput.tsx, and AIGenerationSection.tsx for consistent AI functionality.</p>
+            <p><strong>Responsive:</strong> Sidebar moves below content on mobile, era progress stacks vertically.</p>
+        </div>
+    </div>
+
+    <script>
+        // Demo functionality
+        let elementCount = 0;
+        const elementTypes = ['faction', 'settlement', 'character', 'location', 'resource'];
+        const elementNames = ['Iron Brotherhood', 'Goldport', 'Captain Vera', 'Crystal Caves', 'Mithril Ore'];
+
+        function addElement() {
+            const miniManager = document.getElementById('mini-manager');
+            const elementList = document.getElementById('element-list');
+            
+            // Enable the mini manager
+            miniManager.classList.remove('disabled');
+            
+            // Clear empty state if first element
+            if (elementCount === 0) {
+                elementList.innerHTML = '';
+            }
+            
+            const type = elementTypes[elementCount % elementTypes.length];
+            const name = elementNames[elementCount % elementNames.length];
+            
+            const card = document.createElement('div');
+            card.className = `element-card ${type}`;
+            card.innerHTML = `
+                <div class="card-header">
+                    <span>${name}</span>
+                    <span class="card-type-badge">${type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                </div>
+                <div class="card-details">
+                    Era-specific description for this ${type}. Created via EraLayoutContainer.
+                </div>
+                <div class="element-actions">
+                    <button class="btn-small btn-edit">Edit</button>
+                    <button class="btn-small btn-delete" onclick="this.parentElement.parentElement.remove()">Delete</button>
+                </div>
+            `;
+            
+            elementList.appendChild(card);
+            elementCount++;
+        }
+
+        // AI Component Toggle
+        document.getElementById('ai-toggle').addEventListener('click', function() {
+            const component = document.getElementById('ai-component');
+            const content = document.getElementById('ai-content');
+            const toggle = this;
+            
+            if (component.classList.contains('collapsed')) {
+                component.classList.remove('collapsed');
+                content.classList.add('expanded');
+                toggle.classList.remove('collapsed');
+                toggle.textContent = '▲';
+            } else {
+                component.classList.add('collapsed');
+                content.classList.remove('expanded');
+                toggle.classList.add('collapsed');
+                toggle.textContent = '▼';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,28 +1,34 @@
 {
   "donor": "orbis",
   "label": "Orbis",
-  "classification": "semantic-only donor",
-  "methodology": "designed intent authoring",
-  "basis": "designed",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
   "sourceInventory": [
+    {
+      "relativePath": "to be merged/true orbis/Orbis Spec 2.0/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\true orbis\\Orbis Spec 2.0",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "to be merged/true orbis/Orbis Spec 2.0/Orbis 1.0/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\true orbis\\Orbis Spec 2.0\\Orbis 1.0",
+      "exists": true,
+      "kind": "directory"
+    },
     {
       "relativePath": "world-model/docs/adapters/ORBIS_ADAPTER.md",
       "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\adapters\\ORBIS_ADAPTER.md",
       "exists": true,
       "kind": "file"
-    },
-    {
-      "relativePath": "to be merged/Orbis Spec 2.0/Orbis 1.0/.env.local",
-      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\Orbis Spec 2.0\\Orbis 1.0\\.env.local",
-      "exists": true,
-      "kind": "file"
     }
   ],
   "coverage": {
-    "expectedSources": 2,
-    "existingSources": 2,
+    "expectedSources": 3,
+    "existingSources": 3,
     "missingSources": 0
   },
-  "parityTarget": "adapted+waived",
+  "parityTarget": "exact+adapted",
   "unstableSurfaces": []
 }

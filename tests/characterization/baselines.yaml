@@ -6,14 +6,44 @@ donors:
     route: /donor/mythforge
     characterization: executable source capture
   orbis:
-    classification: semantic-only donor
-    methodology: designed intent authoring
-    basis: designed
+    classification: app donor
+    methodology: behavioral capture
+    basis: captured
     route: /donor/orbis
-    characterization: adapter and workspace residue capture
+    characterization: executable source capture
   adventure-generator:
-    classification: fragment donor
-    methodology: intent reconstruction
-    basis: reconstructed
+    classification: app donor
+    methodology: behavioral capture
+    basis: captured
     route: /donor/adventure-generator
-    characterization: compiled residue and adapter capture
+    characterization: executable source capture
+  mappa-imperium:
+    classification: app donor
+    methodology: behavioral capture
+    basis: captured
+    route: /donor/mappa-imperium
+    characterization: executable source capture
+  dawn-of-worlds:
+    classification: app donor
+    methodology: behavioral capture
+    basis: captured
+    route: /donor/dawn-of-worlds
+    characterization: executable source capture
+  faction-image:
+    classification: app donor
+    methodology: behavioral capture
+    basis: captured
+    route: /donor/faction-image
+    characterization: executable source capture
+  watabou-city:
+    classification: source-fragment (GPL)
+    methodology: reference baseline
+    basis: reconstructed
+    route: /donor/watabou-city
+    characterization: GPL/reference baseline
+  encounter-balancer:
+    classification: scaffold-copy donor
+    methodology: representative baseline + clone-equivalence
+    basis: reconstructed
+    route: /donor/encounter-balancer
+    characterization: representative baseline plus clone-equivalence

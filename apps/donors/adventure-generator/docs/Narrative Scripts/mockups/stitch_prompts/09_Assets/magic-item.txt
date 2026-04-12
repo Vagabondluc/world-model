@@ -1,0 +1,93 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Magic-Item".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: magic-item
+
+```text
++--------------------------------------------------------------------------------+
+|  [Magic Item Architect: Master Edition]                                [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Item Name: [ Helm of the Abyssal Tide ]   Type: [Wondrous Item ] [V]          |
++--------------------------------------------------------------------------------+
+|  GENERAL DATA                               |  MAGICAL PROPERTIES & USAGE       |
+|  Rarity: [Very Rare] [V]                    |  [X] Requires Attunement          |
+|  Value: [ 15,000 - 35,000 GP ] (Auto)       |  Charges: [ 5 ]  Regen: [ 1d4+1 ]  |
+|  Description:                               |  [ + Add Property / Spell ]       |
+|  [ A coral-encrusted helm that feels     ]  |  1. Water Breathing (Passive)     |
+|  [ cold to the touch...                  ]  |  2. Maelstrom (Uses 3 charges)   |
++---------------------------------------------+----------------------------------+
+|  ADVANCED FEATURES                          |  HISTORY & LORE                  |
+|  [ ] Sentient Item  [ ] Fabled (Scaling)    |  [ "Once worn by the Kraken-King ]  |
+|  [ ] Cursed Item    [ ] Artifact            |  [ of the Seventh Sea..."        ]  |
++---------------------------------------------+----------------------------------+
+|  [Generate Full Concept] [VTT Export] [Save to Vault]                  [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: magic-item
+
+## Component Architecture
+- **Categorized Data Management:** Separate sections for General Identity, Magical Properties, and Lore/Advanced features.
+- **Dynamic Property Builder:** An interactive list where DMs can add specific spells or mechanic-based abilities. It automatically suggests spell-slot costs based on item rarity.
+- **Specialized Workspaces:** Context-aware modals for Sentient Items (stats/personality) and Artifacts (destiny/destruction).
+- **Auto-Value Calculator:** A background engine that calculates recommended market values for items based on 5e rarity tables and item complexity.
+
+## Interaction Logic
+- **Constraint Enforcement:** If an item is set to "Uncommon," the UI will flag or reject Level 5+ spell effects to maintain balance consistency.
+- **Fabled Scaling Engine:** For "Fabled" items, the UI provides a level-by-level progression table, allowing the DM to define when and how the item grows.
+- **History Linker:** A "Generate Lore" button that analyzes the item's properties (e.g., Cold, Kraken-themes) and proposes historical origins that fit the theme.
+
+## Visual Design
+- **High-Fantasy Aesthetic:** Uses custom borders and scroll-like texture patterns in the preview area to evoke a "Magic Item Compendium" feel.
+- **Interactive Charge Trackers:** Visual icons for charges that "light up" in the preview to show usage.
+- **Status Badges:** Color-coded rarity badges (Blue for Rare, Purple for Very Rare, Gold for Artifact).
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: magic-item
+
+# Magic Item Concept: Helm of the Abyssal Tide
+
+### 1. Item Name and Type
+- **Name:** Helm of the Abyssal Tide
+- **Type:** Wondrous Item
+
+### 2. Purpose and Function
+Created by the Marid lords to allow their favorite mortal champions to visit the Pearl Courts. It functions as a navigational aid and life-support system for those unused to oceanic pressures.
+
+### 3. Physical Description
+A bronze helmet encrusted with living coral and barnacles. The visor is made of a single piece of translucent green quartz. When worn, the user hears a faint sound of crashing waves, and the visor pulses with soft phosphorescence in deep water.
+
+### 4. Magical Properties
+- **Tidal Sight:** You gain darkvision out to a range of 120 feet. If you already have darkvision, its range increases by 30 feet.
+- **Oceanic Favor:** While wearing the helm, you can breathe underwater and have a swimming speed equal to your walking speed.
+
+### 5. Activation and Usage
+- **Command Word:** *“Zann”* (Aquan for "Home")
+- **Charges:** 5 charges.
+- **Maelstrom (3 Charges):** Use an action to cast *Maelstrom* (Spell DC 16). The helm recharges 1d4+1 segments at dawn, provided it has been submerged in salt water for at least one hour during the previous day.
+- **Attunement:** Requires attunement.
+
+### 6. Rarity and Value
+- **Rarity:** Very Rare
+- **Estimated Value:** 25,000 GP
+
+### 7. History and Lore
+Worn by Admiral Kaerwen during the Siege of the Sunken Spire. It was lost for three centuries in the trench of the Deep Blue until found by a curious giant octopus.
+
+### 8. Special Considerations
+- **Cursed:** If the helm is not submerged in salt water for 24 hours, the wearer suffers one level of exhaustion as they dehydrate unnaturally fast.
+

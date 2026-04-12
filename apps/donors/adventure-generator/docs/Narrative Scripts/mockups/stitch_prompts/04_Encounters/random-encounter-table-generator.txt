@@ -1,0 +1,88 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Random-Encounter-Table-Generator".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Random Encounter Table Generator
+
+```text
++--------------------------------------------------------------------------------+
+|  [Encounter Architect: Table & Probability Engine]                    [?] [X]  |
++--------------------------------------------------------------------------------+
+|  TABLE SETTINGS:                                                               |
+|  Die: [ 2d6 (Bell Curve) ] [V]  Size: [ 11 Slots ]  Theme: [ Dark Forest ]     |
++--------------------------------------------------------------------------------+
+|  PROBABILITY VISUALIZER |  ENCOUNTER TABLE EDITOR                              |
+|          _--_           |  Roll | Description             | Freq. | Action     |
+|       _-      -_        |  -----+-------------------------+-------+-----------|
+|     _-          -_      |  2    | Apex Predator (Owlbear) | Rare  | [Edit] [X]|
+|  __-              -__   |  6-8  | Lone Traveler/Patrol    | Common| [Edit] [X]|
+|  [ d4 | d6 | d8 | d20 ] |  12   | Hidden Treasure Stash   | Rare  | [Edit] [X]|
++-------------------------+------------------------------------------------------+
+|  ENCOUNTER OPTIONS                                                             |
+|  [x] Include Reaction Table (2d6)      [x] Include Distance (2d6 x 10ft)       |
+|  [x] Scaling: [ Level 5-8 ] [V]        [x] Auto-Balance XP Budgets            |
++--------------------------------------------------------------------------------+
+|  SIMULATION TOOLS                                                              |
+|  [Run 100 Test Rolls] -> Result: 7% Rare, 75% Common, 18% Uncommon [OK]        |
++--------------------------------------------------------------------------------+
+|  [Export to Foundry VTT] [Print Cheat Sheet]                           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Random Encounter Table Generator
+
+## Component Architecture
+- **Probability Distribution Engine:** A sophisticated backend that calculates roll ranges based on the selected die (e.g., the 2d6 bell curve vs. a linear d20). It informs the "Probability Visualizer" graph.
+- **Dynamic Encounter Grid:** A rich table editor where DMs can tag encounters as "Common," "Uncommon," or "Rare." The UI automatically allocates roll numbers to match these weights.
+- **Rules Meta-Injector:** A system of toggles that adds "Standard Procedures" to the output, such as Reaction Rolls (2d6) and Encounter Distance (2d6 x 10ft), ensuring the DM has all necessary rules at their fingertips.
+- **Monte Carlo Simulator:** A testing module that performs hundreds of automated "virtual rolls" to provide the DM with an actual statistical breakdown of how their table will perform in practice.
+
+## Interaction Logic
+- **Weighted Slot Management:** Instead of manually typing "Roll 1-3," the DM simply types the encounter and selects "Common." The UI handles the range assignment to maintain the bell curve integrity.
+- **Live XP Validation:** As creatures are added to an encounter description (e.g., "3 Ghouls"), the UI checks against the "Scaling" tier to warn the DM if the encounter is too deadly or too easy.
+- **Format-Ready Export:** The tool produces clean, high-contrast tables designed for both digital screens and physical printouts, with bold text for easy reading under low-light gaming conditions.
+
+## Visual Design
+- **Analytical & Precise:** Uses a cleaner, more "utility-focused" aesthetic with data visualizations (graphs, percentages) to appeal to the "Math DM."
+- **High Contrast:** Key data points (the roll results and encounter names) are highlighted with high-contrast banners.
+- **Modular Layout:** Designed so the DM can hide the simulation and probability panels once the table is "locked" to focus on the content during a live session.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Random Encounter Table (Theme: Whispering Woods)
+
+### Table Logic: 2d6 (Bell Curve)
+| Roll | Encounter | Notes |
+|:---|:---|:---|
+| **2** | **Ancient Treant** | *Rare:* Hostile if fire is present. |
+| **3-4** | **3d6 Giant Spiders** | *Uncommon:* Ambush from the canopy. |
+| **5-9** | **Wandering Wood Elves** | *Common:* Neutral, may trade information. |
+| **10-11** | **Blighted Grove** | *Uncommon:* Environmental hazard (poison). |
+| **12** | **Unicorn Glade** | *Rare:* Beneficial, group gains a Blessing. |
+
+---
+
+### Standard Procedures:
+- **Distance:** 2d6 x 10 feet.
+- **Reaction:** Roll 2d6 (2-3: Hostile, 4-6: Unfriendly, 7-9: Neutral, 10-12: Friendly).
+- **Surprise:** Survival DC 15 to spot the spiders before they drop.
+
+---
+
+### Simulation Report:
+- **Sample Size:** 500 Virtual Rolls.
+- **Distribution:** Common (68%), Uncommon (24%), Rare (8%).
+- **Balance:** Matches the "Moderate Danger" profile for Character Levels 3-5.
+

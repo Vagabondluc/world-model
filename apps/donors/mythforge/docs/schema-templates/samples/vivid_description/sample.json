@@ -1,0 +1,27 @@
+{
+  "loom": {
+    "stage": "finalize",
+    "seed": "A market at dusk"
+  },
+  "text": "The market glows like a lantern sea as dusk settles over the stalls.",
+  "vivid_description": {
+    "id": "vivid-market-dusk",
+    "base_text": "A market at dusk.",
+    "enhanced_text": "The market glows like a lantern sea as dusk settles over the stalls. Brass bells jingle above the cough of cooks, and warm steam drifts through the crowd with the smell of pepper, fish, and rain-wet cloth. Traders call across the lane while children weave between crates, their boots clicking on the stone like quick little sparks.",
+    "location": "Open market square",
+    "time_of_day": "dusk",
+    "weather": "clear after rain",
+    "tone": "lively",
+    "urgency": "normal",
+    "senses_covered": [
+      { "sense": "sight", "detail": "Lantern light stains the stalls amber and gold." },
+      { "sense": "sound", "detail": "Bells, laughter, and shouted prices overlap in a busy wash." },
+      { "sense": "smell", "detail": "Steam, pepper, fish, and rain-soaked cloth mix in the air." },
+      { "sense": "touch", "detail": "Cool stone underfoot gives way to slick puddles near the drains." },
+      { "sense": "taste", "detail": "The air carries a faint tang of smoke and spiced bread." }
+    ],
+    "figurative_notes": ["Lantern sea metaphor", "Quick little sparks for children's boots"],
+    "warnings": [],
+    "seed": "A market at dusk"
+  }
+}

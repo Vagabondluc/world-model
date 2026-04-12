@@ -1,0 +1,70 @@
+Prompt Structure:
+This prompt provides a structured approach to create engaging and dynamic combat scenarios that leverage environmental factors effectively. It ensures clarity in the geographical influence on combat, enhances narrative depth, and maintains gameplay fluidity without requiring on-the-spot rule-making by the Dungeon Master.
+
+Introduction to the Environment:
+
+Description: Provide a detailed description of a unique geographical setting such as a mountain pass, volcanic field, or icy fjord. Highlight physical features such as cliffs, boulders, lava pools, or slippery ice that could impact combat dynamics.
+Impact on Gameplay: Specify effects such as visibility impairments, movement restrictions, or hazardous areas, and detail their mechanical implications (e.g., Perception checks at disadvantage due to fog).
+Environmental Challenges:
+
+Navigation and Strategy: Introduce challenges like chasms, avalanches, or geothermal activity, and explain how they affect player navigation and combat strategy with precise mechanical details (e.g., DC 15 Strength check to cross a chasm).
+Dynamic Environment: Describe potential changes in the environment that can occur during combat (e.g., sudden fog thickening, geysers erupting) and their triggering conditions, along with explicit mechanical effects (e.g., Geyser eruptions causing 3d6 fire damage, DC 14 Dexterity save for half).
+Enemy Forces:
+
+Overview: Provide a concise description of the enemy types (e.g., mountain trolls, ice wraiths) that utilize the terrain. Include any special abilities or tactics that are synergistic with the environment.
+Detailed Tactics: Elaborate on how enemies exploit the geographic features, including specific actions and strategic goals (e.g., trolls throwing boulders from cliff tops to block paths or separate players).
+Encounter Mechanics:
+
+Starting Conditions: Clearly detail enemy placement and initial environmental effects. Include exact numbers and types of enemies and their starting locations on the map.
+Combat Dynamics: Outline specific mechanics related to the geography, such as stability checks for avalanches or acrobatics checks to navigate treacherous paths, with all necessary DCs and effects clearly stated.
+Resolution and Consequences:
+
+Encounter Outcomes: Provide explicit guidelines on how the encounter could conclude, considering both environmental and combat successes.
+Consequences: Detail the immediate consequences of various outcomes, such as paths clearing after an avalanche or additional enemy waves if initial foes are not swiftly defeated.
+Transition Opportunities:
+
+Narrative Integration: Suggest clear and direct ways the conclusion of this encounter could lead into further adventure elements, with potential narrative hooks and exploration opportunities explicitly described (e.g., discovering a hidden cave or tracking retreating enemies).
+
+
+
+
+
+
+**Guidelines for Use**:
+This prompt is meticulously structured to equip Dungeon Masters with the tools needed to create engaging and strategically complex combat scenarios. By clearly defining environmental mechanics and enemy tactics, and integrating dynamic geographical changes, it ensures that the geography meaningfully impacts the course of battle and enriches the narrative. This structured approach facilitates a balanced, engaging, and smoothly run combat encounter.
+
+---
+
+**Objective**: Create a combat scenario in Dungeons & Dragons that leverages geographical features and environmental challenges to provide a dynamic, tactical battle.
+
+---
+
+**Prompt Structure**:
+
+1. **Introduction to the Environment**:
+   - **Location**: Describe a distinct geographical area (e.g., volcanic field, icy canyon). Focus on creating a vivid mental picture that highlights impactful features like uneven ground, natural barriers, or hazardous areas.
+   - **Physical Features**: Detail the specific geographical elements that influence combat tactics, such as lava flows, icy patches, or dense foliage, and their mechanical effects on movement and visibility.
+
+2. **Environmental Mechanics**:
+   - **Specific Triggers and Effects**:
+     - Clearly define environmental triggers such as pressure plates or natural events (e.g., geyser eruptions).
+     - Describe the specific effects of each trigger, including damage types, area of effect, and save DCs for avoiding negative outcomes.
+
+3. **Enemy Forces**:
+   - **Opponent Overview**: Provide a concise description of the enemy types utilizing the terrain, including any special abilities that interact with the environment.
+   - **Detailed Tactics**: Explicitly state how the enemies use the geographical features to their advantage, including movement patterns and ambush strategies.
+
+4. **Detailed Encounter Mechanics**:
+   - **Starting Conditions**: Outline the exact starting locations of all entities involved and the initial state of environmental hazards.
+   - **Interaction Mechanics**: Describe how players and enemies can interact with the environment, such as destabilizing a rocky cliff to create a barrier or using thick fog to hide movements.
+
+5. **Dynamic Environmental Changes**:
+   - **Triggers and Timings**: Detail how and when the environment can change during combat, such as intervals for periodic hazards or conditions that modify the terrain.
+   - **Impact on Combat**: Explain the tactical implications of these changes, providing specific guidelines for incorporating them into the flow of battle.
+
+6. **Resolution and Consequences**:
+   - **Encounter Outcomes**: Clarify different potential endings for the encounter based on player actions and environmental interactions.
+   - **Consequences**: Describe the immediate effects of the encounter’s outcome, such as altered terrain or unlocked paths.
+
+7. **Transition Opportunities**:
+   - **Narrative Integration**: Suggest how the outcome of the encounter can lead to new adventure hooks or story developments, providing specific examples based on the encounter’s resolution.

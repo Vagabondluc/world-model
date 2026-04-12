@@ -15,16 +15,20 @@ Phase 2 source of truth is `world-model/adapters/*`.
 - Manifest: `world-model/adapters/orbis/manifest.yaml`
 - Snapshot root: `world-model/adapters/orbis/source-snapshot/`
 - Mapping: `world-model/adapters/orbis/mappings/concept-map.yaml`
-- Source root (spec-source): `../mechanical-sycophant/src`
+- Source root (spec-source): `../to be merged/true orbis/Orbis Spec 2.0/`
 - Role: simulation profile/snapshot/domain/event attachments
+  
+> Note: `mechanical-sycophant` is a prior source-reference error in older docs. It is not the donor source for Orbis.
 
 ## Adventure Generator (Workflow Donor)
 
 - Manifest: `world-model/adapters/adventure-generator/manifest.yaml`
 - Snapshot root: `world-model/adapters/adventure-generator/source-snapshot/`
 - Mapping: `world-model/adapters/adventure-generator/mappings/concept-map.yaml`
-- Source root (spec-source): `../../../../antigravity/dnd adventure generator/src`
+- Source root (spec-source): `../to be merged/dungeon generator/`
 - Role: guided workflow/checkpoint/location linkage
+  
+> Note: the folder name is misleading; the source tree in `to be merged/dungeon generator/` is the Adventure Generator app (`package.json: "name": "dnd-adventure-generator"`).
 
 ## Canonical Coverage Requirement
 

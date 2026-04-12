@@ -1,0 +1,89 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Xandered-Dungeon-Designer".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: xandered-dungeon-designer
+
+```text
++--------------------------------------------------------------------------------+
+|  [Xandered Dungeon Designer: Topology View]                           [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Entrances: [ 1 ] [ 2 ] [+]  |  Complexity Score: [ 84% ] [Optimize Flow]      |
++------------------------------+-------------------------------------------------+
+|  MAP CANVAS (Top-Down Flow)                                                    |
+|                                                                                |
+|  [ENTRANCE A] ----> [ROOM 1] ----> [ROOM 2] ---- [SECRET] ----> [EXIT]        |
+|        |              |              |                                         |
+|        |              +--- [LOOP] ---+              [LVL LINK: TO B1]          |
+|        v                                                    |                  |
+|  [ENTRANCE B] ---- [ROOM 3] ---- [CHUTE] ----> [SUB-LEVEL: THE PIT]            |
+|                                                                                |
++--------------------------------------------------------------------------------+
+|  XANDER TOOLBOX       |  ORIENTATION LANDMARKS                                 |
+|  [+] Add Loop         |  [M] The Colossus Statue (Lvl 1)                       |
+|  [^] Add Level Link   |  [M] The Glowing Forge (Lvl 2)                         |
+|  [?] Add Secret Path  |  [+ Add Landmark]                                      |
++-----------------------+--------------------------------------------------------+
+|  [Export Topology] [Sync to Map Creator] [Verify Navigation]           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: xandered-dungeon-designer
+
+## Component Architecture
+- **Non-Linear Canvas:** A topological mapping area where nodes (rooms) and edges (paths) are managed. Unlike the Map Creator, this focuses purely on *how* rooms connect, not their physical shape.
+- **Xander Toolbar:**
+    - **Loop Tool:** Automatically identifies the shortest path between two non-adjacent nodes and suggests adding a connecting door or corridor.
+    - **Vertical Switch:** Adds level-to-level transitions (e.g., Pit, Elevator).
+    - **Discontinuous Link:** Adds a "teleport" or "skip" path (like a secret chute from Lvl 1 to Lvl 4).
+- **Landmark Manager:** A palette of "Mega-Features" that give players a sense of direction (e.g., "The Giant Chandelier", "The Red River").
+- **Complexity Auditor:** A real-time meter that calculates "Non-Linearity". Higher scores indicate more "Xandered" designs.
+
+## Interaction Logic
+- **Verification Engine:** A "Verify Navigation" button that simulates party movement to ensure no area is a permanent dead-end and that multiple paths exist to major goals.
+- **Elevation Overlay:** Toggleable layers that show how rooms on different floors physically stack, helping to place vertical chutes and stairs logically.
+- ** Landmark Placement:** Drag-and-drop landmarks onto nodes. These landmarks auto-populate the "Boxed Text" in the Room Designer.
+
+## Visual Design
+- **Flowchart Aesthetic:** Brightly colored lines represent different connection types (Blue = Standard, Gold = Secret, Red = One-Way).
+- **Landmark Icons:** Large, distinct icons that stand out on the topology graph to act as visual anchors.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: xandered-dungeon-designer
+
+# Topology Report: The Spiral of Silence
+
+### 1. Entrances
+- **Entrance A (The Main Lift):** Easy access, heavily guarded. Leads to Room 1.
+- **Entrance B (The Ventilation Shaft):** Requires Stealth/Athletics. Leads directly to Room 3.
+
+### 2. Core Loops
+- **The Kitchen Loop:** Room 3 -> Room 4 (Pantry) -> Room 1 (Mess Hall) -> Room 3.
+- **The Warden's Loop:** Room 4 -> Room 6 (Secret Stairs) -> Room 7 (Catwalks) -> Room 4.
+
+### 3. Vertical Complexity
+- **The Chute:** A one-way drop from the Mess Hall (Level 1) to The Garbage Pit (Level 3).
+- **The Steam Elevator:** Two-way transit between Level 1 and Level 2.
+
+### 4. Landmarks (Orientation)
+- **Level 1:** The Great Bronze Clock (Visible from Rooms 1, 2, and 3).
+- **Level 2:** The Pulsing Core (Sound and light emanate through the floorboards).
+
+### 5. Xandering Analysis
+- **Non-Linearity Score:** 88%
+- **Connections:** 4 Loops, 3 Vertical Paths, 2 Secret Shortcuts.
+- **Accessibility:** 2 Entrances, 1 Exit.
+

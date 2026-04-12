@@ -1,0 +1,29 @@
+{
+  "loom": { "stage": "synthesize", "seed": "arcane-westmarsh-2026-03-31-001" },
+  "arcane": {
+    "id": "ARC-0001",
+    "title": "The Whispering Library",
+    "locations": [
+      { "id": "L1", "name": "Whispering Library", "description": "A small hidden library where books sigh when opened.", "tags": ["library","arcane"] }
+    ],
+    "npcs": [
+      { "id": "P1", "name": "Keeper Rhys", "role": "librarian", "motivation": "Protect dangerous lore", "description": "Quiet, distracted, eyes like ink." }
+    ],
+    "scenes": [
+      { "id": "S1", "title": "The Sundered Stack", "setting": "Lower stacks at midnight", "beats": ["A shelf hums open","A marginalia whispers a clue"] }
+    ],
+    "nodes": [
+      { "id": "N1", "type": "clue", "summary": "A book that only opens under moonlight", "detail": "The title is blank until midnight." },
+      { "id": "N2", "type": "ritual", "summary": "Forgotten invocation to bind memory", "detail": "Requires dryer lint and a copper token." }
+    ],
+    "connections": [
+      { "from": "N1", "to": "L1", "reason": "book is located in Whispering Library" },
+      { "from": "N2", "to": "P1", "reason": "keeper knows fragments of the ritual" }
+    ],
+    "artifacts": [
+      { "id": "T1", "name": "Memory Quill", "description": "A feather that records the last line read." }
+    ],
+    "seed": "arcane-westmarsh-2026-03-31-001"
+  },
+  "text": "The Whispering Library hides a book that only reveals itself under moonlight. The Keeper Rhys will be helpful but guarded; use social skill checks to learn the ritual fragments. Scenes: Lower stacks at midnight—expect whispers and moving shelves. GM Advice: Prepare a clue chain linking the quill, the ritual, and the library's secret entrance."
+}

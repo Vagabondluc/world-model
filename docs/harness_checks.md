@@ -7,7 +7,7 @@ This file documents the current gate commands used by the roadmap harness.
 Run the full ordered harness with the default cleanup policy:
 
 ```powershell
-python world-model/scripts/run_harness.py --phase 8 --cleanup --cleanup-scope safe
+python world-model/scripts/run_harness.py --phase 9 --cleanup --cleanup-scope safe
 ```
 
 Cleanup only, without executing any phases:
@@ -238,3 +238,65 @@ What blocks Phase 8:
 - missing required integration test files under `apps/unified-app/tests/integration/`
 - `/` is not a canonical-bundle-aware landing page or the product compare surface is missing
 - failing cross-donor integration or round-trip suites
+
+## Phase 9 Exhaustive Donor UI Checks
+
+Run donor characterization for the full donor inventory:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:characterize
+```
+
+Run donor conformance for the full donor inventory:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:conformance
+```
+
+Run the Phase 9B exactness harness from the unified app root:
+
+```powershell
+cd world-model/apps/unified-app
+npm run test:conformance:phase9b
+```
+
+Run the phase-9 checker:
+
+```powershell
+python world-model/scripts/check_phase_9_exhaustive_donors.py
+```
+
+This produces `world-model/phase-9-donor-completeness-report.json`. That report is inventory-only: it proves donor registry, route, manifest, characterization, and conformance command coverage. It does not prove vendored donor runtimes, exact donor UI behavior, or canonical bridge implementation.
+
+Run the exact donor-ui checker:
+
+```powershell
+python world-model/scripts/check_phase_9_exact_donor_ui.py
+```
+
+This produces `world-model/phase-9-exact-donor-ui-report.json`. That report is the exactness gate: it must fail until app donors are vendored under `world-model/apps/donors/<donor>/`, mounted through same-origin donor routes, bridged to canonical state, and tested against behavior-exact characterization baselines. The report now includes manifest validation, config-vs-manifest consistency, bridge command results, mount command results, exactness command results, and placeholder-evidence scans.
+
+Phase 9 execution retries and failure decomposition are logged in `world-model/docs/roadmap/support/PHASE_9_EXECUTION_CHECKLIST.md`. Use that ledger when the same atomic action fails more than once.
+
+Run the gate:
+
+```powershell
+python world-model/scripts/run_harness.py --phase 9
+```
+
+What blocks Phase 9:
+
+- missing `world-model/docs/roadmap/phase-9-exhaustive-donor-ui.md`
+- donor inventory mismatch between docs and `apps/unified-app/src/donors/config.ts`
+- missing characterization or conformance scripts/tests for any donor group
+- missing baselines or waivers for any donor group
+- `/compare/donors` not showing all donor groups
+- any Phase 9 characterization or conformance command failing
+- missing `world-model/scripts/check_phase_9_exact_donor_ui.py`
+- missing `world-model/phase-9-exact-donor-ui-report.json`
+- missing `world-model/apps/donors/<donor>/` for any app donor
+- app-donor route still mounted through `SourceUiPreview`, `sourceUiUrl`, iframe-only rendering, or source-baseline placeholder text
+- missing canonical projector, action translator, or bridge test for any donor
+- donor class mismatch between `docs/donors/INDEX.md`, donor config, characterization baselines, and conformance waivers

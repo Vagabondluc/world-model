@@ -1,23 +1,34 @@
 # Donor UI Conformance Matrix
 
-Every row records the basis for the requirement:
+Every row includes a `Basis` field:
 
-- `captured`: observed from a runnable donor app
-- `reconstructed`: inferred from surviving donor fragments
-- `designed`: authored from donor semantics because no donor UI exists to capture
+- `captured`: observed from runnable donor UI behavior
+- `reconstructed`: frozen from reference/scaffold source material
 
 | Donor | Basis | Route | Surface purpose | Required panels | Required controls | Visible states | Interaction order | Allowed substitutions |
 |---|---|---|---|---|---|---|---|---|
-| Mythforge | captured | `/donor/mythforge` | donor-faithful world authoring | top nav, explorer, workspace | New World, New Entity, Save Canonical, Grid, Graph | no entity, selected entity, saved/dirty shell state | explorer selection drives workspace detail | canonical data/store replacement; outer unified shell |
-| Adventure Generator | reconstructed | `/donor/adventure-generator` | guided workflow progression | workflow registry, guided steps, checkpoints, generated outputs | Create linked entity, Start generator | no workflow, active workflow, resumed checkpoint state | workflow registry -> step state -> checkpoint/output review | canonical workflow backing; outer unified shell; residue-derived layout interpretation |
-| Orbis | designed | `/donor/orbis` | simulation review surface | simulation profile, domains, snapshots, event stream | Inspect import, View migration | no simulation attachment, active profile, available snapshots | profile review -> domains -> snapshots -> event stream | canonical simulation backing; outer unified shell |
+| Mythforge | captured | `/donor/mythforge` | world authoring | top nav, explorer, workspace | New World, New Entity, Save | empty/active/saved | explorer -> workspace | canonical data/store replacement; outer shell |
+| Orbis | captured | `/donor/orbis` | simulation review | profile, domains, snapshots, event stream | domain toggles, run simulation, inspect snapshot | empty/active/history | profile -> domains -> snapshots -> events | canonical data/store replacement; outer shell |
+| Adventure Generator | captured | `/donor/adventure-generator` | guided workflow | workflow registry, steps, checkpoints, outputs | create link, start, resume | empty/active/resumed | registry -> steps -> outputs | canonical data/store replacement; outer shell |
+| Mappa Imperium | captured | `/donor/mappa-imperium` | era/territory session | era timeline, territory map, session controls | create territory, advance era | empty/active era | era -> territory -> session | canonical data/store replacement; outer shell |
+| Dawn of Worlds | captured | `/donor/dawn-of-worlds` | turn-based worldbuilding | world kind, turn controls, multiplayer session | start turn, apply world command | no turn/active turn | world kind -> turn -> multiplayer | canonical data/store replacement; outer shell |
+| Faction Image | captured | `/donor/faction-image` | sigil generation | layer stack, icon discovery, variant preview | add layer, search icon, export | empty/active variant | layer -> icon -> variant | canonical data/store replacement; outer shell |
+| Watabou City | clean-room implementation | `/donor/watabou-city` | clean-room city app | city layout, seed controls, render options | regenerate, adjust seed, export | no seed/generated | seed -> generate -> export | no GPL/reference substitution; use clean-room source |
+| Encounter Balancer | reconstructed | `/donor/encounter-balancer` | encounter scaffold baseline | balancer tab, environmental tab | adjust difficulty, set environment | empty/configured | balancer -> environment -> preview | representative baseline + clone-equivalence |
 
-## Cross-Donor Round-Trip Requirement
+## Shared concept families
 
-For any canonical concept that appears in more than one donor surface, at least one round-trip test must prove:
+Shared canonical concept families in scope:
 
-1. the same canonical bundle projects into all donor views,
-2. each donor view presents the concept without data loss,
-3. edits round-trip back into canonical state without donor-local leakage.
+- biome-location
+- entities
+- workflows
+- simulation-events
+- projections
+- attachments
 
-The biome/location family is the reference stress case for this rule.
+For each family above, at least one round-trip test must prove:
+
+1. the same canonical bundle projects into every relevant donor surface,
+2. donor-specific presentation differences do not corrupt canonical state,
+3. donor-local UI-only fields do not persist.

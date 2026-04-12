@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Quick Settlement".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Quick_settlement
+
+```text
++--------------------------------------------------------------------------------+
+|  [Quick Settlement Architect]                                          [?] [X]  |
++--------------------------------------------------------------------------------+
+|  PRIORITY HOOK: [ "Floating city powered by captured lightning storms" ]        |
++--------------------------------------------------------------------------------+
+|  [ IMAGE PREVIEW ]                   |  SETTINGS & DEMOGRAPHICS                |
+|  +---------------------------+       |  Name: [ Aethervale ]  Pop: [ 12k ]     |
+|  |                           |       |  Type: [ City ]  Biome: [ Skies ]       |
+|  |     (Generated Image)     |       |  Genre: [ High Fantasy / Magipunk ]     |
+|  |                           |       |  -------------------------------------  |
+|  +---------------------------+       |  [Generate DALL-E Reference]            |
++--------------------------------------+-----------------------------------------+
+|  PROMINENT INDIVIDUALS (NPC Table)                                             |
+|  +------------------+---------------+-----------------------+----------------+ |
+|  | Name             | Role          | Description           | Goal           | |
+|  +------------------+---------------+-----------------------+----------------+ |
+|  | Storm-Caller     | Leader        | Old wizard with eye.. | Control lightning| |
+|  | Sky-Sailor       | Hero          | Famous rogue pilot... | Find New Shore | |
+|  +------------------+---------------+-----------------------+----------------+ |
++--------------------------------------------------------------------------------+
+|  [Generate Full Narrative] [Export GM Advice] [View Adventure Hooks]   [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Quick_settlement
+
+## Component Architecture
+- **Image-First Dashboard:** A unique interface that leads with visual inspiration (DALL-E) before diving into narrative text. It helps set the tone for the rest of the generation process.
+- **Priority Input Module:** Captures the "UTMOST PRIORITY" elements early, ensuring the backend AI weighs these more heavily than standard tropes.
+- **Sectioned Narrative Blocks:** Organizes the 10+ core domains (Governance, Economy, Customs, etc.) into clean, tabbed containers, each labeled with its expected style (e.g., [ND, D&T]).
+- **Relational NPC Table:** A structured grid for "Prominent Individuals" that forces the user (and AI) to define specific "Goals" for every character, creating immediate plot momentum.
+- **Multi-Vector Hook Builder:** A specialized tool to draft distinct types of adventures (Mysteries, Political Intrigue, Moral Dilemmas) that are cross-referenced with the settlement's conflicts.
+
+## Interaction Logic
+- **Visual-to-Text Consistency:** The UI allows the user to click "Sync" to ensure that architectural details described in the text match the visual features visible in the generated DALL-E image.
+- **Automatic Table Expansion:** As the AI generates the "Society and Demographics" section, it automatically proposes entries for the NPC table (Leaders, Traders, etc.).
+- **Style Enforcer:** The backend automatically applies the specific creative codes (C&S, D&T, ND) to the resulting text based on the section currently being edited.
+
+## Visual Design
+- **Sleek & Informative:** A professional, split-screen layout that balances rich visual media on the left with structured data on the right.
+- **Role-Based Row Formatting:** In the NPC table, different colors or icons distinguish between "Political Leaders," "Heroes/Villains," and "Traders."
+- **Code Badging:** Small, unobtrusive badges for style requirements (MS&L, AC&OT) provide at-a-glance status of the creative direction.
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Quick_settlement
+
+# Settlement Profile: Aethervale (The Sky-Isles)
+
+![DALL-E Concept Image: A breathtaking floating city made of white marble and gold, suspended amidst colossal cumulonimbus clouds, with lightning-collecting spires and flying gondolas.](/docs/mockups/samples/aethervale-image.png)
+
+## Settlement Overview
+**Name:** Aethervale  
+**Location:** The Thundering Reach  
+**Pop:** 12,000 (Primarily Aarakocra and High Elves)
+
+Aethervale is a literal "Cloud-City" suspended 15,000 feet above the Eternal Sea. It was founded by the Storm-Mages of the First Age to escape the Great Flood. Today, it is an international hub of magipunk innovation, providing 60% of the continent's "Stored-Lightning" energy. The city operates as a technocratic republic where access to fresh air and buoyancy stones is the primary form of wealth.
+
+## Geography and Layout
+The city is built on three massive floating discs of enchanted obsidian. **The High Reach** houses the labs and government; **The Cloud-Docks** handle trade; **The Under-Rim** is the industrial scrap-yard where the poor harvest lightning-mites. 
+
+*Summary:* The city is a vertical marvel connected by sky-bridges and gravity-lifts. Defensive measures include "Storm-Cannons" that can focus lightning into devastating beams. Transportation is dominated by "Aether-Skiffs" and giant owls.
+
+## Prominent Individuals (NPC Matrix)
+
+| Name | Role | Description | Goal |
+| :--- | :--- | :--- | :--- |
+| **Luminarch Zephyr** | Political Leader | A silver-feathered Aarakocra with a prosthetic wing. | Maintain the city's buoyancy gems. |
+| **Kaelen Voss** | Local Villain | A disgraced mage-engineer who lives in the rim. | Sabotage the Storm-Pylons to steal power. |
+| **Sylvie Sun-Eye** | Noteworthy Trader | Captain of the *Solar-Strider* merchant fleet. | Monopoly on rare "Sun-Silk" imports. |
+| **Balthazar** | Faith Leader | High Priest of the Thunder-God, Kord. | Predict the arrival of the "Great Maelstrom." |
+
+## Adventure Hooks
+- **The Dead Current (Mystery):** The gravity-lifts in the High Reach have stopped working. Is it a malfunction or a deliberate sabotage?
+- **The Moral Dilemma:** A group of surface dwellers has arrived on a makeshift raft-ship. The High Reach refuses to let them up. Do you help them smuggle in, knowing it will strain the city's oxygen supply?
+
+## GM Advice
+Focus on the **Leitmotif of Height**. Every encounter should feel like it happens on a precipice. Use falling as a mechanical threat, but also use the "Aether-Steam" clouds to limit visibility for tactical combat.

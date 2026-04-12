@@ -1,0 +1,19 @@
+Translate this unformatted sheet into formatted one:
+name, race, class, alignment, HP, AC, speed, ability scores, proficiencies, actions, features, spells, equipment, and background.
+
+Template:
+
+Name:
+Race:
+Class:
+Alignment:
+AC:
+HP:
+Speed:
+Ability Scores: STR, DEX, CON, INT, WIS, CHA
+Proficiencies: Saving Throws, Skills, Armor, Weapons, Tools, Senses, Languages
+Actions:
+Equipment:
+Features:
+Spells:
+Background:

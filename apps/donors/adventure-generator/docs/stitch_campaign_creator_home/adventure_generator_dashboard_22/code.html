@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Encounter Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .card-border {
+                border: 1px solid #7d6344;
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-[#f5e8c3]">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-[#922610] text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">fort</span>
+<span class="font-header tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-header tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="font-header tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBR_Qg1RYj5sRZzCTgZ3MS0X_bqjNyNitQW999-uJ4dH49UEhAYlWYYQzjYRa3jPVTv7lPS0QSNb2uVqxPAPXos6zBrz2Sk2NHoq5tkXz53CqpB3BzVW8iTuMlk_3_aiDH_BPD5NesnfI0LENY179Vc257z-lP09tX1mGN1Ll6vRyMNfiPbXybWFi_9mHKsl-_wR9f_Hd6wNEZvbp4SCkRLzFbWLWRoxiOjTqJDQYAwtSR1i6DOjUnoxhVimS4E384m5alPmhZ');"></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-[#922610] hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">handyman</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 parchment-texture overflow-y-auto custom-scrollbar relative grit-overlay">
+<div class="relative z-10 px-12 py-10 flex flex-col gap-8 max-w-7xl mx-auto">
+<header class="flex flex-wrap justify-between items-end gap-6 border-b-4 border-chronicle-red/20 pb-6">
+<div class="flex flex-col gap-1">
+<h2 class="font-header text-5xl text-ink-dark drop-shadow-sm">Encounter Architect: Older_v1</h2>
+<div class="flex gap-6 mt-2">
+<p class="text-chronicle-red font-body italic text-xl font-semibold opacity-90">Scene: <span class="text-ink-dark not-italic">The Whispering Chasm</span></p>
+<p class="text-chronicle-red font-body italic text-xl font-semibold opacity-90">Tier: <span class="text-ink-dark not-italic">2</span></p>
+</div>
+</div>
+</header>
+<section class="bg-[#fef9eb] card-border rounded-lg shadow-md overflow-hidden">
+<div class="p-6 border-b border-medium-brown/30 bg-white/50">
+<h3 class="font-header text-chronicle-red text-2xl uppercase tracking-wide">Setting the Scene</h3>
+</div>
+<div class="p-8">
+<div class="flex gap-4 mb-6">
+<span class="px-3 py-1 bg-ink-dark text-parchment-base font-noto text-[10px] tracking-[0.2em] uppercase rounded">SIGHT</span>
+<span class="px-3 py-1 bg-ink-dark text-parchment-base font-noto text-[10px] tracking-[0.2em] uppercase rounded">SOUND</span>
+<span class="px-3 py-1 bg-ink-dark text-parchment-base font-noto text-[10px] tracking-[0.2em] uppercase rounded">SMELL</span>
+</div>
+<textarea class="w-full h-40 bg-transparent border-none focus:ring-0 font-body text-lg leading-relaxed text-ink-dark placeholder:text-stone-400 italic" placeholder="The air grows thin and cold as you approach the jagged lip of the chasm. Below, a low whistling hum vibrates through your very marrow, carrying the metallic tang of ozone and ancient copper..."></textarea>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-[#fef9eb] card-border rounded-lg shadow-md flex flex-col">
+<div class="p-4 border-b border-medium-brown/30 bg-white/50">
+<h4 class="font-header text-chronicle-red text-xl uppercase tracking-wide">Environmental Effects</h4>
+</div>
+<div class="p-6 flex-1">
+<h5 class="font-header text-ink-dark text-lg mb-2">Shifting Gravity</h5>
+<p class="font-body text-ink-dark/80 text-sm leading-relaxed">
+                            The ley lines beneath the chasm flicker irregularly. At the start of each round, roll a d6. On a 1, gravity reverses for 1 round. Creatures must succeed on a DC 14 Dexterity save or fall "upwards" 30 feet.
+                        </p>
+</div>
+</div>
+<div class="bg-[#fef9eb] card-border rounded-lg shadow-md flex flex-col">
+<div class="p-4 border-b border-medium-brown/30 bg-white/50">
+<h4 class="font-header text-chronicle-red text-xl uppercase tracking-wide">Challenge Resolution</h4>
+</div>
+<div class="p-6 flex-1">
+<div class="flex justify-between items-center mb-4">
+<span class="font-noto text-[10px] tracking-widest uppercase font-bold text-medium-brown">Skill Challenge Tracker</span>
+<span class="font-header text-chronicle-red text-lg">4 / 3</span>
+</div>
+<div class="flex gap-2 mb-6">
+<div class="h-3 flex-1 bg-chronicle-red rounded-full"></div>
+<div class="h-3 flex-1 bg-chronicle-red rounded-full"></div>
+<div class="h-3 flex-1 bg-stone-300 rounded-full"></div>
+<div class="h-3 flex-1 bg-stone-300 rounded-full"></div>
+<div class="h-3 w-8 bg-black rounded-full"></div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-body border-b border-medium-brown/10 pb-1">
+<span>Athletics (Scaling the Walls)</span>
+<span class="font-bold">DC 16</span>
+</div>
+<div class="flex justify-between text-sm font-body">
+<span>Arcana (Stabilizing the Rift)</span>
+<span class="font-bold">DC 18</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="bg-[#fef9eb] card-border rounded-lg shadow-md overflow-hidden">
+<div class="p-4 border-b border-medium-brown/30 bg-white/50">
+<h3 class="font-header text-chronicle-red text-xl uppercase tracking-wide">Opponent Info &amp; Tactics</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 divide-x divide-medium-brown/20">
+<div class="md:col-span-4 p-6 bg-stone-100/50">
+<h4 class="font-header text-ink-dark text-lg mb-4">3x Harpy Matriarchs</h4>
+<ul class="space-y-3 font-body text-sm">
+<li class="flex items-center gap-2">
+<span class="size-2 bg-chronicle-red rounded-full"></span>
+<span>HP: 68 each</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="size-2 bg-chronicle-red rounded-full"></span>
+<span>AC: 15 (Natural Armor)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="size-2 bg-chronicle-red rounded-full"></span>
+<span>Luring Song: DC 13 Wisdom</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-8 p-6">
+<h4 class="font-noto text-[10px] tracking-widest uppercase font-bold text-medium-brown mb-4">Tactical Behavior</h4>
+<p class="font-body text-ink-dark/80 text-sm leading-relaxed italic">
+                            The Matriarchs stay 30ft above the chasm, using their Luring Song to pull characters off the ledge. If gravity reverses, they use their 'Dive' reaction to grab restrained targets and drag them into the void. They flee if two of their number fall.
+                        </p>
+</div>
+</div>
+</section>
+<section class="bg-[#fef9eb] card-border rounded-lg shadow-md overflow-hidden">
+<div class="p-4 border-b border-medium-brown/30 bg-white/50">
+<h3 class="font-header text-chronicle-red text-xl uppercase tracking-wide">Consequences &amp; Transition</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 divide-x divide-medium-brown/20">
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-green-700">check_circle</span>
+<h4 class="font-header text-ink-dark text-lg">Success: Gain the Idol</h4>
+</div>
+<p class="font-body text-ink-dark/80 text-sm leading-relaxed">
+                            The party secures the Obsidian Idol. Its warmth protects them from the chasm's curse. 
+                            <span class="block mt-2 font-bold text-chronicle-red">Hook: The Unbroken Journey to Oakhaven.</span>
+</p>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-chronicle-red">cancel</span>
+<h4 class="font-header text-ink-dark text-lg">Failure: Captured</h4>
+</div>
+<p class="font-body text-ink-dark/80 text-sm leading-relaxed">
+                            The harpies drag the survivors to the High Eyrie. Equipment is scattered.
+                            <span class="block mt-2 font-bold text-chronicle-red">Hook: Prison Break in the Clouds.</span>
+</p>
+</div>
+</div>
+</section>
+<footer class="mt-8 flex flex-wrap justify-between items-center gap-6 pb-12">
+<div class="flex items-center gap-4">
+<span class="bg-chronicle-red text-white font-header px-6 py-2 rounded shadow-md text-xl tracking-widest uppercase">XP: 2,400</span>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-[#fef9eb] card-border text-ink-dark font-header uppercase tracking-wider hover:bg-stone-200 transition-colors shadow-sm">
+                        Export Encounter Card
+                    </button>
+<button class="px-12 py-3 bg-chronicle-brown text-white font-header uppercase tracking-wider hover:bg-black transition-colors shadow-lg">
+                        Done
+                    </button>
+</div>
+</footer>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,59 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Encounter Handlers > should generate draft for Setup stage with standard instructions 1`] = `
+"You are a master storyteller for a Dungeons & Dragons game. Write an immersive, real-time "read-aloud" scene for the 'Setup' stage of an encounter.
+
+**World & Setting Context:**
+A dank cave system.
+
+**Factions Involved:**
+Goblins
+
+**Encounter History So Far:**
+This is the start of the encounter.
+
+**Procedural Elements for This Stage:**
+*   **Core Event:** Party enters the cave.
+
+*   **Thematic Tags:** Dark, Ominous
+
+
+### Narrative Instruction
+Use the 'thinking' field to briefly outline the mood and focus of the scene before writing.
+
+
+**Your Task:**
+Produce a compelling narrative scene. Write in the second person ("You"), focusing on atmospheric details. Do not use game terms (like "initiative" or "DC") in the 'narrative' field.
+"
+`;
+
+exports[`Encounter Handlers > should inject Chain-of-Thought instructions for Twist stage 1`] = `
+"You are a master storyteller for a Dungeons & Dragons game. Write an immersive, real-time "read-aloud" scene for the 'Twist' stage of an encounter.
+
+**World & Setting Context:**
+Cliff edge.
+
+**Factions Involved:**
+Thieves Guild
+
+**Encounter History So Far:**
+This is the start of the encounter.
+
+**Procedural Elements for This Stage:**
+*   **Core Event:** The guide is a traitor.
+
+*   **Thematic Tags:** Betrayal
+
+
+### Chain-of-Thought Instruction (Twist Stage)
+Before writing the narrative, use the 'thinking' field to reason through the following:
+1. Subversion: How does this twist specifically subvert the party's current momentum or expectations?
+2. Emotional Impact: What core emotion should this reveal evoke? (Dread, betrayl, sudden hope, etc.)
+3. Logic Check: How does this event connect logically to the encounter's setting and factions?
+4. Stakes: How do the immediate stakes change following this reveal?
+
+
+**Your Task:**
+Produce a compelling narrative scene. Write in the second person ("You"), focusing on atmospheric details. Do not use game terms (like "initiative" or "DC") in the 'narrative' field.
+"
+`;

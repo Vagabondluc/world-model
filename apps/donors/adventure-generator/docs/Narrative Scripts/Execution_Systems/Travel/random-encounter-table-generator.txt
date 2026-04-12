@@ -1,0 +1,42 @@
+# Random Encounter Table Generator
+
+## Objective
+Create a balanced and thematic random encounter table for your dungeon.
+
+## Instructions
+1. Determine Table Size:
+   - Choose number of encounters (typically 6-20)
+   - Select appropriate die type (d6, d8, d12, d20, etc.)
+
+2. List Potential Encounters:
+   - Include creatures from dungeon's main denizens
+   - Add environmental hazards or events
+   - Consider neutral or potentially friendly encounters
+
+3. Assign Probabilities:
+   - Decide if encounters should have equal probability
+   - For varied probability, assign multiple results to common encounters
+
+4. Create Encounter Descriptions:
+   - Write brief, evocative descriptions for each encounter
+   - Include number and type of creatures (e.g., "2d4 goblins")
+   - Note any special conditions or equipment
+
+5. Add Encounter Distance:
+   - Include method for determining encounter distance (e.g., 2d6 x 10 feet)
+
+6. Include Reaction Check:
+   - Add instructions for reaction rolls
+   - Provide reaction table (2d6: 2-3 Hostile, 4-6 Unfriendly, 7-9 Neutral, 10-12 Friendly)
+
+7. Special Instructions:
+   - Note any specific rules for running encounters
+   - Include guidelines for scaling difficulty
+
+8. Format Table:
+   - Create clear, easy-to-read table
+   - Include die roll, encounter description, and any additional notes
+
+9. Test and Refine:
+   - Roll on table several times to ensure variety and balance
+   - Adjust as needed based on test results

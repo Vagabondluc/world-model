@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>World Builder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
+    rel="stylesheet" />
+  <style>
+    /* Hex Grid Custom Styles */
+    .hex-layer {
+      position: relative;
+      transform-style: preserve-3d;
+      transform: perspective(2000px) rotateX(10deg);
+      transform-origin: center center;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .hex {
+      position: relative;
+      width: 120px;
+      height: 140px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      background: #1a1122;
+      /* Base Void */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      contain: strict;
+      content-visibility: auto;
+      contain-intrinsic-size: 120px 140px;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .hex::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      background-color: transparent;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: 11;
+      transition: background-color 0.2s ease;
+      will-change: background-color;
+      border: 2px solid transparent;
+    }
+
+    /* Hover States */
+    .hex-wrapper:hover .hex {
+      z-index: 100;
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .hex-wrapper:hover .hex::before {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Active State */
+    .hex.active {
+      z-index: 60;
+      filter: drop-shadow(0 0 20px rgba(127, 19, 236, 0.8)) !important;
+    }
+
+    .hex.active::before {
+      border-color: #7f13ec;
+      background-color: rgba(127, 19, 236, 0.15);
+      box-shadow: inset 0 0 15px rgba(127, 19, 236, 0.3);
+    }
+
+    /* Pulse Ring Animation */
+    @keyframes hex-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(127, 19, 236, 0.6);
+      }
+
+      100% {
+        box-shadow: 0 0 0 20px rgba(127, 19, 236, 0);
+      }
+    }
+
+    .hex.active {
+      animation: hex-pulse 1.5s ease-out infinite;
+    }
+
+    @keyframes hint-bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .animate-hint {
+      animation: hint-bounce 1s ease-in-out infinite;
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      20% {
+        transform: translateX(-4px);
+      }
+
+      40% {
+        transform: translateX(4px);
+      }
+
+      60% {
+        transform: translateX(-2px);
+      }
+
+      80% {
+        transform: translateX(2px);
+      }
+    }
+
+    .animate-shake {
+      animation: shake 0.3s ease-in-out;
+    }
+
+    /* Tap Feedback */
+    .tap-feedback:active {
+      transform: scale(0.96);
+      opacity: 0.85;
+      transition: all 0.1s;
+    }
+
+    /* --- BIOME VISUALS --- */
+
+    /* Water: Deep Blue */
+    .hex.glow-water {
+      background: linear-gradient(135deg, #0f2e40 0%, #08121c 100%);
+    }
+
+    .hex.glow-water::before {
+      background-color: rgba(6, 182, 212, 0.1);
+      border-color: rgba(6, 182, 212, 0.2);
+    }
+
+    .hex.glow-water:hover {
+      filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.5));
+    }
+
+    /* Forest: Emerald */
+    .hex.glow-forest {
+      background: linear-gradient(135deg, #062c23 0%, #02120e 100%);
+    }
+
+    .hex.glow-forest::before {
+      background-color: rgba(16, 185, 129, 0.1);
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    .hex.glow-forest:hover {
+      filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.4));
+    }
+
+    /* Mountain: Purple/Slate */
+    .hex.glow-mountain {
+      background: linear-gradient(135deg, #2e1a40 0%, #150a1f 100%);
+    }
+
+    .hex.glow-mountain::before {
+      background-color: rgba(192, 132, 252, 0.1);
+      border-color: rgba(192, 132, 252, 0.2);
+    }
+
+    .hex.glow-mountain:hover {
+      filter: drop-shadow(0 0 15px rgba(192, 132, 252, 0.4));
+    }
+
+    /* Plains: Olive */
+    .hex.glow-plains {
+      background: linear-gradient(135deg, #1a2e1a 0%, #0d160d 100%);
+    }
+
+    .hex.glow-plains::before {
+      background-color: rgba(163, 230, 53, 0.05);
+    }
+
+    .hex.glow-plains:hover {
+      filter: drop-shadow(0 0 15px rgba(163, 230, 53, 0.3));
+    }
+
+    /* Desert: Amber */
+    .hex.glow-desert {
+      background: linear-gradient(135deg, #382212 0%, #1f1008 100%);
+    }
+
+    .hex.glow-desert::before {
+      background-color: rgba(245, 158, 11, 0.1);
+    }
+
+    .hex.glow-desert:hover {
+      filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.4));
+    }
+
+    /* Swamp: Teal/Brown */
+    .hex.glow-swamp {
+      background: linear-gradient(135deg, #132e2b 0%, #081413 100%);
+    }
+
+    .hex.glow-swamp::before {
+      background-color: rgba(20, 184, 166, 0.1);
+    }
+
+    .hex.glow-swamp:hover {
+      filter: drop-shadow(0 0 15px rgba(20, 184, 166, 0.4));
+    }
+
+    /* City: Gold/Industrial */
+    .hex.glow-city {
+      background: linear-gradient(135deg, #2e200a 0%, #1f1405 100%);
+    }
+
+    .hex.glow-city::before {
+      background-color: rgba(251, 191, 36, 0.15);
+      border: 2px solid rgba(251, 191, 36, 0.5);
+    }
+
+    .hex.glow-city:hover {
+      filter: drop-shadow(0 0 25px rgba(251, 191, 36, 0.5));
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1a1122;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #362348;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4d3266;
+    }
+
+    /* Correct Material Symbols Definition */
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .no-select {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            primary: { DEFAULT: '#7f13ec', hover: '#6b11c7', light: '#a85ff4' },
+            bg: { dark: '#191022', panel: '#1a1122', input: '#261933', lighter: '#22172b' },
+            text: { main: '#ffffff', muted: '#ad92c9', dim: '#6b5a80' },
+          },
+          boxShadow: { 'glow': '0 0 15px rgba(127, 19, 236, 0.5)' }
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@19.0.0?external=react",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client?external=react",
+    "zod": "https://esm.sh/zod@3.23.8",
+    "zustand": "https://esm.sh/zustand@5.0.3?external=react",
+    "zustand/middleware": "https://esm.sh/zustand@5.0.3/middleware?external=react",
+    "idb-keyval": "https://esm.sh/idb-keyval@6.2.1",
+    "@google/genai": "https://esm.sh/@google/genai@latest",
+    "ogl": "https://esm.sh/ogl@1.0.11",
+    "three": "https://esm.sh/three@0.160.0",
+    "three/addons/": "https://esm.sh/three@0.160.0/examples/jsm/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "zustand/": "https://esm.sh/zustand@^5.0.10/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body
+  class="bg-bg-dark text-text-main h-screen overflow-hidden antialiased selection:bg-primary/30 selection:text-white no-select">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+## Template System for Modifying Monsters and NPCs
+
+Templates provide a way to modify existing creatures or create variants with specific themes. Below are several templates and transformations you can apply to monsters or NPCs.
+
+### Shadow Dragon Template
+
+Applicable to: True dragons only (not dracoliches)
+Prerequisites: Born in the Shadowfell or remained there for several years
+
+Modifications:
+- Damage Resistances: Add necrotic damage
+- Skills: Double proficiency bonus for Dexterity (Stealth) checks
+- New Trait - Living Shadow: Resistance to non-force, non-psychic, and non-radiant damage while in dim light or darkness
+- New Trait - Shadow Stealth: Can take the Hide action as a bonus action while in dim light or darkness
+- New Trait - Sunlight Sensitivity: Disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight while in sunlight
+- Modified Action - Bite: Change damage type to necrotic if it was acid, cold, fire, lightning, or poison
+- New Action - Shadow Breath: Replace any damage-dealing breath weapon with necrotic damage; humanoids reduced to 0 HP become shadows under the dragon's control
+
+Note: The shadow dragon might retain or lose any or all of its lair actions or inherit new ones, as the DM sees fit.
+
+### Half-Dragon Template
+
+Applicable to: Beasts, humanoids, giants, or monstrosities
+
+Modifications:
+- Senses: Add blindsight (10 ft) and darkvision (60 ft)
+- Damage Resistances: Add resistance based on dragon color:
+  - Black or copper: Acid
+  - Blue or bronze: Lightning
+  - Brass, gold, or red: Fire
+  - Green: Poison
+  - Silver or white: Cold
+- Languages: Add Draconic
+- New Action - Breath Weapon: Add breath weapon based on creature's size:
+  - Large or smaller: As a wyrmling (Challenge 2 or higher)
+  - Huge: As a young dragon (Challenge 7 or higher)
+  - Gargantuan: As an adult dragon (Challenge 8 or higher)
+
+Note: To avoid recalculating the creature's challenge rating, apply the template only to a creature that meets the optional prerequisite in the Breath Weapon section. Otherwise, use the guidelines in the Dungeon Master's Guide to recalculate the rating after applying the template.
+
+### Spore Servant Template
+
+Applicable to: Any Large or smaller creature (except constructs, elementals, oozes, plants, or undead)
+
+Modifications:
+- Retained Characteristics: 
+  - Armor Class, hit points, Hit Dice, Strength, Dexterity, Constitution, vulnerabilities, resistances, and immunities
+- Lost Characteristics:
+  - Original saving throw and skill bonuses, special senses, and special traits
+  - Any action that isn't Multiattack or a melee weapon attack that deals bludgeoning, piercing, or slashing damage
+  - Ability to deal damage types other than bludgeoning, piercing, or slashing, unless from equipment
+- Type: Changes to plant, loses any tags
+- Alignment: Changes to unaligned
+- Speed: Reduce all speeds by 10 ft (minimum 5 ft)
+- Ability Scores: Int 2 (-4), Wis 6 (-2), Cha 1 (-5)
+- Senses: Blindsight 30 ft, blind beyond this radius
+- Condition Immunities: Add blinded, charmed, frightened, and paralyzed
+- Languages: Loses all languages, responds to myconid rapport spores
+- New Attack: If no other means of dealing damage, gains unarmed strike
+  - Medium or smaller: 1d4 + Strength modifier bludgeoning damage
+  - Large: 2d4 + Strength modifier bludgeoning damage
+
+### Vampirism (for Humanoid NPC)
+
+Modifications:
+- Ability Scores: Strength, Dexterity, and Constitution become 18 if not higher
+- Add vampire's damage resistances, darkvision, traits, and actions
+- Attack and damage rolls for vampire attacks are based on Strength
+- Charm save DC: 8 + proficiency bonus + Charisma modifier
+- Alignment changes to lawful evil
+
+Note: The transformation can be reversed with a wish spell, or if the character is killed and brought back to life.
+
+### Lycanthropy (for Humanoid NPC)
+
+General Modifications:
+- Gain lycanthrope's speeds in non-humanoid form
+- Gain damage immunities, traits, and actions that don't involve equipment
+- Gain proficiency with natural attacks (bite, claws)
+- Cannot speak in animal form
+
+Specific Lycanthrope Modifications:
+1. Werebear: 
+   - Strength becomes 19 if not higher
+   - +1 AC in bear or hybrid form (from natural armor)
+   - Attack and damage rolls for natural weapons based on Strength
+
+2. Wereboar: 
+   - Strength becomes 17 if not higher
+   - +1 AC in boar or hybrid form (from natural armor)
+   - Attack and damage rolls for tusks based on Strength
+   - Charge trait DC: 8 + proficiency bonus + Strength modifier
+
+3. Wererat: 
+   - Dexterity becomes 15 if not higher
+   - Attack and damage rolls for bite based on higher of Strength or Dexterity
+
+4. Weretiger: 
+   - Strength becomes 17 if not higher
+   - Attack and damage rolls for natural weapons based on Strength
+   - Pounce trait DC: 8 + proficiency bonus + Strength modifier
+
+5. Werewolf: 
+   - Strength becomes 15 if not higher
+   - +1 AC in wolf or hybrid form (from natural armor)
+   - Attack and damage rolls for natural weapons based on Strength
+
+Curse Transmission:
+- Non-lycanthrope humanoids hit by an attack carrying the curse must make a Constitution saving throw
+- DC: 8 + lycanthrope's proficiency bonus + lycanthrope's Constitution modifier
+- On failed save, the character is cursed with lycanthropy
+
+Note: A remove curse spell can rid an afflicted lycanthrope of the curse, but a natural born lycanthrope can be freed of the curse only with a wish spell. The DM is free to decide that a change in alignment places the character under DM control until the curse of lycanthropy is removed.
+
+### Shadow Creature Template
+
+Applicable to: Any creature type except undead
+
+Base Modifications:
+- Type changes to undead
+- Alignment shifts towards evil
+- Add damage resistance to necrotic damage
+- Add damage vulnerability to radiant damage
+- Gain darkvision 60 ft if they don't already have it
+- New Trait - Sunlight Weakness: While in sunlight, the creature has disadvantage on attack rolls, ability checks, and saving throws.
+- New Trait - Shadow Stealth: While in dim light or darkness, the creature can take the Hide action as a bonus action.
+
+Additional Powers (choose 2-4 based on the desired power level):
+
+1. Shadow Blend: As a bonus action, the creature can become invisible while in dim light or darkness. The invisibility lasts until the creature moves into bright light, takes an action, or takes damage.
+
+2. Life Drain: The creature's attacks deal an additional 1d6 necrotic damage. The creature regains hit points equal to half the necrotic damage dealt.
+
+3. Shadow Jump: As an action, the creature can teleport up to 30 feet to an unoccupied space it can see that is in dim light or darkness.
+
+4. Shadow Puppetry: As an action, the creature can manipulate the shadows of objects within 60 feet, creating minor illusions or causing small objects to move slightly.
+
+5. Fear Aura: Any creature that starts its turn within 10 feet of the shadow creature must succeed on a Wisdom saving throw (DC 8 + proficiency bonus + Charisma modifier) or be frightened until the start of its next turn.
+
+6. Shadow Form: As an action, the creature can transform into a shadow, gaining the amorphous trait and the ability to move through spaces as narrow as 1 inch wide without squeezing. It reverts to its normal form as a bonus action or if it dies.
+
+7. Nightmare Touch: The creature's melee attacks can target a sleeping creature. If hit, the target must make a Wisdom saving throw or be trapped in a nightmare, taking 2d10 psychic damage and gaining no benefit from the rest.
+
+8. Shadow Curse: Once per day, the creature can curse a target it has damaged. The cursed target has disadvantage on saving throws against the shadow creature's abilities and takes an extra 2d6 necrotic damage from its attacks. The curse lasts until removed by a remove curse spell or similar magic.
+
+When applying this template, adjust the creature's challenge rating based on the number and power of the additional abilities chosen. Consider the creature's original abilities and how they might be enhanced or altered by its new shadowy nature.
+
+### Using Templates
+
+When applying these templates:
+1. Carefully consider the impact on the creature's challenge rating
+2. Adjust hit points, AC, and damage output as needed to maintain balance
+3. Consider creating unique traits or actions that fit the new theme
+4. Ensure the modified creature fits your campaign's tone and challenges
+
+Remember, these templates are guidelines. Feel free to adjust them to better suit your game's needs or to create entirely new templates for other creature types or themes.

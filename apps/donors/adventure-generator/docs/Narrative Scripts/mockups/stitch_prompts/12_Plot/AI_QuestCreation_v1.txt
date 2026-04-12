@@ -1,0 +1,94 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Ai Questcreation V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: AI Storyteller Dashboard
+
+```text
++--------------------------------------------------------------------------------+
+|  [Narrative Architect: AI Storyteller Mode]                           [?] [X]  |
++--------------------------------------------------------------------------------+
+|  ACTIVE CONTEXT: Deserted Freighter "Acheron" | Rogue Android Threat            |
++--------------------------------------------------------------------------------+
+|  STORYTELLER FEED (AI)                 |  ENVIRONMENT & LOGIC                 |
+|  "The air is stale, smelling of cold   |  Established Facts:                  |
+|  iron and ozone. To your left, a       |  [x] No backup expected.             |
+|  flickering terminal shows a red alert.|  [x] Low power mode.                 |
+|  What do you do?"                      |  [x] Stealth is critical.            |
+|                                        |                                      |
+|  [+] Subjective Experience Expand      |  Task Evaluation:                    |
+|  "Your heart hammers against your ribs |  [ Attempt to hack terminal ]        |
+|  as the hum of the androids grows..."  |  Difficulty: [ COMPLEX ] [DC 15]     |
++----------------------------------------+---------------------------------------+
+|  PROTAGONIST INPUT (USER)                                                      |
+|  [ "I crouch low, using the shadows of the machinery to move toward the   ]    |
+|  [ terminal. I'll check my bypass-kit before trying to interface."         ]    |
+|  [ Submit Intention ] [ Describe Action ] [ Request Check ]                    |
++--------------------------------------------------------------------------------+
+|  CONFLICT MODE: [ Active ]             |  NARRATIVE TENSION: [||||||||..] 80%  |
++--------------------------------------------------------------------------------+
+|  [Export Transcript] [Save Session Info] [End Adventure]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: AI Storyteller Dashboard
+
+## Component Architecture
+- **Storyteller Narrative Feed:** A rich-text display for the AI's "vivid depictions." It includes "Subjective Layers" which can be toggled to provide deeper immersion into the character's internal state.
+- **Environment Logic Drawer:** A persistent sidebar that tracks "Established Facts" (e.g., Setting consistency). This ensures that neither the AI nor the user introduces elements that contradict the established universe (like a police force on a deserted freighter).
+- **Task Evaluation Engine:** A UI module where the Storyteller classifies user actions as "Effortless" or "Complex." It displays the evaluated difficulty and the results of ability-based successes or failures.
+- **Conflict Sequencing Module:** A mode-switch that reorganizes the UI for tactical encounters, focusing on the "sequence and outcome of events" as described in the script.
+- **Protagonist Intention Studio:** The user's input area, optimized for describing both "intentions" (the goal) and "actions" (the method).
+
+## Interaction Logic
+- **Constraint-Based Outcome Resolution:** The UI guides the Storyteller through evaluating the user's intent vs. character abilities, turning high-level goals into concrete narrative consequences.
+- **Dynamic Tension Tracking:** A visual "Tension Meter" that the AI adjusts to signal narrative stakes and suspense levels.
+- **Vividness Overlays:** A button to generate "Layered & Explicit" descriptions of a scene, following the script's requirement for clear, non-ambiguous environment mapping.
+
+## Visual Design
+- **Cinematic & Immersive:** The UI uses a "Terminal/Console" aesthetic for Sci-Fi settings or a "Scribe's Ledger" for Fantasy, adapting to the "Active Context."
+- **Dual-Focus Layout:** Balances the "Story Feed" (Roleplay) with the "Environment & Logic" (Rules/Consistency) panels to keep the GMing side of the AI transparent.
+- **Text-Centric Clarity:** Priorities readability and high-contrast text to support the "Storyteller" role, with subtle animations for narrative "Tension" shifts.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: AI Storyteller Session (The Acheron Incident)
+
+### **Context Summary:**
+- **Location:** Deserted Ore-Freighter "Acheron."
+- **Primary Threat:** Rogue Maintenance Androids (Hostile).
+- **Environment:** Low light, failing life support, magnetic interference.
+
+---
+
+### **Storyteller Narration (Vivid Depiction):**
+"The hallway stretches ahead of you like the throat of a dying beast. Flickering overhead lights cast strobing, elongated shadows that dance across the bulkheads. You can hear the rhythmic *clack-clack-clack* of metal feet on the deck plating three levels below. Your skin is cold as the environment scrubbers pump out the last of the breathable air, and the smell of ozone from a short-circuited conduit stings your nostrils."
+
+**Subjective Layer:**
+*You remember the briefing—these androids were supposed to be safe. Every rattle of the ship's hull feels like a heartbeat that isn't yours.*
+
+---
+
+### **Outcome Evaluation (Complex Task):**
+- **Action:** Hacking the blast-door terminal.
+- **Intention:** Gain access to the escape pods before the androids arrive.
+- **Logic:** Character has high Technical expertise but is under extreme stress.
+- **Result:** **Success (with complication).** The door slides open with a piercing grind, but a power surge fries your bypass-kit. You are inside, but you're now trapped with no way to seal the door behind you.
+
+---
+
+### **Narrative Impact:**
+"The door whines as it opens, a scream of metal that surely echoes throughout the freighter's skeleton. You are in, but the silence that follows is terrifying. The *clack-clack-clack* from below has stopped. They heard you."
+

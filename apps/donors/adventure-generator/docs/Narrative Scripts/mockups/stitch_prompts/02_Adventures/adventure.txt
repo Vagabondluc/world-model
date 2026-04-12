@@ -1,0 +1,92 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Adventure".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Quest & Travel Architect (Phase 4 Suite)
+
+```text
++--------------------------------------------------------------------------------+
+|  [Quest Architect: Adventure Generator]                               [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Mode: [ SEED GENERATOR (Arcane) ] [ TRAVEL (TES) ] [ CO-PILOT ROLEPLAY ]      |
++--------------------------------------------------------------------------------+
+|  SEED GENERATOR (1d100 Roll)           |  TRAVEL EVENT MAP (TES)               |
+|  [ Action  ] [ McGuffin  ] [ Subject ] |  Dist: [ FAR ] (2 Event Slots)         |
+|  [ Rescue  ] [ Spirit    ] [ Crypt   ] |                                       |
+|  [ Solve   ] [ Murder    ] [ Revelry ] |  EVENT 1: [ BLUE - Roleplay ]         |
+|  [ Forge   ] [ Pact      ] [ Eclipse ] |  - Diplomatic Misunderstanding...     |
+|                                        |                                       |
+|  [Generate 5 Seeds] [Lock & Expand]    |  EVENT 2: [ PURPLE - RP + Combat ]    |
+|                                        |  - Negotiation under tension...       |
++----------------------------------------+---------------------------------------+
+|  CO-PILOT CONSOLE (Narrative Sync)                                             |
+|  [STORYTELLER]: "The shadows of the crypt lengthen as you approach..."         |
+|  [PROTAGONIST]: I raise my shield and whisper a prayer to Helm.                |
+|                                                                                |
+|  [!] TASK EVALUATION REQUIRED: [ Religion Check (DC 14) ]                      |
+|  [Succeed] [Fail] [Success at a Cost]                                          |
++--------------------------------------------------------------------------------+
+|  [Export Quest Draft] [Log Adventure Logs] [Run Local Script]         [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Quest & Travel Architect (Phase 4 Suite)
+
+## Component Architecture
+- **Tri-Mode Dashboard:** A tabbed interface that switches between "Seed Generator" (Procedural content), "Travel Event Map" (Narrative sequencing), and "Co-Pilot Console" (Active roleplay).
+- **Relational Reel UI:** A visual tool for the Arcane Library method that mimics three spinning reels to combine an Action, McGuffin, and Subject into a premise.
+- **Spectrum Event Cards:** Color-coded cards (Red, Blue, Yellow, etc.) used to visualize the Traveling Event System (TES). These can be dragged onto a linear "Journey Slot" based on distance (Close, Far, Very Far).
+- **Decision Resolution Modal:** A proactive pop-up in the Co-pilot mode that pauses the narrative when a "Complex Task" occurs, prompting the DM to evaluate success/failure.
+
+## Interaction Logic
+- **Abstract Distance Scaling:** Selecting "Very Far" in the TES mode automatically unlocks three event slots, while "Close" provides only one.
+- **Narrative Sync Hub:** A dual-stream text area specifically designed for the Protocol where the User is the PROTAGONIST and the AI is the STORYTELLER.
+- **Stakes Expansion Logic:** When a seed is chosen, the UI generates mandatory "Context" fields: Origin, Unique Position, and Stakes.
+
+## Visual Design
+- **Pathfinder / Cartography Aesthetic:** Uses parchment backgrounds, ink-splatter accents, and tactical compass icons.
+- **Subtle Coding for Events:** Colors (Red, Blue, Purple) are used functionally to denote the *type* of interaction (Combat, Social, Hybrid) at a glance.
+- **Minimalist Logistics:** Purposely hides complex resource tracking (food, weight) in favor of large-scale "Drama" indicators, adhering to the Pointy Hat TES philosophy.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Quest & Travel Architect (Phase 4 Highlight)
+
+# Travel: The Frozen Waste of Zann
+**Distance:** Very Far (3 Events)
+
+### 1. Journey Sequence (TES)
+1. **[YELLOW - Exploration]**: Crossing the Glass Flats. DC 15 Acrobatics to avoid crystalline shards. 
+2. **[PURPLE - Hybrid]**: Encounter with a starving Frost Giant. Negotiation or Combat?
+3. **[RED - Combat]**: Ambush by the Rival's advance scout team (3x Guards).
+
+### 2. Quest Seed (Arcane Library Roll)
+- **Result:** "Deliver the Hunter to the pinnacle of the Mage's Spire."
+- **Origin:** The Hunter is the only one who can track the Spire-Drake.
+- **Unique Position:** The heroes possess the *Locket of Gravity*, necessary to scale the spire.
+- **Stakes:** If they fail, the Drake will consume the city's archive.
+
+---
+
+### 3. Co-Pilot RP Log (Sample)
+**STORYTELLER**: The wind howls against the obsidian stones of the spire. You can see the Hunter, Vax, shivering behind you. "We're almost there," he gasps. "Can you feel the air thinning?"
+
+**PROTAGONIST**: I activate the Locket of Gravity and reach for a ledge. "Stay close, Vax. Don't look down."
+
+**STORYTELLER (Decision Point)**: 
+The ledge is slick with frost. This is a **Complex Task**. 
+- **Check Required:** Athletics (Strength).
+- **Evaluation:** If you succeed, you reach the next platform smoothly. If you fail, you slip, and Vax's weight nearly pulls you both off.
+

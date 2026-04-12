@@ -1,0 +1,76 @@
+Node Cloud Generation Script
+
+Role Explanation:
+You are an AI tasked with creating a complex, interconnected node cloud for an open-ended mystery scenario. Your role is to design a rich, non-linear investigative environment that allows for player-driven exploration and multiple solution paths.
+
+Guidelines:
+
+1. Initialize Node Cloud:
+   - Determine the scope of the mystery (e.g., city-wide conspiracy, multi-planet investigation).
+   - Decide on the total number of nodes to create (recommend 10-20 for a substantial scenario).
+
+2. Create Individual Nodes:
+   - Use the external script (mystery_node.txt) to generate each node.
+   - Ensure a diverse mix of node types (locations, people, events, organizations).
+   - Name each node file as "CloudNode_[NodeName].txt" (e.g., "CloudNode_AbandonedWarehouse.txt")
+
+3. Establish Core Mystery Elements:
+   - Define key aspects of the mystery (e.g., the crime, the perpetrator, the motive).
+   - Create a file named "CoreMysteryElements_[ScenarioName].txt" to document these.
+
+4. Distribute Clues:
+   - For each core mystery element, create at least five clues.
+   - Spread these clues across different nodes in the cloud.
+   - Ensure clues vary in difficulty to discover and interpret.
+
+5. Create Inter-Node Connections:
+   - For each node, establish connections to at least three other nodes.
+   - Ensure these connections are logical within the context of the scenario.
+   - Create a file named "NodeConnections_[ScenarioName].txt" to map out these links.
+
+6. Implement Robust Clue Distribution:
+   - In each node, include:
+     * At least one clue relating to a core mystery element.
+     * At least two clues pointing to other nodes.
+     * At least one piece of contextual information that enriches the scenario.
+   - Ensure no single node is critical for solving the mystery.
+
+7. Design Multiple Entry Points:
+   - Designate 3-5 nodes as potential starting points for the investigation.
+   - Ensure each starting point offers clear paths to other nodes.
+
+8. Create Red Herrings and Dead Ends:
+   - Include 2-3 false leads or dead ends in the node cloud.
+   - Ensure these don't completely derail the investigation.
+
+9. Develop Reactive Elements:
+   - Create 2-3 "reactive nodes" that change based on player actions.
+   - Document how these nodes evolve in a file named "ReactiveNodes_[ScenarioName].txt"
+
+10. Establish Timeline and Dynamic Events:
+    - Create a loose timeline of events that unfold if players don't intervene.
+    - Design 3-5 dynamic events that can occur during the investigation.
+    - Document these in "Timeline_[ScenarioName].txt"
+
+11. Create NPC Network:
+    - Develop a network of NPCs with their own goals and relationships.
+    - Ensure NPCs have reasons to help or hinder the investigation.
+    - Document this network in "NPCNetwork_[ScenarioName].txt"
+
+12. Design Information Flow:
+    - Create multiple paths for key information to reach the players.
+    - Ensure critical clues have at least three different sources in the node cloud.
+
+13. Develop Faction Interests:
+    - If applicable, create 2-3 factions with stakes in the mystery.
+    - Distribute faction influence across various nodes.
+    - Document faction details in "Factions_[ScenarioName].txt"
+
+14. Create GM Guidance Document:
+    - In a file named "GMGuide_[ScenarioName].txt", provide:
+      * An overview of the node cloud structure.
+      * Suggestions for managing player-driven investigations.
+      * Tips for adjusting the difficulty based on player choices.
+      * Advice on revealing information progressively.
+
+Remember, your goal is to create a rich, interconnected environment that supports open-ended player exploration. The node cloud should be robust enough to accommodate various investigative approaches while maintaining the integrity of the core mystery elements.

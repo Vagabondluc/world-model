@@ -1,0 +1,329 @@
+# TOC Candidates: Voxel PDF
+
+Heuristic heading candidates extracted from early lines of each page.
+
+- Page 1: voxels
+- Page 2: 🌊  Smooth / volumetric voxels (density fields)
+- Page 3: You usually choose between:
+- Page 4: 4. neighbor helpers
+- Page 5: Memory per chunk @ 16³:
+- Page 6: 📍  4) World ↔ Chunk coordinate conversion
+- Page 7: Use them for:
+- Page 8: ✔  background meshing
+- Page 9: What you need is:
+- Page 10: Scale Purpose
+- Page 11: At scale 2 → painted green with mountain icon.
+- Page 12: This is what makes geology believable.
+- Page 13: 5️⃣  Surface dressing
+- Page 14: Macro classifier
+- Page 15: You call this differently per scale.
+- Page 16: 🧠  What AAA / research engines do
+- Page 17: planet simulation (hex authority)
+- Page 18: Seed is CRITICAL for determinism.
+- Page 19: Deterministic noise helper
+- Page 20: 🧱  Step 4 — Biome surface material policy
+- Page 21: Boom 💥
+- Page 22: ✨  What you just unlocked
+- Page 23: But macro terrain stays.
+- Page 24: how many voxel are we talking about for an planet when
+- Page 25: Earth surface area ≈ 510 million km² = 5.1×10¹⁴ m²
+- Page 26: Global: hex biome authority + 2D fields (height/climate)
+- Page 27: That’s your global “voxel” count if you treat each hex as one surface cell.
+- Page 28: Store per-hex: plateId, crustThickness, mantleTemp, age, elevation bias, stress/strain,
+- Page 29: If you also want tectonics (depth)
+- Page 30: Scale Hex size (flat-to-flat) Approx surface cells (Earth)
+- Page 31: is it heavy to process in typescript?
+- Page 32: ❌  giant nested loops over millions every frame
+- Page 33: But nobody needs that.
+- Page 34: ✔  world logic in JS
+- Page 35: 🧪  Fun fact
+- Page 36: That’s usually the moment projects go from scary → easy.
+- Page 37: The trick is:
+- Page 38: You NEVER delete authority.
+- Page 39: 🧊  STEP 5 — Deterministic regeneration
+- Page 40: rebuild when needed
+- Page 41: Typical frame:
+- Page 42: This is 80% of planet runtime design.
+- Page 43: Ready for that level?
+- Page 44: Terrain must be consistent across zoom levels
+- Page 45: Output Expectations
+- Page 46: Performance Rules
+- Page 47: Default Task
+- Page 48: 3) Derived global boundaries (cheap but powerful)
+- Page 49: Minimal vector helpers (keep it tight and allocation-free)
+- Page 50: Standoff + storm index + aurora oval (simple but convincing)
+- Page 51: How this plugs into your 8 scales
+- Page 52: If you want tectonics + magnetosphere to talk to each other
+- Page 53: magnetosphere state update per turn
+- Page 54: 2) Deterministic RNG + helpers (fast, stable)
+- Page 55: 3) Dipole moment vector (tilt included)
+- Page 56: function solarPhase(turn: number, config: MagnetoConfig) {
+- Page 57: Knob tip:
+- Page 58: Initialize:
+- Page 59: You’ll want geomagnetic latitude of a hex, relative to dipole axis.
+- Page 60: 7) How this links to your terrain/biomes/voxels
+- Page 61: If turns are monthly
+- Page 62: If you tell me what your turn duration is (daily / weekly / monthly / yearly / “abstract”), I’ll
+- Page 63: Scales decide:
+- Page 64: You do not store per-turn states.
+- Page 65: Generated once, deterministically, for a long span (e.g. centuries).
+- Page 66: export function sampleMagnetosphere(
+- Page 67: This function is:
+- Page 68: Smooth visuals.
+- Page 69: 🟢  Final verdict
+- Page 70: Subdivision method: Recursive face splitting (each triangle
+- Page 71: Thresholds (BiomeMapper):
+- Page 72: which may not reflect true topological constraints.
+- Page 73: tectonic plate generation logic is not fully documented in
+- Page 74: calculation
+- Page 75: Rule: anything not in CellAuthority is derived view data.
+- Page 76: Biome → surface material:
+- Page 77: B) Column model (cheap, tectonic-friendly)
+- Page 78: You’ll implement:
+- Page 79: 8) What I’d do next (no more ambiguity)
+- Page 80: 1️⃣  Two distinct systems (right now)
+- Page 81: Purpose
+- Page 82: 4️⃣  What I was referring to in my last answers
+- Page 83: seam hacks
+- Page 84: run gameplay on the voxel globe
+- Page 85: But not at the same level of realization.
+- Page 86: Examples:
+- Page 87: Hex globe view = view
+- Page 88: The hex globe renderer is just one consumer.
+- Page 89: Different visuals.
+- Page 90: this type of rock. we need it to be geologicly accurate and
+- Page 91: The matrix maps conditions → substance + phase.
+- Page 92: Soil is not rock — it’s a weathered layer.
+- Page 93: Condition Resulting Matter
+- Page 94: 6️⃣  The resolver (voxel → matter)
+- Page 95: This is:
+- Page 96: No voxel migration.
+- Page 97: I’ll add this in a way that:
+- Page 98: Material Typical Environment
+- Page 99: 5️⃣  How to derive paleo-environment (cheap &
+- Page 100: You can modulate this by moisture, rivers, time later.
+- Page 101: 8️⃣  Integrate into your existing resolver
+- Page 102: 9️⃣  Why this survives continental drift
+- Page 103: Tell me which one you want next and I’ll extend the system cleanly.
+- Page 104: slope comes from neighboring hex height differences (already available)
+- Page 105: You can scale globally later.
+- Page 106: Instead of storing soil depth, we compute:
+- Page 107: Everything else (sandstone, shale, basement) stays untouched.
+- Page 108: 4️⃣  Unconformities & missing layers
+- Page 109: You define a Biome Signature as a vector of measurements extracted from voxels.
+- Page 110: B) Aggregate statistics
+- Page 111: This is cheap, deterministic, explainable.
+- Page 112: This is transparent, debuggable, tunable.
+- Page 113: Scale Sampling
+- Page 114: 1️⃣  River incision (channelized erosion following flow
+- Page 115: (“number of upstream cells” = cheap proxy for contributing area)
+- Page 116: Step 1 — Flow direction (receiver)
+- Page 117: Real landscapes have sinks; but flow graphs need to handle them.
+- Page 118: Step 4 — Incision + alluvium handling
+- Page 119: That’s already enough to get:
+- Page 120: How this plugs into your soil/strata model
+- Page 121: Next upgrades (pick one)
+- Page 122: In raw noise terrain:
+- Page 123: We also know which cells are ocean (elevation <= seaLevel).
+- Page 124: Implementation (simplified, but correct)
+- Page 125: No inland cell is lower than its drainage outlet
+- Page 126: Apply breach
+- Page 127: Why this works with your system
+- Page 128: ✔  No stuck rivers
+- Page 129: What we add (conceptually)
+- Page 130: Transport parameters
+- Page 131: Step 2 — Route sediment downstream (top-down)
+- Page 132: What this produces (naturally)
+- Page 133: Your earlier incision step:
+- Page 134: Tune Kt and dtYears together.
+- Page 135: 0) Add the minimum new per-cell fields
+- Page 136: bank strength (vegetation/clay/ice → cohesion)
+- Page 137: What this gives you visually/behaviorally
+- Page 138: export type AvulsionParams = {
+- Page 139: Updating channelBedOffset (aggradation/incision)
+- Page 140: transport capacity collapses (slope ~ 0)
+- Page 141: How to mark lake cells
+- Page 142: If you tell me one thing, I can tune defaults correctly
+- Page 143: 3️⃣  Unit-aware value wrapper (lightweight, optional)
+- Page 144: Do this ( ✔  good):
+- Page 145: Rule
+- Page 146: Voxel engine, UI overlays, debug tools can switch units freely.
+- Page 147: 1 0️⃣  Minimal checklist to implement now
+- Page 148: geologically grounded
+- Page 149: 3️⃣  Coastal regimes (this matters a LOT)
+- Page 150: 5️⃣  Inputs to coastline evolution (per cell)
+- Page 151: This is why:
+- Page 152: long-term transgression / regression
+- Page 153: rivers deliver sediment
+- Page 154: Can run during:
+- Page 155: Great — these are both “coastline specials” that sit on top of your long-term coastline +
+- Page 156: Barrier formation rule
+- Page 157: pick the neighbor with highest elevation (most “inland”) among non-ocean
+- Page 158: Barrier migration (rollover) under sea-level rise
+- Page 159: What you’ll see: long sandy lines, back-barrier shallow water, inlets, and landward
+- Page 160: Step 2 — Find valley lines (use your flow accumulation)
+- Page 161: acc: Map<string, number>,
+- Page 162: Optional: Fjord sill at the mouth (nice realism)
+- Page 163: Where to plug them in your pipeline
+- Page 164: 2. Fjords via glacial overdeepening
+- Page 165: All distances, elevations, thicknesses: meters
+- Page 166: 4. Coastal Regime Classification
+- Page 167: Condition Requirement
+- Page 168: 5.4 Inlets
+- Page 169: 6.3 Fjord Parameters
+- Page 170: 8. Barrier migration & inlet maintenance
+- Page 171: coastalFeature
+- Page 172: export type CoastalFeature = "NONE" | "BARRIER" | "LAGOON" | "INLET" | "FJORD";
+- Page 173: isGlaciated?: boolean;
+- Page 174: avulsePerchMeters: number;
+- Page 175: waveEnergyAt: (cell: HydroCell) => number; // 0..1
+- Page 176: // Channel bed dynamics + style + avulsion (optional but recommended)
+- Page 177: // ---- Orchestrator configuration ----
+- Page 178: cells: Map<CellId, HydroCell>,
+- Page 179: kernels.updateChannelBeds(cells);
+- Page 180: If you paste this in today, you can wire your existing functions into HydroKernels one by
+- Page 181: deterministic
+- Page 182: LOD voxel rendering
+- Page 183: solidity
+- Page 184: regenerated from seed + coordinates
+- Page 185: fully open source
+- Page 186: erosion
+- Page 187: 5️⃣  Concrete extraction list (actionable)
+- Page 188: 7️⃣  If you want next
+- Page 189: If you see poor performance, it’s almost always CPU-side misuse, not GPU limits.
+- Page 190: That’s:
+- Page 191: 100,000 visible voxels → ~100 MB ( ❌  too big)
+- Page 192: 10×–100× fewer vertices
+- Page 193: GPU (three.js)
+- Page 194: 9️⃣  Practical recommendation for your stack
+- Page 195: so. i want an system where we can click on a hex. an open
+- Page 196: Hex cells (geodesic)
+- Page 197: plateId
+- Page 198: I recommend A + C:
+- Page 199: 2. Route them through sub-hex grid
+- Page 200: You can even pause the globe render underneath.
+- Page 201: accumulated changes are folded back into:
+- Page 202: but we can save an texture bitmap of an smaller scale and
+- Page 203: LOD Scale Role
+- Page 204: These are not textures for rendering yet.
+- Page 205: You bake compressed, purpose-built textures upward
+- Page 206: Then your voxel → matter matrix decides:
+- Page 207: Total memory per refined hex:
+- Page 208: If you want next
+- Page 209: They answer questions like:
+- Page 210: 🗺  Gameplay / Presentation Scales (derived)
+- Page 211: 4️⃣  Key rule that keeps this sane (very important)
+- Page 212: 6️⃣  Texture → Sprite pipeline (this answers your core need)
+- Page 213: It is:
+- Page 214: ruleset-friendly
+- Page 215: 4️⃣  Data formats for baked textures per hex
+- Page 216: 2. Each channel has one semantic meaning
+- Page 217: Property Value
+- Page 219: Used by:
+- Page 220: 2 = silt
+- Page 221: Example: travel terrain classification
+- Page 222: 8. Storage & Caching Rules
+- Page 223: That will define:
+- Page 224: 1. Parent Hex Local 2D Frame
+- Page 225: This layout is preferred over square grids because:
+- Page 226: parentApothem = minDistanceFromCenterToEdge(parentHex2D)
+- Page 227: Canonical edge index can be chosen as:
+- Page 228: External neighbor mapping
+- Page 229: Outputs per pixel:
+- Page 230: 11. Acceptance Tests (must pass)
+- Page 231: If you want, next I can write the actual TypeScript implementation of:
+- Page 232: it releases latent heat
+- Page 233: Without it, Earth would slowly resemble Mars.
+- Page 234: they should emerge from:
+- Page 235: Magical-world version:
+- Page 236: look magnetic
+- Page 237: Field strength correlates with leyline density
+- Page 238: You may want multiple field types, not just one.
+- Page 239: 7️⃣  Consequences (this is where magic earns its keep)
+- Page 240: biome stability
+- Page 241: it is an optional layer. i need to be able to model several
+- Page 242: A magnetosphere requires:
+- Page 243: ➡  More coherent field
+- Page 244: Derived effects:
+- Page 245: Planet Giant Impact Dynamo Outcome
+- Page 246: Magic-free worlds
+- Page 247: 1) Make it a compiler stage: ImpactGenesis → InitialState
+- Page 248: 3) Outputs (what the rest of your engine consumes)
+- Page 249: 4) The key derived “bridges” you need (impact → geology)
+- Page 250: Based on:
+- Page 251: elevation seeds from crust thickness + anomalies
+- Page 252: parameter ranges + defaults
+- Page 253: Those consequences are exactly what you need for:
+- Page 254: You need:
+- Page 255: fjords
+- Page 256: Your underdark shouldn’t be uniform caves.
+- Page 257: crust = rock types
+- Page 258: ✅  Subduction & uplift zones
+- Page 259: If you want, say the word and I’ll write that spec cleanly so it plugs straight into your
+- Page 260: 2) `lithosphereAge` (Myr or normalized 0..1)
+- Page 261: 2.2 Edge Boundary Map
+- Page 262: noise (as fallback)
+- Page 263: ThermalAnomaly (0..1) combines:
+- Page 264: 5.3 Trench and Ridge localization
+- Page 265: thick crust (roots)
+- Page 266: Thin crust + hot mantle = high proximity.
+- Page 267: bedrockType (derived from regime + thermal)
+- Page 268: 11. Execution Order (worldgen tick)
+- Page 269: Magic heat injection: adds to thermalAnomaly
+- Page 270: 1. Core Principle (lock this)
+- Page 271: Derived once at world init:
+- Page 272: Stored per hex:
+- Page 273: Initialize per hex:
+- Page 274: 7. Seasons (time modulation)
+- Page 275: Applied as:
+- Page 276: 10. How this integrates with biomes (important)
+- Page 277: 12. Time Stepping
+- Page 278: 🔒  Biome Resolution & Transition Rules
+- Page 279: Transitions are gradual, fuzzy, directional
+- Page 280: 2. Biome Taxonomy (resolution targets)
+- Page 281: 3. Biome Scoring Model (the heart)
+- Page 282: This enables:
+- Page 283: Biomes do not change identity every season, but they shift expression.
+- Page 284: Combined with temperature lapse rate.
+- Page 285: 8. Subterranean Biome Resolution
+- Page 286: 11. Acceptance Criteria
+- Page 287: Let me make this precise and usable.
+- Page 288: Conceptual path
+- Page 289: Instead of storing per-voxel data, you store type declarations that apply to regions.
+- Page 290: Overrides are layered on top.
+- Page 291: you enumerate regions
+- Page 292: 🔟  Why this is the right abstraction
+- Page 293: Say which one you want, and I’ll lock it properly.
+- Page 294: Recommended logical paths (you can store anywhere, but this makes tools easy):
+- Page 295: Rules
+- Page 296: 4.2 Composition mode
+- Page 297: Later items override earlier ones.
+- Page 298: 4. Sort candidates using Priority Rules.
+- Page 299: 8.2 Wetland only where WaterMask has wetland bit
+- Page 300: next
+- Page 301: bitAndNonZero?: number;
+- Page 302: scope: ScopeV1;
+- Page 303: hexId: string,
+- Page 304: export function createEmptyRegionStore(layerOrder?: RegionLayer[]): RegionStore {
+- Page 305: const planetEntry = store.index.byPlanet.get(region.planetId);
+- Page 306: if (scope.depthRangeM) score += 60;
+- Page 307: spec: number;
+- Page 308: if (s.depthRangeM) {
+- Page 309: case "merge": {
+- Page 310: export type ResolveResult =
+- Page 311: What you plug in next (tiny stubs you’ll implement in your engine)
+- Page 312: click voxel → show resolved semantic + applied regions
+- Page 313: 2) Core Panels
+- Page 314: Tree view:
+- Page 315: 3.1 Globe overlays (hex color)
+- Page 316: 4) Editing Workflow (fast, deterministic)
+- Page 317: outside sphere/aabb
+- Page 318: 7) Minimal “done” checklist
+- Page 319: Within each source, normal resolver ordering still applies:
+- Page 320: treat sourceRank as the top-most ordering key.
+- Page 321: Rule: Any change to generator version/paramsHash is a migration event (see Section 10).
+- Page 322: Rule: The resolver ignores meta.
+- Page 323: create a new save region with same scope + higher priority
+- Page 324: No special merge logic required.
+- Page 325: save overlays still apply but might be misaligned
+- Page 326: If you want, I can now provide:

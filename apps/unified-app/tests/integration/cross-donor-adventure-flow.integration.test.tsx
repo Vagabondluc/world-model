@@ -1,10 +1,17 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { App } from "@/App";
 
 function renderAt(pathname: string) {
   window.history.pushState({}, "", pathname);
   return render(<App />);
+}
+
+function navigateTo(pathname: string) {
+  act(() => {
+    window.history.pushState({}, "", pathname);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  });
 }
 
 describe("cross-donor adventure flow", () => {
@@ -14,13 +21,17 @@ describe("cross-donor adventure flow", () => {
     const topBar = screen.getByLabelText("top context bar");
     expect(within(topBar).getByText(/world:sample/i)).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole("link", { name: /Open Adventure Generator/i }));
+    expect(screen.getByRole("heading", { name: /Compare donor surfaces/i })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("link", { name: /Adventure Generator route/i }));
     expect(screen.getByRole("heading", { name: "Adventure Generator" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /Adventure Generator/i })).toBeInTheDocument();
+    expect(screen.getByTestId("donor-subapp-host")).toHaveAttribute("data-donor-id", "adventure-generator");
+    expect(screen.queryByTestId("source-ui-preview")).not.toBeInTheDocument();
+    expect(screen.queryByLabelText("top context bar")).not.toBeInTheDocument();
 
-    fireEvent.click(screen.getAllByRole("link", { name: /Compare product Shared concept views/i })[0]);
+    navigateTo("/compare");
     expect(screen.getByRole("heading", { name: /Compare product integration/i })).toBeInTheDocument();
-    expect(within(topBar).getByText(/world:sample/i)).toBeInTheDocument();
-    expect(within(topBar).getByText(/entity:harbor-biome/i)).toBeInTheDocument();
+    const returnedTopBar = screen.getByLabelText("top context bar");
+    expect(within(returnedTopBar).getByText(/world:sample/i)).toBeInTheDocument();
+    expect(within(returnedTopBar).getByText(/entity:harbor-biome/i)).toBeInTheDocument();
   });
 });

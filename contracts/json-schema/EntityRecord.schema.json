@@ -15,6 +15,51 @@
       ],
       "type": "object"
     },
+    "BiomeType": {
+      "oneOf": [
+        {
+          "enum": [
+            "forest",
+            "plains",
+            "desert",
+            "tundra",
+            "mountain",
+            "swamp",
+            "ocean",
+            "urban",
+            "ruins",
+            "cavern",
+            "volcanic",
+            "farmland",
+            "jungle",
+            "savanna",
+            "mystic"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "other": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "other"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "DiscoveryStatus": {
+      "enum": [
+        "unknown",
+        "surveyed",
+        "settled",
+        "ruined"
+      ],
+      "type": "string"
+    },
     "ExternalSchemaRef": {
       "properties": {
         "migration_contract_ref": {
@@ -39,6 +84,28 @@
       "required": [
         "source_system",
         "source_uri"
+      ],
+      "type": "object"
+    },
+    "HexCoordinate": {
+      "properties": {
+        "q": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "r": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "s": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "q",
+        "r",
+        "s"
       ],
       "type": "object"
     },
@@ -68,10 +135,40 @@
     },
     "LocationAttachment": {
       "properties": {
+        "biome_type": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/BiomeType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "coordinate_ref": {
           "type": [
             "string",
             "null"
+          ]
+        },
+        "discovery_status": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/DiscoveryStatus"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "hex_coordinate": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/HexCoordinate"
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "hex_or_cell_ref": {
@@ -301,6 +398,11 @@
             "Mythforge",
             "Orbis",
             "AdventureGenerator",
+            "MappaImperium",
+            "DawnOfWorlds",
+            "FactionImage",
+            "WatabouCity",
+            "EncounterBalancerScaffold",
             "Neutral"
           ],
           "type": "string"

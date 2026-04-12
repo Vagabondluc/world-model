@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Dungeon Detail Suite</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .geometric-overlay {
+                background-image: radial-gradient(#3a2d1d 0.5px, transparent 0.5px);
+                background-size: 24px 24px;
+                opacity: 0.05;
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30 overflow-hidden">
+<div class="flex h-screen">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-parchment-base uppercase">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-dnd-red text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">fort</span>
+<span class="font-header tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-header tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="font-header tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkJi-OkEGy-YvC8GH6qnPfxndblz3_rxi_ynXGrCd8_OP7DgZZ-TOqWl3piptJsnKIRdO9UnhDWgXfahi6uPNS5AAx3p0Yns5lLvHzNJlWw-0tSMSDwv259WjtZJZLx8OGJnZDzpQZDAf2gEY6HGGlTjRwslTbEwE50JSjaQdpJdcHXxgrWrp8qCtKJ8fhiaC3AYnTii9mkO2uWeECdYiWBLamFZBk4UhT69IBpwd6VLMLQiJ1JKJfSbCUQKu9K62fcphjxPCN');"></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-dnd-red hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">handyman</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 parchment-texture overflow-y-auto custom-scrollbar relative grit-overlay">
+<div class="absolute inset-0 geometric-overlay pointer-events-none"></div>
+<div class="relative z-10 px-12 py-10 flex flex-col gap-8 max-w-7xl mx-auto">
+<header class="flex flex-col gap-6 border-b-2 border-medium-brown/30 pb-6">
+<h2 class="font-header text-5xl text-ink-dark">Dungeon Detail &amp; Expansion Suite</h2>
+<nav class="flex gap-1 bg-black/5 p-1 rounded-md w-fit">
+<button class="px-6 py-2 font-header text-sm uppercase tracking-widest bg-dnd-red text-white rounded">Concept Brainstormer</button>
+<button class="px-6 py-2 font-header text-sm uppercase tracking-widest text-ink-dark/60 hover:bg-black/5 transition-colors">10-Room Wizard</button>
+<button class="px-6 py-2 font-header text-sm uppercase tracking-widest text-ink-dark/60 hover:bg-black/5 transition-colors">Corridor Studio</button>
+</nav>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white/40 border border-medium-brown/40 p-6 rounded shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-dnd-red">psychology</span>
+<h3 class="font-header text-2xl uppercase tracking-widest">Concept Pod</h3>
+</div>
+<div class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] tracking-[0.2em] text-ink-dark/60 uppercase">Primary Focus</label>
+<select class="bg-transparent border-b-2 border-medium-brown/30 border-x-0 border-t-0 focus:ring-0 focus:border-dnd-red font-body text-sm py-2">
+<option>Denizens (Monster Lair)</option>
+<option>Relic (Ancient Treasure)</option>
+<option>Portal (Planar Rift)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] tracking-[0.2em] text-ink-dark/60 uppercase">Pairing</label>
+<input class="bg-transparent border-b-2 border-medium-brown/30 border-x-0 border-t-0 focus:ring-0 focus:border-dnd-red font-body text-sm py-2 placeholder:text-ink-dark/30" placeholder="Underdark Cults" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-noto text-[10px] tracking-[0.2em] text-ink-dark/60 uppercase">Dungeon Goal</label>
+<input class="bg-transparent border-b-2 border-medium-brown/30 border-x-0 border-t-0 focus:ring-0 focus:border-dnd-red font-body text-sm py-2 placeholder:text-ink-dark/30" placeholder="Recover the Obsidian Heart before the eclipse" type="text"/>
+</div>
+</div>
+</div>
+<div class="bg-white/40 border border-medium-brown/40 p-6 rounded shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-dnd-red">settings_input_component</span>
+<h3 class="font-header text-2xl uppercase tracking-widest">Global Features Summary</h3>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<div class="flex justify-between border-b border-medium-brown/10 py-1">
+<span class="text-xs uppercase tracking-tighter font-bold text-ink-dark/50">Primary Light</span>
+<span class="text-sm font-semibold">Magical Dim (Violet)</span>
+</div>
+<div class="flex justify-between border-b border-medium-brown/10 py-1">
+<span class="text-xs uppercase tracking-tighter font-bold text-ink-dark/50">Main Material</span>
+<span class="text-sm font-semibold">Obsidian &amp; Ash</span>
+</div>
+<div class="flex justify-between border-b border-medium-brown/10 py-1">
+<span class="text-xs uppercase tracking-tighter font-bold text-ink-dark/50">Air Quality</span>
+<span class="text-sm font-semibold">Ozone &amp; Sulfur</span>
+</div>
+<div class="flex justify-between border-b border-medium-brown/10 py-1">
+<span class="text-xs uppercase tracking-tighter font-bold text-ink-dark/50">Temperature</span>
+<span class="text-sm font-semibold">Chilled (12°C)</span>
+</div>
+</div>
+</div>
+</div>
+<section class="bg-[#fef9eb] border border-medium-brown/50 rounded-lg p-8 shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">auto_fix_high</span>
+</div>
+<div class="max-w-3xl">
+<h3 class="font-header text-3xl text-dnd-red mb-4">10-Room Wizard: Current Module</h3>
+<div class="flex gap-6 items-start">
+<div class="bg-dnd-red/10 p-4 rounded-full">
+<span class="material-symbols-outlined text-dnd-red text-3xl">chat_bubble</span>
+</div>
+<div class="flex-1">
+<p class="text-xl font-body italic text-ink-dark/80 leading-relaxed mb-6">
+                                "The party enters Room 4. The floor is composed of highly magnetized iron plates. Any adventurer in heavy plate armor must succeed on a DC 14 Strength save or be rooted in place until they can break free."
+                            </p>
+<div class="flex gap-4">
+<button class="bg-medium-brown text-white font-header px-6 py-2 rounded text-sm hover:bg-chronicle-brown transition-colors">← Previous Room</button>
+<button class="bg-dnd-red text-white font-header px-6 py-2 rounded text-sm hover:bg-red-800 transition-colors">Next Room: The Forge →</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<div class="flex items-center gap-6 mb-6">
+<h3 class="font-header text-3xl text-ink-dark uppercase tracking-wide">Corridor Theme Generator</h3>
+<div class="flex-1 h-[2px] bg-dnd-red/20"></div>
+</div>
+<div class="bg-white/60 border-2 border-medium-brown/40 rounded overflow-hidden shadow-xl backdrop-blur-sm">
+<table class="w-full text-left border-collapse">
+<thead class="bg-dnd-red text-white">
+<tr>
+<th class="px-8 py-4 font-header text-lg uppercase tracking-widest border-r border-white/10 font-bold">Element</th>
+<th class="px-8 py-4 font-header text-lg uppercase tracking-widest border-r border-white/10 font-bold">Generated Sensations</th>
+<th class="px-8 py-4 font-header text-lg uppercase tracking-widest font-bold text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-medium-brown/20 font-body">
+<tr class="hover:bg-dnd-red/5 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dnd-red">visibility</span>
+<span class="font-bold uppercase text-xs tracking-widest">Sight</span>
+</div>
+</td>
+<td class="px-8 py-4 italic">Flickering phosphorescent moss casting long, distorted shadows.</td>
+<td class="px-8 py-4 text-center">
+<button class="text-dnd-red hover:bg-dnd-red/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-dnd-red/5 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dnd-red">hearing</span>
+<span class="font-bold uppercase text-xs tracking-widest">Sound</span>
+</div>
+</td>
+<td class="px-8 py-4 italic">The distant, rhythmic sound of heavy machinery or heartbeat.</td>
+<td class="px-8 py-4 text-center">
+<button class="text-dnd-red hover:bg-dnd-red/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-dnd-red/5 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dnd-red">warning</span>
+<span class="font-bold uppercase text-xs tracking-widest">Hazard</span>
+</div>
+</td>
+<td class="px-8 py-4">
+<span class="bg-[#f8d7da] text-dnd-red border border-dnd-red/20 px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase">Slick Spores</span>
+<span class="ml-2 text-sm">Difficult terrain; DC 12 Dex save to avoid falling.</span>
+</td>
+<td class="px-8 py-4 text-center">
+<button class="text-dnd-red hover:bg-dnd-red/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<footer class="mt-auto px-12 py-8 bg-black/5 flex justify-between items-center border-t border-medium-brown/20 relative z-10">
+<p class="font-header text-sm text-ink-dark/60 tracking-[0.2em] uppercase">© 1492 DR - Chronicler Archive Systems</p>
+<div class="flex gap-8 opacity-40">
+<span class="material-symbols-outlined text-dnd-red text-2xl">shield</span>
+<span class="material-symbols-outlined text-dnd-red text-2xl">swords</span>
+<span class="material-symbols-outlined text-dnd-red text-2xl">skull</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

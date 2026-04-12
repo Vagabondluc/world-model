@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { DonorComparePage } from "@/donors/DonorComparePage";
 import { DonorPage } from "@/donors/DonorPage";
 import { UnifiedLandingPage } from "@/product/UnifiedLandingPage";
@@ -39,7 +39,7 @@ function DonorRoute() {
   return <DonorPage donor={donor as DonorId} />;
 }
 
-export function AppRoutes() {
+function ShellRoutes() {
   return (
     <AppShell>
       <Routes>
@@ -56,4 +56,23 @@ export function AppRoutes() {
       </Routes>
     </AppShell>
   );
+}
+
+function DonorRoutes() {
+  return (
+    <Routes>
+      <Route path="/donor/:donor" element={<DonorRoute />} />
+      <Route path="*" element={<Navigate replace to="/compare/donors" />} />
+    </Routes>
+  );
+}
+
+export function AppRoutes() {
+  const location = useLocation();
+
+  if (location.pathname.startsWith("/donor/")) {
+    return <DonorRoutes />;
+  }
+
+  return <ShellRoutes />;
 }

@@ -1,90 +1,35 @@
-# Dungeon Generator — Donor Specification
+# Dungeon Generator — Folder Identity Correction
 
-## Identity
+> **IMPORTANT:** The folder `to be merged/dungeon generator/` is NOT a separate "Dungeon Generator" donor. It contains the full D&D Adventure Generator application (`package.json: "name": "dnd-adventure-generator"`). This document exists to prevent future mis-characterization of the folder.
 
-| Field | Value |
-|---|---|
-| Donor Name | Dungeon Generator |
-| Internal ID | `dungeon-generator` (provisional) |
-| Class | **empty fragment** |
-| Adapter ID | none — not registered |
-| Manifest | not yet created |
-| Source Root | `to be merged/dungeon generator/zai2/` |
-| Source Kind | Next.js app (only `.next/dev/` build artifacts survive) |
-| Canonical Lane | dungeon-topology (candidate, no material to assess) |
-| Phase 7 Methodology | see below — canonical extraction not currently possible |
-| Adapter Status | **unregistered** — extraction blocked by missing source |
+## What This Folder Actually Is
 
-## What Survives
+The folder `to be merged/dungeon generator/` is the source tree for the **D&D Adventure Generator** — a React 19 + Tauri desktop application with a Python/FastAPI RAG sidecar backend. Its `package.json` name is `dnd-adventure-generator`. It was placed in a folder named `dungeon generator` during collection, but the application is the same donor tracked under the ID `adventure-generator`.
 
-The `zai2/` folder contains only:
-- `.next/dev/` — a single dev-mode Next.js build artifact directory
-- `next-env.d.ts` — generated Next.js TypeScript environment declaration
-- `node_modules/` — installed dependencies
+The folder name is a **documentation hazard**. All canonical extraction work should reference and update `ADVENTURE_GENERATOR.md`.
 
-The dev build reveals:
-- A single application route: `/`
-- A single API route: `/api`
-- Module references to `src/app/page.tsx` and `src/app/layout.tsx` (which are not present — only compiled output)
-- No named routes, no data types, no stores, no schemas
+**Canonical donor spec:** [ADVENTURE_GENERATOR.md](ADVENTURE_GENERATOR.md)
 
-The application was a Next.js (App Router) project, but the source files (`src/`) were not included when this folder was placed in `to be merged/`. Only the transient build cache survives.
+## Previous Misidentification History
 
-## Canonical Contribution Assessment
-
-**Currently: none.** There is no source material to examine for semantic content.
-
-The donor name ("Dungeon Generator") provides the following intent signal:
-- The application was likely concerned with procedural or semi-procedural dungeon generation
-- It used Next.js App Router with at least one API route (suggesting server-side generation logic)
-- It may share domain vocabulary with Mythforge's `LocationAttachment` (dungeon spatial type) and Watabou City Generator (procedural spatial layout)
-
-These signals are insufficient to drive canonical promotion. They can only inform the open questions list.
-
-## Provisional Concept Candidates
-
-If source material were recovered, these would be the expected canonical contribution candidates:
-
-| Concept | Provisional Canonical Target | Based On |
+| Date | Error | Correction |
 |---|---|---|
-| DungeonRoom / Chamber | `LocationAttachment` extension (dungeon type) or new `DungeonAttachment` | name-only inference |
-| Encounter structure | `EntityRecord` attachment or new `EncounterAttachment` | name-only inference |
-| Procedural generation params | extension on `WorldRecord` | name-only inference |
+| Prior session | Folder appeared to contain only `.next/dev/` build artifacts + `node_modules/` | Earlier scan may have caught an earlier state; folder now contains full source |
+| Prior session | Classified as "empty fragment", class `empty fragment`, lane `dungeon-topology` | Class is `real app`; lane is `workflow / adventure-authoring / location-spatial / npc / faction / encounter` |
+| Prior session | Listed provisional concept candidates based on name inference only | All candidates superseded by actual Zod schemas in the full source |
 
-All labeled `basis: name-inference` — zero weight for conformance decisions.
+## What Happened
 
-## What Cannot Be Extracted
+When this folder was first scanned, only a `.next/` build artifact directory and `node_modules/` were visible. This led to the incorrect classification of this folder as a dead/empty Next.js project fragment.
 
-Everything. No source is present.
+The folder subsequently (or on re-scan with correct path) revealed the full application source tree. The application's technology stack differs from what the `.next/` artifacts initially implied — it is a **Vite + React 19 + Tauri** project (not a Next.js project; the `.next/` directory was stale build artefact from an earlier scaffold).
 
-## UI Characterization Methodology
+## Dungeon-Topology Lane Status
 
-**Cannot characterize** with current material.
+The candidate lane `dungeon-topology` (originally proposed in this document under name-based inference) **has no separate donor**. The dungeon-relevant content in this folder belongs to the Adventure Generator's `DelveSchema` / `DelveRoomSchema` / `DelveThemeEnum` family, which is documented in `ADVENTURE_GENERATOR.md` under "Specified / Typed but NOT Implemented (WIP Surface)".
 
-If source is recovered in the future:
-- Source-present path: use **intent reconstruction** (treat recovered source as a fragment and reconstruct workflow intent)
-- Source-absent path: if the original application can be located and run, switch to **behavioral capture**
+If a `DungeonAttachment` canonical type is needed in world-model, it should be derived from the Adventure Generator's WIP delve system — not from a separate donor. Register that decision as an ADR in `docs/adr/`.
 
-Pre-registered waiver:
-- **DG-W01**: Source files (`src/`) are missing. All characterization is blocked. Canonical promotion requires either source recovery or an explicit decision to authoritatively design the dungeon-topology lane from scratch (designed intent authoring without any donor material). Neither path is available until a deliberate decision is made.
+## Folder Rename Recommendation
 
-## Registration Steps Required
-
-This donor cannot be registered until one of the following occurs:
-
-1. **Source recovery** — the original `src/` directory from the Next.js project is located and placed into `to be merged/dungeon generator/zai2/src/`
-2. **Designed replacement** — the dungeon-topology canonical lane is designed from scratch (no donor material required), in which case Dungeon Generator is reclassified as a named intent signal only and the lane doc references it as inspiring context
-
-Until then, this spec is a placeholder.
-
-## Relation to Other Donors
-
-- **Mythforge** already defines `dungeon` as one of the spatial types inside `LocationAttachment`. Any Dungeon Generator canonical concept must be additive on top of that, not a replacement.
-- **Watabou City** contributes procedural spatial layout for cities. A dungeon-topology canonical lane would extend a similar pattern into underground/enclosed space.
-
-## Open Questions
-
-- Do the missing `src/` files exist anywhere else in the workspace (e.g., under `external/`, another `to be merged/` subfolder, or the broader repository)?
-- Was `zai2` an iteration name? Is there a `zai1/` or `zai3/` elsewhere with more complete source?
-- Is the API route (`/api`) indicative of a server-side generation service? If so, the generation logic may have been in `src/app/api/route.ts`.
-- Should the dungeon-topology canonical lane be designed from scratch rather than waiting for source recovery?
+The folder `to be merged/dungeon generator/` should be renamed to `to be merged/adventure-generator/` to eliminate the name mismatch. This is an operational change outside the world-model scope; it should be tracked on the `to be merged/` collection side.

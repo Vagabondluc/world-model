@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "name": "combat_encounter",
+    "category": "Encounters",
+    "description": "A structured prompt for creating dynamic and engaging D&D combat scenarios that integrate environmental factors, enemy tactics, and narrative consequences.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "environment_setting",
+      "type": "string",
+      "label": "Primary Environment",
+      "description": "The core geographical setting for the combat.",
+      "default": "mountain_pass",
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "enemy_type",
+      "type": "string",
+      "label": "Primary Enemy Type",
+      "description": "The main category of foes the party will face.",
+      "default": "troll",
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "party_level",
+      "type": "integer",
+      "label": "Party Level",
+      "description": "The average character level of the player party, used to balance the encounter difficulty.",
+      "default": 5,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "complexity",
+      "type": "enum",
+      "label": "Encounter Complexity",
+      "description": "Desired level of environmental and tactical complexity.",
+      "default": "standard",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "simple",
+        "standard",
+        "complex"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "combat_encounter_plan",
+      "type": "object",
+      "label": "Combat Encounter Plan",
+      "description": "A complete, structured plan for a D&D combat encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "environment",
+          "type": "object",
+          "label": "Environment",
+          "description": "Details about the geographical setting and its features.",
+          "default": null,
+          "item_schema": null,
+          "fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "label": "Location Name",
+              "description": "The specific name of the encounter location.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "label": "Description",
+              "description": "A vivid description of the environment for the players.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "key_features",
+              "type": "list",
+              "label": "Key Features",
+              "description": "A list of significant physical features that impact combat.",
+              "default": null,
+              "item_schema": {
+                "name": "item",
+                "type": "object",
+                "label": null,
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": [
+                  {
+                    "name": "feature",
+                    "type": "string",
+                    "label": "Feature",
+                    "description": "The physical feature (e.g., Lava Pool, Icy Wall).",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  },
+                  {
+                    "name": "impact",
+                    "type": "string",
+                    "label": "Impact",
+                    "description": "The mechanical and narrative impact of the feature on gameplay.",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  }
+                ],
+                "options": null
+              },
+              "fields": null,
+              "options": null
+            }
+          ],
+          "options": null
+        },
+        {
+          "name": "enemy_forces",
+          "type": "list",
+          "label": "Enemy Forces",
+          "description": "The types of enemies involved, their numbers, and their tactics.",
+          "default": null,
+          "item_schema": {
+            "name": "item",
+            "type": "object",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "type",
+                "type": "string",
+                "label": "Type",
+                "description": "The name and type of enemy (e.g., Mountain Troll).",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "count",
+                "type": "integer",
+                "label": "Count",
+                "description": "The number of this enemy type in the encounter.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "tactics",
+                "type": "string",
+                "label": "Tactics",
+                "description": "How these enemies exploit the environment and combat the party.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "encounter_mechanics",
+          "type": "object",
+          "label": "Encounter Mechanics",
+          "description": "The setup, dynamic events, and interaction rules for the encounter.",
+          "default": null,
+          "item_schema": null,
+          "fields": [
+            {
+              "name": "starting_positions",
+              "type": "string",
+              "label": "Starting Positions",
+              "description": "Description of where enemies and features are placed at the start of combat.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "dynamic_events",
+              "type": "list",
+              "label": "Dynamic Events",
+              "description": "Environmental changes or hazards that occur during combat.",
+              "default": null,
+              "item_schema": {
+                "name": "item",
+                "type": "object",
+                "label": null,
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": [
+                  {
+                    "name": "event",
+                    "type": "string",
+                    "label": "Event",
+                    "description": "The name of the event (e.g., Geyser Eruption).",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  },
+                  {
+                    "name": "trigger",
+                    "type": "string",
+                    "label": "Trigger",
+                    "description": "The condition or timing that causes the event.",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  },
+                  {
+                    "name": "effect",
+                    "type": "string",
+                    "label": "Effect",
+                    "description": "The full mechanical effect of the event, including damage and saves.",
+                    "default": null,
+                    "item_schema": null,
+                    "fields": null,
+                    "options": null
+                  }
+                ],
+                "options": null
+              },
+              "fields": null,
+              "options": null
+            }
+          ],
+          "options": null
+        },
+        {
+          "name": "resolution",
+          "type": "object",
+          "label": "Resolution",
+          "description": "Potential outcomes, consequences, and narrative hooks following the encounter.",
+          "default": null,
+          "item_schema": null,
+          "fields": [
+            {
+              "name": "encounter_outcomes",
+              "type": "list",
+              "label": "Potential Outcomes",
+              "description": "Possible ways the encounter could conclude.",
+              "default": null,
+              "item_schema": {
+                "name": "item",
+                "type": "string",
+                "label": null,
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "consequences",
+              "type": "string",
+              "label": "Consequences",
+              "description": "The immediate consequences of the most likely outcomes.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "follow_up_hooks",
+              "type": "list",
+              "label": "Follow-up Hooks",
+              "description": "Ideas for how to transition this encounter into future adventures.",
+              "default": null,
+              "item_schema": {
+                "name": "item",
+                "type": "string",
+                "label": null,
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              "fields": null,
+              "options": null
+            }
+          ],
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

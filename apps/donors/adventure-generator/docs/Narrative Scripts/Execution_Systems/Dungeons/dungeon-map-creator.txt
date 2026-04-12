@@ -1,0 +1,57 @@
+# Dungeon Map Creator
+
+## Objective
+Create a visually appealing and functionally sound map for your dungeon adventure.
+
+## Instructions
+1. Prepare Materials:
+   - Graph paper (recommended)
+   - Pencil and eraser
+   - Ruler (optional)
+   - Colored pencils or markers (optional)
+
+2. Set Scale:
+   - Determine map scale (e.g., 1 square = 5 feet or 1 square = 10 feet)
+   - Note scale on the map for reference
+
+3. Create Connection Map:
+   - Sketch a rough layout of rooms and how they connect
+   - Focus on flow and general arrangement, not precise measurements
+
+4. Design Entrance:
+   - Choose map edge for dungeon entrance
+   - Create entryway that sets the tone for the adventure
+
+5. Layout Rooms:
+   - Transfer rooms from connection map to graph paper
+   - Vary room shapes and sizes for interest
+   - Ensure room sizes are appropriate for their purpose
+
+6. Connect Rooms:
+   - Draw corridors between rooms
+   - Include loops for non-linear exploration
+   - Add secret passages and shortcuts
+
+7. Apply Xandering Techniques:
+   - Incorporate multiple entrances
+   - Create multiple connections between levels
+   - Use discontinuous level connections
+   - Add sub-levels or divided levels
+   - Include minor elevation shifts
+
+8. Add Details:
+   - Draw in major features (e.g., statues, pits, water features)
+   - Mark traps and secret doors
+   - Indicate special areas (e.g., boss rooms, treasure vaults)
+
+9. Number Rooms:
+   - Assign numbers to each room and area
+   - Use a logical numbering system (e.g., by level or exploration order)
+
+10. Create Legend:
+    - List map symbols used (e.g., doors, stairs, traps)
+    - Include any color coding or special notations
+
+11. Final Touches:
+    - Add title and any other relevant information
+    - Review map for clarity and completeness

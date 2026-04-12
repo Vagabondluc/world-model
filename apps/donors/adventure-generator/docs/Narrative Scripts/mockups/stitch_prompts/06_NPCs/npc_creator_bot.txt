@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Npc Creator Bot".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: NPC Creator Bot
+
+```text
++--------------------------------------------------------------------------------+
+|  [NPC Creator Bot: Personality & Lore Architect]                      [?] [X]  |
++--------------------------------------------------------------------------------+
+|  IDENTITY STUDIO:                                                              |
+|  Name: [ Kaelen the Smith       ]  Role: [ Master Armorer      ] [V]           |
+|  Vibe: [ Gruff but fair, smells of soot and old ale         ]                  |
++--------------------------------------------------------------------------------+
+|  TRAITS & QUIRKS                      |  GENERATED PROFILE                     |
+|  Personality:                         |  **Kaelen the Smith**                  |
+|  [x] Greedy     [ ] Generous          |  *Master Armorer (Human)*              |
+|  [ ] Secretive  [x] Honest            |                                        |
+|                                       |  "A massive man with arms like tree    |
+|  Physical Feature:                    |  trunks and a permanently singed       |
+|  [ Left Eye Missing           ] [V]   |  beard..."                             |
++---------------------------------------+----------------------------------------+
+|  MOTIVATIONS & HOOKS                                                           |
+|  Primary Goal: [ Reclaim his family's lost anvil from the Orcs ]               |
+|  Quest Hook: [!] "The party finds Kaelen looking for brave souls..."           |
++--------------------------------------------------------------------------------+
+|  BOT CHAT INTERFACE (Optional)                                                 |
+|  [ User: "What do you think of the local Lord?" ]                              |
+|  [ Bot: "Lord Valerius? A bean-counter who wouldn't know a spear from a..."]   |
++--------------------------------------------------------------------------------+
+|  [Save to Contacts] [Copy Description] [Export to VTT]                 [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: NPC Creator Bot
+
+## Component Architecture
+- **Identity Synthesis Studio:** A high-level input area where the DM sets the NPC's core identifiers (Name, Role, Vibe). This acts as the "Seed" for the AI/Procedural generation.
+- **Personality & Physicality Matrix:** A dense collection of toggles and dropdowns used to fine-tune the NPC's behavior and appearance. This allows for rapid iteration without typing long prompts.
+- **Linguistic / Bot Persona Engine:** An optional sub-panel that simulates the NPC's "Voice." It uses the persona logic to translate the data into specific dialogue styles (e.g., gruff, flowery, suspicious).
+- **Motivation & Hook Generator:** Automatically derives plot relevance from the NPC's role. It focuses on "Actionable Intel" for the DM—what the NPC wants and how they interact with the PCs.
+- **Real-Time Profile Preview:** A sidebar or floating panel that updates the NPC's "Dossier" as the DM makes selections.
+
+## Interaction Logic
+- **Constraint-Based Generation:** Selecting a Role (e.g., "Assassin") automatically pre-selects suggested traits (e.g., "Secretive," "High Dexterity Vibe") which the DM can then override.
+- **Flavor Overlays:** Choosing a "Campaign Flavor" (e.g., Steampunk) modifies the generated physical features and equipment lists to match the setting.
+- **The "Ask the Bot" Workflow:** A text field where the DM can test the NPC's voice by asking them a question, helping the DM prepare for live roleplay.
+
+## Visual Design
+- **Clipboard/Dossier Aesthetic:** The UI uses a "Paper-like" background with handwriting-style fonts for the profile, evoking a DM's notebook.
+- **High-Information Density:** Uses compact dropdowns and multi-select tags to allow for complex character creation on a single screen.
+- **Dynamic Portraits:** (Optional) A placeholder for an AI-generated portrait that updates based on the "Physical Feature" selections.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: NPC Creator Bot (Kaelen the Smith)
+
+### Core Identity:
+- **Name:** Kaelen the Smith
+- **Role:** Master Armorer
+- **Race/Heritage:** Human (Northland Descent)
+- **Vibe:** Gruff, singed, smells of charcoal.
+
+---
+
+### Personality & Traits:
+- **Key Traits:** Honest, Short-tempered, Prideful of his craft.
+- **Physical Feature:** A large burn scar across his left forearm shaped like a dragon's wing.
+- **Quirk:** Always chews on a piece of dried leather while working.
+
+---
+
+### Motivations & Lore:
+- **Primary Goal:** To forge a legendary blade that can cut through stone, proving his lineage.
+- **Current Conflict:** The local tax collector is seizing his "star-metal" shipment.
+- **Quest Hook:** "Kaelen offers a 10% discount on plate armor if the players can 'convince' the tax collector to release his iron."
+
+---
+
+### Sample Dialogue:
+**Player:** "Can you fix this shield, Kaelen?"
+**Kaelen:** "Fix it? I could forge a better one blindfolded and drunk! But if you want this scrap saved, it'll cost you forty gold and a keg of the Red Mountain ale. Take it or leave it, I've got real work to do."
+

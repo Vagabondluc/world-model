@@ -1,0 +1,19 @@
+{
+  "donor": "mappa-imperium",
+  "basis": "captured",
+  "panels": [
+    "Era timeline",
+    "Territory map",
+    "Session controls"
+  ],
+  "controls": [
+    "Create territory",
+    "Advance era",
+    "Link world"
+  ],
+  "visibleStates": [
+    "no era active",
+    "no territory selected",
+    "no session state"
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "reportPath": "world-model/phase-9-donor-e2e-report.json",
+  "workspaceRoot": "../../..",
+  "worldModel": {
+    "label": "world-model",
+    "cwd": "world-model/apps/unified-app",
+    "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3320", "--strictPort"],
+    "url": "http://127.0.0.1:3320"
+  },
+  "donors": [
+    {
+      "donorId": "mythforge",
+      "label": "Mythforge",
+      "classification": "app donor",
+      "mode": "live-compare",
+      "liveUrl": "http://127.0.0.1:3310",
+      "server": {
+        "cwd": "mythforge",
+        "command": ["npx", "next", "dev", "-p", "3310"],
+        "url": "http://127.0.0.1:3310"
+      },
+      "worldModelRoute": "/donor/mythforge",
+      "requiredLandmarks": ["Mythforge", "World authoring donor", "canonical bundle"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Create", "Save", "Open"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["create world", "create entity", "save bundle"],
+      "canonicalExpectation": "Canonical world and entity changes should round-trip into the world-model bundle.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mythforge"
+    },
+    {
+      "donorId": "orbis",
+      "label": "Orbis",
+      "classification": "app donor",
+      "mode": "live-compare",
+      "liveUrl": "http://127.0.0.1:3311",
+      "server": {
+        "cwd": "to be merged/true orbis/Orbis Spec 2.0/Orbis 1.0",
+        "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3311", "--strictPort"],
+        "url": "http://127.0.0.1:3311"
+      },
+      "worldModelRoute": "/donor/orbis",
+      "requiredLandmarks": ["ORBIS", "Planetary Voxel Engine", "SIMULATION CORE", "GLOBAL"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Globe", "Architect", "Regenerate"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["toggle domain", "review snapshot", "inspect event stream"],
+      "canonicalExpectation": "Domain toggles and snapshot review should fold into canonical simulation state.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep orbis"
+    },
+    {
+      "donorId": "adventure-generator",
+      "label": "Adventure Generator",
+      "classification": "app donor",
+      "mode": "live-compare",
+      "liveUrl": "http://127.0.0.1:3312",
+      "server": {
+        "cwd": "to be merged/dungeon generator",
+        "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3312", "--strictPort"],
+        "url": "http://127.0.0.1:3312"
+      },
+      "worldModelRoute": "/donor/adventure-generator",
+      "requiredLandmarks": [
+        "Adventure Generator",
+        "Adventure Generator MVP",
+        "Step 1: Set the Scene",
+        "Arcane Library Method",
+        "Plot Pattern Method",
+        "Quick Delve"
+      ],
+      "requiredControls": [
+        {
+          "role": "button",
+          "anyOf": [
+            "Create New Campaign",
+            "Open Existing Campaign",
+            "Generate Adventure Hooks",
+            "Generate Adventure Outline",
+            "Launch Quick Delve Generator"
+          ]
+        }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["advance step", "checkpoint", "inspect output"],
+      "canonicalExpectation": "Guided steps and generated output should round-trip into canonical workflow state.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep adventure-generator"
+    },
+    {
+      "donorId": "mappa-imperium",
+      "label": "Mappa Imperium",
+      "classification": "app donor",
+      "mode": "live-compare",
+      "liveUrl": "http://127.0.0.1:3313",
+      "server": {
+        "cwd": "to be merged/mappa imperium",
+        "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3313", "--strictPort"],
+        "url": "http://127.0.0.1:3313"
+      },
+      "worldModelRoute": "/donor/mappa-imperium",
+      "requiredLandmarks": ["Mappa Imperium", "era", "worldbuilding"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Create", "Generate", "Save", "Join"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["create era", "inspect timeline", "save era"],
+      "canonicalExpectation": "Era, territory, and session state should fold into canonical worldbuilding records.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mappa-imperium"
+    },
+    {
+      "donorId": "dawn-of-worlds",
+      "label": "Dawn of Worlds",
+      "classification": "app donor",
+      "mode": "live-compare",
+      "liveUrl": "http://127.0.0.1:3314",
+      "server": {
+        "cwd": "to be merged/world-builder-ui",
+        "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3314", "--strictPort"],
+        "url": "http://127.0.0.1:3314"
+      },
+      "worldModelRoute": "/donor/dawn-of-worlds",
+      "requiredLandmarks": ["Dawn of Worlds", "World Builder UI", "multiplayer"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Create", "Play", "Save", "Join"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["start world", "advance turn", "inspect multiplayer state"],
+      "canonicalExpectation": "World kinds, turns, and session state should round-trip through canonical storage.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep dawn-of-worlds"
+    },
+    {
+      "donorId": "faction-image",
+      "label": "Sacred Sigil Generator",
+      "classification": "app donor",
+      "mode": "live-compare",
+      "liveUrl": "http://127.0.0.1:3315",
+      "server": {
+        "cwd": "to be merged/faction-image",
+        "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3315", "--strictPort"],
+        "url": "http://127.0.0.1:3315"
+      },
+      "worldModelRoute": "/donor/faction-image",
+      "requiredLandmarks": ["Sacred Sigil Generator", "Faction Image", "icon discovery"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Generate", "Create", "Export"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["discover icon", "adjust layer", "export sigil"],
+      "canonicalExpectation": "Layer composition and icon discovery should fold into canonical attachment state.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep faction-image"
+    },
+    {
+      "donorId": "watabou-city",
+      "label": "Watabou City",
+      "classification": "clean-room app donor",
+      "mode": "clean-room-compare",
+      "liveUrl": "http://127.0.0.1:3317",
+      "server": {
+        "cwd": "to be merged/watabou-city-clean-room/2nd",
+        "command": ["npm", "run", "dev", "--", "--host", "127.0.0.1", "--port", "3317", "--strictPort"],
+        "url": "http://127.0.0.1:3317"
+      },
+      "worldModelRoute": "/donor/watabou-city",
+      "requiredLandmarks": ["Watabou City", "city", "clean-room"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Generate", "Random", "Create"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "live source UI"]
+      },
+      "primaryWorkflow": ["set seed", "regenerate city", "export deterministic layout"],
+      "canonicalExpectation": "Clean-room city layout should round-trip into canonical city-layout attachment state.",
+      "referenceEvidence": "Clean-room Watabou implementation at to be merged/watabou-city-clean-room/2nd/.",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep watabou-city"
+    },
+    {
+      "donorId": "encounter-balancer",
+      "label": "Encounter Balancer Scaffold",
+      "classification": "scaffold-copy donor",
+      "mode": "representative-scaffold",
+      "liveUrl": "http://127.0.0.1:3316",
+      "server": {
+        "cwd": "to be merged/apocalypse",
+        "command": ["npx", "next", "dev", "-p", "3316"],
+        "url": "http://127.0.0.1:3316"
+      },
+      "worldModelRoute": "/donor/encounter-balancer",
+      "requiredLandmarks": ["Encounter Balancer", "Scaffold", "balance"],
+      "requiredControls": [
+        { "role": "button", "anyOf": ["Balance", "Generate", "Save"] }
+      ],
+      "worldModelSentinel": {
+        "testId": "donor-runtime-host",
+        "mountKind": "scaffold-mounted",
+        "disallowedEvidence": ["SourceUiPreview", "iframe", "source baseline", "live source UI"]
+      },
+      "primaryWorkflow": ["balance encounter", "inspect clone roots"],
+      "canonicalExpectation": "Representative scaffold behavior should compare with clone-equivalence evidence.",
+      "cloneRoots": [
+        "to be merged/apocalypse",
+        "to be merged/character-creator",
+        "to be merged/deity creator",
+        "to be merged/genesis"
+      ],
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep encounter-balancer"
+    }
+  ]
+}

@@ -11,6 +11,12 @@ donors:
     basis: captured
     route: /donor/orbis
     characterization: executable source capture
+  orbis_intent:
+    classification: design baseline
+    methodology: designed intent authoring
+    basis: designed
+    route: /donor/orbis
+    characterization: simulation semantics baseline
   adventure-generator:
     classification: app donor
     methodology: behavioral capture

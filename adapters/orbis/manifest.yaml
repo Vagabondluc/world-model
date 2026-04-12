@@ -9,37 +9,21 @@ source_kind: typescript
 default_promotion_class: simulation
 snapshot:
   root: adapters/orbis/source-snapshot
-  fingerprint: 51124f28593fd21a1fbf47bc818f485c2230b41ddc11b5b4c59495880b36b2ae
-  file_count: 23
+  fingerprint: ec024f6b22aa2f47db4543adad0ba687a73ad69bbb11f3c4852b9d6c6eab6c93
+  file_count: 6
 included_paths:
-- types.ts
-- stores/biosphereStore.ts
-- stores/civilizationStore.ts
-- stores/planetaryStore.ts
-- stores/simulationStore.ts
-- stores/worldSystemStore.ts
-- stores/useWorldStore.ts
-- stores/useTimeStore.ts
-- stores/useUIStore.ts
-- core/schemas/core.ts
-- core/schemas/biology.ts
-- core/schemas/civilization.ts
-- core/schemas/climate.ts
-- core/schemas/hydrology.ts
-- core/schemas/infrastructure.ts
-- core/schemas/narrative.ts
-- core/schemas/planetary.ts
-- sim/SimSystem.ts
-- runtime/core/eventEnvelope.ts
-- runtime/core/genesis.ts
-- v2/core/chronos.ts
-- v2/core/causality.ts
-- v2/core/identity.ts
+- types/session.ts
+- stores/weatherStore.ts
+- stores/mapStore.ts
+- stores/mapLocationStore.ts
+- contracts/forms/social_event.schema.ts
+- contracts/forms/social_event.types.ts
 excluded_paths:
-- node_modules
-- dist
+- components
 - __tests__
+- test
 - tests
+- app
 concepts:
 - simulation-profile
 - simulation-snapshot
@@ -56,6 +40,5 @@ concepts:
 mappings:
 - adapters/orbis/mappings/concept-map.yaml
 provenance:
-  generated_at: '2026-04-08T00:00:00Z'
+  generated_at: '2026-04-12T09:22:51Z'
   generated_by: vagab
-  note: Snapshot re-sourced from true Orbis 1.0+2.0 (to be merged/true orbis/). Prior snapshot was erroneously sourced from mechanical-sycophant.

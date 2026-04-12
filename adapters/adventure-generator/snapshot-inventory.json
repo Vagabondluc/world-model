@@ -3,7 +3,7 @@
   "snapshot_root": "adapters/adventure-generator/source-snapshot",
   "source_root": "D:/antigravity/dnd adventure generator/src",
   "file_count": 21,
-  "fingerprint": "5555a69160fec7b06a3c48c1ed55b3958d870b993a6413167604545c63e70423",
+  "fingerprint": "70fe933d8597c74a152fb9f9473be42be6bab1dca23d46cff7d1663eb955d0dc",
   "files": [
     {
       "path": "schemas/adventure.ts",
@@ -12,8 +12,8 @@
     },
     {
       "path": "schemas/aiLedger.ts",
-      "size": 543,
-      "sha256": "5ee2be15d19186c471c91a30a12596773ad59b332f00d746ca6774a10f9b3e0a"
+      "size": 526,
+      "sha256": "64cd6fb5f41a4b3a3cbbb3bdbf1a3a5e7244887bd9f96d90098bedd7a68c12b9"
     },
     {
       "path": "schemas/campaign.ts",
@@ -42,8 +42,8 @@
     },
     {
       "path": "schemas/encounters/index.ts",
-      "size": 5140,
-      "sha256": "3ad5ebc0df770d02a21844c1376531cf751fce58c0c0a0b2b3f42ef08da5a56e"
+      "size": 5018,
+      "sha256": "6fb75df0e71612f69ac2671b12b7e2419a06c8237a04697694d3c8f2aab4dc15"
     },
     {
       "path": "schemas/faction.ts",

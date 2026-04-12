@@ -1,33 +1,39 @@
 {
   "donor": "orbis",
   "snapshot_root": "adapters/orbis/source-snapshot",
-  "source_root": "to be merged/true orbis/Orbis Spec 2.0",
-  "source_note": "Orbis 1.0 = planet sim UI + schema layer; Orbis 2.0 = deterministic engine runtime (ChronosEngine, GenesisKernel, eventEnvelope, CausalityTracer)",
-  "file_count": 23,
-  "fingerprint": "51124f28593fd21a1fbf47bc818f485c2230b41ddc11b5b4c59495880b36b2ae",
+  "source_root": "mechanical-sycophant/src",
+  "file_count": 6,
+  "fingerprint": "ec024f6b22aa2f47db4543adad0ba687a73ad69bbb11f3c4852b9d6c6eab6c93",
   "files": [
-    { "path": "types.ts", "source": "Orbis 1.0/types.ts" },
-    { "path": "stores/biosphereStore.ts", "source": "Orbis 1.0/stores/biosphereStore.ts" },
-    { "path": "stores/civilizationStore.ts", "source": "Orbis 1.0/stores/civilizationStore.ts" },
-    { "path": "stores/planetaryStore.ts", "source": "Orbis 1.0/stores/planetaryStore.ts" },
-    { "path": "stores/simulationStore.ts", "source": "Orbis 1.0/stores/simulationStore.ts" },
-    { "path": "stores/worldSystemStore.ts", "source": "Orbis 1.0/stores/worldSystemStore.ts" },
-    { "path": "stores/useWorldStore.ts", "source": "Orbis 1.0/stores/useWorldStore.ts" },
-    { "path": "stores/useTimeStore.ts", "source": "Orbis 1.0/stores/useTimeStore.ts" },
-    { "path": "stores/useUIStore.ts", "source": "Orbis 1.0/stores/useUIStore.ts" },
-    { "path": "core/schemas/core.ts", "source": "Orbis 1.0/core/schemas/core.ts" },
-    { "path": "core/schemas/biology.ts", "source": "Orbis 1.0/core/schemas/biology.ts" },
-    { "path": "core/schemas/civilization.ts", "source": "Orbis 1.0/core/schemas/civilization.ts" },
-    { "path": "core/schemas/climate.ts", "source": "Orbis 1.0/core/schemas/climate.ts" },
-    { "path": "core/schemas/hydrology.ts", "source": "Orbis 1.0/core/schemas/hydrology.ts" },
-    { "path": "core/schemas/infrastructure.ts", "source": "Orbis 1.0/core/schemas/infrastructure.ts" },
-    { "path": "core/schemas/narrative.ts", "source": "Orbis 1.0/core/schemas/narrative.ts" },
-    { "path": "core/schemas/planetary.ts", "source": "Orbis 1.0/core/schemas/planetary.ts" },
-    { "path": "sim/SimSystem.ts", "source": "Orbis 1.0/sim/SimSystem.ts" },
-    { "path": "runtime/core/eventEnvelope.ts", "source": "Orbis 2.0/services/runtime/core/eventEnvelope.ts" },
-    { "path": "runtime/core/genesis.ts", "source": "Orbis 2.0/src/world/genesis.ts" },
-    { "path": "v2/core/chronos.ts", "source": "Orbis 2.0/src/core/chronos.ts" },
-    { "path": "v2/core/causality.ts", "source": "Orbis 2.0/src/core/causality.ts" },
-    { "path": "v2/core/identity.ts", "source": "Orbis 2.0/src/core/identity.ts" }
+    {
+      "path": "contracts/forms/social_event.schema.ts",
+      "size": 670,
+      "sha256": "575ad5cbbbb6ed489de5a4586df7ae5659ecb0c1ba52c9b745629c54e7276197"
+    },
+    {
+      "path": "contracts/forms/social_event.types.ts",
+      "size": 1273,
+      "sha256": "35a2a84d7c3aaf017d21b7282977b703962b7fd9682480f76f01e39438635527"
+    },
+    {
+      "path": "stores/mapLocationStore.ts",
+      "size": 2840,
+      "sha256": "60bce9396dcecb01caff678fda73a7c7a947c71232361a774a9a34716dc99d5b"
+    },
+    {
+      "path": "stores/mapStore.ts",
+      "size": 2888,
+      "sha256": "f26c4657e70a181e4b85e1656924c1b906067eff702e0d5903c1ddf01b872a62"
+    },
+    {
+      "path": "stores/weatherStore.ts",
+      "size": 6420,
+      "sha256": "2547377bb4d7a59f5a8f0f1161575ccc3003257b07e32086f2542040d9c5e16e"
+    },
+    {
+      "path": "types/session.ts",
+      "size": 12194,
+      "sha256": "b849b640f293054ed5dd27253f03ca32e6852cbc940f821b42b26cf6c3e03c96"
+    }
   ]
 }

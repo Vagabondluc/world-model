@@ -9,7 +9,7 @@ source_kind: typescript
 default_promotion_class: workflow
 snapshot:
   root: adapters/adventure-generator/source-snapshot
-  fingerprint: 5555a69160fec7b06a3c48c1ed55b3958d870b993a6413167604545c63e70423
+  fingerprint: 70fe933d8597c74a152fb9f9473be42be6bab1dca23d46cff7d1663eb955d0dc
   file_count: 21
 included_paths:
 - schemas
@@ -26,5 +26,5 @@ concepts:
 mappings:
 - adapters/adventure-generator/mappings/concept-map.yaml
 provenance:
-  generated_at: '2026-04-07T22:20:22Z'
+  generated_at: '2026-04-12T09:22:51Z'
   generated_by: vagab

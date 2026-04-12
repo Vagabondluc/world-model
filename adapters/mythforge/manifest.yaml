@@ -9,7 +9,7 @@ source_kind: schema_template
 default_promotion_class: core
 snapshot:
   root: adapters/mythforge/source-snapshot
-  fingerprint: 3c8eea9dd6508a6c4ed9db8adc9b3fda13d62e531f758b717f2de7536eba9116
+  fingerprint: b2abf875436b5c79dc4c684adc9cf89b936e9416e7acd89458f863620e921df9
   file_count: 29
 included_paths:
 - UUID_CONTAINER_ARCHITECTURE.md
@@ -36,5 +36,5 @@ concepts:
 mappings:
 - adapters/mythforge/mappings/concept-map.yaml
 provenance:
-  generated_at: '2026-04-07T22:20:22Z'
+  generated_at: '2026-04-12T09:22:51Z'
   generated_by: vagab

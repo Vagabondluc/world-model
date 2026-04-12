@@ -1,0 +1,73 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+**/build/
+**/dist/
+*.spec
+
+# Tauri build artifacts
+src-tauri/target/
+
+# Temp and export directories
+temp_lazy_gm_tools/
+srd_export/
+.npm-cache/
+playwright-report/
+test-results/
+test_output*.txt
+tsc_errors*.txt
+src_errors*.txt
+
+# Binary and System Files
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.out
+*.app
+*.pkg
+*.lib
+*.pdb
+*.rlib
+*.rmeta
+*.obj
+*.o
+.DS_Store
+Thumbs.db

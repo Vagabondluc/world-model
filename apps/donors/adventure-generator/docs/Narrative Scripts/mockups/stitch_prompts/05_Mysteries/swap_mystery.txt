@@ -1,0 +1,93 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Swap Mystery".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: swap_mystery
+
+```text
++--------------------------------------------------------------------------------+
+|  [Campaign Architect: Mystery Re-configurator]                         [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Campaign: [ Shadow Regency ]  Original: [ Mystery C: Tower Heist (5-Node) ]  |
++--------------------------------------------------------------------------------+
+|  REPLACEMENT WIZARD                     |  CLUE MAPPING (Inbound/Outbound)     |
+|  New Type: [ Dungeon Crawl ] [V]        |  - From [A]: Royal Mint Note         |
+|  Scenario: [ The Artificer's Grave ]    |    Map to: [ Entrance Hall ] [V]     |
+|                                         |  - Out to [E]: Palace Map            |
+|  [X] Match Complexity [Level 8]         |    Map to: [ Final Boss Room] [V]    |
++-----------------------------------------+--------------------------------------+
+|  NARRATIVE SYNC                         |  RECURRING ELEMENTS                  |
+|  [X] Inject NPC: [ Counselor Vane ]     |  [X] Gearbox Tavern Mentions         |
+|  [X] Use Theme: [ Ticking Clock ]       |  [ ] Add New Secret to [B]           |
++-----------------------------------------+--------------------------------------+
+|  [Generate Replacement] [Update Campaign Overview] [Review Transition] [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: swap_mystery
+
+## Component Architecture
+- **Scenario Re-Type Wizard:** A high-level selector that lets the DM switch the "Genre" of a mystery segment (e.g., from Investigation to Dungeon Crawl). It provides a list of applicable external scripts (heist_prep.txt, etc.) to handle the new content.
+- **Clue Mapping & Bridge Tool:** A critical utility that tracks the "Hooks" into and out of the mystery. It allows the DM to specify which room or person in the *new* structure inherits the clues from the *old* structure.
+- **Campaign Manifest Synchronizer:** A background process that updates the master `5x5Campaign_Overview` and `InterMysteryConnections` files to reflect the structural change, ensuring the "Grand Web" isn't broken.
+- **Narrative & NPC Injector:** A specialized workspace that allows the DM to "drag and drop" recurring campaign elements (NPCs, Motifs) into the new scenario structure, ensuring continuity.
+- **Transition Guide Editor:** A dedicated space for the AI to generate pacing and style-of-play advice for the GM, helping them manage the shift between a mystery and a more action-focused scenario.
+
+## Interaction Logic
+- **Interactive Integrity Checks:** If the DM tries to finalize the swap without mapping all essential clues, the UI provides a list of "Broken Connections" that need to be resolved.
+- **Node-to-Area Abstraction:** For linear scenarios (like dungeons), the UI creates "Hubs" or "Key Rooms" that act as the structural equivalents of the 5 nodes, making it easier to track information flow.
+- **One-Click Manifest Updates:** Pressing "Update Campaign" handles the tedious task of editing multiple text files across the project directory.
+
+## Visual Design
+- **Configuration & Engineering Aesthetic:** Uses a "Modular" visual style, suggesting that mysteries and scenarios are interchangeable "Parts" of a larger machine.
+- **Visual Mapping Lines:** Shows the before-and-after of clue locations using split-view sideboards (Old Mystery vs. New Scenario).
+- **Audit Tooltip:** Hovering over a connection shows its source and destination to ensure logical flow.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: swap_mystery
+
+# Replacement Scenario: The Artificer's Grave (DungeonCrawl)
+
+### 1. Replacement Overview
+**Replaced Mystery:** Mystery C (The Tower Heist - 5-Node)
+**New Type:** Dungeon Crawl
+**Scenario Name:** The Artificer's Grave
+
+### 2. Campaign Integration (Clue Mapping)
+- **Inbound Lead (from Mystery A):** The "Royal Mint Note" now leads to the **Ancient Gatehouse** of the Grave rather than the Tower Lobby.
+- **Inbound Lead (from Mystery B):** The "Clockwork Sickness" cure is rumored to be in the **Aethereal Laboratory** (Sub-Node 3).
+- **Outbound Lead (to Mystery E):** The **Palace Map** is now found in the **Artificer's Sarcophagus** (Final Boss Room).
+
+### 3. Structural Hubs ("Node" Equivalents)
+- **Hub 1: The Gatehouse.** Entry point. Contains clues about the "Regency" involvement.
+- **Hub 2: The Gear-Shafts.** Navigation challenge. Leads to Hub 3 and 4.
+- **Hub 3: The Aethereal Laboratory.** Major revelation about the simulacrum tech.
+- **Hub 4: The Funerary Vault.** Climax. Confrontation with the Artificer's undead automata. Holds the lead to Mystery E.
+
+### 4. Narrative Sync & Recurring Elements
+- **NPC Inject:** Counselor Vane's ghost (or a recording of his voice) is found in Hub 3, explaining his role in the "Shadow Regency."
+- **Theme:** The "Infinite Coil" technology is being mined here to power the simulacrum King.
+
+### 5. GM Transition Guide
+**Pacing:** Shift from slow investigation to high-tension survival. Use the "Dungeon Crawl" turn structure (10 mins).
+**Style:** Emphasize the environmental hazards and mechanical traps, contrasting the social settings of Mysteries A and B.
+
+### 6. Updated Manifest
+- **New File:** `DungeonCrawl_ArtificersGrave.txt`
+- **New File:** `ScenarioTransition_ArtificersGrave.txt`
+- **Updated:** `5x5Campaign_ShadowRegency_Overview.txt`
+- **Updated:** `InterMysteryConnections_ShadowRegency.txt`
+

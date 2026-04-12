@@ -11,6 +11,7 @@ use world_model_core::{
     apply_world_command, CanonicalBundle, EntityRecord, SchemaBindingRecord, WorkflowRecord,
     WorldCommand, WorldCommandRequest, WorldRecord,
 };
+use world_model_adapters::{MigrationRequest, MigrationRunner};
 use world_model_schema::{fixture_documents, schema_bundle_as_json};
 use world_model_specs::{
     promoted_schema_bundle_as_json, promoted_schema_exists, promotion_artifacts,
@@ -29,6 +30,7 @@ fn main() -> ExitCode {
 fn run() -> Result<(), String> {
     let mut args = env::args().skip(1);
     match args.next().as_deref() {
+        Some("migrate") => migrate_command(args.collect()),
         Some("export-schemas") => export_schemas(args.next()),
         Some("export-promoted-schemas") => export_promoted_schemas(args.next()),
         Some("export-promotion-report") => export_promotion_report(args.next()),
@@ -146,6 +148,72 @@ fn export_fixtures(output_dir: Option<String>) -> Result<(), String> {
         let rendered = serde_json::to_string_pretty(&fixtures).map_err(|err| err.to_string())?;
         println!("{rendered}");
         Ok(())
+    }
+}
+
+fn migrate_command(args: Vec<String>) -> Result<(), String> {
+    let mut donor: Option<String> = None;
+    let mut input: Option<PathBuf> = None;
+    let mut output: Option<PathBuf> = None;
+    let mut report: Option<PathBuf> = None;
+    let mut dry_run = false;
+    let mut replay = false;
+
+    let mut iter = args.into_iter();
+    while let Some(arg) = iter.next() {
+        match arg.as_str() {
+            "--donor" => donor = Some(required_flag_value("--donor", iter.next())?),
+            "--input" => input = Some(resolve_workspace_path(required_flag_path("--input", iter.next())?)),
+            "--output" => output = Some(resolve_workspace_path(required_flag_path("--output", iter.next())?)),
+            "--report" => report = Some(resolve_workspace_path(required_flag_path("--report", iter.next())?)),
+            "--dry-run" => dry_run = true,
+            "--replay" => replay = true,
+            other => return Err(format!("unknown migrate flag: {other}")),
+        }
+    }
+
+    let donor = donor.ok_or_else(|| "missing required flag: --donor".to_string())?;
+    let input = input.ok_or_else(|| "missing required flag: --input".to_string())?;
+    let report = report.ok_or_else(|| "missing required flag: --report".to_string())?;
+    if !dry_run && output.is_none() {
+        return Err("missing required flag: --output (unless --dry-run is set)".into());
+    }
+
+    let request = MigrationRequest {
+        donor,
+        input_path: input,
+        output_path: output,
+        report_path: report,
+        dry_run,
+        replay,
+    };
+    let result = MigrationRunner::execute(request)?;
+    println!(
+        "migrated donor={} mode={:?} mapped={} dropped={} conflicts={} quarantined={} replay_equivalent={:?}",
+        result.donor,
+        result.mode,
+        result.mapped_count,
+        result.dropped_count,
+        result.conflict_count,
+        result.quarantined_count,
+        result.replay_equivalent
+    );
+    Ok(())
+}
+
+fn required_flag_value(flag: &str, value: Option<String>) -> Result<String, String> {
+    value.ok_or_else(|| format!("missing value for {flag}"))
+}
+
+fn required_flag_path(flag: &str, value: Option<String>) -> Result<PathBuf, String> {
+    required_flag_value(flag, value).map(PathBuf::from)
+}
+
+fn resolve_workspace_path(path: PathBuf) -> PathBuf {
+    if path.is_absolute() {
+        path
+    } else {
+        workspace_root().join(path)
     }
 }
 

@@ -9,11 +9,12 @@ from __future__ import annotations
 import json
 import os
 from datetime import datetime, timezone
-from typing import List
+from pathlib import Path
+from typing import Any, List
 
 from .base import GateReport
 
-CHECKLIST_PATH = os.path.join("world-model", "phase-checklist.json")
+CHECKLIST_PATH = str(Path(__file__).resolve().parents[2] / "phase-checklist.json")
 
 
 def _check_to_dict(c) -> dict:
@@ -30,7 +31,7 @@ def _check_to_dict(c) -> dict:
     return d
 
 
-def save(reports: List[GateReport]) -> None:
+def save(reports: List[GateReport], cleanup_summary: dict[str, Any] | None = None) -> None:
     """Persist gate reports to CHECKLIST_PATH."""
     data: dict = {
         "last_run": datetime.now(timezone.utc).isoformat(),
@@ -54,6 +55,8 @@ def save(reports: List[GateReport]) -> None:
                 for c in failures if c.remediation
             ],
         }
+    if cleanup_summary is not None:
+        data["cleanup"] = cleanup_summary
     os.makedirs(os.path.dirname(os.path.abspath(CHECKLIST_PATH)), exist_ok=True)
     with open(CHECKLIST_PATH, "w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2)

@@ -1,0 +1,99 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Three-Pass Adventure".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Three-Pass Adventure Studio
+
+```text
++--------------------------------------------------------------------------------+
+|  [ADVENTURE STUDIO: GOLDEN COMPASS METHOD]                            [?] [X]  |
++--------------------------------------------------------------------------------+
+|  PROGRESS: [ PASS 1: NARRATIVE ] -> [ PASS 2: MECHANICAL ] -> [ PASS 3: PRO ]  |
++--------------------------------------------------------------------------------+
+|  SCENE 1: THE TEMPLE ENTRANCE                                                  |
+|  [NARRATIVE (PASS 1)]                  |  [MECHANICS (PASS 2)]                 |
+|  "The ancient stone doors stand        |  Type: [ Critical Challenge ] [V]      |
+|  partially open, covered in moss..."   |  Difficulty: [ 15 / 18 / 22 ]         |
+|                                        |  Reward: [ Discovery of Key A ]       |
+|  Transition: [ Inner Sanctum ]         |  Status: [ Needs Encounter Stats ]    |
++----------------------------------------+---------------------------------------+
+|  THE RIVAL: PROFESSOR BLACKWOOD                                                |
+|  Bio: [ Obsessive academic, wants fame ] -> Stats: [ Action: 2 | Guts: 3 ]     |
++--------------------------------------------------------------------------------+
+|  DOOMSDAY CLOCK                                                                |
+|  [][][][][ ] - 5 Ticks until [ The Eclipse Ritual Completes ]                  |
++--------------------------------------------------------------------------------+
+|  PASS 3 ENHANCEMENTS:                                                          |
+|  [ ] Add "Read Aloud" Box | [ ] Add FM Pacing Notes | [ ] Verify Summary Bullets|
++--------------------------------------------------------------------------------+
+|  [Lock Pass 1] [Preview Full Module] [Export Final Draft]              [Next]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Three-Pass Adventure Studio
+
+## Component Architecture
+- **Stage-Gate Stepper:** A central workflow manager that ensures the DM follows the script's strict order (Narrative -> Mechanical -> Presentation).
+- **Evolutionary Entity Editor:** A specialized UI component for NPCs, Rivals, and McGuffins that changes its input fields based on the current pass. For example, Pass 1 focuses on "Motivations," while Pass 2 adds "Luck Points" and "Field Diamonds."
+- **Modular Scene Builder:** A structured editor that prevents the "Misuse of Bullet Points." It enforces writing the narrative description *before* allowing the creation of summary bullets.
+- **Narrative Logic Auditor:** An AI/Procedural layer that checks for Branching Paths and Doomsday Clock integration as the DM builds the story structure.
+- **Atmospheric Palette Tool:** Available in Pass 3, this provides sensory keywords and "Read Aloud" templates to polish the final presentation.
+
+## Interaction Logic
+- **Iterative Refinement Flow:** The UI allows the DM to "Go Back" but flags that changes to Narrative (Pass 1) may require re-validating Mechanics (Pass 2).
+- **The "Artifact" State-Management:** The UI mirrors the script's requirement to save and update artifacts at each pass, acting as a visual front-end for the underlying file system.
+- **Requirement Checklists:** Each Pass ends with a "Completion Criteria" checklist (e.g., "All major scenes outlined?") that must be satisfied before the "Next Pass" button activates.
+
+## Visual Design
+- **Professional & Methodical:** The UI is designed to feel like a high-end publishing tool. It uses clean, technical typography with subtle "Golden Compass" branding (compass motifs, gold/blue accents).
+- **Zoned Information:** Dividers and distinct zones separate "Fortune Master Knowledge" from "Player Handouts" or "Read Aloud" text.
+- **Process Visualization:** The progress bar is a literal "Compass" needle that moves as the adventure's complexity and completion grow.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Adventure Module - "The Whispering Spire"
+
+## [PASS 1] Narrative Framework
+**Premise**: The heroes must infiltrate the 'Whispering Spire' of the Chronomancer before the Blood Moon rises.
+**Objective**: Rescue the captured Heir of Valen.
+**Rival**: Magnus Thorne, a disgraced wizard who seeks to rewind time and undo his past failures.
+
+---
+
+## [PASS 2] Mechanical Implementation
+**Scene: The Spire Entrance**
+- **Challenge**: The Timeless Barrier (CRITICAL Challenge).
+- **DC**: 15 (Knowledge to bypass) or 18 (Guts to force through).
+- **Action**: Magnus's goons (3 BASIC enemies) guard the gate.
+- **Resource**: Costs 1 Wealth Point for local information, or 1 Hour on the Doomsday Clock.
+
+---
+
+## [PASS 3] Table-Ready Presentation
+
+### The Spire Entrance
+The Whispering Spire looms over the jagged peaks, its obsidian surface shimmering like oil on water. The air around the base vibrates with a low, dissonant hum that makes your teeth ache. A faint scent of ozone and burnt sage hangs in the air. High above, the Blood Moon begins its ascent, casting a crimson pall over the stonework.
+
+**Key Features:**
+- **The Timeless Barrier**: A shimmering wall of static energy.
+- **Magnus's Sentry**: Three guards in red-and-gold livery.
+- **The Obsidian Keyhole**: A small, star-shaped depression in the wall.
+
+**Fortune Master Guidance:**
+Players can bypass the barrier by solving the 'Riddle of the Sands' found in earlier scenes, or by a direct assault. If combat lasts more than 3 rounds, the 'Ticking Clock' adds a complication (Magnus notices the intrusion).
+
+**Sentry Dialogue:**
+"Nobody enters the Spire. The Master is... busy with history. Move along, or become a part of it."
+

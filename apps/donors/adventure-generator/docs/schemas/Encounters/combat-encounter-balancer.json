@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "name": "Combat Encounter Balancer",
+    "category": "Encounters",
+    "description": "A tool to design and balance combat encounters by calculating XP thresholds and providing tactical suggestions.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "party_level",
+      "type": "integer",
+      "label": "Party Level",
+      "description": "The average or target level of the player characters.",
+      "default": 3,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "num_players",
+      "type": "integer",
+      "label": "Number of Players",
+      "description": "The total number of player characters in the party.",
+      "default": 4,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "party_composition",
+      "type": "string",
+      "label": "Party Composition",
+      "description": "A brief description of the party's key abilities, classes, and available resources (e.g., spells, healing).",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "difficulty",
+      "type": "enum",
+      "label": "Encounter Difficulty",
+      "description": "The desired difficulty for the combat encounter.",
+      "default": "Medium",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Deadly"
+      ]
+    },
+    {
+      "name": "selected_monsters",
+      "type": "list",
+      "label": "Monster Selection",
+      "description": "A list of monster names or types to include in the encounter.",
+      "default": null,
+      "item_schema": {
+        "name": "monster_name",
+        "type": "string",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": null,
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "battleground_features",
+      "type": "string",
+      "label": "Battleground Features",
+      "description": "Description of interesting terrain, obstacles, or tactical features for the encounter area.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "reward_preferences",
+      "type": "string",
+      "label": "Reward Preferences",
+      "description": "Notes on desired types of treasure or special reward items for the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "encounter_plan",
+      "type": "object",
+      "label": "Balanced Encounter Plan",
+      "description": "A complete, balanced encounter plan ready for play.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "label": "Encounter Title",
+          "description": "A suggested name for the combat scenario.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "balance_analysis",
+          "type": "string",
+          "label": "Balance Analysis",
+          "description": "A summary of the encounter's calculated difficulty relative to the party and chosen settings, including warnings or suggestions.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "total_xp",
+          "type": "integer",
+          "label": "Total Monster XP",
+          "description": "The combined XP value of all creatures before multipliers.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "adjusted_xp",
+          "type": "integer",
+          "label": "Adjusted Encounter XP",
+          "description": "The final XP value of the encounter after applying multipliers for number of monsters.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "monster_roster",
+          "type": "list",
+          "label": "Final Monster Roster",
+          "description": "The list and quantity of creatures for the balanced encounter.",
+          "default": null,
+          "item_schema": {
+            "name": "monster_entry",
+            "type": "object",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "name",
+                "type": "string",
+                "label": "Monster Name",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "count",
+                "type": "integer",
+                "label": "Quantity",
+                "description": null,
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "encounter_summary",
+          "type": "string",
+          "label": "Encounter Summary",
+          "description": "A brief, evocative description of the scene for the Game Master.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "monster_tactics",
+          "type": "string",
+          "label": "Suggested Monster Tactics",
+          "description": "Guidelines on how the monsters might approach the fight, including target priority and ability use.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "battleground_setup",
+          "type": "string",
+          "label": "Battleground Setup",
+          "description": "A detailed description of the combat area, noting key features and potential starting positions for monsters.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "reward_suggestions",
+          "type": "string",
+          "label": "Reward Suggestions",
+          "description": "Ideas for treasure, magic items, or other rewards appropriate for the encounter's difficulty.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

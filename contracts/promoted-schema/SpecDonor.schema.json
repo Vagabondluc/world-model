@@ -3,7 +3,12 @@
   "enum": [
     "mythforge",
     "orbis",
-    "adventure_generator"
+    "adventure_generator",
+    "mappa_imperium",
+    "dawn_of_worlds",
+    "faction_image",
+    "watabou_city",
+    "encounter_balancer_scaffold"
   ],
   "title": "SpecDonor",
   "type": "string"

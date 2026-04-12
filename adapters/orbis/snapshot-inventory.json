@@ -1,0 +1,39 @@
+{
+  "donor": "orbis",
+  "snapshot_root": "adapters/orbis/source-snapshot",
+  "source_root": "mechanical-sycophant/src",
+  "file_count": 6,
+  "fingerprint": "ec024f6b22aa2f47db4543adad0ba687a73ad69bbb11f3c4852b9d6c6eab6c93",
+  "files": [
+    {
+      "path": "contracts/forms/social_event.schema.ts",
+      "size": 670,
+      "sha256": "575ad5cbbbb6ed489de5a4586df7ae5659ecb0c1ba52c9b745629c54e7276197"
+    },
+    {
+      "path": "contracts/forms/social_event.types.ts",
+      "size": 1273,
+      "sha256": "35a2a84d7c3aaf017d21b7282977b703962b7fd9682480f76f01e39438635527"
+    },
+    {
+      "path": "stores/mapLocationStore.ts",
+      "size": 2840,
+      "sha256": "60bce9396dcecb01caff678fda73a7c7a947c71232361a774a9a34716dc99d5b"
+    },
+    {
+      "path": "stores/mapStore.ts",
+      "size": 2888,
+      "sha256": "f26c4657e70a181e4b85e1656924c1b906067eff702e0d5903c1ddf01b872a62"
+    },
+    {
+      "path": "stores/weatherStore.ts",
+      "size": 6420,
+      "sha256": "2547377bb4d7a59f5a8f0f1161575ccc3003257b07e32086f2542040d9c5e16e"
+    },
+    {
+      "path": "types/session.ts",
+      "size": 12194,
+      "sha256": "b849b640f293054ed5dd27253f03ca32e6852cbc940f821b42b26cf6c3e03c96"
+    }
+  ]
+}

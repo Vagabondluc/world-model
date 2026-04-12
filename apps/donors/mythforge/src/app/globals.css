@@ -1,0 +1,264 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@xyflow/react/dist/style.css";
+@import "@mdxeditor/editor/style.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===================================================================
+   MythosForge — "Dark Esoteric" Theme
+   A modern digital grimoire for worldbuilding.
+   =================================================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: 'Merriweather', 'Georgia', serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* MythosForge Custom Colors */
+  --color-void-900: #0F0F13;
+  --color-void-800: #1A1A20;
+  --color-void-700: #222229;
+  --color-surface-700: #27272F;
+  --color-surface-600: #32323A;
+  --color-surface-500: #3E3E48;
+  --color-bone-100: #F3F4F6;
+  --color-bone-300: #D1D5DB;
+  --color-bone-400: #9CA3AF;
+  --color-ash-500: #8B8B99;
+  --color-ash-600: #6B6B78;
+  --color-accent-gold: #C5A861;
+  --color-accent-gold-dim: #A08A4E;
+  --color-accent-arcane: #10B981;
+  --color-accent-arcane-dim: #0D9668;
+  --color-accent-blood: #991B1B;
+  --color-accent-blood-dim: #7F1D1D;
+  --color-accent-indigo: #818CF8;
+  --color-accent-amber: #F59E0B;
+}
+
+/* Dark Esoteric — Default Theme (always dark) */
+:root {
+  --radius: 0.625rem;
+  --background: #0F0F13;
+  --foreground: #F3F4F6;
+  --card: #27272F;
+  --card-foreground: #F3F4F6;
+  --popover: #1A1A20;
+  --popover-foreground: #F3F4F6;
+  --primary: #C5A861;
+  --primary-foreground: #0F0F13;
+  --secondary: #32323A;
+  --secondary-foreground: #D1D5DB;
+  --muted: #32323A;
+  --muted-foreground: #8B8B99;
+  --accent: #32323A;
+  --accent-foreground: #D1D5DB;
+  --destructive: #991B1B;
+  --destructive-foreground: #F3F4F6;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #C5A861;
+  --chart-1: #C5A861;
+  --chart-2: #10B981;
+  --chart-3: #818CF8;
+  --chart-4: #F59E0B;
+  --chart-5: #991B1B;
+  --sidebar: #1A1A20;
+  --sidebar-foreground: #D1D5DB;
+  --sidebar-primary: #C5A861;
+  --sidebar-primary-foreground: #0F0F13;
+  --sidebar-accent: #32323A;
+  --sidebar-accent-foreground: #D1D5DB;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #C5A861;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-void-900 text-bone-100;
+  }
+}
+
+/* ===================================================================
+   Custom Scrollbar Styling
+   =================================================================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3E3E48;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4E4E58;
+}
+
+/* ===================================================================
+   React Flow Custom Overrides (Dark Esoteric)
+   =================================================================== */
+.react-flow__background {
+  background-color: #0F0F13 !important;
+}
+
+.react-flow__minimap {
+  background-color: #1A1A20 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+}
+
+.react-flow__controls {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background-color: #27272F !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #D1D5DB !important;
+  fill: #D1D5DB !important;
+}
+
+.react-flow__controls-button:hover {
+  background-color: #32323A !important;
+}
+
+.react-flow__edge-path {
+  stroke: #C5A861 !important;
+  stroke-width: 2 !important;
+}
+
+.react-flow__connection-line {
+  stroke: #C5A861 !important;
+}
+
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* ===================================================================
+   Serif font for lore content
+   =================================================================== */
+.lore-serif {
+  font-family: var(--font-serif), 'Georgia', serif;
+}
+
+.lore-serif .prose {
+  font-family: var(--font-serif), 'Georgia', serif;
+}
+
+/* ===================================================================
+   GM HUD Backdrop
+   =================================================================== */
+.gm-hud-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ===================================================================
+   Entity card hover glow effect
+   =================================================================== */
+.entity-card-glow {
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.entity-card-glow:hover {
+  box-shadow: 0 0 20px rgba(197, 168, 97, 0.15), 0 0 4px rgba(197, 168, 97, 0.1);
+  transform: translateY(-1px);
+}
+
+/* ===================================================================
+   Chat message bubble styles
+   =================================================================== */
+.chat-bubble-user {
+  background-color: #32323A;
+  border-radius: 12px 12px 4px 12px;
+}
+
+.chat-bubble-ai {
+  background-color: transparent;
+  border-radius: 12px 12px 12px 4px;
+}
+
+/* ===================================================================
+   Animated gold shimmer for pinned indicator
+   =================================================================== */
+@keyframes pin-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.pin-pulse {
+  animation: pin-pulse 2s ease-in-out infinite;
+}
+
+/* ===================================================================
+   Masonry grid for entity cards
+   =================================================================== */
+.masonry-grid {
+  columns: 3;
+  column-gap: 1rem;
+}
+
+.masonry-grid-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1280px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    columns: 1;
+  }
+}

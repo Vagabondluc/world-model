@@ -1,0 +1,56 @@
++------------------------------------------------------------------------------+
+| CreateNPC Alternate v1 — Comprehensive NPC Generator                        |
++--------------------------------+---------------------------------------------+
+| Left Nav                       | Main Form                                    |
+| - NPCs (active)                |                                             |
+| - Locations                    | === Basic Identity ===                      |
+| - Dungeons                     | Name: [_________________] [randomize]       |
+| - Adventures                   | Race: (v) Random / Human / Elf / Dwarf...  |
+|                                | Gender: (v) Random / M / F / NB / Other     |
+| Recent NPCs ↓                  | Sexual Pref: [__________] (optional)        |
+| - Sir Hookhand (saved)         | Alignment: (v) Random / LG / NG / CG...     |
+| - Maris Vall                   |                                             |
++--------------------------------+ === Profession & Traits ===                 |
+|                                | Job: [__________] [suggest from tables]     |
+|                                | Personality: [tag1, tag2, tag3...] (max 5)  |
+|                                | Physical Desc: (textarea)                   |
+|                                | [AI auto-fill physical]                     |
+|                                |                                             |
+|                                | === Advanced ===                            |
+|                                | Skills/Abilities: [__________]              |
+|                                | Secret: [__________]                        |
+|                                | Quest Hook: [__________]                    |
+|                                | Carried Items: [__________]                 |
+|                                | Famous Character Comparison: [__________]   |
+|                                |                                             |
+|                                | === Generation Controls ===                 |
+|                                | Seed: [__________]                          |
+|                                | [ ] Use table picker [Configure...]         |
+|                                | AI Context: (textarea)                      |
+|                                | [AI Fill] [Generate (procedural)] [Clear]  |
+|                                |                                             |
++--------------------------------+---------------------------------------------+
+| Preview Pane (right or bottom, collapsible)                                  |
+| ┌──────────────────────────────────────────────────────────────────────────┐ |
+| │ === Generated NPC Profile ===                                            │ |
+| │ Name: Theron Blackwell                                                   │ |
+| │ Race: Half-Elf                                                           │ |
+| │ Gender: Male                                                             │ |
+| │ Alignment: Chaotic Good                                                  │ |
+| │ Job: Cartographer                                                        │ |
+| │ Personality: curious, reckless, charming, secretive, loyal              │ |
+| │ Physical: tall (6'2"), slender build, auburn hair, amber eyes...        │ |
+| │ Speech Example: "Maps don't lie, friend—unlike people."                 │ |
+| │ Skills: cartography, navigation, persuasion                             │ |
+| │ Secret: He once falsified a map to hide a ruin he discovered.           │ |
+| │ Quest Hook: Needs help retrieving lost journal from bandit camp.        │ |
+| │ Carries: satchel of maps, ink vials, dagger, compass                    │ |
+| │ Famous Comparison: Indiana Jones meets Jack Sparrow                     │ |
+| └──────────────────────────────────────────────────────────────────────────┘ |
+| [Save to Cards] [Export JSON] [Export Markdown] [Copy Text]                 |
++------------------------------------------------------------------------------+
+| Footer: Keyboard shortcuts | Last seed: 20260122-npc-alt-1                  |
++------------------------------------------------------------------------------+
+
+Mobile layout: Form fields stack; preview below; left nav collapses to hamburger menu.
+Table config modal: lists all procedural tables with editable weights per entry.

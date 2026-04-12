@@ -1,0 +1,472 @@
+- id: mission_prompt
+  file: "Mission_prompt.md"
+  subscribes_to: ["synthesize","finalize"]
+- id: nodecloud_prompt
+  file: "NodeCloud_prompt.md"
+  subscribes_to: ["node_generation","link_nodes"]
+- id: table_prompt
+  file: "Table_prompt.md"
+  subscribes_to: ["table","matrix"]
+- id: dungeon_part
+  file: "DungeonPart_prompt.md"
+  subscribes_to: ["create_entities"]
+- id: dungeon_assembly
+  file: "DungeonAssembly_prompt.md"
+  subscribes_to: ["synthesize", "finalize"]
+- id: arcane_prompt
+  file: "Arcane_prompt.md"
+  subscribes_to: ["table","matrix","node_generation","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/adventures/arcane_library_method.txt"
+  type: "multi-step"
+
+# ── adventures ────────────────────────────────────────────────────────────────
+- id: three_pass_adventure
+  file: "ThreePassAdventure_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/adventures/Three-Pass Adventure Creation Method.txt"
+  type: "multi-step"
+- id: quest_creation
+  file: "Quest_prompt.md"
+  subscribes_to: ["seed","node_generation","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/adventures/AI_QuestCreation_v1.txt"
+  type: "method"
+- id: arcane_v2
+  file: "Arcane_prompt.md"
+  subscribes_to: ["table","matrix","node_generation","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/adventures/arcane_library_method2.txt"
+  type: "locale"
+
+# ── Dungeons ──────────────────────────────────────────────────────────────────
+- id: five_room_dungeon
+  file: "FiveRoomDungeon_prompt.md"
+  subscribes_to: ["seed","matrix","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/DungeonDesign_5Room_v1.txt"
+  type: "multi-step"
+- id: corridor_themes
+  file: "Table_prompt.md"
+  subscribes_to: ["table"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/corridor-themes-generator.txt"
+  type: "single-step"
+- id: dungeon_room
+  file: "Dungeon_prompt.md"
+  subscribes_to: ["create_entities"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/dungeon-room-designer.txt"
+  type: "single-step"
+
+# ── Encounters ────────────────────────────────────────────────────────────────
+- id: scene_craft
+  file: "Scene_prompt.md"
+  subscribes_to: ["seed","node_generation","create_entities","link_nodes","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/RPGAdventure_SceneCrafting_v1.txt"
+  type: "multi-step"
+- id: social_event
+  file: "SocialEvent_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/social_event.txt"
+  type: "multi-step"
+- id: combat_encounter
+  file: "Encounter_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/combat_encounter.txt"
+  type: "method"
+- id: combat_encounter_v2
+  file: "Encounter_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/combat_encounter - V2.txt"
+  type: "locale"
+- id: combat_encounter_balancer
+  file: "Encounter_prompt.md"
+  subscribes_to: ["seed","table"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/combat-encounter-balancer.txt"
+  type: "generator"
+- id: encounter_generic
+  file: "Encounter_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/Encounter_genric_beta.txt"
+  type: "generator"
+- id: trap_prep
+  file: "Trap_prompt.md"
+  subscribes_to: ["seed","node_generation","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/trap_prep.txt"
+  type: "multi-step"
+- id: urban_crawl
+  file: "UrbanCrawl_prompt.md"
+  subscribes_to: ["seed","table","matrix","node_generation","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Encounters/urban_crawl.txt"
+  type: "multi-step"
+
+# ── Factions ──────────────────────────────────────────────────────────────────
+- id: faction_creation
+  file: "FactionCreation_prompt.md"
+  subscribes_to: ["seed","create_entities","link_nodes","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Factions/factions_creation.txt"
+  type: "multi-step"
+- id: faction_downtime
+  file: "Table_prompt.md"
+  subscribes_to: ["seed","table"]
+  source: "Narrative Scripts/Execution_Systems/Factions/faction_downtime.txt"
+  type: "single-step"
+
+# ── Heists ────────────────────────────────────────────────────────────────────
+- id: heist
+  file: "Heist_prompt.md"
+  subscribes_to: ["seed","node_generation","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Heists/heist_prep.txt + heist_running.txt"
+  type: "compound"
+- id: raid
+  file: "Heist_Planning_prompt.md"
+  subscribes_to: ["seed","node_generation","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Heists/raid_prep.txt + raid_execution.txt"
+  type: "compound"
+
+# ── Items ─────────────────────────────────────────────────────────────────────
+- id: magic_item
+  file: "Item_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Item/magic_item.txt"
+  type: "single-step"
+- id: magic_weapon
+  file: "Item_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Item/magic weapon basic.txt"
+  type: "single-step"
+
+# ── Locations ─────────────────────────────────────────────────────────────────
+- id: city_gazetteer
+  file: "CityGazetteer_prompt.md"
+  subscribes_to: ["seed","table","node_generation","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Locations/city_gazetteer.txt"
+  type: "multi-step"
+- id: settlement
+  file: "Settlement_prompt.md"
+  subscribes_to: ["seed","create_entities","link_nodes","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Locations/Make a settlement.txt"
+  type: "multi-step"
+- id: quick_settlement
+  file: "Settlement_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Locations/Quick_settlement.txt"
+  type: "single-step"
+- id: battlefield
+  file: "Scene_prompt.md"
+  subscribes_to: ["seed","matrix","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Locations/battlefield_generation.txt"
+  type: "multi-step"
+
+# ── Mysteries ─────────────────────────────────────────────────────────────────
+- id: five_node_mystery
+  file: "FiveNodeMystery_prompt.md"
+  subscribes_to: ["seed","node_generation","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/5_node_mystery.txt"
+  type: "multi-step"
+- id: mystery_node
+  file: "Mystery_prompt.md"
+  subscribes_to: ["node_generation"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/mystery_node.txt"
+  type: "single-step"
+- id: proactive_mystery
+  file: "Mystery_prompt.md"
+  subscribes_to: ["node_generation"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/proactive_mystery_node.txt"
+  type: "single-step"
+- id: revelations
+  file: "Mystery_prompt.md"
+  subscribes_to: ["finalize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/revelations_dm_aid.txt"
+  type: "single-step"
+
+# ── NPCs ──────────────────────────────────────────────────────────────────────
+- id: npc_creation
+  file: "NPC_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/NPCs/CreateNPC_Alternate_v1.txt"
+  type: "multi-step"
+- id: npc_description
+  file: "NPC_prompt.md"
+  subscribes_to: ["create_entities"]
+  source: "Narrative Scripts/Execution_Systems/NPCs/NPC_Description_v1.txt"
+  type: "single-step"
+- id: quick_npc
+  file: "NPC_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/NPCs/Quick_NPC.txt"
+  type: "single-step"
+
+# ── plot ──────────────────────────────────────────────────────────────────────
+- id: campaign_prep
+  file: "CampaignPrep_prompt.md"
+  subscribes_to: ["seed","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/plot/campaign_prep.txt"
+  type: "multi-step"
+- id: hook
+  file: "Hook_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/plot/create_hook.txt"
+  type: "single-step"
+- id: rumor
+  file: "Rumor_prompt.md"
+  subscribes_to: ["seed","table"]
+  source: "Narrative Scripts/Execution_Systems/plot/rumors.txt"
+  type: "single-step"
+- id: scene_descriptor
+  file: "Scene_prompt.md"
+  subscribes_to: ["create_entities","finalize"]
+  source: "Narrative Scripts/Execution_Systems/plot/SceneDescriptor_v1.txt"
+  type: "single-step"
+- id: vivid_description
+  file: "VividDescription_prompt.md"
+  subscribes_to: ["finalize"]
+  source: "Narrative Scripts/Execution_Systems/plot/vivid_description.txt"
+  type: "descriptor"
+
+# ── riddles ───────────────────────────────────────────────────────────────────
+- id: riddle
+  file: "Riddle_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/riddles/CreateRiddle_v1.txt"
+  type: "single-step"
+- id: token
+  file: "Item_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/riddles/CreateToken_v1.txt"
+  type: "single-step"
+
+# ── Travel ────────────────────────────────────────────────────────────────────
+- id: wilderness_travel
+  file: "WildernessTravel_prompt.md"
+  subscribes_to: ["seed","table","matrix","node_generation","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Travel/wilderness_travel.txt"
+  type: "multi-step"
+- id: encounter_table
+  file: "Table_prompt.md"
+  subscribes_to: ["seed","table","matrix"]
+  source: "Narrative Scripts/Execution_Systems/Travel/random-encounter-table-generator.txt"
+  type: "single-step"
+
+# ── Westmarsh locale variants ─────────────────────────────────────────────────
+- id: westmarsh_mission
+  file: "Mission_prompt.md"
+  subscribes_to: ["synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_mission_prompt.txt"
+  type: "locale"
+- id: railroad_quest
+  file: "Quest_prompt.md"
+  subscribes_to: ["seed","matrix","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_rail_road_quest_generator.txt"
+  type: "multi-step"
+- id: instant_generator
+  file: "Quest_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_instant_generator.txt"
+  type: "single-step"
+- id: westmarsh_npc
+  file: "NPC_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_profil_npc_westmarsh.txt"
+  type: "locale"
+
+# Loom subscriptions registry (file -> list of stages)
+# This central registry is used by the Loom orchestrator to discover which
+# generator or prompt files subscribe to which Loom stages.
+
+- file: Narrative Scripts/Execution_Systems/Mysteries/node_cloud_mystery.txt
+  subscribes_to:
+    - "loom.stage.node_generation"
+    - "loom.stage.link_nodes"
+    - "loom.stage.synthesize"
+
+- file: Narrative Scripts/Execution_Systems/Mysteries/mystery_node.txt
+  subscribes_to:
+    - "loom.stage.node_generation"
+
+- file: Narrative Scripts/Execution_Systems/Mysteries/5_node_mystery.txt
+  subscribes_to:
+    - "loom.stage.node_generation"
+    - "loom.stage.link_nodes"
+
+- file: Narrative Scripts/Execution_Systems/Mysteries/non-linear_mystery.txt
+  subscribes_to:
+    - "loom.stage.node_structure"
+    - "loom.stage.node_generation"
+    - "loom.stage.link_nodes"
+
+- file: Narrative Scripts/Execution_Systems/Westmarsh/rail road quest  generator.txt
+  subscribes_to:
+    - "loom.stage.table"
+    - "loom.stage.matrix"
+    - "loom.stage.synthesize"
+
+- file: Narrative Scripts/Execution_Systems/Westmarsh/instant generator.txt
+  subscribes_to:
+    - "loom.stage.table"
+    - "loom.stage.matrix"
+    - "loom.stage.synthesize"
+
+- file: Narrative Scripts/Execution_Systems/Travel/random-encounter-table-generator.txt
+  subscribes_to:
+    - "loom.stage.table"
+    - "loom.stage.synthesize"
+
+- file: Narrative Scripts/Execution_Systems/Encounters/trap_prep.txt
+  subscribes_to:
+    - "loom.stage.table"
+    - "loom.stage.matrix"
+    - "loom.stage.synthesize"
+
+- file: Narrative Scripts/Execution_Systems/Locations/battlefield_generation.txt
+  subscribes_to:
+    - "loom.stage.table"
+    - "loom.stage.matrix"
+    - "loom.stage.synthesize"
+
+- file: mythforge/docs/schema-templates/prompts/Table_prompt.md
+  subscribes_to:
+    - "loom.stage.table"
+
+- file: mythforge/docs/schema-templates/prompts/Heist_Planning_prompt.md
+  subscribes_to:
+    - "loom.stage.planning"
+    - "loom.stage.synthesize"
+    - "loom.stage.finalize"
+
+- file: mythforge/docs/schema-templates/prompts/Quest_prompt.md
+  subscribes_to:
+    - "loom.stage.synthesize"
+    - "loom.stage.finalize"
+
+# ── Dungeon Lego System (2026 audit) ──────────────────────────────────────────
+- id: dungeon_composer
+  file: "DungeonComposer_prompt.md"
+  subscribes_to: ["seed","table","matrix","create_entities","link_nodes","synthesize","finalize"]
+  source: "Dungeons/ (all files combined)"
+  type: "compound"
+
+- id: dungeon_concept
+  file: "DungeonConcept_prompt.md"
+  subscribes_to: ["seed","table"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/dungeon-concept-brainstormer.txt"
+  type: "generator"
+
+- id: dungeon_layout
+  file: "DungeonLayout_prompt.md"
+  subscribes_to: ["table","matrix"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/dungeon-map-creator.txt, xandered-dungeon-designer.txt"
+  type: "generator"
+
+- id: dungeon_room_designer
+  file: "DungeonRoom_prompt.md"
+  subscribes_to: ["create_entities"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/dungeon-room-designer.txt"
+  type: "generator"
+
+- id: corridor_themes_generator
+  file: "CorridorThemes_prompt.md"
+  subscribes_to: ["create_entities"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/corridor-themes-generator.txt"
+  type: "generator"
+
+- id: dungeon_features
+  file: "DungeonFeatures_prompt.md"
+  subscribes_to: ["synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/dungeon-features-summarizer.txt"
+  type: "descriptor"
+
+- id: dungeon_key
+  file: "DungeonKey_prompt.md"
+  subscribes_to: ["synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/dungeon-key-writer.txt"
+  type: "compound"
+
+- id: xandered_dungeon
+  file: "XanderedDungeon_prompt.md"
+  subscribes_to: ["matrix","link_nodes"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/xandered-dungeon-designer.txt"
+  type: "method"
+
+- id: megadungeon_planner
+  file: "MegadungeonPlanner_prompt.md"
+  subscribes_to: ["seed","table","matrix","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/megadungeon-planner.txt"
+  type: "method"
+
+- id: pointyhat_dungeon
+  file: "PointyHatDungeon_prompt.md"
+  subscribes_to: ["seed","table","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/DungeonCreation_PointyHat_v1.txt"
+  type: "method"
+
+- id: ten_room_dungeon
+  file: "TenRoomDungeon_prompt.md"
+  subscribes_to: ["seed","table","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Dungeons/jp cooper 10 room dungeon.txt"
+  type: "method"
+
+# ── Adventures (2026 audit) ───────────────────────────────────────────────────
+- id: travel_event_system
+  file: "TravelEventSystem_prompt.md"
+  subscribes_to: ["seed","table","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/adventures/pointyhat travel adventure.txt"
+  type: "method"
+
+# ── Heists & Raids (2026 audit) ───────────────────────────────────────────────
+- id: heist_running
+  file: "HeistRunning_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Heists/heist_running.txt"
+  type: "method"
+
+- id: raid_prep
+  file: "RaidPrep_prompt.md"
+  subscribes_to: ["seed","table","matrix","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Heists/raid_prep.txt"
+  type: "method"
+
+- id: raid_execution
+  file: "RaidExecution_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Heists/raid_execution.txt"
+  type: "method"
+
+# ── Mysteries (2026 audit) ────────────────────────────────────────────────────
+- id: five_by_five_campaign
+  file: "FiveByFiveCampaign_prompt.md"
+  subscribes_to: ["seed","node_generation","create_entities","link_nodes","synthesize","finalize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/5x5_mystery_campaign.txt"
+  type: "method"
+
+- id: non_linear_mystery
+  file: "NonLinearMystery_prompt.md"
+  subscribes_to: ["seed","node_generation","link_nodes","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/non-linear_mystery.txt"
+  type: "method"
+
+- id: revelation_list
+  file: "RevelationList_prompt.md"
+  subscribes_to: ["synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/revelations_dm_aid.txt"
+  type: "descriptor"
+
+- id: swap_mystery
+  file: "SwapMystery_prompt.md"
+  subscribes_to: ["seed","create_entities","link_nodes","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/swap_mystery.txt"
+  type: "method"
+
+- id: proactive_mystery_node
+  file: "ProactiveMysteryNode_prompt.md"
+  subscribes_to: ["node_generation","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/Mysteries/proactive_mystery_node.txt"
+  type: "generator"
+
+# ── Plot / Scene (2026 audit) ─────────────────────────────────────────────────
+- id: scene_crafting
+  file: "SceneCrafting_prompt.md"
+  subscribes_to: ["seed","create_entities","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/plot/crafting scenes.txt"
+  type: "method"
+
+- id: scene_descriptor
+  file: "SceneDescriptor_prompt.md"
+  subscribes_to: ["seed","synthesize"]
+  source: "Narrative Scripts/Execution_Systems/plot/SceneDescriptor_v1.txt"
+  type: "descriptor"

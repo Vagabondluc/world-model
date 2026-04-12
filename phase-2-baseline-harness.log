@@ -1,0 +1,55 @@
+Running Phase 2 gate only (ordering not enforced)
+
+
+========================================================================
+  Phase 2: Adapter Snapshots  [FAIL]
+========================================================================
+  [ FAIL] 2.x Snapshot manifest for mythforge
+          missing file: world-model/snapshots/mythforge/manifest.yaml
+  [ FAIL] 2.x Snapshot manifest for orbis
+          missing file: world-model/snapshots/orbis/manifest.yaml
+  [ FAIL] 2.x Snapshot manifest for adventure-generator
+          missing file: world-model/snapshots/adventure-generator/manifest.yaml
+  [ FAIL] 2.5 Adapter docs (>=3)
+          found 0, need >=3
+  [ FAIL] 2.5 Adapter copy policy doc exists
+          missing file: world-model/docs/adapters/ADAPTER_COPY_POLICY.md
+
+════════════════════════════════════════════════════════════════════════
+  NEXT ACTIONS  (Phase 2 — Adapter Snapshots)
+════════════════════════════════════════════════════════════════════════
+
+  ❯ [1] CREATE  world-model/snapshots/mythforge/manifest.yaml
+       Template        : world-model/docs/templates/adapter-manifest-template.md
+       Required fields : id, name, source.repo, source.commit, snapshot, mappings, concepts
+       Notes           : Quick scaffold: run `python world-model/scripts/run_harness.py --bootstrap --phase 2` to auto-create a stub, then replace every REPLACE_ value before re-running.
+
+  ❯ [2] CREATE  world-model/snapshots/orbis/manifest.yaml
+       Template        : world-model/docs/templates/adapter-manifest-template.md
+       Required fields : id, name, source.repo, source.commit, snapshot, mappings, concepts
+       Notes           : Quick scaffold: run `python world-model/scripts/run_harness.py --bootstrap --phase 2` to auto-create a stub, then replace every REPLACE_ value before re-running.
+
+  ❯ [3] CREATE  world-model/snapshots/adventure-generator/manifest.yaml
+       Template        : world-model/docs/templates/adapter-manifest-template.md
+       Required fields : id, name, source.repo, source.commit, snapshot, mappings, concepts
+       Notes           : Quick scaffold: run `python world-model/scripts/run_harness.py --bootstrap --phase 2` to auto-create a stub, then replace every REPLACE_ value before re-running.
+
+  ❯ [4] CREATE  world-model/docs/adapters/<donor>.md
+       Template        : world-model/docs/adapters/MYTHFORGE_ADAPTER.md
+       Notes           : Create one adapter doc per donor under docs/adapters/.
+
+  ❯ [5] CREATE  world-model/docs/adapters/ADAPTER_COPY_POLICY.md
+       Notes           : Create a doc defining the policy for copying files from donor repos.
+
+  Rerun: python world-model/scripts/run_harness.py --phase 2
+════════════════════════════════════════════════════════════════════════
+
+
+──────────────────────────────────────────────────────────────
+  PHASE CHECKLIST
+──────────────────────────────────────────────────────────────
+  [✗] Phase 2: Adapter Snapshots  (5/5 checks failed)
+──────────────────────────────────────────────────────────────
+  Checklist saved → world-model\phase-checklist.json
+──────────────────────────────────────────────────────────────
+

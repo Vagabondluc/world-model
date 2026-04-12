@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "name": "EncounterDesign_Older_v1",
+    "category": "Encounters",
+    "description": "A prompt template for Dungeons & Dragons encounter design, guiding the creation of detailed challenges, opponents, and narratives.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "player_level",
+      "type": "integer",
+      "label": "Player Level",
+      "description": "The average level of the player characters to tailor the encounter's difficulty.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "number_of_players",
+      "type": "integer",
+      "label": "Number of Players",
+      "description": "The number of players in the party to balance the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "location_description",
+      "type": "string",
+      "label": "Location Description",
+      "description": "A detailed and vivid description of the location, including sensory details to immerse the players.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "primary_challenge_objective",
+      "type": "string",
+      "label": "Primary Challenge Objective",
+      "description": "Explicitly state the primary challenge or objective for the players in this encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "environmental_effect_description",
+      "type": "string",
+      "label": "Environmental Effect Description",
+      "description": "Optional. Elaborate on unique environmental effects, describing their impact and specific gameplay mechanics.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "challenge_description",
+      "type": "string",
+      "label": "Challenge Description",
+      "description": "Describe the challenge(s), including type (skill checks, puzzles, combat), rules, DCs, and resolution guidelines.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "opponent_information",
+      "type": "string",
+      "label": "Opponent Information",
+      "description": "Comprehensive description or statblock for opponents, including their tactics, motives, and goals.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "npc_and_monster_descriptions",
+      "type": "string",
+      "label": "NPC and Monster Descriptions",
+      "description": "Provide detailed descriptions of any other NPCs or monsters involved, focusing on their backgrounds and personalities.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "xp_reward",
+      "type": "integer",
+      "label": "XP Reward",
+      "description": "The total XP to be awarded for overcoming the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "designed_encounter",
+      "type": "object",
+      "label": "Designed Encounter",
+      "description": "A fully realized Dungeons & Dragons encounter document.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "setting_the_scene",
+          "type": "string",
+          "label": "Setting the Scene",
+          "description": "The detailed description of the location and the primary challenge objective.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "environmental_effect",
+          "type": "string",
+          "label": "Environmental Effect",
+          "description": "The description of any unique environmental effects and their gameplay impact.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "challenge_description_with_resolution",
+          "type": "string",
+          "label": "Challenge Description & Resolution",
+          "description": "The detailed challenges, including skill checks, DCs, combat mechanics, and guidelines for success or failure.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "consequences_for_success_or_failure",
+          "type": "string",
+          "label": "Consequences",
+          "description": "The narrative impacts of success or failure for each challenge and how outcomes affect the story.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "detailed_opponent_information",
+          "type": "string",
+          "label": "Opponent Information",
+          "description": "The comprehensive description and statblocks for the encounter's opponents and their tactics.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "xp_rewards",
+          "type": "string",
+          "label": "XP Rewards",
+          "description": "The breakdown of XP rewards for the encounter's challenges, reflecting their complexity.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "npc_and_monster_descriptions",
+          "type": "string",
+          "label": "NPC and Monster Descriptions",
+          "description": "In-depth descriptions of the NPCs and monsters involved in the encounter.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "outcome_and_transition",
+          "type": "string",
+          "label": "Outcome and Transition",
+          "description": "A summary of potential outcomes and narrative hooks to lead into the next scene or adventure.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

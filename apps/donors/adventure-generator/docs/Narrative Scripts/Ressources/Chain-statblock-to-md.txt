@@ -1,0 +1,165 @@
+Make me this NPC statblock:
+((
+Write Npc description Here
+))
+((
+When creating a creature statblock:
+((
+1. Find out it creature roles:
+((
+
+**Ambusher Creatures**  
+Ambushers specialize in stealth tactics, splitting their turns between attacking and vanishing from sight, often dragging their target to a concealed spot. They thrive in environments with ample cover and work best when complemented by brutes, minions, skirmishers, or soldiers to occupy the rest of the party, allowing them to focus on isolating and taking down their chosen target efficiently.
+
+**Artillery Creatures**  
+Artillery creatures dominate in ranged combat and protect themselves by keeping distance from melee threats, relying on brutes, minions, or soldiers as shields. In combat, they prioritize positioning to maintain a strategic advantage, utilizing Dash or Disengage to retreat when necessary. They aim to target the most significant threats from a distance, enhancing the dynamics of combat encounters.
+
+**Brute Creatures**  
+Brutes are powerhouse fighters with high hit points and damage output, demanding attention on the battlefield. They excel in close quarters, engaging multiple foes to leverage their superior strength. Their straightforward mechanics allow for their inclusion in significant numbers, providing a straightforward yet challenging obstacle for player characters.
+
+**Controller Creatures**  
+Controllers manipulate the battlefield with debuffs and control tactics, often requiring protection from allies to maximize their effectiveness. With a preference for affecting multiple foes or repositioning for optimal ability use, controllers add a layer of complexity to encounters, making them strategic components that can significantly alter the flow of combat.
+
+**Leader Creatures**  
+Leaders inspire and enhance their allies through actions and buffs, playing a central role in the coordination of their group's efforts. Effective when paired with various creature roles, leaders ensure their allies' abilities are maximized, making them pivotal in escalating the challenge of an encounter. Their presence necessitates strategic focus from player characters to mitigate their influence.
+
+**Minion Creatures**  
+Minions add a cinematic flair to combat, allowing players to feel heroic as they dispatch numerous foes. Strategically dangerous, they support higher-tier creatures by overwhelming player characters through numbers, demanding attention despite their lower individual threat level. Their role is to protect and enhance the impact of their superior allies on the battlefield.
+
+**Non-Combative Creatures**  
+Non-combative creatures enrich the game's environment, offering opportunities for interaction beyond combat. They can serve various roles, such as providing information, aiding in non-violent resolutions, or adding depth to the world through their unique behaviors and characteristics. Their inclusion offers a dynamic layer to encounters, emphasizing versatility and creativity in gameplay.
+
+**Skirmisher Creatures**  
+Skirmishers bring mobility and tactical flexibility to combat, targeting vulnerable characters and retreating to safety. Their agility forces players to adapt their strategies, working effectively alongside other roles to distract and disorient. Skirmishers’ hit-and-run tactics introduce a dynamic element to battles, challenging players to secure their positions.
+
+**Soldier Creatures**  
+Soldiers excel in defensive roles, engaging melee fighters and facilitating ally movements. Their strategy involves drawing attention away from weaker allies, providing a frontline defense that complicates player characters' offensive strategies. Soldiers' ability to divide and conquer makes them versatile components of any encounter, ensuring a balanced defense and offense.
+
+**Solo Creatures**  
+Solo creatures stand as formidable opponents on their own, equipped with actions that disrupt the standard combat sequence. They excel in environments that allow them to utilize their full movement capabilities, targeting the most significant threats while employing area-of-effect abilities to challenge multiple foes. Their autonomy and power make them central figures in memorable encounters.
+
+**Support Creatures**
+Support entities bolster allies without leading, offering buffs and reinforcements without the complexity of leaders. They complement any role, enhancing the group's overall performance. Their presence necessitates strategic elimination to prevent allies from gaining upper hand.
+
+))
+
+2. Generate the statblock, using this formula for calculating it Challenge rating. Be surw to include Legendary actions and/or lair actions only to boss monsters of CR 10 or more, 
+((
+    Please generate a creature stat block for this character with the same stats, including only the combat-relevant features. Any discarded features that are non-relevant to combat should be included in a creature description at the end.
+
+    To calculate CR, considering spellcasting:
+    
+    Identify the spellcasting level and class (wizard, warlock, cleric, etc.), use the appropriate spellcasting table.
+    Analyze the stat block spells, consider spell strength, atk/dmg, healing/HP tradeoffs.
+    Consider a 3-round simulation to include spell effects on offensive and defensive CR calculations.
+    Calculate Offensive CR from stat block: Determine DPR, Atk (consider spellcasting).
+    Calculate Defensive CR from stat block: Determine Eff.HP (consider immunities [2x BPS nonmagical], resistances [1.5x BPS nonmagical], healing, and spellcasting), Eff.AC.
+    Avg(Def.CR, Off.CR) = CR.
+    
+    CR calc guidelines:
+    
+    CR 0-1/2: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=HP/3, HP=(ceil(ACCCR)+1)3
+    CR 1-7: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=5+5CR, HP=3Dmg
+    CR 8+: Atk=4+floor(0.5CR), DC=11+floor(0.5CR), AC=13+floor(0.33CR), Dmg=5CR, HP=3*Dmg
+    
+    Please make sure the combat-relevant features are included in the stat block, and any non-relevant features should be listed in a creature description at the end for clarity.
+    
+    For the tactics section, provide a simple tactic block for simpler creatures and a more detailed one for high CR or more complicated creatures. Write the tactics in a natural language style without splitting the during combat section. The tactic block should offer optimal ways to deal damage and give advice on how to run the monster, without providing strict round-by-round instructions. For more complicated creatures, include the following categories when appropriate:
+    
+    Before Combat:
+    During Combat:
+    Offensive Strategies:
+    Defensive Strategies:
+    Support Strategies:
+    Morale:
+    Allies:
+    
+    Note: The CR calculation should be performed using the guidelines provided, but the resulting CR should simply be included in the stat block without showing the detailed calculation.
+    ))
+3. Format it to markdown using those guidelines:
+((
+   {{Statblock}}
+Format the statblock exactly as this template: 
+[Creature Name]
+
+[Size + Type] [(Subtype if applicable)], [alignment]
+ 
+Armor Class X
+ 
+Hit Points X (XdX+X)
+ 
+Speed X ft.
+ 
+STR X (+X) DEX X (+X) CON X (+X)
+INT X (+X) WIS X (+X) CHA X (+X)
+ 
+Skills X +X, X +X
+ 
+Damage Resistances X
+ 
+Condition Immunities X
+ 
+Senses X, passive Perception X
+ 
+Languages X
+ 
+Challenge X (XP)
+ 
+[Feature]. X (Recharge X/X-X)
+ 
+[Mythic Feature]. [Condition to Activate Mythic Actions]
+ 
+Legendary Resistance (3/Day). If the [Creature Name] fails a saving throw, it can choose to succeed instead.
+ 
+Innate Spellcasting (Type of Magic). The [Creature Name]’s innate spellcasting ability is X (spell save DC X). It can innately cast the following spells, requiring no components::
+ 
+At will: X, X
+ 
+1/day each: X, X
+ 
+Spellcasting. The [Creature Name] is an Xst/th-level spellcaster. Its spellcasting ability is X (spell save DC X, +X to hit with spell attacks). The [Creature Name] has the following [Spellcaster Class] spells prepared:
+ 
+Cantrips: X, X
+ 
+1st-level (X slots): X, X
+ 
+Xnd-level (X slots): X, X
+ 
+Actions
+ 
+X. X
+ 
+X. Attack Type: +X to hit, reach X ft./range X ft., # targets. Hit: X (XdX + X) damage. (Recharge X/X-X)
+ 
+Bonus Actions
+ 
+X. X
+ 
+Reactions
+ 
+Legendary Actions
+ 
+The [Creature Name] can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature’s turn. The [Creature Name] regains spent legendary actions at the start of its turn.
+ 
+X. X
+ 
+X (Costs X Actions). X
+ 
+Mythic Actions
+ 
+If the [Creature Name]'s [Mythic Feature] trait has activated in the last hour, it can use the options below as legendary actions.
+ 
+X. X
+ 
+X (Costs X Actions). X
+ 
+[Description]
+ 
+[Lairs Actions]
+ 
+[Tactics]
+ 
+[Notes (CR in Lair for Legendary creature, Mythic creatures: CR with mythic actions.) 
+))
+))
+))

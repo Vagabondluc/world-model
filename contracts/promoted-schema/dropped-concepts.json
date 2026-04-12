@@ -1,27 +1,27 @@
 [
   {
-    "concept_id": "orbis/voxel-domains-voxel-ts",
-    "concept_name": "voxel",
+    "concept_id": "orbis/socialeventschema-contracts-forms-social-event-schema-ts",
+    "concept_name": "SocialEventSchema",
     "donor": "orbis",
     "provenance": {
       "alias_history": [],
       "donor": "orbis",
       "promotion_class": "reference_only",
-      "source_concept_name": "voxel",
-      "source_file_path": "domains/voxel.ts"
+      "source_concept_name": "SocialEventSchema",
+      "source_file_path": "contracts/forms/social_event.schema.ts"
     },
     "reason": "Reference-only concept stays outside canonical contracts."
   },
   {
-    "concept_id": "orbis/orbis-kernel-kernel-orbis-kernel-ts",
-    "concept_name": "orbis-kernel",
+    "concept_id": "orbis/social-event-types-contracts-forms-social-event-types-ts",
+    "concept_name": "social_event.types",
     "donor": "orbis",
     "provenance": {
       "alias_history": [],
       "donor": "orbis",
       "promotion_class": "reference_only",
-      "source_concept_name": "orbis-kernel",
-      "source_file_path": "kernel/orbis-kernel.ts"
+      "source_concept_name": "social_event.types",
+      "source_file_path": "contracts/forms/social_event.types.ts"
     },
     "reason": "Reference-only concept stays outside canonical contracts."
   },
@@ -208,6 +208,49 @@
       "promotion_class": "reference_only",
       "source_concept_name": "historyStore",
       "source_file_path": "stores/historyStore.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "orbis/maplocation-stores-maplocationstore-ts",
+    "concept_name": "MapLocation",
+    "donor": "orbis",
+    "provenance": {
+      "alias_history": [
+        "location",
+        "region",
+        "site"
+      ],
+      "donor": "orbis",
+      "promotion_class": "reference_only",
+      "source_concept_name": "MapLocation",
+      "source_file_path": "stores/mapLocationStore.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "orbis/mapstore-stores-mapstore-ts",
+    "concept_name": "mapStore",
+    "donor": "orbis",
+    "provenance": {
+      "alias_history": [],
+      "donor": "orbis",
+      "promotion_class": "reference_only",
+      "source_concept_name": "mapStore",
+      "source_file_path": "stores/mapStore.ts"
+    },
+    "reason": "Reference-only concept stays outside canonical contracts."
+  },
+  {
+    "concept_id": "orbis/weatherstore-stores-weatherstore-ts",
+    "concept_name": "weatherStore",
+    "donor": "orbis",
+    "provenance": {
+      "alias_history": [],
+      "donor": "orbis",
+      "promotion_class": "reference_only",
+      "source_concept_name": "weatherStore",
+      "source_file_path": "stores/weatherStore.ts"
     },
     "reason": "Reference-only concept stays outside canonical contracts."
   }

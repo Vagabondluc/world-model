@@ -1,0 +1,61 @@
++------------------------------------------------------------------------------+
+| NPC Description v1 — Detailed Roleplay NPC with Backstory                   |
++--------------------------------+---------------------------------------------+
+| Left Nav                       | Main Form                                    |
+| - NPCs (active)                |                                             |
+| - Locations                    | === Identity ===                            |
+| - Dungeons                     | Card Value: [__________] (optional tarot)   |
+|                                | NPC Name: [_________________] [randomize]   |
+| Recent NPCs ↓                  | Race: (v) Random / Human / Elf...           |
+| - Aldric the Wise              | Role/Profession: [__________]               |
+| - Zara Moonwhisper             | Alignment: (v) Random / LG / NG...          |
++--------------------------------+                                             |
+|                                | === Style & Length ===                      |
+|                                | Tone: (v) Gritty / Whimsical / Heroic      |
+|                                | Length: (v) Short / Medium / Long           |
+|                                | [ ] Include unexpected element              |
+|                                |                                             |
+|                                | === Generation ===                          |
+|                                | Seed: [__________]                          |
+|                                | AI Context: (textarea)                      |
+|                                | "Generate a D&D NPC with detailed..."      |
+|                                | [AI Fill] [Generate (procedural)] [Clear]  |
+|                                |                                             |
++--------------------------------+---------------------------------------------+
+| Preview Pane (markdown rendered + raw markdown toggle)                      |
+| ┌──────────────────────────────────────────────────────────────────────────┐ |
+| │ | Category | Details |                                                  │ |
+| │ |----------|---------|                                                  │ |
+| │ | Card Value | The Wanderer |                                           │ |
+| │ | Name | Aldric the Wise |                                             │ |
+| │ | Race | Human |                                                       │ |
+| │ | Role | Retired scholar |                                            │ |
+| │ | Appearance | Elderly, silver beard, robed, wise eyes |              │ |
+| │ | Alignment | Lawful Good |                                            │ |
+| │ | Motivations | Preserve lost knowledge |                             │ |
+| │ | Personality | Cautious, thoughtful, verbose |                       │ |
+| │ | Flaws | Overly trusting of books, distrusts magic users |        │ |
+| │ | Catchphrase | "The answer is always in the margins..." |            │ |
+| │ | Mannerisms | Taps fingers on books while thinking |                │ |
+| │ | Speech | Slow, deliberate, uses archaic terms |                   │ |
+| │ | Available Knowledge | Ancient histories, local lore |                │ |
+| │ | Hidden Knowledge | Location of forbidden library |                   │ |
+| │ | Bonds | Estranged son in the thieves' guild |                     │ |
+| │ | Roleplaying Cues | Quotes texts, avoids eye contact |               │ |
+| │                                                                          │ |
+| │ ### Backstory:                                                           │ |
+| │ Aldric spent decades as the head librarian of the Royal Academy...      │ |
+| │ (continues for 150-500 words depending on length setting)                │ |
+| │                                                                          │ |
+| │ ### Personality:                                                         │ |
+| │ 1) Motivations and Goals: Aldric seeks to...                            │ |
+| │ 2) Morals and Ethics: He believes...                                    │ |
+| │ 3) Personality: Cautious yet curious...                                 │ |
+| │ 4) Flaws: His trust in written word...                                  │ |
+| └──────────────────────────────────────────────────────────────────────────┘ |
+| [Toggle Raw Markdown] [Save to Cards] [Export MD] [Copy]                    |
++------------------------------------------------------------------------------+
+| Footer: Word count: 342 | Seed: 20260122-npc-desc-1                          |
++------------------------------------------------------------------------------+
+
+Mobile: form stacks; markdown preview below; table scrolls horizontally.

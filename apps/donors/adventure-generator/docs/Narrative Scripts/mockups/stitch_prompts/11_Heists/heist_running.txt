@@ -1,0 +1,85 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Heist Running".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Heist Running Dashboard
+
+```text
++--------------------------------------------------------------------------------+
+|  [Heist Execution: Live Tension Dashboard]                            [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ CURRENT ZONE ] [ TENSION HUD ] [ FLASHBACK BANK ] [ COMPLICATIONS ]        |
++--------------------------------------------------------------------------------+
+|  ZONE: The Night-Blooming Garden       |  TENSION HUD (LEVEL 4: SUSPICIOUS)    |
+|  Active Hazard: [ Soporific Spores ]   |  [||||------]                         |
+|  Stealth DC: [ 14 ]                    |  [!] Alert in 2 Turns if no action    |
++----------------------------------------+---------------------------------------+
+|  FLASHBACK BANK (2/3 Left)             |  ACTIVE COMPLICATIONS                 |
+|  [x] Bribed Stable Boy (Active)        |  - "The Third Crew" (Rival Influx)    |
+|  [ ] Hidden Gear (Unused)              |  - "Mechanical Hound" (Sniffing)      |
++----------------------------------------+---------------------------------------+
+|  INTERVENTION CONSOLE (Choice)                                                 |
+|  [A] Distract with Meat (-1 Meat) | [B] Hide (Stealth) | [C] Eliminate (Combat) |
++--------------------------------------------------------------------------------+
+|  [Advance Turn] [Trigger Alert] [Success Plotting] [Retreat]            [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Heist Running Dashboard
+
+## Component Architecture
+- **Live Tension HUD:** The core mechanic of the `heist_running.txt` script. It visually tracks the "Tension Level" from 1-10, triggered by player actions or failed rolls.
+- **Flashback Bank:** A specialized resource tracker (referencing 'Blades in the Dark' style logic often used in heists) where players can spend points to retcon preparation actions.
+- **Dynamic Complication Engine:** A real-time generator that injects obstacles (Step 5 of script) like "Rival Crews" or "Mechanical Hounds" based on the current Tension level.
+- **Intervention Console:** A modal interface that triggers during "Critical Moments," forcing the party to choose between Stealth, Distraction, or Combat, each with varying Tension costs.
+
+## Interaction Logic
+- **Turn-Based Tension Increment:** If players take too long in a zone, a "Ticking Clock" (Rule 4 of script) automatically adds +1 Tension.
+- **The "Point of No Return" Alert:** At Tension level 8, the UI changes color and shifts to "High Alert" mode, escalating all guard statblocks.
+- **Retreat Path Calculator:** Provides a dynamic "Exit Route" based on previously cleared zones.
+
+## Visual Design
+- **High-Stakes HUD:** Inspired by stealth-action games (e.g., Dishonored). Uses a minimalist overlay with high-contrast warning elements.
+- **Progressive Anxiety Colors:** The Tension bar shifts from serene green to cautionary amber to emergency red.
+- **Monospace Narrative Log:** A scrolling log of the "Rhythm of the Heist," keeping a history of all major narrative choices.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: The Gilded Vault Heist (Live Execution)
+
+### **1. Session State**
+- **Current Phase:** Zone 2 - The Night-Blooming Garden.
+- **Global Tension:** [||||------] (Level 4: "Suspicious").
+- **Party Status:** Hidden (Bush cover).
+
+---
+
+### **2. Active Complications**
+- **Soporific Spores:** Every 2 turns, DC 13 Con save or gain 1 level of Exhaustion.
+- **The Third Crew:** A member of The Nightshades has just been caught by a guard in Zone 1. Tension +2.
+
+---
+
+### **3. Live Interventions**
+- **[!] Flashback Used:** The rogue uses their 'Flashback' to reveal they bribed the stable boy earlier to leave the back gate unlatched.
+- **Obstacle:** A mechanical hound is sniffing the air near the players.
+- **Choice:** [A] Distract with meat (+1 Tension) | [B] Sneak past (DC 15) | [C] Eliminate quickly (DC 12 + Tension Spike).
+
+---
+
+### **4. Outcome Projection**
+- **Current Success Probability:** 65%.
+- **Projected Exit:** Thru the Kitchen chimney (The Scribe's Route).
+

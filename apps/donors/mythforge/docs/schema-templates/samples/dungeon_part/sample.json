@@ -1,0 +1,36 @@
+{
+  "loom": {
+    "stage": "create_entities",
+    "seed": "A half-buried shrine beneath the ossuary"
+  },
+  "text": "A damp shrine chamber lit by cold green fungus.",
+  "part": {
+    "id": "part-shrine-01",
+    "part_type": "room",
+    "role": "entrance",
+    "label": "The Half-Buried Shrine",
+    "description": "A cracked shrine chamber half swallowed by the earth, its altar tilted beneath roots and fallen stone.",
+    "sensory": {
+      "sight": "Green fungus halos the broken altar and the walls sweat with mineral sheen.",
+      "sound": "Water ticks through the rubble and drips into a shallow ceremonial basin.",
+      "smell": "Wet stone, candle wax, and stale incense cling to the air.",
+      "touch": "The floor is slick with fine grit and the carved reliefs feel cold to the touch."
+    },
+    "exits": [
+      {
+        "direction": "east",
+        "target_id": "part-shrine-02",
+        "locked": false,
+        "secret": false,
+        "notes": "A narrow passage lined with collapsed votive niches."
+      }
+    ],
+    "contents": ["tilted altar", "broken reliquary", "roots through stone"],
+    "challenges": ["A faint ward triggers if the altar is disturbed without a prayer or offering."],
+    "npcs": ["A whispering shrine keeper spirit"],
+    "treasure": "A silver incense box and a key etched with holy sigils.",
+    "gm_notes": "This room should feel like the first clue that the dungeon was sacred before it was ruined.",
+    "tags": ["ritual", "ruin", "entrance"],
+    "seed": "A half-buried shrine beneath the ossuary"
+  }
+}

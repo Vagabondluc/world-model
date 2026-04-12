@@ -1,0 +1,93 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Quicknpc Creation V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Quick NPC Reference Card
+
+```text
++--------------------------------------------------------------------------------+
+|  [Quick NPC: Roleplay Snapshot Tool]                                  [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ NPC Name / Role Seed ] [GENERATE]                                           |
++--------------------------------------------------------------------------------+
+|  ROLEPLAY SNAPSHOT (TABLE VIEW)                                                |
+|  +-----------+--------------------------------------------------------------+  |
+|  | Category  | Details (One Sentence Max)                                   |  |
+|  +-----------+--------------------------------------------------------------+  |
+|  | Identity  | Silas, Tiefling Black-Marketeer                              |  |
+|  | Look      | Wears a pristine white suit and polished ivory horns.        |  |
+|  | Goal      | To corner the market on stolen dragonscales.                 |  |
+|  | Traits    | Polite, calculative, and deeply superstitious.                |  |
+|  | Habits    | Constantly polishes a silver coin between his knuckles.       |  |
+|  | Speech    | Slow, melodic, and peppered with archaic idioms.             |  |
+|  | Knowledge | Knows the secret password to the 'Gilded Cage' club.          |  |
+|  | Bonds     | Owed a favor by the High Priest of the Sun Temple.           |  |
+|  +-----------+--------------------------------------------------------------+  |
++--------------------------------------------------------------------------------+
+|  UNEXPECTED DETAIL:                                                            |
+|  [!] Silas is actually a pacifist who hates the sight of blood.               |
++--------------------------------------------------------------------------------+
+|  DEEPENING DESCRIPTION                                                         |
+|  "Silas rose from the gutters of the Fog District by selling information..."  |
++--------------------------------------------------------------------------------+
+|  [Copy Table Markdown] [Save to NPC Card Library] [Pin to Sidebar]     [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Quick NPC Reference Generator
+
+## Component Architecture
+- **Snap-Generation Prompt:** A single, centralized input where the DM types a basic seed (e.g., "Tiefling Merchant") to trigger the script's logic.
+- **Constraint-Driven Table Editor:** The core of the UI. It mirrors the script's 9-category requirement. Each cell is designed to encourage one-sentence brevity to keep the reference "fast."
+- **"Unexpected Detail" Highlighter:** A dedicated, high-contrast box for the "One unexpected detail" requirement, ensuring the NPC stands out from generic archetypes.
+- **Narrative Deep-Dive Studio:** A secondary editor for the longer description that adds depth beyond the table, useful for preparing NPCs ahead of time.
+- **Roleplay Dashboard (View Mode):** A "Read-Only" mode that transforms the edit grid into a clean, aesthetic card for use during a live session.
+
+## Interaction Logic
+- **Brevity Enforcement:** The UI uses character limits or visual indicators to warn the DM if a category's description is becoming too verbose.
+- **The "Roll for Twist" Interaction:** A button that can instantly replace or generate the "Unexpected Detail" if the DM gets stuck.
+- **Linking Systems:** If "Knowledge" or "Bonds" are filled, the UI suggests 1-click links to related Factions or Locations in the campaign manager.
+
+## Visual Design
+- **Clean & Fast:** Unlike the "NPC Creator Bot," this UI uses a more modern, streamlined digital aesthetic for maximum "glans-ability" at the table.
+- **Grid-First Layout:** The table occupies the majority of the screen real-estate, emphasizing its role as the primary tool.
+- **Color-Coded Cues:** Interaction cues (Speech, Habits) are slightly indented or color-indicated to help the DM shift into character quickly.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Quick NPC Reference (Silas the Tiefling)
+
+| Category | Details |
+|:---|:---|
+| **Identity** | Silas, Tiefling Black-Marketeer. |
+| **Look** | Wears a pristine white suit that contrasts sharply with his deep crimson skin and ivory horns. |
+| **Goal** | To corner the market on stolen dragonscales and eventually buy out the local merchants' guild. |
+| **Traits** | Polite and calculative, but possesses a deep and irrational fear of black cats. |
+| **Habits** | Constantly polishes a heavy silver coin between his knuckles when nervous or thinking. |
+| **Speech** | Speaks with a slow, melodic cadence, often using archaic idioms from his ancestors' homeland. |
+| **Knowledge** | Knows the secret password and hidden entrance to the 'Gilded Cage' underground club. |
+| **Bonds** | He is owed a life-debt by the High Priest of the Sun Temple for a past transgression. |
+| **Cues** | Tilt head slightly to the left and lower the voice to a whisper when discussing business. |
+
+---
+
+### **Sudden Twist (Unexpected Detail):**
+**Silas is a devout pacifist.** Despite his ruthless business reputation and association with criminals, he cannot stand the sight of blood and will actively sabotage violent plans.
+
+---
+
+### **Character Deep-Dive:**
+Silas rose from the gutters of the Fog District not through strength, but through a terrifyingly sharp mind. He views the city as a series of accounts to be balanced. His white suit is both a status symbol and a practical tool—nobody expects a man in such expensive clothes to be hiding in an alleyway. He prizes information over gold, knowing that a single secret can buy a dozen kingdoms.
+

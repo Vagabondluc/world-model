@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Artifact Envelope",
+  "description": "Container vocabulary: the Generic Artifact payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope retained for compatibility.",
+  "type": "object",
+  "properties": {
+    "loom": {
+      "type": "object"
+    },
+    "text": {
+      "type": "string"
+    },
+    "json": {
+      "type": [
+        "object",
+        "array"
+      ]
+    }
+  },
+  "x-mythforge-schema-class": "workflow bundle",
+  "x-mythforge-entity-companion": "Artifact.schema.json"
+}

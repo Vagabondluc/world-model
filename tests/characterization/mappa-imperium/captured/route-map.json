@@ -1,0 +1,11 @@
+{
+  "donor": "mappa-imperium",
+  "label": "Mappa Imperium",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "routes": [
+    "/",
+    "/donor/mappa-imperium"
+  ]
+}

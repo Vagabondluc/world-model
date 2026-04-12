@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "name": "RPGAdventure_SceneCrafting_v1",
+    "category": "Encounters",
+    "description": "Generates an RPG adventure as a series of interconnected scenes, following classic narrative stages from setup to conclusion.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "world_concept",
+      "type": "string",
+      "label": "World Concept",
+      "description": "A detailed description of the world, its unique rules, and primary locations where factions hold sway.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "protagonists",
+      "type": "list",
+      "label": "Protagonist Details",
+      "description": "A list of the main characters, including their core traits, motivations, and background.",
+      "default": null,
+      "item_schema": {
+        "name": "protagonist_description",
+        "type": "string",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": null,
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "inciting_incident",
+      "type": "string",
+      "label": "Inciting Incident",
+      "description": "The specific event that kicks off the story and propels the protagonists into action.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "overarching_goal",
+      "type": "string",
+      "label": "Overarching Goal",
+      "description": "The primary objective the protagonists are trying to achieve throughout the adventure.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "key_factions",
+      "type": "list",
+      "label": "Key Factions",
+      "description": "The major groups, powers, or influential entities operating in the world.",
+      "default": null,
+      "item_schema": {
+        "name": "faction_description",
+        "type": "string",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": null,
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "central_theme",
+      "type": "string",
+      "label": "Central Theme",
+      "description": "The core message or underlying idea of the story, e.g., 'sacrifice', 'corruption', 'hope'.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "narrative_tone",
+      "type": "enum",
+      "label": "Narrative Tone",
+      "description": "The overall feeling and style of the adventure.",
+      "default": "epic",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "epic",
+        "gritty",
+        "mysterious",
+        "swashbuckling",
+        "political",
+        "horror"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "adventure_storyline",
+      "type": "object",
+      "label": "Adventure Storyline",
+      "description": "The complete narrative structure of the RPG adventure, broken down by its core stages.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "prep_and_intro_scene",
+          "type": "string",
+          "label": "Prep & Intro Scene",
+          "description": "The opening scene that introduces the world, characters, and the inciting incident.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "overcoming_challenge_scenes",
+          "type": "list",
+          "label": "Overcoming Challenge Scenes",
+          "description": "A series of scenes where the characters face trials and obstacles.",
+          "default": null,
+          "item_schema": {
+            "name": "challenge_scene",
+            "type": "string",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "midpoint_twist_or_setback_scene",
+          "type": "string",
+          "label": "Midpoint - Twist or Setback Scene",
+          "description": "The critical scene where a shock reveal or significant setback occurs, changing the story's direction.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "solving_puzzle_or_roleplay_challenge_scenes",
+          "type": "list",
+          "label": "Solving Puzzles / Roleplay Challenge Scenes",
+          "description": "Scenes focused on intellectual, social, or personal challenges rather than pure combat.",
+          "default": null,
+          "item_schema": {
+            "name": "puzzle_roleplay_scene",
+            "type": "string",
+            "label": null,
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "climax_and_confrontation_scene",
+          "type": "string",
+          "label": "Climax & Confrontation Scene",
+          "description": "The final, most intense scene where characters face their ultimate test.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "resolution_and_denouement_scene",
+          "type": "string",
+          "label": "Resolution & Denouement Scene",
+          "description": "The concluding scene that wraps up the story, ties up loose ends, and reflects on the journey.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

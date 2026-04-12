@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "name": "simple_cards",
+      "raw": "event: component\ndata: {\"type\":\"component\",\"component\":{\"type\":\"DraftCard\",\"props\":{\"id\":\"1\",\"title\":\"Test Draft\"}}}\n\n",
+      "expected": {
+        "type": "component",
+        "component": {
+          "type": "DraftCard",
+          "props": {
+            "id": "1",
+            "title": "Test Draft"
+          }
+        }
+      }
+    },
+    {
+      "name": "implicit_text",
+      "raw": "data: Hello from OpenUI\n\n",
+      "expected": {
+        "type": "text",
+        "text": "Hello from OpenUI"
+      }
+    },
+    {
+      "name": "action_payload",
+      "raw": "event: action\ndata: {\"type\":\"createEntity\",\"payload\":{\"kind\":\"npc\",\"name\":\"Iris\"}}\n\n",
+      "expected": {
+        "type": "action",
+        "action": {
+          "type": "createEntity",
+          "payload": {
+            "kind": "npc",
+            "name": "Iris"
+          }
+        }
+      }
+    }
+  ]
+}

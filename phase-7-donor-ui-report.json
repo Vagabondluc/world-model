@@ -1,0 +1,352 @@
+{
+  "ok": true,
+  "workspace_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "app_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+  "checks": [
+    {
+      "name": "doc exists: DONOR_UI_AUDIT.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/DONOR_UI_AUDIT.md"
+    },
+    {
+      "name": "doc exists: DONOR_CHARACTERIZATION_MATRIX.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/DONOR_CHARACTERIZATION_MATRIX.md"
+    },
+    {
+      "name": "doc exists: DONOR_UI_CONFORMANCE_MATRIX.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/testing/DONOR_UI_CONFORMANCE_MATRIX.md"
+    },
+    {
+      "name": "doc exists: phase-7-donor-ui-conformance.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/roadmap/phase-7-donor-ui-conformance.md"
+    },
+    {
+      "name": "audit includes Mythforge",
+      "ok": true
+    },
+    {
+      "name": "audit includes Orbis",
+      "ok": true
+    },
+    {
+      "name": "audit includes Adventure Generator",
+      "ok": true
+    },
+    {
+      "name": "audit includes Mappa Imperium",
+      "ok": true
+    },
+    {
+      "name": "audit includes Dawn of Worlds",
+      "ok": true
+    },
+    {
+      "name": "audit includes Faction Image",
+      "ok": true
+    },
+    {
+      "name": "audit includes Watabou City",
+      "ok": true
+    },
+    {
+      "name": "audit includes Encounter Balancer",
+      "ok": true
+    },
+    {
+      "name": "characterization matrix has basis column",
+      "ok": true
+    },
+    {
+      "name": "conformance matrix has basis column",
+      "ok": true
+    },
+    {
+      "name": "conformance matrix names the shared-concept round-trip stress case",
+      "ok": true
+    },
+    {
+      "name": "manifest exists: baselines.yaml",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/characterization/baselines.yaml"
+    },
+    {
+      "name": "manifest exists: waivers.yaml",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/tests/conformance/waivers.yaml"
+    },
+    {
+      "name": "baselines register Mythforge captured basis",
+      "ok": true
+    },
+    {
+      "name": "baselines register Orbis captured basis",
+      "ok": true
+    },
+    {
+      "name": "baselines register Adventure captured basis",
+      "ok": true
+    },
+    {
+      "name": "baselines register Mappa Imperium",
+      "ok": true
+    },
+    {
+      "name": "baselines register Dawn of Worlds",
+      "ok": true
+    },
+    {
+      "name": "baselines register Faction Image",
+      "ok": true
+    },
+    {
+      "name": "baselines register Watabou City",
+      "ok": true
+    },
+    {
+      "name": "baselines register Encounter Balancer",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Orbis",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Adventure Generator",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Mappa Imperium",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Dawn of Worlds",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Faction Image",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Watabou City",
+      "ok": true
+    },
+    {
+      "name": "waiver manifest includes Encounter Balancer",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:mythforge",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:orbis",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:adventure",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:mappa-imperium",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:dawn-of-worlds",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:faction-image",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:watabou-city",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize:encounter-balancer",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:characterize",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:mythforge",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:orbis",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:adventure",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:mappa-imperium",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:dawn-of-worlds",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:faction-image",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:watabou-city",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance:encounter-balancer",
+      "ok": true
+    },
+    {
+      "name": "npm script: test:conformance",
+      "ok": true
+    },
+    {
+      "name": "donor route handler exists",
+      "ok": true
+    },
+    {
+      "name": "donor compare route exists",
+      "ok": true
+    },
+    {
+      "name": "navigation links to donor compare",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Mythforge donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Orbis donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Adventure Generator donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Mappa Imperium donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Dawn of Worlds donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Faction Image donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Watabou City donor route",
+      "ok": true
+    },
+    {
+      "name": "navigation links to Encounter Balancer donor route",
+      "ok": true
+    },
+    {
+      "name": "test exists: mythforge.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/mythforge.characterization.test.ts"
+    },
+    {
+      "name": "test exists: orbis.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/orbis.characterization.test.ts"
+    },
+    {
+      "name": "test exists: adventure-generator.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/adventure-generator.characterization.test.ts"
+    },
+    {
+      "name": "test exists: mythforge.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: orbis.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: adventure-generator.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: mappa-imperium.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/mappa-imperium.characterization.test.ts"
+    },
+    {
+      "name": "test exists: dawn-of-worlds.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/dawn-of-worlds.characterization.test.ts"
+    },
+    {
+      "name": "test exists: faction-image.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/faction-image.characterization.test.ts"
+    },
+    {
+      "name": "test exists: watabou-city.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/watabou-city.characterization.test.ts"
+    },
+    {
+      "name": "test exists: encounter-balancer.characterization.test.ts",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/characterization/encounter-balancer.characterization.test.ts"
+    },
+    {
+      "name": "test exists: mappa-imperium.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: dawn-of-worlds.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: faction-image.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: watabou-city.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx"
+    },
+    {
+      "name": "test exists: encounter-balancer.conformance.test.tsx",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx"
+    },
+    {
+      "name": "donor characterization",
+      "ok": true,
+      "command": "npm.cmd run test:characterize",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 test:characterize\n> npm run test:characterize:mythforge && npm run test:characterize:orbis && npm run test:characterize:adventure && npm run test:characterize:mappa-imperium && npm run test:characterize:dawn-of-worlds && npm run test:characterize:faction-image && npm run test:characterize:watabou-city && npm run test:characterize:encounter-balancer\n\n\n> unified-app@0.1.0 test:characterize:mythforge\n> node scripts/characterize-donor.mjs mythforge && vitest run tests/characterization/mythforge.characterization.test.ts\n\n{\n  \"donor\": \"mythforge\",\n  \"label\": \"Mythforge\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"mythforge/package.json\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\package.json\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/app/page.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\app\\\\page.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/components/mythosforge/TopNav.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\components\\\\mythosforge\\\\TopNav.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/components/mythosforge/ExplorerTree.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\components\\\\mythosforge\\\\ExplorerTree.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"mythforge/src/components/mythosforge/Workspace.tsx\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\mythforge\\\\src\\\\components\\\\mythosforge\\\\Workspace.tsx\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 5,\n    \"existingSources\": 5,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/mythforge.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:05:59\n\u001b[2m   Duration \u001b[22m 3.18s\u001b[2m (transform 50ms, setup 503ms, collect 18ms, tests 5ms, environment 2.03s, prepare 216ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:orbis\n> node scripts/characterize-donor.mjs orbis && vitest run tests/characterization/orbis.characterization.test.ts\n\n{\n  \"donor\": \"orbis\",\n  \"label\": \"Orbis\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/true orbis/Orbis Spec 2.0/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\true orbis\\\\Orbis Spec 2.0\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"to be merged/true orbis/Orbis Spec 2.0/Orbis 1.0/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\true orbis\\\\Orbis Spec 2.0\\\\Orbis 1.0\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/adapters/ORBIS_ADAPTER.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\adapters\\\\ORBIS_ADAPTER.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 3,\n    \"existingSources\": 3,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/orbis.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:03\n\u001b[2m   Duration \u001b[22m 3.28s\u001b[2m (transform 92ms, setup 567ms, collect 19ms, tests 5ms, environment 2.11s, prepare 186ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:adventure\n> node scripts/characterize-donor.mjs adventure-generator && vitest run tests/characterization/adventure-generator.characterization.test.ts\n\n{\n  \"donor\": \"adventure-generator\",\n  \"label\": \"Adventure Generator\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/dungeon generator/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\dungeon generator\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"to be merged/dungeon generator/zai2/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\dungeon generator\\\\zai2\",\n      \"exists\": false,\n      \"kind\": \"file\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/adapters/ADVENTURE_GENERATOR_ADAPTER.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\adapters\\\\ADVENTURE_GENERATOR_ADAPTER.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 3,\n    \"existingSources\": 2,\n    \"missingSources\": 1\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": [\n    \"to be merged/dungeon generator/zai2/\"\n  ]\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/adventure-generator.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:08\n\u001b[2m   Duration \u001b[22m 3.18s\u001b[2m (transform 55ms, setup 566ms, collect 20ms, tests 4ms, environment 2.00s, prepare 210ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:mappa-imperium\n> node scripts/characterize-donor.mjs mappa-imperium && vitest run tests/characterization/mappa-imperium.characterization.test.ts\n\n{\n  \"donor\": \"mappa-imperium\",\n  \"label\": \"Mappa Imperium\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/mappa imperium/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\mappa imperium\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/donors/MAPPA_IMPERIUM.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\donors\\\\MAPPA_IMPERIUM.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 2,\n    \"existingSources\": 2,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/mappa-imperium.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:13\n\u001b[2m   Duration \u001b[22m 2.96s\u001b[2m (transform 46ms, setup 511ms, collect 25ms, tests 4ms, environment 1.84s, prepare 215ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:dawn-of-worlds\n> node scripts/characterize-donor.mjs dawn-of-worlds && vitest run tests/characterization/dawn-of-worlds.characterization.test.ts\n\n{\n  \"donor\": \"dawn-of-worlds\",\n  \"label\": \"Dawn of Worlds\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/world-builder-ui/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\world-builder-ui\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/donors/DAWN_OF_WORLDS.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\donors\\\\DAWN_OF_WORLDS.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 2,\n    \"existingSources\": 2,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/dawn-of-worlds.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:17\n\u001b[2m   Duration \u001b[22m 3.02s\u001b[2m (transform 48ms, setup 502ms, collect 20ms, tests 5ms, environment 1.84s, prepare 242ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:faction-image\n> node scripts/characterize-donor.mjs faction-image && vitest run tests/characterization/faction-image.characterization.test.ts\n\n{\n  \"donor\": \"faction-image\",\n  \"label\": \"Sacred Sigil Generator\",\n  \"classification\": \"app donor\",\n  \"methodology\": \"behavioral capture\",\n  \"basis\": \"captured\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/faction-image/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\faction-image\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/donors/FACTION_IMAGE.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\donors\\\\FACTION_IMAGE.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 2,\n    \"existingSources\": 2,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"exact+adapted\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/faction-image.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:21\n\u001b[2m   Duration \u001b[22m 3.03s\u001b[2m (transform 45ms, setup 492ms, collect 19ms, tests 4ms, environment 1.83s, prepare 274ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:watabou-city\n> node scripts/characterize-donor.mjs watabou-city && vitest run tests/characterization/watabou-city.characterization.test.ts\n\n{\n  \"donor\": \"watabou-city\",\n  \"label\": \"Watabou City\",\n  \"classification\": \"source-fragment (GPL)\",\n  \"methodology\": \"reference baseline\",\n  \"basis\": \"reconstructed\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/watabou-city-clean-room/gpl_source/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\watabou-city-clean-room\\\\gpl_source\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/donors/WATABOU_CITY.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\donors\\\\WATABOU_CITY.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 2,\n    \"existingSources\": 2,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"adapted+waived\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/watabou-city.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:26\n\u001b[2m   Duration \u001b[22m 3.02s\u001b[2m (transform 48ms, setup 487ms, collect 17ms, tests 3ms, environment 1.89s, prepare 257ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:characterize:encounter-balancer\n> node scripts/characterize-donor.mjs encounter-balancer && vitest run tests/characterization/encounter-balancer.characterization.test.ts\n\n{\n  \"donor\": \"encounter-balancer\",\n  \"label\": \"Encounter Balancer Scaffold\",\n  \"classification\": \"scaffold-copy donor\",\n  \"methodology\": \"representative baseline + clone-equivalence\",\n  \"basis\": \"reconstructed\",\n  \"sourceInventory\": [\n    {\n      \"relativePath\": \"to be merged/apocalypse/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\apocalypse\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"to be merged/character-creator/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\character-creator\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"to be merged/deity creator/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\deity creator\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"to be merged/genesis/\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\to be merged\\\\genesis\",\n      \"exists\": true,\n      \"kind\": \"directory\"\n    },\n    {\n      \"relativePath\": \"world-model/docs/donors/ENCOUNTER_BALANCER_SCAFFOLD.md\",\n      \"absolutePath\": \"D:\\\\coding\\\\AI\\\\Chat-Gpt-Agent\\\\world-model\\\\docs\\\\donors\\\\ENCOUNTER_BALANCER_SCAFFOLD.md\",\n      \"exists\": true,\n      \"kind\": \"file\"\n    }\n  ],\n  \"coverage\": {\n    \"expectedSources\": 5,\n    \"existingSources\": 5,\n    \"missingSources\": 0\n  },\n  \"parityTarget\": \"adapted+waived\",\n  \"unstableSurfaces\": []\n}\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/characterization/encounter-balancer.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:30\n\u001b[2m   Duration \u001b[22m 3.04s\u001b[2m (transform 46ms, setup 502ms, collect 17ms, tests 4ms, environment 1.83s, prepare 213ms)\u001b[22m"
+    },
+    {
+      "name": "donor conformance",
+      "ok": true,
+      "command": "npm.cmd run test:conformance",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 test:conformance\n> npm run test:conformance:mythforge && npm run test:conformance:orbis && npm run test:conformance:adventure && npm run test:conformance:mappa-imperium && npm run test:conformance:dawn-of-worlds && npm run test:conformance:faction-image && npm run test:conformance:watabou-city && npm run test:conformance:encounter-balancer\n\n\n> unified-app@0.1.0 test:conformance:mythforge\n> vitest run tests/conformance/mythforge.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 237\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:35\n\u001b[2m   Duration \u001b[22m 4.10s\u001b[2m (transform 355ms, setup 505ms, collect 756ms, tests 237ms, environment 1.98s, prepare 213ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:orbis\n> vitest run tests/conformance/orbis.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 166\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:41\n\u001b[2m   Duration \u001b[22m 4.02s\u001b[2m (transform 369ms, setup 475ms, collect 786ms, tests 166ms, environment 1.96s, prepare 207ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:adventure\n> vitest run tests/conformance/adventure-generator.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 176\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:46\n\u001b[2m   Duration \u001b[22m 4.58s\u001b[2m (transform 343ms, setup 507ms, collect 1.08s, tests 176ms, environment 2.12s, prepare 205ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:mappa-imperium\n> vitest run tests/conformance/mappa-imperium.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/mappa-imperium.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 161\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:52\n\u001b[2m   Duration \u001b[22m 4.51s\u001b[2m (transform 336ms, setup 488ms, collect 1.03s, tests 161ms, environment 2.16s, prepare 222ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:dawn-of-worlds\n> vitest run tests/conformance/dawn-of-worlds.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/dawn-of-worlds.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 149\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:06:57\n\u001b[2m   Duration \u001b[22m 4.23s\u001b[2m (transform 344ms, setup 504ms, collect 776ms, tests 149ms, environment 2.13s, prepare 229ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:faction-image\n> vitest run tests/conformance/faction-image.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/faction-image.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 139\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:07:03\n\u001b[2m   Duration \u001b[22m 4.84s\u001b[2m (transform 760ms, setup 530ms, collect 1.46s, tests 139ms, environment 2.09s, prepare 204ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:watabou-city\n> vitest run tests/conformance/watabou-city.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/watabou-city.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 163\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:07:09\n\u001b[2m   Duration \u001b[22m 4.15s\u001b[2m (transform 352ms, setup 541ms, collect 786ms, tests 163ms, environment 2.07s, prepare 199ms)\u001b[22m\n\n\n> unified-app@0.1.0 test:conformance:encounter-balancer\n> vitest run tests/conformance/encounter-balancer.conformance.test.tsx\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u2713\u001b[39m tests/conformance/encounter-balancer.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 164\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m1 passed\u001b[39m\u001b[22m\u001b[90m (1)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:07:14\n\u001b[2m   Duration \u001b[22m 4.03s\u001b[2m (transform 354ms, setup 521ms, collect 806ms, tests 164ms, environment 1.97s, prepare 249ms)\u001b[22m"
+    }
+  ],
+  "errors": []
+}

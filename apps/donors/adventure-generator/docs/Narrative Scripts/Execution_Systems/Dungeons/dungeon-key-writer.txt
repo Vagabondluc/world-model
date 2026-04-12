@@ -1,0 +1,66 @@
+# Dungeon Key Writer
+
+## Objective
+Create a comprehensive and easy-to-use dungeon key that corresponds to your dungeon map.
+
+## Instructions
+1. Prepare Document:
+   - Create a new document or section for your dungeon key
+   - Use a clear, consistent formatting style
+
+2. Write Dungeon Introduction:
+   - Provide a brief overview of the dungeon's history and purpose
+   - Describe any overarching themes or atmospheres
+
+3. List Dungeon Features:
+   - Detail common elements found throughout the dungeon
+   - Include information on illumination, ceiling height, and typical wall/floor materials
+
+4. Create Corridor Themes:
+   - Develop a list of descriptive elements for dungeon corridors
+   - Include sensory details and potential obstacles
+
+5. For Each Room:
+   a. Room Header:
+      - Write room number (corresponding to map)
+      - Create a brief, evocative room name
+
+   b. Boxed Text:
+      - Write 2-4 sentences describing initial room impression
+      - Focus on what characters would immediately notice
+      - Include sensory details beyond just visual descriptions
+
+   c. Reactive Skill Checks:
+      - List any immediate skill checks (e.g., perception checks)
+      - Provide DC and results of successful checks
+
+   d. Room Elements:
+      - Describe each significant feature or object in the room
+      - Include any interactive elements, traps, or treasures
+      - Provide mechanics for any challenges or puzzles
+
+   e. Denizens:
+      - Describe any creatures or NPCs present
+      - Include brief behavior notes and combat statistics
+      - Note any treasure carried by denizens
+
+   f. Connections:
+      - List all exits from the room
+      - Note any special features of exits (e.g., locked doors, secret passages)
+
+6. Treasure Summary:
+   - Compile a list of all treasure found in the dungeon
+   - Organize by room number for easy reference
+
+7. Random Encounter Tables:
+   - Create tables for random encounters, if used
+   - Include encounter frequency and instructions for use
+
+8. Appendices:
+   - Add any necessary supplementary information
+   - Include handouts, maps, or special rules as needed
+
+9. Review and Cross-reference:
+   - Ensure all room numbers match the map
+   - Check for consistency in descriptions and mechanics
+   - Verify all mentioned elements are fully explained

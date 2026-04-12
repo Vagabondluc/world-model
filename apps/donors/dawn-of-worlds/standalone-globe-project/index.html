@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standalone Globe Project</title>
+</head>
+
+<body>
+    <div id="root" style="width: 100vw; height: 100vh; overflow: hidden; background: #000;"></div>
+    <script>
+        // Version injection
+        const buildTime = __BUILD_TIMESTAMP__; // This will be replaced by Vite
+        console.log(`%c 🏗️ Build Timestamp: ${buildTime}`, 'background: #222; color: #bada55; padding: 4px; border-radius: 4px;');
+        document.documentElement.setAttribute('data-build-timestamp', buildTime);
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

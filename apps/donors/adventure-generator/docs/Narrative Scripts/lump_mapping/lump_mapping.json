@@ -1,0 +1,958 @@
+{
+  "lumps": [
+    {
+      "id": 0,
+      "file": "00_meta_and_tooling.md",
+      "description": "Schema, manifests, export templates, and build scripts."
+    },
+    {
+      "id": 1,
+      "file": "01_ai_behavior_and_style.txt",
+      "description": "Tone, style, and behavior rules under AI_Behavior root."
+    },
+    {
+      "id": 2,
+      "file": "02_agent_architecture.txt",
+      "description": "Hivemind/agent coordination and narrative master blueprints."
+    },
+    {
+      "id": 3,
+      "file": "03_prose_templates_and_text_formats.txt",
+      "description": "Prose scaffolds, style prompts, and text templates."
+    },
+    {
+      "id": 4,
+      "file": "04_npc_and_character_systems.txt",
+      "description": "NPC generators, personality questionnaires, quirks, and relationships."
+    },
+    {
+      "id": 5,
+      "file": "05_locations_and_settlements.txt",
+      "description": "Location, settlement, and gazetteer guides."
+    },
+    {
+      "id": 6,
+      "file": "06_travel_and_exploration.txt",
+      "description": "Travel, wilderness, and urban crawl procedures."
+    },
+    {
+      "id": 7,
+      "file": "07_adventure_and_plot_frameworks.txt",
+      "description": "Golden Compass, quest planners, and adventure tools."
+    },
+    {
+      "id": 8,
+      "file": "08_mysteries_and_riddles.txt",
+      "description": "Mystery nodes, clue rules, and riddle generation."
+    },
+    {
+      "id": 9,
+      "file": "09_dungeon_design_and_generation.txt",
+      "description": "Dungeon guides, toolkits, and room/key systems."
+    },
+    {
+      "id": 10,
+      "file": "10_encounters_combat_and_traps.txt",
+      "description": "Combat frameworks, encounter balancing, and traps."
+    },
+    {
+      "id": 11,
+      "file": "11_heists.txt",
+      "description": "Heist prep and variant docs."
+    },
+    {
+      "id": 12,
+      "file": "12_factions_and_downtime.txt",
+      "description": "Faction creation, conflict, and downtime systems."
+    },
+    {
+      "id": 13,
+      "file": "13_items_and_loot.txt",
+      "description": "Item generators and loot tables."
+    },
+    {
+      "id": 14,
+      "file": "14_westmarsh_eldwyn_pack.txt",
+      "description": "Westmarsh/Eldwyn-specific generators and prompts."
+    },
+    {
+      "id": 15,
+      "file": "15_reference_resources.txt",
+      "description": "Reference spreadsheets, terrain/event lists, and tone guides."
+    },
+    {
+      "id": 16,
+      "file": "16_handouts_images_and_prompts.txt",
+      "description": "Handouts, image prompts, and themed imagery guides."
+    },
+    {
+      "id": 17,
+      "file": "17_misc_legacy_experimental.txt",
+      "description": "Scripts, legacy notes, and everything else."
+    }
+  ],
+  "homebrew_files": [
+    "Narrative Scripts/Output/homebrew 5e/DraftStatblock_v1.txt",
+    "Narrative Scripts/Output/homebrew 5e/StatblockExpended_v1-pc-creature.txt",
+    "Narrative Scripts/Output/homebrew 5e/Statblockexpended_v1.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Barbarians/Barbarian_path_balance.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Barbarians/Barbarians_path_reference.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Barbarians/barbarian_path_template.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Bard/bard_base_class.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Bard/bard_college_balance.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Bard/bard_subclass_reference.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Clerics/Cleric_domains.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/Druid_circle_balance.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/Druid_subclass_reference.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/Template_DruidCircle_v1.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/assembled_druid_subclaas_prompt.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/drui_balance.old",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/druid_base_class.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Fighter/fighter_archetype.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Monks/monk_way.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Paladin/Paladin_oath_balance.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Paladin/Paladin_oath_template.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Paladin/Paladin_subclass_reference.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Rangers/ranger_archetype.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Rogues/rogue_archetype.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Sorcerers/sorcerer_origin.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Warlocks/warlocks_pact.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/Wizards/wizard_traditon.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/druids/Druid_circle_balance.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/druids/Druid_subclass_reference.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/druids/Template_DruidCircle_v1.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/druids/druid_base_class.txt",
+    "Narrative Scripts/Output/homebrew 5e/Subclass/master prompt.txt",
+    "Narrative Scripts/Output/homebrew 5e/convert to mob.txt",
+    "Narrative Scripts/Output/homebrew 5e/misc 5e/ConvertPC_to_NPC_v1.txt",
+    "Narrative Scripts/Output/homebrew 5e/misc 5e/QuickNPC_to_MD_v1.txt",
+    "Narrative Scripts/Output/homebrew 5e/misc 5e/Template Stat Block Homebrewery.txt",
+    "Narrative Scripts/Output/homebrew 5e/misc 5e/convert to mob.txt",
+    "Narrative Scripts/Output/homebrew 5e/statblock july 24 v.2.txt",
+    "Narrative Scripts/Output/homebrew 5e/statblock new.july_24.txt",
+    "Narrative Scripts/Output/homebrew 5e/statblock_oldest.txt"
+  ],
+  "mapping": [
+    {
+      "path": "Narrative Scripts/database_schema.md",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/dungeon-master-guide.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/dungeon-master-toolkit.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/folded.ps1",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/index.json",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/manifest.json",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/manifest.yaml",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/dont_talk_but_do.txt",
+      "bucket": 1,
+      "bucket_file": "01_ai_behavior_and_style.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/ed_greenwood.txt",
+      "bucket": 1,
+      "bucket_file": "01_ai_behavior_and_style.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/encyclopedic_TextEntry_v1.txt",
+      "bucket": 1,
+      "bucket_file": "01_ai_behavior_and_style.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/new_behavior.txt",
+      "bucket": 1,
+      "bucket_file": "01_ai_behavior_and_style.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/hivemind/Hivemind companion.txt",
+      "bucket": 2,
+      "bucket_file": "02_agent_architecture.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/hivemind/HiveMindConcept_v1.txt",
+      "bucket": 2,
+      "bucket_file": "02_agent_architecture.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/hivemind/NarrativeMasterAI_v1.txt",
+      "bucket": 2,
+      "bucket_file": "02_agent_architecture.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/hivemind/personality_questionnaire.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/AI_Behavior/hivemind/roles.json",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/Golden_Compass/Golden Compass Adventure Template.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/Golden_Compass/Golden Compass Challenge Framework.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/Golden_Compass/Golden Compass Danger and Combat Framework.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/Golden_Compass/Golden Compass Wealth and Vehicle System.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/Golden_Compass/Three-Pass Adventure Creation Method.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/prompt creator/PromptCreator_v1.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Engines/prompt creator/whimsy.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/adventures/AI_QuestCreation_v1.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/adventures/arcane_library_method.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/adventures/arcane_library_method2.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/adventures/pointyhat travel adventure.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/corridor-themes-generator.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/dungeon-concept-brainstormer.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/dungeon-features-summarizer.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/dungeon-key-writer.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/dungeon-map-creator.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/dungeon-room-designer.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/DungeonCreation_PointyHat_v1.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/DungeonDesign_5Room_Alternate_v1.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/DungeonDesign_5Room_v1.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/jp cooper 10 room dungeon.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/megadungeon-planner.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Dungeons/xandered-dungeon-designer.txt",
+      "bucket": 9,
+      "bucket_file": "09_dungeon_design_and_generation.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/combat_encounter - V2.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/combat_encounter.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/combat-encounter-balancer.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/Encounter_genric_beta.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/EncounterDesign_Older_v1.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/EncounterDesign_v1_DEPRECATED.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/EncounterDesign_v1.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/RPGAdventure_SceneCrafting_v1.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/social_event.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/trap_prep.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Encounters/urban_crawl.txt",
+      "bucket": 10,
+      "bucket_file": "10_encounters_combat_and_traps.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Factions/faction_downtime.txt",
+      "bucket": 12,
+      "bucket_file": "12_factions_and_downtime.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Factions/faction-conflict-simulator.txt",
+      "bucket": 12,
+      "bucket_file": "12_factions_and_downtime.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Factions/factions_creation.txt",
+      "bucket": 12,
+      "bucket_file": "12_factions_and_downtime.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Heists/heist_prep.txt",
+      "bucket": 11,
+      "bucket_file": "11_heists.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Heists/heist_running.txt",
+      "bucket": 11,
+      "bucket_file": "11_heists.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Heists/raid_execution.txt",
+      "bucket": 11,
+      "bucket_file": "11_heists.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Heists/raid_prep.txt",
+      "bucket": 11,
+      "bucket_file": "11_heists.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Item/magic weapon basic.txt",
+      "bucket": 13,
+      "bucket_file": "13_items_and_loot.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Item/magic_item.txt",
+      "bucket": 13,
+      "bucket_file": "13_items_and_loot.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Locations/battlefield_generation.txt",
+      "bucket": 5,
+      "bucket_file": "05_locations_and_settlements.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Locations/city_gazetteer.txt",
+      "bucket": 5,
+      "bucket_file": "05_locations_and_settlements.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Locations/CreateFantasyCity_v1.txt",
+      "bucket": 5,
+      "bucket_file": "05_locations_and_settlements.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Locations/fantastic_location.txt",
+      "bucket": 5,
+      "bucket_file": "05_locations_and_settlements.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Locations/Make a settlement.txt",
+      "bucket": 5,
+      "bucket_file": "05_locations_and_settlements.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Locations/Quick_settlement.txt",
+      "bucket": 5,
+      "bucket_file": "05_locations_and_settlements.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/5_node_mystery.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/5x5_mystery_campaign.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/mystery_node.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/node_cloud_mystery.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/non-linear_mystery.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/proactive_mystery_node.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/revelations_dm_aid.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Mysteries/swap_mystery.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/NPCs/CreateNPC_Alternate_v1.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/NPCs/npc_creator_bot.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/NPCs/NPC_Description_Simple_v1.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/NPCs/NPC_Description_v1.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/NPCs/Quick_NPC.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/NPCs/QuickNPC_Creation_v1.txt",
+      "bucket": 4,
+      "bucket_file": "04_npc_and_character_systems.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/plot/campaign_prep.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/plot/crafting scenes.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/plot/create_hook.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/plot/rumors.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/plot/SceneDescriptor_v1.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/plot/vivid_description.txt",
+      "bucket": 7,
+      "bucket_file": "07_adventure_and_plot_frameworks.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/riddles/CreateRiddle_v1.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/riddles/CreateRiddle_v2.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/riddles/CreateToken_v1.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/riddles/createToken_v2.txt",
+      "bucket": 8,
+      "bucket_file": "08_mysteries_and_riddles.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Travel/random-encounter-table-generator.txt",
+      "bucket": 6,
+      "bucket_file": "06_travel_and_exploration.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Travel/wilderness_travel_long.txt",
+      "bucket": 6,
+      "bucket_file": "06_travel_and_exploration.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Travel/wilderness_travel.txt",
+      "bucket": 6,
+      "bucket_file": "06_travel_and_exploration.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_instant_generator.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_mission_prompt.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_pointyhat_travel_adventure.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_profil_npc_westmarsh.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_prompt_mission_fr.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/Eldwyn_rail_road_quest_generator.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/instant generator.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/mission prompt.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/profil_npc_westmarsh.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/prompt mission francais.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Execution_Systems/Westmarsh/rail road quest  generator.txt",
+      "bucket": 14,
+      "bucket_file": "14_westmarsh_eldwyn_pack.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/export/html template.html",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/Output/export/scene_html.txt",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/Output/export/Template_ImportFoundry_v1.txt",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/artist_styles.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/CreateRiddle_v1.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/CreateRiddle_v2.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/CreateToken_v1.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/createToken_v2.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/image_prompt_sword_and_sorcery.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/text2art.md",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/Handouts_Images/themed_image_v01.txt",
+      "bucket": 16,
+      "bucket_file": "16_handouts_images_and_prompts.txt"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/convert to mob.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/DraftStatblock_v1.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/statblock july 24 v.2.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/statblock new.july_24.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/statblock_oldest.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/StatblockExpended_v1-pc-creature.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Statblockexpended_v1.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/misc 5e/convert to mob.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/misc 5e/ConvertPC_to_NPC_v1.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/misc 5e/QuickNPC_to_MD_v1.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/misc 5e/Template Stat Block Homebrewery.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/master prompt.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Barbarians/Barbarian_path_balance.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Barbarians/barbarian_path_template.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Barbarians/Barbarians_path_reference.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Bard/bard_base_class.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Bard/bard_college_balance.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Bard/bard_subclass_reference.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Clerics/Cleric_domains.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/assembled_druid_subclaas_prompt.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/drui_balance.old",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/druid_base_class.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/Druid_circle_balance.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/Druid_subclass_reference.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Druid/Template_DruidCircle_v1.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/druids/druid_base_class.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/druids/Druid_circle_balance.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/druids/Druid_subclass_reference.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/druids/Template_DruidCircle_v1.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Fighter/fighter_archetype.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Monks/monk_way.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Paladin/Paladin_oath_balance.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Paladin/Paladin_oath_template.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Paladin/Paladin_subclass_reference.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Rangers/ranger_archetype.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Rogues/rogue_archetype.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Sorcerers/sorcerer_origin.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Warlocks/warlocks_pact.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Output/homebrew 5e/Subclass/Wizards/wizard_traditon.txt",
+      "bucket": "HB"
+    },
+    {
+      "path": "Narrative Scripts/Prose/bring_ur_outline.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/character_profile.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/simple_style_prompt.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/Story_beat_adv.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/story_beat_simple.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/story_hacker.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/style_prompt_example.md",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/Structures/HeroJourneyPlot_v1.txt",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Prose/Structures/StoryStructure_101_v1.txt",
+      "bucket": 3,
+      "bucket_file": "03_prose_templates_and_text_formats.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/big_list_rpg.md",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/Chain-statblock-to-md.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/game master apply template.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/monster features raw.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/monster template.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/monster_features.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/Reference_CreatureRoles_v1.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/Reference_Minigames_v1.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/Ressources/Reference_TerrainFeatures_v1.txt",
+      "bucket": 15,
+      "bucket_file": "15_reference_resources.txt"
+    },
+    {
+      "path": "Narrative Scripts/scripts/generate_manifests.py",
+      "bucket": 0,
+      "bucket_file": "00_meta_and_tooling.md"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+entries:
+  - donor_concept: Session Snapshot
+    source_family: simulation-snapshot
+    canonical_key: simulation
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Simulation state and snapshots are owned by the simulation donor lane.
+    provenance: src/types/session.ts
+
+  - donor_concept: Session Snapshot Event Type
+    source_family: simulation-event
+    canonical_key: simulation/event
+    canonical_target: EventEnvelope
+    status: mapped
+    winner: orbis
+    rationale: Simulation lifecycle events map into canonical event envelopes.
+    provenance: src/types/session.ts
+
+  - donor_concept: Climate State Store
+    source_family: simulation-domain
+    canonical_key: simulation/biome
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Biome and climate simulation parameters are part of simulation domain state.
+    provenance: src/stores/weatherStore.ts
+
+  - donor_concept: Map Climate Store
+    source_family: simulation-profile
+    canonical_key: simulation/location
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Spatial climate profile complements canonical location attachments.
+    provenance: src/stores/mapStore.ts
+
+  - donor_concept: Map Location Climate
+    source_family: simulation-domain
+    canonical_key: simulation/region
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Regional simulation parameters attach through simulation profile and domain state.
+    provenance: src/stores/mapLocationStore.ts
+
+  - donor_concept: Social Event Contract
+    source_family: simulation-event
+    canonical_key: simulation/relation
+    canonical_target: EventEnvelope
+    status: reference-only
+    winner: orbis
+    rationale: Social event payloads are preserved as non-trunk simulation event references.
+    provenance: src/contracts/forms/social_event.schema.ts
+
+  - donor_concept: Biosphere State
+    source_family: biosphere-state
+    canonical_key: simulation/biosphere
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Biosphere state remains attached to canonical simulation state.
+    provenance: src/core/schemas/biology.ts
+
+  - donor_concept: Civilization State
+    source_family: civilization-state
+    canonical_key: simulation/civilization
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Civilization progress is part of the canonical simulation attachment.
+    provenance: src/core/schemas/civilization.ts
+
+  - donor_concept: Planetary State
+    source_family: planetary-state
+    canonical_key: simulation/planetary
+    canonical_target: SimulationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Planetary simulation topology projects into canonical simulation state.
+    provenance: src/core/schemas/planetary.ts
+
+  - donor_concept: Narrative Artifact
+    source_family: narrative-artifact
+    canonical_key: simulation/narrative
+    canonical_target: EventEnvelope
+    status: mapped
+    winner: orbis
+    rationale: Narrative artifacts are preserved as canonical event envelopes.
+    provenance: src/core/schemas/narrative.ts
+
+  - donor_concept: Hex Spatial Model
+    source_family: hex-spatial
+    canonical_key: simulation/hex
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Hex-grid spatial state attaches to canonical location records.
+    provenance: src/core/schemas/core.ts
+
+  - donor_concept: Terrain Config
+    source_family: terrain-config
+    canonical_key: simulation/terrain
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: orbis
+    rationale: Terrain configuration contributes to canonical location attachment metadata.
+    provenance: src/core/schemas/climate.ts
+
+  - donor_concept: Species Template
+    source_family: species-template
+    canonical_key: simulation/species
+    canonical_target: EntityRecord
+    status: mapped
+    winner: orbis
+    rationale: Species templates are canonical entity-shape inputs.
+    provenance: src/core/schemas/biology.ts
+
+  - donor_concept: Domain Clock
+    source_family: domain-clock
+    canonical_key: simulation/clock
+    canonical_target: EventEnvelope
+    status: mapped
+    winner: orbis
+    rationale: Domain timekeeping is represented through canonical event envelopes.
+    provenance: src/stores/useTimeStore.ts

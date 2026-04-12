@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Createfantasycity V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: CreateFantasyCity_v1
+
+```text
++--------------------------------------------------------------------------------+
+|  [Fantasy City Architect: Glade & Timberlands]                         [?] [X]  |
++--------------------------------------------------------------------------------+
+|  City Name: [ Sylvaris ]   Pop: [ 7,500 ]   Dominant Race: [ Wood Elves ]      |
++--------------------------------------------------------------------------------+
+|  ARCHITECTURE & LAYOUT                 |  GOVERNMENT & HISTORY                 |
+|  [V] Glade Circles (Central)           |  Leadership: [ Council of Elders ]    |
+|  [V] Treetop Housing (Suspended)       |  Event 1: [ The Great Blight ]        |
+|  [V] Timber-Resource Homes             |  Event 2: [ Founding of the Glade ]   |
++----------------------------------------+---------------------------------------+
+|  CULTURAL ASSETS (Artwork)             |  MARKETPLACE (Shops: 10/10)           |
+|  1. Statues: [ Guardian of the Root ]  |  [S1] Arcane Arbor (Magic Shop)       |
+|  2. Gardens: [ The Lunar Glade ]       |  [S2] Timber-Iron Works (Armorer)     |
+|  3. Tapestry: [ The Weave of Years ]   |  [S3] Root & Ritual (Herbalist)       |
++----------------------------------------+---------------------------------------+
+|  [Generate Full City Profile] [Export Shops] [Save to World-Atlas]     [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: CreateFantasyCity_v1
+
+## Component Architecture
+- **Settlement Identity Panel:** Controls the core demographics and biome alignment. It ensures the "Dominant Race" logic flows through to shopkeepers and historical events.
+- **Architectural Layer Manager:** Specifically handles the unique requirements of "Glade Circles" vs. "Treetop Housing." It includes visual toggles for rope bridges and natural resource utilization.
+- **Cultural & Artistic Gallery:** A focused workspace for defining the "Soul" of the city through statues, gardens, and tapestries.
+- **Lore & Succession Timeline:** Manages the history of the "Luminarch" and the city's military/political past (Battles and Coups).
+- **Merchant Manifest Editor:** A strict validation tool that ensures all 10 required shop types are named and described before the project is marked "Done."
+
+## Interaction Logic
+- **Biome-Integrated Suggestions:** Changing the biome to "Dark Timberlands" automatically updates the suggested descriptions for architecture (e.g., using Ironbark or Shadow-pine).
+- **History-to-Npc link:** Major historical events automatically generate relevant NPCs (e.g., a "Battle of the Spire" veteran or a descendant of the first Luminarch).
+- **Auto-naming Registry:** Provides thematic name suggestions for shops based on the city's name and dominant race.
+
+## Visual Design
+- **Natural Heritage Aesthetic:** Uses earthy tones (Greens, Tans, Browns) and organic borders that feel like carved wood or parchment.
+- **Hierarchical Layout:** The UI progresses from the macro (City Identity) to the micro (Specific Shops), mirroring the DM's creative process.
+- **Iconography:** Uses symbols for trees, hammers (shops), and crowns (government) to categorize information.
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: CreateFantasyCity_v1
+
+# City Profile: Sylvaris, The Emerald Thicket
+
+### 1. Population & Races
+- **Total Population:** 8,200
+- **Dominant Race:** **Wood Elves (85%)**. Native to the Dark Timberlands, they have lived in harmony with the great Iron-Oaks for millennia.
+- **Minority Races:** Humans (10%), Halflings (5%).
+
+### 2. Government
+- **Leadership:** **The Luminarch Council**. A tripartite body consisting of the High Druid (Spiritual), the Wood-Marshal (Military), and the Chronicler (Law).
+- **Luminarch History:** The current Luminarch, Thalessa Thorne, took power after the "Silent Coup" 50 years ago, shifting the city away from isolationism.
+
+### 3. Architecture
+- **The Central Circles:** Five concentric stone rings surrounding the **Primal Glade**, where the most sacred rituals occur.
+- **Natural Housing:** Houses at the base of the Iron-Oaks are built from living wood and stone, merging seamlessly with the forest floor.
+- **The Canopy District:** Elaborate treetop villas suspended 100ft in the air, connected by swaying rope bridges and carved wooden walkways.
+
+### 4. Artwork & Culture
+- **The Sentinel Statue:** A 30ft tall figure of the first Luminarch carved from a single petrified tree.
+- **The Whisper Tapestries:** Massive woven hangings in the Council Hall that record the city's history in glowing silver thread.
+- **The Gloom-Bloom Gardens:** Shimmers of bioluminescent flora that provide the city's primary light source at night.
+
+### 5. History
+- **The Founding:** Sylvaris was created 1,200 years ago as a sanctuary during the "War of Burning Skies."
+- **The Siege of Thorns:** A failed invasion by the Orcish war-bands that resulted in the city's fortification with "Living Spikes."
+
+### 6. The Marketplace (Local Shops)
+1. **The Arcane Root (Magic Shop):** Sells wands grown rather than forged.
+2. **Iron-Bark Bastion (Armorer):** Specializes in high-durability wood armor.
+3. **The Leaf-Edge (Weaponsmith):** Forges "Dark-Glass" blades.
+4. **The Herbalist’s Lungs (Herbalist):** Located in the highest tree-hollow.
+5. **The Alchemist’s Cauldron (Alchemist):** Famed for their Fire-Resistant sap.
+6. **The Mossy Mug (Tavern):** Built into a massive hollowed stump.
+7. **The Silent Quill (Scribe):** Sells parchment made from fungus.
+8. **The Weaver’s Knot (General Goods):** Specialized in climbing gear.
+9. **The Resin Works (Carpenter):** Essential for treetop maintenance.
+10. **The Stable-Root (Stables):** Mounts include Giant Elks and Forest Ponies.

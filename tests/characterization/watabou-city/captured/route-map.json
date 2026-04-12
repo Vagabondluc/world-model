@@ -1,0 +1,10 @@
+{
+  "donor": "watabou-city",
+  "label": "Watabou City",
+  "classification": "clean-room app donor",
+  "methodology": "clean-room app characterization",
+  "basis": "clean-room implementation",
+  "routes": [
+    "/donor/watabou-city"
+  ]
+}

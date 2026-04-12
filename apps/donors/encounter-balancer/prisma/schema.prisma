@@ -1,0 +1,168 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Saved reusable elements that can be used across tabs
+model SavedElement {
+  id          String   @id @default(cuid())
+  name        String
+  type        String   // "monster", "environment", "hazard", "tactic", "reward"
+  category    String?  // Sub-category for organization
+  description String?
+  data        String   // JSON string containing all element details
+  tags        String?  // Comma-separated tags for search
+  isFavorite  Boolean  @default(false)
+  useCount    Int      @default(0) // Track usage for recommendations
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([type])
+  @@index([category])
+  @@index([isFavorite])
+}
+
+// Saved encounters (both balancer and environmental)
+model Encounter {
+  id            String          @id @default(cuid())
+  name          String
+  type          String          // "balancer", "environmental"
+  description   String?
+  data          String          // JSON string containing all encounter details
+  difficulty    String?         // "easy", "medium", "hard", "deadly"
+  partyLevel    Int?
+  playerCount   Int?
+  isFavorite    Boolean         @default(false)
+  isTemplate    Boolean         @default(false)
+  templateId    String?         // Reference to template this was created from
+  monsters      EncounterMonster[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  @@index([type])
+  @@index([difficulty])
+  @@index([isFavorite])
+  @@index([isTemplate])
+}
+
+// Monsters within an encounter (for better querying)
+model EncounterMonster {
+  id           String    @id @default(cuid())
+  encounterId  String
+  encounter    Encounter @relation(fields: [encounterId], references: [id], onDelete: Cascade)
+  name         String
+  cr           String
+  xp           Int
+  count        Int       @default(1)
+  isLegendary  Boolean   @default(false)
+  data         String    // JSON: additional monster data
+  createdAt    DateTime  @default(now())
+
+  @@index([encounterId])
+  @@index([cr])
+}
+
+// Encounter templates for quick start
+model EncounterTemplate {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  type        String   // "balancer", "environmental", "both"
+  theme       String?  // "ambush", "boss", "puzzle", "social"
+  difficulty  String?  // "easy", "medium", "hard", "deadly"
+  partyLevel  String?  // "1-4", "5-10", "11-16", "17-20" or specific level
+  terrain     String?  // Primary terrain type
+  data        String   // JSON: template configuration
+  isOfficial  Boolean  @default(false) // Official vs community templates
+  useCount    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([type])
+  @@index([theme])
+  @@index([difficulty])
+}
+
+// Party presets for quick party configuration
+model PartyPreset {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  level       Int
+  playerCount Int
+  composition String   // JSON: hasHealer, hasTank, etc.
+  resources   String?  // JSON: resource state defaults
+  notes       String?
+  isFavorite  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([level])
+}
+
+// Monster templates for encounter balancer
+model MonsterTemplate {
+  id           String   @id @default(cuid())
+  name         String
+  cr           String   // Challenge Rating (e.g., "1/4", "1", "5", "10")
+  xp           Int      // Experience points
+  size         String   // Tiny, Small, Medium, Large, Huge, Gargantuan
+  type         String   // Beast, Humanoid, Undead, etc.
+  ac           Int?     // Armor Class
+  hp           String?  // Hit Points (e.g., "45 (6d8+18)")
+  speed        String?  // Speed
+  stats        String?  // JSON: STR, DEX, CON, INT, WIS, CHA
+  abilities    String?  // JSON: special abilities
+  actions      String?  // JSON: actions
+  isLegendary  Boolean  @default(false)
+  source       String?  // Book/source
+  tags         String?  // Comma-separated tags
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([cr])
+  @@index([type])
+  @@index([isLegendary])
+}
+
+// Environmental features for scenarios
+model EnvironmentalFeature {
+  id           String   @id @default(cuid())
+  name         String
+  category     String   // "terrain", "hazard", "weather", "obstacle"
+  terrainType  String?  // Associated terrain type
+  description  String
+  mechanics    String   // JSON: detailed mechanics (DCs, effects, triggers)
+  damageType   String?  // fire, cold, etc.
+  damageDice   String?  // e.g., "2d6"
+  saveType     String?  // DEX, CON, etc.
+  saveDC       Int?
+  effectArea   String?  // Description of area
+  duration     String?  // How long the effect lasts
+  tags         String?  // Comma-separated tags
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([category])
+  @@index([terrainType])
+}
+
+// User preferences and settings
+model UserPreferences {
+  id                    String   @id @default(cuid())
+  defaultPartyLevel     Int      @default(5)
+  defaultPlayerCount    Int      @default(4)
+  defaultDifficulty     String   @default("medium")
+  theme                 String   @default("system") // "light", "dark", "system"
+  enableAutoSave        Boolean  @default(true)
+  showLegendaryWarning  Boolean  @default(true)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}

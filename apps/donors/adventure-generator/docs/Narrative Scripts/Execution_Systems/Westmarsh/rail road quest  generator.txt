@@ -1,0 +1,209 @@
+**[Setting: For Reference Only]**
+
+**Setting Description:**
+Located in the Forgotten Realms, within the fallen kingdom of Barze, the mining town of Eldwyn is characterized by its cold, rugged terrain akin to Northern Quebec or Sweden. This setting serves as the foundation for our streamlined adventure creation tool.
+
+**[Instructions]**
+
+**Follow instructions 1, 2, 3, and 4, then proceed with steps 5, 6, and 7 as separate interactions.**
+
+# 1. **Table Configuration:**
+   Construct a comprehensive markdown table with five categories, each containing six entries, to facilitate the creation of rich and varied adventures:
+
+   - **Hooks:** Diverse characters or groups initiating quests.
+   - **Threats:** Potential dangers that provide challenges and drive the plot.
+   - **McGuffins:** Key items or pieces of information essential for quest resolution.
+   - **Intrigues:** Narrative twists or complications that add depth and complexity to the story.
+   - **Places:** Unique locations that set the stage for the adventures.
+
+   **Table Setup:**
+   ```markdown
+   | Hooks | Threats | McGuffins | Intrigues | Places |
+   |--|--|--|--|--|
+   | 6 entries each |
+   ```
+
+# 2. **Matrix Setup:**
+   Develop a matrix in markdown with five columns and four rows. Populate each cell with a number from 1 to 6, linking directly to entries in the table.
+
+# 3. **Adventure Creation:**
+   Utilize the four rows of the matrix to craft four detailed TTRPG adventure outlines that integrate elements from each category into a cohesive narrative:
+   
+   - **Matrix Numbers (Seed):** Display the numbers used for generating the outline to track the elements involved.
+   - **Title:** Create a succinct, three to five-word title that captures the essence of each adventure.
+   - **Narrative Integration:**
+     - **First Generation:** Craft narratives up to 80 words. Use the matrix to integrate elements into a cohesive story.
+     - **Subsequent Generations:** Increase narrative to 120 words following user confirmation for more detailed storytelling after step 4.
+     - Craft a compelling story by weaving together the designated Hooks, Threats, McGuffins, Intrigues, and Places. Name every key entity, adding their occupations where relevant, and include specific and granular details to enrich the plot when using Hooks, Threats, McGuffins, Intrigues, and Places, considering causes and consequences.
+
+# 4. **End with an offer to the user to generate a new matrix or to expand an outline.** 
+
+	- If the user asks for a new matrix, increase the narrative word count to 120 words per outline this time.
+	
+   - If the user asks to expand an outline, ask for the Party Size and Level in order to balance the encounters.
+
+
+
+# 5. **[Current Step: 5 - Crafting the Adventure Hook]**
+
+Craft a compelling adventure hook based on the earlier narrative. This hook should directly engage players by introducing immediate stakes or challenges that will captivate their interest and drive the narrative forward. **Stop and wait for user confirmation before proceeding to step 6.**
+
+{
+## Method for Designing Compelling Adventure Hooks in D&D
+
+### Overview
+An engaging adventure hook is essential for drawing players into a Dungeons & Dragons session, designed to be completed within 1-2 sessions.
+
+### Objective
+The goal is to design an adventure hook that quickly enthralls players by meshing well with both the narrative's momentum and the players' immediate context. This hook aims to provide a short, potent introduction to a Dungeons & Dragons scenario, engaging players with challenges that are both pertinent and stimulating. By leveraging environmental cues and player ambitions, the hook will foster immediate and sustained engagement, setting the tone for a session that is as dynamic as it is satisfying. The final hook will ensure that players are not just observers but active participants whose actions drive the unfolding story.
+
+### Duration & Structure
+- **Session Length**: Typically 4-5 hours, accommodating 6-8 encounters.
+- **Critical Encounter**: The hook, as the most pivotal encounter, initiates momentum and player interest.
+
+### Conceptualizing the Hook
+#### Immediate Relevance
+- **Urgency**: The hook should create a compelling need for the characters to act immediately. Techniques to build urgency include:
+  - Time-sensitive stakes (e.g., a ritual completing at sunset).
+  - Immediate threats (e.g., an assassin reveals their next target is a character's relative).
+- **Environmental Integration**: Place the hook within the characters’ immediate surroundings or experiences to foster engagement.
+
+#### Player vs. Character Focus
+- **Target Audience**: Although the hook affects characters, it is primarily aimed at motivating the players to engage with the narrative.
+- **Motivations**: Hooks should cater to player desires through:
+  - **Reward**: Enhancements to character abilities or assets.
+  - **Heroism**: Opportunities to correct injustices or perform valorous deeds.
+  - **Discovery**: New insights about the plot, setting, or characters.
+
+#### Balancing Impact
+- **Status Quo Disruption**: Hooks can more dramatically alter the game world's status quo, such as initiating a shipwreck to present new challenges without overly harsh consequences.
+
+### Elements of a Successful Hook
+#### Character Integration
+- **Direct Involvement**: The hook must directly involve the characters through a vivid action scene or significant event that requires their attention.
+
+#### Appealing to Player Motivations
+- **Engaging Elements**:
+  - **Reward**: Retrieval of a stolen artifact enhances abilities.
+  - **Heroism**: Restoring order after a theft.
+  - **Discovery**: Exploring restricted areas of the library to uncover motives and secrets.
+
+### Action Steps
+1. **Craft the Hook**: Combine an action-oriented event with elements that align with player motivations.
+2. **Validate Player Engagement**: Ensure the hook provides clear incentives and challenges that are appealing and manageable.
+
+Ask the user if they are satisfied with the details of their adventure hook. Then [Stop].
+}
+
+# 6. **[Current Step: 6 - Expanding the Adventure Outline]**
+
+**Expand and amplify the adventure outline in conjunction with the party hook into detailed scenes for a TTRPG adventure.**
+   Once the user confirms satisfaction with the adventure hook, proceed to detail each scene according to the structured adventure outline. **After completing this step, stop and wait for user confirmation before converting scenes in step 7.**
+{
+**Method for Designing a Dungeons & Dragons Adventure Outline**
+
+### Overview
+This prompt is designed to assist Language Models (LMs) in creating a structured adventure outline for Dungeons & Dragons. The outline will consist of [Length] scenes, integrating a well-defined hook, diverse scene types, and a climactic resolution. The goal is to produce a coherent narrative that logically progresses from the initial incident to the final confrontation, providing a variety of challenges that cater to different player actions and character abilities.
+
+### Objective
+To transform a basic adventure concept into a fully developed outline that is engaging, balanced, and DM-friendly. This outline will serve as the blueprint for gameplay, guiding DMs through a sequence of encounters that are strategically crafted to challenge and entertain players.
+
+### Input Requirements
+
+1. **Hook**: A concise description of the inciting incident that launches the adventure. This should include the initial setting and the immediate problem or challenge that the characters must confront.
+2. **Climax**: A detailed description of the final encounter or resolution. This should reflect whether the characters succeed or fail in resolving the adventure's central conflict.
+
+### Adventure Design Method
+
+#### Step 1: Establishing the Framework
+- **Define the Endgame**: Clearly articulate the final encounter, including potential outcomes for success and failure. This encounter should directly address the initial problem introduced in the Hook.
+
+#### Step 2: Initial Scene Development
+- **Immediate Player Actions**: Consider the most plausible actions players might take following the Hook. Identify 2-3 initial paths or actions that naturally lead to the first key hurdles or encounters.
+
+#### Step 3: Scene Type Identification
+- **Categorize Potential Encounters**: Assign each scene a type based on its primary function within the adventure:
+  - **Exploration**: Scenes that involve uncovering new information, navigating environments, solving puzzles, or overcoming natural obstacles.
+  - **NPC Interaction**: Scenes that require dialogue, negotiation, alliance formation, or conflict resolution with NPCs.
+  - **Combat**: Scenes that involve tactical engagement with adversaries, where the primary objective is to overcome these foes through battle.
+
+#### Step 4: Structuring the Scene Sequence
+- **Logical Order of Scenes**: Propose a sequence that alternates between the different types of encounters to maintain engagement and provide a balanced experience. The sequence should start from the Hook and be arranged to escalate in stakes and complexity towards the Climax.
+
+#### Step 5: Enhancing Character Relevance
+- **Integrate Character Opportunities**: Ensure that each scene type provides a unique opportunity for different character classes to utilize their specific skills. This integration should aim to give each player character a moment to influence the outcome significantly.
+
+### Output: Structured Adventure Outline
+
+- **Scene Outline**: For each of the 6-8 scenes, provide:
+  - **Scene Title and Type**: Briefly label and identify whether it's Exploration, NPC Interaction, or Combat.
+  - **Core Challenge/Opportunity**: Summarize the main action or challenge presented in the scene.
+
+### Actionable Steps for LM
+
+1. **Formulate the Climax**: Start by defining the Climax based on the Hook's introduced conflict.
+2. **Develop Initial Scenes**: Identify the immediate actions leading from the Hook and define the first few scenes.
+3. **Expand the Narrative**: Continue adding scenes, ensuring to intersperse different types of encounters—Exploration, NPC Interaction, Combat—to maintain a rhythmic and dynamic progression.
+4. **Finalize Scene Order**: Arrange these scenes in a logical order that builds tension and develops the narrative towards the Climax.
+5. **Validate Scene Relevance**: Check each scene to ensure it contributes to advancing the characters towards the Climax,
+
+Adjusting as necessary to improve flow and coherence.
+
+### Conclusion
+By following this structured approach, LMs can generate detailed and engaging adventure outlines that are tailored to a broad range of character dynamics and player strategies. The method focuses on clarity, structure, and specificity in scene identification and ordering, providing a robust framework for creating immersive and varied Dungeons & Dragons adventures. This setup ensures that each character can shine and significantly impact the adventure's progression, enhancing the overall gameplay experience.
+}
+Ask the user if they are satisfied with all the scenes. Notice when drafting the scenes that elements might need to be introduced so they provoke a payoff in subsequent scenes.
+Then Stop.
+When the user is satisfied with the expanded adventure outline, go to step 7.
+
+**[Current Step: 7 - Converting Scenes into DM-Friendly Content]**
+
+**Convert scenes into DM-friendly content:**
+   Begin with the first scene and transform it into a detailed, DM-friendly format, focusing on usability during gameplay. Use 500 to 800 tokens per scene for detailed crafting. **Stop after each scene and wait for user instructions to proceed with the next scene or any further adjustments.**
+{
+**Method for Converting Individual Adventure Scenes into DM-Friendly Content**
+
+### Overview
+This prompt guides users through the process of transforming a single adventure scene from a structured outline into detailed, DM-friendly content. The aim is to create concise, clear, and engaging descriptions that are easy to use during gameplay, facilitating both game flow and player immersion.
+
+### Objective
+The objective of this process is to equip Dungeon Masters (DMs) with content that is not only straightforward and quick to reference but also rich in detail and interactive potential. This enables DMs to effectively manage gameplay dynamics while enhancing player engagement through well-crafted narrative and descriptive elements.
+
+### Input Requirements
+
+1. **Scene Description**: A detailed description of the scene including the setting, planned encounters (Combat, NPC Interaction, Exploration), and any significant plot developments.
+2. **Character and Environmental Details**: Information on potential character actions, NPC behaviors, and environmental features relevant to the scene.
+
+### Content Transformation Steps
+
+#### Step 1: Crafting the Scene Introduction
+- **Initial Perception**: Start with a vivid description focusing on what the characters perceive as they enter the scene. Emphasize sensory details—sight, sound, smell, and tactile sensations—to set the atmosphere.
+- **Immediate Interaction Points**: Highlight interactive elements such as objects to investigate, NPCs to converse with, or immediate challenges, using bullet points for clarity.
+  - Specify any initial checks required (e.g., Perception DC 15 to notice a hidden door, Investigation to uncover clues).
+
+#### Step 2: Streamlining Information
+- **Conciseness**: Keep the scene description concise, ideally to about one page or less, to prevent overwhelming the DM during gameplay. Focus on essential details that directly impact player actions and decisions.
+- **Accessibility**: Use bullet points to break down complex information into digestible pieces. Employ bold or italic text for key terms and crucial data points to enhance quick reference capabilities. Outline clear, actionable directives for the DM to facilitate dynamic storytelling and player engagement.
+
+#### Step 3: Encouraging Dynamic Interactions
+- **Exploration Triggers**: Design content to naturally encourage players to explore and interact with the scene. Set up narrative hooks and cues that invite further investigation and deeper engagement.
+- **Adaptive Elements**: Suggest modifications in the environment or NPC behavior in response to player actions, providing guidelines on adapting the scene dynamically to maintain a fluid gameplay experience. Include side notes for DMs on potential player interventions or unexpected actions that could alter the course of the scene.
+
+#### Step 4: Integrating NPC Dynamics
+- **NPC Profiles**: Provide succinct but vivid descriptions of any NPCs involved in the scene. Include visual identifiers, notable mannerisms, and speech patterns that help bring the character to life.
+- **Motivations and Secrets**: Outline each NPC's motivations and any secrets they may hold. This information is intended for DM use only, to be revealed based on player interaction.
+
+### Action Steps for LLM Output
+
+1. **Develop Detailed Scene Entries**: Generate a comprehensive entry for the scene that includes an evocative introduction, structured interactive elements, and clearly marked mechanical details. Begin with the overall ambiance and key sensory details, followed by interaction opportunities.
+2. **Organize Information Effectively**: Arrange the scene's details in an easy-to-navigate format, employing lists and bullet points for complex information. Emphasize critical actions and checks with bold or italicized text to draw immediate DM attention.
+3. **Incorporate Essential NPC Details**: Create detailed NPC entries that provide both physical and behavioral descriptions along with insights into their deeper characteristics. Ensure these profiles are practical for real-time gameplay, enriching player-NPC interactions without bogging down the narrative.
+
+### Conclusion
+By adhering to this structured method, users will transform their scene outlines into DM-friendly content that enhances the gaming experience. This approach ensures that each scene is not only prepared for immediate use but also rich in engaging details that promote exploration and interaction. The format is designed to keep the DM well-equipped and ready to facilitate a dynamic and smooth session. This method effectively bridges the gap between narrative planning and practical gameplay, making it an essential tool for Dungeon Masters.
+}
+
+Ask the user if they are satisfied with this scene and [stop] generating content.
+If they are satisfied with the current scenes, repeat step 7 with the next scene until all scenes have been converted to the tastes of the user.
+
+**Ensure at each step to ask the user if they are satisfied and ready to proceed, maintaining interactive control over the session.**

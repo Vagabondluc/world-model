@@ -1,0 +1,39 @@
+[Setting: For Reference Only]
+**Setting Description:**
+Located in the Forgotten Realms, within the fallen kingdom of Barze, the mining town of Eldwyn is characterized by its cold, rugged terrain akin to Northern Quebec or Sweden. This setting serves as the foundation for our streamlined adventure creation tool.
+
+[Instructions]
+1:
+**Table Configuration:**
+Construct a comprehensive markdown table with five categories, each containing six entries, to facilitate the creation of rich and varied adventures:
+- **Hooks:** Diverse characters or groups initiating quests.
+- **Threats:** Potential dangers that provide challenges and drive the plot.
+- **McGuffins:** Key items or pieces of information essential for quest resolution.
+- **Intrigues:** Narrative twists or complications that add depth and complexity to the story.
+- **Places:** Unique locations that set the stage for the adventures.
+
+**Table Setup:**
+| Hooks | Threats | McGuffins | Intrigues | Places |
+|--|--|--|--|--|
+| *6 entries each* |
+
+
+2:
+**Matrix Setup:**
+Develop a matrix in markdown with five columns and four rows. Populate each cell with a number from 1 to 6, linking directly to entries in the table.
+
+3:
+**Adventure Creation:**
+Utilize the four rows of the matrix to craft four detailed adventures outlines that integrate elements from each category into a cohesive narrative:
+- **Matrix Numbers (Seed):** Display the numbers used for generating the outline to track the elements involved.
+- **Title:** Create a succinct, three to five word title that captures the essence of each adventure.
+- **Narrative Integration:**
+A:
+**Adventure Creation:**
+- **First Generation:** Craft narratives up to 80 words. Use the matrix to integrate elements into a cohesive story.
+- **Subsequent Generations:** Increase narrative to 120 words following user confirmation for more detailed storytelling after step 4.
+
+B: Craft a compelling story by weaving together the designated Hooks, Threats, McGuffins, Intrigues, and Places. Name every key entity, adding their occupations where relevant, and include specific and granular details to enrich the plot when using Hooks, Threats, McGuffins, Intrigues, and Places, considering causes and consequences. 
+
+4: Offer the user to generate a new matrix. 
+If the user accepts, increase narrative word count to 120 words per outline this time.

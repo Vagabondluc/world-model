@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeondesign 5Room V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: DungeonDesign_5Room_v1
+
+```text
++--------------------------------------------------------------------------------+
+|  [5-Room Dungeon Builder]                                             [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Environment: [ Undersea Temple      ]  Difficulty: [ Hard (Lvl 5) ]  [Seed: 44] |
++--------------------------------------------------------------------------------+
+|  +------------+  +------------+  +------------+  +------------+  +------------+  |
+|  |   ROOM 1   |  |   ROOM 2   |  |   ROOM 3   |  |   ROOM 4   |  |   ROOM 5   |  |
+|  | (Entrance) |  | (Puzzle)   |  | (Setback)  |  | (Climax)   |  | (Reward)   |  |
+|  +------------+  +------------+  +------------+  +------------+  +------------+  |
+|  | [Guard]    |  | [Riddle]   |  | [Betrayal] |  | [Tactical] |  | [Twist]    |  |
+|  |            |  |            |  |            |  |            |  |            |  |
+|  | Two giant  |  | The Sphinx |  | The guide  |  | Boss: The  |  | The reward |  |
+|  | Crabs at   |  | of Kelp    |  | steals the |  | Coral King |  | is cursed  |  |
+|  | the gate.  |  | blocks the |  | oxy-tank.  |  | in a whirlpool.| with...    |  |
+|  | [Edit]     |  | way. [Edit]|  | [Edit]     |  | [Edit]     |  | [Edit]     |  |
+|  +------------+  +------------+  +------------+  +------------+  +------------+  |
+|        v               v               v               v               v         |
+|  [AI Gen Room]  [AI Gen Room]   [AI Gen Room]   [AI Gen Room]   [AI Gen Room]    |
++--------------------------------------------------------------------------------+
+|  [Bulk AI Generation] [Export Markdown] [Save to Library]             [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: DungeonDesign_5Room_v1
+
+## Component Architecture
+- **Environment Setup:** Top bar for setting the overall vibe (Theme, Level/Difficulty, Seed).
+- **5-Pillar Layout:** The core of the UI. Each pillar represents one "Room" (Room 1-5).
+- **Room Cards:**
+    - **Header:** Role name (e.g., "The Trick") and a customizable icon.
+    - **Type Dropdown:** Presets based on the script (Guardian, Puzzle, Trap, Boss, Reward). Selecting one populates the card with relevant placeholders.
+    - **Content Area:** Textbox for specific room details.
+    - **Quick AI Button:** A button on each card to regenerate *just* that room.
+
+## Interaction Logic
+- **Progressive Flow:** Visual arrows between pillars indicate the sequential nature of the rooms.
+- **Bulk Generation:** A single "Generate All" button uses the Seed to fill all 5 rooms while maintaining thematic consistency.
+- **Preset Libraries:** The "Guard" dropdown pulls from a list of golems, robots, traps, and hazards as suggested in the source text.
+
+## Visual Design
+- **Gradient Moods:** Each pillar has a subtle background gradient reflecting its mood:
+    - Room 1: Mystery (Deep Purple)
+    - Room 2: Intellect (Blue)
+    - Room 3: Suspense (Orange/Red)
+    - Room 4: Intensity (Dark Red)
+    - Room 5: Revelation (Gold)
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: DungeonDesign_5Room_v1
+
+**Dungeon Name: The Foundry of Forgotten Gears**
+**Environment: Steampunk Industrial**
+
+### Room 1: Entrance & Guard
+- **Guardian:** A steam-powered Golem with a heat-venting core.
+- **Hazards:** High-pressure steam jets that act as a trap if the Golem is moved.
+- **Mood:** Industrial danger and security.
+
+### Room 2: Puzzle/Role-Playing Challenge
+- **Challenge:** A massive mechanical decoder ring on the floor.
+- **Details:** Players must align the copper plates while being "befriended" by a glitchy Maintenance AI that tries to "help" by changing the pressure settings.
+
+### Room 3: Trick/Setback
+- **The Setback:** One-Way Gravity Lift. 
+- **The Twist:** The floor is magnetized, pulling metal weapons and armor toward the walls, while the lift upwards is broken and only works downwards.
+
+### Room 4: Climax/Battle
+- **Boss:** The Overproduction Core (a giant furnace-monster).
+- **Tactics:** Exploitable weakness: The coolant pipes on the ceiling. Using them douses the boss but makes the floor slippery.
+
+### Room 5: Reward/Revelation
+- **Reward:** The *Cog of Infinite Motion*.
+- **Plot Twist:** The Cog is what was powering the city's heating. Removing it will save the party but freeze the slum district above. 
+- **Dark Truth:** The governor knew this and sent the party to "retrieve" it to hide evidence of a power theft.
+

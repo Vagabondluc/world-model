@@ -9,7 +9,9 @@ world-model/
   apps/
     unified-app/
       src/
+        product/
         shell/
+        taxonomy/
         modes/
           guided/
           studio/
@@ -22,30 +24,46 @@ world-model/
         routes/
         theme/
       tests/
+        integration/
       e2e/
       public/
   adapters/
     mythforge/
-      manifest.toml
+      manifest.yaml
       source-snapshot/
       mappings/
       fixtures/
       tests/
       docs/
     orbis/
-      manifest.toml
+      manifest.yaml
       source-snapshot/
       mappings/
       fixtures/
       tests/
       docs/
     adventure-generator/
-      manifest.toml
+      manifest.yaml
       source-snapshot/
       mappings/
       fixtures/
       tests/
       docs/
+    mappa-imperium/ (pending registration)
+      manifest.yaml
+      source-snapshot/
+      mappings/
+      fixtures/
+    dawn-of-worlds/ (pending registration)
+      manifest.yaml
+      source-snapshot/
+      mappings/
+      fixtures/
+    faction-image/ (pending registration)
+      manifest.yaml
+      source-snapshot/
+      mappings/
+      fixtures/
   crates/
     world-model-core/
     world-model-specs/
@@ -58,6 +76,7 @@ world-model/
     adapter-contracts/
   docs/
     architecture/
+      UNIFIED_PRODUCT_DESIGN.md
     adapters/
     data-model/
     migration/
@@ -79,7 +98,12 @@ world-model/
 
 - `apps/unified-app`
   - the final user-facing app
-  - holds the shell, UI modes, and view state
+  - holds the shell, taxonomy routes, modal tools, and view state
+  - active public routes are `World / Story / Schema`
+  - `/` is the unified landing page
+  - `src/product/` holds the product/donor boundary contract and shared concept projections
+  - `Task / Flow` remain comparison-only prototype families
+  - `Guided / Studio / Architect` remain redirect-only compatibility routes
 - `adapters/<donor>`
   - copied donor material and mapping logic
   - acts as a frozen adapter source
@@ -89,6 +113,8 @@ world-model/
   - emitted canonical and promoted schema artifacts
 - `docs`
   - architecture, migration, adapter, and testing documentation
+  - `docs/architecture/UNIFIED_PRODUCT_DESIGN.md` records the product/donor boundary
+  - `docs/testing/CROSS_DONOR_INTEGRATION_MATRIX.md` records shared concept families and lens-switch rules
 - `fixtures`
   - canonical and adapter example payloads
 - `tools`

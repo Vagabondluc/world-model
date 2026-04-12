@@ -1,0 +1,4 @@
+# Installer dashboard dependencies
+# Tkinter is built-in, but adding useful utilities
+
+psutil>=5.9.0

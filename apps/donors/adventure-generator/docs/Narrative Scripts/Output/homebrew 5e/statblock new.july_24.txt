@@ -1,0 +1,60 @@
+[CR Calculation Process]
+1. Choose target CR
+2. Calculate base stats using formulas below
+3. Adjust for spellcasting (if applicable)
+4. Fine-tune stats to fit monster concept
+5. Calculate final CR
+
+[Base Stat Formulas]
+CR 0-1/2:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = HP/3
+HP = (ceil(ACCCR) + 1) * 3
+
+CR 1-7:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = 5 + 5CR
+HP = 3*Dmg
+
+CR 8+:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = 5CR
+HP = 3*Dmg
+
+[Spellcasting Considerations]
+- Identify spellcasting level and class
+- Analyze spell list for strength, atk/dmg, and healing/HP tradeoffs
+- Consider a 3-round simulation for spell effects on offensive and defensive CR
+
+[Stat Adjustments]
+- AC: +/-3
+- HP: +/-50% (reduce by expected damage avoided over 3 rounds)
+- Atk: +/-2
+- Dmg: +/-50% (4x for limited-use, 0.5x for multi-target, 2x for limited multi-target)
+- DC: +/-2
+
+[Defensive Considerations]
+- Calculate Effective HP: Consider immunities (2x BPS nonmagical), resistances (1.5x BPS nonmagical), and healing
+- Calculate Effective AC
+
+[Offensive Considerations]
+- Calculate DPR (Damage Per Round)
+- Consider attack bonuses and save DCs
+
+[Skill Assignment]
+- Higher CR/smarter monsters: More skills (max 4 for most, up to 6 for smart humanoids)
+- Large+ bruisers: May have no skills
+- Typical monsters: 2 skills (often Perception & Stealth)
+
+[Final CR Calculation]
+1. Calculate Offensive CR and Defensive CR separately
+2. Average the two CRs for the final CR
+3. Adjust based on concept and other details that do not affect CR
+
+Balance adjustments to create the desired concept while maintaining an appropriate challenge level.

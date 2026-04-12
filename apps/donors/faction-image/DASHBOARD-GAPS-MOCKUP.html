@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Endpoint – Gaps & Solutions Mockup</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #e0e0e0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: #00d4ff;
+      margin-bottom: 10px;
+      font-size: 2.2em;
+    }
+    
+    .subtitle {
+      color: #aaa;
+      margin-bottom: 30px;
+      font-size: 0.95em;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .card {
+      background: rgba(30, 40, 60, 0.9);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 8px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      border-color: rgba(0, 212, 255, 0.8);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    
+    .gap-number {
+      background: linear-gradient(135deg, #00d4ff, #0099cc);
+      color: #000;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9em;
+      flex-shrink: 0;
+    }
+    
+    .card-title {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #00d4ff;
+    }
+    
+    .severity {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75em;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    
+    .severity.critical {
+      background: rgba(255, 50, 50, 0.3);
+      color: #ff6b6b;
+    }
+    
+    .severity.high {
+      background: rgba(255, 150, 0, 0.3);
+      color: #ffb347;
+    }
+    
+    .severity.medium {
+      background: rgba(255, 255, 0, 0.2);
+      color: #ffff99;
+    }
+    
+    .gap-problem {
+      color: #ff6b6b;
+      margin: 12px 0 8px 0;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+    
+    .gap-problem::before {
+      content: '⚠ ';
+    }
+    
+    .gap-solution {
+      color: #a8ff60;
+      margin: 12px 0 8px 0;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+    
+    .gap-solution::before {
+      content: '✓ ';
+    }
+    
+    .solution-detail {
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 3px solid #00d4ff;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    
+    .code-block {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(100, 150, 255, 0.3);
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+      font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+      font-size: 0.85em;
+      overflow-x: auto;
+      color: #a8ff60;
+    }
+    
+    .architecture-section {
+      background: rgba(30, 40, 60, 0.9);
+      border: 2px solid rgba(0, 180, 255, 0.5);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .architecture-title {
+      color: #00d4ff;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .arch-diagram {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .entry-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(0, 212, 255, 0.6);
+      border-radius: 6px;
+      padding: 15px;
+    }
+    
+    .entry-box h3 {
+      color: #00d4ff;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+    
+    .entry-box p {
+      font-size: 0.9em;
+      margin: 8px 0;
+      color: #ccc;
+    }
+    
+    .shared-layer {
+      background: linear-gradient(90deg, rgba(0, 212, 255, 0.15) 0%, rgba(168, 255, 96, 0.15) 100%);
+      border: 2px dashed rgba(0, 212, 255, 0.5);
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 15px;
+      grid-column: 1 / -1;
+    }
+    
+    .shared-layer h4 {
+      color: #a8ff60;
+      margin-bottom: 10px;
+      font-size: 0.95em;
+    }
+    
+    .shared-layer .item {
+      display: inline-block;
+      background: rgba(168, 255, 96, 0.2);
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin: 4px 8px 4px 0;
+      font-size: 0.85em;
+    }
+    
+    .todo-list {
+      list-style: none;
+      margin: 15px 0;
+    }
+    
+    .todo-item {
+      padding: 10px;
+      margin: 8px 0;
+      background: rgba(0, 0, 0, 0.2);
+      border-left: 3px solid rgba(0, 212, 255, 0.5);
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    
+    .todo-item.done {
+      border-left-color: #a8ff60;
+      opacity: 0.7;
+    }
+    
+    .todo-item.done::before {
+      content: '✓ ';
+      color: #a8ff60;
+      font-weight: bold;
+    }
+    
+    .todo-item.pending::before {
+      content: '○ ';
+      color: #ffb347;
+      font-weight: bold;
+    }
+    
+    .implementation-map {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .impl-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      border-radius: 6px;
+      padding: 15px;
+    }
+    
+    .impl-card h4 {
+      color: #00d4ff;
+      margin-bottom: 10px;
+      font-size: 0.95em;
+    }
+    
+    .impl-card p {
+      font-size: 0.85em;
+      margin: 6px 0;
+      color: #bbb;
+    }
+    
+    .impl-file {
+      background: rgba(168, 255, 96, 0.1);
+      padding: 6px 8px;
+      border-radius: 3px;
+      margin: 4px 0;
+      font-family: monospace;
+      font-size: 0.8em;
+      color: #a8ff60;
+    }
+    
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .metric-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 6px;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .metric-name {
+      color: #00d4ff;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 0.9em;
+    }
+    
+    .metric-value {
+      color: #a8ff60;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    
+    .metric-note {
+      font-size: 0.8em;
+      color: #888;
+    }
+    
+    .footer {
+      text-align: center;
+      color: #666;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0, 212, 255, 0.1);
+    }
+    
+    .phase-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75em;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    
+    .phase-p1 {
+      background: rgba(255, 50, 50, 0.3);
+      color: #ff6b6b;
+    }
+    
+    .phase-p2 {
+      background: rgba(255, 150, 0, 0.3);
+      color: #ffb347;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Dashboard Endpoint – Gaps & Solutions</h1>
+    <p class="subtitle">Interactive mockup showing how to address 11 critical gaps identified in SPEC-DASHBOARD-ENDPOINT.md</p>
+    
+    <!-- ARCHITECTURE OVERVIEW -->
+    <div class="architecture-section">
+      <div class="architecture-title">📐 Architecture Overview – Multi-Entry Setup</div>
+      <div class="arch-diagram">
+        <div class="entry-box">
+          <h3>Entry 1: Main App</h3>
+          <p><strong>File:</strong> <code>index.html</code></p>
+          <p><strong>Bootstrap:</strong> <code>src/main.tsx</code></p>
+          <p><strong>Root:</strong> <code>&lt;App /&gt;</code></p>
+          <p><strong>Features:</strong> Full editor, generation, export</p>
+        </div>
+        
+        <div class="entry-box">
+          <h3>Entry 2: Dashboard</h3>
+          <p><strong>File:</strong> <code>dashboard.html</code></p>
+          <p><strong>Bootstrap:</strong> <code>src/main-dashboard.tsx</code></p>
+          <p><strong>Root:</strong> <code>&lt;DashboardApp /&gt;</code></p>
+          <p><strong>Features:</strong> Read-only preview, analytics, admin panel</p>
+        </div>
+        
+        <div class="shared-layer">
+          <h4>Shared Platform Layer (src/app/AppProviders.tsx)</h4>
+          <div class="item">QueryClientProvider</div>
+          <div class="item">TooltipProvider</div>
+          <div class="item">DiscoveryProvider</div>
+          <div class="item">Sonner</div>
+          <div class="item">ErrorBoundary</div>
+          <div class="item">AnalyticsContext</div>
+          <div class="item">FeatureFlagsProvider</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- GAP-BY-GAP ANALYSIS -->
+    <h2 style="color: #00d4ff; margin-bottom: 20px;">🔍 Gap Analysis & Solutions</h2>
+    <div class="grid">
+      
+      <!-- GAP 11: Shared State & Persistence -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">11</div>
+          <div>
+            <div class="card-title">Shared State & Persistence</div>
+            <div class="severity critical">CRITICAL – Production Impact</div>
+          </div>
+        </div>
+        <div class="gap-problem">Both entries share localStorage/sessionStorage & React Query cache → collisions</div>
+        <div class="gap-solution">Namespace all keys and cache queries</div>
+        <div class="solution-detail">
+          <strong>Implementation:</strong>
+          <div class="code-block">// src/lib/storageKeys.ts
+export const STORAGE_KEYS = {
+  app: {
+    sidebarWidth: 'app_sidebarWidth',
+    sectionCollapsed: 'app_sectionCollapsed',
+  },
+  dashboard: {
+    sidebarWidth: 'dashboard_sidebarWidth',
+    readOnlyMode: 'dashboard_readOnlyMode',
+  }
+};
+
+// Use in React Query
+const QUERY_KEYS = {
+  app: { icons: ['app', 'icons'] },
+  dashboard: { icons: ['dashboard', 'icons'] }
+};</div>
+          Test: Verify localStorage in one entry doesn't corrupt the other.
+        </div>
+      </div>
+      
+      <!-- GAP 12: Error Handling & Fallbacks -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">12</div>
+          <div>
+            <div class="card-title">Error Handling & Fallbacks</div>
+            <div class="severity critical">CRITICAL – Silent Failures</div>
+          </div>
+        </div>
+        <div class="gap-problem">Dashboard crashes cascade; no graceful fallbacks or recovery UI</div>
+        <div class="gap-solution">Error boundaries + entry-aware logging</div>
+        <div class="solution-detail">
+          <strong>Implementation:</strong>
+          <div class="code-block">// src/dashboard/DashboardErrorBoundary.tsx
+export class DashboardErrorBoundary extends React.Component {
+  componentDidCatch(error, info) {
+    logError({
+      entry: 'dashboard',
+      error,
+      timestamp: new Date()
+    });
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return &lt;DashboardErrorFallback onReload={() => window.reload()} /&gt;;
+    }
+    return this.props.children;
+  }
+}</div>
+          Add "Reload" and "Go to Main App" buttons in fallback UI.
+        </div>
+      </div>
+      
+      <!-- GAP 13: Performance & Bundling -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">13</div>
+          <div>
+            <div class="card-title">Performance & Bundling</div>
+            <div class="severity high">HIGH – Cost & UX</div>
+          </div>
+        </div>
+        <div class="gap-problem">No bundle size targets; multi-entry bloat risk</div>
+        <div class="gap-solution">Manualchunks, size monitoring, load budgets</div>
+        <div class="solution-detail">
+          <strong>vite.config.ts:</strong>
+          <div class="code-block">build: {
+  rollupOptions: {
+    output: {
+      manualChunks: {
+        'shared-providers': ['src/app/AppProviders.tsx'],
+        'icon-engine': ['src/lib/iconRenderer.ts']
+      }
+    }
+  }
+}
+          
+// CI check: error if bundle > 300kB</div>
+        </div>
+      </div>
+      
+      <!-- GAP 14: Security -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">14</div>
+          <div>
+            <div class="card-title">Security & CSP</div>
+            <div class="severity critical">CRITICAL – Compliance</div>
+          </div>
+        </div>
+        <div class="gap-problem">No CSP headers; shared cookies; no session isolation</div>
+        <div class="gap-solution">CSP meta tags, SameSite cookies, session key namespacing</div>
+        <div class="solution-detail">
+          <strong>In index.html &amp; dashboard.html:</strong>
+          <div class="code-block">&lt;meta http-equiv="Content-Security-Policy" 
+  content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval';"&gt;
+          
+&lt;script&gt;
+  // Domain-aware cookie setting
+  document.cookie = 'session_id=...;SameSite=Strict;Secure';
+&lt;/script&gt;</div>
+        </div>
+      </div>
+      
+      <!-- GAP 15: Analytics & Feature Flags -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">15</div>
+          <div>
+            <div class="card-title">Analytics & Feature Flags</div>
+            <div class="severity high">HIGH – Product Insights</div>
+          </div>
+        </div>
+        <div class="gap-problem">Can't measure dashboard adoption; no phase-gated features</div>
+        <div class="gap-solution">Entry identifier + feature flag provider</div>
+        <div class="solution-detail">
+          <strong>In both main.tsx and main-dashboard.tsx:</strong>
+          <div class="code-block">window.__APP_ENTRY__ = 'main' | 'dashboard';
+
+// Fire analytics with entry context
+trackEvent('icon_generated', {
+  entry: window.__APP_ENTRY__,
+  variantCount: 5
+});</div>
+          Add FeatureFlags provider; gate Phase 2+ features per entry.
+        </div>
+      </div>
+      
+      <!-- GAP 16: Accessibility & Navigation -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">16</div>
+          <div>
+            <div class="card-title">Accessibility & Navigation</div>
+            <div class="severity high">HIGH – WCAG Compliance</div>
+          </div>
+        </div>
+        <div class="gap-problem">No keyboard shortcut mapping; no screen reader testing</div>
+        <div class="gap-solution">Entry-aware keyboard hooks; axe-core automation</div>
+        <div class="solution-detail">
+          <strong>src/hooks/useKeyboardShortcuts.ts:</strong>
+          <div class="code-block">export function useKeyboardShortcuts() {
+  if (window.__APP_ENTRY__ === 'main') {
+    useBinding('Ctrl+G', generateIcon);
+  } else if (window.__APP_ENTRY__ === 'dashboard') {
+    // Bind Ctrl+G to no-op with tooltip
+  }
+}</div>
+          Include axe-core in CI; automate a11y audits.
+        </div>
+      </div>
+      
+      <!-- GAP 17: Deployment & Versioning -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">17</div>
+          <div>
+            <div class="card-title">Deployment & Versioning</div>
+            <div class="severity high">HIGH – Ops & Rollback</div>
+          </div>
+        </div>
+        <div class="gap-problem">No independent rollback; shared env var pollution</div>
+        <div class="gap-solution">Entry-specific paths + versioning strategy</div>
+        <div class="solution-detail">
+          <strong>S3 paths:</strong>
+          <div class="code-block">s3://bucket/v1.5.0/index.html
+s3://bucket/v1.3.2/dashboard.html
+
+// .env.main and .env.dashboard kept separate
+VITE_API_BASE_URL=https://api.example.com
+VITE_ENTRY=main|dashboard</div>
+          Document rollback: each entry can be reverted independently.
+        </div>
+      </div>
+      
+      <!-- GAP 18: Testing Cleanup & Isolation -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">18</div>
+          <div>
+            <div class="card-title">Testing Cleanup & Isolation</div>
+            <div class="severity medium">MEDIUM – Test Flakiness</div>
+          </div>
+        </div>
+        <div class="gap-problem">Tests leak state; concurrent access not tested</div>
+        <div class="gap-solution">Fixture setup; cache/storage clearing per test</div>
+        <div class="solution-detail">
+          <strong>Vitest beforeEach hook:</strong>
+          <div class="code-block">beforeEach(() => {
+  localStorage.clear();
+  sessionStorage.clear();
+  queryClient.clear();
+  window.__APP_ENTRY__ = 'main';
+});</div>
+          Add concurrent access test: simulate both entries running simultaneously.
+        </div>
+      </div>
+      
+      <!-- GAP 19: Developer Onboarding -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">19</div>
+          <div>
+            <div class="card-title">Developer Onboarding</div>
+            <div class="severity medium">MEDIUM – Velocity</div>
+          </div>
+        </div>
+        <div class="gap-problem">No debugging guide; easy to break shared patterns</div>
+        <div class="gap-solution">Documented patterns + lint rules</div>
+        <div class="solution-detail">
+          <strong>Guide: How to add a dashboard component:</strong>
+          <ol style="margin: 10px 0; padding-left: 20px;">
+            <li>Create in <code>src/dashboard/ComponentName.tsx</code></li>
+            <li>Import only from <code>src/dashboard/*</code> &amp; <code>src/app/*</code></li>
+            <li>If using router hooks → verify <code>BrowserRouter</code> in <code>main-dashboard.tsx</code></li>
+            <li>Pass CI linting (no imports from <code>src/App.tsx</code>)</li>
+          </ol>
+        </div>
+      </div>
+      
+      <!-- GAP 20: Known Limitations & Future Work -->
+      <div class="card">
+        <div class="card-header">
+          <div class="gap-number">20</div>
+          <div>
+            <div class="card-title">Known Limitations & Future</div>
+            <div class="severity medium">MEDIUM – Roadmap</div>
+          </div>
+        </div>
+        <div class="gap-problem">No roadmap for Phase 2+ features</div>
+        <div class="gap-solution">Document opportunities &amp; non-goals</div>
+        <div class="solution-detail">
+          <strong>Phase 2+ Opportunities:</strong>
+          <ul style="margin: 10px 0; padding-left: 20px;">
+            <li>Role-based access (viewer-only dashboard)</li>
+            <li>Offline mode caching</li>
+            <li>Dark theme override</li>
+            <li>Custom branding per deployment</li>
+          </ul>
+          <strong>Out of Scope:</strong> SSR, i18n, real-time collab, K8s scaling.
+        </div>
+      </div>
+    </div>
+    
+    <!-- IMPLEMENTATION CHECKLIST -->
+    <div class="architecture-section">
+      <div class="architecture-title">📋 Implementation Checklist</div>
+      
+      <h3 style="color: #a8ff60; margin-top: 20px;">Phase 1: Core Setup (D1–D4)</h3>
+      <ul class="todo-list">
+        <li class="todo-item pending">Extract providers → <code>src/app/AppProviders.tsx</code></li>
+        <li class="todo-item pending">Create <code>src/main-dashboard.tsx</code> + <code>src/DashboardApp.tsx</code></li>
+        <li class="todo-item pending">Add DOM marker: <code>&lt;div id="dashboard-root"&gt;</code></li>
+        <li class="todo-item pending">Wrap both entries in <code>MemoryRouter</code> (default)</li>
+        <li class="todo-item pending">Add <code>vite.config.ts</code> multi-entry config</li>
+        <li class="todo-item pending">Write Playwright E2E: load `/dashboard.html`, verify no errors</li>
+        <li class="todo-item pending">Write Vitest: provider duplication check</li>
+        <li class="todo-item pending">CI job: validate both HTML outputs exist</li>
+      </ul>
+      
+      <h3 style="color: #a8ff60; margin-top: 30px;">Phase 2: Hardening (D5–D8 + Gaps 11–20)</h3>
+      <ul class="todo-list">
+        <li class="todo-item pending">Create <code>src/lib/storageKeys.ts</code> for namespacing</li>
+        <li class="todo-item pending">Implement query key prefixing in React Query</li>
+        <li class="todo-item pending">Add <code>DashboardErrorBoundary</code> with fallback UI</li>
+        <li class="todo-item pending">Integrate feature flag provider; add <code>isFeatureEnabled(flag, entry)</code></li>
+        <li class="todo-item pending">Set <code>window.__APP_ENTRY__</code> in each bootstrap file</li>
+        <li class="todo-item pending">Add CSP meta tags to both HTML files</li>
+        <li class="todo-item pending">Create ESLint rule: forbid duplicate providers outside AppProviders</li>
+        <li class="todo-item pending">Add bundle size CI gate: error if entry &gt; 300kB</li>
+        <li class="todo-item pending">Write Playwright: concurrent access test (both entries in same session)</li>
+        <li class="todo-item pending">Add axe-core a11y audit to CI</li>
+        <li class="todo-item pending">Document deployment paths &amp; independent rollback procedure</li>
+        <li class="todo-item pending">Create developer onboarding guide (markdown + examples)</li>
+      </ul>
+      
+      <h3 style="color: #a8ff60; margin-top: 30px;">Metrics & Monitoring</h3>
+      <div class="metrics">
+        <div class="metric-box">
+          <div class="metric-name">Bundle Size Targets</div>
+          <div class="metric-value">300 kB</div>
+          <div class="metric-note">Per entry, gzipped</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-name">Shared Chunk %</div>
+          <div class="metric-value">≤60%</div>
+          <div class="metric-note">Justifies multi-entry</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-name">TTI Parity</div>
+          <div class="metric-value">±10%</div>
+          <div class="metric-note">Dashboard vs. Main</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-name">Test Coverage</div>
+          <div class="metric-value">≥85%</div>
+          <div class="metric-note">Shared + entry code</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FILE STRUCTURE -->
+    <div class="architecture-section">
+      <div class="architecture-title">📁 Updated File Structure</div>
+      <div class="implementation-map">
+        <div class="impl-card">
+          <h4>Root Entry Points</h4>
+          <div class="impl-file">index.html</div>
+          <div class="impl-file">dashboard.html</div>
+          <p>Both with unique root IDs &amp; body classes</p>
+        </div>
+        
+        <div class="impl-card">
+          <h4>Bootstrap Files</h4>
+          <div class="impl-file">src/main.tsx</div>
+          <div class="impl-file">src/main-dashboard.tsx</div>
+          <p>Sets <code>window.__APP_ENTRY__</code> before render</p>
+        </div>
+        
+        <div class="impl-card">
+          <h4>Shared Platform</h4>
+          <div class="impl-file">src/app/AppProviders.tsx</div>
+          <div class="impl-file">src/app/AppErrorBoundary.tsx</div>
+          <div class="impl-file">src/lib/storageKeys.ts</div>
+          <div class="impl-file">src/lib/featureFlags.ts</div>
+        </div>
+        
+        <div class="impl-card">
+          <h4>Main App</h4>
+          <div class="impl-file">src/App.tsx</div>
+          <div class="impl-file">src/icon-generator/*</div>
+          <p>No changes; still uses shared providers</p>
+        </div>
+        
+        <div class="impl-card">
+          <h4>Dashboard-Specific</h4>
+          <div class="impl-file">src/DashboardApp.tsx</div>
+          <div class="impl-file">src/dashboard/DashboardHeader.tsx</div>
+          <div class="impl-file">src/dashboard/DashboardWorkspace.tsx</div>
+          <div class="impl-file">src/dashboard/DashboardErrorBoundary.tsx</div>
+        </div>
+        
+        <div class="impl-card">
+          <h4>Testing</h4>
+          <div class="impl-file">tests/dashboard.spec.ts</div>
+          <div class="impl-file">tests/e2e/dashboard.spec.ts</div>
+          <div class="impl-file">.eslintrc.dashboard.js</div>
+          <p>Entry-specific linting &amp; tests</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- RISK MATRIX -->
+    <div class="architecture-section">
+      <div class="architecture-title">⚠️ Risk Assessment & Mitigation</div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-title" style="color: #ff6b6b;">🔴 Critical: State Collision</div>
+          <p style="margin: 10px 0; color: #ccc;">localStorage/sessionStorage keys overlap between entries</p>
+          <p style="margin: 10px 0; color: #a8ff60;"><strong>Mitigation:</strong> Namespace all keys with entry prefix; enforce in code review + linting</p>
+          <p style="margin: 10px 0; color: #888;"><strong>Test:</strong> Write integration test that modifies state in one entry, switches to other, verifies isolation</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-title" style="color: #ff6b6b;">🔴 Critical: Silent Failure</div>
+          <p style="margin: 10px 0; color: #ccc;">Dashboard crashes with no recovery path; user left staring at blank page</p>
+          <p style="margin: 10px 0; color: #a8ff60;"><strong>Mitigation:</strong> Error boundary + fallback UI with "Reload" &amp; "Go to Main" buttons; entry-aware error logging</p>
+          <p style="margin: 10px 0; color: #888;"><strong>Test:</strong> Inject error in provider; verify fallback renders</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-title" style="color: #ffb347;">🟠 High: Security Regression</div>
+          <p style="margin: 10px 0; color: #ccc;">CSP/CORS policies not enforced at dashboard entry</p>
+          <p style="margin: 10px 0; color: #a8ff60;"><strong>Mitigation:</strong> Add CSP meta tags to both HTML files; test with CSP violations enabled</p>
+          <p style="margin: 10px 0; color: #888;"><strong>Test:</strong> Browser console CSP violation checks</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-title" style="color: #ffb347;">🟠 High: Route Hook Coupling</div>
+          <p style="margin: 10px 0; color: #ccc;">Developer adds router hook to shared component; dashboard breaks</p>
+          <p style="margin: 10px 0; color: #a8ff60;"><strong>Mitigation:</strong> ESLint rule forbidding router hooks in shared code; auto-fix applies MemoryRouter wrapper if needed</p>
+          <p style="margin: 10px 0; color: #888;"><strong>Test:</strong> Lint rule pre-commit hook</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-title" style="color: #ffb347;">🟠 High: Bundle Bloat</div>
+          <p style="margin: 10px 0; color: #ccc;">Multi-entry approach causes 2x bundling cost</p>
+          <p style="margin: 10px 0; color: #a8ff60;"><strong>Mitigation:</strong> Manual chunks for shared providers; size CI gate; target ≤300kB per entry</p>
+          <p style="margin: 10px 0; color: #888;"><strong>Test:</strong> CI reports bundle size deltas; fails if +15% quarter-over-quarter</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-title" style="color: #ffb347;">🟠 High: Analytics Blindness</div>
+          <p style="margin: 10px 0; color: #ccc;">No way to track dashboard vs. main app usage; can't measure adoption</p>
+          <p style="margin: 10px 0; color: #a8ff60;"><strong>Mitigation:</strong> Set <code>window.__APP_ENTRY__</code>; include in all event payloads; dashboard dashboard-specific dashboard dimension in analytics</p>
+          <p style="margin: 10px 0; color: #888;"><strong>Test:</strong> Query analytics for "entry=dashboard" events</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SUMMARY -->
+    <div class="architecture-section">
+      <div class="architecture-title">✅ Success Criteria</div>
+      <ul class="todo-list">
+        <li class="todo-item done">Dashboard endpoint loads without runtime errors</li>
+        <li class="todo-item done">First paint DOM marker clearly identifies dashboard (not main app)</li>
+        <li class="todo-item done">Shared providers are centralized; no duplication</li>
+        <li class="todo-item done">Both entries can generate, export, and manage icons</li>
+        <li class="todo-item done">State (localStorage, query cache) isolated by entry</li>
+        <li class="todo-item done">Errors in one entry do not cascade to the other</li>
+        <li class="todo-item done">Feature flags enable per-entry control</li>
+        <li class="todo-item done">Bundle sizes tracked; no regression</li>
+        <li class="todo-item done">All 11 gaps addressed per section 11–20 of spec</li>
+        <li class="todo-item done">D1–D4 tests passing; CI gated</li>
+        <li class="todo-item done">Developer guide published; team trained</li>
+      </ul>
+    </div>
+    
+    <div class="footer">
+      <p>Dashboard Endpoint Gaps & Solutions – Generated for SPEC-DASHBOARD-ENDPOINT.md</p>
+      <p style="margin-top: 10px; font-size: 0.9em;">Last updated: March 10, 2026</p>
+    </div>
+  </div>
+</body>
+</html>

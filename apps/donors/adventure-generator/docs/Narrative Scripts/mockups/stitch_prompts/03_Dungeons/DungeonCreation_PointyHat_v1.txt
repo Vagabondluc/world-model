@@ -1,0 +1,90 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeoncreation Pointyhat V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Pointy Hat Dungeon Architect
+
+```text
++--------------------------------------------------------------------------------+
+|  [Pointy Hat: Thematic Dungeon Suite]                                 [?] [X]  |
++--------------------------------------------------------------------------------+
+|  STEP I: THE THEME (ONE WORD)                                                  |
+|  [ "DECAY"                                                   ] [AUTOSUGGEST]   |
++----------------------------------------+---------------------------------------+
+|  STEP II: MECHANICS                    |  STEP III: THE GOAL                   |
+|  [ Items lose 1 HP/hour of use.     ]  |  [ Find the 'Core of Vitality' and ]  |
+|  [ Healing is halved in the dark.   ]  |  [ reverse the curse.              ]  |
++----------------------------------------+---------------------------------------+
+|  STEP IV: ENCOUNTERS (THEMATIC HARMONY)                                        |
+|  1. Combat: [ Rust Monsters and crumbling floors                    ]          |
+|  2. Puzzle: [ A bridge made of memories that fade as you cross it   ]          |
+|  3. Roleplay:[ A senile guardian who has forgotten his own name     ]          |
++--------------------------------------------------------------------------------+
+|  STEP V: THE ENDING (SYNTHESIS)                                                |
+|  [ The Core itself is decaying; players must sacrifice a permanent  ]          |
+|  [ item to stabilize it while fighting the Shadow of Time.         ]          |
++--------------------------------------------------------------------------------+
+|  [Preview Thematic Flow] [Download Module] [Share with Table]          [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Pointy Hat Dungeon Architect
+
+## Component Architecture
+- **Theme-First Workspace:** The UI is architected around the "One-Word Theme." Entering the theme in Step I triggers the "Thematic Bridge" which affects the suggested inputs for everything from Mechanics to the Ending.
+- **The Step-by-Step Flow:** A linear but editable set of five containers, ensuring the GM follows the "Pointy Hat" logic of building outward from a core concept.
+- **Thematic Consistency Auditor:** A background service that checks keywords in Step IV (Encounters) against the Theme and Mechanics in Step I/II to ensure a cohesive immersion.
+- **Encounters & Synthesis Logic:** A specialized editor for Step V that helps the GM "synthesize" the theme, mechanics, and narrative into a single climactic event.
+
+## Interaction Logic
+- **Step-Unlocked Progression:** While the GM can jump between steps, the UI visually emphasizes the sequential nature of the method, requiring a completed Theme before Mechanics are suggested.
+- **Auto-Thematic Suggestions:** Clicking "Autosuggest" next to the Theme field provides a list of Mechanics, Goals, and Encounter types that historically or narratively fit that theme.
+- **Editable & Persona-Based:** Reflecting the script's requirement for being "Editable and savable," the UI allows for custom mechanic blocks that can be reused across different dungeons.
+
+## Visual Design
+- **Thematic & Evocative:** The UI skin can change subtly based on the "One-Word Theme" (e.g., 'Decay' adds a textured, distressed look; 'Ice' adds a cool blue tint).
+- **Clean Focus:** Minimizes distractions to keep the GM focused on the narrative and mechanical harmony.
+- **Synthesis Visualization:** The final "Ending" step is visually wider and more prominent, signifying it as the culmination of all previous design choices.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Pointy Hat Dungeon - "The Vault of Rust"
+
+### **Step I: Theme**
+**RUST**
+
+---
+
+### **Step II: Mechanics**
+- **Mechanical Fatigue:** Every time a non-magical metal item is used (attack, check, or hit), roll a d20. On a 1, the item gains a '-1' penalty to its effectiveness.
+- **Oxidized Air:** Resting only provides half-benefits unless the party creates a sealed, rust-free environment.
+
+---
+
+### **Step III: Goal**
+Retrieve the 'Ever-Polished Prism' from the heart of the Iron Cathedral to stop the creeping oxidation of the capital city.
+
+---
+
+### **Step IV: Encounters**
+1. **Combat (The Iron Hounds):** Three clockwork beasts that prioritize attacking the players with the most metal equipment (e.g., Paladins, Fighters).
+2. **Trap (The Mercury Rain):** A corridor where ceiling vents drip corrosive liquid; players must navigate a series of rusted, crumbling catwalks.
+3. **Roleplay (The Scribe of Sand):** A ghost who refuses to share the vault code until the players help him polish his ancient brass ledger.
+
+---
+
+### **Step V: Ending (The Synthesis)**
+The 'Prism' is guarded by a massive Rust Dragon. During the fight, the 'Mechanical Fatigue' increases (1-3 on d20). The dragon can be pacified if players 'offer' their most precious metal items to it, synthesizing the theme of loss and decay with the mechanic of item degradation. 
+

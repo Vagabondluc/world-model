@@ -1,0 +1,150 @@
+Terrain Features
+It is an unusual fight that takes place on a flat, featureless piece of ground with nothing to get in the way or provide cover for the combatants.
+
+Terrain Features Using Maps
+If it's your convention to play with battlemaps then adding terrain features is fairly easy. Just add the appropriate sort of indicators (e.g. miniatures, flat-printed cards, or using dry-erase or wet-erase markers on a map). Try to arrange the position of features so that either side might be able to make use of them. If instead, the monsters (or the party) have an advantageous position with the terrain then that can also factor into the difficulty. If the group faces monsters that are entrenched in a defensive environment, you might want to encourage them to think outside of just combat options. In fact, many players might have an unconscious tendency to assume that 'map equals combat,' in the theory that if you spent time preparing the map then it must be used, otherwise they're wasting your time preparing the map. In order to alleviate this, you might wish to start with just a verbal description of the environment, revealing the map only when combat is certain.
+
+Terrain Features for Theater of the Mind
+If you play with theater of the mind (just describing the environment and perhaps using a rough map to indicate the location of features) then you can still use terrain. However, you will likely be more successful if you have several larger terrain features, rather than a greater number of small features. Otherwise, if the battle area is too complex, the players might not be able to use the environment to their advantage because they're having trouble envisioning the area.
+
+Cities and Towns
+Combat within towns can be exceptionally dangerous, especially if you're trying to avoid drawing attention to yourself.
+
+Carts, Barrels, Boxes, etc.
+
+Many businesses will either receive regular shipments of supplies or store long-lasting materials in warehouses. Most of these will offer half cover (+2 to AC and Dexterity saving throws) to creatures. A creature can use an action to overturn a cart or stack other items to provide three-quarters cover (+5 to AC and Dexterity saving throws).
+Ditches and Drains
+
+Many urban areas have culverts, drainage channels, or simple ditches to direct the flow of stormwater and waste. If a creature crosses one of these structures moving faster than their regular speed then they need to succeed at a DC 10 Dexterity saving throw or become prone.
+Doors and Shutters
+
+An open door can provide a character with three-quarters cover, and a closed door provides total cover. An open shutter can provide none, half, or three-quarters cover depending on the size of the shutter and the size of the creature.
+Roofs
+
+Sloped roofs count as difficult terrain, and a creature that ends its movement on a rain-slick or snow-covered roof must make a DC 10 Dexterity saving throw or become prone on the roof. A creature that starts its turn prone on such a roof must make a DC 10 Dexterity saving throw or fall off the roof. Creatures can use a sloped roof to provide half cover, depending on the position of their attackers.
+Tunnels
+
+Larger and older cities might have tunnels for sewage, stormwater, safe-rooms, and escape tunnels for notables. Creatures using two weapons or a single weapon with reach make their attacks with disadvantage. In certain areas, creatures may need to squeeze through smaller passages (see the core rules).
+Walls and Corners
+
+A wall between one creature and another provides total cover. A creature can use a corner where two walls meet to provide half cover.
+Farmlands
+These areas tend to have a collection of buildings, containers, and vehicles that a combatant might use in a fight.
+
+Barns and Outbuildings
+
+These structures usually provide total cover for a creature inside them (or if their opponent is inside the structure and they are outside and there are no open doors or windows). A creature can also use open doors or windows, or the corners of buildings as specified above. Note that often farm outbuildings are made of wood and are flammable.
+Barrels and Bushels
+
+These objects can provide half-cover or three-quarters cover, depending on their size and a creature's size. For barrels especially, a creature might be able to use an action to roll it at another creature, which must make a DC 10 Dexterity saving throw or become prone.
+Crops
+
+Creatures that decide to hide in growing fields might be able to get half or three-quarters cover, depending on their size and the height of the crops.
+Wagons and Carts
+
+A creature can hide behind these to get half or three-quarters cover, depending on sizes. A character can use an action to tip the vehicle over, in order to increase their cover. Turning a wagon over might require a Strength check, the DC should be between 10 and 20, depending on the size of the wagon and how much cargo (if any) it is carrying.
+Forest
+Many areas of Davokar and other smaller forests are tightly packed with vegetation, making most of a particular combat area difficult terrain.
+
+Animal Path
+
+This narrow path allows quick movement. It does not count as difficult terrain – however, it probably winds back and forth, may lead to a water source, or a favorite grazing area. Characters might find both prey animals and predators alongside it if they are not cautious.
+Boughs
+
+There are many low-hanging boughs here, ensuring that the area counts as difficult terrain. Creatures can make a DC 10 Strength (Athletics) or Dexterity (Acrobatics) check to climb up on the boughs, providing advantage on attack rolls against opponents on the ground.
+Fallen Trees
+
+These trees have fallen, felled by old age or a woodcutter's keen axe. A creature that tries to scramble over them at full speed (or faster) must make a DC 10 Dexterity saving throw or become prone. A creature can mount the tree with a DC 10 Dexterity (Acrobatics) check and then enjoy advantage on melee attack rolls while attackers have disadvantage on melee attack rolls to hit it.
+Thickets
+
+A tight collection of trees and foliage that is impassable. A creature can gain half cover against creatures on the other side of the thicket just by staying within 5 feet of the terrain feature.
+Slopes
+
+A gentle slope is difficult terrain for creatures climbing up it and counts as normal terrain for creatures going down it. If you are prone on a gentle slope you gain half cover against ranged attacks. Steep slopes are difficult terrain for both going down and climbing up, but offer three-quarters cover against ranged attacks for creatures that are prone.
+Roots
+
+Especially in Dark Davokar, tree roots can be massive, allowing appropriately sized creatures to gain either half or three-quarters cover. Creatures crossing an area with smaller tree roots at faster than their normal speed must make a DC 10 Dexterity saving throw or become prone.
+Rotten Trees
+
+Some rotten trees will obviously be dangerously unstable but others might at first appear to be solid. Each time you interact with the rotten tree element (by using it as cover, climbing it, walking on it as a bridge over a stream, or other uses), roll a d20. On a natural 1, the rotten tree fails in some spectacular manner.
+Mountains
+These high places have some special challenges of their own. Beneath the timberline, you can use features from other appropriate categories.
+
+Boulders
+
+These large rocks can provide anywhere from half to total cover against enemies. Some of them are unstable – choose a size category from 0 to 10. It takes a Strength (Athletics) check with a DC of 15 + the size category to dislodge an unstable boulder and send it tumbling towards enemies. A creature can dodge the boulder with a Dexterity saving throw of 10 + the size category. On a hit, the boulder does 1d10 + the size category in bludgeoning damage.
+Cliffs
+
+These are vertical (or near vertical) faces of exposed rock. They can be climbed by anyone with sufficient skill and equipment, but not in combat situations. Cliffs can extend ranges (due to the vertical distance a projectile or spell effect must travel) or provide cover depending on positioning. A creature forced off the top edge of a cliff will take falling damage, as specified in the core rules.
+Crevasses and Ravines
+
+These are great rifts in the ground, formed by shifting rock or running water. Smaller chasms can be jumped, larger well-known ones might have a bridge that crosses over, forming a choke-point for the environment. A creature can spend an action to damage the bridge – depending on the structure it takes from two to four damage actions to destroy one side of the bridge, causing the other side to collapse or swing to the other side. If the bridge is flexible, a Dexterity saving throw could allow creatures on the bridge a chance to hang on (the GM sets the DC based on the exact situation). Snow sometimes covers crevasses, requiring a DC 10 Wisdom (Perception) check to notice it (or a passive Perception of 10 or better). Creatures that fall into a crevasse or ravine take fall damage as normal and might take cold damage as well from ice or nearly-freezing water if there is any at the bottom.
+Slopes
+
+Almost any area on a mountain will have some sort of slope to it. Very steep slopes are not vertical but approach it – creatures ascending such a slope are effectively prone and use their climbing speed (half their regular speed if they don't have a separate climb speed). Steep and gentle slopes work the same as previously described, see the previous page.
+Ruins
+These areas can contain anything from the barest traces of walls and foundations to entire structures.
+
+Foundations
+
+What was once the flat base of a building is now a broken field of rubble, with slabs pushed up by tree roots or collapsed down into the ground by their weight. This area counts as difficult terrain.
+Old, Unstable Walls
+
+Walls, depending on size, can provide anything from half to total cover. However, these walls are dangerously unstable. When you interact with the wall (e.g. taking cover behind it, leaning against it, or peering around it to make a ranged attack) roll a d20. On a 1, the wall collapses, doing 3 (1d6) bludgeoning damage to anyone within 5 feet of the falling structure.
+Pillars and Statues
+
+If the pillar or statue is still standing, then it can offer half or three-quarters cover depending on size. If it is fallen, then a creature can take an action to climb on it, gaining advantage on melee attacks. Creatures making melee attacks against the creature have disadvantage, while ranged attacks have an advantage since the extra height makes the climber easier to see. A creature can push down a statue or pillar with a Strength (Athletics) check (DC 15–25, GM’s judgment).
+Pits
+
+These are collapsed areas where underground areas of the ruins have become directly exposed to the surface. Open pits are easily detected and no one will accidentally fall in (however, a shove or other forced movement can cause them to fall, determine the depth of the pit and assign falling damage accordingly). Pits that have been covered (either as part of a natural debris cycle or intentionally) must be located – a DC 15 Wisdom (Perception) check or a 15 or higher passive Perception allows the creatures to identify all the pits within 60 feet of them.
+Rubble
+
+This area represents a collapsed wall or ceiling and is more uneven than an area of foundations. It counts as difficult terrain. You can spend an action in the area to collect 1d6 stones suitable as sling bullets.
+Swamps
+These are areas of water-soaked ground, slow-moving rivers, and very shallow ponds or lakes.
+
+Bogs and Quicksand
+
+These are areas where the ground is fully saturated with water. It is difficult terrain, and you must succeed at a DC 13 Strength saving throw when you begin to move or you become stuck for the round. A creature cannot drown in quicksand, but if it continues to struggle (a minute or more of failed Strength saving throws) then it gains a level of exhaustion. If a creature is knocked prone in the bog or quicksand, then it must make a DC 13 Strength or Dexterity check to regain its footing (as well as spend half its movement).
+Briars and Nettles
+
+This is an area of thorny undergrowth. A character can spend an action to clear an area 10 feet long in any dimension, with the other dimensions about the size of their body (i.e., creatures up to one size larger can squeeze through the path the character has made). Otherwise, creatures can force their way through, taking 1d6 piercing damage for each ten feet (or part thereof) that they travel through the area.
+Muddy Areas
+
+This patch of ground is not as saturated with water as the bogs or quicksand above, but still counts as difficult terrain. If a creature is knocked prone in the mud, then it must make a DC 10 Strength or Dexterity check to regain its footing (as well as spend half its movement).
+Streams and Floodwaters
+
+While much of the water in swamps is standing or slow-moving, heavy storms or other dangerous weather can create fast-moving streams or floodwaters. A creature that ends its movement in this area must make a DC 10 Strength saving throw or become prone. A prone creature is in the water and must either choose to swim (if it can) or make another DC 10 Strength saving throw to stand up (as well as spend half its movement).
+Underworld
+These are underground areas, anywhere from the basement areas of ruins to mine tunnels or holding cells underneath a castle to the vast reaches of the Underworld, an entire realm supposedly beneath Davokar.
+
+Freezing Waters
+
+This represents anything from a small puddle of cold water to a vast underground sea. Small areas of water are nothing more than a nuisance, counting as difficult terrain. However, if the water is deep enough to cover half or more of the creature's body, then each time it ends its turn in the water, it must succeed at a DC 10 Constitution saving throw or gain a level of exhaustion. This can, of course, eventually lead to death. A creature immune to cold damage automatically succeeds at their saving throw.
+Low Ceilings
+
+In many underground areas, the ceiling heights might not be ideal, especially for taller elves, humans, ogres, and trolls. In here a Medium or larger creature must crouch awkwardly, causing them to move at half speed and giving them disadvantage on ranged weapon attacks.
+Narrow Passages
+
+The walls of an underground area are close together, allowing the passage of a single Medium creature at a time (Large creatures can fit if they squeeze). Creatures using two weapons or a single weapon with reach make their attacks with disadvantage.
+Slimy or Slippery Patches
+
+You count these areas as difficult terrain. When a creature enters the area, it must make a DC 10 Dexterity saving throw or become prone.
+Stalactites, Stalagmites, Columns
+
+These features (stalactites hang from the ceiling; stalagmites grow from the floor; columns have met together in the middle) can provide either half cover or three-quarters cover, depending on a creature's position or size.
+Waters
+These are significant water features. You could also include Freezing Waters, Streams and Floodwaters, Muddy Areas, and even Bogs and Quicksand if appropriate for the area.
+
+Deeps
+
+These are areas of deep water, well past the ability of a creature to stand upright in the water or even easily see the bottom at all. Unarmored creatures that must tread water or are actively swimming must make a DC 10 Constitution saving throw at the end of each hour, gaining a level of exhaustion on a failure. Creatures wearing armor have disadvantage on this check. Creatures with heavy armor cannot swim, only tread water. Creatures able to breathe water automatically pass these saving throws.
+Reeds and Grasses
+
+These plants grow at the edge of many ponds and lakes. If a creature is at the edge of the water feature (either in the water or on the bank), the plants can provide half cover for the creature.
+Rills and Gullies
+
+These ridgelines in a field or slope were formed by running water. If you move across them at faster than your normal speed, you must succeed at a DC 10 Dexterity saving throw or become prone.
+Shorelines
+
+At the edge of a sea, ocean, or large lake is often a shoreline that has withstood the waves and tides of innumerable years. Many of these areas have soft sand (see Muddy Areas, above). Others have jagged rocks or steep cliffs. For these, a creature must make a DC 10 Dexterity saving throw when entering the area, taking 3 (1d6) slashing damage on a failure.

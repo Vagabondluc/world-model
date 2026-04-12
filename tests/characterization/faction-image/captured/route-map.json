@@ -1,0 +1,11 @@
+{
+  "donor": "faction-image",
+  "label": "Sacred Sigil Generator",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "routes": [
+    "/",
+    "/donor/faction-image"
+  ]
+}

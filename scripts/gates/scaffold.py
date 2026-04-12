@@ -21,22 +21,29 @@ _MANIFEST_STUB = textwrap.dedent("""\
     # Full field reference: world-model/docs/templates/adapter-manifest-template.md
     id: {donor}
     name: "{donor_title}"
-    version: "0.0.1"
+    version: "1.0.0"
     source:
       repo: "https://github.com/REPLACE_ORG/{donor}"
       commit: "REPLACE_SHA"
-    snapshot: "snapshots/{donor}/"
+      path: "REPLACE_SOURCE_PATH"
+    source_kind: "REPLACE_SOURCE_KIND"
+    default_promotion_class: "REPLACE_PROMOTION_CLASS"
+    snapshot:
+      root: "adapters/{donor}/source-snapshot"
+      fingerprint: "REPLACE_FINGERPRINT"
+      file_count: 0
+    included_paths:
+      - "REPLACE_INCLUDE_PATH"
+    excluded_paths:
+      - "REPLACE_EXCLUDE_PATH"
     mappings:
-      - "mappings/{donor}/mapping.yaml"
-    fixtures:
-      - "fixtures/{donor}/"
-    tests:
-      - "tests/{donor}/"
+      - "adapters/{donor}/mappings/concept-map.yaml"
     concepts:
       - "REPLACE_CONCEPT_1"
       - "REPLACE_CONCEPT_2"
-    owner: "REPLACE_OWNER"
-    notes: "Auto-generated stub — update REPLACE_ fields before merging."
+    provenance:
+      generated_at: "REPLACE_UTC_TIMESTAMP"
+      generated_by: "REPLACE_GENERATOR"
 """)
 
 # ── migration plan stub ───────────────────────────────────────────────────────
@@ -68,16 +75,64 @@ _RELEASE_CRITERIA_STUB = textwrap.dedent("""\
     # Release Criteria
     <!-- Auto-generated stub. Fill in all criteria before Phase 5/6 gates pass. -->
 
-    ## MVP acceptance criteria
-    - Beginner loop completes end-to-end.
-    - Studio loop completes end-to-end.
-    - Architect loop completes end-to-end.
+    ## Shipped UI
+    - The public app uses the World, Story, and Schema taxonomy.
+    - Legacy guided, studio, and architect routes redirect to public routes.
 
     ## Quality gates
     - No donor repo required at runtime.
     - All adapter manifests valid.
-    - All regression checks pass.
+    - All regression, performance, and accessibility checks pass.
     - Release criteria reviewed and signed off.
+
+    ## Verification commands
+    - cd world-model/apps/unified-app && npm run verify
+    - python world-model/scripts/check_phase_2_snapshots.py
+    - python world-model/scripts/check_phase_4_migration.py
+    - python world-model/scripts/check_phase_6_release.py
+    - python world-model/scripts/run_harness.py --phase 6
+    - python world-model/scripts/run_harness.py --phase 6 --cleanup --cleanup-scope safe
+""")
+
+_DONOR_UI_STUB = textwrap.dedent("""\
+    # Donor UI Audit
+    <!-- Auto-generated stub. Fill in donor classes, methodologies, and basis values before Phase 7 passes. -->
+
+    | Donor | Class | Methodology | Basis | Notes |
+    |---|---|---|---|---|
+    | Mythforge | app donor | behavioral capture | captured | REPLACE |
+    | Adventure Generator | fragment donor | intent reconstruction | reconstructed | REPLACE |
+    | Orbis | semantic-only donor | designed intent authoring | designed | REPLACE |
+""")
+
+_UNIFIED_PRODUCT_DESIGN_STUB = textwrap.dedent("""\
+    # Unified Product Design
+    <!-- Auto-generated stub. Fill in the product/donor boundary before Phase 8 passes. -->
+
+    ## Product surface
+    - `/` is the unified landing page and is driven by canonical bundle state.
+    - `/world`, `/story`, and `/schema` are the public product surfaces.
+
+    ## Donor boundary
+    - `src/product/surface-contract.ts` is the code-side product/donor boundary.
+    - Donor-faithful rehost surfaces preserve donor language and interaction order.
+    - Shared concept lens switching is read-only and does not mutate canonical state.
+""")
+
+_CROSS_DONOR_MATRIX_STUB = textwrap.dedent("""\
+    # Cross-Donor Integration Matrix
+    <!-- Auto-generated stub. Fill in the shared concept families before Phase 8 passes. -->
+
+    | Family | Basis | Canonical key | Default lens | Notes |
+    |---|---|---|---|---|
+    | biome-location | captured | entity:harbor-biome | Mythforge | REPLACE |
+    | entities | captured | entity:harbor-warden | Mythforge | REPLACE |
+    | workflows | reconstructed | workflow:sample-adventure | Adventure Generator | REPLACE |
+    | simulation-events | designed | event:session-advanced | Orbis | REPLACE |
+    | projections | designed | projection:harbor-warden | Orbis | REPLACE |
+    | attachments | captured | world:sample | Mythforge | REPLACE |
+
+    The lens switch smoke test is required and must remain read-only.
 """)
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -98,10 +153,10 @@ def _write(path: str, content: str) -> str:
 # ── per-phase scaffold functions ──────────────────────────────────────────────
 
 def scaffold_phase_2() -> List[str]:
-    """Create missing donor manifest stubs under world-model/snapshots/."""
+    """Create missing donor manifest stubs under world-model/adapters/."""
     results = []
     for donor in _DONORS:
-        path = f"{WM}/snapshots/{donor}/manifest.yaml"
+        path = f"{WM}/adapters/{donor}/manifest.yaml"
         title = donor.replace("-", " ").title()
         content = _MANIFEST_STUB.format(donor=donor, donor_title=title)
         results.append(_write(path, content))
@@ -118,11 +173,32 @@ def scaffold_phase_5() -> List[str]:
     return [_write(f"{WM}/docs/release/RELEASE_CRITERIA.md", _RELEASE_CRITERIA_STUB)]
 
 
+def scaffold_phase_7() -> List[str]:
+    """Ensure donor-ui audit stubs exist."""
+    return [
+        _write(f"{WM}/docs/testing/DONOR_UI_AUDIT.md", _DONOR_UI_STUB),
+        _write(f"{WM}/docs/testing/DONOR_CHARACTERIZATION_MATRIX.md", "# Donor Characterization Matrix\n"),
+        _write(f"{WM}/docs/testing/DONOR_UI_CONFORMANCE_MATRIX.md", "# Donor UI Conformance Matrix\n"),
+        _write(f"{WM}/tests/characterization/baselines.yaml", "donors:\n"),
+        _write(f"{WM}/tests/conformance/waivers.yaml", "waivers:\n"),
+    ]
+
+
+def scaffold_phase_8() -> List[str]:
+    """Ensure unified product design and cross-donor integration stubs exist."""
+    return [
+        _write(f"{WM}/docs/architecture/UNIFIED_PRODUCT_DESIGN.md", _UNIFIED_PRODUCT_DESIGN_STUB),
+        _write(f"{WM}/docs/testing/CROSS_DONOR_INTEGRATION_MATRIX.md", _CROSS_DONOR_MATRIX_STUB),
+    ]
+
+
 # Map phase → scaffold fn
 SCAFFOLDS: Dict[int, Callable[[], List[str]]] = {
     2: scaffold_phase_2,
     4: scaffold_phase_4,
     5: scaffold_phase_5,
+    7: scaffold_phase_7,
+    8: scaffold_phase_8,
 }
 
 

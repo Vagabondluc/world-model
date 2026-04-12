@@ -1,0 +1,26 @@
+# Dungeon Features Summarizer
+
+## Objective
+Create a concise summary of common dungeon features for easy reference.
+
+## Instructions
+1. List Common Elements:
+   - Describe typical illumination throughout dungeon
+   - Note average ceiling heights
+   - Describe standard wall and floor materials
+
+2. Detail Environmental Factors:
+   - Include common temperatures or climate effects
+   - Note any persistent sounds, smells, or atmospheric conditions
+
+3. Summarize Architectural Features:
+   - Describe typical doors, including materials and operation
+   - Note common corridor widths and configurations
+
+4. Include Dungeon-Specific Elements:
+   - List any unique features present throughout the dungeon
+   - Describe magical or technological systems affecting multiple areas
+
+5. Format for Quick Reference:
+   - Use bullet points or short paragraphs for each feature
+   - Organize information in logical categories

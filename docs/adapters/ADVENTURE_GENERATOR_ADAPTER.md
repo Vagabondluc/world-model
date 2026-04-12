@@ -2,6 +2,13 @@
 
 Adventure Generator is the workflow donor. Its adapter contributes guided creation and session semantics to the final app.
 
+Source of truth:
+
+- `world-model/adapters/adventure-generator/manifest.yaml`
+- `world-model/adapters/adventure-generator/mappings/concept-map.yaml`
+- **Full source:** `to be merged/dungeon generator/` (note: folder name does not match app identity; see `docs/donors/DUNGEON_GENERATOR.md`)
+- **Snapshot (partial):** `world-model/adapters/adventure-generator/source-snapshot/` (21 Zod schema files + 2 stores; UI and sidecar excluded)
+
 ## What Is Copied
 
 Copy the Adventure Generator material that defines:

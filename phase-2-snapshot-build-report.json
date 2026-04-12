@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "dry_run": false,
+  "generated_at": "2026-04-12T09:22:50Z",
+  "generated_by": "vagab",
+  "selected_donors": [
+    "mythforge",
+    "orbis",
+    "adventure-generator"
+  ],
+  "results": [
+    {
+      "donor": "mythforge",
+      "source_root": "mythforge/docs/schema-templates",
+      "included_paths": [
+        "UUID_CONTAINER_ARCHITECTURE.md",
+        "UUID_CONTAINER_IMPLEMENTATION_PLAN.md",
+        "index.md",
+        "schemas",
+        "Campaign.md",
+        "Character.md",
+        "Settlement.md",
+        "Region.md",
+        "Artifact.md",
+        "Item.md",
+        "Faction.md",
+        "NPC.md",
+        "Landmark.md"
+      ],
+      "excluded_paths": [
+        "prompts",
+        "samples",
+        "methods"
+      ],
+      "copied_files": 29,
+      "snapshot_fingerprint": "b2abf875436b5c79dc4c684adc9cf89b936e9416e7acd89458f863620e921df9",
+      "manifest_path": "world-model/adapters/mythforge/manifest.yaml",
+      "inventory_path": "world-model/adapters/mythforge/snapshot-inventory.json",
+      "dry_run": false
+    },
+    {
+      "donor": "orbis",
+      "source_root": "mechanical-sycophant/src",
+      "included_paths": [
+        "types/session.ts",
+        "stores/weatherStore.ts",
+        "stores/mapStore.ts",
+        "stores/mapLocationStore.ts",
+        "contracts/forms/social_event.schema.ts",
+        "contracts/forms/social_event.types.ts"
+      ],
+      "excluded_paths": [
+        "components",
+        "__tests__",
+        "test",
+        "tests",
+        "app"
+      ],
+      "copied_files": 6,
+      "snapshot_fingerprint": "ec024f6b22aa2f47db4543adad0ba687a73ad69bbb11f3c4852b9d6c6eab6c93",
+      "manifest_path": "world-model/adapters/orbis/manifest.yaml",
+      "inventory_path": "world-model/adapters/orbis/snapshot-inventory.json",
+      "dry_run": false
+    },
+    {
+      "donor": "adventure-generator",
+      "source_root": "D:/antigravity/dnd adventure generator/src",
+      "included_paths": [
+        "schemas",
+        "stores/workflowStore.ts",
+        "stores/historyStore.ts"
+      ],
+      "excluded_paths": [
+        "components",
+        "tests",
+        "lib"
+      ],
+      "copied_files": 21,
+      "snapshot_fingerprint": "70fe933d8597c74a152fb9f9473be42be6bab1dca23d46cff7d1663eb955d0dc",
+      "manifest_path": "world-model/adapters/adventure-generator/manifest.yaml",
+      "inventory_path": "world-model/adapters/adventure-generator/snapshot-inventory.json",
+      "dry_run": false
+    }
+  ],
+  "errors": []
+}

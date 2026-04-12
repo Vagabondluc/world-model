@@ -1,0 +1,46 @@
+# Combat Encounter Balancer
+
+## Objective
+Create balanced and engaging combat encounters for your dungeon.
+
+## Instructions
+1. Assess Party Strength:
+   - Note party level, number of players, and key abilities
+   - Consider available resources (spells, items, etc.)
+
+2. Choose Encounter Difficulty:
+   - Decide on Easy, Medium, Hard, or Deadly
+   - Determine XP threshold based on party level and size
+
+3. Select Monsters:
+   - Choose thematically appropriate creatures
+   - Mix different monster types for variety
+   - Aim for 3-5 total creatures for most encounters
+
+4. Calculate Total XP:
+   - Sum XP values of all monsters
+   - Apply multiplier based on number of monsters
+
+5. Compare to XP Threshold:
+   - Ensure total XP falls within chosen difficulty range
+   - Adjust monster numbers or types if necessary
+
+6. Consider Encounter Dynamics:
+   - Include mix of melee and ranged attackers
+   - Add support creatures or spellcasters for complexity
+
+7. Plan Tactical Elements:
+   - Design interesting battleground features
+   - Consider monster positioning and strategy
+
+8. Prepare Rewards:
+   - Determine appropriate treasure or XP rewards
+   - Ensure rewards match encounter difficulty
+
+9. Create Encounter Description:
+   - Write brief setup for the encounter
+   - Note monster tactics and special abilities
+
+10. Review and Playtest:
+    - Run a mock battle to test balance
+    - Adjust as needed based on playtest results

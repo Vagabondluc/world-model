@@ -1,0 +1,96 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Character Profile".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Character Portrait & Backstory Suite
+
+```text
++--------------------------------------------------------------------------------+
+|  [Character Nexus: Archetypes & Deep Backstory]                       [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ PERSONALITY WIZARD ] [ BACKSTORY STUDIO ] [ ARC MANAGER ] [ SURFACE LOG ]  |
++--------------------------------------------------------------------------------+
+|  PERSONALITY WIZARD (Step 2/5)                                                 |
+|  "The air in the ancient ruin is thick with the smell of wet parchment..."     |
+|  You find a glowing artifact. Do you:                                         |
+|  [A] Study the lore (Storyteller +5)   | [B] Assess market value (Cheater +3)  |
+|  [C] Test its lethality (Power Gamer +5)| [D] Give it to an NPC (Actor +4)      |
++--------------------------------------------------------------------------------+
+|  BACKSTORY STUDIO (Section: Psychology)                                        |
+|  Happiness: [ A warm fire and a full library. ]  | MBTI: [ INFJ-T ]           |
+|  Fear:    [ Being forgotten by history.      ]  | Enneagram: [ 4w5 ]         |
+|  Love:    [ A vulnerable, tragic necessity.  ]  | Style: [ Disheveled/Inky ] |
++--------------------------------------------------------------------------------+
+|  CHARACTER GROWTH ARC (Hero's Journey)                                         |
+|  [x] Status Quo -> [x] Call to Adventure -> [ ] Trials -> [ ] Transformation   |
+|  Current Beat: Commitment (Character decides to cross the void).               |
++--------------------------------------------------------------------------------+
+|  [Generate 1500w Profile] [Export Surface Card (Fr)] [Archive History]  [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Character Portrait & Backstory Suite
+
+## Component Architecture
+- **Immersive Personality Wizard:** A conversational UI module based on the `personality_questionnaire.txt`. It uses sensory-rich text blocks and a hidden point allocation system (Roles.json) to help the user identify their "Intrinsic Gameplay Motivation."
+- **Multimodal Backstory Studio:** A tabbed interface implementing the `character_profile.md` structure. It allows for the gradual expansion of character details from "Basic" to the 1500-word "Deep Profile."
+- **Arc Timeline Plotter:** A visual map based on the "Hero's Journey" and "Story Structure 101" scripts. Users can drag-and-drop 'Plot Beats' (Inciting Incident, Mirror Moment) to plan their character's narrative evolution.
+- **Localized Surface Card:** A dedicated output for the `profil_npc_westmarsh.txt` logic, allowing for the generation of "Surface-Only" profiles (Name, Job, Look, Persona) in French or English for rapid player distribution.
+
+## Interaction Logic
+- **Psychological Mirroring:** The UI "shuffles and rephrases" (Step 166 of Style Prompt) the character's profile based on the MBTI/Enneagram inputs, suggesting consistent "Mannerisms" and "Speech Patterns."
+- **Sensory Progression:** When writing history (Step 222 of Profile), the UI prompts for the "happiest/saddest/earliest memories" using the five-senses approach from the questionnaire script.
+- **The "Heavy Price" Check:** Implementing Step 6 of Story Structure 101, the UI periodically asks: "What heavy price did the character pay for achieving their last goal?" to ensure narrative weight.
+
+## Visual Design
+- **Sophisticated & Literary:** The design uses a clean, serif font palette (e.g., Merriweather/Playfair) for a "leather-bound journal" aesthetic.
+- **Thematic Color Accents:** Sections are color-coded based on the "Roles.json" archetypes (e.g., Purple for Narrative/Actor, Blue for Strategy/Engineer).
+- **Progressive Detail Loading:** Low-priority fields (Income Level, Handwriting Style) are tucked into an "Advanced/Flavor" drawer to prevent cognitive overload during initial creation.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Character Dossier - "Theron the Inky"
+
+### **1. Archetype Summary**
+- **Primary Type:** Storyteller (ST) / Historian (RT).
+- **Want:** Creative reimagination of lost languages.
+- **Avoid:** Alienating complexity without narrative payoff.
+
+---
+
+### **2. Surface Profile (Français)**
+**Nom:** Theron l’Encré
+**Occupation:** Scribe de ruines
+**Apparence:** Un demi-elfe aux mains tachées d'encre arcanique. Il porte des lunettes de cuivre et une cape de parchemin.
+**Personalité:** Calme et méticuleux, Theron préfère le silence des vieux livres au tumulte des tavernes.
+
+---
+
+### **3. Deep Backstory (Extract)**
+- **Place of Birth:** The Floating Scriptorium of Valen.
+- **Current Residence:** A cramped cellar in the Eldwyn Mining Outpost.
+- **Psychology:** Theron is highly introverted. Happiness to him is deciphering a previously 'unbreakable' sigil. He fears history repeating its worst cycles because of lost knowledge.
+- **History:** Raised among the immortal scribes, he was exiled for stealing a 'Forbidden Verb.' His earliest memory is the smell of crushed lavender and ozone in the scriptorium's main hall.
+- **Physical Ailment:** His left hand is permanently stained black and occasionally 'twitches' as if writing in the air when he is nervous.
+
+---
+
+### **4. Character Growth Arc (Hero's Journey)**
+- **Status Quo:** Theron works as a low-level clerk in Eldwyn.
+- **Inciting Incident:** He discovers a mining map that uses the 'Exiled Verb' as a coordinate.
+- **Call to Adventure:** Silas Vane asks him to decrypt the "Shadow Vein."
+- **Mirror Moment:** Theron realizes the Verb isn't just a word, but a living entity that he has been housing in his 'Twitchy' hand.
+- **Resolution:** Theron uses the living Verb to close the portal in the Sunless Sea, losing his ability to speak but finally reconciling with his exile.
+

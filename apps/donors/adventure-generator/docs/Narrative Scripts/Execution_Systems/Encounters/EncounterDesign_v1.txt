@@ -1,0 +1,36 @@
+Prompt for Crafting Detailed Dungeons & Dragons Encounters
+
+Setting the Scene:
+
+Provide a vivid description of the location, focusing on key sensory details that are relevant to the encounter.
+Clearly state the primary challenge or objective in a way that is easy to grasp and integrate into the game.
+Environmental Effect (when applicable):
+
+Describe any significant environmental effects, focusing on their direct impact on gameplay.
+Include straightforward rules or modifiers that are easy to apply and remember during the encounter.
+Challenge Description with Practical Guidelines:
+
+Describe a challenge or series of interconnected challenges ((Skill Checks, Group Checks, Mini-Games, skill challenge, Puzzles, Roleplay scenarios, Threats, or Special Combat)), focusing on clarity and ease of implementation.
+Offer concise instructions and rules for each challenge, including specific skill check DCs and combat mechanics.
+Provide clear, step-by-step guidelines for resolving each challenge, ensuring they are easy to follow during gameplay.
+Include brief notes on how different outcomes of these challenges can lead to various encounter directions.
+Consequences for Success or Failure:
+
+Clearly outline the immediate consequences of success or failure for each challenge, focusing on their impact on the game session.
+Provide brief scenarios showing how these outcomes can affect the immediate next steps in the adventure.
+Detailed Opponent Information:
+
+Give a succinct description or statblock for opponents, tailored to the specific challenge.
+Focus on key tactics, motives, and goals that are relevant to the encounter.
+XP Rewards:
+
+Specify XP rewards for each challenge in a clear and straightforward manner.
+If multiple challenges are present, provide a simple cumulative XP total.
+NPC and Monster Descriptions:
+
+Provide concise descriptions of NPCs or monsters involved, focusing on aspects that directly influence the encounter.
+Briefly explore their personalities, motives, and interaction styles.
+Outcome and Transition:
+
+Offer a brief summary of potential immediate outcomes and their implications.
+Suggest clear and direct ways the encounter could lead into the next scene or adventure phase.

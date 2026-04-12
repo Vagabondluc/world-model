@@ -1,0 +1,82 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Createtoken".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Battlemap Token Generator
+
+```text
++--------------------------------------------------------------------------------+
+|  [VTT Token Architect: 2D Asset Generator]                            [?] [X]  |
++--------------------------------------------------------------------------------+
+|  CHARACTER DETAILS:                                                            |
+|  [ "A male elf druid with green leaves woven into his silver hair. He wears  ] |
+|  [ hide armor and carries a gnarled wooden staff."                           ] |
++--------------------------------------------------------------------------------+
+|  PRESETS & STYLE                      |  PROMPT PREVIEW                        |
+|  View: [ Top-Down Aerial ] [V]        |  "Illustration of a top-down aerial    |
+|  Style:[ 2D Game Art / Fantasy ] [V]  |  view of a male elf druid... "         |
+|  Format: [ Transparent PNG ]          |                                        |
++---------------------------------------+----------------------------------------+
+|  GENERATION HUB                                                                |
+|  +--------------------------------------------------------------------------+  |
+|  |                                                                          |  |
+|  |             (Generated Top-Down Image Asset Preview)                     |  |
+|  |                                                                          |  |
+|  +--------------------------------------------------------------------------+  |
+|  [Generate Image with DALL-E] [Remove Background] [Save to Library]            |
++--------------------------------------------------------------------------------+
+|  [Export PNG] [Copy Prompt Text] [Sync to Campaign Map]                [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Battlemap Token Generator
+
+## Component Architecture
+- **Subject Detail Studio:** A prominent text input where the DM provides the "Visual description of the character." This is the core variable that defines the prompt.
+- **Style & Logic Controller:** A series of dropdowns and toggles that enforce the script's specific aesthetic requirements (e.g., Top-down view, 2D Game Art, Fantasy style).
+- **Prompt Synthesis Engine:** A real-time previewer that shows how the user's description is being woven into the technical prompt (including keywords like "vivid colors," "transparent background," and "vtt token style").
+- **Asset Generation Console:** A workspace integrated with DALL-E that displays the resulting image and provides tools for background removal and library management.
+
+## Interaction Logic
+- **Perspective Hard-Coding:** The UI automatically prepends the required perspective instructions ("Illustration of a top-down aerial view...") to ensure the output is always a functional VTT token.
+- **Preset Switching:** Selecting "Token Style v1" vs "Token Style v2" subtlely shifts the secondary keywords to match the specific tone of those script versions.
+- **Transparency Workflow:** Includes a dedicated "Remove Background" step to ensure the asset is ready for immediate placement on a digital battlemap.
+
+## Visual Design
+- **Asset-Centric Layout:** Priorities the visual output (the token) while keeping the text tools compact and accessible.
+- **VTT Grid Aesthetic:** The image preview window uses a faint grid background to help the DM visualize how the token will look on a map.
+- **Sleek & Visual UI:** Uses icons and thumbnail previews to help the DM manage multiple generated assets in a single session.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Battlemap Token Generator
+
+### Generated Prompt (CreateToken_v1 Style):
+"Illustration of a top-down aerial view of a dwarf paladin in gleaming silver plate armor with a blue velvet cloak. The perspective is directly from above, showcasing the vivid colors and details of his attire. The design is crafted as 2D game art with a transparent background, perfect for use as a battlemap asset or D&D token."
+
+---
+
+### Generated Asset Preview:
+
+![Sample Token: A top-down view of a dwarf in silver armor with a blue cloak, centered on a transparent background.](/docs/mockups/samples/dwarf-paladin-token.png)
+
+---
+
+### Integration Details:
+- **Style:** 2D Game Art (High Detail).
+- **Format:** PNG (Transparent).
+- **Recommended Scale:** 1x1 (Medium Creature).
+- **VTT Tag:** "Ally / Player Character."
+

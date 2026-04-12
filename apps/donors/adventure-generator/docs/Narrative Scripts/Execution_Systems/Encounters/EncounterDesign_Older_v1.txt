@@ -1,0 +1,34 @@
+Prompt for Crafting Dungeons & Dragons Encounters
+Setting the Scene
+
+Provide a detailed and vivid description of the location, including sensory details to immerse the players.
+Explicitly state the primary challenge or objective.
+Environmental Effect (when applicable)
+
+Elaborate on unique environmental effects, describing their physical and/or sensory and/or mental impact and specific gameplay mechanics.
+Include detailed rules or modifiers that realistically alter the encounter.
+Challenge Description with Specific Resolution Guidelines
+
+Describe a challenge or series of interconnected challenges (Skill Checks, Group Checks, Mini-Games, Puzzles, Roleplay scenarios, Threats, or Special Combat).
+Offer detailed instructions and rules for each challenge, including specific skill check DCs and combat mechanics.
+Include clear guidelines for resolving each challenge, such as the number of successes needed in a skill challenge or specific outcomes for critical failures.
+Provide notes on potential encounter directions based on different outcomes, including how success in one challenge can provide advantages in subsequent challenges.
+Consequences for Success or Failure
+
+Detail the consequences of success or failure for each challenge, focusing on immediate and long-term narrative impacts.
+Provide scenarios showing how outcomes affect subsequent challenges or the overall story arc.
+Detailed Opponent Information
+
+Give a comprehensive description or statblock for opponents, tailored to the specific challenge.
+Delve into their tactics, motives, and goals, and how these affect the encounter.
+XP Rewards
+
+Specify XP rewards for each challenge, reflecting their complexity and significance. Detail cumulative XP for multiple challenges.
+NPC and Monster Descriptions
+
+Provide detailed descriptions of NPCs or monsters involved, focusing on their characteristics, backgrounds, and roles.
+Explore their personalities, motives, and interaction styles in depth.
+Outcome and Transition
+
+Offer a detailed summary of potential immediate outcomes.
+Suggest specific ways the encounter could lead into the next scene or adventure phase, including narrative hooks or consequences that might arise from the encounter's resolution.

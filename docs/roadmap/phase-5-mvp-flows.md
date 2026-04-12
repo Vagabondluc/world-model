@@ -19,19 +19,16 @@ The MVP must support:
 - edit canonical data
 - save canonical bundle
 - reload canonical bundle
-- switch between guided, studio, and architect depths
+- switch between scaffolding stubs (Guided, Studio, Architect) to prove the data layer is stable across modes
 - inspect promoted schema and adapter mappings
 
-The MVP must not require:
+The MVP proves the canonical data layer is stable and the canonical state bridge works. It does not prove donor UI fidelity — that is Phase 7 scope.
 
-- full donor feature parity
-- every Orbis domain
-- every Adventure Generator tool
-- a complete reimplementation of donor apps
+The scaffolding loops (5.1–5.3) are data-layer validation stubs. They are not donor-faithful surfaces. No donor app would recognize these UIs as their own, and that is expected at this phase.
 
 ## Subphases
 
-### 5.1 Beginner loop
+### 5.1 Beginner loop (scaffolding stub)
 
 Deliverables:
 
@@ -45,10 +42,13 @@ Acceptance:
 
 - a beginner can enter the product and persist meaningful state
 
-### 5.2 Studio loop
+Note: this stub exists to confirm the canonical state bridge works end-to-end. Donor-faithful guided flows are Phase 7 scope.
+
+### 5.2 Studio loop (scaffolding stub)
 
 Deliverables:
 
+- studio editing posture
 - edit the world
 - inspect relationships
 - inspect attachments
@@ -59,7 +59,9 @@ Acceptance:
 
 - the normal working surface feels coherent and stable
 
-### 5.3 Architect loop
+Note: this stub exists to confirm canonical inspection and editing work. Donor-faithful editing surfaces are Phase 7 scope.
+
+### 5.3 Architect loop (scaffolding stub)
 
 Deliverables:
 
@@ -71,6 +73,8 @@ Deliverables:
 Acceptance:
 
 - expert controls exist without contaminating the beginner flow
+
+Note: this stub exists to confirm schema-inspection paths are wired. The real Architect surface is Phase 8 scope.
 
 ### 5.4 MVP trimming pass
 

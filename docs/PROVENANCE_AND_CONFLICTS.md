@@ -18,9 +18,20 @@ Alias normalization groups:
 
 Current conflict posture:
 
-- core ownership is resolved and explicit
-- simulation ownership is resolved and explicit
-- workflow ownership is resolved and explicit
+**Resolved:**
+- core ownership is resolved and explicit (Mythforge)
+- simulation ownership is resolved and explicit (Orbis)
+- workflow ownership is resolved and explicit (Adventure Generator)
 - location remains a split concept because Adventure contributes linkage semantics while Mythforge owns identity and spatial attachment
+- BiomeType: AG/MI 17-value lowercase wins; Orbis maps to SimulationDomainBiome
+- HexCoordinate: 3-axis cube {q,r,s} canonical; DoW adapts from offset {q,r}
+- DiscoveryStatus: AG/MI vocabulary wins
+- LayerType: AG superset is canonical (6 values including feywild/shadowfell/elemental)
+
+**Open conflicts (ADR required before promotion):**
+- `WorldKind` vs `EntityType`: DoW contributes 22-value taxonomy. How does it relate to Mythforge base `EntityRecord.entityType`? Mutual exclusivity? Orthogonal? Refinement?
+- `Age` vs `EraName`: DoW uses ordinal turn eras (1|2|3); Mappa Imperium uses named narrative eras (6 epochs). Are these the same temporal model or complementary? How do they interoperate?
+- `MapSize` casing: DoW uses SCREAMING_SNAKE (SMALL|STANDARD|GRAND); Mappa Imperium uses lowercase. Convention conflict unresolved.
+- `CollaborativeSession` merge: Mappa Imperium and DoW both define multiplayer session structures. Require merge ADR to unify or keep separate.
 
 The comparison docs remain in this workspace as source-analysis references. They are no longer the final truth surface. The promotion report and promoted schema contracts are the canonical output of donor schema assembly.

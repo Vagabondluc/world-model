@@ -1,0 +1,35 @@
+Creating a balanced and engaging new Paladin Oath in Dungeons & Dragons requires a thorough consideration of combat effectiveness, roleplaying opportunities, exploration utility, and the adherence to the theme and lore of the Paladin class. Here's a detailed guide on how to approach this, inspired by the text provided and existing Paladin Oaths.
+
+General Guidelines for Designing a Paladin Oath
+Theme Adherence: Each Oath should reflect a distinct set of beliefs and moral codes, influencing the Paladin's powers and duties. The theme should inspire unique roleplaying and narrative opportunities.
+Gameplay Balance: The Oath should offer balanced combat capabilities, utility, and defensive options without overshadowing other classes or Oaths.
+Versatility: Paladin Oaths should support different play styles (tank, damage dealer, support) and allow for adaptability in various situations.
+Analyzing Existing Oaths & Design Considerations
+Oath Spells
+3rd to 17th Level: Spells should complement the Oath's theme (e.g., Oath of Devotion includes protective spells). Ensure spells are balanced in power and utility compared to other classes' spells at similar levels.
+Channel Divinity
+3rd Level: Offer two distinct options that reflect the Oath's ethos, providing both combat and utility or support options.
+Aura Features
+7th Level: Auras should provide passive benefits that reinforce the Oath's theme and playstyle, beneficial to the Paladin and allies.
+Advanced Oath Features
+15th and 20th Levels: These should feel like a culmination of the Paladin's devotion to their Oath, offering powerful and unique abilities.
+Balancing Subclass Features by Level
+3rd Level: Channel Divinity & Oath Spells
+Combat: Channel Divinity options should offer combat utility without overwhelming other abilities at this level. Consider limitations like single-use or requiring a saving throw.
+Roleplaying & Exploration: Include spells or Channel Divinity options that encourage interactions according to the Oath's ethos.
+7th Level: Aura Feature
+Passive Benefits: Auras should offer defensive or utility benefits that are continuously helpful but not overpowering. Consider effects that help the Paladin fulfill their role in the party.
+15th Level: Advanced Feature
+Enhanced Abilities: Provide an ability that reflects the Paladin's growing power and dedication to their Oath, such as improved saving throws or damage resistance.
+20th Level: Capstone Ability
+Signature Power: This should be a transformative ability that allows the Paladin to embody the pinnacle of their Oath's ideals, offering significant combat or utility benefits.
+Specific Considerations
+Combat: Evaluate how the Oath's abilities stack against similar-level abilities from other classes. Ensure the Oath provides unique combat benefits without overshadowing others.
+Exploration: Consider features that assist in navigating challenges, such as abilities that reveal truths, provide protection, or offer divine guidance.
+Roleplaying: Encourage abilities that deepen the Paladin's connection to their Oath's ethos, such as vows that guide behavior or divine quests that shape the narrative.
+Balancing Strategy
+Playtesting: Observing the subclass in actual game sessions is crucial for assessing balance and utility.
+Feedback: Gather input from a diverse range of players and Dungeon Masters, focusing on the subclass's impact on game balance and enjoyment.
+Adjustments: Be open to tweaking features, whether it's altering power levels, adding limitations, or enhancing underwhelming abilities.
+Conclusion
+When designing a new Paladin Oath, the aim is to create a subclass that offers a unique and thematic set of abilities while ensuring it complements the existing class features and doesn't disrupt the game's balance. Each feature, from Oath Spells to the Capstone Ability, should reflect the Oath's core ethos and provide meaningful choices in combat, exploration, and roleplaying. By carefully considering each feature's impact at the respective level and ensuring the subclass remains versatile and thematically consistent, you can create a compelling and balanced addition to the Paladin's sacred oaths.

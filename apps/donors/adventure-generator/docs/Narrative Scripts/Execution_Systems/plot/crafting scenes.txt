@@ -1,0 +1,47 @@
+**Scene Crafting System for TTRPG**
+
+**Purpose:**
+Streamline TTRPG scene creation by focusing on dramatic and meaningful moments, skipping mundane details.
+
+**Key Principles:**
+- **Relevance:** Keep scenes relevant to the game's narrative.
+- **Interest:** Ensure scenes are engaging and avoid empty time.
+- **Action-Oriented:** Focus on meaningful player choices.
+
+**Avoiding Empty Time:**
+- Skip unimportant details.
+- Jump directly to significant events or decisions.
+
+**Scene Transitions:**
+- **Sharp Cuts:** Move directly to the next key moment.
+  - Example: "You leave the tavern and arrive at Lady Isabella’s study."
+- **Abstract Time:** Summarize uneventful periods.
+  - Example: "Several days pass as you cross the Great Plain."
+
+**Scene Framing:**
+- **Agenda:** Define the scene's purpose.
+  - Example: "Can the PCs convince Lady Isabella to support their cause?"
+- **Setup:** Identify characters, objectives, environment, and context.
+
+**Running Scenes:**
+- Introduce obstacles to prevent trivial resolutions.
+- Example: "To get the data chip, first make Michael admit he has it."
+
+**Initiating Action (The Bang):**
+- Start scenes with an event forcing meaningful choices.
+  - Example: "An arrow flies past Natasha’s head, prompting an initiative check."
+
+**Setting the Scene:**
+- **Location:** Describe the immediate environment with relevant details.
+  - Example: "You’re in the back room of the Red Hand, a dimly lit space filled with the scent of old books."
+- **Characters:** Identify roles (leads, features, extras).
+
+**Ending Scenes:**
+- Cut away when the agenda is resolved or new significant choices arise.
+- Avoid second lulls—introduce new events or transition to the next scene.
+
+**Transitions:**
+- Move smoothly to the next scene.
+  - Example: "As the scene ends, you find yourself standing outside the council chambers, ready for the next challenge."
+
+This system ensures efficient and engaging scene creation, keeping the focus on the story and player choices.

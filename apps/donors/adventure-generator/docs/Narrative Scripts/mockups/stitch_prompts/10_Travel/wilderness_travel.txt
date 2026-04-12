@@ -1,0 +1,97 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Wilderness Travel".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Wilderness Travel Manager
+
+```text
++--------------------------------------------------------------------------------+
+|  [Wilderness Architect: Overland Journey Suite]                       [?] [X]  |
++--------------------------------------------------------------------------------+
+|  TRIP SETTINGS:                                                                |
+|  Structure: [ Hexcrawl ] [V]  Biome: [ Tundra ] [V]  Pace: [ Normal ] [V]      |
+|  Goal: [ Reach the Ancient Glacier ]                                           |
++--------------------------------------------------------------------------------+
+|  TRAVEL LOG (Day 4)                    |  SCENE GENERATOR                      |
+|  Dist: 48 / 120 mi                     |  +--------------------------------+   |
+|  Supplies: [||||||....] 60%            |  |  Last Roll: 7 (Common)          |   |
+|  Morale: [||||||||..] 80%              |  |  Status: [In Sequence: Part 2] |   |
+|                                        |  +--------------------------------+   |
+|  [+] Log New Discovery                 |  [TRIGGER NEXT SCENE (2d6)]           |
++----------------------------------------+---------------------------------------+
+|  ENVIRONMENT & HAZARDS                                                         |
+|  Weather: [ Blizzard (+2 DC) ] [V]     Navigation: [ On Course / DC 15 ] [Check]|
+|  Hazards: [ Treacherous Slopes ]       Foraging: [ 2d4 lb found ] [Roll]       |
++--------------------------------------------------------------------------------+
+|  NIGHT WATCH & CAMP                                                            |
+|  Watch 1: [ Fighter ]  Watch 2: [ Druid ]  Watch 3: [ Rogue ]                  |
+|  [ROLL FOR REST INTERRUPTION] -> Result: [ Peaceful Night ]                    |
++--------------------------------------------------------------------------------+
+|  [Export Journey Log] [View Regional Landmarks]                        [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Wilderness Travel Manager
+
+## Component Architecture
+- **Journey Configuration Studio:** A high-level setup area where the DM defines the "Purpose," "Structure" (Route/Hex/Point), and "Biome." This sets the global modifiers for the session.
+- **The "Location Matrix" Engine:** A central dashboard that executes the 2d6 logic from the scripts. It handles both standalone encounters and the "6-8 Common" linked story sequences, maintaining state between rolls.
+- **Resource & Navigation Hub:** A tactical panel for tracking "supplies," "travel distance," and "navigation checks." It includes a "Getting Lost" recovery workflow.
+- **Environmental Console:** Manages dynamic weather (d20 scale) and biome-specific hazards (e.g., dense undergrowth, sandstorms) that apply immediate mechanical penalties.
+- **Episodic Sequence Log:** A hidden or collapsable tracker that specifically manages the 3-5 linked encounters for "Common" rolls, ensuring the mini-story has a logical flow.
+
+## Interaction Logic
+- **Scene-Driven Workflow:** The UI guides the DM through the "Entrance -> Challenge -> Reward -> Exit" structure for every encounter, providing vivid sensory prompts along the way.
+- **Fail-Forward Navigation:** If a navigation check fails, the UI doesn't just halt travel; it triggers a "Veering off Course" or "Hazard Encounter" sub-scene.
+- **Seasonal Scaling:** Selecting a season automatically adjusts foraging DCs and weather probability curves.
+
+## Visual Design
+- **Rugged & Exploratory:** The UI uses earthy tones and map-like iconography (compasses, tents, trees) to reinforce the theme of wilderness survival.
+- **Dashboard Efficiency:** Key stats (Supplies, Morale, Distance) are displayed as progress bars for quick visual assessment by the DM.
+- **Contextual Sensory Prompts:** The "Scene Generator" displays dynamic keywords (Sights, Sounds, Smells) based on the current biome to help the DM improvise.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Wilderness Travel (Chapter: The Icewind Tundra)
+
+### Journey Log Summary
+- **Day 12:** Travel slowed by heavy snow.
+- **Navigation:** Success (Druid lead).
+- **Foraging:** 4lb of lichen and frozen berries found.
+
+---
+
+### Current Travel Scene: "The Mammoth's Graveyard" (Roll: 7 - Common Sequence Part 2)
+
+**Entrance/Approach:**
+The wind howls through a valley of curved white pillars that transition slowly into the giant ribs of ancient beasts. The crunch of frost underfoot is the only sound.
+
+**Central Challenge:**
+A scavenged carcass of a winter wolf lies in the center. Fresh tracks (Survival DC 14) suggest a group of Yeti are nearby, guarding the "loot" found in the wolf's gullet.
+
+**Potential Rewards:**
+- **Tangible:** A silver signet ring (50gp) found in the wolf's stomach.
+- **Intangible:** Knowledge of the Yeti's territorial markings.
+
+**Exit/Transition:**
+A sudden updraft clears the snow, revealing a jagged peak to the North—your next landmark.
+
+---
+
+### Environmental Status:
+- **Weather:** Intense Cold (DC 10 Con save or 1 exhaustion).
+- **Resources:** 2 Days of food remaining.
+- **Night Watch:** Rogue (Active).
+

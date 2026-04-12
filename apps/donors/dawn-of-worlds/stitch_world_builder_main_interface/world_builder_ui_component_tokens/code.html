@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>World Builder UI Component Tokens</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "deep-space": "#0a0a0c",
+                        "player-red": "#f87171",
+                        "player-blue": "#60a5fa",
+                        "gold-accent": "#fbbf24",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hex-shape {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex flex-col shrink-0">
+<div class="p-6 flex flex-col gap-8">
+<div class="flex gap-3 items-center">
+<div class="bg-primary rounded-lg size-10 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-base font-bold leading-none">World Builder</h1>
+<p class="text-slate-500 dark:text-primary text-[10px] font-mono uppercase tracking-wider mt-1">v1.0.4 - Design System</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">token</span>
+<p class="text-sm font-medium">Core Tokens</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">category</span>
+<p class="text-sm font-medium">Game Components</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">dashboard_customize</span>
+<p class="text-sm font-medium">Layout Patterns</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+<span class="material-symbols-outlined">draw</span>
+<p class="text-sm font-medium">Icon Library</p>
+</div>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">System States</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-y-auto bg-slate-50 dark:bg-deep-space">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-8 py-4">
+<div class="flex items-center gap-8">
+<h2 class="text-lg font-bold tracking-tight">Design System Explorer</h2>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Docs</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Components</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Github</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm w-64 focus:ring-2 focus:ring-primary" placeholder="Search tokens..."/>
+</div>
+<button class="bg-primary text-background-dark px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-primary/90">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export JSON
+                    </button>
+</div>
+</header>
+<div class="p-8 max-w-6xl mx-auto w-full flex flex-col gap-12">
+<!-- PageHeading -->
+<div class="flex flex-col gap-2">
+<span class="text-primary font-mono text-xs font-bold uppercase tracking-widest">Documentation</span>
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-1">
+<h1 class="text-4xl font-black tracking-tight">Component Token Sheet</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Global styles, Tailwind tokens, and game-specific UI mechanics.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase tracking-tighter">Figma Linked</span>
+<span class="px-3 py-1 bg-green-500/20 text-green-500 rounded-full text-[10px] font-bold uppercase tracking-tighter">Production Ready</span>
+</div>
+</div>
+</div>
+<!-- Section: Color Palette -->
+<section>
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">palette</span>
+                        Color Palette: Deep Space &amp; Action Tokens
+                    </h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-square rounded-xl bg-deep-space border border-slate-800 shadow-xl flex items-end p-3 transition-transform group-hover:-translate-y-1">
+<span class="text-[10px] font-mono text-slate-500">#0A0A0C</span>
+</div>
+<div>
+<p class="text-sm font-bold">Deep Space</p>
+<p class="text-xs font-mono text-slate-500">bg-deep-space</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-square rounded-xl bg-primary shadow-lg shadow-primary/20 flex items-end p-3 transition-transform group-hover:-translate-y-1">
+<span class="text-[10px] font-mono text-background-dark/60">#13B6EC</span>
+</div>
+<div>
+<p class="text-sm font-bold">Action Primary</p>
+<p class="text-xs font-mono text-slate-500">bg-primary</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-square rounded-xl bg-red-500 flex items-end p-3 transition-transform group-hover:-translate-y-1">
+<span class="text-[10px] font-mono text-white/60">#EF4444</span>
+</div>
+<div>
+<p class="text-sm font-bold">Error</p>
+<p class="text-xs font-mono text-slate-500">bg-red-500</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-square rounded-xl bg-player-red flex items-end p-3 transition-transform group-hover:-translate-y-1">
+<span class="text-[10px] font-mono text-white/60">#F87171</span>
+</div>
+<div>
+<p class="text-sm font-bold">Player Red</p>
+<p class="text-xs font-mono text-slate-500">bg-player-red</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-square rounded-xl bg-player-blue flex items-end p-3 transition-transform group-hover:-translate-y-1">
+<span class="text-[10px] font-mono text-white/60">#60A5FA</span>
+</div>
+<div>
+<p class="text-sm font-bold">Player Blue</p>
+<p class="text-xs font-mono text-slate-500">bg-player-blue</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full aspect-square rounded-xl bg-gold-accent flex items-end p-3 transition-transform group-hover:-translate-y-1">
+<span class="text-[10px] font-mono text-background-dark/60">#FBBF24</span>
+</div>
+<div>
+<p class="text-sm font-bold">Gold AP</p>
+<p class="text-xs font-mono text-slate-500">bg-gold-accent</p>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Buttons & UI Elements -->
+<section class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-6">Interactive Elements</h3>
+<div class="flex flex-wrap gap-6">
+<div class="flex flex-col gap-3">
+<span class="text-[10px] font-mono text-slate-500 uppercase">Primary</span>
+<button class="bg-primary text-background-dark font-bold px-6 py-2 rounded shadow-md hover:brightness-110 transition-all">START GAME</button>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-[10px] font-mono text-slate-500 uppercase">Default</span>
+<button class="bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold px-6 py-2 rounded hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">CANCEL</button>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-[10px] font-mono text-slate-500 uppercase">Disabled</span>
+<button class="bg-slate-100 dark:bg-slate-900 text-slate-400 dark:text-slate-700 font-bold px-6 py-2 rounded cursor-not-allowed border border-dashed border-slate-300 dark:border-slate-800">LOCKED</button>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-[10px] font-mono text-slate-500 uppercase">End Turn (Special)</span>
+<button class="bg-gold-accent text-background-dark font-black px-8 py-2 rounded shadow-lg shadow-gold-accent/20 hover:scale-105 transition-transform ring-2 ring-gold-accent ring-offset-2 ring-offset-deep-space">END TURN</button>
+</div>
+</div>
+<div class="mt-10">
+<h4 class="text-sm font-bold mb-4 text-slate-500 uppercase">Feedback Overlays</h4>
+<div class="flex flex-col gap-3">
+<div class="bg-red-500/10 border border-red-500/50 p-3 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-red-500">error</span>
+<p class="text-sm font-medium text-red-500">Insufficient Action Points (AP)</p>
+</div>
+<div class="bg-slate-800 border border-slate-700 p-3 rounded-lg shadow-2xl w-fit flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<p class="text-xs font-bold text-white uppercase">Placement Preview</p>
+</div>
+<p class="text-[11px] text-slate-400">Mountain terrain +2 DEF</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Game Mechanics: AP & Hex -->
+<section class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-8">
+<div>
+<h3 class="text-lg font-bold mb-4">Action Point System</h3>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<p class="text-xs font-mono text-slate-500">AP State: FULL (5/5)</p>
+<div class="flex gap-2">
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<p class="text-xs font-mono text-slate-500">AP State: SPENT (2/5)</p>
+<div class="flex gap-2">
+<div class="size-4 rounded-full bg-gold-accent/40 border border-gold-accent/20"></div>
+<div class="size-4 rounded-full bg-gold-accent/40 border border-gold-accent/20"></div>
+<div class="size-4 rounded-full bg-gold-accent/40 border border-gold-accent/20"></div>
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+<div class="size-4 rounded-full bg-gold-accent shadow-[0_0_10px_rgba(251,191,36,0.6)]"></div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">Hex Grid Logic Samples</h3>
+<div class="flex gap-4">
+<!-- Hex Ghost -->
+<div class="flex flex-col items-center gap-2">
+<div class="hex-shape size-16 bg-primary/20 border-2 border-primary border-dashed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/60">add_location</span>
+</div>
+<p class="text-[10px] font-mono text-slate-500">ghost-state</p>
+</div>
+<!-- Hex Hover -->
+<div class="flex flex-col items-center gap-2">
+<div class="hex-shape size-16 bg-slate-800 border-2 border-primary flex items-center justify-center shadow-[0_0_15px_rgba(19,182,236,0.4)]">
+<span class="material-symbols-outlined text-white">mountain_flag</span>
+</div>
+<p class="text-[10px] font-mono text-slate-500">hover-active</p>
+</div>
+<!-- Hex Error -->
+<div class="flex flex-col items-center gap-2">
+<div class="hex-shape size-16 bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500">block</span>
+</div>
+<p class="text-[10px] font-mono text-slate-500">invalid-zone</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Inspector Cards Section -->
+<section>
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                        Inspector Pattern (border-l-2)
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-background-dark p-4 rounded border border-slate-200 dark:border-slate-800 border-l-4 border-l-primary">
+<h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Location Data</h4>
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold">Iron Peaks</p>
+<p class="text-xs text-slate-500 font-mono">X: 124 | Y: 882</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-4 rounded border border-slate-200 dark:border-slate-800 border-l-4 border-l-player-red">
+<h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Unit Status</h4>
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold">Berserker Corp</p>
+<div class="flex items-center gap-2">
+<div class="h-1 flex-1 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-player-red w-[65%]"></div>
+</div>
+<span class="text-[10px] font-mono">65% HP</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-4 rounded border border-slate-200 dark:border-slate-800 border-l-4 border-l-gold-accent">
+<h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Yields</h4>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-gold-accent">monetization_on</span>
+<span class="text-sm font-bold">+12</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">bolt</span>
+<span class="text-sm font-bold">+4</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hex Icon Library -->
+<section class="mb-12">
+<h2 class="text-xl font-bold mb-6">Hex Icon Library</h2>
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-4 md:grid-cols-8 gap-8">
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">terrain</span>
+</div>
+<p class="text-[10px] font-mono">Mountain</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">location_city</span>
+</div>
+<p class="text-[10px] font-mono">City</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<p class="text-[10px] font-mono">Race</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">forest</span>
+</div>
+<p class="text-[10px] font-mono">Forest</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">water</span>
+</div>
+<p class="text-[10px] font-mono">Water</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">castle</span>
+</div>
+<p class="text-[10px] font-mono">Fortress</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">diamond</span>
+</div>
+<p class="text-[10px] font-mono">Resource</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">skull</span>
+</div>
+<p class="text-[10px] font-mono">Ruins</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="p-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-500 dark:text-slate-600 font-mono">World Builder Framework © 2024. Property of Deep Space Systems. TailwindCSS Config v3.4.1</p>
+</footer>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,63 @@
+entries:
+  - donor_concept: Workflow Store
+    source_family: workflow-schema
+    canonical_key: workflow
+    canonical_target: WorkflowAttachment
+    status: mapped
+    winner: adventure-generator
+    rationale: Guided workflow state and checkpoints are owned by the workflow donor lane.
+    provenance: src/stores/workflowStore.ts
+
+  - donor_concept: History Store
+    source_family: workflow-schema
+    canonical_key: workflow/projection
+    canonical_target: ProjectionRecord
+    status: mapped
+    winner: adventure-generator
+    rationale: Session history contributes derived timeline views, not trunk truth.
+    provenance: src/stores/historyStore.ts
+
+  - donor_concept: Adventure Workflow Store
+    source_family: workflow-schema
+    canonical_key: workflow/entity-ref
+    canonical_target: WorkflowRecord
+    status: mapped
+    winner: adventure-generator
+    rationale: Adventure workflow records reference canonical entities without replacing them.
+    provenance: src/stores/adventureWorkflowStore.ts
+
+  - donor_concept: Location Data Slice
+    source_family: location-linkage
+    canonical_key: workflow/city-linkage
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: adventure-generator
+    rationale: City/settlement linkage in guided flows maps to canonical spatial attachment.
+    provenance: src/stores/locationDataSlice.ts
+
+  - donor_concept: Location Store
+    source_family: location-linkage
+    canonical_key: workflow/dungeon-linkage
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: adventure-generator
+    rationale: Dungeon-adventure linkage remains a location attachment concern.
+    provenance: src/stores/locationStore.ts
+
+  - donor_concept: Generator Schema Definitions
+    source_family: domain-schema
+    canonical_key: workflow/schema-binding
+    canonical_target: SchemaBindingRecord
+    status: mapped
+    winner: adventure-generator
+    rationale: Adventure schemas remain external and bind through canonical schema records.
+    provenance: src/schemas
+
+  - donor_concept: Generated Adventure Output
+    source_family: domain-schema
+    canonical_key: workflow/world-ref
+    canonical_target: WorldRecord
+    status: reference-only
+    winner: adventure-generator
+    rationale: Generated adventure outputs reference world context but do not own trunk identity.
+    provenance: src/components/adventure

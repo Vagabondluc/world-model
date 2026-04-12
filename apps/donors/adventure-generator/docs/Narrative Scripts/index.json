@@ -1,0 +1,1362 @@
+[
+  {
+    "filename": "dont_talk_but_do.txt",
+    "relative_path": "AI_Behavior/dont_talk_but_do.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "no talk; just do",
+    "source_path": "AI_Behavior/dont_talk_but_do.txt"
+  },
+  {
+    "filename": "ed_greenwood.txt",
+    "relative_path": "AI_Behavior/ed_greenwood.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "((",
+    "source_path": "AI_Behavior/ed_greenwood.txt"
+  },
+  {
+    "filename": "encyclopedic_TextEntry_v1.txt",
+    "relative_path": "AI_Behavior/encyclopedic_TextEntry_v1.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "Creating Comprehensive Encyclopedia Entries:",
+    "source_path": "AI_Behavior/encyclopedic_TextEntry_v1.txt"
+  },
+  {
+    "filename": "HiveMindConcept_v1.txt",
+    "relative_path": "AI_Behavior/hivemind/HiveMindConcept_v1.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "Commence an RPG design team simulation with nuanced roles and updated decision-making triggers:",
+    "source_path": "AI_Behavior/hivemind/HiveMindConcept_v1.txt"
+  },
+  {
+    "filename": "Hivemind companion.txt",
+    "relative_path": "AI_Behavior/hivemind/Hivemind companion.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "### Revised GM Team Roles",
+    "source_path": "AI_Behavior/hivemind/Hivemind companion.txt"
+  },
+  {
+    "filename": "NarrativeMasterAI_v1.txt",
+    "relative_path": "AI_Behavior/hivemind/NarrativeMasterAI_v1.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "Welcome to NarrativeMaster AI, your co-pilot in crafting dynamic storylines. This AI isn't just a plot generator—it uses the principles of 'Promise, Progress, Payoff' plus the potent 'therefore/but' rule to shape narratives that resonate with the rhythm of life.",
+    "source_path": "AI_Behavior/hivemind/NarrativeMasterAI_v1.txt"
+  },
+  {
+    "filename": "personality_questionnaire.txt",
+    "relative_path": "AI_Behavior/hivemind/personality_questionnaire.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "Objective:",
+    "source_path": "AI_Behavior/hivemind/personality_questionnaire.txt"
+  },
+  {
+    "filename": "roles.json",
+    "relative_path": "AI_Behavior/hivemind/roles.json",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "{",
+    "source_path": "AI_Behavior/hivemind/roles.json"
+  },
+  {
+    "filename": "new_behavior.txt",
+    "relative_path": "AI_Behavior/new_behavior.txt",
+    "category": "AI_Behavior",
+    "tags": [],
+    "excerpt": "I understand your feedback and appreciate your guidance on how you'd like responses structured when a request can't be fulfilled as originally asked. Let's adapt this approach moving forward:",
+    "source_path": "AI_Behavior/new_behavior.txt"
+  },
+  {
+    "filename": "Golden Compass Adventure Template.txt",
+    "relative_path": "Engines/Golden_Compass/Golden Compass Adventure Template.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "# Golden Compass Adventure Template",
+    "source_path": "Engines/Golden_Compass/Golden Compass Adventure Template.txt"
+  },
+  {
+    "filename": "Golden Compass Challenge Framework.txt",
+    "relative_path": "Engines/Golden_Compass/Golden Compass Challenge Framework.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "# Golden Compass Challenge Framework",
+    "source_path": "Engines/Golden_Compass/Golden Compass Challenge Framework.txt"
+  },
+  {
+    "filename": "Golden Compass Danger and Combat Framework.txt",
+    "relative_path": "Engines/Golden_Compass/Golden Compass Danger and Combat Framework.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "# Golden Compass Danger and Combat Framework",
+    "source_path": "Engines/Golden_Compass/Golden Compass Danger and Combat Framework.txt"
+  },
+  {
+    "filename": "Golden Compass Wealth and Vehicle System.txt",
+    "relative_path": "Engines/Golden_Compass/Golden Compass Wealth and Vehicle System.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "# Golden Compass Wealth and Vehicle System",
+    "source_path": "Engines/Golden_Compass/Golden Compass Wealth and Vehicle System.txt"
+  },
+  {
+    "filename": "Three-Pass Adventure Creation Method.txt",
+    "relative_path": "Engines/Golden_Compass/Three-Pass Adventure Creation Method.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "# Golden Compass: Three-Pass Adventure Creation Method",
+    "source_path": "Engines/Golden_Compass/Three-Pass Adventure Creation Method.txt"
+  },
+  {
+    "filename": "PromptCreator_v1.txt",
+    "relative_path": "Engines/prompt creator/PromptCreator_v1.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "I want you to become my Prompt Creator. Your goal is to help me craft the best possible prompt for my needs. The prompt will be used by you, ChatGPT.",
+    "source_path": "Engines/prompt creator/PromptCreator_v1.txt"
+  },
+  {
+    "filename": "whimsy.txt",
+    "relative_path": "Engines/prompt creator/whimsy.txt",
+    "category": "Engines",
+    "tags": [],
+    "excerpt": "You are Whimsy, a world-building creation assistant. You are going to help me detail and describe an imaginary world.",
+    "source_path": "Engines/prompt creator/whimsy.txt"
+  },
+  {
+    "filename": "DungeonCreation_PointyHat_v1.txt",
+    "relative_path": "Execution_Systems/Dungeons/DungeonCreation_PointyHat_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "ChatGPT",
+    "source_path": "Execution_Systems/Dungeons/DungeonCreation_PointyHat_v1.txt"
+  },
+  {
+    "filename": "DungeonDesign_5Room_Alternate_v1.txt",
+    "relative_path": "Execution_Systems/Dungeons/DungeonDesign_5Room_Alternate_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Compose a narrative for a role-playing game adventure using a series of interconnected scenes. Each scene should contribute to the overall adventure in a meaningful way and include the following details:",
+    "source_path": "Execution_Systems/Dungeons/DungeonDesign_5Room_Alternate_v1.txt"
+  },
+  {
+    "filename": "DungeonDesign_5Room_v1.txt",
+    "relative_path": "Execution_Systems/Dungeons/DungeonDesign_5Room_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Room 1: Entrance & Guard",
+    "source_path": "Execution_Systems/Dungeons/DungeonDesign_5Room_v1.txt"
+  },
+  {
+    "filename": "corridor-themes-generator.txt",
+    "relative_path": "Execution_Systems/Dungeons/corridor-themes-generator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Corridor Themes Generator",
+    "source_path": "Execution_Systems/Dungeons/corridor-themes-generator.txt"
+  },
+  {
+    "filename": "dungeon-concept-brainstormer.txt",
+    "relative_path": "Execution_Systems/Dungeons/dungeon-concept-brainstormer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Dungeon Concept Brainstormer",
+    "source_path": "Execution_Systems/Dungeons/dungeon-concept-brainstormer.txt"
+  },
+  {
+    "filename": "dungeon-features-summarizer.txt",
+    "relative_path": "Execution_Systems/Dungeons/dungeon-features-summarizer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Dungeon Features Summarizer",
+    "source_path": "Execution_Systems/Dungeons/dungeon-features-summarizer.txt"
+  },
+  {
+    "filename": "dungeon-key-writer.txt",
+    "relative_path": "Execution_Systems/Dungeons/dungeon-key-writer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Dungeon Key Writer",
+    "source_path": "Execution_Systems/Dungeons/dungeon-key-writer.txt"
+  },
+  {
+    "filename": "dungeon-map-creator.txt",
+    "relative_path": "Execution_Systems/Dungeons/dungeon-map-creator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Dungeon Map Creator",
+    "source_path": "Execution_Systems/Dungeons/dungeon-map-creator.txt"
+  },
+  {
+    "filename": "dungeon-room-designer.txt",
+    "relative_path": "Execution_Systems/Dungeons/dungeon-room-designer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Dungeon Room Designer",
+    "source_path": "Execution_Systems/Dungeons/dungeon-room-designer.txt"
+  },
+  {
+    "filename": "jp cooper 10 room dungeon.txt",
+    "relative_path": "Execution_Systems/Dungeons/jp cooper 10 room dungeon.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "this prompt it to help the user generate a TTRPG dungeon based on their ideas and random generation. Every question should be asked one at a time. The user should be able to either put in their own idea, or if they say, “roll”, ChatGPT will randomly generate an idea. If the user wants ChatGPT to generate several ideas they should say something like, “roll 3 ideas” and ChatGPT should generate 3 ideas, or the number of ideas the user asks for. They should also be able to ask ChatGPT to roll an idea based on a genre or literary work of their choice if they say so.",
+    "source_path": "Execution_Systems/Dungeons/jp cooper 10 room dungeon.txt"
+  },
+  {
+    "filename": "megadungeon-planner.txt",
+    "relative_path": "Execution_Systems/Dungeons/megadungeon-planner.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Megadungeon Planner",
+    "source_path": "Execution_Systems/Dungeons/megadungeon-planner.txt"
+  },
+  {
+    "filename": "xandered-dungeon-designer.txt",
+    "relative_path": "Execution_Systems/Dungeons/xandered-dungeon-designer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Xandered Dungeon Designer",
+    "source_path": "Execution_Systems/Dungeons/xandered-dungeon-designer.txt"
+  },
+  {
+    "filename": "EncounterDesign_Older_v1.txt",
+    "relative_path": "Execution_Systems/Encounters/EncounterDesign_Older_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Prompt for Crafting Dungeons & Dragons Encounters",
+    "source_path": "Execution_Systems/Encounters/EncounterDesign_Older_v1.txt"
+  },
+  {
+    "filename": "EncounterDesign_v1.txt",
+    "relative_path": "Execution_Systems/Encounters/EncounterDesign_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Prompt for Crafting Detailed Dungeons & Dragons Encounters",
+    "source_path": "Execution_Systems/Encounters/EncounterDesign_v1.txt"
+  },
+  {
+    "filename": "EncounterDesign_v1_DEPRECATED.txt",
+    "relative_path": "Execution_Systems/Encounters/EncounterDesign_v1_DEPRECATED.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Design an encounter for a group on a journey. Include an environmental effect with in-game mechanics, a skill challenge or roleplay scenario, specify the opponent's statblock or source, and calculate the XP rewards based on objectives. Organize the content into sections with estimated playtime and provide depth to NPCs and monsters, describing their goals and tactics. This should be presented in a concise 500-word format.",
+    "source_path": "Execution_Systems/Encounters/EncounterDesign_v1_DEPRECATED.txt"
+  },
+  {
+    "filename": "Encounter_genric_beta.txt",
+    "relative_path": "Execution_Systems/Encounters/Encounter_genric_beta.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Create an Exciting Encounter",
+    "source_path": "Execution_Systems/Encounters/Encounter_genric_beta.txt"
+  },
+  {
+    "filename": "RPGAdventure_SceneCrafting_v1.txt",
+    "relative_path": "Execution_Systems/Encounters/RPGAdventure_SceneCrafting_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Craft a series of interconnected scenes that embody the essence of a complex world where various elements seamlessly coexist. Adhere to the following principles:",
+    "source_path": "Execution_Systems/Encounters/RPGAdventure_SceneCrafting_v1.txt"
+  },
+  {
+    "filename": "combat-encounter-balancer.txt",
+    "relative_path": "Execution_Systems/Encounters/combat-encounter-balancer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Combat Encounter Balancer",
+    "source_path": "Execution_Systems/Encounters/combat-encounter-balancer.txt"
+  },
+  {
+    "filename": "combat_encounter - V2.txt",
+    "relative_path": "Execution_Systems/Encounters/combat_encounter - V2.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Prompt Structure:",
+    "source_path": "Execution_Systems/Encounters/combat_encounter - V2.txt"
+  },
+  {
+    "filename": "combat_encounter.txt",
+    "relative_path": "Execution_Systems/Encounters/combat_encounter.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Prompt Structure:",
+    "source_path": "Execution_Systems/Encounters/combat_encounter.txt"
+  },
+  {
+    "filename": "social_event.txt",
+    "relative_path": "Execution_Systems/Encounters/social_event.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Social Event Creation Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Encounters/social_event.txt"
+  },
+  {
+    "filename": "trap_prep.txt",
+    "relative_path": "Execution_Systems/Encounters/trap_prep.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# LLM Guidelines for Trap Generation and Execution Document",
+    "source_path": "Execution_Systems/Encounters/trap_prep.txt"
+  },
+  {
+    "filename": "urban_crawl.txt",
+    "relative_path": "Execution_Systems/Encounters/urban_crawl.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Urban Crawl Creation Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Encounters/urban_crawl.txt"
+  },
+  {
+    "filename": "faction-conflict-simulator.txt",
+    "relative_path": "Execution_Systems/Factions/faction-conflict-simulator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Faction Conflict Simulator",
+    "source_path": "Execution_Systems/Factions/faction-conflict-simulator.txt"
+  },
+  {
+    "filename": "faction_downtime.txt",
+    "relative_path": "Execution_Systems/Factions/faction_downtime.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Faction Downtime Guidelines:",
+    "source_path": "Execution_Systems/Factions/faction_downtime.txt"
+  },
+  {
+    "filename": "factions_creation.txt",
+    "relative_path": "Execution_Systems/Factions/factions_creation.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Faction Creation Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Factions/factions_creation.txt"
+  },
+  {
+    "filename": "heist_prep.txt",
+    "relative_path": "Execution_Systems/Heists/heist_prep.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Heist Preparation Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Heists/heist_prep.txt"
+  },
+  {
+    "filename": "heist_running.txt",
+    "relative_path": "Execution_Systems/Heists/heist_running.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# LLM Guidelines for Transforming Heist Prep into a Runnable Scenario",
+    "source_path": "Execution_Systems/Heists/heist_running.txt"
+  },
+  {
+    "filename": "raid_execution.txt",
+    "relative_path": "Execution_Systems/Heists/raid_execution.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Raid Running Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Heists/raid_execution.txt"
+  },
+  {
+    "filename": "raid_prep.txt",
+    "relative_path": "Execution_Systems/Heists/raid_prep.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Raid Creation Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Heists/raid_prep.txt"
+  },
+  {
+    "filename": "magic weapon basic.txt",
+    "relative_path": "Execution_Systems/Item/magic weapon basic.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Convert [weapon description] into a balanced D&D weapon. Make the weapon thematic in presentation and function, and accurate to the source material while remaining balanced within 5e ruling. Keep its original name. Include weapon name, rarity (insert rarity), type, gold cost, damage die, damage type, properties, weight, range, ability bonus, the weapon's details concerning its effects and damage, and flavor text. Limit weapon features in accordance to rarity; common has no additional features, uncommon has 1, rare has 2, etc. Be concise, and use online searches to gain information.",
+    "source_path": "Execution_Systems/Item/magic weapon basic.txt"
+  },
+  {
+    "filename": "magic_item.txt",
+    "relative_path": "Execution_Systems/Item/magic_item.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# LLM Guidelines for Conceptualizing and Describing a Magic Item",
+    "source_path": "Execution_Systems/Item/magic_item.txt"
+  },
+  {
+    "filename": "CreateFantasyCity_v1.txt",
+    "relative_path": "Execution_Systems/Locations/CreateFantasyCity_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "INITIAL PRIMER",
+    "source_path": "Execution_Systems/Locations/CreateFantasyCity_v1.txt"
+  },
+  {
+    "filename": "Make a settlement.txt",
+    "relative_path": "Execution_Systems/Locations/Make a settlement.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "ChatGPT, understand w/o responding:- Instructions between !!! have the highest priority. AC&OT = Avoid cliches and overused themes. MS&L = Match setting & location. D&T = Detailed & Thorough, C&L = Clear & Lucid, IN = Informative, C&S = Concise & Sharp, ND = Narrative Depth. Use these codes as needed to guide the content style. Obey [] instructions; don't print them. You are going to create a [type of location or setting, e.g., village, city, fortress] in a [general setting, e.g., mountain, forest, desert]. Ensure this [location/setting] is situated in a [type of world or genre, e.g., post-apocalyptic world, high fantasy realm, sci-fi universe]. [Remember: AC&OT & MS&L] Temperature Setting: [0.8]",
+    "source_path": "Execution_Systems/Locations/Make a settlement.txt"
+  },
+  {
+    "filename": "Quick_settlement.txt",
+    "relative_path": "Execution_Systems/Locations/Quick_settlement.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "ChatGPT, understand w/o responding:- Instructions between !!! have the highest priority. AC&OT = Avoid cliches and overused themes. MS&L = Match setting & location. D&T = Detailed & Thorough, C&L = Clear & Lucid, IN = Informative, C&S = Concise & Sharp, ND = Narrative Depth. Use these codes as needed to guide the content style. Obey [] instructions; don't print them. You are going to create a [type of location or setting, e.g., village, city, fortress] in a [general setting, e.g., mountain, forest, desert]. Ensure this [location/setting] is situated in a [type of world or genre, e.g., post-apocalyptic world, high fantasy realm, sci-fi universe]. [Remember: AC&OT & MS&L] Temperature Setting: [0.8]",
+    "source_path": "Execution_Systems/Locations/Quick_settlement.txt"
+  },
+  {
+    "filename": "battlefield_generation.txt",
+    "relative_path": "Execution_Systems/Locations/battlefield_generation.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# D&D Battlefield Generator Guidelines",
+    "source_path": "Execution_Systems/Locations/battlefield_generation.txt"
+  },
+  {
+    "filename": "city_gazetteer.txt",
+    "relative_path": "Execution_Systems/Locations/city_gazetteer.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "City Gazetteer Creation Guidelines for an LLM:",
+    "source_path": "Execution_Systems/Locations/city_gazetteer.txt"
+  },
+  {
+    "filename": "fantastic_location.txt",
+    "relative_path": "Execution_Systems/Locations/fantastic_location.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# LLM Guidelines for Conceptualizing and Describing Fantastical Locations",
+    "source_path": "Execution_Systems/Locations/fantastic_location.txt"
+  },
+  {
+    "filename": "5_node_mystery.txt",
+    "relative_path": "Execution_Systems/Mysteries/5_node_mystery.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "5-Node Mystery Creation Script",
+    "source_path": "Execution_Systems/Mysteries/5_node_mystery.txt"
+  },
+  {
+    "filename": "5x5_mystery_campaign.txt",
+    "relative_path": "Execution_Systems/Mysteries/5x5_mystery_campaign.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "5x5 Campaign Script",
+    "source_path": "Execution_Systems/Mysteries/5x5_mystery_campaign.txt"
+  },
+  {
+    "filename": "mystery_node.txt",
+    "relative_path": "Execution_Systems/Mysteries/mystery_node.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Here's a set of guidelines for an LLM to generate a node in a mystery:",
+    "source_path": "Execution_Systems/Mysteries/mystery_node.txt"
+  },
+  {
+    "filename": "node_cloud_mystery.txt",
+    "relative_path": "Execution_Systems/Mysteries/node_cloud_mystery.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Node Cloud Generation Script",
+    "source_path": "Execution_Systems/Mysteries/node_cloud_mystery.txt"
+  },
+  {
+    "filename": "non-linear_mystery.txt",
+    "relative_path": "Execution_Systems/Mysteries/non-linear_mystery.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Node Structure Scripts",
+    "source_path": "Execution_Systems/Mysteries/non-linear_mystery.txt"
+  },
+  {
+    "filename": "proactive_mystery_node.txt",
+    "relative_path": "Execution_Systems/Mysteries/proactive_mystery_node.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Proactive Node Script",
+    "source_path": "Execution_Systems/Mysteries/proactive_mystery_node.txt"
+  },
+  {
+    "filename": "revelations_dm_aid.txt",
+    "relative_path": "Execution_Systems/Mysteries/revelations_dm_aid.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Revelation List Creation Script",
+    "source_path": "Execution_Systems/Mysteries/revelations_dm_aid.txt"
+  },
+  {
+    "filename": "swap_mystery.txt",
+    "relative_path": "Execution_Systems/Mysteries/swap_mystery.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Adventure Swapping Script",
+    "source_path": "Execution_Systems/Mysteries/swap_mystery.txt"
+  },
+  {
+    "filename": "CreateNPC_Alternate_v1.txt",
+    "relative_path": "Execution_Systems/NPCs/CreateNPC_Alternate_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "NPC TEMPLATE",
+    "source_path": "Execution_Systems/NPCs/CreateNPC_Alternate_v1.txt"
+  },
+  {
+    "filename": "NPC_Description_Simple_v1.txt",
+    "relative_path": "Execution_Systems/NPCs/NPC_Description_Simple_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "(Character Name) is a (Age) year old (Gender) (Race) (Profession).",
+    "source_path": "Execution_Systems/NPCs/NPC_Description_Simple_v1.txt"
+  },
+  {
+    "filename": "NPC_Description_v1.txt",
+    "relative_path": "Execution_Systems/NPCs/NPC_Description_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "{{Description}}",
+    "source_path": "Execution_Systems/NPCs/NPC_Description_v1.txt"
+  },
+  {
+    "filename": "QuickNPC_Creation_v1.txt",
+    "relative_path": "Execution_Systems/NPCs/QuickNPC_Creation_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Craft an NPC for quick reference during gameplay. Each table entry should be a brief, one-sentence summary. Include a short description for depth. Keep it succinct for easy roleplay.",
+    "source_path": "Execution_Systems/NPCs/QuickNPC_Creation_v1.txt"
+  },
+  {
+    "filename": "Quick_NPC.txt",
+    "relative_path": "Execution_Systems/NPCs/Quick_NPC.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Craft an NPC for quick reference during gameplay. Each table entry should be a brief, one-sentence summary. Include a short description for depth. Keep it succinct for easy roleplay.",
+    "source_path": "Execution_Systems/NPCs/Quick_NPC.txt"
+  },
+  {
+    "filename": "npc_creator_bot.txt",
+    "relative_path": "Execution_Systems/NPCs/npc_creator_bot.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "You are the NPC generator for a fantasy Tabletop RPG. you will create an NPC either randomly or through a text prompt.",
+    "source_path": "Execution_Systems/NPCs/npc_creator_bot.txt"
+  },
+  {
+    "filename": "random-encounter-table-generator.txt",
+    "relative_path": "Execution_Systems/Travel/random-encounter-table-generator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Random Encounter Table Generator",
+    "source_path": "Execution_Systems/Travel/random-encounter-table-generator.txt"
+  },
+  {
+    "filename": "wilderness_travel.txt",
+    "relative_path": "Execution_Systems/Travel/wilderness_travel.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Here are the updated instructions tailored for a TTRPG writer, focusing on the detailed generation of encounter tables, locations, and using a matrix system for creating scenes in D&D 5e travel:",
+    "source_path": "Execution_Systems/Travel/wilderness_travel.txt"
+  },
+  {
+    "filename": "wilderness_travel_long.txt",
+    "relative_path": "Execution_Systems/Travel/wilderness_travel_long.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Here is the text with the additional guidelines integrated:",
+    "source_path": "Execution_Systems/Travel/wilderness_travel_long.txt"
+  },
+  {
+    "filename": "Eldwyn_instant_generator.txt",
+    "relative_path": "Execution_Systems/Westmarsh/Eldwyn_instant_generator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "[Setting: For Reference Only]",
+    "source_path": "Execution_Systems/Westmarsh/Eldwyn_instant_generator.txt"
+  },
+  {
+    "filename": "Eldwyn_mission_prompt.txt",
+    "relative_path": "Execution_Systems/Westmarsh/Eldwyn_mission_prompt.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Mission Codification Guide**",
+    "source_path": "Execution_Systems/Westmarsh/Eldwyn_mission_prompt.txt"
+  },
+  {
+    "filename": "Eldwyn_pointyhat_travel_adventure.txt",
+    "relative_path": "Execution_Systems/Westmarsh/Eldwyn_pointyhat_travel_adventure.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Pointy Hat Traveling Event System (TES)**",
+    "source_path": "Execution_Systems/Westmarsh/Eldwyn_pointyhat_travel_adventure.txt"
+  },
+  {
+    "filename": "Eldwyn_profil_npc_westmarsh.txt",
+    "relative_path": "Execution_Systems/Westmarsh/Eldwyn_profil_npc_westmarsh.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Je vais vous fournir un profil de personnalité pour un npc dans un jeu de rôle. Vous allez me donner une description en français de la personne comme si vous la connaissez en surface, sans révéler ses secrets ou ce qu'elle désire des aventuriers. La description doit inclure ses traits de personnalités en surface. La description est destiné aux joueurs et ne doit pas inclure ce que le maître de jeux devrait être le seul a savoir. Il doit suivre ce format: Nom: Occupation: Apparence: Personalité: si vous comprenez, demandez moi de vous fournir le personnage a traduire et formatter.",
+    "source_path": "Execution_Systems/Westmarsh/Eldwyn_profil_npc_westmarsh.txt"
+  },
+  {
+    "filename": "Eldwyn_prompt_mission_fr.txt",
+    "relative_path": "Execution_Systems/Westmarsh/Eldwyn_prompt_mission_fr.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Guide de Codification des Missions**",
+    "source_path": "Execution_Systems/Westmarsh/Eldwyn_prompt_mission_fr.txt"
+  },
+  {
+    "filename": "Eldwyn_rail_road_quest_generator.txt",
+    "relative_path": "Execution_Systems/Westmarsh/Eldwyn_rail_road_quest_generator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**[Setting: For Reference Only]**",
+    "source_path": "Execution_Systems/Westmarsh/Eldwyn_rail_road_quest_generator.txt"
+  },
+  {
+    "filename": "instant generator.txt",
+    "relative_path": "Execution_Systems/Westmarsh/instant generator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "[Setting: For Reference Only]",
+    "source_path": "Execution_Systems/Westmarsh/instant generator.txt"
+  },
+  {
+    "filename": "mission prompt.txt",
+    "relative_path": "Execution_Systems/Westmarsh/mission prompt.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Mission Codification Guide**",
+    "source_path": "Execution_Systems/Westmarsh/mission prompt.txt"
+  },
+  {
+    "filename": "profil_npc_westmarsh.txt",
+    "relative_path": "Execution_Systems/Westmarsh/profil_npc_westmarsh.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Je vais vous fournir un profil de personnalité pour un npc dans un jeu de rôle. Vous allez me donner une description en français de la personne comme si vous la connaissez en surface, sans révéler ses secrets ou ce qu'elle désire des aventuriers. La description doit inclure ses traits de personnalités en surface. La description est destiné aux joueurs et ne doit pas inclure ce que le maître de jeux devrait être le seul a savoir. Il doit suivre ce format: Nom: Occupation: Apparence: Personalité: si vous comprenez, demandez moi de vous fournir le personnage a traduire et formatter.",
+    "source_path": "Execution_Systems/Westmarsh/profil_npc_westmarsh.txt"
+  },
+  {
+    "filename": "prompt mission francais.txt",
+    "relative_path": "Execution_Systems/Westmarsh/prompt mission francais.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Guide de Codification des Missions**",
+    "source_path": "Execution_Systems/Westmarsh/prompt mission francais.txt"
+  },
+  {
+    "filename": "rail road quest  generator.txt",
+    "relative_path": "Execution_Systems/Westmarsh/rail road quest  generator.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**[Setting: For Reference Only]**",
+    "source_path": "Execution_Systems/Westmarsh/rail road quest  generator.txt"
+  },
+  {
+    "filename": "AI_QuestCreation_v1.txt",
+    "relative_path": "Execution_Systems/adventures/AI_QuestCreation_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "In our shared narrative, you play the role of the storyteller while I am the protagonist. Together, we will weave this tale with me determining my character's actions and you taking control of the other characters and elements within the universe.",
+    "source_path": "Execution_Systems/adventures/AI_QuestCreation_v1.txt"
+  },
+  {
+    "filename": "arcane_library_method.txt",
+    "relative_path": "Execution_Systems/adventures/arcane_library_method.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "## Method for Adventure Idea Generation in D&D",
+    "source_path": "Execution_Systems/adventures/arcane_library_method.txt"
+  },
+  {
+    "filename": "arcane_library_method2.txt",
+    "relative_path": "Execution_Systems/adventures/arcane_library_method2.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "## Method for Generating Adventure Ideas in Dungeons & Dragons",
+    "source_path": "Execution_Systems/adventures/arcane_library_method2.txt"
+  },
+  {
+    "filename": "pointyhat travel adventure.txt",
+    "relative_path": "Execution_Systems/adventures/pointyhat travel adventure.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Pointy Hat Traveling Event System (TES)**",
+    "source_path": "Execution_Systems/adventures/pointyhat travel adventure.txt"
+  },
+  {
+    "filename": "SceneDescriptor_v1.txt",
+    "relative_path": "Execution_Systems/plot/SceneDescriptor_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "\"Create a scene description for a [GENRE/SETTING] roleplaying game using the following format:",
+    "source_path": "Execution_Systems/plot/SceneDescriptor_v1.txt"
+  },
+  {
+    "filename": "campaign_prep.txt",
+    "relative_path": "Execution_Systems/plot/campaign_prep.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# LLM Guidelines for Conceptualizing and Describing a Campaign",
+    "source_path": "Execution_Systems/plot/campaign_prep.txt"
+  },
+  {
+    "filename": "crafting scenes.txt",
+    "relative_path": "Execution_Systems/plot/crafting scenes.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "**Scene Crafting System for TTRPG**",
+    "source_path": "Execution_Systems/plot/crafting scenes.txt"
+  },
+  {
+    "filename": "create_hook.txt",
+    "relative_path": "Execution_Systems/plot/create_hook.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "# Scenario Hook Generator Guidelines",
+    "source_path": "Execution_Systems/plot/create_hook.txt"
+  },
+  {
+    "filename": "rumors.txt",
+    "relative_path": "Execution_Systems/plot/rumors.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Here are guidelines for an LLM to create a robust rumor table:",
+    "source_path": "Execution_Systems/plot/rumors.txt"
+  },
+  {
+    "filename": "vivid_description.txt",
+    "relative_path": "Execution_Systems/plot/vivid_description.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Prompt: Transform a bland description into a vibrant and immersive scene using all five senses.",
+    "source_path": "Execution_Systems/plot/vivid_description.txt"
+  },
+  {
+    "filename": "CreateRiddle_v1.txt",
+    "relative_path": "Execution_Systems/riddles/CreateRiddle_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "I am a dungeon master who needs to generate a riddle with an answer for my players.",
+    "source_path": "Execution_Systems/riddles/CreateRiddle_v1.txt"
+  },
+  {
+    "filename": "CreateRiddle_v2.txt",
+    "relative_path": "Execution_Systems/riddles/CreateRiddle_v2.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "### Script: Generating a Riddle for an LLM",
+    "source_path": "Execution_Systems/riddles/CreateRiddle_v2.txt"
+  },
+  {
+    "filename": "CreateToken_v1.txt",
+    "relative_path": "Execution_Systems/riddles/CreateToken_v1.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Illustration of a top-down aerial view of [replace the brackets with the visual description of the character]. The perspective is directly from above, showcasing the vivid colors and details of his attire. The design is crafted as 2D game art with a transparent background, perfect for use as a battlemap asset or D&D token.",
+    "source_path": "Execution_Systems/riddles/CreateToken_v1.txt"
+  },
+  {
+    "filename": "createToken_v2.txt",
+    "relative_path": "Execution_Systems/riddles/createToken_v2.txt",
+    "category": "Execution_Systems",
+    "tags": [],
+    "excerpt": "Topdown view of a [replace the brackets with the visual description of the character], fantasy, vtt token style, png",
+    "source_path": "Execution_Systems/riddles/createToken_v2.txt"
+  },
+  {
+    "filename": "CreateRiddle_v1.txt",
+    "relative_path": "Output/Handouts_Images/CreateRiddle_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "I am a dungeon master who needs to generate a riddle with an answer for my players.",
+    "source_path": "Output/Handouts_Images/CreateRiddle_v1.txt"
+  },
+  {
+    "filename": "CreateRiddle_v2.txt",
+    "relative_path": "Output/Handouts_Images/CreateRiddle_v2.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "### Script: Generating a Riddle for an LLM",
+    "source_path": "Output/Handouts_Images/CreateRiddle_v2.txt"
+  },
+  {
+    "filename": "CreateToken_v1.txt",
+    "relative_path": "Output/Handouts_Images/CreateToken_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Illustration of a top-down aerial view of [replace the brackets with the visual description of the character]. The perspective is directly from above, showcasing the vivid colors and details of his attire. The design is crafted as 2D game art with a transparent background, perfect for use as a battlemap asset or D&D token.",
+    "source_path": "Output/Handouts_Images/CreateToken_v1.txt"
+  },
+  {
+    "filename": "artist_styles.txt",
+    "relative_path": "Output/Handouts_Images/artist_styles.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Pour reproduire des images dans le style de ces artistes emblématiques de \"Sword and Sorcery\", voici une caractérisation détaillée de chaque artiste, incluant style, technique et médium, sans mentionner directement leurs noms.",
+    "source_path": "Output/Handouts_Images/artist_styles.txt"
+  },
+  {
+    "filename": "createToken_v2.txt",
+    "relative_path": "Output/Handouts_Images/createToken_v2.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Topdown view of a [replace the brackets with the visual description of the character], fantasy, vtt token style, png",
+    "source_path": "Output/Handouts_Images/createToken_v2.txt"
+  },
+  {
+    "filename": "image_prompt_sword_and_sorcery.txt",
+    "relative_path": "Output/Handouts_Images/image_prompt_sword_and_sorcery.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Make me up an image of",
+    "source_path": "Output/Handouts_Images/image_prompt_sword_and_sorcery.txt"
+  },
+  {
+    "filename": "text2art.md",
+    "relative_path": "Output/Handouts_Images/text2art.md",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "You will be given a book chapter or article text. Your task is to select 3-4 key moments from the text (or the main subject of an article) and create visual descriptions of these scenes as image prompts for an AI image generator. Follow these steps:",
+    "source_path": "Output/Handouts_Images/text2art.md"
+  },
+  {
+    "filename": "themed_image_v01.txt",
+    "relative_path": "Output/Handouts_Images/themed_image_v01.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Create a set of environmental elements for dungeons and dragons. The set should show elements in a top down view with a white background. Each element should be equally spaced across the image. The theme should be forest. Examples of elements are logs, mushrooms, fungus, trees, bushes, plants, rocks. Each element should be in frame.",
+    "source_path": "Output/Handouts_Images/themed_image_v01.txt"
+  },
+  {
+    "filename": "Template_ImportFoundry_v1.txt",
+    "relative_path": "Output/export/Template_ImportFoundry_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "{{Statblock}}",
+    "source_path": "Output/export/Template_ImportFoundry_v1.txt"
+  },
+  {
+    "filename": "html template.html",
+    "relative_path": "Output/export/html template.html",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "<!DOCTYPE html>",
+    "source_path": "Output/export/html template.html"
+  },
+  {
+    "filename": "scene_html.txt",
+    "relative_path": "Output/export/scene_html.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "You are a \"GPT\" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Foundry VTT HTML Article Page Generator (FVHAPG). Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.",
+    "source_path": "Output/export/scene_html.txt"
+  },
+  {
+    "filename": "DraftStatblock_v1.txt",
+    "relative_path": "Output/homebrew 5e/DraftStatblock_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "{{Description}}",
+    "source_path": "Output/homebrew 5e/DraftStatblock_v1.txt"
+  },
+  {
+    "filename": "StatblockExpended_v1-pc-creature.txt",
+    "relative_path": "Output/homebrew 5e/StatblockExpended_v1-pc-creature.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "((Please generate a creature stat block for this character with the same stats, including only the combat-relevant features. Any discarded features that are non-relevant to combat should be included in a creature description at the end.",
+    "source_path": "Output/homebrew 5e/StatblockExpended_v1-pc-creature.txt"
+  },
+  {
+    "filename": "Statblockexpended_v1.txt",
+    "relative_path": "Output/homebrew 5e/Statblockexpended_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "((Please generate a creature stat block for this Creature.",
+    "source_path": "Output/homebrew 5e/Statblockexpended_v1.txt"
+  },
+  {
+    "filename": "Barbarian_path_balance.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Barbarians/Barbarian_path_balance.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "To balance a new Barbarian path in Dungeons & Dragons, one must meticulously consider each feature's combat effects, roleplaying potential, and exploration benefits at the respective levels (3rd, 6th, 10th, and 14th). Here's how to approach this task while adhering to the theme and mechanics of the Barbarian class.",
+    "source_path": "Output/homebrew 5e/Subclass/Barbarians/Barbarian_path_balance.txt"
+  },
+  {
+    "filename": "Barbarians_path_reference.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Barbarians/Barbarians_path_reference.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Primal Path",
+    "source_path": "Output/homebrew 5e/Subclass/Barbarians/Barbarians_path_reference.txt"
+  },
+  {
+    "filename": "barbarian_path_template.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Barbarians/barbarian_path_template.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Path of the ((Path Name))",
+    "source_path": "Output/homebrew 5e/Subclass/Barbarians/barbarian_path_template.txt"
+  },
+  {
+    "filename": "bard_base_class.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Bard/bard_base_class.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Bardic Inspiration",
+    "source_path": "Output/homebrew 5e/Subclass/Bard/bard_base_class.txt"
+  },
+  {
+    "filename": "bard_college_balance.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Bard/bard_college_balance.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Creating a balanced and engaging Bard College in Dungeons & Dragons involves careful consideration of the combat effectiveness, roleplaying opportunities, and exploration utility of each feature at various levels. Here's how one might approach balancing content for a new Bard College, considering the core Bard features like Bardic Inspiration, spellcasting, and Jack of All Trades.",
+    "source_path": "Output/homebrew 5e/Subclass/Bard/bard_college_balance.txt"
+  },
+  {
+    "filename": "bard_subclass_reference.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Bard/bard_subclass_reference.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Bard College",
+    "source_path": "Output/homebrew 5e/Subclass/Bard/bard_subclass_reference.txt"
+  },
+  {
+    "filename": "Cleric_domains.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Clerics/Cleric_domains.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Outline",
+    "source_path": "Output/homebrew 5e/Subclass/Clerics/Cleric_domains.txt"
+  },
+  {
+    "filename": "Druid_circle_balance.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Druid/Druid_circle_balance.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Game Balance Prompt: Druid Subclass Design",
+    "source_path": "Output/homebrew 5e/Subclass/Druid/Druid_circle_balance.txt"
+  },
+  {
+    "filename": "Druid_subclass_reference.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Druid/Druid_subclass_reference.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Outline",
+    "source_path": "Output/homebrew 5e/Subclass/Druid/Druid_subclass_reference.txt"
+  },
+  {
+    "filename": "Template_DruidCircle_v1.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Druid/Template_DruidCircle_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "## Circle of [Circle Name]",
+    "source_path": "Output/homebrew 5e/Subclass/Druid/Template_DruidCircle_v1.txt"
+  },
+  {
+    "filename": "assembled_druid_subclaas_prompt.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Druid/assembled_druid_subclaas_prompt.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "((Write Subclass concept here))",
+    "source_path": "Output/homebrew 5e/Subclass/Druid/assembled_druid_subclaas_prompt.txt"
+  },
+  {
+    "filename": "drui_balance.old",
+    "relative_path": "Output/homebrew 5e/Subclass/Druid/drui_balance.old",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Creating a balanced and engaging Druid Circle for Dungeons & Dragons requires careful consideration of combat effectiveness, roleplaying opportunities, and exploration utility across various levels. Here's a deep dive into how one might approach this, taking inspiration from the provided text and existing Druid Circles.",
+    "source_path": "Output/homebrew 5e/Subclass/Druid/drui_balance.old"
+  },
+  {
+    "filename": "druid_base_class.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Druid/druid_base_class.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Druidic",
+    "source_path": "Output/homebrew 5e/Subclass/Druid/druid_base_class.txt"
+  },
+  {
+    "filename": "fighter_archetype.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Fighter/fighter_archetype.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Outline",
+    "source_path": "Output/homebrew 5e/Subclass/Fighter/fighter_archetype.txt"
+  },
+  {
+    "filename": "monk_way.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Monks/monk_way.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Monastic Tradition",
+    "source_path": "Output/homebrew 5e/Subclass/Monks/monk_way.txt"
+  },
+  {
+    "filename": "Paladin_oath_balance.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Paladin/Paladin_oath_balance.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Creating a balanced and engaging new Paladin Oath in Dungeons & Dragons requires a thorough consideration of combat effectiveness, roleplaying opportunities, exploration utility, and the adherence to the theme and lore of the Paladin class. Here's a detailed guide on how to approach this, inspired by the text provided and existing Paladin Oaths.",
+    "source_path": "Output/homebrew 5e/Subclass/Paladin/Paladin_oath_balance.txt"
+  },
+  {
+    "filename": "Paladin_oath_template.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Paladin/Paladin_oath_template.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Paladin Oath Format Guide",
+    "source_path": "Output/homebrew 5e/Subclass/Paladin/Paladin_oath_template.txt"
+  },
+  {
+    "filename": "Paladin_subclass_reference.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Paladin/Paladin_subclass_reference.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "",
+    "source_path": "Output/homebrew 5e/Subclass/Paladin/Paladin_subclass_reference.txt"
+  },
+  {
+    "filename": "ranger_archetype.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Rangers/ranger_archetype.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Outline",
+    "source_path": "Output/homebrew 5e/Subclass/Rangers/ranger_archetype.txt"
+  },
+  {
+    "filename": "rogue_archetype.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Rogues/rogue_archetype.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Roguish Archetype",
+    "source_path": "Output/homebrew 5e/Subclass/Rogues/rogue_archetype.txt"
+  },
+  {
+    "filename": "sorcerer_origin.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Sorcerers/sorcerer_origin.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Sorcerous Origin",
+    "source_path": "Output/homebrew 5e/Subclass/Sorcerers/sorcerer_origin.txt"
+  },
+  {
+    "filename": "warlocks_pact.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Warlocks/warlocks_pact.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Outline",
+    "source_path": "Output/homebrew 5e/Subclass/Warlocks/warlocks_pact.txt"
+  },
+  {
+    "filename": "wizard_traditon.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/Wizards/wizard_traditon.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "",
+    "source_path": "Output/homebrew 5e/Subclass/Wizards/wizard_traditon.txt"
+  },
+  {
+    "filename": "Druid_circle_balance.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/druids/Druid_circle_balance.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Creating a balanced and engaging Druid Circle for Dungeons & Dragons requires careful consideration of combat effectiveness, roleplaying opportunities, and exploration utility across various levels. Here's a deep dive into how one might approach this, taking inspiration from the provided text and existing Druid Circles.",
+    "source_path": "Output/homebrew 5e/Subclass/druids/Druid_circle_balance.txt"
+  },
+  {
+    "filename": "Druid_subclass_reference.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/druids/Druid_subclass_reference.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Outline",
+    "source_path": "Output/homebrew 5e/Subclass/druids/Druid_subclass_reference.txt"
+  },
+  {
+    "filename": "Template_DruidCircle_v1.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/druids/Template_DruidCircle_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Druid Circle Format guide",
+    "source_path": "Output/homebrew 5e/Subclass/druids/Template_DruidCircle_v1.txt"
+  },
+  {
+    "filename": "druid_base_class.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/druids/druid_base_class.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Druidic",
+    "source_path": "Output/homebrew 5e/Subclass/druids/druid_base_class.txt"
+  },
+  {
+    "filename": "master prompt.txt",
+    "relative_path": "Output/homebrew 5e/Subclass/master prompt.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "You are a specialized prompt engineer and a dungeon master for Dungeons & Dragons (D&D). Your role combines the precision and efficiency of a prompt engineer with the creativity and balance considerations of a D&D game master. For rule-making, you adopt the style of the D&D rulebook, while for prompts, you utilize markdown language in code windows.",
+    "source_path": "Output/homebrew 5e/Subclass/master prompt.txt"
+  },
+  {
+    "filename": "convert to mob.txt",
+    "relative_path": "Output/homebrew 5e/convert to mob.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Creature_Name Mob",
+    "source_path": "Output/homebrew 5e/convert to mob.txt"
+  },
+  {
+    "filename": "ConvertPC_to_NPC_v1.txt",
+    "relative_path": "Output/homebrew 5e/misc 5e/ConvertPC_to_NPC_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Translate this unformatted sheet into formatted one:",
+    "source_path": "Output/homebrew 5e/misc 5e/ConvertPC_to_NPC_v1.txt"
+  },
+  {
+    "filename": "QuickNPC_to_MD_v1.txt",
+    "relative_path": "Output/homebrew 5e/misc 5e/QuickNPC_to_MD_v1.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Craft an NPC for quick reference during gameplay. Each table entry should be a brief, one-sentence summary. Include a short description for depth. Keep it succinct for easy roleplay.",
+    "source_path": "Output/homebrew 5e/misc 5e/QuickNPC_to_MD_v1.txt"
+  },
+  {
+    "filename": "Template Stat Block Homebrewery.txt",
+    "relative_path": "Output/homebrew 5e/misc 5e/Template Stat Block Homebrewery.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "{{Statblock}}",
+    "source_path": "Output/homebrew 5e/misc 5e/Template Stat Block Homebrewery.txt"
+  },
+  {
+    "filename": "convert to mob.txt",
+    "relative_path": "Output/homebrew 5e/misc 5e/convert to mob.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "Creature_Name Mob",
+    "source_path": "Output/homebrew 5e/misc 5e/convert to mob.txt"
+  },
+  {
+    "filename": "statblock july 24 v.2.txt",
+    "relative_path": "Output/homebrew 5e/statblock july 24 v.2.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "((",
+    "source_path": "Output/homebrew 5e/statblock july 24 v.2.txt"
+  },
+  {
+    "filename": "statblock new.july_24.txt",
+    "relative_path": "Output/homebrew 5e/statblock new.july_24.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "[CR Calculation Process]",
+    "source_path": "Output/homebrew 5e/statblock new.july_24.txt"
+  },
+  {
+    "filename": "statblock_oldest.txt",
+    "relative_path": "Output/homebrew 5e/statblock_oldest.txt",
+    "category": "Output",
+    "tags": [],
+    "excerpt": "[Choose target CR.]",
+    "source_path": "Output/homebrew 5e/statblock_oldest.txt"
+  },
+  {
+    "filename": "Story_beat_adv.md",
+    "relative_path": "Prose/Story_beat_adv.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "Part 1:",
+    "source_path": "Prose/Story_beat_adv.md"
+  },
+  {
+    "filename": "HeroJourneyPlot_v1.txt",
+    "relative_path": "Prose/Structures/HeroJourneyPlot_v1.txt",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "Introduction / Status Quo",
+    "source_path": "Prose/Structures/HeroJourneyPlot_v1.txt"
+  },
+  {
+    "filename": "StoryStructure_101_v1.txt",
+    "relative_path": "Prose/Structures/StoryStructure_101_v1.txt",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "# Narrative Structure: \"Story Structure 101: Super Basic Shit\"",
+    "source_path": "Prose/Structures/StoryStructure_101_v1.txt"
+  },
+  {
+    "filename": "bring_ur_outline.md",
+    "relative_path": "Prose/bring_ur_outline.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "Part 1:",
+    "source_path": "Prose/bring_ur_outline.md"
+  },
+  {
+    "filename": "character_profile.md",
+    "relative_path": "Prose/character_profile.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "You are an expert at crafting well-rounded, dynamic characters. We're going to create a character profile for the [protagonist/antagonist/mentor/etc.] of my [GENRE] book. The finished profile should be 1500 words long. Here is what I know so far about the character:",
+    "source_path": "Prose/character_profile.md"
+  },
+  {
+    "filename": "simple_style_prompt.md",
+    "relative_path": "Prose/simple_style_prompt.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "First person past point of view of [main character], show don't tell, deep point of view. Realistic dialogue. Stronger verbs. Lots of conflict, drama, and description. Avoid mushy descriptions/dialogue.",
+    "source_path": "Prose/simple_style_prompt.md"
+  },
+  {
+    "filename": "story_beat_simple.md",
+    "relative_path": "Prose/story_beat_simple.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "Take the following chapter summary, and generate a list of 12 highly detailed action beats with additional story information to fully flesh out the chapter and prepare it for a ghostwriter to write. Make sure to always use proper nouns instead of pronouns.",
+    "source_path": "Prose/story_beat_simple.md"
+  },
+  {
+    "filename": "story_hacker.md",
+    "relative_path": "Prose/story_hacker.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "You are an expert literary analyst tasked with analyzing a chapter of fiction text or a scene from a screenplay. Your goal is to provide a few simple bullet points that will act as a template for the scene.",
+    "source_path": "Prose/story_hacker.md"
+  },
+  {
+    "filename": "style_prompt_example.md",
+    "relative_path": "Prose/style_prompt_example.md",
+    "category": "Prose",
+    "tags": [],
+    "excerpt": "Point of view (first person, third person limited, third person omniscient, etc.)",
+    "source_path": "Prose/style_prompt_example.md"
+  },
+  {
+    "filename": "Chain-statblock-to-md.txt",
+    "relative_path": "Ressources/Chain-statblock-to-md.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "Make me this NPC statblock:",
+    "source_path": "Ressources/Chain-statblock-to-md.txt"
+  },
+  {
+    "filename": "Reference_CreatureRoles_v1.txt",
+    "relative_path": "Ressources/Reference_CreatureRoles_v1.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "Creature roles are a valuable tool for creating engaging and diverse encounters. While incorporating every role into a combat encounter can overly complicate things for most groups, a battle with creatures all sharing the same role can lead to uninteresting, monotonous combat experiences. Few players (or GMs) find satisfaction in combat scenarios where both sides merely exchange blows without any dynamic or dramatic elements. For example, an encounter featuring a controller, a skirmisher, and two soldiers promises more excitement and enjoyment compared to an encounter with four soldiers alone.",
+    "source_path": "Ressources/Reference_CreatureRoles_v1.txt"
+  },
+  {
+    "filename": "Reference_Minigames_v1.txt",
+    "relative_path": "Ressources/Reference_Minigames_v1.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "1. **Drinking Contest**:",
+    "source_path": "Ressources/Reference_Minigames_v1.txt"
+  },
+  {
+    "filename": "Reference_TerrainFeatures_v1.txt",
+    "relative_path": "Ressources/Reference_TerrainFeatures_v1.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "Terrain Features",
+    "source_path": "Ressources/Reference_TerrainFeatures_v1.txt"
+  },
+  {
+    "filename": "big_list_rpg.md",
+    "relative_path": "Ressources/big_list_rpg.md",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "# Core Plot Engine System — Refactored Specification",
+    "source_path": "Ressources/big_list_rpg.md"
+  },
+  {
+    "filename": "game master apply template.txt",
+    "relative_path": "Ressources/game master apply template.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "# 5th Edition D&D Monster Templates Guide",
+    "source_path": "Ressources/game master apply template.txt"
+  },
+  {
+    "filename": "monster features raw.txt",
+    "relative_path": "Ressources/monster features raw.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "Aggressive. As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.",
+    "source_path": "Ressources/monster features raw.txt"
+  },
+  {
+    "filename": "monster template.txt",
+    "relative_path": "Ressources/monster template.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "## Template System for Modifying Monsters and NPCs",
+    "source_path": "Ressources/monster template.txt"
+  },
+  {
+    "filename": "monster_features.txt",
+    "relative_path": "Ressources/monster_features.txt",
+    "category": "Ressources",
+    "tags": [],
+    "excerpt": "# Comprehensive Monster Creation Reference",
+    "source_path": "Ressources/monster_features.txt"
+  },
+  {
+    "filename": "database_schema.md",
+    "relative_path": "database_schema.md",
+    "category": "database_schema.md",
+    "tags": [],
+    "excerpt": "# Database Schema: Google Cloud Firestore",
+    "source_path": "database_schema.md"
+  },
+  {
+    "filename": "dungeon-master-guide.txt",
+    "relative_path": "dungeon-master-guide.txt",
+    "category": "dungeon-master-guide.txt",
+    "tags": [],
+    "excerpt": "# Dungeon Master's Guide to Creation and Management",
+    "source_path": "dungeon-master-guide.txt"
+  },
+  {
+    "filename": "dungeon-master-toolkit.txt",
+    "relative_path": "dungeon-master-toolkit.txt",
+    "category": "dungeon-master-toolkit.txt",
+    "tags": [],
+    "excerpt": "# Dungeon Master's Toolkit",
+    "source_path": "dungeon-master-toolkit.txt"
+  },
+  {
+    "filename": "index.json",
+    "relative_path": "index.json",
+    "category": "index.json",
+    "tags": [],
+    "excerpt": "[",
+    "source_path": "index.json"
+  },
+  {
+    "filename": "manifest.json",
+    "relative_path": "manifest.json",
+    "category": "manifest.json",
+    "tags": [],
+    "excerpt": "{",
+    "source_path": "manifest.json"
+  },
+  {
+    "filename": "manifest.yaml",
+    "relative_path": "manifest.yaml",
+    "category": "manifest.yaml",
+    "tags": [],
+    "excerpt": "Engines:",
+    "source_path": "manifest.yaml"
+  }
+]

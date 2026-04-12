@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler 10-Room Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "parchment-light": "#fdf6e3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                        "wax-red": "#a11d1d",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 10;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 8px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .parchment-bubble {
+                filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+                position: relative;
+                border: 1px solid rgba(125, 99, 68, 0.3);
+            }
+            .parchment-bubble::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+                opacity: 0.1;
+                pointer-events: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30 overflow-hidden">
+<div class="flex h-screen w-full overflow-hidden">
+<aside class="w-20 bg-chronicle-brown text-white flex flex-col items-center py-8 border-r-2 border-chronicle-red/20 z-40">
+<div class="size-12 bg-chronicle-red rounded flex items-center justify-center border-2 border-white/20 shadow-lg mb-10">
+<span class="material-symbols-outlined text-white text-3xl">menu_book</span>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="text-chronicle-red hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">home</span>
+</a>
+<a class="text-stone-500 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</a>
+<a class="text-stone-500 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">explore</span>
+</a>
+<a class="text-stone-500 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">history_edu</span>
+</a>
+</nav>
+<div class="mt-auto space-y-6 flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover shadow-inner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOgKoX8-X3uR69Mxf_JeQA4Ufg8-rppOW5fJYnrVqStlP-DnIyZsZXDQC4SVWoOWvuzm_PEHGaDKFURkM9bJIdrV6o5-yc4Bwrq403XQdHPA17LhZcSPmzrAodop6mtJB07an4d9Y50_gnS0acqs10yJ27qpru6Jt6Iq_EsYc8b2awLWQcsqodm2MiOdCX57vqQkayvLQm6uaRchbPoyLwiQdGZSlzSHuUg1rkWHUaqCd4sLPYdYLXXQ1n-18EsqA-VYFn48Mq');"></div>
+<a class="text-stone-500 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">settings</span>
+</a>
+</div>
+</aside>
+<aside class="w-80 bg-stone-100/50 backdrop-blur-sm flex flex-col border-r-2 border-medium-brown/20 z-30 shadow-xl overflow-hidden">
+<div class="p-6 border-b border-medium-brown/20 bg-parchment-base/30">
+<h2 class="font-header text-2xl text-ink-dark tracking-wide uppercase mb-4">Dungeon Ledger</h2>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-2 bg-white/40 rounded border border-medium-brown/10 shadow-sm">
+<span class="material-symbols-outlined text-chronicle-red text-xl">location_on</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter opacity-60">Location</span>
+<span class="text-sm font-header">Sunken Crypt of Oros</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 bg-white/40 rounded border border-medium-brown/10 shadow-sm">
+<span class="material-symbols-outlined text-chronicle-red text-xl">psychology</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter opacity-60">Purpose</span>
+<span class="text-sm font-header">Ancient Ossuary</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 bg-white/40 rounded border border-medium-brown/10 shadow-sm">
+<span class="material-symbols-outlined text-chronicle-red text-xl">person_2</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter opacity-60">Creator</span>
+<span class="text-sm font-header">High Priest Malakor</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar p-6">
+<h3 class="font-header text-sm tracking-widest text-medium-brown uppercase mb-4 border-b border-medium-brown/10 pb-1">10-Room Key</h3>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="font-header text-chronicle-red text-lg w-4">1.</span>
+<div class="flex flex-col">
+<span class="font-header text-sm uppercase">The Whispering Vestibule</span>
+<span class="text-[11px] italic opacity-70">Entrance with magical acoustics.</span>
+</div>
+</li>
+<li class="flex gap-3">
+<span class="font-header text-chronicle-red text-lg w-4">2.</span>
+<div class="flex flex-col">
+<span class="font-header text-sm uppercase">Hall of Eternal Vigil</span>
+<span class="text-[11px] italic opacity-70">Guarded by stone sentinels.</span>
+</div>
+</li>
+<li class="flex gap-3 opacity-30">
+<span class="font-header text-stone-400 text-lg w-4">3.</span>
+<span class="font-header text-sm uppercase self-center italic">Undiscovered...</span>
+</li>
+<li class="flex gap-3 opacity-30">
+<span class="font-header text-stone-400 text-lg w-4">4.</span>
+<span class="font-header text-sm uppercase self-center italic">Undiscovered...</span>
+</li>
+<li class="flex gap-3 opacity-20">
+<span class="font-header text-stone-400 text-lg w-4">5.</span>
+</li>
+<li class="flex gap-3 opacity-20">
+<span class="font-header text-stone-400 text-lg w-4">6.</span>
+</li>
+<li class="flex gap-3 opacity-20">
+<span class="font-header text-stone-400 text-lg w-4">7.</span>
+</li>
+<li class="flex gap-3 opacity-20">
+<span class="font-header text-stone-400 text-lg w-4">8.</span>
+</li>
+<li class="flex gap-3 opacity-20">
+<span class="font-header text-stone-400 text-lg w-4">9.</span>
+</li>
+<li class="flex gap-3 opacity-20">
+<span class="font-header text-stone-400 text-lg w-4">10.</span>
+</li>
+</ul>
+</div>
+</aside>
+<main class="flex-1 parchment-texture flex flex-col grit-overlay overflow-hidden">
+<header class="px-10 py-6 border-b border-medium-brown/30 bg-parchment-base/40 relative z-20 flex justify-between items-end">
+<div>
+<h1 class="font-header text-4xl text-ink-dark">Conversational 10-Room Generator</h1>
+<p class="font-body italic text-chronicle-red text-sm mt-1">Guided by the JP Cooper Method</p>
+</div>
+<div class="flex gap-3 pb-1">
+<span class="bg-[#f8d7da] text-chronicle-red border border-red-200 px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase shadow-sm">SESSION ACTIVE</span>
+<span class="bg-ink-dark text-parchment-base px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase shadow-sm">MASTER: THE MASTER</span>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto custom-scrollbar p-10 space-y-8 relative z-10">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-header text-chronicle-red text-xs uppercase tracking-widest">STORYTELLER</span>
+<div class="h-[1px] flex-1 bg-chronicle-red/20"></div>
+</div>
+<div class="parchment-bubble bg-parchment-light p-5 rounded-tr-3xl rounded-br-3xl rounded-bl-3xl shadow-sm border-l-4 border-l-chronicle-red">
+<p class="leading-relaxed">Well met, Master. We have established the <span class="font-bold text-chronicle-red">Sunken Crypt of Oros</span> as an ancient ossuary created by Malakor. The first two rooms are set.</p>
+<p class="mt-4 leading-relaxed italic">"Beyond the Hall of Eternal Vigil, what challenge awaits those who seek the inner sanctum? Is it a physical obstacle, or a test of the spirit?"</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2 max-w-2xl ml-auto">
+<div class="flex items-center gap-2 mb-1 w-full">
+<div class="h-[1px] flex-1 bg-medium-brown/20"></div>
+<span class="font-header text-medium-brown text-xs uppercase tracking-widest">THE MASTER</span>
+</div>
+<div class="bg-chronicle-brown text-parchment-base p-5 rounded-tl-3xl rounded-bl-3xl rounded-br-3xl shadow-lg border border-chronicle-brown">
+<p class="leading-relaxed">Room 3 should be a flooded chamber. A puzzle involving rising water levels and floating sarcophagi. Let's make it dangerous if they fail the logic check.</p>
+</div>
+</div>
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-header text-chronicle-red text-xs uppercase tracking-widest">STORYTELLER</span>
+<div class="h-[1px] flex-1 bg-chronicle-red/20"></div>
+</div>
+<div class="parchment-bubble bg-parchment-light p-5 rounded-tr-3xl rounded-br-3xl rounded-bl-3xl shadow-sm border-l-4 border-l-chronicle-red">
+<p class="leading-relaxed">Splendid. A watery grave for the slow-witted. I shall dub this <span class="font-bold text-chronicle-red">The Drowning Vaults</span>.</p>
+<p class="mt-4 leading-relaxed font-header uppercase tracking-wide">Should this chamber contain the first fragment of the Malakor Relic, or is it merely a deadly diversion?</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-parchment-base/60 backdrop-blur-md border-t border-medium-brown/30 relative z-20">
+<div class="max-w-4xl mx-auto">
+<div class="flex gap-2 mb-4">
+<button class="bg-parchment-base border border-medium-brown/50 hover:bg-white hover:border-chronicle-red transition-all px-4 py-2 rounded shadow-sm flex items-center gap-2 group">
+<span class="material-symbols-outlined text-chronicle-red text-sm group-hover:rotate-180 transition-transform">casino</span>
+<span class="font-header text-xs text-ink-dark uppercase tracking-wider">Roll Idea</span>
+</button>
+<button class="bg-parchment-base border border-medium-brown/50 hover:bg-white hover:border-chronicle-red transition-all px-4 py-2 rounded shadow-sm flex items-center gap-2 group">
+<span class="material-symbols-outlined text-chronicle-red text-sm group-hover:scale-125 transition-transform">auto_awesome</span>
+<span class="font-header text-xs text-ink-dark uppercase tracking-wider">Roll 3 Ideas</span>
+</button>
+<button class="bg-parchment-base border border-medium-brown/50 hover:bg-white hover:border-chronicle-red transition-all px-4 py-2 rounded shadow-sm flex items-center gap-2 group">
+<span class="material-symbols-outlined text-chronicle-red text-sm">skull</span>
+<span class="font-header text-xs text-ink-dark uppercase tracking-wider">Roll Genre: <span class="text-chronicle-red">Grimdark</span></span>
+</button>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-white/80 border-2 border-medium-brown/30 rounded-lg p-5 pr-32 font-body text-lg focus:ring-chronicle-red focus:border-chronicle-red shadow-inner placeholder:italic placeholder:text-stone-400" placeholder="Speak your decree to the Chronicler..." type="text"/>
+<button class="absolute right-3 bg-chronicle-red hover:bg-dnd-red text-white font-header px-6 py-2 rounded shadow-md transition-all active:scale-95 flex items-center gap-2 uppercase tracking-widest text-sm">
+<span>Send</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+<p class="text-[10px] text-center mt-3 uppercase tracking-[0.2em] font-header opacity-40">Press [ENTER] to weave the narrative</p>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

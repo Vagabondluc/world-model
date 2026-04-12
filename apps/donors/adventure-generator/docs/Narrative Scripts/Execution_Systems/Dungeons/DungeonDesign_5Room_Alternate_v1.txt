@@ -1,0 +1,18 @@
+Compose a narrative for a role-playing game adventure using a series of interconnected scenes. Each scene should contribute to the overall adventure in a meaningful way and include the following details:
+
+Summary: Provide a brief overview of the scene's purpose and its role in the storyline.
+Characters: Detail the key characters present in the scene, including their roles, motivations, and any essential dialogue or actions.
+Setting: Describe the environment where the scene takes place, and note any significant features or elements that might impact the characters' actions.
+Challenge: Explain the main conflicts, puzzles, or challenges that the player characters will face. These should include a mix of combat encounters, role-play situations, and problem-solving tasks.
+Outcomes: Offer possible results based on different player choices, to illustrate the impact of their decisions on the narrative.
+Transitions: Suggest ways to shift to the next scene. Include alternative routes based on players' choices to allow for a non-linear progression through the adventure.
+The narrative should be divided into the following stages:
+
+Prep & Intro: Set up the world, characters, and inciting incident. This stage should be static in the narrative.
+Flex Order - Overcoming Challenges: Scenes where characters face various trials. These could include combat encounters, role-playing situations, or problem-solving tasks. The sequence of these scenes is flexible and can be adapted to fit the narrative and player choices.
+Midpoint - Twist or Setback: A critical point that disrupts the narrative's trajectory, increasing the tension in the story. This should be a static scene in the narrative.
+Flex Order - Solving Puzzles/Facing Roleplay Challenges: Scenes where characters grapple with intellectual or interpersonal challenges. Like the "Overcoming Challenges" stage, this stage can be flexible in its sequence within the narrative.
+Climax & Confrontation: The most intense and critical scenes, representing the peak of the story's tension. Here, the characters' actions will have the most significant impact.
+Resolution & Denouement: Scenes that wrap up the story, tying up loose ends and offering some form of closure.
+Epilogue: Offer a wrap-up to the narrative and potential hooks for future adventures.
+In each stage and scene, interweave setting details, character development, goal progression, dramatic action, conflict, emotional shifts, and thematic significance. The adventure should provide an engaging and challenging experience for players, with enough flexibility to adapt to various strategies and choices.

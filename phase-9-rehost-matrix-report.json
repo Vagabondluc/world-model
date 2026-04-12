@@ -1,0 +1,478 @@
+{
+  "ok": true,
+  "mode": "report-only",
+  "workspace_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "app_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+  "report_path": "D:/coding/AI/Chat-Gpt-Agent/world-model/phase-9-rehost-matrix-report.json",
+  "checks": [],
+  "donors": {
+    "mythforge": {
+      "id": "mythforge",
+      "label": "Mythforge",
+      "classification": "app donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mythforge",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount mythforge through DonorSubappHost so /donor/mythforge renders the vendored donor runtime instead of a scaffold placeholder."
+    },
+    "orbis": {
+      "id": "orbis",
+      "label": "Orbis",
+      "classification": "app donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/orbis",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount orbis through DonorSubappHost so /donor/orbis renders the vendored donor runtime instead of a scaffold placeholder."
+    },
+    "adventure-generator": {
+      "id": "adventure-generator",
+      "label": "Adventure Generator",
+      "classification": "app donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/adventure-generator",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount adventure-generator through DonorSubappHost so /donor/adventure-generator renders the vendored donor runtime instead of a scaffold placeholder."
+    },
+    "mappa-imperium": {
+      "id": "mappa-imperium",
+      "label": "Mappa Imperium",
+      "classification": "app donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/mappa-imperium",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount mappa-imperium through DonorSubappHost so /donor/mappa-imperium renders the vendored donor runtime instead of a scaffold placeholder."
+    },
+    "dawn-of-worlds": {
+      "id": "dawn-of-worlds",
+      "label": "Dawn of Worlds",
+      "classification": "app donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/dawn-of-worlds",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount dawn-of-worlds through DonorSubappHost so /donor/dawn-of-worlds renders the vendored donor runtime instead of a scaffold placeholder."
+    },
+    "faction-image": {
+      "id": "faction-image",
+      "label": "Sacred Sigil Generator",
+      "classification": "app donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/faction-image",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount faction-image through DonorSubappHost so /donor/faction-image renders the vendored donor runtime instead of a scaffold placeholder."
+    },
+    "watabou-city": {
+      "id": "watabou-city",
+      "label": "Watabou City",
+      "classification": "clean-room app donor",
+      "mountKind": "rehost-mounted",
+      "implementationStatus": "rehost-mounted",
+      "derivedStatus": "rehost-mounted",
+      "sourceVendored": true,
+      "routeMounted": true,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/watabou-city",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: rehost-mounted",
+          "implementationStatus: rehost-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: rehost-mounted",
+          "sourceVendored: True",
+          "routeMounted: True",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Enable donor Playwright E2E for watabou-city and rerun the donor-to-world-model parity contract."
+    },
+    "encounter-balancer": {
+      "id": "encounter-balancer",
+      "label": "Encounter Balancer Scaffold",
+      "classification": "scaffold-copy donor",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "derivedStatus": "source-vendored",
+      "sourceVendored": true,
+      "routeMounted": false,
+      "bridgeWired": true,
+      "parityCertified": true,
+      "e2eEnabled": false,
+      "exactMounted": false,
+      "missing": [
+        "routeMounted",
+        "e2eEnabled",
+        "exactMounted"
+      ],
+      "evidence": {
+        "sourceVendored": [
+          "vendored root: D:/coding/AI/Chat-Gpt-Agent/world-model/apps/donors/encounter-balancer",
+          "package.json: present",
+          "WorldModelDonorApp.tsx: present",
+          "nontrivial source: present"
+        ],
+        "routeMounted": [
+          "DonorSubappHost import: present",
+          "mountKind: scaffold-mounted",
+          "implementationStatus: scaffold-mounted"
+        ],
+        "bridgeWired": [
+          "projector: present",
+          "actionTranslator: present",
+          "bridge tests: all present",
+          "bridge suite: passed"
+        ],
+        "parityCertified": [
+          "conformance suite: present",
+          "placeholder evidence: clean",
+          "exactness suite: passed",
+          "phase9b suite: passed"
+        ],
+        "e2eEnabled": [
+          "phase-9 donor e2e suite: skipped because donor routes are not yet exact-mounted and parity-certified; wire donor subapps and promote exactness before browser parity"
+        ],
+        "exactMounted": [
+          "claimed implementationStatus: scaffold-mounted",
+          "sourceVendored: True",
+          "routeMounted: False",
+          "bridgeWired: True",
+          "parityCertified: True",
+          "e2eEnabled: False"
+        ]
+      },
+      "nextAction": "Mount encounter-balancer through DonorSubappHost so /donor/encounter-balancer renders the vendored donor runtime instead of a scaffold placeholder."
+    }
+  },
+  "summary": {
+    "sourceVendored": 8,
+    "routeMounted": 1,
+    "bridgeWired": 8,
+    "parityCertified": 8,
+    "e2eEnabled": 0,
+    "exactMounted": 0,
+    "total": 8,
+    "routeMountedOrExact": 1,
+    "sourceRootClassifications": {
+      "mythforge": "source-vendored",
+      "orbis": "source-vendored",
+      "adventure-generator": "source-vendored",
+      "mappa-imperium": "source-vendored",
+      "dawn-of-worlds": "source-vendored",
+      "faction-image": "source-vendored",
+      "watabou-city": "rehost-mounted",
+      "encounter-balancer": "source-vendored"
+    }
+  },
+  "errors": []
+}

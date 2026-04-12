@@ -1,0 +1,1 @@
+Take the following chapter summary, and generate a list of 12 highly detailed action beats with additional story information to fully flesh out the chapter and prepare it for a ghostwriter to write. Make sure to always use proper nouns instead of pronouns.

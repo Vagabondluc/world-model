@@ -1,0 +1,90 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Create Hook".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: create_hook
+
+```text
++--------------------------------------------------------------------------------+
+|  [Scenario Hook Generator: Narrative Entry Point]                     [?] [X]  |
++--------------------------------------------------------------------------------+
+|  HOOK ARCHETYPE: [ Twisted Hook ] [V]  [X] Use Evocative Language               |
++--------------------------------------------------------------------------------+
+|  FOUNDATION                            |  HOOK SPECIFICS (Archetype: Twisted)  |
+|  Location: [ Seaside Manor ]           |  The Truth: [ The owner is a vampire ]|
+|  NPCs:     [ Lord Byron ]              |  The Lie:   [ "The manor is haunted" ]|
+|  Conflict: [ Disappearing staff ]      |  Patron:    [ A terrified maid ]      |
++----------------------------------------+---------------------------------------+
+|  GENERATED HOOK (Preview)                                                      |
+|  "A young maid clutched a silver cross, her eyes wide with terror as she       |
+|  whispered of the 'ghostly wails' coming from the basement... but the iron     |
+|  smell of blood on her apron suggests a far more physical horror."             |
++--------------------------------------------------------------------------------+
+|  DEPTH & INTRIGUE                      |  ACTIONABLE STEPS                     |
+|  - [X] Add Hidden Agenda               |  1. [ Interview the gardener ]        |
+|  - [X] Suggest Consequences            |  2. [ Inspect the basement at night ] |
++--------------------------------------------------------------------------------+
+|  [Generate Hook Details] [Export Handout] [Save to Scenario File]     [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: create_hook
+
+## Component Architecture
+- **Hook Archetype Selector:** The primary controller that defines the logic of the entire UI. Selecting one of the 9 types (Dilemma, Bait, Patronage, etc.) changes the available input fields in the "Hook Specifics" section.
+- **Scenario Foundation Panel:** Captures the "Bones" of the adventure (Who, Where, What) to ensure the hook is properly anchored in the game world.
+- **Dynamic Archetype Module:**
+    - If **Dilemma**: Provides fields for two conflicting motivations.
+    - If **Twisted**: Provides fields for "The Truth" vs "The Lie."
+    - If **Treasure Map**: Provides fields for cryptic clues and physical descriptions of the object.
+- **Sensory & Evocation Suite:** A set of toggles and text areas designed to ensure the description is "Vivid" and "Multi-sensory."
+- **Next Steps Console:** Focuses on actionability, forcing the generation of clear "Points of Investigation" for the players.
+
+## Interaction Logic
+- **Constraint-Based Generation:** The UI enforces the script's requirement to define basic scenario elements *before* crafting the hook details.
+- **Consequence Engine:** Based on the "Conflict" input, the UI automatically proposes 2-3 consequences for failure to engage with the hook.
+- **Handout Formatter:** Automatically creates a player-facing version of the hook (e.g., a "Patron's Letter" or an "Overheard Rumor") based on the drafted details.
+
+## Visual Design
+- **Narrative-Focus Board:** A clean, split-pane layout. The left side handles the "Utility/Foundation," while the right side handles the "Creative Archetype" details.
+- **Archetype Iconography:** Unique icons for each hook type (e.g., a map for Treasure, a masked face for Twisted, a shield for Confrontation).
+- **Drafting-Pad Aesthetic:** Uses light-themed, parchment-like backgrounds for the "Hook Preview" to keep the focus on the prose.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: create_hook
+
+# Scenario Hook: The Whispers of the Silvercross Manor
+
+**Hook Type:** Twisted Hook
+**Scenario Overview:** An investigation into a "haunted" manor that is actually the feeding ground for a fledgling vampire.
+
+### Foundation:
+- **Location:** Silvercross Manor, a lonely estate overlooking the Salt-Bluff.
+- **NPCs:** Lord Byron (the master), Elisa (the maid/patron), The "Grey Lady" (the supposed ghost).
+- **Core Conflict:** Lord Byron has become a vampire and is slowly consuming his staff, using the legend of a family ghost to cover his tracks.
+
+### The Hook:
+A frantic young woman named Elisa approaches you in the tavern. Her hands tremble as she presents a blood-stained handkerchief. "The Grey Lady has returned," she sobs, her voice a ragged whisper. "She took the stable boy last night. You can hear her wailing behind the bricked-up doors of the cellar. Please, before she takes me too!"
+
+### Depth & Intrigue:
+- **The Twist:** The "wailing" isn't a ghost; it's a surviving victim trapped in a blood-storage room.
+- **Hidden Agenda:** Elisa knows more than she's saying. She's seen Lord Byron with blood on his chin but is too terrified to admit it, settling on the "ghost" story to get help without being accused of treason against her lord.
+
+### Actionable Next Steps:
+1. **Engage with Elisa:** She can be convinced to give you the cellar key if shown a sign of divine protection.
+2. **Investigation Point:** Inspecting the Salt-Bluff cliffs might reveal where Byron "disposes" of the fully drained corpses.
+3. **The Confrontation:** Byron invites the PCs to dinner to "discuss the ghost," actually intending to size them up as potential thralls.
+

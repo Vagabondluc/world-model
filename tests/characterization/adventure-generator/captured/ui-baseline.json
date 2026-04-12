@@ -1,0 +1,21 @@
+{
+  "donor": "adventure-generator",
+  "basis": "captured",
+  "panels": [
+    "Workflow registry",
+    "Guided steps",
+    "Checkpoints",
+    "Generated outputs"
+  ],
+  "controls": [
+    "Create linked entity",
+    "Start generator",
+    "Resume",
+    "Inspect output"
+  ],
+  "visibleStates": [
+    "no workflow records",
+    "no checkpoints",
+    "no outputs"
+  ]
+}

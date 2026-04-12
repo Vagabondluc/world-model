@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pointy Hat Dungeon Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .step-card {
+                @apply bg-[#fef9eb] border border-medium-brown shadow-sm p-8 relative;
+            }
+            .roman-numeral {
+                @apply font-header text-chronicle-red opacity-30 text-4xl absolute top-4 right-6;
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-[#f5e8c3]">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1 font-noto">Thematic Suite</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-[#922610] text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">fort</span>
+<span class="font-header tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-header tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="font-header tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover bg-stone-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400">person</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest font-noto">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-[#922610] hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">humerus</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 parchment-texture overflow-y-auto custom-scrollbar relative grit-overlay">
+<div class="relative z-10 px-12 py-12 flex flex-col gap-8 max-w-7xl mx-auto">
+<header class="flex flex-col gap-2 border-b-4 border-chronicle-red/20 pb-8">
+<h2 class="font-header text-6xl text-ink-dark drop-shadow-sm">Pointy Hat: Thematic Dungeon Suite</h2>
+<p class="text-chronicle-red font-body italic text-xl font-semibold opacity-90">Transforming single-word concepts into mechanical masterpieces.</p>
+</header>
+<div class="flex flex-col gap-8">
+<section class="step-card">
+<span class="roman-numeral">I</span>
+<h3 class="font-noto text-xs tracking-[0.25em] text-medium-brown uppercase mb-4">One Word Theme</h3>
+<div class="flex gap-4">
+<input class="flex-1 bg-transparent border-b-2 border-chronicle-red/30 focus:border-chronicle-red outline-none font-header text-4xl text-ink-dark py-2 placeholder-stone-400 px-0 focus:ring-0" type="text" value="DECAY"/>
+<button class="bg-chronicle-red text-white font-header px-6 py-2 rounded shadow-md hover:bg-red-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_fix</span>
+                            AUTOSUGGEST
+                        </button>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<section class="step-card">
+<span class="roman-numeral">II</span>
+<h3 class="font-noto text-xs tracking-[0.25em] text-medium-brown uppercase mb-4">Mechanics</h3>
+<div class="border-l-4 border-chronicle-red/20 pl-4 py-2">
+<h4 class="font-header text-2xl text-chronicle-red mb-2 uppercase">The Toll of Rot</h4>
+<textarea class="w-full bg-transparent border-none focus:ring-0 p-0 font-body text-lg italic text-ink-dark/80 h-24 resize-none">Healing is halved. Any hit point regained by magical means is reduced by 50% as the dungeon's theme saps vitality.</textarea>
+</div>
+</section>
+<section class="step-card">
+<span class="roman-numeral">III</span>
+<h3 class="font-noto text-xs tracking-[0.25em] text-medium-brown uppercase mb-4">The Goal</h3>
+<div class="border-l-4 border-chronicle-red/20 pl-4 py-2">
+<h4 class="font-header text-2xl text-chronicle-red mb-2 uppercase">Sanctify the Heart</h4>
+<textarea class="w-full bg-transparent border-none focus:ring-0 p-0 font-body text-lg italic text-ink-dark/80 h-24 resize-none">Reverse the curse of the rotting core before the chamber collapses into the void. Find the Bloom of Aethelgard.</textarea>
+</div>
+</section>
+</div>
+<section class="step-card">
+<span class="roman-numeral">IV</span>
+<h3 class="font-noto text-xs tracking-[0.25em] text-medium-brown uppercase mb-6">Encounters</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-3">
+<h4 class="font-header text-xl text-chronicle-red uppercase border-b border-chronicle-red/20 pb-2">Combat</h4>
+<p class="font-body text-sm leading-relaxed">Flesh-stitched guardians that release spores upon death, forcing constitution saves against exhaustion.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-header text-xl text-chronicle-red uppercase border-b border-chronicle-red/20 pb-2">Puzzle</h4>
+<p class="font-body text-sm leading-relaxed">The Echoing Sundial: Players must 'age' or 'rejuvenate' the room's elements to align spectral shadows.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-header text-xl text-chronicle-red uppercase border-b border-chronicle-red/20 pb-2">Roleplay</h4>
+<p class="font-body text-sm leading-relaxed">The Last Archivist, a sentient skull losing its memories, begs to be told a story that won't fade.</p>
+</div>
+</div>
+</section>
+<section class="step-card !bg-chronicle-red/5 border-2 border-chronicle-red/30">
+<span class="roman-numeral">V</span>
+<h3 class="font-noto text-xs tracking-[0.25em] text-medium-brown uppercase mb-4">The Ending (Synthesis)</h3>
+<div class="flex flex-col gap-4">
+<p class="font-body text-xl italic font-semibold leading-relaxed text-ink-dark">
+                            As the core is sanctified, the theme of "DECAY" transforms. The halving of healing ceases, replaced by a radiant burst. The boss—the source of the rot—doesn't just die; it becomes the soil from which new life in the setting grows, cementing the thematic journey from death to rebirth.
+                        </p>
+</div>
+</section>
+</div>
+<footer class="mt-8 py-10 flex justify-between items-center border-t border-medium-brown/20 opacity-60">
+<p class="font-header text-sm tracking-[0.2em] uppercase text-medium-brown">Dungeon Architect System // Vers. 4.2.0</p>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-chronicle-red">castle</span>
+<span class="material-symbols-outlined text-chronicle-red">skull</span>
+<span class="material-symbols-outlined text-chronicle-red">auto_stories</span>
+</div>
+</footer>
+</div>
+</main>
+</div>
+
+</body></html>

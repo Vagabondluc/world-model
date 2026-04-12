@@ -44,6 +44,42 @@
       ],
       "type": "object"
     },
+    "BiomeType": {
+      "oneOf": [
+        {
+          "enum": [
+            "forest",
+            "plains",
+            "desert",
+            "tundra",
+            "mountain",
+            "swamp",
+            "ocean",
+            "urban",
+            "ruins",
+            "cavern",
+            "volcanic",
+            "farmland",
+            "jungle",
+            "savanna",
+            "mystic"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "other": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "other"
+          ],
+          "type": "object"
+        }
+      ]
+    },
     "CanonicalBundle": {
       "properties": {
         "assets": {
@@ -115,6 +151,15 @@
         "Hidden",
         "Summary",
         "Diagnostic"
+      ],
+      "type": "string"
+    },
+    "DiscoveryStatus": {
+      "enum": [
+        "unknown",
+        "surveyed",
+        "settled",
+        "ruined"
       ],
       "type": "string"
     },
@@ -317,6 +362,28 @@
       ],
       "type": "string"
     },
+    "HexCoordinate": {
+      "properties": {
+        "q": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "r": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "s": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "q",
+        "r",
+        "s"
+      ],
+      "type": "object"
+    },
     "HumanMetadata": {
       "properties": {
         "label": {
@@ -343,10 +410,40 @@
     },
     "LocationAttachment": {
       "properties": {
+        "biome_type": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/BiomeType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "coordinate_ref": {
           "type": [
             "string",
             "null"
+          ]
+        },
+        "discovery_status": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/DiscoveryStatus"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "hex_coordinate": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/HexCoordinate"
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "hex_or_cell_ref": {
@@ -696,7 +793,21 @@
         {
           "enum": [
             "Genesis",
-            "Climate"
+            "Climate",
+            "Topography",
+            "Hydrology",
+            "Ecology",
+            "Population",
+            "Economy",
+            "Culture",
+            "Conflict",
+            "Magic",
+            "Resources",
+            "Infrastructure",
+            "Transportation",
+            "Governance",
+            "Technology",
+            "Demographics"
           ],
           "type": "string"
         },
@@ -755,6 +866,11 @@
             "Mythforge",
             "Orbis",
             "AdventureGenerator",
+            "MappaImperium",
+            "DawnOfWorlds",
+            "FactionImage",
+            "WatabouCity",
+            "EncounterBalancerScaffold",
             "Neutral"
           ],
           "type": "string"

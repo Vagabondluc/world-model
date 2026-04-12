@@ -1,0 +1,91 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Battlefield Generation".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: battlefield_generation
+
+```text
++--------------------------------------------------------------------------------+
+|  [Tactical Battlefield Architect: Matrix System]                       [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Theme: [ Frostfire Peaks ]   [Generate New Matrix]   [Export All Dossiers]    |
++--------------------------------------------------------------------------------+
+|  ELEMENT LIBRARY (Categories: 1-8)        |  NUMBER MATRIX (3 Rows x 5 Groups) |
+|  [ Elev: ] [ Terr: ] [ Hard: ] [ Soft: ]  |  Row 1: [3] [2] [8] [1] [5]        |
+|  1. Frozen Rrck   1. Deep Snow            |  Row 2: [1] [7] [4] [2] [8]        |
+|  2. Lava Crat.    2. Obsidian Sh..        |  Row 3: [5] [5] [2] [7] [3]        |
+|  ...              ...                     |  (Indices match Category columns)  |
++-------------------------------------------+------------------------------------+
+|  BATTLEFIELD GENERATOR (Selected: Row 1)                                       |
+|  Elements: [Lava Crag] [Ice Slush] [Basalt Pillars] [Steam] [Magma Geyser]     |
+|  Tactics: [ High Ground Control, Danger-Zone Navigation ]                      |
+|  Sensory: [ Smell of sulfur, blistering heat vs freezing wind ]                |
++--------------------------------------------------------------------------------+
+|  [Preview Narrative] [Generate VTT Overlay] [Finalize Battlefields]    [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: battlefield_generation
+
+## Component Architecture
+- **Interactive Element Matrix:** The core workspace where 40 unique tactical elements (8 per category) are defined. It allows the DM to build a "Thematic Palette" for their setting.
+- **Randomization Engine:** A visual 3x5 grid that performs the actual "Selection Logic" of the script. Each number in the matrix is an index that pulls a specific element from the library.
+- **Dynamic Scenario Synthesizer:** A narrative editor that takes the five indexed elements and weaves them into a "Cohesive Battlefield." It includes dedicated fields for Sensory Details and Tactical Considerations.
+- **Role-Based Tactical Overlay:** Provides specific advice for different PC types (Melee, Ranged, Spellcasters) based on the interaction of elevations and cover.
+- **Atmosphere & Sensing Modals:** Specialized tabs for "Vivid language" and "Sensory details" to help the DM narrate the environment effectively.
+
+## Interaction Logic
+- **Procedural Workflow:** The UI follows the script's 3-step process (Table -> Matrix -> Battlefields) to ensure logical progression.
+- **Manual Overrides:** While the matrix is randomized, the DM can manually click a number to swap a specific element (e.g., changing index 3 to index 5 to better fit a mid-session twist).
+- **Consolidated Manifest:** Generating the output creates a single document containing the Full Table, the Matrix, and the 3 distinct descriptions for easy session use.
+
+## Visual Design
+- **Tactical Grid Aesthetic:** Uses a clean, high-contrast layout that mimics a wargame command-center or VTT asset-manager.
+- **Column-to-Matrix Linking:** Visual lines or color-matching help the DM see exactly which element in the "Cover" column corresponds to the "3" in "Row 1" of the matrix.
+- **Status Icons:** Uses icons for common terrain types (Mountain for Elevation, Wall for Hard Cover, Cloud for Soft Cover) to improve scannability.
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: battlefield_generation
+
+### 1. Element Table: Frostfire Peaks
+
+- **Elevations (1-8):** Obsidian Crags, Floating Ice Platforms, Basalt Spires...
+- **Difficult Terrain (1-8):** Slush Pits, Shifting Cinders, Frozen Creeks...
+- **Hard Cover (1-8):** Stone Totems, Petrified Tree Trunks, Lava Cores...
+- **Soft Cover (1-8):** Steam Vents, Falling Ash, Hanging Icicles...
+- **Dangers (1-8):** Geothermal Jets, Slippery Ice-Slicks, Sulfuric Fumes...
+
+### 2. Number Matrix
+| Row | Elev | Terr | Hard | Soft | Danger |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Row 1** | 3 (Spires) | 2 (Cinders) | 8 (Cores) | 1 (Vents) | 5 (Jets) |
+| **Row 2** | 1 (Crags) | 7 (Ice) | 4 (Walls) | 2 (Ash) | 8 (Fumes) |
+| **Row 3** | 6 (Rims) | 5 (Slush) | 2 (Pillars) | 7 (Sleet) | 3 (Slicks) |
+
+### 3. Battlefield Description: The Boiling Tundra (Row 1)
+
+**Setting Overview:** A high-altitude caldera where the volcanic heat clashes with arctic winds. The air is thick with the scent of sulfur and ozone.
+
+**Elements & Impact:**
+- **Basalt Spires (Elev):** Jet-black pillars rise 20ft above the caldera, offering perfect sniping positions but making climbers vulnerable to the wind.
+- **Shifting Cinders (Terr):** The ground is a treacherous mix of hot ash and cold snow, reducing movement speed and potentially scorching light footwear.
+- **Lava Cores (Hard Cover):** Dense, obsidian-encrusted cores block line of sight and provide total cover from the prevalent steam vents.
+- **Steam Vents (Soft Cover):** Frequent bursts of hot mist obscure vision across the central valley, providing concealment for stealthy movement.
+- **Geothermal Jets (Danger):** Without warning, jets of superheated steam erupt from the floor. Characters must time their movements or risk fire damage.
+
+**Tactical Opportunities:**
+Ranged attackers will want to control the **Basalt Spires**, while melee combatants can use the **Steam Vents** to close the distance without being seen. The **Lava Cores** create a natural choke point around the central **Geothermal Jets**, forcing players to choose between the safety of cover and the risk of environmental damage.
+
+**Battlefield Dynamics:** 
+The primary dynamic is **Risk vs. Visibility**. The best cover is located near the worst terrain, and the best high ground is surrounded by hazardous jets. It is a high-tension arena that punishes static positioning.

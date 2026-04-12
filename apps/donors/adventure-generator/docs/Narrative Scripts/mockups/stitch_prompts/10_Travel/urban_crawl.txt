@@ -1,0 +1,91 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Urban Crawl".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Urban Crawl Navigator
+
+```text
++--------------------------------------------------------------------------------+
+|  [Urban Crawl Architect: City Exploration Hub]                        [?] [X]  |
++--------------------------------------------------------------------------------+
+|  CITY DISTRICT: [ The Docks & Warehouse District ] [V]                         |
+|  ACTIVE LAYERS: [x] Noir Gang Operations  [x] Vampire Blood Dens  [ ] Heists    |
++--------------------------------------------------------------------------------+
+|  INVESTIGATION DASHBOARD               |  DISTRICT GAZETTEER                   |
+|  Current Layer: Noir Gangs (Tier 2)    |  Key Points:                          |
+|  Heat Level: [|||||.....] 50%          |  - "The Gilded Anchor" (Inn)          |
+|  Action: [ Specific Layer: Gangs ] [V] |  - "Warehouse 14" (Crime Scene)       |
+|                                        |  - "Customs Office" (Faction Goal)    |
+|  [EXECUTE INVESTIGATION]               |                                       |
++----------------------------------------+---------------------------------------+
+|  TRIGGERED EVENTS & ENCOUNTERS                                                 |
+|  [!] AUTOMATIC: "A group of dockworkers are being harassed by watchmen."       |
+|  [RESOLVE EVENT] [LOG AS RUMOR]                                                |
++--------------------------------------------------------------------------------+
+|  FACTION IMPACT                        |  SENSORY JOURNEY                      |
+|  - Iron Syndicate: -5 Rep              |  "The smell of salt and rotting fish  |
+|  - City Watch: +2 Suspicion            |  fills the air as you cross the stone  |
+|                                        |  bridge into the Fog District..."     |
++--------------------------------------------------------------------------------+
+|  [Export District Report] [Update City Map]                            [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Urban Crawl Navigator
+
+## Component Architecture
+- **Metascenario Layer Controller:** A system of toggles that allows the DM to activate city-wide "themes" (e.g., Heists, Vampire Blood Dens). These layers inject specific content into general investigation actions.
+- **District Investigation Resolver:** The primary interaction engine. It handles both "General" (random layer) and "Specific" investigations, calculating difficulty and resolving narrative outcomes.
+- **Triggered Event Monitor:** A dedicated area for "District Keyed" content that fires automatically upon entry, bypassing the investigation action (similar to random encounters but location-fixed).
+- **Heat & Infamy Gauge:** A visual representation of the party's visibility in the city, scaling based on the intensity of their urban actions.
+- **Sensory Journey Engine:** A module that uses "Life in the City" logic to bridge the gap between districts with atmospheric prose.
+
+## Interaction Logic
+- **Layer Priority:** When multiple layers are active, the UI provides a logic to "weight" which theme is encountered during general exploration (e.g., if there's a Gang War, crime encounters are 3x more likely).
+- **Faction Feedback Loop:** Every resolved investigation automatically updates the Faction Impact panel, linking urban crawl results to the broader campaign power struggle.
+- **Automatic Link to Gazetteer:** Selecting a district pulls real-time data from the `city_gazetteer` mockup to show "Points of Interest" and "Key NPCs" as helpful context for the DM.
+
+## Visual Design
+- **Noir & Industrial:** The UI uses a grittier, high-contrast palette (charcoal, deep blues, neon accents) to evoke an urban-noir or high-fantasy city feel.
+- **Information Density:** Designed for DMs who need to manage multiple plot threads simultaneously; uses nested panels and tabbed interfaces to organize district data.
+- **Icon-Driven Toggles:** Layers and investigation types are represented by clear icons (e.g., a magnifying glass for General, a dagger for Crime Layer) to speed up decision-making.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Urban Crawl (District: The Shadowed Docks)
+
+### District Status:
+- **Active Layer:** Noir Gang Operations (The Iron Syndicate).
+- **Heat:** 60% (Watch presence increased).
+- **Entry Event:** A hooded figure drops a blood-stained ledger near the party's path.
+
+---
+
+### Investigation Result: "The Gilded Anchor Smugglers"
+(Action: Specific Layer Investigation - Noir Gangs)
+
+**Narrative Outcome:**
+You follow a tip regarding a shipment of forbidden spices. In the basement of the *Gilded Anchor*, you find members of the Iron Syndicate counting coin while a contact from the City Watch turns a blind eye. You have successfully identified the "Inside Man" at the docks.
+
+**Mechanical Impact:**
+- **Clue Found:** "Corrupt Officer: Lt. Vane."
+- **Reputation Change:** Iron Syndicate (-10), City Watch (-5).
+- **Next Step:** Confront Vane or blackmail the Syndicate.
+
+---
+
+### Sensory Journey (To The Old Quarter):
+"The salt-spray of the docks fades as you climb the spiral cobblestone streets of the Old Quarter. The smell of fish is replaced by the dry scent of parchment and extinguished candles from the nearby Great Library."
+

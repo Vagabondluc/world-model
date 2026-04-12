@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "name": "Create Exciting Encounter",
+    "category": "Encounters",
+    "description": "Generates a structured TTRPG encounter with environmental effects, challenges, NPCs, and rewards.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "party_level",
+      "type": "integer",
+      "label": "Party Level",
+      "description": "The average character level of the player party.",
+      "default": 5,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "party_size",
+      "type": "integer",
+      "label": "Party Size",
+      "description": "The number of player characters in the party.",
+      "default": 4,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "setting_description",
+      "type": "string",
+      "label": "Setting",
+      "description": "A brief description of the mystical realm or location where the encounter takes place.",
+      "default": "A fog-shrouded, ancient forest where trees whisper forgotten secrets.",
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "opponent_concept",
+      "type": "string",
+      "label": "Opponent Concept",
+      "description": "The core idea for the encounter's antagonist (e.g., 'a territorial griffon', 'a band of goblin smugglers', 'a deceptive forest spirit').",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "challenge_focus",
+      "type": "enum",
+      "label": "Challenge Focus",
+      "description": "The primary type of non-combat challenge to include.",
+      "default": "skill_challenge",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "skill_challenge",
+        "roleplay_scenario",
+        "puzzle",
+        "moral_dilemma"
+      ]
+    },
+    {
+      "name": "difficulty",
+      "type": "enum",
+      "label": "Difficulty",
+      "description": "The intended difficulty of the encounter.",
+      "default": "medium",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "easy",
+        "medium",
+        "hard",
+        "deadly"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "encounter_title",
+      "type": "string",
+      "label": "Encounter Title",
+      "description": "A compelling title for the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "encounter_summary",
+      "type": "string",
+      "label": "Encounter Summary",
+      "description": "A concise, 500-word narrative of the encounter for the Dungeon Master.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "environmental_effect",
+      "type": "object",
+      "label": "Environmental Effect",
+      "description": "An environmental effect with its specific in-game mechanics.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "label": "Effect Name",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "label": "Description",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "mechanics",
+          "type": "string",
+          "label": "Game Mechanics",
+          "description": "The specific rules and effects for players (e.g., 'DC 12 Wisdom save or disadvantage on perception checks').",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "central_challenge",
+      "type": "object",
+      "label": "Central Challenge",
+      "description": "The primary skill-based or role-playing obstacle for the players.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "type",
+          "type": "string",
+          "label": "Challenge Type",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "label": "Description",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "success_outcome",
+          "type": "string",
+          "label": "Success Consequences",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "failure_outcome",
+          "type": "string",
+          "label": "Failure Consequences",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "opponent_profile",
+      "type": "object",
+      "label": "Opponent Profile",
+      "description": "Detailed information about the encounter's antagonist.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "label": "Name",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "statblock_source",
+          "type": "string",
+          "label": "Statblock Source",
+          "description": "Where to find the official statblock (e.g., 'Monster Manual p. 169', or provide a custom one).",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "motivation",
+          "type": "string",
+          "label": "Motivation",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "goal",
+          "type": "string",
+          "label": "Goal",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "tactics",
+          "type": "string",
+          "label": "Tactics",
+          "description": null,
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "xp_reward",
+      "type": "object",
+      "label": "XP Reward",
+      "description": "The calculated experience points for the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "base_xp",
+          "type": "integer",
+          "label": "Base XP",
+          "description": "XP for defeating the opponent.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "challenge_bonus_xp",
+          "type": "integer",
+          "label": "Challenge Bonus XP",
+          "description": "Extra XP for succeeding at the central challenge.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "npc_profiles",
+      "type": "list",
+      "label": "NPC Profiles",
+      "description": "Profiles for any notable non-player characters involved.",
+      "default": null,
+      "item_schema": {
+        "name": "npc_profile",
+        "type": "object",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "label": "Name",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "role",
+            "type": "string",
+            "label": "Role in Encounter",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "personality",
+            "type": "string",
+            "label": "Personality Trait",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          }
+        ],
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    }
+  ]
+}

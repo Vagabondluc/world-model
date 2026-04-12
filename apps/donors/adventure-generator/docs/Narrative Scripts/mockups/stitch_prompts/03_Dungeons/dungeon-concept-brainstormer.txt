@@ -1,0 +1,96 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeon-Concept-Brainstormer".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Dungeon Detail & Expansion Suite
+
+```text
++--------------------------------------------------------------------------------+
+|  [Dungeon Details: Concept, Themes, & Advanced Layout]                [?] [X]  |
++--------------------------------------------------------------------------------+
+|  MODE: [ Concept Brainstormer ] [ 10-Room Wizard ] [ Corridor Studio ]         |
++--------------------------------------------------------------------------------+
+|  CONCEPT POD (Step 1: Focus)           |  GLOBAL FEATURES SUMMARY              |
+|  Focus: [ DENIZENS ] [V]               |  Light: [ Magical Dim (Purple) ]      |
+|  Creature Pairing: [ Spidery ][ Oozes ]|  Ceilings: [ 10ft Vaulted      ]      |
+|  Goal: [ Retrieve the Silk Key ]       |  Material: [ Slippery Obsidian ]      |
++----------------------------------------+---------------------------------------+
+|  10-ROOM WIZARD (Step 3: Env Complication)                                     |
+|  Current Hint: "Something making life difficult without combat..."             |
+|  Input: [ The floor is magnetized; metal gear drags behind you. ]               |
+|  [ < Prev Step ] [ Next Step > ] [ Roll for Me ]                               |
++--------------------------------------------------------------------------------+
+|  CORRIDOR THEME GENERATOR                                                      |
+|  Theme: [ Spidery Starlight ]                                                  |
+|  1. [ SIGHT: Sticky webbing that glows with faint blue light        ] [RE-ROLL]|
+|  2. [ SOUND: Dry skittering sounds from behind the obsidian walls   ] [RE-ROLL]|
+|  3. [ HAZARD: Patch of 'Slick Spores' (DC 13 Acrobatics or fall)   ] [RE-ROLL]|
++--------------------------------------------------------------------------------+
+|  [Save Concept] [Generate Full Tables] [Export Expanded Key]           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Dungeon Detail & Expansion Suite
+
+## Component Architecture
+- **Multimodal Workflow Hub:** A top-level switch that allows the GM to shift focus between high-level brainstorming (Step 1-7 of Concept script), structured room-building (JP Cooper method), and micro-level sensory detailing (Corridor and Features scripts).
+- **Interactive Concept Pod:** A specialized workspace for Step 2-4 of the Concept Brainstormer. It uses "Monster Manual Scan" and "Location Twist" tools to help the GM find a cohesive "Denizens + Location + Goal" triad.
+- **The 10-Room Wizard (Conversational):** A focused, one-prompt-per-step interface that implements the "JP Cooper 10 Room Dungeon" logic. It provides "Pro Tips" and "Logical Follow-Through" as the GM enters ideas or asks the script to "Roll."
+- **Sensory Detail Matrices:** A dense collection of inputs for Step 2 of the Corridor script and the Features Summarizer, ensuring at least three senses are addressed per area.
+- **Structural Non-Linearity Auditor (Xander-Tools):** A panel based on the "Xandered Dungeon Designer" that checks for "Loops," "Elevation Shifts," and "Discontinuous Connections" in the overall dungeon plan.
+
+## Interaction Logic
+- **"Roll X Ideas" Logic:** Buttons embedded in every field allow the GM to ask the AI to generate multiple options (as per Step 1 of the JP Cooper script), either randomly or based on a specific "Genre/Literary Work."
+- **Logical Chain Validator:** (JP Cooper Step 3) A background process that checks if the new input (e.g., Room 4 hint) contradicts the established Theme (Room 1).
+- **Thematic Bleed:** Themes established in the "Global Features Summary" automatically prepopulate the "Corridor Theme Generator" to maintain atmospheric consistency.
+
+## Visual Design
+- **Dense but Organized:** The UI uses a "Control Center" aesthetic with multiple collapsible modules. Information is categorized logically as per the Features Summarizer (Step 5).
+- **Progressive Disclosure:** Advanced Xandering techniques (Step 1-10 of Xandered script) are hidden behind an "Advanced Structural" tab to avoid overwhelming the user during basic brainstorming.
+- **Visual Roll-Results:** Tables (Step 5 of Corridor script) are displayed with clickable cells for manual overrides.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Dungeon Detail Suite - "The Silken Vault"
+
+### **1. Brainstormed Concept**
+- **Location:** An obsidian vault floating in a void of web-like nebulae.
+- **Denizens:** Spectral spiders and semi-transparent 'Ooze-Ghouls'.
+- **Goal:** Retrieve the 'Silk-Key' to unlock the passage to the Star-Core.
+- **Twist:** The 'webs' are actually solidified threads of memory.
+
+---
+
+### **2. 10-Room Flow (JP Cooper Method)**
+1. **Entrance Complication:** A field of 'Gravity-Grit'; metal gear becomes 2x heavier (Guts DC 15 to move).
+2. **Logical Room:** The 'Hall of Forgotten Portraits' (Setting the spidery/memory tone).
+3. **Environmental Complication:** The floor is made of 'Sticky Glass' (BASIC Danger of being restrained).
+4. **Helpful Information:** A portrait whispers the secret way to avoid the Glass Pit in Room 9.
+5. **Alternate Ally:** A trapped Spectral Spider named 'Xyx' who offers a shortcut in exchange for a 'Fresh Memory' (PC chooses a past event to forget).
+6. **Secret Exit:** A mirrored surface that only reveals a reflection of the exit when seen through the Silk-Key.
+7. **Resource Drain:** 'The Memory Drain'—a corridor that siphons 1 Luck Point unless the party moves quickly (1 Hour on Doomsday Clock).
+8. **The Secret:** A hidden cocoon containing a *Starlight Scimitar* (+1 to Action vs Oozes).
+9. **Final Battle:** The 'Grand Weaver' (Giant Ethereal Spider) in a chamber of shifting gravity.
+10. **Resolution:** The Weaver's death reveals the path to the nebulae beyond, and a hook for the 'Void Trek' adventure.
+
+---
+
+### **3. Corridor Theme: "The Whispering Strands"**
+| Roll | Sensation | Hazard |
+|:---|:---|:---|
+| 1-3 | **SIGHT:** Blue webs that pulse like a heartbeat. | **Slow-Air:** Reduces speed by 5ft. |
+| 4-6 | **SOUND:** The sound of a thousand tiny harps. | **Sticky Trap:** DC 12 Reflex or Restrained. |
+| 7-10| **SMELL:** Ozone and wet burnt lavender. | **Memory Static:** Disadvantage on Knowledge. |
+

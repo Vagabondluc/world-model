@@ -1,0 +1,161 @@
+# LLM Guidelines for Conceptualizing and Describing a Campaign
+
+As an LLM, your task is to create a comprehensive document that conceptualizes and describes a campaign for a tabletop roleplaying game. This document should provide a flexible, character-focused framework for a long-term gaming experience that can span months or even years.
+
+## Output File
+Generate a file named "campaign_prep.md" with the following structure:
+
+1. Campaign Overview
+2. Setting and Theme
+3. Metaplot
+4. Key Characters
+5. Adventure Structure
+6. Player Character Integration
+7. Campaign Arc
+8. Flexibility and Adaptation
+9. Campaign Conclusion
+
+## Section Details
+
+### 1. Campaign Overview
+- Provide a brief summary of the campaign concept (2-3 paragraphs).
+- Specify the flavor of fantasy. Choose one or blend multiple types from the following:
+  a. Dark Fantasy: Explore darker themes, often blending fantasy and horror.
+  b. Grimdark: A bleaker, more desperate version of dark fantasy.
+  c. High Fantasy: Features grand landscapes, abundant magic, and fantastical creatures.
+  d. Low Fantasy: More realistic, with muted magical elements.
+  e. Portal Fantasy: Characters from a mundane world enter a magical one.
+  f. Science Fantasy: Blends elements of fantasy with science fiction.
+  g. Sword and Sorcery: Features pulp-like elements and personal stakes.
+  h. Weird Fantasy: Incorporates strange, bizarre, and otherworldly elements.
+- For the chosen fantasy type(s), explain how they will influence the campaign's tone, themes, and challenges.
+- Indicate the intended length of the campaign:
+  - Number of sessions (e.g., 10-15, 20-30, 50+)
+  - Level range (e.g., 1-5, 1-10, 1-20)
+  - Expected real-time duration (e.g., 3 months, 6 months, 1 year, multi-year)
+- State the primary goals or conflicts that will drive the campaign.
+- Specify the game's tier of play and how it affects the scope of adventures:
+  a. Tier 1 (Levels 1-4): Local heroes, smaller stakes
+  b. Tier 2 (Levels 5-10): Regional heroes, growing challenges
+  c. Tier 3 (Levels 11-16): National or continental heroes, world-altering decisions
+  d. Tier 4 (Levels 17-20): Global or planar heroes, reality-shaping conflicts
+
+### 2. Setting and Theme
+- Describe the primary setting for the campaign in detail, including:
+  - Geographic features
+  - Political structures
+  - Social dynamics
+  - Technological or magical advancements
+  - Unique cultural elements
+- Explain how the setting influences the types of adventures and challenges the players will face.
+- Identify 3-5 main themes that the campaign will explore. Examples include:
+  - Good vs. Evil
+  - Nature vs. Technology
+  - Freedom vs. Tyranny
+  - Identity and Self-Discovery
+  - Redemption
+  - Sacrifice
+  - Corruption of Power
+- For each theme, provide:
+  - A brief description
+  - How it relates to the campaign's overall narrative
+  - Specific ways it will be incorporated into adventures and character arcs
+
+### 3. Metaplot
+- Outline the overarching story that will connect individual adventures.
+- Describe the long-term threat or goal that will drive the campaign forward.
+- Identify 5-7 key plot points or milestones that will occur throughout the campaign.
+- For each plot point, provide:
+  - A brief description of the event
+  - Its significance to the overall story
+  - Potential consequences for the world and characters
+- Explain how the metaplot relates to the chosen fantasy type(s) and themes.
+
+### 4. Key Characters
+- Create profiles for 5-7 important NPCs who will recur throughout the campaign.
+- For each NPC, provide:
+  - Name and detailed physical description
+  - Personality traits and quirks
+  - Background and history
+  - Role in the campaign (ally, antagonist, neutral party)
+  - Goals and motivations
+  - Special abilities or resources
+  - How they will interact with or impact the player characters
+  - Their connection to the metaplot and themes
+- Include at least one potential ally, one major antagonist, and one morally ambiguous character.
+
+### 5. Adventure Structure
+- Outline the structure for individual adventures within the campaign.
+- Describe how adventures will typically be introduced, developed, and concluded.
+- Provide a mix of adventure types, including:
+  - Dungeon crawls
+  - Urban intrigue
+  - Wilderness exploration
+  - Political maneuvering
+  - Planar travel
+  - Heists or infiltration missions
+- For each adventure type, explain:
+  - Typical challenges and obstacles
+  - Required skills or abilities
+  - How it ties into the larger campaign themes
+- Explain how individual adventures will connect to the larger metaplot.
+- Describe the intended mix of combat, exploration, and social encounters.
+
+### 6. Player Character Integration
+- Describe how player characters will be integrated into the campaign world.
+- Suggest 5-7 ways that character backstories can be tied into the campaign, such as:
+  - Family connections to key NPCs
+  - Past involvement with campaign factions
+  - Prophesies or destiny
+  - Unique abilities tied to the campaign's central conflict
+- Explain how character growth and development will be supported throughout the campaign:
+  - Skill progression
+  - Equipment and magical item acquisition
+  - Personal quests and story arcs
+  - Relationships with NPCs and factions
+- Provide guidelines for creating characters that fit the campaign's themes and setting.
+
+### 7. Campaign Arc
+- Divide the campaign into three acts (beginning, middle, end).
+- For each act, provide:
+  - Key events or challenges (at least 3-5 per act)
+  - How the stakes will escalate
+  - Character development opportunities
+  - Connections to the metaplot
+  - Potential plot twists or surprises
+  - Climactic moments or boss encounters
+- Explain how the three-act structure relates to character progression and increasing challenges.
+- Describe how the campaign's themes will evolve and deepen throughout the acts.
+
+### 8. Flexibility and Adaptation
+- Explain how the campaign can adapt to player choices and unexpected outcomes.
+- Provide 5-7 potential branching points where the campaign could take different directions.
+- Suggest ways to incorporate player-driven side quests or personal goals.
+- Describe techniques for adjusting the difficulty and pacing based on player preferences.
+- Explain how to handle potential character death or party composition changes.
+- Provide guidelines for introducing new plot elements or NPCs in response to player actions.
+
+### 9. Campaign Conclusion
+- Describe 3-5 potential endings for the campaign based on player actions and choices.
+- For each ending, explain:
+  - The final conflict or challenge
+  - How it resolves the metaplot
+  - Its impact on the game world
+  - Potential consequences for the player characters
+- Explain how individual character arcs will be resolved.
+- Suggest ways to provide closure for both the overarching story and personal character journeys.
+- Describe potential hooks for future campaigns or adventures based on the outcomes.
+
+## Additional Instructions
+
+1. Use clear, evocative language throughout the document.
+2. Provide specific examples to illustrate key points.
+3. Ensure the campaign concept allows for player agency and character development.
+4. Use markdown formatting for better readability and organization.
+5. Keep the total description comprehensive and detailed, aiming for 3000-4000 words.
+6. Ensure that the campaign description provides enough detail for a game master to begin planning individual sessions, while leaving room for adaptation and improvisation.
+7. Include sidebars or callout boxes with additional tips, variant ideas, or inspirational content.
+
+Remember, your task is to generate a complete, ready-to-use document describing a campaign concept. This description should provide a solid foundation for a game master to build a long-term, engaging campaign that can evolve based on player actions and interests.
+
+As the LLM, you must generate the content for the "campaign_prep.md" file based on these guidelines. Do not simply repeat the guidelines, but use them to create a fully realized campaign concept. Be creative and detailed in your approach, ensuring that the resulting document provides a rich, flexible framework for an extended roleplaying campaign.

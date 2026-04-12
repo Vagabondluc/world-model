@@ -1,0 +1,19 @@
+{
+  "donor": "faction-image",
+  "basis": "captured",
+  "panels": [
+    "Layer stack",
+    "Icon discovery",
+    "Variant preview"
+  ],
+  "controls": [
+    "Add layer",
+    "Search icon",
+    "Export sigil"
+  ],
+  "visibleStates": [
+    "no layers",
+    "no icons found",
+    "no active variant"
+  ]
+}

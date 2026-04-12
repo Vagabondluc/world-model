@@ -1,0 +1,52 @@
+Paladin Oath Format Guide
+((
+Oath of ((Oath Name))
+((Description of the Oath))
+
+Tenets of ((Oath Name))
+((List of thematic and moral guidelines that Paladins of this Oath follow))
+
+Oath Spells
+3rd-level Oath of ((Oath Name)) feature
+
+((Thematic description of the link between the Oath and its magic))
+
+You gain oath spells at the paladin levels listed. Once you gain access to an Oath spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain an Oath spell that doesn't appear on the paladin spell list, the spell is nonetheless a paladin spell for you.
+
+Oath of ((Oath Name)) Spells
+Paladin Level    Spells
+3rd              2 spells of level 1
+5th              2 spells of level 2
+9th              2 spells of level 3
+13th             2 spells of level 4
+17th             2 spells of level 5
+
+Channel Divinity
+3rd-level Oath of ((Oath Name)) feature
+
+((Description of how this Oath channels divine energy to fuel magical effects.))
+
+When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.
+
+Name of Channel Divinity Option
+((Description of the first Channel Divinity option))
+
+Name of Channel Divinity Option
+((Description of the second Channel Divinity option))
+
+Aura Feature
+7th-level Oath of ((Oath Name)) feature
+
+((Description of the passive aura benefit reflecting the Oath's ethos))
+
+Advanced Oath Feature
+15th-level Oath of ((Oath Name)) feature
+
+((Description of an advanced feature that reflects the Paladin's growing power and dedication to their Oath))
+
+Capstone Ability
+20th-level Oath of ((Oath Name)) feature
+
+((Description of a powerful, transformative ability that allows the Paladin to embody the pinnacle of their Oath's ideals))
+
+))

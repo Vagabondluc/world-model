@@ -1,0 +1,80 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Createriddle V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: CreateRiddle_v1
+
+```text
++--------------------------------------------------------------------------------+
+|  [Riddle Crafter: Dual-Difficulty Generator]                          [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Target Answer: [ A Shadow ]   Theme: [ Cryptic ] [V]  [Generate Riddles]      |
++--------------------------------------------------------------------------------+
+|  EASY VERSION (The Simple Hint)        |  HARD VERSION (The Master Clue)       |
+|  "I follow you in the day but hide     |  "I am the twin born of the sun,      |
+|  when the sun goes down. Who am I?"    |  yet I wither in its brightest embrace.|
+|                                        |  I have no weight, but can cover... " |
+|  [Regenerate Easy]                     |  [Regenerate Hard]                    |
++----------------------------------------+---------------------------------------+
+|  LOGICAL EXPLANATION (Why it works)                                            |
+|  * The shadow is created by light (born of sun).                               |
+|  * It vanishes in total darkness or if the light source is too diffuse...      |
++--------------------------------------------------------------------------------+
+|  [Export Both Tiers] [Copy Easy] [Copy Hard]                           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: CreateRiddle_v1
+
+## Component Architecture
+- **Target Answer Console:** The central focus where the DM inputs the solution. This drives the AI's generation logic.
+- **Synchronized Difficulty Panel:** A split-view layout that presents the "Easy" and "Hard" versions simultaneously. This allows the DM to compare the two options and choose the one that best fits their party's current situation.
+- **Riddle Engine Refinement:** Individual "Regenerate" buttons for each tier, allowing for localized iteration without resetting both riddles.
+- **Solution Verification Box:** A breakdown panel that explains the internal logic or "clues" within the riddle, as required by the script.
+
+## Interaction Logic
+- **Direct Variable Mapping:** The user provides the "Answer," and the UI handles the difficulty scaling (e.g., Easy = direct descriptions, Hard = metaphors and paradoxes).
+- **Tone-Aware Generation:** Selecting a theme (Dark, Whimsical) shifts the vocabulary of the generated riddle while keeping the "Answer" central.
+- **One-Click Export:** Buttons to either take the full set or individual tiers for use in session notes.
+
+## Visual Design
+- **Balanced & Informative:** A clean, dual-column layout that prioritizes clarity and comparison.
+- **Contrast Markers:** Uses subtle color shading or borders (e.g., Light Gray for Easy, Deep Charcoal for Hard) to distinguish the difficulty levels.
+- **Utility-First Header:** Minimizes distraction, keeping the focus on the Answer and the Generate action.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: CreateRiddle_v1
+
+### Target Answer: A Shadow
+
+---
+
+#### Easy Version:
+"I follow you in the day, but hide when the sun goes down. I grow tall in the evening and disappear in the dark. What am I?"
+
+#### Hard Version:
+"I am the silent twin born of luminescence, yet I wither in the void's embrace. I have no depth, but I can cover a mountain. I mimic your dance but never touch the floor. What am I?"
+
+---
+
+### Logical Explanation:
+- **Easy Version:** Focuses on the literal behavior of a shadow (following the person, disappearing at night, changing size based on the sun's angle).
+- **Hard Version:** Uses more abstract concepts:
+    - *Twin born of luminescence:* Shadows require light to exist.
+    - *Wither in the void:* In total darkness (the void), a shadow cannot exist.
+    - *No depth / Cover a mountain:* Physical properties of a shadow.
+    - *Mimic your dance:* Reflects user movement without physical contact.
+

@@ -30,16 +30,20 @@ Test the end-to-end path through the canonical driver:
 - canonical bundle -> hydrate -> app state
 - promoted schema references resolve correctly
 - model-to-model round-trips preserve canonical fields
+- Phase 8 cross-donor integration covers the unified product surface, donor route transitions, shared concept lens switching, and context retention
 
 ## 4. UI and E2E Tests
 
 Test the final app shell:
 
-- guided mode
-- studio mode
-- architect mode
+- World
+- Story
+- Schema
+- legacy redirects for guided / studio / architect
 - open/save/load round-trip
 - switching modes does not lose canonical state
+- modal tools remain keyboard reachable and focus safe
+- release-hardening checks cover large bundles and documentation
 
 ## Regression Rules
 
@@ -60,5 +64,8 @@ Recommended order:
 6. migration tests
 7. integration tests
 8. E2E tests
+9. release-hardening checks
+10. Phase 8 cross-donor integration checks
+11. release gate
 
 If any earlier gate fails, later gates should not run.

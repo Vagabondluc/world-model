@@ -1,0 +1,18 @@
+entries:
+  - donor_concept: Sigil Composition
+    source_family: asset-sigil
+    canonical_key: asset
+    canonical_target: SigilAttachment
+    status: mapped
+    winner: faction-image
+    rationale: SVG sigils project to canonical asset attachments.
+    provenance: docs/donors/FACTION_IMAGE.md
+
+  - donor_concept: Icon Discovery
+    source_family: icon-discovery
+    canonical_key: asset/discovery
+    canonical_target: AssetRecord
+    status: reference-only
+    winner: faction-image
+    rationale: Search and discovery metadata remains donor-local while informing canonical assets.
+    provenance: docs/donors/FACTION_IMAGE.md

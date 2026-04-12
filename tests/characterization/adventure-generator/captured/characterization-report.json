@@ -1,0 +1,36 @@
+{
+  "donor": "adventure-generator",
+  "label": "Adventure Generator",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "sourceInventory": [
+    {
+      "relativePath": "to be merged/dungeon generator/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\dungeon generator",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "to be merged/dungeon generator/zai2/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\dungeon generator\\zai2",
+      "exists": false,
+      "kind": "file"
+    },
+    {
+      "relativePath": "world-model/docs/adapters/ADVENTURE_GENERATOR_ADAPTER.md",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\adapters\\ADVENTURE_GENERATOR_ADAPTER.md",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 3,
+    "existingSources": 2,
+    "missingSources": 1
+  },
+  "parityTarget": "exact+adapted",
+  "unstableSurfaces": [
+    "to be merged/dungeon generator/zai2/"
+  ]
+}

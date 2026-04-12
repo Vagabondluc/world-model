@@ -1,0 +1,39 @@
+Make me up an image of 
+
+(( 
+INSERT DESCRIPTION HERE
+))
+
+using one of the styles below.
+
+### Artist 1
+- **Style and Technique**: This style is characterized by intense dynamics and dramatic expressiveness, with a particular emphasis on exaggerated musculature and heroic poses. The composition often uses contrasting lighting, with deep shadows and bright lights to accentuate drama and tension. The landscapes are wild and filled with dangers, offering an epic setting for the characters.
+- **Medium**: Oil painting on canvas, with a rich but natural color palette. Textures are rendered with meticulous attention, from smooth skins to thick furs and detailed armors.
+- **Granular Approach**: Use vigorous brush strokes for foreground elements and softer ones to create the illusion of depth. Figures should be idealized, with a strong focus on human anatomy and facial expression.
+
+### Artist 2
+- **Style and Technique**: Known for almost photographic realism, this style is distinguished by detailed and idealized representations of the human body in fantastical environments. The compositions are complex, often filled with fantastical elements like dragons, wizards, and exotic landscapes. Light plays a crucial role, giving the scenes an almost unreal quality.
+- **Medium**: Mainly acrylic and oil painting, allowing for great precision in details and high color saturation.
+- **Granular Approach**: To capture this style, focus on clarity and precision of outlines, with a methodical application of paint layers to build form and texture. The skin of characters must reflect an almost divine luminosity.
+
+### Artist 3
+- **Style and Technique**: This style is characterized by a fine and detailed line, reminiscent of Art Nouveau, with a particular sensitivity for decorative patterns and elaborate compositions. The illustrations are often emotionally charged, with a special attention to visual storytelling.
+- **Medium**: Ink on paper, with occasional use of washes or subtle coloring to add depth. The line work is complemented by detailed textures and delicate shading.
+- **Granular Approach**: Adopt a methodical approach to drawing, with an emphasis on curved lines and fine details. Backgrounds should be designed with as much care as the main figures, incorporating complex natural and architectural elements.
+
+### Artist 4
+- **Style and Technique**: Dynamic and expressive, this style favors action and movement, with characters often captured in mid-combat or heroic gesture. The depiction of anatomy is exaggerated to accentuate strength and agility.
+- **Medium**: Ink drawing, sometimes enhanced by cross-hatching techniques to add volume and texture. The coloring, when used, complements the dynamism of the ink with vibrant but realistic tones.
+- **Granular Approach**: Practice life drawing to master anatomy, then exaggerate these forms for dramatic impact. Compositions should be open and fluid, allowing the eyes to follow the action across the scene.
+
+### Artist 5
+- **Style and Technique**: This style is marked by raw intensity and visceral energy, with a tendency towards hyperbolic fantasy. Textures are rich and detailed, giving a tangible sensation to the depicted surfaces.
+- **Medium**: Oil painting and digital illustrations, used for their ability to produce dramatic texture and light effects. Color is often used in a bold and experimental manner.
+- **Granular Approach**: Experiment with mixed techniques to create unique textures. Characters must overflow with power, with particular attention to facial expressions and musculature.
+
+### Artist 6
+- **Style and Technique**: Atmospheric and ethereal, this style focuses on capturing ambiance and mystery. The compositions are often minimalist but emotionally charged, using color and light to create a sense of dream or contemplation.
+- **Medium**: Watercolor, oil, and mixed techniques on paper, favoring soft transitions of color and subtle light effects.
+- **Granular Approach**: Begin with light washes, gradually building depth with translucent layers. Narrative elements should be suggested rather than explicitly detailed, leaving room for interpretation.
+
+These descriptions provide a guide for capturing the essence of each artist through their style, technique, and medium, allowing for creative exploration in the realm of "Sword and Sorcery".

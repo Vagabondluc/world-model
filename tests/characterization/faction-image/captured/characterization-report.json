@@ -1,0 +1,28 @@
+{
+  "donor": "faction-image",
+  "label": "Sacred Sigil Generator",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "sourceInventory": [
+    {
+      "relativePath": "to be merged/faction-image/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\faction-image",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "world-model/docs/donors/FACTION_IMAGE.md",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\donors\\FACTION_IMAGE.md",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 2,
+    "existingSources": 2,
+    "missingSources": 0
+  },
+  "parityTarget": "exact+adapted",
+  "unstableSurfaces": []
+}

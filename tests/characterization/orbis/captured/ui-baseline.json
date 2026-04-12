@@ -1,0 +1,21 @@
+{
+  "donor": "orbis",
+  "basis": "captured",
+  "panels": [
+    "Simulation profile",
+    "Enabled domains",
+    "Snapshots",
+    "Event stream"
+  ],
+  "controls": [
+    "Domain toggles",
+    "Run simulation",
+    "Inspect snapshot",
+    "View event stream"
+  ],
+  "visibleStates": [
+    "no domains enabled",
+    "no snapshots",
+    "no events"
+  ]
+}

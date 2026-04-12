@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Matrix",
+  "description": "Container vocabulary: the Matrix payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Canonical entity payload for UUID-bound use.",
+  "type": "object",
+  "required": [
+    "id",
+    "dimensions",
+    "values"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "rows",
+        "cols"
+      ],
+      "properties": {
+        "rows": {
+          "type": "integer"
+        },
+        "cols": {
+          "type": "integer"
+        }
+      }
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      }
+    },
+    "seed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mapping": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "x-mythforge-schema-class": "entity",
+  "x-mythforge-legacy-companion": "MatrixEnvelope.schema.json"
+}

@@ -1,0 +1,98 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeon-Room-Designer".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: dungeon-room-designer
+
+```text
++--------------------------------------------------------------------------------+
+|  [Dungeon Room Designer]                                              [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Room ID: [ 04 ]  Type: [ Challenge / Puzzle       ]  [Seed: 4421] [AI Suggest] |
++--------------------------------------------------------------------------------+
+|  1. DIMENSIONS: [ 30x30ft ] Shape: [ Octagonal ] Base: [ Cracked Marble ]      |
++--------------------------------------------------------------------------------+
+|  2. INTERACTIVE ELEMENTS (Min 3)      |  3. SENSORY PALETTE                     |
+|  [X] Ornate birdcage on a chain       |  [X] Sight: Hazy green aura.           |
+|  [X] Floor pressure plate (Symbol:Eye)|  [X] Sound: Wind whistling through...  |
+|  [X] Lever behind a stone gargoyle    |  [X] Smell: Rotting ozone.             |
+|  [+ Add Element]                      |  [!] Checklist: 3/3 Senses Met! [OK]   |
++--------------------------------------------------------------------------------+
+|  4. "FLAVOR" DETAILS (IRRELEVANT)     |  5. PLAYER INTERACTIONS                |
+|  - A single red high-heel shoe.       |  * Search floor: DC 15 (See plate)     |
+|  - Wall scratches counting to 42.     |  * Pull lever: Releases the cage.      |
++--------------------------------------------------------------------------------+
+|  GENERATED NARRATIVE                                                           |
+|  "A hazy green aura illuminates this octagonal chamber. You notice an ornate   |
+|  birdcage swinging slowly from the ceiling. A single red shoe lies alone..."   |
++--------------------------------------------------------------------------------+
+|  [Copy Room Key] [Push to Master Key] [Save to Template]              [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: dungeon-room-designer
+
+## Component Architecture
+- **Header Section:** Room ID, Type selection, and AI seed control.
+- **Physical Traits Panel:** Inputs for dimensions, shape, and base materials.
+- **Dynamic Content Grid:**
+    - **Interactive Element Manager:** A list where users can add/remove objects. Each object has a type (Trap, Treasure, Ornament, Mechanism).
+    - **Sensory Palette:** A checklist of the 5 senses. At least 3 must be selected to "pass" the design audit.
+- **"The Curiosity Bench":** A dedicated space for the 2 required "Irrelevant Details" that add life to the room.
+- **Reaction Planner:** A table for the DM to note how the room responds to common player actions (Search, Detect Magic, Investigate).
+
+## Interaction Logic
+- **Sensory Audit:** A visual progress bar that turns green once 3 senses are described.
+- **AI Narrative Engine:** A "Draft Description" button that synthesizes the Room Type, Interactive Elements, and Senses into a coherent 2-4 sentence of "Boxed Text".
+- **Template Library:** Users can save "Room Archetypes" (e.g., "Standard Crypt Room", "Boss Ante-chamber").
+
+## Visual Design
+- **Card-Based UI:** Each section (Senses, Interactions, Features) is encapsulated in a clean card with a distinct icon.
+- **Inline Validation:** Red icons appear on sub-sections that haven't met the minimum requirements (e.g., "Need 1 more interactive element").
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: dungeon-room-designer
+
+**Room ID:** 04
+**Type:** Challenge / Puzzle
+
+### 1. Physical Traits
+- **Shape:** Octagonal
+- **Dimensions:** 30ft Diameter
+- **Base Features:** Cracked white marble floor with veins of copper. Dome ceiling 40ft high.
+
+### 2. Interactive Elements
+1. **The Pendulum Cage:** A brass birdcage containing a glowing green gem, swinging rhythmically.
+2. **The Eye-Plate:** A pressure plate on the floor shaped like a closed eyelid.
+3. **The Hidden Crank:** Concealed behind a weeping statue of a dwarven king.
+
+### 3. Sensory Details
+- **Sight:** A hazy green aura emanating from the pendulum gem.
+- **Sound:** The constant, lonely "click-clack" of the pendulum against the walls.
+- **Smell:** Sharp, ozone-like scent of static electricity.
+
+### 4. Curiosity Details (Irrelevant)
+1. A single, perfectly preserved red silk slipper lies near the entrance.
+2. Faint scratches on the north wall appear to be tally marks totaling 42.
+
+### 5. Player Interactions
+- **Search Floor (DC 15):** Reveals the Eye-Plate is actually the trigger to stop the pendulum.
+- **Investigate Statue:** Reveals the crank that lowers the birdcage.
+- **Detect Magic:** The green aura identifies as Abjuration.
+
+### 6. Room Narrative (Generated)
+"A hazy green aura illuminates this octagonal chamber, casting long, rhythmic shadows as a brass birdcage swings tirelessly from the domed ceiling. The air smells of sharp ozone, and the only sound is the persistent click-clack of the pendulum striking the marble walls. Near the entrance, a lone red silk slipper lies as if forgotten, while the walls are marred by dozens of frantic tally marks."
+

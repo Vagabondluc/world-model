@@ -1,0 +1,76 @@
+Raid Running Guidelines for an LLM:
+
+1. Introduction to Raids:
+   - Raids are a type of high-stakes, tactical scenario that challenge players to survey a secure location, formulate a plan, and execute a coordinated assault.
+   - To introduce the concept of a raid to players:
+     - The patron who hires the players can provide suggestions or explicit directions on how to approach the job.
+     - The first raid scenario can feature an ultra-trivial survey, automatically providing the players with a complete set of blueprints and security details.
+     - Equipment provided to the players, such as tools for stealth or breaching, can guide them towards a raid-style approach.
+   - Once players understand the raid framework, they will naturally start looking for opportunities to employ these tactics in future scenarios.
+
+2. Failing Forward:
+   - The failing forward technique prevents failed skill checks from completely derailing the players' intended plans.
+   - When a check fails, describe the success with a complication, such as:
+     - Triggering an alarm
+     - Damaging equipment
+     - Alerting security forces
+   - Offer the players the option to pay a cost to succeed, or accept the complication.
+   - Failing forward is particularly useful in raids, as it allows tactical plans to survive contact with the enemy and introduces complications that can create dynamic, escalating situations.
+
+3. "Let It Ride" Checks:
+   - Avoid rolling to failure by allowing a single skill check to determine the overall success or failure of a broad attempt.
+   - Permit the players' choices and actions to intersect with the riding check, providing opportunities for bonuses, penalties, or changes in approach or circumstance.
+   - Identify when a riding check should end due to success, failure, a change of approach, or a significant change in circumstances.
+   - This approach prevents the players' intended actions from being repeatedly undermined by multiple skill checks.
+
+4. The Theater of Operations:
+   - Expand your scope beyond the immediate room or area, considering the interconnected nature of the raid location.
+   - Track the neighboring rooms, hallways, and areas that may become relevant as the players navigate the environment and encounter opposition.
+   - Use the adversary roster and line of sight to determine which areas should be included in your active "theater of operations" at any given moment.
+   - Avoid prepping specific "theaters of operations" ahead of time, instead allowing the dynamic situation to define the relevant areas.
+   - This allows for more dynamic, strategic decision-making and combat encounters that make use of the full environment.
+
+5. Raid Turn Procedure:
+   a. Mark Ticks:
+      - Track the passage of time using 1-minute raid turns.
+
+   b. Activation Checks:
+      - Determine which passive action groups become active through patrols, complications, or activation checks.
+      - Use either a site activation check or a group activation check to trigger activations.
+
+   c. Adversary Actions:
+      - Categorize action groups as Active, Alert, or Aware to efficiently manage their responses.
+      - Apply perception penalties based on distance or obstructions when determining if action groups become aware of the players.
+      - Determine appropriate actions for adversaries, such as attacking, fleeing, or seeking assistance.
+
+   d. Perception Checks:
+      - Call for Perception-type checks to determine if action groups notice evidence of the players' activities.
+      - Factor in distance penalties and the current status of the action groups (Active, Alert, Aware) when setting DCs.
+
+   e. Resolving Actions:
+      - Manage the players' movements, actions, and reactions within the 1-minute raid turn structure.
+      - Incorporate the "theater of operations" approach to allow for dynamic, interconnected encounters.
+
+6. Raid Running Template:
+   Raid Scenario:
+     - Description of the raid location, objective, and overall situation
+
+   Activation and Awareness:
+     - Procedures for triggering action group activations
+     - Guidelines for determining action group awareness and perception penalties
+
+   Adversary Actions:
+     - Descriptions of how Active, Alert, and Aware action groups will respond
+     - Examples of typical adversary actions, such as attacking, fleeing, or seeking reinforcements
+
+   Player Actions:
+     - Explanations of raid-specific actions, including movement, searching, and ritual casting
+     - Guidance on how to leverage the theater of operations approach
+
+   Complications and Fail Forward:
+     - Techniques for introducing complications when skill checks fail
+     - Opportunities for players to pay a cost to succeed or mitigate the consequences
+
+   Pacing and Transitions:
+     - Procedures for transitioning between different time scales (dungeon turns, raid turns, combat rounds)
+     - Strategies for maintaining an engaging, high-stakes pace throughout the raid scenario

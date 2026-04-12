@@ -1,0 +1,63 @@
+{
+  "name": "@openuidev/react-headless",
+  "version": "0.7.11",
+  "description": "Headless React primitives for AI chat — state management, streaming adapters for OpenAI and AG-UI, message format converters, and thread management for OpenUI generative UI apps",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc -p .",
+    "lint:check": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "format:fix": "prettier --write ./src",
+    "format:check": "prettier --check ./src",
+    "prepare": "pnpm run build",
+    "ci": "pnpm run lint:check && pnpm run format:check"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": ">=19.0.0",
+    "openai": "^6.22.0",
+    "vitest": "^4.0.18"
+  },
+  "keywords": [
+    "openui",
+    "react",
+    "headless",
+    "chat",
+    "streaming",
+    "ai",
+    "generative-ui",
+    "llm",
+    "openai",
+    "zustand",
+    "state-management",
+    "sse",
+    "server-sent-events",
+    "chatbot",
+    "copilot",
+    "agentic",
+    "ag-ui"
+  ],
+  "homepage": "https://openui.com",
+  "author": "engineering@thesys.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thesysdev/openui.git",
+    "directory": "packages/react-headless"
+  },
+  "bugs": {
+    "url": "https://github.com/thesysdev/openui/issues"
+  },
+  "dependencies": {
+    "@ag-ui/core": "^0.0.45"
+  }
+}

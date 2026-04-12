@@ -113,12 +113,14 @@ def _run(command: Iterable[str], cwd: Path | None = None) -> subprocess.Complete
         cwd=str(cwd or ROOT),
         capture_output=True,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         check=False,
     )
 
 
 def _combined_output(proc: subprocess.CompletedProcess[str]) -> str:
-    parts = [proc.stdout.strip(), proc.stderr.strip()]
+    parts = [(proc.stdout or "").strip(), (proc.stderr or "").strip()]
     return "\n".join(part for part in parts if part).strip()
 
 

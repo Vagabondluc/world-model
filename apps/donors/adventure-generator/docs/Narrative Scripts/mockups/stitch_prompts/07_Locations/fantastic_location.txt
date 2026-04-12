@@ -1,0 +1,90 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Fantastic Location".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: fantastic_location
+
+```text
++--------------------------------------------------------------------------------+
+|  [Fantastic Location Architect]                                        [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Location Name: [ The Bridge of Teeth ]                                        |
++--------------------------------------------------------------------------------+
+|  LOCATION ASPECTS (Exactly Three)      |  SCALE & AGE                          |
+|  1. [ Massive saber-toothed skull ]    |  Scale: [ 100ft across abyss ]        |
+|  2. [ Ribs tied with rotten sinew ]    |  Age:   [ Predates first civilization]|
+|  3. [ Deep hole like infected wound ]  |                                       |
++----------------------------------------+---------------------------------------+
+|  SENSORY DETAILS (Select 3+)           |  INTERACTIONS                         |
+|  [V] Sight: [ Bleached, yellow bone ]  |  1. [ Solve the jaw-lock mechanism ]  |
+|  [V] Sound: [ Wind moaning thro ribs ] |  2. [ Harvest ancient sinew thread ]  |
+|  [V] Smell: [ Ancient dust and decay ] |                                       |
++----------------------------------------+---------------------------------------+
+|  SECRETS & LORE                        |  CHARACTER TIES                       |
+|  1. [ Nexus of otherworldy energy ]    |  - [ Archeologist ]: Recognize age.   |
++----------------------------------------+---------------------------------------+
+|  [Preview Dossier] [Export Scene Card] [Word Count: 312/400]           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: fantastic_location
+
+## Component Architecture
+- **Evocative Naming Tool:** A high-impact title generator that ensures names are brief (3-5 words) but descriptive.
+- **Triptych Aspect Editor:** Specifically limits the user to "Exactly Three" aspects. This design choice prevents "Feature Creep" and forces focus on the three most interactive elements of the scene.
+- **Sensory Palette Modal:** An interactive checklist for the 5 senses. It requires descriptions for at least three to ensure the scene feels "Alive."
+- **Scale & Chronology Dashboard:** A simple, illustrative workspace for defining the physical dimensions and the primordial age of the location.
+- **Background Context Mapper:** A logic-builder that links the location's lore to common RPG character archetypes (Archeology, Religious training, Arcane knowledge).
+- **Concise Narrative Preview:** A real-time word-counter and text-block previewer to help the DM stay within the 300-400 word limit.
+
+## Interaction Logic
+- **Aspect-Driven Prompts:** Each aspect entered by the user generates potential "Interaction" suggestions (e.g., entering "Cracked Geode" might suggest "Mining for crystals" or "Magical resonance check").
+- **Sensory Re-skinning:** Changing the theme of the location (from "Bone" to "Crystal") automatically updates the suggested sensory vocabulary.
+- **Export to Scene Card:** Converts the dossier into a compact, printable format designed for a DM's binder or VTT macro.
+
+## Visual Design
+- **Cinematic & Moody:** Uses high-contrast typography and plenty of whitespace to emphasize the "Fantastic" nature of the content.
+- **Focus on Imagery:** Icons for the 5 senses (Ear, Eye, Nose, Hand, Tongue) provide clear visual cues for narrative preparation.
+- **Pacing HUD:** The word counter at the bottom acts as a "Pacing Guide," encouraging brevity and punchy descriptions.
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: fantastic_location
+
+# Location: The Bridge of Teeth
+
+### 1. Aspects
+- **Massive saber-toothed bestial skull** bursting out of the canyon wall.
+- **Titan-sized ribs** tied together with cracked, splitting leather and sinew.
+- **Deep hole in the jaw** like an infected wound that glows with a faint green light.
+
+### 2. Scale and Age
+- **Scale:** A 100-foot-long skeletal span crossing an 800-foot-deep chasm.
+- **Age:** The bone is petrified and primordial, predating the rise of the first mortal empires by ten thousand years.
+
+### 3. Sensory Details
+- **Sight:** The bone is a sickly, weathered yellow, etched with silver glyphs that pulse with an erratic rhythm.
+- **Sound:** The howling wind through the hollow ribs sounds like a chorus of moaning titan-ghosts.
+- **Smell:** A sharp, metallic tang of ancient copper mixed with the stale dust of a billion years.
+
+### 4. Potential Interactions
+- **The Jaw-Mechanism:** Characters can attempt to "Unlock" the jaw to reveal a hidden passage (DC 17 Athletics or Arcana).
+- **The Sinew Ropes:** Brave climbers can harvest the primordial sinew, though the bridge groans and shifts with every cut.
+
+### 5. Hidden Secrets or Lore
+- **Nexus of Energy:** Ancient texts refer to this skull as the "Anchor of the Abyss," a location where the boundary between planes is thin.
+- **The Missing Fang:** One of the massive teeth is a disguised stone door leading to a hermit's cell.
+
+### 6. Character Background Connections
+- **Archeology:** A character with this background can identify that the sinew is made of a creature long extinct, confirming the bridge's impossible age.
+- **Arcane:** A mage can sense that the green glow from the "wound" is a slow-leaking transmutation spell of epic proportions.

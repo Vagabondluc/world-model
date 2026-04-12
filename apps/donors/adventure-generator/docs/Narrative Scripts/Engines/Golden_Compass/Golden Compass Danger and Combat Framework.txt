@@ -1,0 +1,241 @@
+# Golden Compass Danger and Combat Framework
+
+## Introduction
+In Golden Compass adventures, dangers and combat encounters provide crucial moments of tension and excitement. This framework will help you design, balance, and implement thrilling action sequences that challenge players while maintaining the forward momentum of your story.
+
+## Danger Philosophy
+*"In Golden Compass, danger isn't just about survival - it's about style."*
+
+Remember these core principles:
+- Dangers test players' luck and resourcefulness
+- Failures lead to complications and consequences, not dead ends
+- Every danger should offer multiple potential approaches
+- Combat should be cinematic and dynamic, not just about numbers
+
+## Danger Types
+
+### Difficulty Levels
+- **BASIC Danger:** Common hazards with minor risks
+  - *Example:* Small trap door, rabid dogs, simple falls
+  - *Luck Cost:* 1 Luck Point upon failure
+  
+- **CRITICAL Danger:** Significant hazards with serious risks
+  - *Example:* Swinging blades, armed mercenaries, crumbling bridges
+  - *Luck Cost:* 3 Luck Points upon failure
+  
+- **EXTREME Danger:** Severe hazards with potentially deadly risks
+  - *Example:* Fire jets, attack helicopters, lava flows
+  - *Luck Cost:* 9 Luck Points upon failure
+  
+- **IMPOSSIBLE Danger:** Nearly unsurvivable hazards
+  - *Example:* Sealed room underwater, surrounded by an army
+  - *Luck Cost:* All remaining Luck Points (requires Luck Coin to survive)
+
+### Danger Categories
+
+- **Environmental Hazards:** Natural or constructed dangers in the environment
+- **Traps:** Deliberately designed mechanisms to harm or impede progress
+- **Enemy Encounters:** Combative opponents (individuals or groups)
+
+## Designing Effective Dangers
+
+### Step 1: Define the Stakes
+Always clarify what's at risk for players facing the danger:
+- **Life Stakes:** Physical harm that costs Luck Points
+- **Item Stakes:** Risk of losing equipment or artifacts
+- **Status Stakes:** Risk of gaining Bad Feelings
+- **Resource Stakes:** Risk of spending Wealth Points, time, etc.
+
+### Step 2: Consider Multiple Approaches
+Design dangers that can be tackled in different ways:
+- **Brute Force Approach:** Overcoming through strength or endurance
+- **Technical Approach:** Disabling or bypassing through skill
+- **Evasion Approach:** Avoiding the danger entirely
+- **Sacrifice Approach:** Trading resources to overcome the obstacle
+
+### Step 3: Set the Difficulty
+Consider these factors when determining danger difficulty:
+- Environmental conditions
+- Player preparedness
+- Story significance
+- Potential for combined dangers (up to 3 simultaneously)
+
+### Step 4: Prepare Consequences
+For each danger, prepare:
+- **Basic Failure:** Loss of Luck Points
+- **Status Effect Failure:** Specific Bad Feeling inflicted
+- **Dramatic Consequences:** How the scene changes or escalates
+
+## Combat Framework
+
+### Brawl System
+Melee combat follows these principles:
+- One roll determines both attack and defense
+- Success means hitting the enemy; failure means taking damage
+- Enemies take 3 hits to defeat unless hit with a Higher Success
+- Higher Success (Critical vs Basic enemy) = immediate knockout
+- Two levels higher (Extreme vs Basic) = defeat all similar enemies
+- Unusual skills can be used with Fortune Master approval
+
+### Shoot-Out System
+Ranged combat operates in two distinct phases:
+1. **Player Turn:**
+   - Roll Shoot to hit enemies
+   - Failure results in empty magazine, not Luck Point loss
+   - Use Basic Success to reload, reach cover, or perform secondary actions
+
+2. **Enemy Turn:**
+   - Roll Stunt to avoid enemy fire
+   - Failure results in Luck Point loss
+   - Cover provides Advantages against enemy fire
+
+### Cover System
+- **Partial Cover:** Provides 1 Advantage during enemy turns, attack with Disadvantage
+- **Total Cover:** Complete protection, restricts attack options, allows backpack access
+
+### Weapons and Equipment
+- Hand weapons provide Expertise Re-rolls
+- Guns can "Empty the Mag" for an Advantage
+- Dual-wielding requires appropriate Expertise
+- Heavy weapons provide 2-3 Advantages but limited ammunition
+
+## Status Effects System
+
+### Bad Feelings from Combat
+Specific dangers can inflict Bad Feelings on failure:
+- **BLEEDING:** From piercing weapons, bullets, sharp traps
+- **BROKEN:** From falls, impacts, explosions, crushing enemies
+- **SHOCKED:** From traumatic events, near-death experiences
+- **SCARED:** From intimidating enemies, horrifying situations
+- **DIZZY:** From concussive impacts, disorienting situations
+- **EMBARRASSED:** From social failures during combat
+
+### Recovering from Bad Feelings
+- Use a Luck Coin
+- Find a Safe Place and perform specific recovery actions
+- Receive First Aid (turns BLEEDING or BROKEN into HURT)
+
+## Luck and Survival System
+
+### Luck Management
+- Players start with 10 Luck Points
+- Luck Points are spent to avoid consequences of failed danger rolls
+- Basic Success can reduce Luck Point cost (Damage Control)
+- All Luck recovers during a Break or at a Safe Place
+
+### Luck Coins
+Luck Coins can be used to:
+- Survive when Out of Luck
+- Achieve an Extreme Success without rolling
+- Remove a Bad Feeling
+- Retain an item that would be lost
+- Save a vehicle from destruction
+- Obtain a missed Clue
+
+### Facing Certain Death
+When players are Out of Luck and have no Luck Coins:
+- Facilitate a heroic, memorable end
+- Allow player to create a new character or take over an NPC
+- Leave opportunity for potential return if no body is found
+
+## Implementing Dangers
+
+### Danger Script Format
+Present dangers using this structure:
+
+1. **Situation Description:**
+   - Set the scene and establish stakes
+   - Describe environmental factors
+   - Indicate time pressure if applicable
+
+2. **Danger Statement:**
+   - Clearly state the danger and its difficulty
+   - "You're facing a [BASIC/CRITICAL/EXTREME] Danger."
+   - Clarify if multiple dangers are present
+
+3. **Approach Options:**
+   - Suggest potential approaches
+   - Indicate skills that might apply
+
+4. **Resolution:**
+   - For success: Describe how the danger is overcome
+   - For failure: Implement Luck cost and describe lucky escape
+   - For status effect: Describe how the Bad Feeling is acquired
+
+### Sample Danger Structure
+
+```
+FORTUNE MASTER
+[Describe the dangerous situation]
+You're facing a [BASIC/CRITICAL/EXTREME] Danger.
+
+PLAYER
+[Describes their approach]
+
+FORTUNE MASTER
+[Confirms the approach and relevant skill]
+Roll for [SKILL] to see if you succeed.
+
+PLAYER
+[Rolls dice and counts successes]
+
+FORTUNE MASTER
+[For success] You succeed! [Describe heroic outcome]
+[For failure] You lose [X] Luck Points and narrowly escape. [Describe lucky outcome]
+[For status effect failure] You get away, but you're now [BAD FEELING]. [Describe consequence]
+```
+
+## Advanced Danger Techniques
+
+### Escalating Dangers
+Create a series of dangers that increase in difficulty:
+1. BASIC Danger serves as introduction
+2. CRITICAL Danger raises stakes
+3. EXTREME Danger serves as climax
+
+### Combined Dangers
+Mix different types of dangers (maximum 3):
+- Environmental danger + combat encounter
+- Multiple environmental dangers with different stakes
+- Combat with environmental complications
+
+### Boss Encounters
+Design memorable antagonist encounters:
+- Special abilities that inflict specific Bad Feelings
+- Multiple phases with escalating difficulty
+- Environmental interactions that change the battlefield
+
+## Example Danger Scenarios
+
+### Temple Trap Scenario
+**Situation:** Ancient temple corridor with pressure plates and swinging blades
+**Stakes:** Life and safety (CRITICAL Danger)
+**Approaches:**
+- STUNT to dodge between blades
+- OBSERVATION to spot safe path through pressure plates
+- TECH to jam the mechanism
+**Bad Feeling:** BLEEDING if hit by blades
+
+### Vehicular Chase Scenario
+**Situation:** Jeep pursuit along mountain road during a storm
+**Stakes:** Multiple dangers (CRITICAL Danger for control, BASIC Danger for enemies shooting)
+**Approaches:**
+- DRIVE to maintain control on treacherous road
+- SHOOT to take out pursuing vehicles
+- STUNT to perform evasive maneuvers
+**Bad Feeling:** BROKEN if vehicle crashes
+
+### Elite Enemy Scenario
+**Situation:** Confrontation with heavily armed special forces
+**Stakes:** Life and safety (EXTREME Enemy)
+**Approaches:**
+- FIGHT to engage directly (very risky)
+- STEALTH to avoid direct confrontation
+- TECH to create environmental distraction
+**Bad Feeling:** BLEEDING if hit by their specialized weapons
+
+## Conclusion
+
+Remember that dangers and combat in Golden Compass should always be thrilling and cinematic. Even failures should move the story forward in interesting ways. A well-designed danger system ensures players always feel the tension while knowing they have multiple paths to success.
+
+The best dangers aren't just obstacles to overcome—they're opportunities for characters to demonstrate their resourcefulness, courage, and style in the face of adversity.

@@ -1,0 +1,33 @@
+Druid Circle Format guide
+((
+Circle of ((circle name))
+((Description of the circle))
+
+Circle Spells
+2nd-level Circle of ((circle name)) feature
+
+((thematic Description of the link between the circle and it magic))
+
+Once you gain access to one of these spells, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you.
+
+Circle of ((circle name)) Spells
+Druid Level	Circle Spells
+2nd	2 spell of level 1
+3rd	2 spell of level 2
+5th	2 spell of level 3
+7th	2 spell of level 4
+9th	2 spell of level 5
+
+
+Name of feature
+2nd-level feature
+
+Name of feature
+6th-level feature
+
+Name of feature
+10th-level feature
+
+Name of feature
+14th-level feature
+))

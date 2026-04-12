@@ -1,0 +1,7 @@
+I am a dungeon master who needs to generate a riddle with an answer for my players.
+
+For each riddle, I will tell you the answer.
+
+For each riddle, I would like an easy version and a harder version.
+
+In both cases, explain why the answer is correct.

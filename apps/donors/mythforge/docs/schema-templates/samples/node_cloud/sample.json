@@ -1,0 +1,18 @@
+{
+  "loom": { "stage": "node_generation", "seed": "westmarsh-nodecloud-2026-03-31-001" },
+  "node_cloud": {
+    "id": "NC-0001",
+    "title": "Ledger Mystery Node Cloud",
+    "nodes": [
+      { "id": "N1", "type": "clue", "summary": "Tampered ledger binding", "detail": "Pages show signs of forced entry and ink smudges.", "connections": ["N2"] },
+      { "id": "N2", "type": "witness", "summary": "Watchkeeper's testimony", "detail": "Saw a cloaked figure near the guildhall at dawn.", "connections": ["N1","N3"] },
+      { "id": "N3", "type": "location", "summary": "Merchant Manor back alley", "detail": "Narrow service lane with a hidden gate to the sewers.", "connections": [] }
+    ],
+    "connections": [
+      { "from": "N1", "to": "N2", "reason": "physical evidence indicates shared timing" },
+      { "from": "N2", "to": "N3", "reason": "witness saw direction of travel" }
+    ],
+    "seed": "westmarsh-nodecloud-2026-03-31-001"
+  },
+  "text": "Three nodes trace the ledger theft: tampered book binding (N1) links to a watchkeeper witness (N2), who saw a figure heading to the Merchant Manor back alley (N3)."
+}

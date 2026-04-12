@@ -1,0 +1,456 @@
+# NPC Management Dashboard - ASCII Wireframe v1
+
+## Main Dashboard Layout
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NPC Management Dashboard                                                                                                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Search NPCs: ______________] [Filter: ▼] [Add NPC] [Bulk Import] [Export] [Help]                                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────┐ ┌───────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ NPC List            │ │ NPC Details / Edit Panel                                                                              │ │
+│ │ ┌─────────────────┐ │ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ [☑] NPC 1      │ │ │ │ Name: [Gorin Ironforge________________]                                                             │ │ │
+│ │ │ [☑] NPC 2      │ │ │ │ Description: [A dwarven blacksmith with a mysterious past and a golden hammer_________________] │ │ │
+│ │ │ [☑] NPC 3      │ │ │ │                                                                                                   │ │ │
+│ │ │ [☑] NPC 4      │ │ │ │ Statblock: [View] [Edit] [Generate New]                                                            │ │ │
+│ │ │ [☑] NPC 5      │ │ │ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │ │
+│ │ │ [☑] NPC 6      │ │ │ │ │ AC: 15 │ HP: 45/45 │ Speed: 25ft │ STR: 16 │ DEX: 12 │ CON: 14 │ INT: 10 │ WIS: 13 │ CHA: 8 │ │ │ │
+│ │ │ [☑] NPC 7      │ │ │ │ └─────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │ │
+│ │ │ [☑] NPC 8      │ │ │ │                                                                                                   │ │ │
+│ │ │ [☑] NPC 9      │ │ │ │ Location: [Mountain Forge Village ▼]                                                              │ │ │
+│ │ │ [☑] NPC 10     │ │ │ │ Campaigns: [The Golden Hammer ▼] [×] [Add Campaign +]                                             │ │ │
+│ │ │                 │ │ │ │                                                                                                   │ │ │
+│ │ │                 │ │ │ │ Relationships:                                                                                     │ │ │
+│ │ │                 │ │ │ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │ │
+│ │ │                 │ │ │ │ │ [View Graph] [Add Relationship]                                                                │ │ │ │
+│ │ │                 │ │ │ │ │ • Thorin Stonehand (Ally)                                                                       │ │ │ │
+│ │ │                 │ │ │ │ │ • Shadow Syndicate (Enemy)                                                                      │ │ │ │
+│ │ │                 │ │ │ │ └─────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │ │
+│ │ │                 │ │ │ │                                                                                                   │ │ │
+│ │ │                 │ │ │ │ [Save] [Delete] [Duplicate] [Export]                                                             │ │ │
+│ │ │                 │ │ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ └─────────────────────┘ └───────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────┐ ┌─────────────────────────────────────────────────────────────┐ │
+│ │ Relationship Graph                                                      │ │ Combat Tracker                                                │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────┐ │ │ ┌─────────────────────────────────────────────────────────────┐ │ │
+│ │ │     [Gorin Ironforge]───────[Thorin Stonehand]                     │ │ │ Initiative Order                                              │ │ │
+│ │ │          │                   │                                     │ │ │ ┌─────────────────────────────────────────────────────────┐ │ │ │
+│ │ │          └──[Ally]──────────┘                                     │ │ │ │ 1. Gorin Ironforge (HP: 45/45) [Actions ▼] [End Turn]   │ │ │ │
+│ │ │               │                                                     │ │ │ 2. Shadow Assassin (HP: 28/35) [Actions ▼] [End Turn]   │ │ │ │
+│ │ │               │                                                     │ │ │ 3. Thorin Stonehand (HP: 38/38) [Actions ▼] [End Turn]   │ │ │ │
+│ │ │          [Enemy]                                                     │ │ │ └─────────────────────────────────────────────────────────┘ │ │ │
+│ │ │               │                                                     │ │ │                                                             │ │ │
+│ │ │     [Shadow Syndicate]───[Shadow Assassin]                         │ │ │ Combat Log:                                                  │ │ │
+│ │ │          │                                                         │ │ │ ┌─────────────────────────────────────────────────────────┐ │ │ │
+│ │ │          └─────────────────────────────────────────────────────────┘ │ │ │ │ Round 1: Gorin attacks Shadow Assassin for 8 damage      │ │ │ │
+│ │ │                                                                     │ │ │ │ Shadow Assassin attacks Gorin for 12 damage            │ │ │ │
+│ │ │ [Zoom In] [Zoom Out] [Filter: All ▼] [Export Graph]                │ │ │ │ Thorin casts Bless on allies                               │ │ │ │
+│ │ │                                                                     │ │ │ └─────────────────────────────────────────────────────────┘ │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────┘ │ │ │                                                             │ │ │
+│ │                                                                         │ │ │ [Start Combat] [Next Round] [End Combat] [Add Participant] │ │ │
+│ └─────────────────────────────────────────────────────────────────────────┘ └─────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Adventure/Plot Linker                                                                                                         │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ Connect NPCs to plot hooks, events, and locations                                                                         │ │ │
+│ │ │                                                                                                                             │ │ │
+│ │ │ Plot Hook: [The Missing Artifact ▼]                                                                                       │ │ │
+│ │ │ Location: [Mountain Forge Village ▼]                                                                                      │ │ │
+│ │ │ Event: [The Festival of Steel ▼]                                                                                          │ │ │
+│ │ │                                                                                                                             │ │ │
+│ │ │ Linked NPCs:                                                                                                                │ │ │
+│ │ │ • Gorin Ironforge - Quest Giver                                                                                           │ │ │
+│ │ │ • Thorin Stonehand - Information Source                                                                                    │ │ │
+│ │ │ • Shadow Syndicate - Antagonist                                                                                            │ │ │
+│ │ │                                                                                                                             │ │ │
+│ │ │ [Add NPC Link] [Remove Link] [Create New Plot Hook] [Save Connections]                                                      │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## NPC List View (Expanded)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NPC List                                                                                                                      │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [☑] Name: Gorin Ironforge      │ Class: Fighter 5 │ Race: Dwarf │ Location: Mountain Forge │ Campaigns: The Golden Hammer   │
+│ [☑] Name: Thorin Stonehand     │ Class: Cleric 4  │ Race: Dwarf │ Location: Mountain Forge │ Campaigns: The Golden Hammer   │
+│ [☑] Name: Elara Moonwhisper    │ Class: Rogue 3   │ Race: Elf   │ Location: Silverwood     │ Campaigns: Shadow Conspiracy   │
+│ [☑] Name: Borin Stonefist      │ Class: Barbarian 4│ Race: Dwarf │ Location: Iron Mountains  │ Campaigns: The Golden Hammer   │
+│ [☑] Name: Shadow Assassin      │ Class: Rogue 5   │ Race: Human │ Location: Unknown        │ Campaigns: Shadow Conspiracy   │
+│ [☑] Name: Lady Silverwood      │ Class: Wizard 6  │ Race: Elf   │ Location: Silverwood     │ Campaigns: Shadow Conspiracy   │
+│ [☑] Name: Captain Blackbeard   │ Class: Fighter 4 │ Race: Human │ Location: Port Royal     │ Campaigns: Pirate's Treasure   │
+│ [☑] Name: Zara the Mystic      │ Class: Sorcerer 3 │ Race: Human │ Location: Mystic Tower   │ Campaigns: Arcane Mysteries    │
+│ [☑] Name: Grak the Destroyer   │ Class: Barbarian 5│ Race: Orc   │ Location: Dark Lands     │ Campaigns: Orc Invasion        │
+│ [☑] Name: Faelin Swiftbow      │ Class: Ranger 4  │ Race: Elf   │ Location: Silverwood     │ Campaigns: Shadow Conspiracy   │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Select All] [Deselect All] [Bulk Edit] [Bulk Delete] [Export Selected] [Import NPCs]                                            │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Statblock Editor View
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Statblock Editor: Gorin Ironforge                                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Gorin Ironforge • Medium humanoid (dwarf), neutral good                                                                   │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Armor Class 15 (chain mail, shield)                                                                                       │ │
+│ │ Hit Points 45 (6d8 + 18)                                                                                                   │ │
+│ │ Speed 25 ft.                                                                                                               │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ STR     DEX     CON     INT     WIS     CHA                                                                                │ │
+│ │ 16 (+3) 12 (+1) 14 (+2) 10 (+0) 13 (+1) 8 (-1)                                                                            │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Saving Throws STR +5, CON +4                                                                                               │ │
+│ │ Skills Athletics +5, Smith's Tools +5                                                                                       │ │
+│ │ Damage Resistances poison                                                                                                   │ │
+│ │ Senses darkvision 60 ft., passive Perception 11                                                                             │ │
+│ │ Languages Common, Dwarvish                                                                                                │ │
+│ │ Challenge 1 (200 XP)                                                                                                       │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Dwarven Resilience. Gorin has advantage on saving throws against poison.                                                    │ │
+│ │                                                                                                                             │ │
+│ │ Stonecunning. Gorin adds double his proficiency bonus to Intelligence (History) checks                                     │ │
+│ │ related to the origin of stonework.                                                                                        │ │
+│ │                                                                                                                             │ │
+│ │ ACTIONS                                                                                                                     │ │
+│ │ Warhammer. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage.                   │ │
+│ │                                                                                                                             │ │
+│ │ Shield Bash. Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 5 (1d4 + 3) bludgeoning damage.                 │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Edit Basic Info] [Edit Abilities] [Edit Traits] [Edit Actions] [Edit Equipment] [Preview] [Save] [Export]                     │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Relationship Graph View (Expanded)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Relationship Graph: The Golden Hammer Campaign                                                                                 │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                                                             │
+│     [Gorin Ironforge]◄───────────────[Quest Giver]─────────────────┐                                                           │
+│          │                                                         │                                                           │
+│          └──[Ally]─────────────────────────────────────────────────┘                                                           │
+│               │                                                                                                                 │
+│               │                                                                                                                 │
+│          [Enemy]                                                                                                               │
+│               │                                                                                                                 │
+│               ▼                                                                                                                 │
+│     [Shadow Syndicate]◄──────────────[Antagonist]────────────────┐                                                             │
+│          │                                                         │                                                             │
+│          └───────────────[Controls]────────────────────────────────┘                                                             │
+│               │                                                                                                                 │
+│               ▼                                                                                                                 │
+│     [Shadow Assassin]◄──────────────[Henchman]───────────────────┐                                                             │
+│          │                                                         │                                                             │
+│          └─────────────────[Targeting]────────────────────────────┘                                                             │
+│                                                                                                                             │
+│     [Thorin Stonehand]◄──────────────[Information Source]───────┐                                                           │
+│          │                                                         │                                                           │
+│          └──────────[Ally]────────────────────────────────────────┘                                                           │
+│                                                                                                                             │
+│     [Mountain Forge Village]◄──────────────[Location]────────────┐                                                         │
+│          │                                                         │                                                         │
+│          └─────────────────[Contains]─────────────────────────────┘                                                         │
+│                                                                                                                             │
+│     [The Golden Hammer]◄──────────────[Plot Hook]────────────────┐                                                         │
+│          │                                                         │                                                         │
+│          └─────────────────[Objective]────────────────────────────┘                                                         │
+│                                                                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Zoom In] [Zoom Out] [Filter: All ▼] [Export Graph] [Add Relationship] [Remove Relationship] [Auto-Layout]                     │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Combat Tracker View (Expanded)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Combat Tracker: Mountain Forge Encounter                                                                                      │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Round: 3 │ Turn: Gorin Ironforge │ Combat Time: 12 min │ Environment: Forge Interior │ Weather: Normal                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Initiative Order                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ 1. Gorin Ironforge (HP: 33/45) [AC: 15] [Status: ●] [Actions ▼] [End Turn]                                               │ │
+│ │ 2. Shadow Assassin (HP: 15/35) [AC: 16] [Status: ▲] [Actions ▼] [End Turn]                                               │ │
+│ │ 3. Thorin Stonehand (HP: 38/38) [AC: 18] [Status: ●] [Actions ▼] [End Turn]                                               │ │
+│ │ 4. Shadow Thug 1 (HP: 8/25) [AC: 13] [Status: ▲] [Actions ▼] [End Turn]                                                  │ │
+│ │ 5. Shadow Thug 2 (HP: 12/25) [AC: 13] [Status: ▲] [Actions ▼] [End Turn]                                                 │ │
+│ │ 6. Borin Stonefist (HP: 45/45) [AC: 14] [Status: ●] [Actions ▼] [End Turn]                                               │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Current Turn: Gorin Ironforge                                                                                                │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Action: [Warhammer ▼] [Target: Shadow Assassin ▼] [Roll: d20+5 ▼] [Damage: 1d8+3 ▼] [Attack]                             │ │
+│ │ Bonus Action: [Shield Bash ▼] [Target: Shadow Thug 1 ▼] [Roll: d20+5 ▼] [Damage: 1d4+3 ▼] [Attack]                         │ │
+│ │ Movement: 15/25 ft. [Move ▼]                                                                                               │ │
+│ │ Reaction: [None ▼]                                                                                                         │ │
+│ │ Special Actions: [Second Wind] [Action Surge] [Special Ability ▼]                                                          │ │
+│ │ Notes: [Add Note]                                                                                                          │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Combat Log                                                                                                                   │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Round 3:                                                                                                                  │ │
+│ │ • Shadow Assassin attacks Gorin for 8 piercing damage (HP: 33/45)                                                         │ │
+│ │ • Thoron casts Bless on Gorin, Borin, and himself                                                                         │ │
+│ │ • Shadow Thug 1 attacks Thorin for 5 bludgeoning damage (Missed!)                                                          │ │
+│ │ • Shadow Thug 2 attacks Gorin for 6 slashing damage (HP: 27/45)                                                           │ │
+│ │                                                                                                                           │ │
+│ │ Round 2:                                                                                                                  │ │
+│ │ • Gorin attacks Shadow Assassin for 12 bludgeoning damage (HP: 15/35)                                                      │ │
+│ │ • Shadow Assassin attacks Gorin for 7 piercing damage (HP: 40/45)                                                          │ │
+│ │ • Thoron casts Sacred Flame on Shadow Thug 2 for 8 radiant damage (HP: 17/25)                                              │ │
+│ │ • Shadow Thug 1 attacks Thorin for 6 bludgeoning damage (HP: 32/38)                                                        │ │
+│ │ • Shadow Thug 2 attacks Gorin for 5 slashing damage (HP: 35/45)                                                            │ │
+│ │ • Borin attacks Shadow Thug 1 for 14 slashing damage (HP: 11/25)                                                           │ │
+│ │                                                                                                                           │ │
+│ │ Round 1:                                                                                                                  │ │
+│ │ • Gorin wins initiative (Roll: 18)                                                                                        │ │
+│ │ • Shadow Assassin attacks Gorin for 9 piercing damage (HP: 36/45)                                                         │ │
+│ │ • Thoron casts Guiding Bolt on Shadow Assassin (Hit!)                                                                      │ │
+│ │ • Shadow Thug 1 attacks Gorin for 4 bludgeoning damage (HP: 32/45)                                                        │ │
+│ │ • Shadow Thug 2 attacks Thorin for 7 bludgeoning damage (HP: 31/38)                                                       │ │
+│ │ • Borin attacks Shadow Thug 2 for 16 slashing damage (HP: 9/25)                                                           │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Start Combat] [Next Round] [End Combat] [Add Participant] [Remove Participant] [Apply Damage] [Apply Healing] [Add Effect]   │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Adventure/Plot Linker View (Expanded)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Adventure/Plot Linker: The Golden Hammer Campaign                                                                               │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Plot Hook: The Missing Artifact                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Description: The legendary Golden Hammer of the Dwarven Ancestors has been stolen from the Mountain Forge. The dwarves   │ │
+│ │ believe it was taken by the Shadow Syndicate, but they have no proof. They need brave adventurers to recover the hammer  │ │
+│ │ and uncover the truth behind its disappearance.                                                                            │ │
+│ │                                                                                                                             │ │
+│ │ Location: Mountain Forge Village                                                                                           │ │
+│ │ Event: The Festival of Steel                                                                                                │ │
+│ │ Difficulty: Medium (CR 3-5)                                                                                                │ │
+│ │ Rewards: 300 GP, Dwarven Favor, Magic Item (DM's Choice)                                                                   │ │
+│ │                                                                                                                             │ │
+│ │ Linked NPCs:                                                                                                                │ │
+│ │ • Gorin Ironforge - Quest Giver (Provides the initial quest)                                                               │ │
+│ │ • Thorin Stonehand - Information Source (Knows about the Shadow Syndicate's activities)                                    │ │
+│ │ • Shadow Syndicate - Antagonist (Responsible for the theft)                                                                │ │
+│ │ • Shadow Assassin - Henchman (Directly involved in the theft)                                                              │ │
+│ │ • Borin Stonefist - Ally (Joins the party to recover the hammer)                                                           │ │
+│ │                                                                                                                             │ │
+│ │ Quest Steps:                                                                                                                │ │
+│ │ 1. Speak with Gorin Ironforge in Mountain Forge Village                                                                     │ │
+│ │ 2. Investigate the theft scene at the Great Hall                                                                            │ │
+│ │ 3. Gather information from Thorin Stonehand about the Shadow Syndicate                                                      │ │
+│ │ 4. Track the Shadow Syndicate to their hideout in the nearby mountains                                                       │ │
+│ │ 5. Infiltrate the hideout and recover the Golden Hammer                                                                     │ │
+│ │ 6. Return to Gorin Ironforge with the hammer and claim your reward                                                          │ │
+│ │                                                                                                                             │ │
+│ │ Status: Active                                                                                                              │ │
+│ │ Progress: [████████░░] 60% Complete                                                                                        │ │
+│ │ Current Step: Track the Shadow Syndicate to their hideout                                                                   │ │
+│ │ Next Session Goals: Locate the Shadow Syndicate hideout, Prepare for infiltration                                           │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Add NPC Link] [Remove Link] [Edit Plot Hook] [Create New Plot Hook] [Save Connections] [Export Plot Hook] [Print Quest Summary] │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Bulk Import/Export Modal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Bulk Import/Export NPCs                                                                                                       │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Import NPCs                                                                                                                 │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ File: [Choose file...] [Browse] [Paste Content]                                                                           │ │
+│ │ Format: [QuickNPC ▼] [CSV ▼] [JSON ▼]                                                                                      │ │
+│ │                                                                                                                             │ │
+│ │ Field Mapping:                                                                                                              │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ Source Field         → Target Field      Status                                                                       │ │ │
+│ │ │ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │ │
+│ │ │ Name                 → Name             ✓ Matched                                                                     │ │ │
+│ │ │ Description          → Description      ✓ Matched                                                                     │ │ │
+│ │ │ Class/Level          → Class/Level      ✓ Matched                                                                     │ │ │
+│ │ │ Race                 → Race             ✓ Matched                                                                     │ │ │
+│ │ │ HP                   → HP               ✓ Matched                                                                     │ │ │
+│ │ │ AC                   → AC               ✓ Matched                                                                     │ │ │
+│ │ │ Stats                → Abilities        ✓ Matched                                                                     │ │ │
+│ │ │ Equipment            → Equipment        ✓ Matched                                                                     │ │ │
+│ │ │ Notes                → Notes            ✓ Matched                                                                     │ │ │
+│ │ │ Custom Field         → (New Field)      ⚠ Will create new field                                                        │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ │                                                                                                                             │ │
+│ │ [Auto-map] [Reset Mapping] [Add Field Mapping]                                                                              │ │
+│ │                                                                                                                             │ │
+│ │ Validation:                                                                                                                 │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ ✓ 10 NPCs ready to import                                                                                                │ │ │
+│ │ │ ⚠ 2 NPCs with missing required fields (Name, Class)                                                                      │ │ │
+│ │ │ ✗ 1 NPC with invalid stat values (STR > 20)                                                                              │ │ │
+│ │ │ ℹ 3 NPCs with custom fields that will be added to the schema                                                              │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ │                                                                                                                             │ │
+│ │ [Preview Import] [Confirm Import] [Cancel]                                                                                  │ │
+│ │                                                                                                                             │ │
+│ │ Export NPCs                                                                                                                 │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Select NPCs: [All ▼] [Selected (10) ▼] [Custom Selection]                                                                   │ │
+│ │ Format: [Markdown ▼] [HTML ▼] [Foundry VTT ▼] [PDF ▼] [JSON ▼]                                                             │ │
+│ │ Template: [Standard ▼] [Homebrewery ▼] [Custom ▼]                                                                          │ │
+│ │ Options: ☑ Include statblocks ☑ Include relationships ☑ Include images ☐ Include private notes                             │ │
+│ │                                                                                                                             │ │
+│ │ [Preview Export] [Export] [Cancel]                                                                                         │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Mobile Responsive View
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NPC Management Dashboard (Mobile)                                                                                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [☰ Menu] NPC Management [Search] [+]                                                                                         │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Gorin Ironforge                                                                                                            │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Fighter 5 • Dwarf • Mountain Forge                                                                                         │ │
+│ │ HP: 45/45 • AC: 15                                                                                                         │ │
+│ │                                                                                                                             │ │
+│ │ [View Details] [Edit] [Combat] [Relationships]                                                                              │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Thorin Stonehand                                                                                                           │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Cleric 4 • Dwarf • Mountain Forge                                                                                          │ │
+│ │ HP: 38/38 • AC: 18                                                                                                         │ │
+│ │                                                                                                                             │ │
+│ │ [View Details] [Edit] [Combat] [Relationships]                                                                              │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Elara Moonwhisper                                                                                                          │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Rogue 3 • Elf • Silverwood                                                                                                  │ │
+│ │ HP: 28/28 • AC: 15                                                                                                         │ │
+│ │                                                                                                                             │ │
+│ │ [View Details] [Edit] [Combat] [Relationships]                                                                              │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [List] [Details] [Combat] [Graph] [Plot] [Import/Export]                                                                     │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Keyboard Shortcuts Help Modal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Keyboard Shortcuts                                                                                                            │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Navigation                                                                                                                 │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Ctrl + N          → New NPC                                                                                               │ │
+│ │ Ctrl + S          → Save Current NPC                                                                                       │ │
+│ │ Ctrl + F          → Search NPCs                                                                                            │ │
+│ │ Ctrl + E          → Export Selected NPCs                                                                                   │ │
+│ │ Ctrl + I          → Import NPCs                                                                                            │ │
+│ │ Ctrl + D          → Duplicate Current NPC                                                                                   │ │
+│ │ Delete            → Delete Selected NPC                                                                                    │ │
+│ │                                                                                                                             │ │
+│ │ Combat                                                                                                                     │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Ctrl + C          → Start Combat                                                                                           │ │
+│ │ Space             → Next Turn in Combat                                                                                    │ │
+│ │ Ctrl + R          → Next Round in Combat                                                                                   │ │
+│ │ Ctrl + End        → End Combat                                                                                             │ │
+│ │                                                                                                                             │ │
+│ │ Views                                                                                                                      │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Alt + 1           → NPC List View                                                                                          │ │
+│ │ Alt + 2           → NPC Details View                                                                                       │ │
+│ │ Alt + 3           → Relationship Graph View                                                                                │ │
+│ │ Alt + 4           → Combat Tracker View                                                                                    │ │
+│ │ Alt + 5           → Plot Linker View                                                                                      │ │
+│ │                                                                                                                             │ │
+│ │ Editing                                                                                                                    │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Tab               → Next Field                                                                                             │ │
+│ │ Shift + Tab       → Previous Field                                                                                         │ │
+│ │ Enter             → Confirm Action                                                                                         │ │
+│ │ Escape            → Cancel Action                                                                                          │ │
+│ │ Ctrl + Z          → Undo                                                                                                   │ │
+│ │ Ctrl + Y          → Redo                                                                                                   │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Print] [Close]                                                                                                               │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Settings/Preferences Modal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Settings & Preferences                                                                                                        │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ General                                                                                                                     │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Theme: [Light ▼] [Dark ▼] [Auto ▼]                                                                                          │ │
+│ │ Language: [English ▼]                                                                                                       │ │
+│ │ Time Zone: [UTC-5 (EST) ▼]                                                                                                  │ │
+│ │ Auto-save: ☑ Every 5 minutes                                                                                                │ │
+│ │ Auto-backup: ☑ Daily                                                                                                        │ │
+│ │                                                                                                                             │ │
+│ │ Display                                                                                                                    │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Default View: [List ▼] [Cards ▼] [Table ▼]                                                                                  │ │
+│ │ Items per page: [20 ▼]                                                                                                      │ │
+│ │ Show NPC avatars: ☑                                                                                                         │ │
+│ │ Show mini statblocks: ☑                                                                                                     │ │
+│ │ Compact mode: ☐                                                                                                             │ │
+│ │                                                                                                                             │ │
+│ │ Combat                                                                                                                     │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Auto-roll initiative: ☐                                                                                                     │ │
+│ │ Show damage animations: ☑                                                                                                   │ │
+│ │ Combat log verbosity: [Standard ▼] [Verbose ▼] [Minimal ▼]                                                                 │ │
+│ │ Round time limit: ☐ 60 seconds                                                                                              │ │
+│ │                                                                                                                             │ │
+│ │ Data Management                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Default export format: [Markdown ▼]                                                                                         │ │
+│ │ Include metadata in exports: ☑                                                                                              │ │
+│ │ Data retention period: [Forever ▼] [1 Year ▼] [6 Months ▼] [3 Months ▼]                                                     │ │
+│ │                                                                                                                             │ │
+│ │ Integrations                                                                                                                │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Foundry VTT: ☐ Connected [Configure]                                                                                       │ │
+│ │ Discord Bot: ☐ Connected [Configure]                                                                                         │ │
+│ │ D&D Beyond: ☐ Connected [Configure]                                                                                         │ │
+│ │ Roll20: ☐ Connected [Configure]                                                                                             │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Save Settings] [Reset to Defaults] [Import Settings] [Export Settings] [Cancel]                                               │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

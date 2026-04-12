@@ -1,0 +1,41 @@
++--------------------------------------------------------------------------+
+| Quick NPC Creation v1 — One-Sentence Table Generator                    |
++-----------------------------+--------------------------------------------+
+| Left Nav                    | Main Form                                   |
+| - NPCs (active)             |                                             |
+| - Locations                 | NPC Name: [_________________] [randomize]   |
+| - Quick Tools               | Race: (v) Random / Human / Elf / Dwarf...   |
+|                             | Role: [__________] [suggest from table]     |
+| Recent NPCs ↓               | Seed: [__________]                          |
+| - Kael the Merchant         | [x] Include unexpected detail (required)    |
+| - Lyra Shadowstep          ↘|                                             |
++-----------------------------+ [Generate (procedural)] [AI Fill] [Clear]   |
+|                             |                                             |
++-----------------------------+---------------------------------------------+
+| Preview (Markdown Rendered)                                              |
+| ┌────────────────────────────────────────────────────────────────────┐   |
+| │ | Category | Details |                                             │   |
+| │ |----------|---------|                                             │   |
+| │ | Identity | Kael Windrunner, Human, Merchant |                  │   |
+| │ | Look     | Middle-aged with weathered skin, carries a staff | │   |
+| │ | Goal     | Seeks rare artifact to pay off debt |              │   |
+| │ | Traits   | Charming but secretive, quick-witted |             │   |
+| │ | Habits   | Taps staff on ground when nervous |                │   |
+| │ | Speech   | Uses merchant slang, speaks quickly |              │   |
+| │ | Knowledge| Shared: trade routes; Secret: owes thieves' guild |│   |
+| │ | Bonds    | Daughter studying at mage academy |                │   |
+| │ | Cues     | Smiles too much when lying |                       │   |
+| │                                                                      │   |
+| │ **Brief Description:**                                               │   |
+| │ Kael is a traveling merchant who masks his desperation with charm.  │   |
+| │ He owes a significant debt to the local thieves' guild after a bad  │   |
+| │ deal went south. His daughter doesn't know about his troubles.      │   |
+| │ **Unexpected detail:** He keeps a trained raven that delivers        │   |
+| │ coded messages to his daughter.                                      │   |
+| └────────────────────────────────────────────────────────────────────┘   |
+| [Toggle Raw Markdown] [Copy Markdown] [Save to Cards]                   |
++--------------------------------------------------------------------------+
+| Footer: 9 categories / 1-sentence limit enforced | Word count: 47        |
++--------------------------------------------------------------------------+
+
+Mobile: table scrolls horizontally; description below table.

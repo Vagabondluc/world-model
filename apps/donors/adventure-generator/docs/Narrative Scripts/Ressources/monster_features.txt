@@ -1,0 +1,216 @@
+# Comprehensive Monster Creation Reference
+
+## Base Stat Calculation
+
+1. Choose target CR
+2. Calculate base stats using formulas below
+3. Adjust for spellcasting (if applicable)
+4. Fine-tune stats to fit monster concept
+5. Calculate final CR
+
+### Base Stat Formulas
+
+#### CR 0-1/2:
+- Atk = 4 + floor(0.5CR)
+- DC = 11 + floor(0.5CR)
+- AC = 13 + floor(0.33CR)
+- Dmg = HP/3
+- HP = (ceil(ACCCR) + 1) * 3
+
+#### CR 1-7:
+- Atk = 4 + floor(0.5CR)
+- DC = 11 + floor(0.5CR)
+- AC = 13 + floor(0.33CR)
+- Dmg = 5 + 5CR
+- HP = 3*Dmg
+
+#### CR 8+:
+- Atk = 4 + floor(0.5CR)
+- DC = 11 + floor(0.5CR)
+- AC = 13 + floor(0.33CR)
+- Dmg = 5CR
+- HP = 3*Dmg
+
+## Spellcasting Considerations
+- Identify spellcasting level and class
+- Analyze spell list for strength, atk/dmg, and healing/HP tradeoffs
+- Consider a 3-round simulation for spell effects on offensive and defensive CR
+
+## Stat Adjustments
+- AC: +/-3
+- HP: +/-50% (reduce by expected damage avoided over 3 rounds)
+- Atk: +/-2
+- Dmg: +/-50% (4x for limited-use, 0.5x for multi-target, 2x for limited multi-target)
+- DC: +/-2
+
+## Defensive Considerations
+- Calculate Effective HP: Consider immunities (2x BPS nonmagical), resistances (1.5x BPS nonmagical), and healing
+- Calculate Effective AC
+
+## Offensive Considerations
+- Calculate DPR (Damage Per Round)
+- Consider attack bonuses and save DCs
+
+## Skill Assignment
+- Higher CR/smarter monsters: More skills (max 4 for most, up to 6 for smart humanoids)
+- Large+ bruisers: May have no skills
+- Typical monsters: 2 skills (often Perception & Stealth)
+
+## Final CR Calculation
+1. Calculate Offensive CR and Defensive CR separately
+2. Average the two CRs for the final CR
+3. Adjust based on concept and other details that do not affect CR
+
+## Monster Features and Their Effects on Challenge Rating
+
+| Feature | Example Monster | Effect on Challenge Rating | Description |
+|---------|-----------------|----------------------------|-------------|
+| Aggressive | Orc | Increase effective per-round damage output by 2 | As a bonus action, the orc can move up to its speed toward a hostile creature that it can see. |
+| Ambusher | Doppelganger | Increase effective attack bonus by 1 | In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it surprised. |
+| Amorphous | Black pudding | No effect | The pudding can move through a space as narrow as 1 inch wide without squeezing. |
+| Amphibious | Kuo-toa | No effect | The kuo-toa can breathe air and water. |
+| Angelic Weapons | Deva | Increase effective per-round damage by the amount noted in the trait | The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack). |
+| Antimagic Susceptibility | Flying sword | No effect | The sword is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute. |
+| Avoidance | Demilich | Increase effective AC by 1 | If the demilich is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. |
+| Blind Senses | Grimlock | No effect | The grimlock can't use its blindsight while deafened and unable to smell. |
+| Blood Frenzy | Sahuagin | Increase effective attack bonus by 4 | The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points. |
+| Breath Weapon | Ancient black dragon | Assume it hits two targets, each failing its saving throw | The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one. |
+| Brute | Bugbear | Increase effective per-round damage by the amount noted in the trait | A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack). |
+| Chameleon Skin | Troglodyte | No effect | The troglodyte has advantage on Dexterity (Stealth) checks made to hide. |
+| Change Shape | Ancient brass dragon | No effect | The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice). |
+| Charge | Centaur | Increase damage on one attack by the amount noted in the trait | If the centaur moves at least 30 feet straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra 10 (3d6) piercing damage. |
+| Charm | Vampire | No effect | The vampire targets one humanoid it can see within 30 feet of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. |
+| Constrict | Constrictor snake | Increase effective AC by 1 | Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 6 (1d8 + 2) bludgeoning damage, and the target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target. |
+| Damage Absorption | Flesh golem | No effect | Immunities Lightning, Poison; Bludgeoning, Piercing, and Slashing from nonmagical attacks that aren't adamantine |
+| Damage Transfer | Cloaker | Double effective hit points, add 1/3 of hit points to per-round damage | While attached to a creature, the cloaker takes only half the damage dealt to it (rounded down), and that creature takes the other half. |
+| Death Burst | Magmin | Increase effective damage output for 1 round, assume it affects two creatures | When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. |
+| Devil's Sight | Barbed devil | No effect | Magical darkness doesn't impede the devil's darkvision. |
+| Dive Attack | Aarakocra | Increase effective damage on one attack by the amount noted in the trait | If the aarakocra is flying and dives at least 30 feet straight toward a target and then hits it with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target. |
+| Echolocation | Hook horror | No effect | The hook horror can't use its blindsight while deafened. |
+| Elemental Body | Azer | Increase effective per-round damage by the amount noted in the trait | A creature that touches the azer or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. |
+| Enlarge | Duergar | Increase effective per-round damage by the amount noted in the trait | For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. |
+| Etherealness | Night hag | No effect | The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a heartstone in her possession. |
+| False Appearance | Gargoyle | No effect | While the gargoyle remains motionless, it is indistinguishable from an inanimate statue. |
+| Fey Ancestry | Drow | No effect | The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep. |
+| Fiendish Blessing | Cambion | Apply Charisma modifier to actual AC | The AC of the cambion includes its Charisma bonus. |
+| Flyby | Peryton | No effect | The peryton doesn't provoke an opportunity attack when it flies out of an enemy's reach. |
+| Frightful Presence | Ancient black dragon | Increase effective hit points by 25% if facing characters of 10th level or lower | Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. |
+| Grappler | Mimic | No effect | The mimic has advantage on attack rolls against any creature grappled by it. |
+| Hold Breath | Lizardfolk | No effect | The lizardfolk can hold its breath for 15 minutes. |
+| Horrifying Visage | Banshee | See Frightful Presence | Each non-undead creature within 60 feet of the banshee that can see her must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. |
+| Illumination | Flameskull | No effect | The flameskull sheds either dim light in a 15-foot radius, or bright light in a 15-foot radius and dim light for an additional 15 feet. It can switch between the options as an action. |
+| Illusory Appearance | Green hag | No effect | The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. |
+| Immutable Form | Iron golem | No effect | The golem is immune to any spell or effect that would alter its form. |
+| Incorporeal Movement | Ghost | No effect | The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object. |
+| Innate Spellcasting | Djinni | See spellcasting considerations | The djinni's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast certain spells, requiring no material components. |
+| Inscrutable | Androsphinx | No effect | The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage. |
+| Invisibility | Imp | No effect | The imp magically turns invisible until it attacks, or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it. |
+| Keen Senses | Hell hound | No effect | The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell. |
+| Labyrinthine Recall | Minotaur | No effect | The minotaur can perfectly recall any path it has traveled. |
+| Leadership | Hobgoblin captain | No effect | For 1 minute, the hobgoblin can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the hobgoblin. |
+| Legendary Resistance | Ancient black dragon | Increase effective hit points based on CR | If the dragon fails a saving throw, it can choose to succeed instead. |
+| Life Drain | Wight | No effect | Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6 + 2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. |
+| Light Sensitivity | Shadow demon | No effect | While in bright light, the demon has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight. |
+| Magic Resistance | Balor | Increase effective AC by 2 | The balor has advantage on saving throws against spells and other magical effects. |
+| Magic Weapons | Balor | No effect | The balor's weapon attacks are magical. |
+| Martial Advantage | Hobgoblin | Increase effective damage of one attack per round | The hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated. |
+| Mimicry | Kenku | No effect | The kenku can mimic any sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check. |
+| Nimble Escape | Goblin | Increase effective AC and attack bonus by 4 | The goblin can take the Disengage or Hide action as a bonus action on each of its turns. |
+| Otherworldly Perception | Kuo-toa | No effect | The kuo-toa can sense the presence of any creature within 30 feet of it that is invisible or on the Ethereal Plane. It can pinpoint such a creature that is moving. |
+| Pack Tactics | Kobold | Increase effective attack bonus by 1 | The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't incapacitated. |
+| Parry | Hobgoblin warlord | Increase effective AC by 1 | The hobgoblin adds 3 to its AC against one melee attack that would hit it. To do so, the hobgoblin must see the attacker and be wielding a melee weapon. |
+| Possession | Ghost | Double effective hit points | One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness. |
+| Pounce | Tiger | Increase effective damage for 1 round | If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action. |
+| Psychic Defense | Githzerai monk | Apply Wisdom modifier to actual AC if not wearing armor or wielding a shield | While the githzerai is wearing no armor and wielding no shield, its AC includes its Wisdom modifier. |
+| Rampage | Gnoll | Increase effective per-round damage by 2 | When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack. |
+| Reactive | Marilith | No effect | The marilith can take one reaction on every turn in combat. |
+| Read Thoughts | Doppelganger | No effect | The doppelganger magically reads the surface thoughts of one creature within 60 feet of it. The effect can penetrate barriers, but 3 feet of wood or dirt, 2 feet of stone, 2 inches of metal, or a thin sheet of lead blocks it. |
+| Reckless | Minotaur | No effect | At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn. |
+| Redirect Attack | Goblin boss | No effect | When a creature the goblin can see targets it with an attack, the goblin chooses another goblin within 5 feet of it. The two goblins swap places, and the chosen goblin becomes the target instead. |
+| Reel | Roper | No effect | The roper pulls each creature grappled by it up to 25 feet straight toward it. |
+| Regeneration | Troll | Increase effective hit points by 3 × the number of hit points the monster regenerates each round | The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate. |
+| Rejuvenation | Lich | No effect | If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery. |
+| Relentless | Wereboar | Increase effective hit points based on CR | If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead. |
+| Shadow Stealth | Shadow demon | Increase effective AC by 4 | While in dim light or darkness, the demon can take the Hide action as a bonus action. |
+| Shapechanger | Wererat | No effect | The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies. |
+| Siege Monster | Earth elemental | No effect | The elemental deals double damage to objects and structures. |
+| Slippery | Kuo-toa | No effect | The kuo-toa has advantage on ability checks and saving throws made to escape a grapple. |
+| Spellcasting | Lich | See spellcasting considerations | The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared. |
+| Spider Climb | Ettercap | No effect | The ettercap can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check. |
+| Standing Leap | Bullywug | No effect | The bullywug's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start. |
+| Steadfast | Bearded devil | No effect | The devil can't be frightened while it can see an allied creature within 30 feet of it. |
+| Stench | Troglodyte | Increase effective AC by 1 | Any creature other than a troglodyte that starts its turn within 5 feet of the troglodyte must succeed on a DC 12 Constitution saving throw or be poisoned until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all troglodytes for 1 hour. |
+| Sunlight Sensitivity | Kobold | No effect | While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight. |
+| Superior Invisibility | Faerie dragon | Increase effective AC by 2 | As a bonus action, the dragon can magically turn invisible until its concentration ends (as if concentrating on a spell). Any equipment the dragon wears or carries is invisible with it. |
+| Sure-Footed | Dao | No effect | The dao has advantage on Strength and Dexterity saving throws made against effects that would knock it prone. |
+| Surprise Attack | Bugbear | Increase effective damage for 1 round | If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack. |
+| Swallow | Behir | Assume it swallows one creature and deals 2 rounds of acid damage | The behir makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is blinded and restrained, it has total cover against attacks and other effects outside the behir, and it takes 21 (6d6) acid damage at the start of each of the behir's turns. |
+| Teleport | Balor | No effect | The balor magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see. |
+| Terrain Camouflage | Bullywug | No effect | The bullywug has advantage on Dexterity (Stealth) checks made to hide in swampy terrain. |
+| Tunneler | Umber hulk | No effect | The umber hulk can burrow through solid rock at half its burrowing speed and leaves a 5 foot-wide, 8-foot-high tunnel in its wake. |
+| Turn Immunity | Revenant | No effect | The revenant is immune to effects that turn undead. |
+| Turn Resistance | Lich | No effect | The lich has advantage on saving throws against any effect that turns undead. |
+| Two Heads | Ettin | No effect | The ettin has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious. |
+| Undead Fortitude | Zombie | Increase effective hit points based on CR | If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead. |
+| Web Sense | Giant spider | No effect | While in contact with a web, the spider knows the exact location of any other creature in contact with the same web. |
+| Web Walker | Giant spider | No effect | The spider ignores movement restrictions caused by webbing. |
+| Wounded Fury | Quaggoth | Increase damage for 1 round by the amount noted in the trait | While it has 10 hit points or fewer, the quaggoth has advantage on attack rolls. In addition, it deals an extra 7 (2d6) damage to any target it hits with a melee attack. |
+
+Remember to balance adjustments to create the desired concept while maintaining an appropriate challenge level. When using these features, consider how they interact with the monster's other abilities and the overall encounter design.
+
+# Comprehensive Monster Creation Reference
+
+[Previous content remains unchanged]
+
+## Creating NPCs from Scratch
+
+When creating an NPC, you have two main options:
+
+1. Create an NPC stat block similar to those in the Monster Manual, using the monster creation guidelines.
+2. Build the NPC as you would a player character, following the rules in the Player's Handbook.
+
+If you choose the second option, you can skip selecting a background and instead choose two skill proficiencies for the NPC.
+
+### Using Non-Human Races and Low CR Creatures as NPCs
+
+The table below summarizes ability modifiers and features for various non-human races and creatures with a challenge rating lower than 1. Apply these modifiers and features to the NPC's stat block, then determine the NPC's challenge rating as you would for a monster. 
+
+Note: The NPC's proficiency bonus is determined by its level, like a character, rather than by its challenge rating.
+
+| Race/Creature | Ability Modifiers | Features |
+|----------------|-------------------|----------|
+| Aarakocra | +2 Dex, +2 Wis | Dive Attack: talon attack action, speed 20 ft., fly 50 ft., speaks Auran |
+| Bullywug | -2 Int, -2 Cha | Amphibious, Speak with Frogs and Toads, Swamp Camouflage, Standing Leap: speed 20 ft., swim 40 ft., speaks Bullywug |
+| Dragonborn* | +2 Str, +1 Cha | Breath Weapon (use CR instead of level for damage), Damage Resistance, Draconic Ancestry, speaks Common and Draconic |
+| Drow* | +2 Dex, +1 Cha | Fey Ancestry, Innate Spellcasting, Sunlight Sensitivity, darkvision 120 ft., speaks Elvish and Undercommon |
+| Dwarf* | +2 Str or Wis, +2 Con | Dwarven Resilience, Stonecunning, speed 25 ft., darkvision 60 ft., speaks Common and Dwarvish |
+| Elf* | +2 Dex, +1 Int or Wis | Fey Ancestry, Trance, darkvision 60 ft., proficiency in Perception, speaks Common and Elvish |
+| Gnoll | +2 Str, -2 Int | Rampage, darkvision 60 ft. |
+| Gnome* | +2 Int, +2 Dex or Con | Gnome Cunning, Small size, speed 25 ft., darkvision 60 ft., speaks Common and Gnomish |
+| Deep Gnome | +1 Str, +2 Dex | Gnome Cunning, Innate Spellcasting, Stone Camouflage, Small size, speed 20 ft., darkvision 120 ft., speaks Gnomish, Terran, and Undercommon |
+| Goblin | -2 Str, +2 Dex | Nimble Escape, Small size, darkvision 60 ft., speaks Common and Goblin |
+| Grimlock | +2 Str, -2 Cha | Blind Senses, Keen Hearing and Smell, Stone Camouflage, can't be blinded, blindsight 30 ft. (10 ft. while deafened), speaks Undercommon |
+| Half-elf* | +1 Dex, +1 Int, +2 Cha | Fey Ancestry, darkvision 60 ft., proficiency in two skills, speaks Common and Elvish |
+| Half-orc* | +2 Str, +1 Con | Relentless Endurance, darkvision 60 ft., proficiency in Intimidation, speaks Common and Orc |
+| Halfling* | +2 Dex, +1 Con or Cha | Brave, Halfling Nimbleness, Lucky, Small size, speed 25 ft., speaks Common and Halfling |
+| Hobgoblin | None | Martial Advantage, darkvision 60 ft., speaks Common and Goblin |
+| Kenku | +2 Dex | Ambusher, Mimicry, understands Auran and Common but speaks only through Mimicry |
+| Kobold | -4 Str, +2 Dex | Pack Tactics, Sunlight Sensitivity, Small size, darkvision 60 ft., speaks Common and Draconic |
+| Kuo-toa | None | Amphibious, Otherworldly Perception, Slippery, Sunlight Sensitivity, speed 30 ft., swim 30 ft., darkvision 120 ft., speaks Undercommon |
+| Lizardfolk | +2 Str, -2 Int | Hold Breath (15 min.), +3 natural armor bonus to AC, speed 30 ft., swim 30 ft., speaks Draconic |
+| Merfolk | None | Amphibious, speed 10 ft., swim 40 ft., speaks Aquan and Common |
+| Orc | +2 Str, -2 Int | Aggressive, darkvision 60 ft., speaks Common and Orc |
+| Skeleton | +2 Dex, -4 Int, -4 Cha | Vulnerable to bludgeoning damage, immune to poison damage and exhaustion, can't be poisoned, darkvision 60 ft., can't speak but understands languages it knew in life |
+| Tiefling* | +1 Int, +2 Cha | Infernal Legacy (use CR instead of level for spells), resistance to fire damage, darkvision 60 ft., speaks Common and Infernal |
+| Troglodyte | +2 Str, +2 Con, -4 Int, -4 Cha | Chameleon Skin, Stench, Sunlight Sensitivity, +1 natural armor bonus to AC, darkvision 60 ft., speaks Troglodyte |
+| Zombie | +1 Str, +2 Con, -6 Int, -4 Wis, -4 Cha | Undead Fortitude, immune to poison damage, can't be poisoned, darkvision 60 ft., can't speak but understands languages it knew in life |
+
+*See the Player's Handbook for descriptions of this race's features, none of which alter the NPC's challenge rating.
+
+### Important Notes:
+1. Features that can affect a monster's challenge rating are listed in the Monster Features table earlier in this reference.
+2. If you want to use a monster that isn't listed here, refer to the "Monsters with Classes" section in the Dungeon Master's Guide.
+3. When creating NPCs using these guidelines, remember to balance their abilities and challenge rating to fit your campaign and encounter needs.
+4. You can mix and match features from different races or creatures to create unique NPCs, but be mindful of how this might affect their overall power and challenge rating.
+
+Remember to use these guidelines as a starting point and adjust as needed to create compelling and balanced NPCs for your game.

@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "5X5 Mystery Campaign".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: 5x5_mystery_campaign
+
+```text
++--------------------------------------------------------------------------------+
+|  [5x5 Campaign Architect: The Grand Web]                               [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Campaign: [ The Shadow Regency ]  Stakes: [ Continental ]  [Save Campaign]    |
++--------------------------------------------------------------------------------+
+|  META-STRUCTURE (Mystery-Nodes)         |  CAMPAIGN LORE                       |
+|                                         |  Grand Secret: [ The King is a Simul ]|
+|       [B: The Poisoned Well] --+        |  Recurring NPC: [ "The Blind Seer" ] |
+|      /                      \       |  Themes: [ Corruption / Duplicity ]    |
+| [A: The] -- [C: The Tower] -- [E: The] |  -----------------------------------  |
+| [Missing]   [Heist       ]    [Coron.] |  [X] Inter-Clue Map [ ] Audit Status  |
+|      \                      /       |                                       |
+|       [D: The Secret Sect ] --+         |  [View Recurring Elements]            |
++-----------------------------------------+---------------------------------------+
+|  SUB-MYSTERY DETAILS (Active: Mystery C)                                       |
+|  Mystery Concept: [ Infiltration of the Golem Vaults ]                         |
+|  Inter-Mystery Clues:                                                          |
+|  1. [Mystery D] Cipher mentioning the Sect.                                    |
+|  2. [Mystery E] Map of the Palace.                                             |
++--------------------------------------------------------------------------------+
+|  [Build All 25 Nodes] [Export Campaign Dossier] [Validate Core Truth]  [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: 5x5_mystery_campaign
+
+## Component Architecture
+- **Meta-Mystery Navigation Map:** A nested node graph. The top level shows 5 "Mystery Nodes." Clicking into any Mystery Node reveals its underlying 5 "Scene Nodes," creating a 25-node interactive map.
+- **Global Lore & Recurring Element Database:** A central repository for NPCs, factions, and landmarks that appear across different mysteries. Editing an element here updates it in all relevant nodes.
+- **Inter-Mystery Clue Engine:** A specialized bridge-tool that allows DMs to link a specific clue in `Mystery A, Node 3` to the start of `Mystery B`.
+- **Campaign Narrative Timeline:** A linear or branching view of the "Grand Secret" and how it is revealed piece-by-piece across the campaign.
+- **XP/Complexity Balancer:** A global setting that scales DCs and enemy power levels based on the campaign's "In-Game Week" or the number of mysteries completed.
+
+## Interaction Logic
+- **Drill-Down Workflow:** The DM can zoom into any single mystery to edit its individual nodes using the standard 5-node mystery toolkit, then zoom out to see how it fits into the 25-node global web.
+- **Recursive Consistency Checker:** When a change is made in Mystery B, the UI automatically flags any contradictions in Mysteries A, C, or D.
+- **Entry Point Orientation:** If the players start with Mystery D instead of A, the UI re-calculates which clues in D need to be "obvious" to hook them into the rest of the campaign.
+
+## Visual Design
+- **Grand Strategy Interface:** Clean, spacious layout that manages high information density through hierarchical tabs and zooming.
+- **Connectivity Visualization:** Uses different colored "thread" lines for intra-mystery clues vs. inter-mystery (campaign-level) clues.
+- **Thematic Consistency:** The entire UI maintains the same "Noir Dossier" or "Fantasy Chronology" theme selected for the campaign.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: 5x5_mystery_campaign
+
+# Campaign: The Shadow Regency
+
+### 1. Master Campaign Overview
+**Overarching Narrative:** The current King of Aethelgard was killed and replaced by a clockwork simulacrum six months ago. The "Shadow Regency" (a coalition of artificers and corrupt nobles) is ruling from the shadows, slowly dismantling the kingdom's defenses to allow an extra-planar invasion.
+
+### 2. The Five Mysteries (The 5x5 Grid)
+- **Mystery A: The Missing Heirloom.** A theft investigation in the capital that reveals a high-tech "repair kit" not sold to the public. (Hooks to B, C, D).
+- **Mystery B: The Poisoned Well.** A regional plague that turns out to be "Clockwork Sickness" (mercury poisoning from simulacrum maintenance).
+- **Mystery C: The Tower Heist.** An infiltration of the Artificer's Guild to retrieve a stolen ledger of "Regency" members.
+- **Mystery D: The Secret Sect.** An investigation into a cult that worships "The Perfect Machine."
+- **Mystery E: The Coronation.** The final confrontation at the King's Jubilee, where the simulacrum is to be upgraded for permanent rule.
+
+### 3. Recurring Elements
+- **NPC: Counselor Vane.** A nervous noble who appears in A, B, and C, eventually revealed as a Regency thrall.
+- **Location: The Gearbox Tavern.** A neutral ground in the docks used as a meeting point for informants across all mysteries.
+- **Theme:** The sound of a slow, ticking clock heard behind palace walls.
+
+### 4. Inter-Mystery Connections
+- **From Mystery A (Node 4):** A discarded invoice from the **Artificer's Guild** (Points to Mystery C).
+- **From Mystery C (Node 2):** A ritual pamphlet for the **Church of Gears** (Points to Mystery D).
+- **From Mystery D (Node 5):** A confession by a dying cultist about the **Coronation Plot** (Points to Mystery E).
+
+### 5. Campaign Manifest
+- `5x5Campaign_ShadowRegency_Overview.txt`
+- `CampaignNarrative_ShadowRegency.txt`
+- `RecurringElements_ShadowRegency.txt`
+- `InterMysteryConnections_ShadowRegency.txt`
+- `5NodeMystery_Heirloom_1.txt` ...through... `5NodeMystery_Coronation_5.txt`
+

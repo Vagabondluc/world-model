@@ -1,0 +1,44 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Riddle".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Riddle Forge (CreateRiddle)
+
+```text
++--------------------------------------------------------------------------------+
+|  [Riddle Forge: Cryptic Logic Engine]                                 [?] [X]  |
++--------------------------------------------------------------------------------+
+|  THE ANSWER: [ SILENCE ]  |  Theme: [ The Whispering Library ] [Regenerate]     |
++--------------------------------------------------------------------------------+
+|  [EASY VERSION]                        |  [HARD VERSION]                       |
+|  "I can be heard but never spoken,    |  "A thief of sound that steals with   |
+|   a single word and I am broken.      |   a ghost's touch, I live in every    |
+|   What am I?"                         |   void but die in every clutch.       |
+|                                       |   Who am I?"                          |
++----------------------------------------+---------------------------------------+
+|  LOGIC & EXPLANATION                   |  PLAYER CLUES (Hints)                 |
+|  - Logic (Easy): Speaking the word     |  1. "Don't speak!"                    |
+|    'Silence' ends it.                  |  2. [ Add Meta-Clue ]                 |
+|  - Logic (Hard): Silence 'lives' in    |                                       |
+|    the void; sound 'kills' it.         |                                       |
++----------------------------------------+---------------------------------------+
+|  [Export Riddle Card] [Copy Easy] [Copy Hard]                          [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+[MISSING FILE: docs\mockups\ui-docs\riddle-ui.md]
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+[MISSING FILE: docs\mockups\samples\riddle-sample.md]

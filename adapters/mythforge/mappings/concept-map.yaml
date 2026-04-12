@@ -1,0 +1,117 @@
+entries:
+  - donor_concept: UUID Container Architecture
+    source_family: identity-history
+    canonical_key: world
+    canonical_target: WorldRecord
+    status: mapped
+    winner: mythforge
+    rationale: Mythforge owns canonical trunk identity and append-only world state.
+    provenance: docs/schema-templates/UUID_CONTAINER_ARCHITECTURE.md
+
+  - donor_concept: Character Template
+    source_family: entity-template
+    canonical_key: entity
+    canonical_target: EntityRecord
+    status: mapped
+    winner: mythforge
+    rationale: Entity identity and ownership semantics originate in trunk templates.
+    provenance: docs/schema-templates/Character.md
+
+  - donor_concept: Settlement Template
+    source_family: spatial-stack
+    canonical_key: city/settlement
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: mythforge
+    rationale: City and settlement geography stays attached to canonical entities.
+    provenance: docs/schema-templates/Settlement.md
+
+  - donor_concept: Region Template
+    source_family: spatial-stack
+    canonical_key: region
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: mythforge
+    rationale: Region hierarchy is modeled as location attachment metadata.
+    provenance: docs/schema-templates/Region.md
+
+  - donor_concept: Biome Template
+    source_family: spatial-stack
+    canonical_key: biome
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: mythforge
+    rationale: Biome classification remains spatial metadata on canonical entities.
+    provenance: docs/schema-templates/Biome.md
+
+  - donor_concept: Dungeon Template
+    source_family: spatial-stack
+    canonical_key: dungeon
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: mythforge
+    rationale: Dungeon topology and tags belong in location attachments.
+    provenance: docs/schema-templates/Dungeon.md
+
+  - donor_concept: Landmark Template
+    source_family: spatial-stack
+    canonical_key: landmark
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: mythforge
+    rationale: Landmarks are first-class spatial anchors on entities.
+    provenance: docs/schema-templates/Landmark.md
+
+  - donor_concept: Asset Template
+    source_family: entity-template
+    canonical_key: asset
+    canonical_target: AssetRecord
+    status: mapped
+    winner: mythforge
+    rationale: Asset ownership follows canonical world and entity identity.
+    provenance: docs/schema-templates/Artifact.md
+
+  - donor_concept: Relation Semantics
+    source_family: event-projection
+    canonical_key: relation
+    canonical_target: RelationRecord
+    status: mapped
+    winner: mythforge
+    rationale: Canonical relation graph is derived from trunk semantics.
+    provenance: docs/schema-templates/index.md
+
+  - donor_concept: Schema Templates
+    source_family: schema-contract
+    canonical_key: schema-binding
+    canonical_target: SchemaBindingRecord
+    status: mapped
+    winner: mythforge
+    rationale: External schema bindings are anchored to mythforge schema templates.
+    provenance: docs/schema-templates/schemas
+
+  - donor_concept: Event Ledger
+    source_family: event-projection
+    canonical_key: event
+    canonical_target: EventEnvelope
+    status: mapped
+    winner: mythforge
+    rationale: Append-only events are canonical trunk truth.
+    provenance: docs/schema-templates/UUID_CONTAINER_ARCHITECTURE.md
+
+  - donor_concept: Projection Semantics
+    source_family: event-projection
+    canonical_key: projection
+    canonical_target: ProjectionRecord
+    status: mapped
+    winner: mythforge
+    rationale: Projections remain derived from the event ledger.
+    provenance: docs/schema-templates/UUID_CONTAINER_IMPLEMENTATION_PLAN.md
+
+  - donor_concept: City Gazetteer Form Shell
+    source_family: entity-template
+    canonical_key: location
+    canonical_target: LocationAttachment
+    status: reference-only
+    winner: mythforge
+    rationale: Form shell fields are donor-local, but location semantics are retained.
+    provenance: docs/schema-templates/City.md

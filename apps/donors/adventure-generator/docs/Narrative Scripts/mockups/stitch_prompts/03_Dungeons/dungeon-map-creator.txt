@@ -1,0 +1,88 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeon-Map-Creator".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: dungeon-map-creator
+
+```text
++--------------------------------------------------------------------------------+
+|  [Dungeon Map Creator: Node-Link Editor]                              [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Scale: [ 1sq = 5ft ]  Grid: [ On ]  Layer: [ Level 1 (Main) ]  [Seed: 8871]   |
++--------------------------------------------------------------------------------+
+|  TOOLS        |  CANVAS (Interactive)                                          |
+|  [Select]     |                                                                |
+|  [Room]       |      (1) Entrance ----> (2) Hallway --- [S] --- (5) Vault      |
+|  [Link]       |            |               |                                   |
+|  [Xander Loop]|            +--- (3) Guard -+--- (4) Climax                     |
+|  [Legend Sym] |                                                                |
+|               |      [L] Add Level Connection (to Level 2)                     |
++---------------+----------------------------------------------------------------+
+|  LEGEND       |  PROPERTIES (Room 2)                                           |
+|  [D] Door     |  Name: [ Intersection Hall ]                                   |
+|  [T] Trap     |  Shape: [ Rectangle ]  Size: [ 20x40ft ]                       |
+|  [!] Secret   |  Flow: [ High Traffic ]                                        |
++--------------------------------------------------------------------------------+
+|  [Global Xanderize] [Export to Image] [Sync to Key Writer]            [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: dungeon-map-creator
+
+## Component Architecture
+- **Interactive Canvas:** A vector-based drawing area where Rooms are nodes and Corridors are links.
+- **Xandering Toolbar:**
+    - **Add Loop:** Automatically connects two distant nodes to prevent linear pathing.
+    - **Secret Path:** Adds a hidden link with specialized "Secret Door" markers.
+    - **Elevation Shift:** Adds stairs or ladders to transition between layers.
+- **Layer Manager:** A tabbed system to handle multiple dungeon levels (Under-Level, Attic, Hidden Vault).
+- **Legended Properties Panel:** When a room is selected, detail fields (Name, Shape, Flow) appear.
+
+## Interaction Logic
+- **Bi-Directional Sync:** Adding a room to the Map Creator immediately reserves a slot in the Key Writer with the same number.
+- **Smart Snap:** Room nodes snap to the grid based on the chosen Scale (5ft/10ft).
+- **Flow Visualization:** An optional overlay that colors the paths based on "Distance from Entrance" to help the DM identify "bottlenecks".
+
+## Visual Design
+- **Drafting Vibe:** Uses a blueprint-style background (Grid paper or dark blue schematic).
+- **Symbol Library:** Drag-and-drop icons for classic map elements (Pits, Statues, Altars).
+- **Legend Export:** Automatically generates a separate "Map Legend" document based on the symbols used on the canvas.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: dungeon-map-creator
+
+# Map Legend: The Sunken Foundry
+**Scale:** 1 Square = 5 Feet
+
+### Map Layout (Schema)
+1. **Entrance:** The Rusted Sluice Gate (South Edge).
+2. **Corridor 1:** The Sludge Run (North from 1).
+3. **Room A:** The Sorting Floor (Intersection from 1, West to 4).
+4. **Room B:** The Piston Chamber (Xander Loop back to 2).
+5. **Room C:** The Foreman’s Office (Hidden door from 4).
+6. **Room D:** The Smelting Pit (Climax - North from 2).
+
+### Legend Symbols
+- **[D] Door:** Standard iron bulkhead.
+- **[S] Secret Door:** Rotating wall panel.
+- **[T] Trap:** Crushing hydraulic piston (Room 4).
+- **[!] Point of Interest:** Artifact on the altar (Room 6).
+- **[H] Hazard:** Overflowing slag (Room 6).
+
+### Xandering Notes
+- Added a secret corridor (3) linking the back of the Entrance (1) directly to the Foreman's Office (5), allowing stealthy players to bypass the Guard Room (A).
+- The Piston Chamber (B) provides an elevation drop to a sub-level (not shown on this map).
+

@@ -1,0 +1,44 @@
+id: orbis
+name: Orbis
+version: 1.0.0
+source:
+  repo: local://to be merged/true orbis/Orbis Spec 2.0
+  commit: workspace-local
+  path: Orbis 1.0
+source_kind: typescript
+default_promotion_class: simulation
+snapshot:
+  root: adapters/orbis/source-snapshot
+  fingerprint: ec024f6b22aa2f47db4543adad0ba687a73ad69bbb11f3c4852b9d6c6eab6c93
+  file_count: 6
+included_paths:
+- types/session.ts
+- stores/weatherStore.ts
+- stores/mapStore.ts
+- stores/mapLocationStore.ts
+- contracts/forms/social_event.schema.ts
+- contracts/forms/social_event.types.ts
+excluded_paths:
+- components
+- __tests__
+- test
+- tests
+- app
+concepts:
+- simulation-profile
+- simulation-snapshot
+- simulation-domain
+- simulation-event
+- biosphere-state
+- civilization-state
+- planetary-state
+- narrative-artifact
+- hex-spatial
+- terrain-config
+- species-template
+- domain-clock
+mappings:
+- adapters/orbis/mappings/concept-map.yaml
+provenance:
+  generated_at: '2026-04-12T09:22:51Z'
+  generated_by: vagab

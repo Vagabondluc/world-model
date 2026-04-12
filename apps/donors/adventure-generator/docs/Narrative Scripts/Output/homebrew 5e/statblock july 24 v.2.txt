@@ -1,0 +1,95 @@
+((
+[CR Calculation Process]
+1. Choose target CR
+2. Calculate base stats using formulas below
+3. Adjust for spellcasting (if applicable)
+4. Apply monster feature adjustments (see Monster Features section)
+5. Fine-tune stats to fit monster concept
+6. Calculate final CR
+
+[Base Stat Formulas]
+CR 0-1/2:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = HP/3
+HP = (ceil(ACCCR) + 1) * 3
+
+CR 1-7:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = 5 + 5CR
+HP = 3*Dmg
+
+CR 8+:
+Atk = 4 + floor(0.5CR)
+DC = 11 + floor(0.5CR)
+AC = 13 + floor(0.33CR)
+Dmg = 5CR
+HP = 3*Dmg
+
+[Spellcasting Considerations]
+- Identify spellcasting level and class
+- Analyze spell list for strength, atk/dmg, and healing/HP tradeoffs
+- Consider a 3-round simulation for spell effects on offensive and defensive CR
+
+[Monster Features]
+When adjusting for monster features, consider the following categories:
+
+1. Offensive Boosts:
+   - Damage: +2 to +X per round (e.g., Aggressive, Brute)
+   - Attack bonus: +1 to +4 (e.g., Ambusher, Blood Frenzy)
+   - Extra damage on specific attacks (e.g., Charge, Surprise Attack)
+
+2. Defensive Boosts:
+   - AC: +1 to +4 (e.g., Avoidance, Constrict, Shadow Stealth)
+   - Effective HP: +25% to +100% (e.g., Damage Transfer, Possession)
+   - Regeneration: +3 HP per round of regeneration
+   - CR-based HP increases (e.g., Relentless, Undead Fortitude)
+
+3. Versatility Boosts:
+   - Advantage on specific rolls (e.g., Pack Tactics, Grappler)
+   - Extra actions/bonus actions (e.g., Nimble Escape, Multiattack)
+
+4. High-Impact Features:
+   - Magic Resistance: +2 to effective AC
+   - Superior Invisibility: +2 to effective AC
+   - Possession: Double effective HP
+   - Nimble Escape: +4 to effective AC and attack bonus
+
+5. Special Considerations:
+   - Breath weapons: Assume two targets fail saves
+   - Frightful Presence: +25% HP vs. lower-level characters
+
+6. No CR Impact: Flavor abilities (e.g., amphibious, spider climb)
+
+Apply appropriate adjustments based on the monster's unique features.
+
+[Stat Adjustments]
+- AC: +/-3
+- HP: +/-50% (reduce by expected damage avoided over 3 rounds)
+- Atk: +/-2
+- Dmg: +/-50% (4x for limited-use, 0.5x for multi-target, 2x for limited multi-target)
+- DC: +/-2
+
+[Defensive Considerations]
+- Calculate Effective HP: Consider immunities (2x BPS nonmagical), resistances (1.5x BPS nonmagical), and healing
+- Calculate Effective AC
+
+[Offensive Considerations]
+- Calculate DPR (Damage Per Round)
+- Consider attack bonuses and save DCs
+
+[Skill Assignment]
+- Higher CR/smarter monsters: More skills (max 4 for most, up to 6 for smart humanoids)
+- Large+ bruisers: May have no skills
+- Typical monsters: 2 skills (often Perception & Stealth)
+
+[Final CR Calculation]
+1. Calculate Offensive CR and Defensive CR separately
+2. Average the two CRs for the final CR
+3. Adjust based on concept and other details that do not affect CR
+
+Balance adjustments to create the desired concept while maintaining an appropriate challenge level.
+))

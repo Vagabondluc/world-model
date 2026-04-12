@@ -15,6 +15,11 @@ pub enum SpecDonor {
     Mythforge,
     Orbis,
     AdventureGenerator,
+    MappaImperium,
+    DawnOfWorlds,
+    FactionImage,
+    WatabouCity,
+    EncounterBalancerScaffold,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
@@ -1047,6 +1052,19 @@ fn infer_concept_family(donor: &SpecDonor, relative_path: &str, symbols: &[Strin
                 "domain-schema".into()
             }
         }
+        SpecDonor::MappaImperium
+        | SpecDonor::DawnOfWorlds
+        | SpecDonor::FactionImage
+        | SpecDonor::WatabouCity
+        | SpecDonor::EncounterBalancerScaffold => {
+            // New donors default to donor-local schema contracts unless patterns indicate otherwise.
+            if lower_path.contains("/schemas/") || lower_path.ends_with(".schema.json") || symbols.iter().any(|s| s.contains("Schema")) {
+                "schema-contract".into()
+            } else {
+                "donor-local".into()
+            }
+        }
+        _ => "donor-contract".into(),
     }
 }
 
@@ -1095,6 +1113,15 @@ fn infer_promotion_class(
                 PromotionClass::ReferenceOnly
             }
         }
+        SpecDonor::MappaImperium
+        | SpecDonor::DawnOfWorlds
+        | SpecDonor::FactionImage
+        | SpecDonor::WatabouCity
+        | SpecDonor::EncounterBalancerScaffold => {
+            // Preserve manifest default for unknown/new donors unless heuristics indicate otherwise
+            default_class.clone()
+        }
+        _ => default_class.clone(),
     }
 }
 
@@ -1148,9 +1175,14 @@ fn donor_slug(donor: &SpecDonor) -> &'static str {
         SpecDonor::Mythforge => "mythforge",
         SpecDonor::Orbis => "orbis",
         SpecDonor::AdventureGenerator => "adventure-generator",
+        SpecDonor::MappaImperium => "mappa-imperium",
+        SpecDonor::DawnOfWorlds => "dawn-of-worlds",
+        SpecDonor::FactionImage => "faction-image",
+        SpecDonor::WatabouCity => "watabou-city",
+        SpecDonor::EncounterBalancerScaffold => "encounter-balancer",
+        _ => "unknown-donor",
     }
 }
-
 fn normalize_slug(value: &str) -> String {
     let mut slug = String::new();
     let mut last_was_dash = false;
@@ -1341,7 +1373,7 @@ mod tests {
                 && matches!(fragment.promotion_class, PromotionClass::Simulation)
                 && fragment
                     .relative_path
-                    .contains("contracts/data-contracts.ts")
+                    .contains("types/session.ts")
         }));
         assert!(fragments.iter().any(|fragment| {
             fragment.donor == SpecDonor::AdventureGenerator

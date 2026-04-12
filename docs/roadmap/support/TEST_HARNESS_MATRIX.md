@@ -54,6 +54,7 @@ Unit Tests:
 - `test_adapter_manifest_validates()` - Each adapter manifest passes validation script
 - `test_snapshot_files_exist()` - All declared snapshot files exist
 - `test_concept_mapping_complete()` - All concept mappings reference valid canonical targets
+- `test_snapshot_fingerprint_stable()` - Snapshot fingerprint matches deterministic file inventory
 
 Adapter Tests:
 - `test_mythforge_snapshot_integrity()` - Mythforge snapshot files match manifest
@@ -64,6 +65,7 @@ Exit Criteria:
 - All adapter manifests validate
 - All snapshot files copied and accounted for
 - Concept mappings documented
+- `python world-model/scripts/check_phase_2_snapshots.py` passes
 
 ---
 
@@ -75,10 +77,15 @@ Unit Tests:
 - `test_context_bar_present()` - Top context bar exists
 - `test_workspace_present()` - Center workspace exists
 - `test_inspector_present()` - Right inspector exists
+- `test_bottom_drawer_present()` - Optional bottom drawer exists by default
+- `test_mode_switch_preserves_world_context()` - Switching modes keeps the selected world visible
+- `test_canonical_bundle_roundtrip()` - Canonical bundle load/save roundtrip preserves JSON
+- `test_overlay_state_isolation()` - Overlay state does not leak into saved bundles
 
 Contract Tests:
 - `test_app_reads_only_canonical()` - App only imports from canonical model
 - `test_no_donor_runtime_imports()` - No imports from donor repos
+- `test_contract_version_matches()` - App contract version matches emitted schema version
 
 Integration Tests:
 - `test_app_loads_canonical_bundle()` - App can load a CanonicalBundle
@@ -88,6 +95,7 @@ Exit Criteria:
 - App shell renders
 - No runtime imports from donor repos
 - Canonical bundle load/save works
+- Guided, Studio, and Architect modes render and switch cleanly
 
 ---
 
@@ -137,18 +145,95 @@ Exit Criteria:
 ## Phase 6: Hardening and Release
 
 Unit Tests:
-- `test_error_handling()` - All error paths handled gracefully
-- `test_validation_errors()` - Validation errors are user-friendly
+- `test_release_shell_controls_are_keyboard_reachable()` - Release-critical controls are keyboard reachable
+- `test_modal_focus_returns_to_trigger()` - Modal focus returns to the triggering control after close
+- `test_large_bundle_roundtrip_performance()` - Large canonical bundles roundtrip within release thresholds
 
 Integration Tests:
-- `test_performance_under_load()` - App handles large canonical bundles
-- `test_concurrent_edits()` - Concurrent edits handled correctly
+- `test_release_app_verification()` - App verification passes with lint, typecheck, tests, and build
+- `test_phase2_snapshot_integrity()` - Snapshot hashes and adapter mapping checks remain stable
+- `test_phase4_migration_replay()` - Migration replay remains deterministic under release checks
 
 E2E Tests:
 - `test_release_checklist()` - All release criteria verified
-- `test_documentation_complete()` - All docs present and accurate
+- `test_documentation_complete()` - All release docs present and accurate
+- `test_legacy_routes_redirect()` - Legacy routes redirect to public routes
 
 Exit Criteria:
 - All release criteria in `world-model/docs/release/RELEASE_CRITERIA.md` met
+- `python world-model/scripts/check_phase_6_release.py` passes
 - No critical bugs
 - Documentation complete
+
+---
+
+## Phase 7: Donor UI Conformance
+
+Characterization Tests:
+- `mythforge.characterization.test.ts` - captured Mythforge route, panels, and controls exist
+- `orbis.characterization.test.ts` - designed Orbis baseline exists with designed basis
+- `adventure-generator.characterization.test.ts` - reconstructed Adventure baseline exists with reconstructed basis
+
+Conformance Tests:
+- `mythforge.conformance.test.tsx` - donor explorer and workspace project canonical entities
+- `orbis.conformance.test.tsx` - simulation profile, domains, and snapshots project from canonical state
+- `adventure-generator.conformance.test.tsx` - workflow, checkpoints, and outputs project from canonical state
+
+Gate Checks:
+- `python world-model/scripts/check_phase_7_donor_ui.py`
+- `python world-model/scripts/run_harness.py --phase 7`
+
+Exit Criteria:
+- donor methodologies are fixed and documented
+- characterization baselines exist for every donor class
+- donor routes render
+- donor conformance passes
+
+---
+
+## Phase 8: Unified Product Surface and Cross-Donor Integration
+
+Integration Tests:
+- `cross-donor-world-flow.integration.test.tsx` - world surface survives donor and product transitions
+- `cross-donor-adventure-flow.integration.test.tsx` - workflow-heavy donor surface survives product compare transitions
+- `context-retention.test.tsx` - selected world and entity persist across product/donor route changes
+- `lens-switch.smoke.test.tsx` - shared concept lens switching is read-only and keeps the canonical key stable
+- `shared-concept-round-trip.test.tsx` - every shared concept family projects through all donor lenses without mutation
+
+Gate Checks:
+- `python world-model/scripts/check_phase_8_integration.py`
+- `python world-model/scripts/run_harness.py --phase 8`
+
+Exit Criteria:
+- unified product design doc exists and names the code-side boundary
+- cross-donor integration matrix lists the six shared concept families and basis values
+- lens-switch smoke test passes
+- donor and product transition flows preserve canonical state and context
+
+---
+
+## Phase 9: Exhaustive Donor UI
+
+Unit and Integration Tests:
+- `bridge-harness.test.ts` - every donor has executable bridge-test evidence
+- `donor-subapp-host.mount.test.tsx` - donor routes mount `DonorSubappHost`, Watabou reports `rehost-mounted`, and unrehosted donors remain explicit `scaffold-mounted` placeholders
+- `donor-manifest.exactness.test.ts` - manifest-backed exactness rules stay synchronized with donor inventory
+- `cross-donor-world-flow.integration.test.tsx` - donor/product transitions preserve context
+- `context-retention.test.tsx` - selected world/entity context survives donor and product route changes
+
+Gate Checks:
+- `python world-model/scripts/check_phase_9_exhaustive_donors.py`
+- `python world-model/scripts/check_phase_9_exact_donor_ui.py`
+- `python world-model/scripts/check_phase_9_rehost_matrix.py`
+- `python world-model/scripts/run_harness.py --only 9`
+- `python world-model/scripts/run_harness.py --phase 9`
+
+Execution Ledger:
+- `world-model/docs/roadmap/support/PHASE_9_EXECUTION_CHECKLIST.md`
+- `world-model/phase-9-rehost-matrix-report.json`
+
+Exit Criteria:
+- inventory report is complete
+- exactness report is red for the right reasons until vendored runtimes and bridge evidence exist
+- rehost matrix shows source-vendored, route-mounted, bridge-wired, parity-certified, e2e-enabled, and exact-mounted status per donor
+- repeated failures are logged and decomposed in the execution checklist

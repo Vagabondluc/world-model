@@ -1,0 +1,14 @@
+{
+  "deliverable_root": "world-model",
+  "approved_snapshot_roots": [
+    "world-model/adapters/mythforge/source-snapshot",
+    "world-model/adapters/orbis/source-snapshot",
+    "world-model/adapters/adventure-generator/source-snapshot",
+    "world-model/vendor"
+  ],
+  "frozen_donor_roots": [
+    "mythforge",
+    "mechanical-sycophant",
+    "to be merged"
+  ]
+}

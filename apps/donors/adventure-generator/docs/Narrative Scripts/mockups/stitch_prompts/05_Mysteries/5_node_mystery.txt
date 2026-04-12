@@ -1,0 +1,97 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "5 Node Mystery".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: 5_node_mystery
+
+```text
++--------------------------------------------------------------------------------+
+|  [5-Node Mystery Architect]                                            [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Concept: [ The Stolen Golem heart ]  Tone: [ Urban Noir ]  [Save Project]     |
++--------------------------------------------------------------------------------+
+|  MYSTERY GRAPH (Node Connections)      |  SCENARIO DETAILS                     |
+|                                        |  Victim: [ Master Artificer Zunn ]    |
+|       [B: Workshop] --+                |  Perp:   [ Rival Guild Envoy ]        |
+|      /                 \               |  Motive: [ Industrial Espionage ]     |
+| [A: Hook] -- [C: Alleyway] -- [E: Vault] |  Method: [ Clockwork Sabotage ]      |
+|      \                 /               |  -----------------------------------  |
+|       [D: Tavern  ] --+                |  [ ] Consistency Check [X] 3-Clue Rule|
++----------------------------------------+---------------------------------------+
+|  NODE EDITOR (Select Node on Map)                                              |
+|  Active Node: [ Node A: The Hook ]                                             |
+|  [X] MysteryNode_GolemHeart_A.txt generated.                                   |
+|  Clues:                                                                        |
+|  - [B] Fragment of Brass Gears   - [C] Strange Oil Spatter  - [D] Guild Sigil  |
++--------------------------------------------------------------------------------+
+|  [Generate All Node Files] [Cross-Reference Timeline] [Export PDF]     [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: 5_node_mystery
+
+## Component Architecture
+- **Interactive Node Graph:** The centerpiece is a visual representation of the 5-node structure. It map out the progression from the Hook (A) through the investigation nodes (B, C, D) to the Climax (E).
+- **Scenario Profile Editor:** A structured form to define the "Who, What, Why, and How" of the mystery, ensuring the AI stays focused on a consistent core truth.
+- **Link & Clue Matrix:** A specialized tool that tracks clues within each node and validates that they point to the correct subsequent nodes, enforcing the Three Clue Rule.
+- **Node Generation Manager:** Controls the creation and naming of the the individual `.txt` files for each node, ensuring they correctly reference the master scenario.
+
+## Interaction Logic
+- **clue-Driven Navigation:** Clicking a connection line in the graph shows the specific clues that lead from one node to the next.
+- **Consistency Scrubber:** A post-process tool that scans all five nodes to ensure character names, timelines, and physical evidence are consistent across the entire scenario.
+- **Dynamic Node Swapping:** If the DM wants to change Node C from an "Alleyway" to a "Library," the UI helps re-route the clues from A, B, and D accordingly.
+
+## Visual Design
+- **Investigation Board Aesthetic:** Uses a "Pinboard with Red String" visual metaphor for the node graph.
+- **Status Icons:** Symbols for "Missing Clue" (Warning triangle), "Valid Path" (Checkmark), and "Ancillary Secret" (Magnifying glass).
+- **Noir Layout:** High-contrast, clean typography that feels like a detective's dossier.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: 5_node_mystery
+
+# Mystery: The Poisoned Golem Heart
+
+### 1. Scenario Concept
+**Concept:** A master artificer is found dead in his workshop, and his greatest creation's experimental heart has been replaced with a ticking bomb.
+**Tone:** Steampunk Noir
+**Setting:** The gear-choked city of Clockspire.
+
+### 2. Mystery Elements
+- **Victim:** Artificer Silas Vane.
+- **Perpetrator:** Elara Thorne, an undercover agent for the Imperial Steamworks.
+- **Motive:** To steal the "Infinite Coil" technology and cover her tracks.
+- **Method:** Chronometer-toxin (slow-acting) and a clockwork mimic-device.
+
+### 3. Node Map Overview
+- **Node A (The Hook):** The Crime Scene at Vane's Workshop.
+    - *Clues to B:* Scorched footprints leading to the sewer grate.
+    - *Clues to C:* A threatening letter from "The Smelter's Union."
+    - *Clues to D:* A half-empty bottle of expensive Silver-Leaf Brandy.
+- **Node B (Discovery):** The Sewer Incursion.
+- **Node C (Discovery):** The Union Hall Confrontation.
+- **Node D (Discovery):** The Brass Gear Tavern.
+- **Node E (The Climax):** The Imperial Steamworks Hidden Vault.
+
+### 4. Ancillary Revelation
+- Silas Vane wasn't poisoned for his technology alone; he was also leaking blueprints to a revolutionary group known as "The Unwound."
+
+### 5. File Manifest
+- `MysteryNode_GolemHeart_A.txt`
+- `MysteryNode_GolemHeart_B.txt`
+- `MysteryNode_GolemHeart_C.txt`
+- `MysteryNode_GolemHeart_D.txt`
+- `MysteryNode_GolemHeart_E.txt`
+

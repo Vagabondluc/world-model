@@ -1,0 +1,46 @@
+{
+  "donor": "encounter-balancer",
+  "label": "Encounter Balancer Scaffold",
+  "classification": "scaffold-copy donor",
+  "methodology": "representative baseline + clone-equivalence",
+  "basis": "reconstructed",
+  "sourceInventory": [
+    {
+      "relativePath": "to be merged/apocalypse/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\apocalypse",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "to be merged/character-creator/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\character-creator",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "to be merged/deity creator/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\deity creator",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "to be merged/genesis/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\genesis",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "world-model/docs/donors/ENCOUNTER_BALANCER_SCAFFOLD.md",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\donors\\ENCOUNTER_BALANCER_SCAFFOLD.md",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 5,
+    "existingSources": 5,
+    "missingSources": 0
+  },
+  "parityTarget": "adapted+waived",
+  "unstableSurfaces": []
+}

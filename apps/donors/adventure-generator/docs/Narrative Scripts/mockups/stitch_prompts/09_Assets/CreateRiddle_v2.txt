@@ -1,0 +1,83 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Createriddle V2".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: CreateRiddle_v2
+
+```text
++--------------------------------------------------------------------------------+
+|  [Compound Riddle Architect: Logical Derivation]                      [?] [X]  |
++--------------------------------------------------------------------------------+
+|  WORD A: [ Light ]   +   WORD B: [ House ]   =   ANSWER: [ Lighthouse ]        |
++--------------------------------------------------------------------------------+
+|  CRYPTIC DESCRIPTION: WORD A           |  CRYPTIC DESCRIPTION: WORD B          |
+|  [ "I am the sun's child, but I  ]     |  [ "I am a shell of stone, but I ]    |
+|  [ vanish when I touch the dark" ]     |  [ never held a snail."          ]    |
+|  [Regenerate Clue A]                   |  [Regenerate Clue B]                  |
++----------------------------------------+---------------------------------------+
+|  FULL RIDDLE PREVIEW (Structural Wrapper Active)                               |
+|  "The two secret words in these lines won't easily yield.                      |
+|  Find them, combine them, and the answer will be unsealed.                     |
+|                                                                                |
+|  * I am the sun's child...                                                     |
+|  * I am a shell of stone..."                                                   |
++--------------------------------------------------------------------------------+
+|  [Validate Logic] [Copy Riddle Text] [Save to Dungeon]                 [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: CreateRiddle_v2
+
+## Component Architecture
+- **Compound Logic Header:** A primary data-entry section for the two "Secret Words" and the combined "Final Answer." This ensures the riddle is built on a solid foundation.
+- **Component-Specific Clue Editors:** Individual workspaces for drafting the cryptic descriptions for Word A and Word B. This allows the DM to refine each part of the riddle independently.
+- **Introductory Wrapper Module:** Automatically injects the specific script-required lines ("The two secret words in these lines...") into the final output.
+- **Real-Time Riddle Synthesizer:** A preview window that combines the wrapper and the clues into a formatted block, ready for export.
+
+## Interaction Logic
+- **Step-by-Step Workflow:** The UI guides the DM through the process outlined in the script: Word Selection -> Cryptic Definition -> Presentation.
+- **Ambiguity Mitigation:** Includes tools to swap "Vague" descriptions for "Specific" wordplay to ensure the riddle has only one logical solution.
+- **Compound Validation:** A background check that verifies the two words actually form a valid compound word or recognized phrase.
+
+## Visual Design
+- **Analytical & Precise:** Uses a modular, card-based layout that emphasizes the "Component nature" of the riddle.
+- **Logical Connectors:** Visual symbols (like the '+' and '=') help the DM understand the mathematical-like structure of the riddle.
+- **Clean Typography:** Prioritizes high-legibility fonts for the Clue text to ensure the DM can easily read it during a session.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: CreateRiddle_v2
+
+### Logic Base:
+- **Word A:** Fire
+- **Word B:** Wall
+- **Answer:** Firewall
+
+---
+
+### Riddle:
+"The two secret words in these lines won't easily yield.  
+Find them, combine them, and the answer will be unsealed.
+
+I am the dance of the ember and the hunger of the hearth.  
+I am the barrier of stone that guards the city's girth."
+
+---
+
+### Logic Breakdown:
+1. **Fire (Word A):** "Dance of the ember" and "hunger of the hearth" logically point to fire without naming it.
+2. **Wall (Word B):** "Barrier of stone" and "guards the city's girth" clearly define a city wall.
+3. **Compound:** Combining "Fire" and "Wall" creates "Firewall," a concept suitable for a magical or high-tech defense.
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Adventure Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .lift-effect {
+                @apply transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-[#f5e8c3]">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-[#922610] text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">fort</span>
+<span class="font-header tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="font-header tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="font-header tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOgKoX8-X3uR69Mxf_JeQA4Ufg8-rppOW5fJYnrVqStlP-DnIyZsZXDQC4SVWoOWvuzm_PEHGaDKFURkM9bJIdrV6o5-yc4Bwrq403XQdHPA17LhZcSPmzrAodop6mtJB07an4d9Y50_gnS0acqs10yJ27qpru6Jt6Iq_EsYc8b2awLWQcsqodm2MiOdCX57vqQkayvLQm6uaRchbPoyLwiQdGZSlzSHuUg1rkWHUaqCd4sLPYdYLXXQ1n-18EsqA-VYFn48Mq');"></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-[#922610] hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">humerus</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 parchment-texture overflow-y-auto custom-scrollbar relative grit-overlay">
+<div class="relative z-10 px-12 py-12 flex flex-col gap-12 max-w-7xl mx-auto">
+<header class="flex flex-wrap justify-between items-end gap-6 border-b-4 border-chronicle-red/20 pb-8">
+<div class="flex flex-col gap-2">
+<h2 class="font-header text-6xl text-ink-dark drop-shadow-sm">Adventure Dashboard</h2>
+<p class="text-chronicle-red font-body italic text-xl font-semibold opacity-80">Forge your next legendary campaign from the digital parchment.</p>
+</div>
+</header>
+<section>
+<div class="flex items-center gap-6 mb-8">
+<h3 class="font-header text-3xl text-ink-dark uppercase tracking-wide">Quick Start</h3>
+<div class="flex-1 h-[2px] bg-chronicle-red/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="lift-effect group cursor-pointer bg-[#fef9eb] border border-medium-brown rounded-lg overflow-hidden flex flex-col shadow-md">
+<div class="h-52 bg-center bg-cover relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhJmVs9w2TSLtx_Ta7L4kkAivzMa7GnfGHBgvurkAhuZKp8ex6bfYRpyv9NwLTyzcuaxXrPn0ZPNtfNjhnzuz8aE1GL_LmVZwew7COwUHXHUKq7T8ilaUKjZkMGQB0QKmcu_KQ1hHtBD1hgqmom2mhd6MYhq2kHxEa9kZxlIwK5fVEyhZoev7Q5SyIo4gZBCUhHkD0CpGHM2GfUiyYnAtjC3iN-JnJLzeciEXZYB4niadTWCGBeqQkWQTFGzVCPEjPcZWNQsbi');">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+<span class="font-noto text-white text-[10px] tracking-[0.25em] uppercase font-bold">STORYTELLER</span>
+</div>
+</div>
+<div class="p-6 border-t border-medium-brown/30">
+<h4 class="font-header text-chronicle-red text-2xl mb-2 uppercase">Generate Adventure</h4>
+<p class="text-ink-dark/80 text-sm leading-relaxed font-body">Plot hooks, world building, and political intrigues for your players.</p>
+</div>
+</div>
+<div class="lift-effect group cursor-pointer bg-[#fef9eb] border border-medium-brown rounded-lg overflow-hidden flex flex-col shadow-md">
+<div class="h-52 bg-center bg-cover relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqZLDNG3WyB8P4aqQXZb0J36FU_KlacXAsPo_z2TS8ARXaThar-qKf0nKkifrtFOieDPdAL-WnafYElukSr2elXZ_rZntZ-OOSjI_vp4l8oMH828WoSCkA7yx1GxrGndsl4NCaIKge3MNJyP21xEneHUAX5imnn2H8h7nQPq2ZEwSK3lyP-rrUKMSaZT6JtszLmhAxJf0rLdL479-wapctlGXV22J1M6kgGVQhraC5pJcguSb7gkthp7quL3iIJE_hYvDSydOr');">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+<span class="font-noto text-white text-[10px] tracking-[0.25em] uppercase font-bold">STORYTELLER</span>
+</div>
+</div>
+<div class="p-6 border-t border-medium-brown/30">
+<h4 class="font-header text-chronicle-red text-2xl mb-2 uppercase">Generate Dungeon</h4>
+<p class="text-ink-dark/80 text-sm leading-relaxed font-body">Procedural floor plans, trap logic, and environmental hazards.</p>
+</div>
+</div>
+<div class="lift-effect group cursor-pointer bg-[#fef9eb] border border-medium-brown rounded-lg overflow-hidden flex flex-col shadow-md">
+<div class="h-52 bg-center bg-cover relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPdYy1ZJ54JJ0CtoiMgWfWSZOOdWCpM3ldRvslXgNJ_SoqEpglVuCKADCiSd7ADCZLoNAzflu8qs8ofWxXjqg11Ek78kyXFJeBqL9XDAuLp7DY0In_n_ZzBcowo3_vmIP0RYYqueAA9KL8nP_j9xEf2jSGv7hdVcCiHmzBgtjMbUtZ_q0wcp2dN3z3-WSxTCWiiXPEsycDjwKaV_xP7-2haVPaH5IMneKI7muu3MdArLX-a2vZxIcc0Mtz1vTuT_c_Vk3AqQaU');">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+<span class="font-noto text-white text-[10px] tracking-[0.25em] uppercase font-bold">STORYTELLER</span>
+</div>
+</div>
+<div class="p-6 border-t border-medium-brown/30">
+<h4 class="font-header text-chronicle-red text-2xl mb-2 uppercase">Generate NPC</h4>
+<p class="text-ink-dark/80 text-sm leading-relaxed font-body">Instant stat blocks, personality traits, and deep-seated secrets.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="pb-20">
+<div class="flex items-center gap-6 mb-8">
+<h3 class="font-header text-3xl text-ink-dark uppercase tracking-wide">Recent Scrolls</h3>
+<div class="flex-1 h-[2px] bg-chronicle-red/20"></div>
+</div>
+<div class="bg-[#fef9eb]/60 border-2 border-medium-brown/40 rounded overflow-hidden shadow-xl backdrop-blur-sm">
+<table class="w-full text-left border-collapse">
+<thead class="bg-chronicle-red text-white">
+<tr>
+<th class="px-8 py-5 font-header text-lg uppercase tracking-widest border-r border-white/10 font-bold">Name of Scroll</th>
+<th class="px-8 py-5 font-header text-lg uppercase tracking-widest border-r border-white/10 font-bold">Type</th>
+<th class="px-8 py-5 font-header text-lg uppercase tracking-widest border-r border-white/10 font-bold">Level Range</th>
+<th class="px-8 py-5 font-header text-lg uppercase tracking-widest font-bold">Last Modified</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-medium-brown/20 font-body">
+<tr class="hover:bg-chronicle-red/5 transition-colors">
+<td class="px-8 py-6 font-bold text-ink-dark text-lg">The Lost Mine of Phandelver</td>
+<td class="px-8 py-6">
+<span class="bg-[#e2e2d5] text-stone-600 border border-stone-300 px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase">ADVENTURE</span>
+</td>
+<td class="px-8 py-6 text-sm italic">Levels 1-5</td>
+<td class="px-8 py-6 text-sm opacity-70">2 hours ago</td>
+</tr>
+<tr class="hover:bg-chronicle-red/5 transition-colors">
+<td class="px-8 py-6 font-bold text-ink-dark text-lg">Vault of the Mad Mage</td>
+<td class="px-8 py-6">
+<span class="bg-[#f8d7da] text-[#922610] border border-[#f5c2c7] px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase">DUNGEON</span>
+</td>
+<td class="px-8 py-6 text-sm italic">Levels 15-20</td>
+<td class="px-8 py-6 text-sm opacity-70">Yesterday</td>
+</tr>
+<tr class="hover:bg-chronicle-red/5 transition-colors">
+<td class="px-8 py-6 font-bold text-ink-dark text-lg">Bree, the Silent Blacksmith</td>
+<td class="px-8 py-6">
+<span class="bg-[#d1e7ff] text-[#084298] border border-[#b6d4fe] px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase">NPC</span>
+</td>
+<td class="px-8 py-6 text-sm italic">N/A</td>
+<td class="px-8 py-6 text-sm opacity-70">3 days ago</td>
+</tr>
+<tr class="hover:bg-chronicle-red/5 transition-colors">
+<td class="px-8 py-6 font-bold text-ink-dark text-lg">Curse of Strahd Refined</td>
+<td class="px-8 py-6">
+<span class="bg-[#e2e2d5] text-stone-600 border border-stone-300 px-3 py-1 rounded-sm text-[10px] font-header tracking-widest font-bold uppercase">ADVENTURE</span>
+</td>
+<td class="px-8 py-6 text-sm italic">Levels 1-10</td>
+<td class="px-8 py-6 text-sm opacity-70">Oct 24, 2023</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<footer class="mt-auto px-12 py-10 bg-black/5 flex justify-between items-center border-t border-medium-brown/20 relative z-10">
+<p class="font-header text-sm text-ink-dark/60 tracking-[0.2em] uppercase">© 1492 DR - Chronicler Archive Systems</p>
+<div class="flex gap-8 opacity-40">
+<span class="material-symbols-outlined text-chronicle-red text-3xl">shield</span>
+<span class="material-symbols-outlined text-chronicle-red text-3xl">swords</span>
+<span class="material-symbols-outlined text-chronicle-red text-3xl">skull</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

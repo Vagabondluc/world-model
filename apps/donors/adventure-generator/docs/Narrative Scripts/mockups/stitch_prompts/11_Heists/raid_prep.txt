@@ -1,0 +1,93 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Raid Prep".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: raid_prep
+
+```text
++--------------------------------------------------------------------------------+
+|  [Raid Architect: Scenario Design]                                    [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Scenario: [ The Black Citadel ]   Objective: [ Disrupt Ritual / Rescue NPC ]  |
++--------------------------------------------------------------------------------+
+|  XP BUDGET CALCULATOR (D&D 5e)         |  SURVEY INTELLIGENCE MATRIX           |
+|  Party: [ 4 PCs ] Level: [ 5 ]         |  Type     | Trivial | Chall. | Imp.   |
+|  Deadly Budget: [ 4,400 XP ]           |  Entries  | Front   | Sewers | ???    |
+|  Target (3x): [ 13,200 XP ]            |  Rooms    | Hall    | Sanct. | Closet |
+|  Assigned: [ 10,500 XP / 12 Groups ]   |  Forces   | Sentry  | Elite  | Boss   |
++----------------------------------------+---------------------------------------+
+|  BLUEPRINT / LAYOUT (Layered View)     |  DEFENSE LAYERS                       |
+|  +--------------------------------+    |  [1] Moat & Drawbridge (Passive)      |
+|  | [V] EXT  [!] ALTAR  [?] CHASE  |    |  [2] Wall Archers (4x Squads)         |
+|  | [V] GATE [V] HALL   [X] SECR   |    |  [3] Gate Guards (2x Squads)          |
+|  +--------------------------------+    |  [!] ALARM: Lowers the Drawbridge     |
++----------------------------------------+---------------------------------------+
+|  SURVEY RISKS                          |  OBJECTIVE PLACEMENT                  |
+|  - [X] Detection by Sentry Griffons    |  - Primary: The Blood Altar (Room 12) |
+|  - [ ] Magical Sensors in Sanctum      |  - Secondary: Cell 4 (Rescue Target) |
++----------------------------------------+---------------------------------------+
+|  [Generate Player Blueprint] [Build Squads] [Export Raid Prep]         [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: raid_prep
+
+## Component Architecture
+- **Interactive XP Budgeter:** A mathematical utility that takes the party's level and size to calculate the "Deadly" encounter threshold and then multiplies it by 3x (as per the script's guidelines). It provides a workspace to build "Action Groups" (Easy/Medium squads) that chip away at this budget.
+- **Survey Intelligence Matrix:** A hierarchical categorizer that divides the raid location's features (Entries, Rooms, Obstacles, Forces) into four distinct lists based on their visibility/scoutability (Trivial to Impossible).
+- **Tactical Layout Layer-Modeller:** A blueprint tool that allows the DM to design the internal layout with specific tactical features like windows for sniping, varied building heights for vantage points, and multiple route options.
+- **Defense Hierarchy Stack:** A management tool for placing passive obstacles (locks, traps) and active forces (guards, response teams). It specifically includes "Alarm Logic" to show how many additional squads are attracted when triggered.
+- **Objective Tier-Editor:** A field for defining the primary goal (e.g., Rescue) and secondary goals (e.g., Sabotage), allowing for complex, multi-objective raids.
+
+## Interaction Logic
+- **Automatic Budget Distribution:** When a CR budget is set, the UI suggests a "Squad Breakdown" (e.g., "Recommend 8 Easy squads and 4 Medium squads to hit your XP target").
+- **Survey Risk Assessment:** Selecting a "Challenging" or "Impossible" survey element automatically prompts the DM to define a "Survey Risk" (e.g., "A successful scout requires a DC 18 Stealth check to avoid detection").
+- **Blueprint-to-Handout Sync:** Clicking "Generate Handout" automatically creates a version of the blueprint with all "Impossible" elements removed and "Challenging" elements marked with a question mark.
+
+## Visual Design
+- **Military Intelligence Aesthetic:** Uses grid-paper backgrounds, tactical icons, and a layout that resembles a mission briefing folder.
+- **Data-Driven Visualization:** Uses progress bars for the XP budget and color-coded status circles for the survey matrix.
+- **Topographic & Spatial cues:** The layout emphasizes building height and vantage points with specialized icons (e.g., a "Vantage Point" binocular icon).
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: The Siege of Blackwood Tower (Prep)
+
+### **1. Intelligence Briefing**
+- **Target:** Blackwood Tower (Cursed Outpost).
+- **Intel Gathered:**
+    - **Weakness:** The southern basement door is rotting and vulnerable to bludgeoning.
+    - **Threat:** Two "Void Sentinels" (Artillery) occupy the parapets.
+- **XP Budget:** 1,200 XP Total.
+
+---
+
+### **2. Squad Manifest**
+- **Squad Alpha (The Hammers):** 4 Dwarf Brutes. Objective: Bash the basement door. (Cost: 400 XP).
+- **Squad Beta (The Shadows):** 2 Half-Elf Ambushers. Objective: Counter-snipe the Void Sentinels. (Cost: 300 XP).
+- **Siege Engine (The ram):** 1 Mechanical Battery. Objective: Support the main gate breach if Alpha fails. (Cost: 500 XP).
+
+---
+
+### **3. Strategic Phases**
+- **Phase 1: Infiltration.** Squad Beta climbs the eastern wall to disable sentries.
+- **Phase 2: Breach.** Squad Alpha strikes the basement door simultaneously.
+- **Phase 3: Conquest.** All squads converge on the central ritual chamber.
+
+---
+
+### **4. GM Notes (Contingency)**
+- If Squad Alpha fails the breach, Squad Beta is the only squad in the tower. They must switch to "Sabotage" mode to buy time for the ram to arrive at the main gate.
+

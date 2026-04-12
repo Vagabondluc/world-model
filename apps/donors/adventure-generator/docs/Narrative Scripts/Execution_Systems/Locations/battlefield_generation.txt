@@ -1,0 +1,63 @@
+# D&D Battlefield Generator Guidelines
+## Step 1: Generate Battlefield Elements Table
+Create a list of 8 unique elements for each of the following categories:
+1. Elevations
+   Role: Provide vertical dynamics to the battlefield.
+   - Affect line of sight and range advantages
+   - Influence movement and positioning strategies
+   - Create opportunities for dramatic actions (jumping, falling, climbing)
+2. Difficult Terrain
+   Role: Impede or alter movement across the battlefield.
+   - Slow down character movement speeds
+   - Potentially cause damage or other effects when traversed
+   - Force tactical decisions about pathfinding and positioning
+3. Hard Cover
+   Role: Offer significant protection from attacks and spells.
+   - Provide total concealment from certain angles
+   - Block line of sight for spells and ranged attacks
+   - Create choke points and defensive positions
+4. Soft Cover
+   Role: Provide partial concealment and minor protection.
+   - Obscure visibility without completely blocking it
+   - Offer some protection against ranged attacks
+   - Create areas of uncertainty and opportunities for stealth
+5. Dangers
+   Role: Add dynamic, hazardous elements to the environment.
+   - Threaten damage or negative effects to characters
+   - Force movement or position changes during combat
+   - Create areas of high risk and high reward
+Ensure each element is thematically appropriate for fantasy settings and provides tactical interest.
+## Step 2: Generate Number Matrix
+Create a 3x5 matrix filled with random numbers between 1 and 8. Each row represents a set of battlefield elements, and each column corresponds to one of the five categories from Step 1.
+## Step 3: Generate Battlefields
+For each row in the matrix:
+1. Select elements from the table generated in Step 1, using the numbers in the matrix as indices.
+2. Combine these elements to create a cohesive battlefield.
+3. Provide a thematic description of the battlefield, including:
+   - Overall atmosphere and setting
+   - How the elements interact with each other
+   - Potential tactical considerations for combat
+   - Sensory details (sights, sounds, smells)
+   - Any notable features or landmarks
+## Guidelines for Descriptions:
+- Use vivid, evocative language to bring the battlefield to life
+- Consider how the different elements might logically coexist
+- Include details that hint at the history or nature of the location
+- Suggest how different character types (melee, ranged, spellcasters) might use the terrain
+- Incorporate elements of fantasy that fit the D&D setting
+## Guidelines for Element Integration:
+- Elevations: Describe how they dominate the landscape and affect visibility
+- Difficult Terrain: Explain how it changes character movement and positioning
+- Hard Cover: Detail its placement and how it divides the battlefield
+- Soft Cover: Describe its distribution and how it affects perception
+- Dangers: Explain their nature, triggers, and potential consequences
+## Output Format:
+1. List the generated table of elements (without numbering)
+2. Show the generated number matrix
+3. Provide three distinct battlefield descriptions based on the matrix
+For each battlefield description:
+- Start with a brief overview of the setting
+- Detail each selected element and its impact on the environment
+- Explain how the elements interact and create tactical opportunities
+- Conclude with a summary of the overall battlefield dynamics
+Remember to maintain consistency within each battlefield while ensuring variety between different battlefields. Each description should paint a clear picture of a unique, tactically interesting combat environment suitable for a D&D encounter.

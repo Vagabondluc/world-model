@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "name": "EncounterDesign_v1",
+    "category": "Encounters",
+    "description": "A prompt framework for crafting detailed and actionable Dungeons & Dragons encounters.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "encounter_concept",
+      "type": "string",
+      "label": "Encounter Concept",
+      "description": "The core idea or theme for the encounter (e.g., 'Ambush in a goblin warren', 'Negotiating with a suspicious dragon').",
+      "default": "An unexpected challenge in a forgotten ruin.",
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "party_level",
+      "type": "integer",
+      "label": "Party Level",
+      "description": "The average level of the player characters, used to tailor challenge difficulty.",
+      "default": 5,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "difficulty_level",
+      "type": "enum",
+      "label": "Difficulty Level",
+      "description": "The intended difficulty of the encounter, influencing DCs, opponent strength, and rewards.",
+      "default": "medium",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "easy",
+        "medium",
+        "hard",
+        "deadly"
+      ]
+    },
+    {
+      "name": "encounter_focus",
+      "type": "enum",
+      "label": "Encounter Focus",
+      "description": "The primary style of challenge for the encounter.",
+      "default": "mixed",
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "combat",
+        "social",
+        "skill_challenge",
+        "puzzle",
+        "exploration",
+        "mixed"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "setting_the_scene",
+      "type": "object",
+      "label": "Setting the Scene",
+      "description": "Provides the location, sensory details, and the primary objective of the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "location_description",
+          "type": "string",
+          "label": "Location Description",
+          "description": "A vivid description of the environment, focusing on relevant sensory details.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "primary_objective",
+          "type": "string",
+          "label": "Primary Objective",
+          "description": "A clear statement of the main challenge or goal for the players.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "environmental_effect",
+      "type": "object",
+      "label": "Environmental Effect",
+      "description": "Any significant environmental effects that impact gameplay and their rules. Null if not applicable.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "description",
+          "type": "string",
+          "label": "Effect Description",
+          "description": "Details of the environmental effect.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "rules_and_modifiers",
+          "type": "string",
+          "label": "Rules and Modifiers",
+          "description": "Straightforward rules for how the effect impacts gameplay (e.g., skill checks, combat).",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    },
+    {
+      "name": "challenges",
+      "type": "list",
+      "label": "Challenges",
+      "description": "A series of interconnected challenges (skill checks, puzzles, combat, etc.) that form the core of the encounter.",
+      "default": null,
+      "item_schema": {
+        "name": "challenge_details",
+        "type": "object",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": [
+          {
+            "name": "challenge_type",
+            "type": "string",
+            "label": "Challenge Type",
+            "description": "The category of the challenge, e.g., 'Skill Check', 'Combat', 'Puzzle', 'Roleplay'.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "label": "Challenge Description",
+            "description": "A description of the challenge or what the players must do.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "implementation_rules",
+            "type": "string",
+            "label": "Implementation Rules",
+            "description": "Concise instructions and rules, including specific skill check DCs and combat mechanics.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "resolution_guidelines",
+            "type": "string",
+            "label": "Resolution Guidelines",
+            "description": "Step-by-step instructions for resolving the challenge.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "consequences",
+            "type": "object",
+            "label": "Consequences",
+            "description": null,
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "success",
+                "type": "string",
+                "label": "Success Consequence",
+                "description": "The immediate outcome and consequences for succeeding at the challenge.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "failure",
+                "type": "string",
+                "label": "Failure Consequence",
+                "description": "The immediate outcome and consequences for failing the challenge.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          {
+            "name": "opponent_info",
+            "type": "object",
+            "label": "Opponent Information",
+            "description": "Details of the opponent(s), if any, specific to this challenge. Null for non-opposition challenges.",
+            "default": null,
+            "item_schema": null,
+            "fields": [
+              {
+                "name": "description_or_statblock",
+                "type": "string",
+                "label": "Description / Statblock",
+                "description": "A succinct description or statblock for the opponent.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              },
+              {
+                "name": "tactics_and_motives",
+                "type": "string",
+                "label": "Tactics & Motives",
+                "description": "Key tactics, motives, and goals of the opponent.",
+                "default": null,
+                "item_schema": null,
+                "fields": null,
+                "options": null
+              }
+            ],
+            "options": null
+          },
+          {
+            "name": "xp_reward",
+            "type": "integer",
+            "label": "XP Reward",
+            "description": "The experience points awarded for overcoming this specific challenge.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          }
+        ],
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "npcs_and_monsters",
+      "type": "list",
+      "label": "NPCs and Monsters",
+      "description": "Concise descriptions of other relevant NPCs or monsters involved, detailing their personalities and motives.",
+      "default": null,
+      "item_schema": {
+        "name": "npc_details",
+        "type": "object",
+        "label": null,
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "label": "Name",
+            "description": "The name or title of the NPC or monster.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "label": "Description",
+            "description": "A brief physical description.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "personality_and_motive",
+            "type": "string",
+            "label": "Personality & Motive",
+            "description": "Exploration of their personality, motives, and goals.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          },
+          {
+            "name": "interaction_style",
+            "type": "string",
+            "label": "Interaction Style",
+            "description": "Notes on how they might interact with the players.",
+            "default": null,
+            "item_schema": null,
+            "fields": null,
+            "options": null
+          }
+        ],
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "total_xp_reward",
+      "type": "integer",
+      "label": "Total XP Reward",
+      "description": "The cumulative XP total for all challenges in the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "outcome_and_transition",
+      "type": "string",
+      "label": "Outcome and Transition",
+      "description": "A summary of potential outcomes and suggestions for how the encounter can lead into the next scene.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    }
+  ]
+}

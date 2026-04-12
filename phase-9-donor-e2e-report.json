@@ -1,0 +1,677 @@
+{
+  "ok": true,
+  "generatedAt": "2026-04-11T21:30:51.356Z",
+  "reportPath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\phase-9-donor-e2e-report.json",
+  "workspaceRoot": "D:\\coding\\AI\\Chat-Gpt-Agent",
+  "appRoot": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\apps\\donor-harness",
+  "worldModel": {
+    "label": "world-model",
+    "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\apps\\unified-app",
+    "command": [
+      "npm",
+      "run",
+      "dev",
+      "--",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "3320",
+      "--strictPort"
+    ],
+    "url": "http://127.0.0.1:3320"
+  },
+  "servers": [
+    {
+      "donorId": "mythforge",
+      "label": "Mythforge",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\mythforge",
+      "command": [
+        "npx",
+        "next",
+        "dev",
+        "-p",
+        "3310"
+      ],
+      "url": "http://127.0.0.1:3310",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mythforge"
+    },
+    {
+      "donorId": "orbis",
+      "label": "Orbis",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\true orbis\\Orbis Spec 2.0\\Orbis 1.0",
+      "command": [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3311",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:3311",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep orbis"
+    },
+    {
+      "donorId": "adventure-generator",
+      "label": "Adventure Generator",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\dungeon generator",
+      "command": [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3312",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:3312",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep adventure-generator"
+    },
+    {
+      "donorId": "mappa-imperium",
+      "label": "Mappa Imperium",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\mappa imperium",
+      "command": [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3313",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:3313",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mappa-imperium"
+    },
+    {
+      "donorId": "dawn-of-worlds",
+      "label": "Dawn of Worlds",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\world-builder-ui",
+      "command": [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3314",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:3314",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep dawn-of-worlds"
+    },
+    {
+      "donorId": "faction-image",
+      "label": "Sacred Sigil Generator",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\faction-image",
+      "command": [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3315",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:3315",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep faction-image"
+    },
+    {
+      "donorId": "watabou-city",
+      "label": "Watabou City",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\watabou-city-clean-room\\2nd",
+      "command": [
+        "npm",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3317",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:3317",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep watabou-city"
+    },
+    {
+      "donorId": "encounter-balancer",
+      "label": "Encounter Balancer Scaffold",
+      "cwd": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\apocalypse",
+      "command": [
+        "npx",
+        "next",
+        "dev",
+        "-p",
+        "3316"
+      ],
+      "url": "http://127.0.0.1:3316",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep encounter-balancer"
+    }
+  ],
+  "donors": [
+    {
+      "donorId": "mythforge",
+      "label": "Mythforge",
+      "mode": "live-compare",
+      "route": "/donor/mythforge",
+      "liveUrl": "http://127.0.0.1:3310",
+      "worldModelRoute": "/donor/mythforge",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mythforge",
+      "tests": [
+        {
+          "title": "mythforge donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 1060,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "mythforge",
+            "label": "Mythforge",
+            "mode": "live-compare",
+            "route": "/donor/mythforge",
+            "liveUrl": "http://127.0.0.1:3310",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/mythforge",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mythforge",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "mythforge live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 2145,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "mythforge",
+            "label": "Mythforge",
+            "mode": "live-compare",
+            "route": "/donor/mythforge",
+            "liveUrl": "http://127.0.0.1:3310",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/mythforge",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mythforge",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "orbis",
+      "label": "Orbis",
+      "mode": "live-compare",
+      "route": "/donor/orbis",
+      "liveUrl": "http://127.0.0.1:3311",
+      "worldModelRoute": "/donor/orbis",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep orbis",
+      "tests": [
+        {
+          "title": "orbis donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 664,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "orbis",
+            "label": "Orbis",
+            "mode": "live-compare",
+            "route": "/donor/orbis",
+            "liveUrl": "http://127.0.0.1:3311",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/orbis",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep orbis",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "orbis live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 8930,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "orbis",
+            "label": "Orbis",
+            "mode": "live-compare",
+            "route": "/donor/orbis",
+            "liveUrl": "http://127.0.0.1:3311",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/orbis",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep orbis",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "adventure-generator",
+      "label": "Adventure Generator",
+      "mode": "live-compare",
+      "route": "/donor/adventure-generator",
+      "liveUrl": "http://127.0.0.1:3312",
+      "worldModelRoute": "/donor/adventure-generator",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep adventure-generator",
+      "tests": [
+        {
+          "title": "adventure-generator donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 608,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "adventure-generator",
+            "label": "Adventure Generator",
+            "mode": "live-compare",
+            "route": "/donor/adventure-generator",
+            "liveUrl": "http://127.0.0.1:3312",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/adventure-generator",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep adventure-generator",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "adventure-generator live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 4927,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "adventure-generator",
+            "label": "Adventure Generator",
+            "mode": "live-compare",
+            "route": "/donor/adventure-generator",
+            "liveUrl": "http://127.0.0.1:3312",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/adventure-generator",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep adventure-generator",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "mappa-imperium",
+      "label": "Mappa Imperium",
+      "mode": "live-compare",
+      "route": "/donor/mappa-imperium",
+      "liveUrl": "http://127.0.0.1:3313",
+      "worldModelRoute": "/donor/mappa-imperium",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mappa-imperium",
+      "tests": [
+        {
+          "title": "mappa-imperium donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 520,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "mappa-imperium",
+            "label": "Mappa Imperium",
+            "mode": "live-compare",
+            "route": "/donor/mappa-imperium",
+            "liveUrl": "http://127.0.0.1:3313",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/mappa-imperium",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mappa-imperium",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "mappa-imperium live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 1552,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "mappa-imperium",
+            "label": "Mappa Imperium",
+            "mode": "live-compare",
+            "route": "/donor/mappa-imperium",
+            "liveUrl": "http://127.0.0.1:3313",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/mappa-imperium",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep mappa-imperium",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "dawn-of-worlds",
+      "label": "Dawn of Worlds",
+      "mode": "live-compare",
+      "route": "/donor/dawn-of-worlds",
+      "liveUrl": "http://127.0.0.1:3314",
+      "worldModelRoute": "/donor/dawn-of-worlds",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep dawn-of-worlds",
+      "tests": [
+        {
+          "title": "dawn-of-worlds donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 500,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "dawn-of-worlds",
+            "label": "Dawn of Worlds",
+            "mode": "live-compare",
+            "route": "/donor/dawn-of-worlds",
+            "liveUrl": "http://127.0.0.1:3314",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/dawn-of-worlds",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep dawn-of-worlds",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "dawn-of-worlds live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 7882,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "dawn-of-worlds",
+            "label": "Dawn of Worlds",
+            "mode": "live-compare",
+            "route": "/donor/dawn-of-worlds",
+            "liveUrl": "http://127.0.0.1:3314",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/dawn-of-worlds",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep dawn-of-worlds",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "faction-image",
+      "label": "Sacred Sigil Generator",
+      "mode": "live-compare",
+      "route": "/donor/faction-image",
+      "liveUrl": "http://127.0.0.1:3315",
+      "worldModelRoute": "/donor/faction-image",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep faction-image",
+      "tests": [
+        {
+          "title": "faction-image donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 493,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "faction-image",
+            "label": "Sacred Sigil Generator",
+            "mode": "live-compare",
+            "route": "/donor/faction-image",
+            "liveUrl": "http://127.0.0.1:3315",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/faction-image",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep faction-image",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "faction-image live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 2089,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "faction-image",
+            "label": "Sacred Sigil Generator",
+            "mode": "live-compare",
+            "route": "/donor/faction-image",
+            "liveUrl": "http://127.0.0.1:3315",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/faction-image",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep faction-image",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "watabou-city",
+      "label": "Watabou City",
+      "mode": "clean-room-compare",
+      "route": "/donor/watabou-city",
+      "liveUrl": "http://127.0.0.1:3317",
+      "worldModelRoute": "/donor/watabou-city",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep watabou-city",
+      "tests": [
+        {
+          "title": "watabou-city donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 791,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "watabou-city",
+            "label": "Watabou City",
+            "mode": "clean-room-compare",
+            "route": "/donor/watabou-city",
+            "liveUrl": "http://127.0.0.1:3317",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/watabou-city",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep watabou-city",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "watabou-city live donor parity",
+          "file": "tests\\e2e\\live-donor-parity.spec.ts",
+          "status": "passed",
+          "durationMs": 2424,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "watabou-city",
+            "label": "Watabou City",
+            "mode": "clean-room-compare",
+            "route": "/donor/watabou-city",
+            "liveUrl": "http://127.0.0.1:3317",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/watabou-city",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep watabou-city",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "live donor matched required landmarks",
+              "world-model donor matched required controls"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    },
+    {
+      "donorId": "encounter-balancer",
+      "label": "Encounter Balancer Scaffold",
+      "mode": "representative-scaffold",
+      "route": "/donor/encounter-balancer",
+      "liveUrl": "http://127.0.0.1:3316",
+      "worldModelRoute": "/donor/encounter-balancer",
+      "status": "passed",
+      "rerunCommand": "npm run test:e2e:donor-world-model -- --grep encounter-balancer",
+      "tests": [
+        {
+          "title": "encounter-balancer donor route smoke",
+          "file": "tests\\e2e\\donor-route-smoke.spec.ts",
+          "status": "passed",
+          "durationMs": 685,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "encounter-balancer",
+            "label": "Encounter Balancer Scaffold",
+            "mode": "representative-scaffold",
+            "route": "/donor/encounter-balancer",
+            "liveUrl": "http://127.0.0.1:3316",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/encounter-balancer",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep encounter-balancer",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "route mounted",
+              "mount kind matched",
+              "landmarks visible",
+              "no placeholder preview"
+            ]
+          }
+        },
+        {
+          "title": "encounter balancer scaffold preserves clone equivalence",
+          "file": "tests\\e2e\\reference-donors.spec.ts",
+          "status": "passed",
+          "durationMs": 626,
+          "screenshots": [],
+          "errors": [],
+          "attachment": {
+            "donorId": "encounter-balancer",
+            "label": "Encounter Balancer Scaffold",
+            "mode": "representative-scaffold",
+            "route": "/donor/encounter-balancer",
+            "liveUrl": "http://127.0.0.1:3316",
+            "worldModelRoute": "http://127.0.0.1:3320/donor/encounter-balancer",
+            "status": "passed",
+            "rerunCommand": "npm run test:e2e:donor-world-model -- --grep encounter-balancer",
+            "screenshots": [],
+            "errors": [],
+            "assertions": [
+              "representative scaffold mounted",
+              "clone roots equivalent"
+            ]
+          }
+        }
+      ],
+      "screenshots": [],
+      "errors": []
+    }
+  ],
+  "startupErrors": [],
+  "errors": []
+}

@@ -1,0 +1,18 @@
+entries:
+  - donor_concept: Era History Model
+    source_family: domain-schema
+    canonical_key: world
+    canonical_target: WorldRecord
+    status: mapped
+    winner: mappa-imperium
+    rationale: Era and world-history state project into canonical world records.
+    provenance: docs/donors/MAPPA_IMPERIUM.md
+
+  - donor_concept: Hex Spatial Linkage
+    source_family: location-linkage
+    canonical_key: location
+    canonical_target: LocationAttachment
+    status: mapped
+    winner: mappa-imperium
+    rationale: Hex coordinates and territorial linkage attach to canonical location state.
+    provenance: docs/donors/MAPPA_IMPERIUM.md

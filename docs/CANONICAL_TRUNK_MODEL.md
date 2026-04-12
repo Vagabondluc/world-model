@@ -21,8 +21,13 @@ Its job is to define the canonical records that Mythforge and donor systems must
 - `Event`
 - `Projection`
 - `Relation`
-- `SimulationAttachment`
-- `WorkflowAttachment`
+- `SimulationAttachment` — planetary/biosphere simulation state (Orbis)
+- `WorkflowAttachment` — linear generation pipeline state (Adventure Generator)
+- `LocationAttachment` — spatial coordinates, biome, discovery status (cross-donor)
+- `EraAttachment` — world-historical era state and goals (Mappa Imperium)
+- `WorldTurnAttachment` — world-object turn tracking and age (Dawn of Worlds)
+- `SigilAttachment` — SVG layer composition, color palette, symmetry (Sacred Sigil Generator)
+- `CollaborativeSessionAttachment` — multiplayer session state (Mappa Imperium / Dawn of Worlds)
 
 ## Ownership Rules
 
@@ -117,6 +122,44 @@ The durable truth is:
 - event history
 - schema binding
 - projection rules
+
+## Adapter Rules
+
+Each donor maps to world-model canonical records through a registered adapter. The following rules define what each donor contributes and what stays donor-local.
+
+### Mythforge (trunk)
+- **Contributes:** WorldRecord, EntityRecord, EventEnvelope, RelationRecord, AssetRecord, SchemaBindingRecord, ProjectionRecord, LocationAttachment (trunk definition)
+- **Stays donor-local:** page routing, component state, prompt templates, AI provider config
+
+### Orbis (planetary-simulation)
+- **Contributes:** SimulationAttachment (full domain profile + snapshot + event payload)
+- **Canonical primitives:** SimulationDomainId (15 values), SimulationDomainBiome (40+ values, distinct from canonical BiomeType)
+- **Stays donor-local:** dashboard visualizations, WebSocket session management, kernel diagnostics
+
+### Adventure Generator (workflow / location-spatial)
+- **Contributes:** WorkflowAttachment, LocationAttachment extension (hex coordinates, biome, discovery status, layer type), FactionClockAttachment
+- **Canonical primitives:** HexCoordinate {q,r,s}, BiomeType (17 values), DiscoveryStatus (4 values), LayerType (6 spatial values), LocationType (4 values), FactionCategory (11 values), ConditionEnum (14 D&D conditions)
+- **Stays donor-local:** 5-step adventure generation workflow UI, AI provider wiring, campaign configuration, history store browser, delve room editor (WIP), loot generator (WIP)
+
+### Mappa Imperium (world-era / collaborative-session)
+- **Contributes:** EraAttachment, CollaborativeSessionAttachment, NodeEditorSchema, element taxonomy (9 ElementCard types → EntityRecord)
+- **Canonical primitives:** EraName (6 epochs), HexCoordinate (confirms AG), BiomeType (confirms AG 17-value set)
+- **Stays donor-local:** multiplayer session UI, player roster management, AI personality profiles, era graph renderer
+
+### Dawn of Worlds (world-object-taxonomy / world-turn)
+- **Contributes:** WorldTurnAttachment, world-object classification taxonomy (WorldKind → EntityRecord attribute)
+- **Canonical primitives:** WorldKind (22 values), Age (1|2|3), MapSize
+- **Canonical protocol contribution:** multiplayer room protocol (C2S/S2C) — candidate for CollaborativeSessionAttachment extension
+- **Stays donor-local:** Three.js/OGL hex globe renderer, turn UI, combat session tracker
+
+### Sacred Sigil Generator (asset-sigil)
+- **Contributes:** SigilAttachment on AssetRecord or EntityRecord
+- **Canonical primitives:** SigilLayerType (25 values), BlendMode (12 CSS values), FilterPreset (4 values), DomainPalette keys
+- **Stays donor-local:** SVG renderer, icon discovery UI, keyword index scripts, symmetry editor
+
+### Watabou City (procedural-city — candidate)
+- **Contributes (candidate):** CityLayoutAttachment on LocationAttachment
+- **Stays donor-local:** all GPL canvas rendering code (must not be copied)
 
 The projection is a replaceable cache.
 It is never treated as sole truth.

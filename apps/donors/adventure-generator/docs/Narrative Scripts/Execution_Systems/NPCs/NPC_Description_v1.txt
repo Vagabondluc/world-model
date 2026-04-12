@@ -1,0 +1,37 @@
+{{Description}}
+Create a unique NPC for a D&D campaign. As a professional creative writer, your task is to develop a well-rounded, detailed, and comprehensive personality that fits within D&D's alignment framework. The character should be a unique blend of traits, styles, and mannerisms, but avoid direct references to existing characters.
+
+The NPC should be designed for easy roleplaying by a gamemaster. The table should provide a quick reference, while the text block expands on the character's backstory and personality. Use explicit language and provide in-depth details to create a vivid and engaging character that will make a lasting impression on the reader. Be imaginative, detailed, and explicit in your descriptions. When introducing a new element, explain its origin and context. Avoid vagueness and provide depth to the details you create. Include an unexpected element in the character. 
+
+Please structure your NPC using the following table format in a markdown:
+
+| Category        | Details                                                                                       |
+|-----------------|-----------------------------------------------------------------------------------------------|
+| **Card Value**	          | [Attached card value]                                                                                    |
+| **Name**	          | [NPC Name]                                                                                    |
+| **Race**            | [NPC Race]                                                                                    |
+| **Role/Profession** |	[NPC Role/Profession]                                                                         |
+| **Appearance**      |	[Brief description of NPC's physical appearance]                                              |
+| **Alignment**       |	[NPC's alignment (e.g., Lawful Good, Chaotic Neutral, etc.)]                                  |
+| **Motivations**    |	[short One-line summary of NPC's main goals or desires]                                       |
+| **Personality**     |	[short One-line summary of NPC's key personality traits]                                      |
+| **Flaws**           |	[short One-line summary of NPC's key flaws or weaknesses]                                     |
+| **Catchphrase**      |	[short catch phrase or slang the Npc use]                             |
+| **Mannerisms**      |	[short One-line description of NPC's notable habits or behaviors]                             |
+| **Speech**          |	[short One-line description of NPC's speech patterns or notable phrases]                      |
+| **Catchphrase**          |	[catchphrase or expressions]                      |
+| **Knowledge**       |                                                                                               |
+| **Available knowledge** |	[One-line summary of knowledge NPC readily shares]                                        |
+| **Hidden/Secret knowledge** |	[One-line summary of knowledge NPC keeps secret]                                      |
+| **Bonds**            |	[short One-line summary of NPC's important relationships]                                     |
+| **Roleplaying cues** |	[Brief list of cues for roleplaying this NPC, e.g. "Speaks slowly", "Often looks nervous"]    |
+
+### Backstory:
+
+[Provide a concise backstory for the NPC here, expanding on the details provided in the table. This should give the gamemaster a deeper understanding of the NPC's motivations, personality, and relationships, as well as any important events in their past. Each sentence should introduce new information.]
+
+### Personality:
+
+[Write a detailed personality description, divided into four distinct sections: 1) Motivations and Goals; 2) Morals and Ethics; 3) Personality; 4) Flaws.]
+
+The goal is to provide enough information for the gamemaster to understand the NPC and roleplay them effectively, but not so much detail that it becomes overwhelming or difficult to reference quickly. The backstory should add depth to the NPC, but the table should be sufficient for basic roleplaying. Your answer should contain a maximum of 500 words.

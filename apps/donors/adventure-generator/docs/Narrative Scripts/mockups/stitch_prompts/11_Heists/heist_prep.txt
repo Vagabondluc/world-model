@@ -1,0 +1,103 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Heist Prep".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Heist Preparation Studio
+
+```text
++--------------------------------------------------------------------------------+
+|  [Heist Preparation Studio: The Blueprint]                            [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ TARGET DOSSIER ] [ BLUEPRINTS ] [ ASSET HUB ] [ TENSION SETUP ]            |
++--------------------------------------------------------------------------------+
+|  TARGET: The Gilded Vault              |  STRATEGIC ASSETS                     |
+|  Objective: [ The Opal of Valen ]      |  - [x] Bribed Baker (+1 Stealth)      |
+|  Magic Defenses: [ Level 4 Alarm ]     |  - [ ] Forged Entry Pass              |
+|  Guard Density:  [||||||||--]          |  - [x] Sleep Poison (Chef debt)       |
++----------------------------------------+---------------------------------------+
+|  BLUEPRINT LAYOUT (3 Zones)            |  TENSION TRACKER (Baseline: 0)        |
+|  [ Perimeter ] -> [ Garden ] -> [ Vault] |  Triggers:                            |
+|  Hazard: [ Sentry Pigeons ]            |  - Undetected Body: +1 / turn         |
+|  Reward: [ Jewelry box ]               |  - Alarm Sighted:  +5                 |
++----------------------------------------+---------------------------------------+
+|  XP ALLOCATION & PLANNING                                                      |
+|  [ Hire Mercenary ] [ Forge Documents ] [ Buy Intel ]        [ Total: 450 XP ] |
++--------------------------------------------------------------------------------+
+|  [Begin Heist Execution ->] [Export Plan] [Save Dossier]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: heist_prep
+
+## Component Architecture
+- **Blueprint Designer Canvas:** A central visual tool to layout the target facility. It allows the DM to place objects and tag them as "Known" (visible to players on the blueprint) or "Hidden" (revealed only through high-level scouting or during the heist).
+- **Defense Layer Stack:** A vertical hierarchy manager that orders the facility's defenses from the outermost perimeter to the innermost vault. This provides a clear "Obstacle Course" view for the DM.
+- **Surveyability Matrix:** A table that classifies facility features into Trivial (automatic intel), Challenging (requires specific prep), or Impossible (cannot be known until inside).
+- **Crew Specialization Dashboard:** A role-assignment interface where DMs can map PC abilities to essential heist archetypes (Lookout, Technical, etc.).
+- **Prep Task Manager:** A checklist interface for tracking player-side intelligence gathering and resource acquisition milestones.
+
+## Interaction Logic
+- **Dynamic Exploration:** As players complete Prep Activities (e.g., bribing a guard), the Blueprint Designer automatically transitions specific "Hidden" tags to "Known," updating the player-facing handout in real-time.
+- **Security Check Balancing:** The UI calculates suggested DC ranges based on the Tier of the facility and the density of the Layered Defenses.
+- **Role Synergy Alerts:** Flagging if the chosen Crew Composition lacks a critical role (e.g., "Warning: No Safecracker assigned to Tier 3 Vault").
+
+## Visual Design
+- **Tactical Stealth Aesthetic:** Dark mode interface with neon blueprint lines (cyan for walls, orange for security, red for objectives).
+- **Iconography for Intel:** Uses symbols like magnifying glasses for surveyed items, padlocks for secured entries, and warning triangles for active patrols.
+- **Top-Down Perspective:** Mimics a physical blueprint or CAD drawing to encourage strategic thinking and spatial planning.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: heist_prep
+
+# Heist: The Signet of the Iron-Clad Bank
+
+### 1. Heist Objective
+**Objective:** Retrieve the Ancient Signet of House Thorne from Vault 4B.
+**Tiered Goal:** Retrieve the list of bribed officials (Sensitive Info) for an extra 5,000 GP reward.
+
+### 2. Heist Location: Iron-Clad Bank
+The facility is a three-story stone fortress in the Merchant Quarter, reinforced with lead-lined walls to prevent magical scrying.
+- **Trivial Survey:** Entrance locations, perimeter guard shifts (Day/Night).
+- **Challenging Survey:** Internal patrol routes, vault combo sequence.
+- **Impossible Survey:** Biometric scanner triggers, trap placements inside the vault.
+
+### 3. Entry Points
+- **Main Lobby:** Heavily guarded. DC 15 Persuasion or Forgery to enter legitimately.
+- **Loading Dock (Rear):** Hidden behind waste disposal. Requires DC 18 Investigation to find and DC 20 Thieves' Tools to unlock.
+
+### 4. Layered Defenses
+| Layer | Type | Description |
+|:---:|:---|:---|
+| 1 | Perimeter | 12ft high reinforced stone wall with iron spikes. |
+| 2 | Exterior | Two-man patrols every 15 minutes. |
+| 3 | Threshold | Arcane Lock on the front gates (DC 25 Dispel/Unlock). |
+| 4 | Interior | Silent Alarm pressure plates (Passive) in the main hallway. |
+
+### 5. Blueprint (Player-Facing Intel)
+- **Known:** Lobby layout, Guard Room location, Main Hallway.
+- **Unknown:** The "Maintenance Shaft" mentioned in the ledger.
+- **Hidden:** The sensor-grid in the Vault Ante-room.
+
+### 6. Heist Crew (Roles)
+- **Vax (Rogue):** Safecracker. Primary focus on Vault 4B.
+- **Elara (Wizard):** Technical Specialist. Neutralizing magical alarms.
+- **Grog (Barbarian):** Muscle. Standby for the "unavoidable" guard encounter.
+
+### 7. Preparation Activities
+- [X] **Conduct Recon:** Observed the bank for 3 nights (Unlocked Perimeter Intel).
+- [X] **Acquire Gear:** Obtained a vial of Alchemist's Acid for the loading dock lock.
+- [ ] **Bribe Contact:** Attempting to reach the night janitor for a key-mold.
+

@@ -1,0 +1,79 @@
+1. **Drinking Contest**: 
+   - **Setup**: Two or more characters compete in drinking pints of ale.
+   - **Mechanics**: Each round, players make a Constitution saving throw, with the DC increasing after each round. 
+   - **Variations**: Allow players to use Intimidation to psych out opponents or double the drinks for a round to increase the opponent's DC. Consider adding rewards or using the contest as a plot device for gathering information.
+
+2. **Dinosaur Racing**:
+   - **Setup**: Characters race on dinosaurs, such as ankylosaurs, triceratops, or a T-rex.
+   - **Mechanics**: Each turn, riders make Animal Handling checks against the dinosaur's DC to determine speed. Lashing the dino can increase speed but risks slowing it down later.
+   - **Variations**: Introduce an 'unchained' version where dinosaurs can attack each other.
+
+3. **Gambling Games**:
+   - **Simple Version**: Players roll a d20, with the highest roll winning.
+   - **Complex Version (Mercer's Gambit of Ord)**: Players roll a d8, d6, and d4 in sequence, betting, calling, or folding between rolls. The total is revealed at the end, with the highest number winning.
+   - **Usage**: This can be a chance for players to win rewards or introduce new plot elements.
+
+4. **Shell Games**:
+   - **Setup**: A charlatan shuffles bowls or shells hiding an object, often in a busy street setting.
+   - **Mechanics**: Players make Intelligence or Perception checks to track the correct cup. The shuffler makes a Sleight of Hand check to move the object secretly.
+   - **Variations**: Introduce magical elements or special abilities to increase the challenge.
+
+5. **Maze Challenge**:
+   - **Setup**: A maze with traps and shifting corridors.
+   - **Mechanics**: Players make Intelligence checks to memorize routes and navigate the maze. Creativity, like leaving trails, can reduce difficulty.
+   - **Usage**: This can be part of a larger quest or a standalone challenge.
+
+6. **Rat Races**:
+   - **Setup**: Small critters race down a track.
+   - **Mechanics**: Players can bet on critters or train their own. 
+   - **Usage**: Introduce this as a festival event or casual betting game in a town.
+
+7. **Cooking Competition**:
+   - **Setup**: Characters participate in a cooking contest with fantasy ingredients.
+   - **Mechanics**: Players make checks using cook's utensils, with additional checks for Perception (taste) or Intelligence (timing). Experimenting with ingredients involves a d100 roll.
+   - **Usage**: This can be a fun diversion or part of a larger festival or event.
+
+8. **Archery Contests**:
+   - **Setup**: A competition involving targets at varying distances and conditions.
+   - **Mechanics**: Players make ranged attack rolls against different ACs. Introduce moving targets or obstacles for complexity.
+   - **Variations**: Include rivals or special conditions like limited visibility.
+
+9. **Dragonchess**:
+   - **Setup**: A chess-like game with unique pieces and boards.
+   - **Mechanics**: Players make opposed skill checks, with the first to three successes winning.
+   - **Variations**: Allow Insight and Deception checks to influence the game's outcome.
+
+10. **Fight Clubs**:
+    - **Setup**: Bare-knuckle brawling or more dangerous combat.
+    - **Mechanics**: Treated like a combat encounter but focused on unarmed strikes. Party members can subtly influence the fight.
+    - **Usage**: Include betting to increase stakes, and vary opponents' capabilities.
+
+11. **Strength Contests**:
+    - **Setup**: Events inspired by traditional strength challenges like the caber toss.
+    - **Mechanics**: Primarily Athletics checks, potentially across multiple rounds or against multiple competitors.
+    - **Usage**: Use in festivals or as a test of strength in storylines.
+
+12. **Trebuchet**:
+    - **Setup**: A game where characters throw sandbags backward over their head into a basket.
+    - **Mechanics**: Players make Dexterity checks with disadvantage to land the sandbag in the target.
+    - **Usage**: Suitable for festivals or casual competition among characters.
+
+13. **Corn Maze Game**:
+    - **Setup**: A maze in a harvest festival setting.
+    - **Mechanics**: Skill challenges involving Athletics, Survival, and Intelligence checks. Players solve puzzles and overcome magical obstacles.
+    - **Usage**: Can be part of a festival or a quest to retrieve an item from the maze's center.
+
+14. **Billiards**:
+    - **Setup**: A tavern game of skill.
+    - **Mechanics**: Players make checks (Dexterity, Sleight of Hand, or Performance) to sink balls. The difficulty increases with each success.
+    - **Variations**: Include trick shots for added challenge and strategy.
+
+15. **Beer Pong**:
+    - **Setup**: A drinking game where players throw balls into cups.
+    - **Mechanics**: Players roll d20s for Dexterity checks, increasing the difficulty each round. Drinking affects a character's sobriety score, determined by a d8 roll plus CON modifier.
+    - **Usage**: Good for tavern scenes or casual party interactions.
+
+16. **Darts**:
+    - **Setup**: A classic tavern game.
+    - **Mechanics**: Players roll two d20s for scoring, with the option to modify rolls with their ranged attack modifier. Scoring varies based on the dice rolls.
+    - **Usage**: Can be a quick diversion in a tavern or part of a larger event.

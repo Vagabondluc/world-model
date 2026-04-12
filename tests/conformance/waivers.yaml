@@ -1,0 +1,25 @@
+waivers:
+  - donor: mythforge
+    scope: donor-only AI copilot and external dashboard surfaces
+    reason: excluded from canonical product scope
+  - donor: orbis
+    scope: runtime dependency on donor repo build chain
+    reason: no runtime donor imports allowed; parity is against frozen baseline in world-model
+  - donor: adventure-generator
+    scope: runtime dependency on donor repo build chain
+    reason: no runtime donor imports allowed; parity is against frozen baseline in world-model
+  - donor: mappa-imperium
+    scope: runtime dependency on donor repo build chain
+    reason: no runtime donor imports allowed; parity is against frozen baseline in world-model
+  - donor: dawn-of-worlds
+    scope: runtime dependency on donor repo build chain
+    reason: no runtime donor imports allowed; parity is against frozen baseline in world-model
+  - donor: faction-image
+    scope: runtime dependency on donor repo build chain
+    reason: no runtime donor imports allowed; parity is against frozen baseline in world-model
+  - donor: watabou-city
+    scope: none for clean-room rehost parity
+    reason: clean-room Watabou implementation is rehostable; old GPL/reference-only waiver is retired
+  - donor: encounter-balancer
+    scope: exact runtime parity across four independent apps
+    reason: modeled as one scaffold-copy donor with clone-equivalence checks

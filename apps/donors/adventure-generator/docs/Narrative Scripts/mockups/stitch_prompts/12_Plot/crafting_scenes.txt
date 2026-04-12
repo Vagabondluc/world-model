@@ -1,0 +1,89 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Crafting Scenes".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: crafting_scenes
+
+```text
++--------------------------------------------------------------------------------+
+|  [Scene Director: Dramatic Framing Engine]                            [?] [X]  |
++--------------------------------------------------------------------------------+
+|  PURPOSE: [ Obtain the smuggling codes ]  AGENDA: [ Does Jax betray his boss? ] |
++--------------------------------------------------------------------------------+
+|  SHARP CUT: START                      |  SHARP CUT: END                       |
+|  From: [ The long walk uphill ]        |  When: [ The codes are exchanged ]     |
+|  To:   [ Inside the rainy alley ]      |  Or:   [ Handcuffs go on ]            |
++----------------------------------------+---------------------------------------+
+|  THE BANG (Initiating Action)          |  THE CAST                             |
+|  [ "Jax pulls a gun on his partner" ]  |  Lead:    [ Jax ]                     |
+|                                        |  Feature: [ The Lookout ]             |
+|  [Randomize Bang]                      |  Extra:   [ Passing Merchant ]        |
++----------------------------------------+---------------------------------------+
+|  OBSTACLES                             |  SENSORY SETUP                        |
+|  * [ The Lookout is watching ]         |  Location: [ Back alley, wet bricks ] |
+|  * [ Codes are in a locked case ]      |  Tone: [ Tense, Noir ]                |
++--------------------------------------------------------------------------------+
+|  [Finalize Scene Frame] [Preview Transition] [Ready for Next Scene]   [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: crafting_scenes
+
+## Component Architecture
+- **Dramatic Agenda Header:** A specialized input area that forces the DM to define the "Goal" of the scene before anything else. It prevents aimless roleplaying.
+- **The Bang Input/Randomizer:** A high-impact workspace for the "Initiating Action." It includes a library of dramatic hooks (e.g., "An arrow flies past," "A betrayal is revealed").
+- **Cast Allocation Grid:** Categorizes NPCs into Leads, Features, and Extras, helping the DM prioritize their performance.
+- **Cutter Interface (Sharp Cuts):** A before-and-after view that helps the DM identify where to "Skip to the Good Stuff" and where to "Cut to Black."
+- **Obstacle Forge:** A tool to quickly add complexity to a scene, ensuring the players can't just bypass the drama without effort.
+
+## Interaction Logic
+- **Filler Elimination:** Automatically suggests "Sharp Cuts" for travel or long rests, replacing them with [ABSTRACT TIME] summaries.
+- **Agenda-Based Conclusion:** The UI prompts the DM to "End Scene" as soon as the core Agenda question has been answered (Yes or No).
+- **Smooth Transitioning:** Generating the output provides both the "Start Bang" and the "Ending Hook" to lead into the next scene.
+
+## Visual Design
+- **Directorial Utility Aesthetic:** Clean, punchy layout reminiscent of a movie script or a stage director's notes.
+- **Action-Heavy Color Palette:** Uses high-contrast blacks, whites, and alert reds to emphasize the focus on immediate drama and choices.
+- **Clutter-Free Workspace:** Minimizes sensory detail description to focus on the "The Bang" and "The Agenda."
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: crafting_scenes
+
+# Scene: The Betrayal at the Docks
+
+**Agenda:** Can the PCs secure the smuggling manifest without Jax tipping off the authorities?
+
+**Sharp Cut (Start):** *Skip the 3-hour wait in the tavern.*  
+"You find yourselves crouched behind a stack of crates at Pier 9. The rain is cold, and Jax is late."
+
+**The Bang:** Just as you see Jax approaching, he stops and whistles three times. From the shadows of the warehouse roofs, three crossbows click simultaneously—all aimed at you.
+
+**The Setup:**
+- **Location:** Pier 9, midnight. Slick wooden piers and the smell of fish and oil.
+- **Lead:** Jax (The nervous smuggler).
+- **Features:** The Roof Snipers.
+- **Extra:** A drunk sailor snoring in a nearby lifeboat.
+
+**Obstacles:**
+1. Jax holds the key to the manifest chest around his neck.
+2. The snipers won't fire unless Jax gives the word—or if they see the PCs move.
+
+**Abstract Time (Transition):**  
+"The scene ends as you scramble into the getaway boat, the manifest clutched in your arms. Several hours of rowing through the fog pass as you make your way back to the safehouse..."
+
+**Sharp Cut (Next Scene):**  
+"...until you arrive at the safehouse door, only to find it kicked in."
+

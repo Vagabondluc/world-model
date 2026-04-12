@@ -1,0 +1,11 @@
+{
+  "donor": "adventure-generator",
+  "label": "Adventure Generator",
+  "classification": "app donor",
+  "methodology": "behavioral capture",
+  "basis": "captured",
+  "routes": [
+    "/",
+    "/donor/adventure-generator"
+  ]
+}

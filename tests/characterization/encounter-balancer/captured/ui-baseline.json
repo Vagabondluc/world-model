@@ -1,0 +1,18 @@
+{
+  "donor": "encounter-balancer",
+  "basis": "reconstructed",
+  "panels": [
+    "Balancer tab",
+    "Environmental tab"
+  ],
+  "controls": [
+    "Adjust difficulty",
+    "Set environment",
+    "Preview encounter"
+  ],
+  "visibleStates": [
+    "no encounter config",
+    "no environment config",
+    "no encounter output"
+  ]
+}

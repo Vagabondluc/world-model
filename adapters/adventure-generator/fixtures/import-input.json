@@ -1,0 +1,241 @@
+{
+  "donor": "adventure-generator",
+  "snapshot_fingerprint": "70fe933d8597c74a152fb9f9473be42be6bab1dca23d46cff7d1663eb955d0dc",
+  "adapter_version": "1.0.0",
+  "records": [
+    {
+      "concept_key": "workflow",
+      "record_key": "workflow:main",
+      "source_path": "stores/workflowStore.ts",
+      "source_hash": "1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef01",
+      "payload": {
+        "record": {
+          "workflow_id": "workflow:main",
+          "world_id": "world:sample",
+          "metadata": {
+            "label": "Adventure Workflow",
+            "summary": "Main guided workflow for a sample adventure.",
+            "tags": ["workflow", "guidance"]
+          },
+          "payload": {
+            "step": "start",
+            "status": "paused"
+          },
+          "schema_binding": null,
+          "attachment": {
+            "workflow_id": "workflow:main",
+            "activity_type": "adventure-flow",
+            "status": "Paused",
+            "step_state": [
+              {
+                "step_key": "choose-region",
+                "state": {
+                  "selected": "region:sample"
+                }
+              }
+            ],
+            "checkpoints": [
+              {
+                "checkpoint_key": "after-start",
+                "reached_at": "2026-04-02T12:05:00Z"
+              }
+            ],
+            "progress_ratio": 0.25,
+            "output_references": [],
+            "resumable": true
+          },
+          "asset_attachments": [],
+          "event_history": {
+            "event_ids": ["event:workflow-started"]
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "workflow/entity-ref",
+      "record_key": "workflow:entity-ref",
+      "source_path": "stores/workflowStore.ts",
+      "source_hash": "2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123",
+      "payload": {
+        "record": {
+          "workflow_id": "workflow:entity-ref",
+          "world_id": "world:sample",
+          "metadata": {
+            "label": "Entity Reference Workflow",
+            "summary": "Workflow record that references canonical entities.",
+            "tags": ["workflow", "entity-ref"]
+          },
+          "payload": {
+            "step": "entity-link",
+            "status": "running"
+          },
+          "schema_binding": null,
+          "attachment": {
+            "workflow_id": "workflow:entity-ref",
+            "activity_type": "entity-ref",
+            "status": "Running",
+            "step_state": [
+              {
+                "step_key": "reference",
+                "state": {
+                  "entity_id": "entity:city-link"
+                }
+              }
+            ],
+            "checkpoints": [],
+            "progress_ratio": 0.5,
+            "output_references": [
+              {
+                "Entity": "entity:city-link"
+              }
+            ],
+            "resumable": true
+          },
+          "asset_attachments": [],
+          "event_history": {
+            "event_ids": ["event:workflow-started"]
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "workflow/city-linkage",
+      "record_key": "entity:city-link",
+      "source_path": "schemas/location.ts",
+      "source_hash": "3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef012345",
+      "payload": {
+        "record": {
+          "entity_id": "entity:city-link",
+          "world_id": "world:sample",
+          "entity_type": "location",
+          "metadata": {
+            "label": "City Link",
+            "summary": "City linkage entity for the guided workflow.",
+            "tags": ["location", "city-link"]
+          },
+          "payload": {
+            "description": "City link entity."
+          },
+          "schema_binding": null,
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:overworld",
+            "hex_or_cell_ref": "D05",
+            "coordinate_ref": "5,4",
+            "spatial_scope": "city",
+            "layer_membership": ["cities"]
+          },
+          "asset_attachments": [],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:city-linked"]
+          },
+          "latest_projection_reference": null,
+          "donor_route_state": "wizard-step"
+        }
+      }
+    },
+    {
+      "concept_key": "workflow/dungeon-linkage",
+      "record_key": "entity:dungeon-link",
+      "source_path": "schemas/delve.ts",
+      "source_hash": "4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef01234567",
+      "payload": {
+        "record": {
+          "entity_id": "entity:dungeon-link",
+          "world_id": "world:sample",
+          "entity_type": "location",
+          "metadata": {
+            "label": "Dungeon Link",
+            "summary": "Dungeon linkage entity for guided adventure flow.",
+            "tags": ["location", "dungeon-link"]
+          },
+          "payload": {
+            "description": "Dungeon link entity."
+          },
+          "schema_binding": null,
+          "relation_references": [],
+          "location_attachment": {
+            "map_anchor": "map:underworld",
+            "hex_or_cell_ref": null,
+            "coordinate_ref": "22,8",
+            "spatial_scope": "dungeon",
+            "layer_membership": ["dungeons"]
+          },
+          "asset_attachments": [],
+          "workflow_attachment": null,
+          "event_history": {
+            "event_ids": ["event:dungeon-linked"]
+          },
+          "latest_projection_reference": null,
+          "donor_navigation_state": "drawer"
+        }
+      }
+    },
+    {
+      "concept_key": "workflow/projection",
+      "record_key": "projection:workflow-latest",
+      "source_path": "stores/historyStore.ts",
+      "source_hash": "5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789",
+      "payload": {
+        "record": {
+          "projection_id": "projection:workflow-latest",
+          "owner": {
+            "Workflow": "workflow:main"
+          },
+          "projection_version": "1",
+          "derived_state": {
+            "current_step": "choose-region",
+            "progress_ratio": 0.25
+          },
+          "source_event_range": {
+            "start_event_id": "event:workflow-started",
+            "end_event_id": "event:workflow-started"
+          },
+          "schema_binding_version": null
+        }
+      }
+    },
+    {
+      "concept_key": "workflow/schema-binding",
+      "record_key": "binding:workflow-main",
+      "source_path": "schemas/generator.ts",
+      "source_hash": "60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789ab",
+      "payload": {
+        "record": {
+          "owner": {
+            "Workflow": "workflow:main"
+          },
+          "binding": {
+            "schema_id": "schema-workflow",
+            "schema_class": "WorkflowSchema",
+            "promoted_schema_ref": "workflow/adventure-generator",
+            "external_schema_ref": {
+              "source_system": "AdventureGenerator",
+              "source_uri": "schemas/generator.ts",
+              "validation_contract_ref": "workflow.schema.json",
+              "migration_contract_ref": null
+            },
+            "version": "1.0.0",
+            "activation_event_id": "event:workflow-started",
+            "migration_lineage": {
+              "previous_schema_version": null,
+              "migration_ref": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "concept_key": "workflow/world-ref",
+      "record_key": "shell:world-ref",
+      "source_path": "src/components/adventure",
+      "source_hash": "718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcd",
+      "payload": {
+        "record": {
+          "note": "Reference-only world shell from the donor UI"
+        }
+      }
+    }
+  ]
+}

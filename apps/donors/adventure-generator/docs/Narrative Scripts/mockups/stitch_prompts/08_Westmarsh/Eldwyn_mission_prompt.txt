@@ -1,0 +1,98 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Eldwyn Mission Prompt".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Westmarsh & Eldwyn Campaign Suite
+
+```text
++--------------------------------------------------------------------------------+
+|  [Eldwyn Guild: Campaign & Adventure Nexus]                           [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ ADVENTURE MATRIX ] [ MISSION BOARD ] [ TRAVEL (TES) ] [ NPC PROFILER ]      |
++--------------------------------------------------------------------------------+
+|  GUILD MISSION BOARD: [ NEW POST ]                                             |
+|  ID: [ REC-44219 ]  Title: [ The Frozen Pickaxe heist ]  Rank: [ Silver ]      |
+|  Objective: [ Retrieve the sacred iron tool from the Scrapper Guild. ]          |
+|  Tags: [ (x) Combat  ( ) Social  (x) Stealth ]  Rewards: [ 80gp + Consumable ]  |
++--------------------------------------------------------------------------------+
+|  ADVENTURE HOOK MATRIX (5x4)           |  TRAVELING EVENT SYSTEM (TES)         |
+|  [3][2][5][1][6] -> "Title: The..."    |  Distance: [ FAR ] (2 Events)         |
+|  [6][4][1][2][3] -> "Title: Rise..."   |  Event 1: [ ORANGE ] (Combat/Explor)  |
+|  [1][1][1][4][2] -> "Title: Silk..."   |  Event 2: [ BLUE   ] (Roleplay)       |
+|  [Submit and Expand Outline]           |  [ Generate Drama-First Events ]      |
++----------------------------------------+---------------------------------------+
+|  NPC PROFILER (SURFACE ONLY - FR)                                              |
+|  Nom: [ Silas Vane ] Occupation: [ Mineur ] Apparence: [ Cicatrice au bras ]   |
+|  Personalité: [ Grognon mais loyal. ]                                          |
++--------------------------------------------------------------------------------+
+|  [Export Markdown] [Sync to Campaign Log] [Randomize Matrix]           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Westmarsh & Eldwyn Campaign Suite
+
+## Component Architecture
+- **Eldwyn Guild Hub:** A unified command center for GMing in the 'Westmarsh' style. It separates the "Public" (Mission Board, NPC Profiles) from the "Private/Procedural" (Adventure Matrix, Travel System).
+- **Mission Codification Studio:** A rigid editor based on the "Mission Codification Guide" (Step 1-67). It enforces standardized IDs, Tags, and Tier-based rewards.
+- **Recursive Adventure Matrix:** A specialized 5x4 grid that uses the "Rail Road Quest Generator" logic. It allows the GM to "Submit and Expand" outlines from 80 to 120 words after user confirmation.
+- **Drama-Centric Travel (TES) Module:** A UI based on the "Pointy Hat Traveling Event System." It ignores "Realism" (food/rations) in favor of color-coded "Drama" events (Red, Blue, Yellow, and Combos).
+- **Surface-Level NPC Profiler:** A bilingual-ready (Fr/En) tool for Step 1 of the NPC script, ensuring players only see the "Surface" traits (Name, Job, Look, Persona) while hiding GM secrets.
+
+## Interaction Logic
+- **Tier-Synched Rewards:** Selecting a "Rank" (e.g., Silver) automatically populates the "Rewards" field with the correct GP range and Magic Item roll from the script's reward table.
+- **Seed-to-Story Generation:** The Matrix Console transforms numeric seeds (1-6) into integrated narrative outlines, allowing for rapid generation of "Adventure Hooks."
+- **The "Drama" over "Realism" Travel Toggle:** Selecting distance (Close/Far/Very Far) automatically calculates the number of events (1, 2, or 3) and suggests color-coded combos (e.g., Purple for Roleplay/Combat).
+
+## Visual Design
+- **Rugged & Industrial:** The UI uses a "Mining Town" aesthetic—cold greys, industrial steel borders, and rugged textures reflecting the Eldwyn setting (Sweden/Quebec-like climate).
+- **Categorical Color Coding:** Missions and Travel Events are color-coded (Red/Blue/Yellow) for instant "Glance-ability" during a session.
+- **Public-Facing Cards:** The NPC and Mission outputs are designed as "Cards" that the GM can drag-and-drop into a player chat or campaign board.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: Eldwyn Campaign Dossier
+
+### **Guild Mission Board Post**
+**Mission ID:** REC-44219
+**Title:** The Frozen Pickaxe Heist
+**Rank:** Silver (Level 4-6)
+**Objective:** Retrieve the ceremonial 'Frozen Pickaxe' from the Scrapper Guild's outpost.
+**Rewards:** 85 gp, 1x Potion of Gaseous Form (Uncommon Consumable).
+**Requirements:** Proficiency in Stealth or Athletics.
+**Mission Tags:** Combat, Stealth.
+**Difficulty Rating:** Medium.
+**Prerequisites:** Must have completed the 'Bridge to Eldwyn' quest.
+
+---
+
+### **Generated Adventure Hook (Matrix Seed: 3-2-5-1-6)**
+**Title:** Shadows of the Iron Vein
+**Narrative:** In the rugged canyons of Barze, a local foreman named Silas (Hook 3) is being threatened by the 'Dusk-Worms' (Threat 2). He possesses an ancient 'Ruby-Chisel' (McGuffin 5) that the worms desperately want to destroy. It seems the chisel can unlock a hidden chamber in the 'Jagged Peak' (Place 1), but Silas hides a dark alliance with a rival mining corp (Intrigue 6).
+*Character Count: ~78 words*
+
+---
+
+### **Traveling Event Log (TES: Far Distance)**
+- **Event 1 (ORANGE - Combat/Exploration):** The party must cross a collapsing ice-bridge while being harried by 'Snow-Harpy' scouts.
+- **Event 2 (BLUE - Roleplay):** An encounter with a 'Frost-Spirit' who demands a story in exchange for safe passage through the blizzard.
+
+---
+
+### **NPC Profile (Surface Only - Player Facing)**
+**Nom:** Silas Vane
+**Occupation:** Foreur de mine
+**Apparence:** Un homme costaud avec une barbe gelée et une cicatrice distinctive sur le bras gauche.
+**Personalité:** Silas est un travailleur acharné. Il est souvent grognon au premier abord, mais il est d'une loyauté farouche envers ses camarades de la mine.
+

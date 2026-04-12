@@ -1,0 +1,112 @@
+/* Hex Grid Custom Styles */
+.hex-layer {
+  position: relative;
+  transform-style: preserve-3d;
+  /* Tilt the entire map plane */
+  transform: perspective(2000px) rotateX(15deg) translateY(-50px);
+  transform-origin: center center;
+  transition: transform 0.5s ease-out;
+}
+
+.hex {
+  position: absolute;
+  width: 120px; 
+  height: 140px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(135deg, rgba(65, 45, 85, 0.6) 0%, rgba(30, 20, 40, 0.9) 100%);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Using drop-shadow filter allows the glow to follow the clip-path shape */
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)); 
+  z-index: 10;
+  cursor: pointer;
+}
+
+.hex::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background-color: rgba(26, 17, 34, 0.95);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: 11;
+  transition: background-color 0.3s ease;
+}
+
+.hex::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hex:hover {
+  z-index: 100;
+  transform: translateY(-10px) scale(1.05);
+}
+
+.hex:hover::before {
+  background-color: rgba(54, 35, 72, 1);
+}
+
+/* Dynamic Glows based on Type */
+.hex.glow-water { filter: drop-shadow(0 0 15px rgba(19, 182, 236, 0.5)); }
+.hex.glow-water::before { background-color: rgba(19, 182, 236, 0.1); }
+.hex.glow-water:hover { filter: drop-shadow(0 0 25px rgba(19, 182, 236, 0.8)); }
+
+.hex.glow-plains { filter: drop-shadow(0 0 15px rgba(74, 222, 128, 0.3)); }
+.hex.glow-plains::before { background-color: rgba(74, 222, 128, 0.05); }
+.hex.glow-plains:hover { filter: drop-shadow(0 0 25px rgba(74, 222, 128, 0.6)); }
+
+.hex.glow-mountain { filter: drop-shadow(0 0 15px rgba(127, 19, 236, 0.4)); }
+.hex.glow-mountain::before { background-color: rgba(127, 19, 236, 0.1); }
+.hex.glow-mountain:hover { filter: drop-shadow(0 0 25px rgba(127, 19, 236, 0.7)); }
+
+.hex.glow-city { filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.5)); }
+.hex.glow-city::before { background-color: rgba(251, 191, 36, 0.15); border: 2px solid rgba(251, 191, 36, 0.5); }
+.hex.glow-city:hover { filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.8)); }
+
+.hex.active {
+  z-index: 50;
+}
+
+.hex.error {
+  filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.6)) !important;
+}
+
+.hex.error::before {
+   background-color: rgba(239, 68, 68, 0.2);
+   box-shadow: inset 0 0 20px #ef4444;
+}
+
+.hex-content {
+  position: relative;
+  z-index: 20;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1122; 
+}
+::-webkit-scrollbar-thumb {
+  background: #362348; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4d3266; 
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

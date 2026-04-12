@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*", "src/donors/faction-image/fullsrc/*"],
+      "@shims/*": ["src/shims/*"],
+      "@mi/*": ["src/donors/mappa-imperium/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/donors/mappa-imperium/**/*.test.ts",
+    "src/donors/mappa-imperium/**/*.test.tsx",
+    "src/donors/mappa-imperium/**/*.spec.ts",
+    "src/donors/mappa-imperium/**/*.spec.tsx",
+    "src/donors/faction-image/fullsrc/**/*.test.ts",
+    "src/donors/faction-image/fullsrc/**/*.test.tsx",
+    "src/donors/faction-image/fullsrc/test/**",
+    "src/donors/faction-image/fullsrc/mutation-testing-demo/**"
+  ]
+}

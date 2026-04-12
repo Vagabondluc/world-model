@@ -202,19 +202,22 @@ Stabilize, performance-test, document, and gate the release behind a determinist
 
 ## Deliverables
 - E2E release tests
-- `apps/unified-app/docs/user-guide.md`
+- `docs/release/USER_GUIDE.md`
+- `docs/release/KNOWN_LIMITATIONS.md`
+- `docs/release/MAINTENANCE_PLAN.md`
 - `docs/release/RELEASE_CRITERIA.md` updated
-- `CHANGELOG.md`
+- `docs/release/CHANGELOG.md`
 
 ## Required Tests
-- `test_performance_under_load()`
-- `test_concurrent_edits()`
+- `test_release_shell_controls_are_keyboard_reachable()`
+- `test_modal_focus_returns_to_trigger()`
+- `test_large_bundle_roundtrip_performance()`
 - `test_release_checklist()`
 
 ## Exit Criteria
 - All release checklist items met and recorded in `docs/release/RELEASE_CRITERIA.md`
 - No critical bugs open
-- User guide and changelog present
+- User guide, known limitations, maintenance plan, and changelog present
 
 ## Failure Cases
 - Performance regressions under load

@@ -1,0 +1,114 @@
+{
+  "ok": true,
+  "workspace_root": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+  "app_root": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+  "checks": [
+    {
+      "name": "public taxonomy documented",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "legacy aliases documented",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "release verification command documented",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "phase 6 checker documented",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "known limitations documented",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "maintenance plan documented",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "doc exists: RELEASE_CRITERIA.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/RELEASE_CRITERIA.md"
+    },
+    {
+      "name": "doc exists: USER_GUIDE.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/USER_GUIDE.md"
+    },
+    {
+      "name": "doc exists: KNOWN_LIMITATIONS.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/KNOWN_LIMITATIONS.md"
+    },
+    {
+      "name": "doc exists: MAINTENANCE_PLAN.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/MAINTENANCE_PLAN.md"
+    },
+    {
+      "name": "doc exists: CHANGELOG.md",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/docs/release/CHANGELOG.md"
+    },
+    {
+      "name": "npm script: lint",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/package.json"
+    },
+    {
+      "name": "npm script: typecheck",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/package.json"
+    },
+    {
+      "name": "npm script: test",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/package.json"
+    },
+    {
+      "name": "npm script: build",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/package.json"
+    },
+    {
+      "name": "npm script: verify",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/package.json"
+    },
+    {
+      "name": "release hardening tests exist",
+      "ok": true,
+      "target": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app/tests/release-hardening.test.tsx"
+    },
+    {
+      "name": "app verify",
+      "ok": true,
+      "command": "npm.cmd run verify",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app",
+      "output": "> unified-app@0.1.0 verify\n> npm run lint && npm run typecheck && npm run test && npm run build\n\n\n> unified-app@0.1.0 lint\n> node scripts/check-donor-imports.mjs\n\nNo forbidden donor runtime imports found.\n\n> unified-app@0.1.0 typecheck\n> tsc --noEmit\n\n\n> unified-app@0.1.0 test\n> vitest run\n\n\n\u001b[1m\u001b[46m RUN \u001b[49m\u001b[22m \u001b[36mv3.2.4 \u001b[39m\u001b[90mD:/coding/AI/Chat-Gpt-Agent/world-model/apps/unified-app\u001b[39m\n\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/migration-report-viewer.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 275\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/mythforge.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 402\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/modal-tools.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 731\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m modal tools\u001b[2m > \u001b[22mlaunches the Markov name modal from the tools menu and applies the generated world name \u001b[33m 561\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/donor-surfaces.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 829\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m donor surfaces\u001b[2m > \u001b[22mrenders the donor comparison route \u001b[33m 583\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/integration/lens-switch.smoke.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 472\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m shared concept lens switch\u001b[2m > \u001b[22mswitches donor lenses in place without mutating the canonical key \u001b[33m 471\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/integration/context-retention.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 936\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m cross-donor context retention\u001b[2m > \u001b[22mretains selected world and entity context across public, compare, and donor routes \u001b[33m 934\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/integration/cross-donor-world-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 1008\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m cross-donor world flow\u001b[2m > \u001b[22mkeeps the selected world and entity context while moving through donor and product surfaces \u001b[33m 1006\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/integration/cross-donor-adventure-flow.integration.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 986\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m cross-donor adventure flow\u001b[2m > \u001b[22mmoves a workflow-heavy bundle across the donor and product compare surfaces \u001b[33m 985\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/donor-runtime-host.mount.test.tsx \u001b[2m(\u001b[22m\u001b[2m6 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 941\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m donor runtime host mounts\u001b[2m > \u001b[22mmounts mythforge through the donor runtime host \u001b[33m 401\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/release-hardening.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 1045\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m release hardening\u001b[2m > \u001b[22mkeeps release-critical shell controls keyboard reachable and modal focus-safe \u001b[33m 976\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/app-shell.test.tsx \u001b[2m(\u001b[22m\u001b[2m5 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 2365\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m app shell\u001b[2m > \u001b[22mrenders the shell surfaces \u001b[33m 487\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m app shell\u001b[2m > \u001b[22mrenders the comparison surface with public and prototype families \u001b[33m 558\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m app shell\u001b[2m > \u001b[22mswitches taxonomy families and tabs without losing selected world context \u001b[33m 546\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m app shell\u001b[2m > \u001b[22mlaunches the create world modal and applies canonical changes \u001b[33m 503\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/mappa-imperium.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 315\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m mappa imperium conformance\u001b[2m > \u001b[22mmounts the donor route through the runtime host \u001b[33m 313\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/watabou-city.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 296\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/dawn-of-worlds.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 325\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m dawn of worlds conformance\u001b[2m > \u001b[22mmounts the donor route through the runtime host \u001b[33m 321\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/encounter-balancer.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 228\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/import-guard.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 252\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/orbis.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 6\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/adventure-generator.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/adventure-generator.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 298\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/orbis.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 267\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/faction-image.conformance.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 319\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[33m\u001b[2m\u00e2\u0153\u201c\u001b[22m\u001b[39m faction image conformance\u001b[2m > \u001b[22mmounts the donor route through the runtime host \u001b[33m 316\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/file-bundle-input.test.tsx \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 50\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/encounter-balancer.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/canonical-bundle.test.ts \u001b[2m(\u001b[22m\u001b[2m4 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 12\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/orbis.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/faction-image.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/mythforge.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 6\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/watabou-city.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/dawn-of-worlds.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/integration/shared-concept-round-trip.test.tsx \u001b[2m(\u001b[22m\u001b[2m2 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 9\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/donor-manifest.exactness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 7\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/bridge-harness.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/mappa-imperium.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/characterization/mappa-imperium.characterization.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/dawn-of-worlds.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/watabou-city.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/mythforge.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 5\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/encounter-balancer.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 3\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/faction-image.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m\u00e2\u0153\u201c\u001b[39m tests/conformance/adventure-generator.bridge.test.ts \u001b[2m(\u001b[22m\u001b[2m1 test\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m40 passed\u001b[39m\u001b[22m\u001b[90m (40)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m61 passed\u001b[39m\u001b[22m\u001b[90m (61)\u001b[39m\n\u001b[2m   Start at \u001b[22m 04:05:21\n\u001b[2m   Duration \u001b[22m 26.69s\u001b[2m (transform 1.35s, setup 39.91s, collect 19.81s, tests 12.45s, environment 162.25s, prepare 13.31s)\u001b[22m\n\n\n> unified-app@0.1.0 build\n> vite build\n\n\u001b[36mvite v6.4.2 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m\u00e2\u0153\u201c\u001b[39m 203 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.52 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip:   0.33 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[35massets/index-DOIzRo2n.css  \u001b[39m\u001b[1m\u001b[2m  7.61 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip:   2.16 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-BuTq3H89.js   \u001b[39m\u001b[1m\u001b[2m449.38 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip: 131.34 kB\u001b[22m\n\u001b[32m\u00e2\u0153\u201c built in 3.16s\u001b[39m"
+    },
+    {
+      "name": "phase 2 integrity",
+      "ok": true,
+      "command": "C:\\Users\\vagab\\AppData\\Local\\Programs\\Python\\Python311\\python.exe D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\scripts\\check_phase_2_snapshots.py",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+      "output": "{\n  \"ok\": true,\n  \"world_model_root\": \"D:/coding/AI/Chat-Gpt-Agent/world-model\",\n  \"adapters_root\": \"D:/coding/AI/Chat-Gpt-Agent/world-model/adapters\",\n  \"registry_path\": \"D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/concept-family-registry.yaml\",\n  \"results\": [\n    {\n      \"donor\": \"mythforge\",\n      \"ok\": true,\n      \"manifest\": \"D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/mythforge/manifest.yaml\",\n      \"snapshot_files\": 29,\n      \"errors\": []\n    },\n    {\n      \"donor\": \"orbis\",\n      \"ok\": true,\n      \"manifest\": \"D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/orbis/manifest.yaml\",\n      \"snapshot_files\": 23,\n      \"errors\": []\n    },\n    {\n      \"donor\": \"adventure-generator\",\n      \"ok\": true,\n      \"manifest\": \"D:/coding/AI/Chat-Gpt-Agent/world-model/adapters/adventure-generator/manifest.yaml\",\n      \"snapshot_files\": 21,\n      \"errors\": []\n    }\n  ],\n  \"errors\": [],\n  \"mandatory_coverage_missing\": []\n}"
+    },
+    {
+      "name": "phase 4 migration",
+      "ok": true,
+      "command": "C:\\Users\\vagab\\AppData\\Local\\Programs\\Python\\Python311\\python.exe D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\scripts\\check_phase_4_migration.py",
+      "cwd": "D:/coding/AI/Chat-Gpt-Agent/world-model",
+      "output": "{\n  \"ok\": true,\n  \"results\": [\n    {\n      \"donor\": \"mythforge\",\n      \"mode\": \"write\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/mythforge-write.json\",\n      \"output_bundle_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/mythforge-write.bundle.json\",\n      \"mapped_count\": 11,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": null\n    },\n    {\n      \"donor\": \"mythforge\",\n      \"mode\": \"dry-run\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/mythforge-dry-run.json\",\n      \"output_bundle_path\": null,\n      \"mapped_count\": 11,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": null\n    },\n    {\n      \"donor\": \"orbis\",\n      \"mode\": \"write\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/orbis-write.json\",\n      \"output_bundle_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/orbis-write.bundle.json\",\n      \"mapped_count\": 5,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": null\n    },\n    {\n      \"donor\": \"orbis\",\n      \"mode\": \"dry-run\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/orbis-dry-run.json\",\n      \"output_bundle_path\": null,\n      \"mapped_count\": 5,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": null\n    },\n    {\n      \"donor\": \"adventure-generator\",\n      \"mode\": \"write\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/adventure-generator-write.json\",\n      \"output_bundle_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/adventure-generator-write.bundle.json\",\n      \"mapped_count\": 6,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": null\n    },\n    {\n      \"donor\": \"adventure-generator\",\n      \"mode\": \"dry-run\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/adventure-generator-dry-run.json\",\n      \"output_bundle_path\": null,\n      \"mapped_count\": 6,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": null\n    },\n    {\n      \"donor\": \"adventure-generator\",\n      \"mode\": \"replay\",\n      \"ok\": true,\n      \"report_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/adventure-generator-replay.json\",\n      \"output_bundle_path\": \"D:/dev-cache/temp/phase4-migration-gqhy2sj5/adventure-generator-replay.bundle.json\",\n      \"mapped_count\": 6,\n      \"dropped_count\": 1,\n      \"conflict_count\": 0,\n      \"replay_equivalent\": true\n    }\n  ],\n  \"errors\": [],\n  \"report_path\": \"D:/coding/AI/Chat-Gpt-Agent/world-model/phase-4-migration-report.json\"\n}"
+    }
+  ],
+  "errors": []
+}

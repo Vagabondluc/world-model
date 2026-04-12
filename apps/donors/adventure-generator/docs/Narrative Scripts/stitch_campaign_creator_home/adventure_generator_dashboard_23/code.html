@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronicler Encounter Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&amp;family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Noto+Sans:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "chronicle-brown": "#3a2d1d",
+                        "chronicle-red": "#912712",
+                        "dnd-red": "#922610",
+                        "parchment-base": "#f5e8c3",
+                        "ink-dark": "#1a130c",
+                        "medium-brown": "#7d6344",
+                    },
+                    fontFamily: {
+                        "header": ["MedievalSharp", "cursive"],
+                        "body": ["Lora", "serif"],
+                        "noto": ["Noto Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .parchment-texture {
+                background-color: #f5e8c3;
+                background-image: url('https://i.imgur.com/xyp5VTG.png');
+                background-blend-mode: multiply;
+                background-repeat: repeat;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #e6d5a7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #3a2d1d;
+                border: 2px solid #e6d5a7;
+            }
+            .grit-overlay {
+                position: relative;
+            }
+            .grit-overlay::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+                opacity: 0.2;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .ink-curve {
+                stroke-dasharray: 5;
+                filter: contrast(150%) brightness(80%);
+            }
+            .custom-checkbox {
+                accent-color: #922610;
+            }
+        }
+    </style>
+</head>
+<body class="bg-parchment-base font-body text-ink-dark selection:bg-chronicle-red/30">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-72 bg-chronicle-brown text-white flex flex-col border-r-4 border-chronicle-red/20 shadow-[10px_0_30px_rgba(0,0,0,0.5)] z-20">
+<div class="p-8 flex flex-col h-full">
+<div class="flex flex-col items-center gap-4 mb-10 border-b border-white/10 pb-8">
+<div class="size-16 bg-chronicle-red rounded-full flex items-center justify-center border-4 border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">menu_book</span>
+</div>
+<div class="text-center">
+<h1 class="font-header text-3xl tracking-widest text-[#f5e8c3]">CHRONICLER</h1>
+<p class="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-1">Digital Parchment</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 font-header">
+<a class="flex items-center gap-4 px-5 py-4 rounded bg-[#922610] text-white shadow-inner" href="#">
+<span class="material-symbols-outlined">fort</span>
+<span class="tracking-wide text-lg uppercase">Adventures</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">pest_control_rodent</span>
+<span class="tracking-wide text-lg uppercase">Bestiary</span>
+</a>
+<a class="flex items-center gap-4 px-5 py-4 rounded hover:bg-white/5 transition-all text-stone-300 hover:text-white" href="#">
+<span class="material-symbols-outlined">scrollable_header</span>
+<span class="tracking-wide text-lg uppercase">Maps</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="mb-8 flex items-center gap-4 px-2">
+<div class="size-12 rounded-full border-2 border-chronicle-red/50 bg-center bg-cover bg-[#2a1f14] flex items-center justify-center overflow-hidden">
+<img alt="The Archivist" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIKDGZsQBde1oAIgBt2wgwOqEJRrxiMALozRGdGPM9unvRT_piO_m5fu_4boi4tq7-ox_p0nWi3ZkbMtUKJyCDzOv-Dppn2UEeqotDIlaBwT0ksO-Yeyi1qUFHhD79a-0cYuZqU8dkqqGzIbYLAXOo1VWNsAij0X4NfXpB4CuA-_S4bOM5OBalvhR38aOFxQMeAFpFZAx67C6VpDNyEwDeYC1etXnZIzASR9VMtn0_0vj4Cm0CwpaAlykF-dXm7kN3OtZMkXpF"/>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white uppercase tracking-wide font-header">The Archivist</p>
+<p class="text-[10px] uppercase text-stone-400 tracking-widest">Master DM</p>
+</div>
+</div>
+<button class="w-full bg-[#922610] hover:bg-red-800 text-white font-header text-lg py-4 rounded shadow-[0_4px_0_rgb(80,15,5)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 uppercase tracking-tighter">
+<span class="material-symbols-outlined">handyman</span>
+<span>Forge Adventure</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 parchment-texture overflow-y-auto custom-scrollbar relative grit-overlay">
+<div class="relative z-10 px-12 py-12 flex flex-col gap-10 max-w-7xl mx-auto">
+<header class="flex flex-col gap-2 border-b-2 border-medium-brown/30 pb-6">
+<h2 class="font-header text-5xl text-ink-dark">Encounter Architect: Table &amp; Probability Engine</h2>
+<p class="text-chronicle-red font-body italic text-lg opacity-90">Calculating the chaotic threads of statistical storytelling.</p>
+</header>
+<section class="bg-white/40 border border-medium-brown p-8 rounded shadow-sm backdrop-blur-[2px]">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-noto text-xs tracking-[0.2em] text-medium-brown font-bold uppercase">TABLE SETTINGS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-2">
+<label class="font-header text-chronicle-red text-sm uppercase">Dice Engine</label>
+<select class="bg-parchment-base/50 border-medium-brown/40 font-body rounded p-3 text-ink-dark focus:ring-chronicle-red focus:border-chronicle-red transition-all">
+<option>2d6 (Bell Curve)</option>
+<option>1d20 (Linear)</option>
+<option>3d6 (Tight Bell)</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-header text-chronicle-red text-sm uppercase">Table Size</label>
+<select class="bg-parchment-base/50 border-medium-brown/40 font-body rounded p-3 text-ink-dark focus:ring-chronicle-red focus:border-chronicle-red">
+<option>Small (6 Entries)</option>
+<option selected="">Standard (12 Entries)</option>
+<option>Massive (20 Entries)</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-header text-chronicle-red text-sm uppercase">Atmospheric Theme</label>
+<select class="bg-parchment-base/50 border-medium-brown/40 font-body rounded p-3 text-ink-dark focus:ring-chronicle-red focus:border-chronicle-red">
+<option>Deep Dungeon</option>
+<option selected="">Dark Forest</option>
+<option>Ancient Ruin</option>
+<option>High Seas</option>
+</select>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-4 bg-white/40 border border-medium-brown rounded overflow-hidden shadow-sm flex flex-col">
+<div class="p-4 border-b border-medium-brown/20 flex items-center justify-between">
+<span class="font-noto text-[10px] tracking-[0.2em] text-medium-brown font-bold uppercase">PROBABILITY VISUALIZER</span>
+</div>
+<div class="flex-1 p-6 flex flex-col items-center justify-center gap-6">
+<div class="w-full h-48 relative border-b-2 border-l-2 border-ink-dark/20">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path class="ink-curve" d="M 0,95 Q 25,95 50,10 Q 75,95 100,95" fill="none" stroke="#922610" stroke-width="2"></path>
+<circle cx="50" cy="10" fill="#922610" r="2"></circle>
+</svg>
+</div>
+<div class="text-center font-body text-sm italic text-ink-dark/70">
+                            Distribution favors results 6, 7, and 8 (44.4% combined chance).
+                        </div>
+</div>
+</div>
+<div class="lg:col-span-8 bg-white/40 border border-medium-brown rounded overflow-hidden shadow-xl">
+<div class="bg-dnd-red text-white p-4">
+<h4 class="font-header text-xl tracking-wide font-bold">Encounter Table Editor</h4>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-medium-brown/30 bg-chronicle-brown/5">
+<th class="px-6 py-4 font-header text-sm uppercase tracking-widest text-ink-dark">Roll</th>
+<th class="px-6 py-4 font-header text-sm uppercase tracking-widest text-ink-dark">Description</th>
+<th class="px-6 py-4 font-header text-sm uppercase tracking-widest text-ink-dark">Frequency</th>
+<th class="px-6 py-4 font-header text-sm uppercase tracking-widest text-ink-dark">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-medium-brown/20 font-body">
+<tr>
+<td class="px-6 py-4 font-bold text-chronicle-red text-lg">2</td>
+<td class="px-6 py-4">A lone Ancient Treant, dormant and moss-covered.</td>
+<td class="px-6 py-4"><span class="bg-[#e2e2d5] text-stone-600 border border-stone-300 px-2 py-0.5 rounded-sm text-[10px] font-bold">RARE</span></td>
+<td class="px-6 py-4 text-medium-brown">
+<span class="material-symbols-outlined cursor-pointer hover:text-chronicle-red">edit</span>
+</td>
+</tr>
+<tr class="bg-chronicle-red/5">
+<td class="px-6 py-4 font-bold text-chronicle-red text-lg">7</td>
+<td class="px-6 py-4">1d4 Forest Goblins scavenging for bioluminescent fungi.</td>
+<td class="px-6 py-4"><span class="bg-dnd-red/10 text-dnd-red border border-dnd-red/20 px-2 py-0.5 rounded-sm text-[10px] font-bold">COMMON</span></td>
+<td class="px-6 py-4 text-medium-brown">
+<span class="material-symbols-outlined cursor-pointer hover:text-chronicle-red">edit</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-chronicle-red text-lg">12</td>
+<td class="px-6 py-4">An Owlbear carcass surrounded by strange, silver arrows.</td>
+<td class="px-6 py-4"><span class="bg-[#e2e2d5] text-stone-600 border border-stone-300 px-2 py-0.5 rounded-sm text-[10px] font-bold">RARE</span></td>
+<td class="px-6 py-4 text-medium-brown">
+<span class="material-symbols-outlined cursor-pointer hover:text-chronicle-red">edit</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-20">
+<div class="bg-white/40 border border-medium-brown p-8 rounded shadow-sm">
+<span class="font-noto text-xs tracking-[0.2em] text-medium-brown font-bold uppercase mb-6 block">ENCOUNTER OPTIONS</span>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="custom-checkbox w-5 h-5 rounded border-medium-brown/40 text-chronicle-red focus:ring-chronicle-red" type="checkbox"/>
+<span class="font-body text-ink-dark group-hover:text-chronicle-red transition-colors">Include Environmental Hazards</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox w-5 h-5 rounded border-medium-brown/40 text-chronicle-red focus:ring-chronicle-red" type="checkbox"/>
+<span class="font-body text-ink-dark group-hover:text-chronicle-red transition-colors">Scale CR to Party Level (4x Lvl 5)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="custom-checkbox w-5 h-5 rounded border-medium-brown/40 text-chronicle-red focus:ring-chronicle-red" type="checkbox"/>
+<span class="font-body text-ink-dark group-hover:text-chronicle-red transition-colors">Generate Dynamic Plot Hooks</span>
+</label>
+</div>
+</div>
+<div class="bg-white/40 border border-medium-brown p-8 rounded shadow-sm">
+<span class="font-noto text-xs tracking-[0.2em] text-medium-brown font-bold uppercase mb-6 block">SIMULATION TOOLS</span>
+<div class="p-4 bg-parchment-base/30 border border-medium-brown/20 rounded">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-header text-ink-dark/60 uppercase">Mean CR:</span>
+<span class="font-bold text-chronicle-red">4.2</span>
+</div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-header text-ink-dark/60 uppercase">Combat Density:</span>
+<span class="font-bold text-chronicle-red">65%</span>
+</div>
+<div class="w-full bg-medium-brown/10 h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="bg-chronicle-red h-full" style="width: 65%;"></div>
+</div>
+</div>
+<button class="mt-6 w-full border border-chronicle-red text-chronicle-red font-header py-2 rounded hover:bg-chronicle-red hover:text-white transition-all uppercase tracking-widest text-sm">
+                        Run 1,000 Roll Simulation
+                    </button>
+</div>
+</div>
+</div>
+<footer class="mt-auto px-12 py-10 bg-black/5 flex justify-between items-center border-t border-medium-brown/20 relative z-10">
+<p class="font-header text-sm text-ink-dark/60 tracking-[0.2em] uppercase">© 1492 DR - Chronicler Archive Systems</p>
+<div class="flex gap-8 opacity-40">
+<span class="material-symbols-outlined text-chronicle-red text-3xl">shield</span>
+<span class="material-symbols-outlined text-chronicle-red text-3xl">swords</span>
+<span class="material-symbols-outlined text-chronicle-red text-3xl">skull</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

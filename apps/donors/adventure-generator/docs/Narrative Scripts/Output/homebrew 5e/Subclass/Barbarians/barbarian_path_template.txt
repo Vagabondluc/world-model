@@ -1,0 +1,18 @@
+Path of the ((Path Name))
+((Description of the Path))
+
+((Name of 3rd-level feature))
+3rd-level Path of ((Path Name)) feature
+((Brief, mechanical description of the feature))
+
+((Name of 6th-level feature))
+6th-level Path of ((Path Name)) feature
+((Brief, mechanical description of the feature))
+
+((Name of 10th-level feature))
+10th-level Path of ((Path Name)) feature
+((Brief, mechanical description of the feature))
+
+((Name of 14th-level feature))
+14th-level Path of ((Path Name)) feature
+((Brief, mechanical description of the feature))

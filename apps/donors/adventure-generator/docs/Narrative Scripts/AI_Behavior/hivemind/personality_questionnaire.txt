@@ -1,0 +1,33 @@
+Objective:
+Develop a questionnaire that immerses RPG players in sensory-rich scenarios to identify their player type. These scenarios involve moral and strategic choices that help categorize players into distinct groups, reflecting their preferences and gameplay styles as outlined in roles.json.
+
+Instructions for Questionnaire Development:
+
+Setting the Stage:
+
+Begin each scenario with a vivid description of the environment, utilizing all five senses to create a fully immersive scene. Set the context (e.g., ancient ruins, enchanted forests) and describe the conditions (e.g., foggy morning, starlit night) to engage players deeply.
+Scenario Complexity:
+
+Construct each situation with layered complexity that requires players to evaluate multiple factors. These should include ethical dilemmas, potential consequences, and strategic decisions that align with the unique characteristics of the roles defined in the JSON file.
+Descriptive and Active Engagement:
+
+Use active, descriptive language to animate the scenario. Include detailed descriptions of key elements such as artifacts, NPCs (non-player characters), and environmental hazards. Highlight the emotional and tactical stakes involved.
+Tailored Response Options:
+
+Provide multiple choice responses that cater to the specific preferences and aversions of the roles:
+Narrative-Driven Roles (e.g., Storyteller, Actor): Responses that enhance the storyline and character development.
+Strategy-Focused Roles (e.g., Power Gamer, Metagamer): Options that emphasize tactical and mechanical optimization.
+Simplicity-Oriented Roles (e.g., Casual Player, Sleeper): Straightforward and clear choices that minimize complexity.
+Rule-Conscious Roles (e.g., Enforcer, Cheater): Responses that revolve around adherence to or exploitation of game rules.
+Emotional and Sensory Depth:
+
+Integrate emotional responses and sensory details to connect players more deeply with the scenario. This aids in revealing their intrinsic motivations and gameplay preferences.
+Point Allocation System:
+
+Each response option should be associated with a point matrix that quantifies alignment with the player roles. Assign high points to the dominant group targeted by the response, and lower points to less aligned groups.
+Consistency and Accessibility:
+
+Maintain a consistent narrative and complexity level suitable for the diverse player types. Ensure the language is accessible and the scenarios are relatable across different player backgrounds.
+Interactive and Interpretive Engagement:
+
+Encourage players to not only select actions but also to describe their emotional and physical reactions within the scenario. This provides a deeper insight into their player psychology and potential role alignment.

@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quest / Mission Schema",
+  "description": "Container vocabulary: the Quest / Mission Schema payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file.",
+  "type": "object",
+  "required": [
+    "mission"
+  ],
+  "properties": {
+    "mission": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "primary_objective"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "level_range": {
+          "type": "string"
+        },
+        "difficulty": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "stakes": {
+          "type": "string"
+        },
+        "primary_objective": {
+          "type": "string"
+        },
+        "secondary_objectives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "start_location": {
+          "type": "object"
+        },
+        "key_locations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "key_npcs": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "scenes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              },
+              "title": {
+                "type": "string"
+              },
+              "setting": {
+                "type": "string"
+              },
+              "beats": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "complications": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "npcs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "type": "object"
+        },
+        "failed_outcomes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hooks": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gm_advice": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "entity"
+}

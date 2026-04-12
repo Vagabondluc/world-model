@@ -44,6 +44,11 @@ pub enum SourceSystem {
     Mythforge,
     Orbis,
     AdventureGenerator,
+    MappaImperium,
+    DawnOfWorlds,
+    FactionImage,
+    WatabouCity,
+    EncounterBalancerScaffold,
     Neutral,
     External(String),
 }
@@ -168,6 +173,44 @@ pub struct SchemaBindingRecord {
     pub migration_lineage: MigrationLineage,
 }
 
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+#[serde(rename_all = "snake_case")]
+pub enum BiomeType {
+    Forest,
+    Plains,
+    Desert,
+    Tundra,
+    Mountain,
+    Swamp,
+    Ocean,
+    Urban,
+    Ruins,
+    Cavern,
+    Volcanic,
+    Farmland,
+    Jungle,
+    Savanna,
+    Mystic,
+    Other(String),
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+#[serde(rename_all = "snake_case")]
+pub enum DiscoveryStatus {
+    Unknown,
+    Surveyed,
+    Settled,
+    Ruined,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+pub struct HexCoordinate {
+    pub q: i32,
+    pub r: i32,
+    pub s: i32,
+}
+
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
 pub struct LocationAttachment {
     pub map_anchor: String,
@@ -175,12 +218,52 @@ pub struct LocationAttachment {
     pub coordinate_ref: Option<String>,
     pub spatial_scope: String,
     pub layer_membership: Vec<String>,
+    pub biome_type: Option<BiomeType>,
+    pub discovery_status: Option<DiscoveryStatus>,
+    pub hex_coordinate: Option<HexCoordinate>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+pub struct EraAttachment {
+    pub era_name: String,
+    pub started_at: Option<String>,
+    pub ended_at: Option<String>,
+    pub notes: Option<String>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+pub struct WorldTurnAttachment {
+    pub turn_number: i64,
+    pub phase: Option<String>,
+    pub metadata: Option<Value>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
+pub struct SigilAttachment {
+    pub sigil_ref: String,
+    pub artist: Option<String>,
+    pub source_url: Option<String>,
+    pub provenance: Option<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
 pub enum SimulationDomainId {
     Genesis,
     Climate,
+    Topography,
+    Hydrology,
+    Ecology,
+    Population,
+    Economy,
+    Culture,
+    Conflict,
+    Magic,
+    Resources,
+    Infrastructure,
+    Transportation,
+    Governance,
+    Technology,
+    Demographics,
     Custom(String),
 }
 

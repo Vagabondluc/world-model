@@ -1,0 +1,38 @@
+{
+  "manifest": {
+    "gameName": "The Sundered Isles",
+    "version": "1.0",
+    "exportedBy": "PeeHell (Player 1)",
+    "timestamp": "2023-10-27T10:00:00Z",
+    "elementCount": 26,
+    "gameSettings": {
+      "players": 4,
+      "length": "Standard",
+      "turnDuration": 10
+    }
+  },
+  "players": [
+    { "playerNumber": 1, "name": "PeeHell" },
+    { "playerNumber": 2, "name": "PrOfOuNd_IdIoT" },
+    { "playerNumber": 3, "name": "MOFO" },
+    { "playerNumber": 4, "name": "MyFaCeHuRt" }
+  ],
+  "elements": [
+    { "id": "demo-p1-r1", "type": "Resource", "name": "Heartstone Veins", "owner": 1, "era": 1, "data": { "id": "demo-p1-r1-data", "name": "Heartstone Veins", "type": "mineral", "properties": "Deep veins of a ruby-like mineral that glows with a faint inner warmth.", "symbol": "❤️" } },
+    { "id": "demo-p1-r2", "type": "Resource", "name": "Gloomshroom Caverns", "owner": 1, "era": 1, "data": { "id": "demo-p1-r2-data", "name": "Gloomshroom Caverns", "type": "flora", "properties": "Vast underground caves filled with bioluminescent fungi.", "symbol": "🍄" } },
+    { "id": "demo-p1-d1", "type": "Deity", "name": "Grund, the Stone Father", "owner": 1, "era": 2, "data": { "id": "demo-p1-d1-data", "name": "Grund, the Stone Father", "domain": "Mountains and Smithing", "symbol": "A hammer striking an anvil", "emoji": "🔨", "description": "The chief deity of the dwarves." } },
+    { "id": "demo-p1-l1", "type": "Location", "name": "The Great Anvil", "owner": 1, "era": 2, "data": { "id": "demo-p1-l1-data", "name": "The Great Anvil", "siteType": "lone mountain", "description": "A mountain with a perfectly flat top, said to be the anvil where Grund forged the first dwarves.", "symbol": "⛰️" } },
+    { "id": "demo-p1-f1", "type": "Faction", "name": "Iron-Hand Clan", "owner": 1, "era": 3, "data": { "id": "demo-p1-f1-data", "name": "Iron-Hand Clan", "race": "Dwarves", "symbolName": "Anvil", "emoji": "🛡️", "color": "Charcoal", "theme": "Master artisans and miners.", "description": "The Iron-Hand Clan is known for its unyielding traditionalism.", "leaderName": "Borin Ironhand", "capitalName": "Khaz-Grund", "isNeighbor": false } },
+    { "id": "demo-p1-s1", "type": "Settlement", "name": "Khaz-Grund", "owner": 1, "era": 3, "data": { "id": "demo-p1-s1-data", "name": "Khaz-Grund", "purpose": "Capital", "description": "The capital city carved into the heart of the mountain." } },
+    { "id": "demo-p1-e1", "type": "Event", "name": "The Low Rumble", "owner": 1, "era": 4, "createdYear": 85, "creationStep": "4.1 Exploration", "data": { "id": "demo-p1-e1-data", "name": "The Low Rumble", "description": "A minor earthquake revealed a vast, unexplored cave system rich with glowing crystals." } },
+    { "id": "demo-p2-r1", "type": "Resource", "name": "Whisperwood Trees", "owner": 2, "era": 1, "data": { "id": "demo-p2-r1-data", "name": "Whisperwood Trees", "type": "flora", "properties": "Ancient trees with silver leaves that rustle with faint, melodic whispers.", "symbol": "🌳" } },
+    { "id": "demo-p2-d1", "type": "Deity", "name": "Aethel, the Star-Weaver", "owner": 2, "era": 2, "data": { "id": "demo-p2-d1-data", "name": "Aethel, the Star-Weaver", "domain": "Magic and Stars", "symbol": "A silver crescent moon", "emoji": "🌙", "description": "A deity of magic, prophecy, and the night sky." } },
+    { "id": "demo-p2-f1", "type": "Faction", "name": "Silverwood Sentinels", "owner": 2, "era": 3, "data": { "id": "demo-p2-f1-data", "name": "Silverwood Sentinels", "race": "Elves", "symbolName": "Leaf", "emoji": "🍃", "color": "Silver", "theme": "Guardians of the ancient forests.", "description": "The Silverwood Sentinels are patient and graceful.", "leaderName": "Elara Whisperwind", "capitalName": "Glyn`dar", "isNeighbor": false } },
+    { "id": "demo-p3-r1", "type": "Resource", "name": "Rage-Iron Deposits", "owner": 3, "era": 1, "data": { "id": "demo-p3-r1-data", "name": "Rage-Iron Deposits", "type": "mineral", "properties": "A dark, volatile metal that strengthens when heated by anger or battle-fury.", "symbol": "⚔️" } },
+    { "id": "demo-p3-d1", "type": "Deity", "name": "Kargoth, The Unchained", "owner": 3, "era": 2, "data": { "id": "demo-p3-d1-data", "name": "Kargoth, The Unchained", "domain": "War and Strength", "symbol": "A broken chain", "emoji": "⛓️", "description": "The orcish god of pure, untamed strength." } },
+    { "id": "demo-p3-f1", "type": "Faction", "name": "The Broken Tusk Horde", "owner": 3, "era": 3, "data": { "id": "demo-p3-f1-data", "name": "The Broken Tusk Horde", "race": "Greenskins", "symbolName": "Skull", "emoji": "💀", "color": "Burnt Orange", "theme": "A powerful horde united by strength.", "description": "The Horde values individual power and glory.", "leaderName": "Warlord Grak", "capitalName": "Grak's Stand", "isNeighbor": false } },
+    { "id": "demo-p4-r1", "type": "Resource", "name": "Sunken City of Aztlan", "owner": 4, "era": 1, "data": { "id": "demo-p4-r1-data", "name": "Sunken City of Aztlan", "type": "other", "properties": "The ruins of an ancient city just off the coast, filled with coral-encrusted treasures.", "symbol": "🏛️" } },
+    { "id": "demo-p4-d1", "type": "Deity", "name": "Solara, the Ever-Light", "owner": 4, "era": 2, "data": { "id": "demo-p4-d1-data", "name": "Solara, the Ever-Light", "domain": "Sun and Trade", "symbol": "A golden sun with seven rays", "emoji": "☀️", "description": "Goddess of the sun, commerce, and civilization." } },
+    { "id": "demo-p4-f1", "type": "Faction", "name": "The Republic of Sol", "owner": 4, "era": 3, "data": { "id": "demo-p4-f1-data", "name": "The Republic of Sol", "race": "Humans", "symbolName": "Sun", "emoji": "☀️", "color": "Gold", "theme": "A thriving coastal republic built on trade.", "description": "An ambitious and adaptable human republic.", "leaderName": "First Speaker Aurelius", "capitalName": "Port Solara", "isNeighbor": false } }
+  ]
+}

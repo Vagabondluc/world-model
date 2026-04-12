@@ -1,0 +1,103 @@
+Game Balance Prompt: Druid Subclass Design
+Objective: Develop a new Druid subclass that aligns with the Druid's core theme of natural magic and transformation while ensuring it is distinct and balanced compared to existing subclasses.
+
+Step 1: Analyze Core Class Features
+Druidic Language and Spellcasting: Core to Druid identity, emphasizing a connection with nature and a diverse spell list.
+Wild Shape: Signature ability allowing transformation into beasts, with limitations based on Druid level.
+Druid Circle: Defines the subclass and its thematic focus, providing features at 2nd, 6th, 10th, and 14th levels.
+
+Certainly! Here's an updated table for the Druid class features, including milestones for cantrips, Wild Shape improvements, and spell level advancements. I've omitted the Druid Circle features as requested.
+
+**Key:**
+- SR: Short Rest
+- LR: Long Rest
+- Max. CR: Maximum Challenge Rating
+
+| Feature                  | Level | Description                                                                                                       | Uses/Recharge         |
+|--------------------------|-------|-------------------------------------------------------------------------------------------------------------------|-----------------------|
+| Druidic                  | -     | Secret language for hidden messages. Others detect with DC 15 Wisdom (Perception) check.                          | -                     |
+| Spellcasting             | -     | Cast spells from the Druid list. Spell save DC = 8 + Prof. Bns + WIS; Attack mod = Prof. Bns + WIS.               | -                     |
+| Cantrips                 | 1, 4, 10, 14, 20 | Start with 2 cantrips, gain additional at 4th, 10th, 14th, and 20th levels.                                       | -                     |
+| Preparing and Casting Spells | 1    | Prepares spells = WIS + Druid level; Spells must be of a level for which you have slots.                          | -                     |
+| Spell Slots Level Increase | 3, 5, 7, 9, 11, 13, 15, 17, 19 | Gain access to higher-level spell slots at these levels.                                                          | -                     |
+| Ritual Casting            | 1     | Cast druid spells as a ritual if they have the ritual tag and are prepared.                                       | -                     |
+| Spellcasting Focus        | 1     | Can use a druidic focus for casting Druid spells.                                                                 | -                     |
+| Wild Shape                | 2     | Transform into a beast seen before; 2 uses, Max. CR 1/4 (no flying/swimming). Duration = half Druid level (hours).| 2*SR                  |
+| Wild Shape Improvement    | 4     | Increase Max. CR to 1/2 (no flying speed).                                                                         | -                     |
+| Wild Shape Improvement    | 8     | Increase Max. CR to 1.                                                                                            | -                     |
+| Ability Score Improvement | 4, 8, 12, 16, 19 | Increase ability scores (or take a feat if allowed).                                                              | -                     |
+| Timeless Body             | 18    | Ages slower (1 year for every 10 years).                                                                          | -                     |
+| Beast Spells              | 18    | Cast spells in beast shape, can perform somatic and verbal components.                                            | -                     |
+| Archdruid                 | 20    | Unlimited Wild Shape uses; Ignore verbal, somatic, and non-costly material components in spells.                  | -                     |
+
+This table provides a detailed breakdown of the Druid's core abilities, highlighting the progression of key features like cantrips and Wild Shape across levels, as well as the milestones for accessing higher-level spells.
+
+
+
+Step 2: Review Existing Subclasses for Comparative Analysis
+Circle of Dreams: Focus on healing and feywild connections.
+Circle of Spores: Emphasizes the cycle of life and death, with unique necromantic features.
+Circle of Stars: Draws power from constellations, offering celestial-themed abilities.
+Circle of the Land: Connects to a specific natural terrain, granting additional spells and nature-themed abilities.
+Circle of the Moon: Enhances Wild Shape, allowing more powerful beast forms.
+Circle of the Shepherd: Supports summoning and aiding creatures, enhancing group utility.
+Circle of Wildfire: Balances destruction and renewal, with fire-themed spells and a unique spirit companion.
+
+**Key:**
+- SR: Short Rest
+- LR: Long Rest
+- =WIS: Uses equal to Wisdom modifier
+- =PB: Uses equal to Proficiency Bonus
+- CR: Challenge Rating
+
+| Circle            | Level | Feature             | Detailed Description                                                                                                 | Uses/Recharge    |
+|-------------------|-------|---------------------|----------------------------------------------------------------------------------------------------------------------|------------------|
+| Circle of Dreams  | 2     | Balm of the Summer Court | Heals (Roll d6s equal to half Druid level, total = HP restored). Grants 1 temp HP per die spent.                   | All dice *LR     |
+| Circle of Spores  | 2     | Halo of Spores        | Deals 1d4 necrotic (increases to 1d6/6th lvl, 1d8/10th, 1d10/14th).                                                   | Reaction         |
+|                   |       | Symbiotic Entity      | Gains 4 temp HP/Druid level; doubles Halo of Spores damage; melee attacks deal extra 1d6 necrotic.                  | Uses Wild Shape  |
+| Circle of Stars   | 2     | Starry Form           | Archer: Ranged spell attack, 1d8+Wis radiant damage. Chalice: Casting healing spells restores 1d8+Wis HP. Dragon: Treats roll of 9 or lower on Int/Wis checks and Con saves as 10. | Uses Wild Shape  |
+| Circle of the Blighted| 2     | Defile Ground         | Corrupts land/water (10-ft radius); extra 1d4 necrotic damage on first attack/spell damage.                          | 1*SR             |
+|                   |       | Blighted Shape        | Gains Intimidation; +2 AC and darkvision 60 feet (or +60 feet if already present) in Wild Shape.                      | -                |
+| Circle of the Land| 2     | Natural Recovery      | Regains spell slots equal to or less than half Druid level (rounded up) during a short rest.                         | 1*SR             |
+| Circle of the Moon| 2     | Combat Wild Shape     | Use Wild Shape as a bonus action; expend spell slot for 1d8 HP/level of slot while in Wild Shape.                    | -                |
+| Circle of the Shepherd| 2     | Spirit Totem          | Bear: Grants temp HP = 5 + Druid level, advantage on Strength checks/saves. Hawk: Grants advantage on attack rolls. Unicorn: Advantage on ability checks to detect creatures, spell healing spreads. | 1*SR             |
+| Circle of Wildfire| 2     | Summon Wildfire Spirit| Summons wildfire spirit; AoE 2d6 fire damage on summon. Spirit stats vary, uses PB.                                   | Uses Wild Shape  |
+| Circle of Dreams  | 6     | Hearth of Moonlight and Shadow | Creates 30-ft radius sphere; +5 Dexterity (Stealth) and Wisdom (Perception), hides light from open flames.           | -                |
+| Circle of Spores  | 6     | Fungal Infestation    | Animates Small/Medium corpse as a zombie (1 HP, lasts 1 hour).                                                        | =WIS *LR         |
+| Circle of Stars   | 6     | Cosmic Omen           | Weal (even roll): Add d6 to ally's roll. Woe (odd roll): Subtract d6 from enemy's roll.                                | =PB *LR          |
+| Circle of the Blighted| 6     | Call of the Shadowseeds| Summons blighted sapling (stats vary, uses PB).                                                                     | =PB *LR          |
+| Circle of the Moon| 6     | Primal Strike         | Beast form attacks count as magical for resistance/immunity purposes.                                                 | -                |
+| Circle of the Shepherd| 6     | Mighty Summoner       | Summoned beasts/fey have extra 2 HP/Hit Die, natural weapon damage counts as magical.                                 | -                |
+| Circle of Wildfire| 6     | Enhanced Bond         | Adds d8 to fire damage/healing spells; spells can originate from spirit.                                              | -                |
+| Circle of Dreams  | 10    | Hidden Paths          | Teleports self 60 feet or another creature 30 feet to unoccupied space.                                               | =WIS *LR         |
+| Circle of Spores  | 10    | Spreading Spores      | Creates 10-ft cube of spores (damage as Halo of Spores).                                                             | Bonus Action     |
+| Circle of Stars   | 10    | Twinkling Constellations| Archer/Chalice damage/healing increased to 2d8; Dragon grants 20 feet flying speed, hover.                          | -                |
+| Circle of the Blighted| 10    | Foul Conjuration      | Summons have necrotic and poison immunity, poisoned condition immunity; explode on death (damage varies by CR).      | -                |
+| Circle of the Moon| 10    | Elemental Wild Shape  | Transform into CR 5 elementals using two Wild Shape uses.                                                             | 2 Wild Shape uses|
+| Circle of the Shepherd| 10    | Guardian Spirit       | Summoned creatures regain HP = half Druid level in Spirit Totem aura.                                                 | -                |
+| Circle of Wildfire| 10    | Cauterizing Flames    | Creates spectral flame on death; heal or deal 2d10 + Wis modifier.                                                    | =PB *LR          |
+| Circle of Dreams  | 14    | Walker in Dreams      | Casts dream, scrying, or teleportation circle without spell slots or material components.                             | 1*LR             |
+| Circle of Spores  | 14    | Fungal Body           | Immunity to blindness, deafness, frightened, poisoned; critical hits count as normal hits.                            | -                |
+| Circle of Stars   | 14    | Full of Stars         | Starry Form grants resistance to bludgeoning, piercing, and slashing damage.                                          | -                |
+| Circle of the Blighted| 14    | Incarnation of Corruption| Gains resistance to necrotic damage; +2 AC; gains temp HP = PB in Defile Ground.         | -                |
+| Circle of the Moon| 14    | Thousand Forms        | Cast alter self at will.                                                                                              | -                |
+| Circle of the Shepherd| 14    | Faithful Summons      | Summons four CR 2 or lower beasts when incapacitated (1 hour, no concentration required).                             | 1*LR             |
+| Circle of Wildfire| 14    | Blazing Revival       | Revives self, regaining half HP using wildfire spirit.                                                                | 1*LR             |
+
+
+Step 3: Brainstorm New Features
+Level 2 Feature: A unique ability that defines the subclass's theme. It should offer a different approach to nature, distinct from existing circles. It has an impact in combat. There is one defining feature and a few minor ones to complete the level.
+Level 6 Feature: An enhancement or expansion of the level 2 ability or a new ability that complements the subclass theme.
+Level 10 Feature: A powerful ability that solidifies the subclass's role in a party, ensuring it remains balanced with other classes and subclasses.
+Level 14 Feature: A capstone ability that embodies the full realization of the subclass theme.
+Each level might have more than one feature, but only one is defining.
+
+Step 4: Balancing Considerations
+When creating new features that enhance existing ones, make sure they are consistent with each other.
+Ensure Balance with Existing Abilities: New features should neither overshadow nor duplicate the core abilities of the Druid class or existing subclasses.
+Maintain Thematic Consistency: The features should align with the overarching theme of the subclass, ensuring a cohesive play experience.
+Consider Game Mechanics: The subclass should offer unique mechanical benefits, avoiding overpowered combinations or underwhelming abilities.
+Step 5: Creative Space for Innovation
+Introduce Novel Concepts: Explore uncharted aspects of nature or magic within the Druid class's scope.
+Foster Synergy: Design features that synergize with the Druid's core abilities and spellcasting.
+With these steps, we can craft a Druid subclass that is balanced, distinct, and thematic, enriching the diversity of options available to Druid players.

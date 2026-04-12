@@ -1,0 +1,525 @@
+# Import & Export Modal - ASCII Wireframe v1
+
+## Import Modal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Import NPCs                                                                                                                   │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ File Selection                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Choose file: [Browse...] [Drop files here or click to browse]                                                              │ │
+│ │                                                                                                                             │ │
+│ │ Or paste content directly:                                                                                                  │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ Name, Class, Race, HP, AC, STR, DEX, CON, INT, WIS, CHA, Description                                                   │ │ │
+│ │ │ Gorin Ironforge, Fighter 5, Dwarf, 45, 15, 16, 12, 14, 10, 13, 8, A dwarven blacksmith with a mysterious past...       │ │ │
+│ │ │ Thorin Stonehand, Cleric 4, Dwarf, 38, 18, 12, 8, 16, 10, 13, 14, A devout cleric of the dwarven gods...                │ │ │
+│ │ │ Elara Moonwhisper, Rogue 3, Elf, 28, 15, 10, 16, 12, 14, 12, 16, A nimble elf from the Silverwood forest...           │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ │                                                                                                                             │ │
+│ │ Format: [Auto-detect ▼] [QuickNPC ▼] [CSV ▼] [JSON ▼]                                                                     │ │
+│ │                                                                                                                             │ │
+│ │ [Parse Content] [Clear] [Cancel]                                                                                           │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Field Mapping                                                                                                              │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Source Field         → Target Field      Status                                                                       │ │
+│ │ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Name                 → Name             ✓ Matched                                                                     │ │
+│ │ Class                → Class            ✓ Matched                                                                     │ │
+│ │ Race                 → Race             ✓ Matched                                                                     │ │
+│ │ HP                   → HP               ✓ Matched                                                                     │ │
+│ │ AC                   → AC               ✓ Matched                                                                     │ │
+│ │ STR                  → STR              ✓ Matched                                                                     │ │
+│ │ DEX                  → DEX              ✓ Matched                                                                     │ │
+│ │ CON                  → CON              ✓ Matched                                                                     │ │
+│ │ INT                  → INT              ✓ Matched                                                                     │ │
+│ │ WIS                  → WIS              ✓ Matched                                                                     │ │
+│ │ CHA                  → CHA              ✓ Matched                                                                     │ │
+│ │ Description          → Description      ✓ Matched                                                                     │ │
+│ │ ───────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Custom Field         → (New Field)      ⚠ Will create new field                                                        │ │
+│ │                                                                                                                             │ │
+│ │ [Auto-map All] [Reset Mapping] [Add Field Mapping] [Remove Mapping]                                                       │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Validation Results                                                                                                         │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ ✓ 3 NPCs ready to import                                                                                                  │ │ │
+│ │ │ ⚠ 0 NPCs with missing required fields                                                                                     │ │ │
+│ │ │ ✗ 0 NPCs with invalid stat values                                                                                        │ │ │
+│ │ │ ℹ 0 NPCs with custom fields that will be added to the schema                                                             │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ │ Details:                                                                                                                  │ │ │
+│ │ │ • All required fields (Name, Class, Race) are present                                                                    │ │ │
+│ │ │ • All stat values are within valid ranges (1-20)                                                                         │ │ │
+│ │ │ • No duplicate names detected                                                                                             │ │ │
+│ │ │ • All descriptions are within length limits                                                                               │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ │                                                                                                                             │ │
+│ │ [Fix Issues] [Ignore Warnings] [View Detailed Report]                                                                       │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Import Preview                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ Gorin Ironforge                                                                                                          │ │ │
+│ │ │ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │ │
+│ │ │ Class: Fighter 5 • Race: Dwarf • HP: 45/45 • AC: 15                                                                      │ │ │
+│ │ │ STR: 16 (+3) • DEX: 12 (+1) • CON: 14 (+2) • INT: 10 (+0) • WIS: 13 (+1) • CHA: 8 (-1)                                 │ │ │
+│ │ │ Description: A dwarven blacksmith with a mysterious past...                                                               │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ │ Thorin Stonehand                                                                                                         │ │ │
+│ │ │ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │ │
+│ │ │ Class: Cleric 4 • Race: Dwarf • HP: 38/38 • AC: 18                                                                      │ │ │
+│ │ │ STR: 12 (+1) • DEX: 8 (-1) • CON: 16 (+3) • INT: 10 (+0) • WIS: 13 (+1) • CHA: 14 (+2)                                   │ │ │
+│ │ │ Description: A devout cleric of the dwarven gods...                                                                      │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ │ Elara Moonwhisper                                                                                                        │ │ │
+│ │ │ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │ │
+│ │ │ Class: Rogue 3 • Race: Elf • HP: 28/28 • AC: 15                                                                          │ │ │
+│ │ │ STR: 10 (+0) • DEX: 16 (+3) • CON: 12 (+1) • INT: 14 (+2) • WIS: 12 (+1) • CHA: 16 (+3)                                   │ │ │
+│ │ │ Description: A nimble elf from the Silverwood forest...                                                                    │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Back] [Confirm Import] [Cancel]                                                                                             │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Export Modal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Export NPCs                                                                                                                   │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ NPC Selection                                                                                                              │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Select: [All NPCs ▼] [Selected NPCs (3) ▼] [By Campaign ▼] [By Location ▼] [Custom Selection]                              │ │
+│ │                                                                                                                             │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ ☑ Gorin Ironforge      • Fighter 5 • Dwarf • Mountain Forge • The Golden Hammer                                         │ │ │
+│ │ │ ☑ Thorin Stonehand     • Cleric 4 • Dwarf • Mountain Forge • The Golden Hammer                                            │ │ │
+│ │ │ ☑ Elara Moonwhisper    • Rogue 3 • Elf • Silverwood • Shadow Conspiracy                                                  │ │ │
+│ │ │ ☐ Borin Stonefist      • Barbarian 4 • Dwarf • Iron Mountains • The Golden Hammer                                        │ │ │
+│ │ │ ☐ Shadow Assassin      • Rogue 5 • Human • Unknown • Shadow Conspiracy                                                  │ │ │
+│ │ │ ☐ Lady Silverwood      • Wizard 6 • Elf • Silverwood • Shadow Conspiracy                                                │ │ │
+│ │ │ ☐ Captain Blackbeard   • Fighter 4 • Human • Port Royal • Pirate's Treasure                                             │ │ │
+│ │ │ ☐ Zara the Mystic      • Sorcerer 3 • Human • Mystic Tower • Arcane Mysteries                                            │ │ │
+│ │ │ ☐ Grak the Destroyer   • Barbarian 5 • Orc • Dark Lands • Orc Invasion                                                   │ │ │
+│ │ │ ☐ Faelin Swiftbow      • Ranger 4 • Elf • Silverwood • Shadow Conspiracy                                                │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ │                                                                                                                             │ │
+│ │ [Select All] [Deselect All] [Filter] [Search: ___________]                                                                  │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Export Options                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Format: [Markdown ▼] [HTML ▼] [Foundry VTT ▼] [PDF ▼] [JSON ▼] [CSV ▼]                                                   │ │
+│ │                                                                                                                             │ │
+│ │ Template: [Standard ▼] [Homebrewery ▼] [Statblock Only ▼] [Compact ▼] [Custom ▼]                                           │ │
+│ │                                                                                                                             │ │
+│ │ Options:                                                                                                                   │ │
+│ │ ☑ Include statblocks                                                                                                        │ │
+│ │ ☑ Include relationships                                                                                                     │ │
+│ │ ☑ Include images                                                                                                           │ │
+│ │ ☐ Include private notes                                                                                                     │ │
+│ │ ☑ Include metadata (creation date, last modified)                                                                           │ │
+│ │ ☐ Include campaign history                                                                                                  │ │
+│ │ ☑ Include combat logs                                                                                                       │ │
+│ │                                                                                                                             │ │
+│ │ File naming: [NPC_Name_Level_Class ▼] [Custom Format ▼]                                                                    │ │
+│ │ Organization: [Single File ▼] [Separate Files ▼] [By Campaign ▼] [By Location ▼]                                             │ │
+│ │                                                                                                                             │ │
+│ │ [Advanced Options]                                                                                                          │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Validation Results                                                                                                         │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ ✓ 3 NPCs selected for export                                                                                             │ │ │
+│ │ │ ✓ All selected NPCs have complete data                                                                                   │ │ │
+│ │ │ ✓ All images are available and will be included                                                                           │ │ │
+│ │ │ ✓ All relationships are valid and will be included                                                                        │ │ │
+│ │ │ ⚠ 1 NPC (Elara Moonwhisper) has no combat history                                                                        │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ │ Export size estimate: ~125 KB                                                                                             │ │ │
+│ │ │ Estimated pages: 3 (PDF)                                                                                                  │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ │                                                                                                                             │ │
+│ │ [Fix Issues] [Ignore Warnings] [View Detailed Report]                                                                       │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Export Preview                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│ │ │ # Gorin Ironforge                                                                                                        │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ │ **Class:** Fighter 5 **Race:** Dwarf **Alignment:** Neutral Good                                                         │ │ │
+│ │ │ **Location:** Mountain Forge Village **Campaign:** The Golden Hammer                                                     │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ | STR | DEX | CON | INT | WIS | CHA |                                                                                       │ │ │
+│ │ │ |-----|-----|-----|-----|-----|-----|                                                                                       │ │ │
+│ │ │ | 16 (+3) | 12 (+1) | 14 (+2) | 10 (+0) | 13 (+1) | 8 (-1) |                                                            │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ | AC | HP | Speed |                                                                                                           │ │ │
+│ │ |----|----|---------|                                                                                                         │ │ │
+│ │ | 15 | 45 | 25 ft. |                                                                                                          │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Description                                                                                                             │ │ │
+│ │ │ A dwarven blacksmith with a mysterious past and a golden hammer. Gorin is known throughout the Mountain Forge Village    │ │ │
+│ │ │ for his exceptional craftsmanship and his willingness to help those in need.                                             │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Relationships                                                                                                            │ │ │
+│ │ │ - **Thorin Stonehand** (Ally): Fellow dwarf and cleric who often provides spiritual guidance                               │ │ │
+│ │ │ - **Shadow Syndicate** (Enemy): Criminal organization that has been targeting Gorin's forge                               │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Combat History                                                                                                           │ │ │
+│ │ | Date | Location | Opponents | Outcome |                                                                                   │ │ │
+│ │ |------|----------|-----------|---------|                                                                                   │ │ │
+│ │ | 2023-10-15 | Mountain Forge | Shadow Assassins (3) | Victory |                                                            │ │ │
+│ │ | 2023-11-02 | Iron Mountains | Orc Raiders (5) | Victory |                                                              │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ---                                                                                                                         │ │ │
+│ │                                                                                                                           │ │ │
+│ │ # Thorin Stonehand                                                                                                         │ │ │
+│ │                                                                                                                           │ │ │
+│ │ **Class:** Cleric 4 **Race:** Dwarf **Alignment:** Lawful Good                                                             │ │ │
+│ │ **Location:** Mountain Forge Village **Campaign:** The Golden Hammer                                                       │ │ │
+│ │                                                                                                                           │ │ │
+│ │ | STR | DEX | CON | INT | WIS | CHA |                                                                                       │ │ │
+│ │ |-----|-----|-----|-----|-----|-----|                                                                                       │ │ │
+│ │ | 12 (+1) | 8 (-1) | 16 (+3) | 10 (+0) | 13 (+1) | 14 (+2) |                                                              │ │ │
+│ │                                                                                                                           │ │ │
+│ │ | AC | HP | Speed |                                                                                                           │ │ │
+│ │ |----|----|---------|                                                                                                         │ │ │
+│ │ | 18 | 38 | 25 ft. |                                                                                                          │ │ │
+│ │                                                                                                                           │ │ │
+│ │ ## Description                                                                                                             │ │ │
+│ │ │ A devout cleric of the dwarven gods who serves the Mountain Forge community. Thorin is known for his wisdom and his     │ │ │
+│ │ │ powerful healing abilities.                                                                                              │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Relationships                                                                                                            │ │ │
+│ │ │ - **Gorin Ironforge** (Ally): Close friend and frequent adventuring companion                                             │ │ │
+│ │ │ - **Shadow Syndicate** (Enemy): Criminal organization that threatens the Mountain Forge                                 │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Combat History                                                                                                           │ │ │
+│ │ | Date | Location | Opponents | Outcome |                                                                                   │ │ │
+│ │ |------|----------|-----------|---------|                                                                                   │ │ │
+│ │ | 2023-10-15 | Mountain Forge | Shadow Assassins (3) | Victory |                                                            │ │ │
+│ │ | 2023-11-02 | Iron Mountains | Orc Raiders (5) | Victory |                                                              │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ---                                                                                                                         │ │ │
+│ │                                                                                                                           │ │ │
+│ │ # Elara Moonwhisper                                                                                                        │ │ │
+│ │                                                                                                                           │ │ │
+│ │ **Class:** Rogue 3 **Race:** Elf **Alignment:** Chaotic Good                                                               │ │ │
+│ │ **Location:** Silverwood Forest **Campaign:** Shadow Conspiracy                                                            │ │ │
+│ │                                                                                                                           │ │ │
+│ │ | STR | DEX | CON | INT | WIS | CHA |                                                                                       │ │ │
+│ │ |-----|-----|-----|-----|-----|-----|                                                                                       │ │ │
+│ │ | 10 (+0) | 16 (+3) | 12 (+1) | 14 (+2) | 12 (+1) | 16 (+3) |                                                             │ │ │
+│ │                                                                                                                           │ │ │
+│ │ | AC | HP | Speed |                                                                                                           │ │ │
+│ │ |----|----|---------|                                                                                                         │ │ │
+│ │ | 15 | 28 | 35 ft. |                                                                                                          │ │ │
+│ │                                                                                                                           │ │ │
+│ │ ## Description                                                                                                             │ │ │
+│ │ │ A nimble elf from the Silverwood forest who specializes in infiltration and information gathering. Elara has a network    │ │ │
+│ │ │ of contacts throughout the region and is often sought after for her expertise.                                           │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Relationships                                                                                                            │ │ │
+│ │ │ - **Lady Silverwood** (Ally): Elven wizard who acts as a mentor                                                          │ │ │
+│ │ │ - **Shadow Syndicate** (Enemy): Criminal organization that Elara has been investigating                                 │ │ │
+│ │ │                                                                                                                           │ │ │
+│ │ ## Combat History                                                                                                           │ │ │
+│ │ | Date | Location | Opponents | Outcome |                                                                                   │ │ │
+│ │ |------|----------|-----------|---------|                                                                                   │ │ │
+│ │ | No combat history recorded                                                                                               │ │ │
+│ │ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Back] [Export] [Schedule Export] [Cancel]                                                                                     │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Advanced Import Options
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Advanced Import Options                                                                                                       │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Duplicate Handling                                                                                                         │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ When duplicate NPCs are found: [Skip ▼] [Update Existing ▼] [Create New with Suffix ▼] [Ask Me ▼]                         │ │
+│ │ Match criteria: [Name Only ▼] [Name + Race ▼] [Name + Class ▼] [Name + Race + Class ▼] [Custom ▼]                          │ │
+│ │                                                                                                                             │ │
+│ │ Data Validation                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ☑ Validate required fields (Name, Class, Race)                                                                             │ │
+│ │ ☑ Validate stat ranges (1-20 for abilities)                                                                                │ │
+│ │ ☑ Validate HP and AC values                                                                                                │ │
+│ │ ☐ Validate against existing campaign lore                                                                                   │ │
+│ │ ☐ Check for naming conflicts with existing NPCs                                                                              │ │
+│ │                                                                                                                             │ │
+│ │ Auto-correction                                                                                                              │ │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ☐ Auto-capitalize names                                                                                                      │ │
+│ │ ☐ Auto-format stat blocks                                                                                                    │ │
+│ │ ☐ Auto-generate missing ability modifiers                                                                                    │ │
+│ │ ☐ Auto-calculate HP based on class and level                                                                                │ │
+│ │ ☐ Auto-calculate AC based on equipment                                                                                       │ │
+│ │                                                                                                                             │ │
+│ │ Campaign Assignment                                                                                                          │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Default campaign: [None ▼] [The Golden Hammer ▼] [Shadow Conspiracy ▼] [Pirate's Treasure ▼] [Arcane Mysteries ▼]           │ │
+│ │ ☑ Ask before assigning to campaigns                                                                                         │ │
+│ │ ☐ Create new campaigns if not found                                                                                          │ │
+│ │                                                                                                                             │ │
+│ │ Location Assignment                                                                                                         │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Default location: [None ▼] [Mountain Forge Village ▼] [Silverwood Forest ▼] [Port Royal ▼] [Mystic Tower ▼]                │ │
+│ │ ☑ Ask before assigning to locations                                                                                         │ │
+│ │ ☐ Create new locations if not found                                                                                         │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Save as Default] [Reset to Default] [Apply] [Cancel]                                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Advanced Export Options
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Advanced Export Options                                                                                                       │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Content Filtering                                                                                                           │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Include NPCs from campaigns: [All ▼] [Active ▼] [Completed ▼] [Custom Selection ▼]                                        │ │
+│ │ Date range: [All Time ▼] [Last 30 Days ▼] [Last 90 Days ▼] [Custom Range ▼]                                                │ │
+│ │ NPC level range: [All Levels ▼] [1-5 ▼] [6-10 ▼] [11-15 ▼] [16-20 ▼] [Custom Range ▼]                                      │ │
+│ │                                                                                                                             │ │
+│ │ Formatting Options                                                                                                          │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ☑ Include table of contents                                                                                                 │ │
+│ │ ☑ Include page numbers                                                                                                      │ │
+│ │ ☑ Include headers and footers                                                                                               │ │
+│ │ ☐ Include watermarks                                                                                                         │ │
+│ │ ☑ Include export metadata (date, version, format)                                                                          │ │
+│ │                                                                                                                             │ │
+│ │ Image Options                                                                                                               │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Image format: [Original ▼] [PNG ▼] [JPG ▼] [WebP ▼]                                                                        │ │
+│ │ Image size: [Original ▼] [Small (400px) ▼] [Medium (800px) ▼] [Large (1200px) ▼] [Custom ▼]                                 │ │
+│ │ ☑ Optimize images for file size                                                                                              │ │
+│ │ ☐ Include image captions                                                                                                     │ │
+│ │                                                                                                                             │ │
+│ │ Data Options                                                                                                                 │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ☑ Include combat history                                                                                                     │ │
+│ │ ☑ Include relationship graph                                                                                                 │ │
+│ │ ☑ Include campaign history                                                                                                   │ │
+│ │ ☐ Include GM notes (private)                                                                                                 │ │
+│ │ ☐ Include player notes                                                                                                       │ │
+│ │ ☑ Include character development                                                                                              │ │
+│ │                                                                                                                             │ │
+│ │ Foundry VTT Specific Options                                                                                                 │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ☑ Include actor configuration                                                                                                │ │
+│ │ ☑ Include token images                                                                                                       │ │
+│ │ ☑ Include compendium entries                                                                                                │ │
+│ │ ☐ Include scene data                                                                                                         │ │
+│ │ ☐ Include journal entries                                                                                                    │ │
+│ │                                                                                                                             │ │
+│ │ Scheduled Exports                                                                                                            │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ☐ Enable scheduled exports                                                                                                   │ │
+│ │ Frequency: [Daily ▼] [Weekly ▼] [Monthly ▼] [Custom ▼]                                                                      │ │
+│ │ Time: [12:00 PM ▼]                                                                                                          │ │
+│ │ Destination: [Local Download ▼] [Email ▼] [Cloud Storage ▼] [Webhook ▼]                                                      │ │
+│ │                                                                                                                             │ │
+│ │ Custom Templates                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ [Create New Template] [Edit Template] [Import Template] [Export Template]                                                    │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Save as Default] [Reset to Default] [Apply] [Cancel]                                                                          │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Import Progress Indicator
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Importing NPCs...                                                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Overall Progress: ████████████████████████████████████████ 100%                                                             │ │
+│ │                                                                                                                             │ │
+│ │ Current Task: Finalizing import...                                                                                          │ │
+│ │                                                                                                                             │ │
+│ │ Details:                                                                                                                    │ │
+│ │ ✓ Parsed 3 NPCs from file                                                                                                   │ │
+│ │ ✓ Mapped all fields successfully                                                                                            │ │
+│ │ ✓ Validated all data                                                                                                        │ │
+│ │ ✓ Created 3 new NPCs                                                                                                        │ │
+│ │ ✓ Generated stat blocks                                                                                                     │ │
+│ │ ✓ Added relationships                                                                                                       │ │
+│ │ ✓ Assigned to campaigns                                                                                                     │ │
+│ │ ✓ Assigned to locations                                                                                                     │ │
+│ │ • Finalizing import...                                                                                                      │ │
+│ │                                                                                                                             │ │
+│ │ Results:                                                                                                                    │ │
+│ │ • 3 NPCs imported successfully                                                                                              │ │
+│ │ • 0 NPCs skipped                                                                                                             │ │
+│ │ • 0 errors encountered                                                                                                      │ │
+│ │                                                                                                                             │ │
+│ │ [View Imported NPCs] [View Detailed Report] [Close]                                                                          │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Export Progress Indicator
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Exporting NPCs...                                                                                                             │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Overall Progress: ████████████████████████████████████████ 100%                                                             │ │
+│ │                                                                                                                             │ │
+│ │ Current Task: Finalizing export...                                                                                          │ │
+│ │                                                                                                                             │ │
+│ │ Details:                                                                                                                    │ │
+│ │ ✓ Selected 3 NPCs for export                                                                                               │ │
+│ │ ✓ Applied formatting options                                                                                                │ │
+│ │ ✓ Generated table of contents                                                                                               │ │
+│ │ ✓ Processed images                                                                                                           │ │
+│ │ ✓ Created stat blocks                                                                                                       │ │
+│ │ ✓ Included relationships                                                                                                     │ │
+│ │ ✓ Included combat history                                                                                                    │ │
+│ │ ✓ Formatted document                                                                                                        │ │
+│ │ • Finalizing export...                                                                                                      │ │
+│ │                                                                                                                             │ │
+│ │ Results:                                                                                                                    │ │
+│ │ • Export completed successfully                                                                                              │ │
+│ │ • File size: 125 KB                                                                                                          │ │
+│ │ • Pages: 3                                                                                                                  │ │
+│ │ • Images: 3                                                                                                                 │ │
+│ │                                                                                                                             │ │
+│ │ [Download File] [View File] [Share File] [Close]                                                                             │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Error Handling Modal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Import Error                                                                                                                  │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ The import could not be completed due to the following errors:                                                             │ │
+│ │                                                                                                                             │ │
+│ │ ✗ Invalid file format: The selected file is not a valid QuickNPC, CSV, or JSON file                                        │ │
+│ │ ✗ Missing required fields: 2 NPCs are missing the 'Name' field                                                            │ │
+│ │ ✗ Invalid stat values: 1 NPC has STR value of 25 (maximum is 20)                                                           │ │
+│ │ ✗ Duplicate names: 2 NPCs have the same name 'Gorin Ironforge'                                                             │ │
+│ │                                                                                                                             │ │
+│ │ Suggestions:                                                                                                                │ │
+│ │ • Check that the file format is correct                                                                                     │ │
+│ │ • Ensure all NPCs have a name                                                                                               │ │
+│ │ • Verify that all stat values are between 1 and 20                                                                          │ │
+│ │ • Rename duplicate NPCs or enable duplicate handling                                                                       │ │
+│ │                                                                                                                             │ │
+│ │ Options:                                                                                                                    │ │
+│ │ • [Fix Issues Manually] - Edit the file and try again                                                                       │ │
+│ │ • [Continue with Valid NPCs] - Skip invalid NPCs and import the rest                                                       │ │
+│ │ • [Apply Auto-corrections] - Attempt to fix issues automatically                                                            │ │
+│ │ • [Cancel] - Cancel the import                                                                                              │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Fix Issues Manually] [Continue with Valid NPCs] [Apply Auto-corrections] [Cancel]                                            │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+## Mobile Responsive View
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Import NPCs (Mobile)                                                                                                          │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ File Selection                                                                                                             │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ [Choose File] [Drop files here]                                                                                            │ │
+│ │                                                                                                                             │ │
+│ │ Format: [Auto-detect ▼]                                                                                                     │ │
+│ │                                                                                                                             │ │
+│ │ [Parse Content] [Cancel]                                                                                                    │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Field Mapping                                                                                                              │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Name → Name ✓                                                                                                              │ │
+│ │ Class → Class ✓                                                                                                            │ │
+│ │ Race → Race ✓                                                                                                              │ │
+│ │ HP → HP ✓                                                                                                                  │ │
+│ │ AC → AC ✓                                                                                                                  │ │
+│ │ STR → STR ✓                                                                                                                │ │
+│ │ DEX → DEX ✓                                                                                                                │ │
+│ │ CON → CON ✓                                                                                                                │ │
+│ │ INT → INT ✓                                                                                                                │ │
+│ │ WIS → WIS ✓                                                                                                                │ │
+│ │ CHA → CHA ✓                                                                                                                │ │
+│ │ Description → Description ✓                                                                                                │ │
+│ │                                                                                                                             │ │
+│ │ [Auto-map All] [Reset Mapping]                                                                                              │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Validation Results                                                                                                         │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ ✓ 3 NPCs ready to import                                                                                                    │ │
+│ │ ⚠ 0 NPCs with missing required fields                                                                                       │ │
+│ │ ✗ 0 NPCs with invalid stat values                                                                                           │ │
+│ │                                                                                                                             │ │
+│ │ [View Details]                                                                                                             │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+│                                                                                                                             │
+│ ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Gorin Ironforge                                                                                                            │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Class: Fighter 5 • Race: Dwarf • HP: 45/45 • AC: 15                                                                        │ │
+│ │ STR: 16 (+3) • DEX: 12 (+1) • CON: 14 (+2) • INT: 10 (+0) • WIS: 13 (+1) • CHA: 8 (-1)                                     │ │
+│ │ Description: A dwarven blacksmith with a mysterious past...                                                                 │ │
+│ │                                                                                                                             │ │
+│ │ Thorin Stonehand                                                                                                           │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Class: Cleric 4 • Race: Dwarf • HP: 38/38 • AC: 18                                                                          │ │
+│ │ STR: 12 (+1) • DEX: 8 (-1) • CON: 16 (+3) • INT: 10 (+0) • WIS: 13 (+1) • CHA: 14 (+2)                                     │ │
+│ │ Description: A devout cleric of the dwarven gods...                                                                         │ │
+│ │                                                                                                                             │ │
+│ │ Elara Moonwhisper                                                                                                          │ │
+│ │ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │ │
+│ │ Class: Rogue 3 • Race: Elf • HP: 28/28 • AC: 15                                                                             │ │
+│ │ STR: 10 (+0) • DEX: 16 (+3) • CON: 12 (+1) • INT: 14 (+2) • WIS: 12 (+1) • CHA: 16 (+3)                                     │ │
+│ │ Description: A nimble elf from the Silverwood forest...                                                                      │ │
+│ └─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Back] [Confirm Import] [Cancel]                                                                                              │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

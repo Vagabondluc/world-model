@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Imperium - Dynamic Event Form Mockup</title>
+    <style>
+        /* --- 
+        GENERAL STYLES & COLOR PALETTE 
+        Based on user feedback for a warm, amber/brown "old map" theme.
+        Mocks: src/index.css and general theme from docs/current/style_guide.md
+        --- */
+        :root {
+            --bg-primary: #f4f1e8;
+            --bg-secondary: #fefcf7;
+            --bg-accent: #f0ead6;
+            --header-bg: #5a2d0c;
+            --header-text: #f4f1e8;
+            --text-primary: #3d2914;
+            --text-secondary: #8b6914;
+            --color-primary: #8b4513;
+            --color-secondary: #cd853f;
+            --color-accent: #daa520;
+            --border-color: #d2b48c;
+            --shadow: rgba(139, 69, 19, 0.15);
+            --completed-color: #28a745;
+            --locked-color: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hidden { display: none !important; }
+
+        /* --- 
+        HEADER & NAVIGATION
+        Mocks: src/components/navigation/NavigationHeader.tsx and EraSelector.tsx
+        --- */
+        .app-header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-title { font-size: 1.8em; font-weight: bold; }
+
+        .header-right { display: flex; align-items: center; gap: 1.5rem; }
+        .user-profile { display: flex; align-items: center; gap: 1rem; }
+        .prestige { background: var(--color-accent); color: var(--text-primary); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
+        .btn { padding: 0.6rem 1.2rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: all 0.2s ease-in-out; }
+        .btn-export { background-color: var(--color-secondary); color: white; }
+        .btn-export:hover { background-color: var(--color-accent); }
+        .progress-indicators { display: flex; gap: 0.5rem; }
+        .indicator-circle { width: 10px; height: 10px; background-color: #f4f1e8; border-radius: 50%; opacity: 0.5; }
+        .indicator-circle.active { opacity: 1; }
+        
+        .era-tabs {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(244, 241, 232, 0.2);
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .era-tab { color: var(--header-text); opacity: 0.7; font-weight: bold; background: none; border: none; padding: 0.5rem 0; position: relative; cursor: pointer; }
+        .era-tab.active, .era-tab:hover { opacity: 1; }
+        .era-tab.active::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 3px; background-color: var(--color-accent); border-radius: 2px; }
+
+        /* --- 
+        MAIN LAYOUT
+        Mocks overall structure from AppLayout.tsx
+        --- */
+        .main-layout {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+        }
+
+        /* --- 
+        VERTICAL STEP PROGRESS BAR
+        Mocks: src/components/era-interfaces/era-foundation/StepProgressBar.tsx
+        --- */
+        .vertical-nav { width: 150px; }
+        .step-progress-vertical { list-style: none; position: relative; padding: 1rem 0; }
+        .step-progress-vertical::before { content: ''; position: absolute; top: 25px; bottom: 25px; left: 24px; width: 2px; background-color: var(--border-color); }
+        
+        .step { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; position: relative; }
+        .step-number { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5em; border: 3px solid var(--border-color); background-color: var(--bg-primary); z-index: 1; transition: all 0.3s ease; }
+        .step-title { font-weight: bold; }
+        
+        .step.completed .step-number { background-color: var(--completed-color); color: white; border-color: var(--completed-color); }
+        .step.completed .step-title { color: var(--completed-color); }
+        
+        .step.current .step-number { background-color: var(--color-accent); color: var(--text-primary); border-color: var(--color-accent); transform: scale(1.1); }
+        .step.current .step-title { color: var(--color-primary); }
+
+        .step.locked { opacity: 0.6; }
+        .step.locked .step-number { background-color: var(--locked-color); color: white; border-color: #aaa; }
+
+        /* --- 
+        CONTENT & SIDEBAR SPLIT
+        --- */
+        .content-sidebar-split { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+        .main-content { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 15px; padding: 2rem; box-shadow: 0 5px 25px var(--shadow); }
+        
+        .content-header { text-align: center; margin-bottom: 2rem; }
+        .content-header h2 { font-size: 2em; color: var(--color-primary); }
+        .content-header p { color: var(--text-secondary); }
+
+        .form-section { margin-bottom: 2.5rem; }
+        .form-section h3 { font-size: 1.5em; color: var(--color-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        
+        .dice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .dice-roller { background-color: var(--bg-accent); padding: 1rem; border-radius: 8px; }
+        .dice-roller-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .dice-display { display: flex; align-items: center; gap: 0.5rem; }
+        .die { width: 30px; height: 30px; background-color: white; border: 1px solid var(--border-color); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; transition: transform 0.2s ease; }
+        .die.rolling { transform: scale(1.2) rotate(180deg); }
+        .btn-roll { background-color: var(--color-secondary); color: white; padding: 0.5rem 1rem; font-size: 0.9em; }
+        .result-box { margin-top: 1rem; background-color: white; padding: 0.75rem 1rem; border-radius: 6px; border: 2px solid var(--color-primary); animation: fadeIn 0.3s ease; font-size: 1.1em;}
+        .result-box strong { color: var(--color-primary); }
+        
+        .override-group { margin-top: 0.75rem; }
+        .override-group label { font-size: 0.9em; font-weight: bold; margin-right: 0.5rem; }
+        .override-group select { padding: 0.25rem; border-radius: 4px; border: 1px solid var(--border-color); }
+        
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 0.5rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; background-color: #fff; font-family: 'Georgia', serif; font-size: 1rem; }
+        .form-group input:focus, .form-group textarea:focus { outline: 2px solid var(--color-accent); }
+        .form-group input:required:invalid { border-color: red; }
+        
+        .form-actions { display: flex; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+        .btn-submit { background-color: var(--color-primary); color: white; flex-grow: 1; font-size: 1.1em; padding: 0.8rem; }
+        .btn-clear { background-color: var(--locked-color); color: white; }
+
+        /* --- 
+        SIDEBAR 
+        Mocks: Display area for FactionCard.tsx, SettlementCard.tsx etc.
+        --- */
+        .sidebar { position: sticky; top: 2rem; height: calc(100vh - 4rem); }
+        .sidebar-content { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 15px; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; }
+        .sidebar h2 { font-size: 1.5em; margin-top: 0; color: var(--color-primary); }
+        .creations-list { flex-grow: 1; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border-color) var(--bg-accent); }
+        .creations-list::-webkit-scrollbar { width: 8px; }
+        .creations-list::-webkit-scrollbar-track { background: var(--bg-accent); }
+        .creations-list::-webkit-scrollbar-thumb { background-color: var(--border-color); border-radius: 4px; }
+        .empty-state { text-align: center; color: var(--text-secondary); padding: 2rem; margin-top: 2rem; }
+        .element-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px var(--shadow); border-left: 4px solid var(--color-accent); margin-bottom: 1rem; animation: slideIn 0.4s ease; }
+        .card-header { font-weight: bold; font-size: 1.2em; }
+        .card-details { font-size: 0.9em; color: var(--text-secondary); }
+
+        /* --- 
+        FOOTER / STATUS BAR
+        Mocks: CompletionTracker.tsx and CollaborationStatus.tsx
+        --- */
+        .app-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .progress-tracker {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 0.75rem 2rem;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+        }
+        .progress-bar-container { flex-basis: 30%; }
+        .progress-bar-label { font-size: 0.8em; font-weight: bold; margin-bottom: 0.25rem; }
+        .progress-bar { height: 10px; background-color: var(--bg-accent); border-radius: 5px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background-color: var(--completed-color); width: 0%; transition: width 0.5s ease-out; }
+        
+        .latest-year { text-align: center; }
+        .latest-year-label { font-size: 0.8em; font-weight: bold; }
+        .latest-year-value { font-size: 1.2em; font-weight: bold; color: var(--color-primary); }
+        
+        .collab-status {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            text-align: center;
+            font-size: 0.8em;
+            padding: 0.25rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* --- 
+        RESPONSIVENESS
+        --- */
+        @media (max-width: 1200px) {
+            .content-sidebar-split { grid-template-columns: 1fr; }
+            .sidebar { position: static; height: auto; margin-top: 2rem; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .app-header { padding: 1rem; }
+            .header-top { flex-direction: column; gap: 1rem; }
+            .main-layout { grid-template-columns: 1fr; }
+            /* Vertical Nav becomes Horizontal */
+            .vertical-nav { width: 100%; margin-bottom: 2rem; order: -1; }
+            .step-progress-vertical { display: flex; justify-content: space-around; padding: 0; }
+            .step-progress-vertical::before { display: none; } /* Hide vertical line */
+            .step { flex-direction: column; gap: 0.5rem; margin-bottom: 0; }
+            .step-number { width: 40px; height: 40px; font-size: 1.2em; }
+            .dice-grid { grid-template-columns: 1fr; }
+            .progress-tracker { flex-direction: column; gap: 1rem; padding: 1rem; }
+            .progress-bar-container { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ================================================================== -->
+        <!-- Mocks: src/components/navigation/NavigationHeader.tsx              -->
+        <!-- ================================================================== -->
+        <header class="app-header">
+            <div class="header-top">
+                <div class="header-title">Mappa Imperium</div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="prestige">💎 Prestige: 14</div>
+                        <button class="btn btn-export">Export World</button>
+                    </div>
+                    <div class="progress-indicators">
+                        <div class="indicator-circle active"></div> <div class="indicator-circle active"></div> <div class="indicator-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <nav class="era-tabs">
+                <button class="era-tab">Age of Creation</button> <button class="era-tab">Age of Myth</button> <button class="era-tab active">Age of Foundation</button> <button class="era-tab">Age of Discovery</button> <button class="era-tab">Age of Empires</button> <button class="era-tab">Age of Collapse</button>
+            </nav>
+        </header>
+
+        <div class="main-layout">
+            <!-- ================================================================== -->
+            <!-- Mocks: src/components/era-interfaces/era-foundation/StepProgressBar.tsx -->
+            <!-- ================================================================== -->
+            <nav class="vertical-nav">
+                <ul class="step-progress-vertical" id="step-progress">
+                    <li class="step current" data-step="faction"> <div class="step-number">1</div> <div class="step-title">Prime Faction</div> </li>
+                    <li class="step locked" data-step="neighbor"> <div class="step-number">2</div> <div class="step-title">Neighbor</div> </li>
+                    <li class="step locked" data-step="settlements"> <div class="step-number">3</div> <div class="step-title">Settlements</div> </li>
+                </ul>
+            </nav>
+            
+            <div class="content-sidebar-split">
+                <!-- ================================================================== -->
+                <!-- Mocks: src/components/era-interfaces/EraFoundationContent.tsx    -->
+                <!-- ================================================================== -->
+                <main class="main-content">
+                    <div class="content-header">
+                        <h2>Create Your Prime Faction</h2>
+                        <p>Define the race, culture, and leadership of the empire you will guide through the ages.</p>
+                    </div>
+
+                    <form id="faction-creation-form">
+                        <fieldset class="form-section">
+                            <legend><h3>3.1 Ancestry</h3></legend>
+                            <div class="dice-roller" style="grid-column: span 2;">
+                                <div class="dice-roller-header"> <strong>Roll for Ancestry (2d6)</strong> <button class="btn btn-roll" type="button" data-dice="2" data-target="ancestry">Roll</button> </div>
+                                <div class="dice-display" data-dice-display="ancestry"> <div class="die">?</div> <div class="die">?</div> </div>
+                                <div id="ancestry-result-container" class="hidden">
+                                    <div class="result-box"><strong>Result:</strong> <span id="ancestry-result-text"></span></div>
+                                    <div class="override-group">
+                                        <label for="ancestry-override">Override:</label>
+                                        <select id="ancestry-override"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-section">
+                            <legend><h3>3.2 Faction Development</h3></legend>
+                            <div class="dice-grid">
+                                <div class="dice-roller">
+                                    <div class="dice-roller-header"><strong>Symbol: Roll for Row</strong><button class="btn btn-roll" type="button" data-dice="1" data-target="symbol-row">Roll</button></div>
+                                    <div class="dice-display" data-dice-display="symbol-row"><div class="die">?</div></div>
+                                </div>
+                                <div class="dice-roller">
+                                    <div class="dice-roller-header"><strong>Symbol: Roll for Column</strong><button class="btn btn-roll" type="button" data-dice="1" data-target="symbol-col">Roll</button></div>
+                                    <div class="dice-display" data-dice-display="symbol-col"><div class="die">?</div></div>
+                                </div>
+                            </div>
+                            <div id="symbol-result-container" class="result-box hidden"><strong>Result:</strong> <span id="symbol-result-text"></span></div>
+                            
+                            <div class="dice-grid" style="margin-top: 1.5rem;">
+                                <div class="dice-roller">
+                                    <div class="dice-roller-header"><strong>Color: Roll for Row</strong><button class="btn btn-roll" type="button" data-dice="1" data-target="color-row">Roll</button></div>
+                                    <div class="dice-display" data-dice-display="color-row"><div class="die">?</div></div>
+                                </div>
+                                 <div class="dice-roller">
+                                    <div class="dice-roller-header"><strong>Color: Roll for Column</strong><button class="btn btn-roll" type="button" data-dice="1" data-target="color-col">Roll</button></div>
+                                    <div class="dice-display" data-dice-display="color-col"><div class="die">?</div></div>
+                                </div>
+                            </div>
+                            <div id="color-result-container" class="result-box hidden"><strong>Result:</strong> <span id="color-result-text"></span></div>
+                        </fieldset>
+                        
+                        <fieldset class="form-section">
+                             <legend><h3>Faction Details</h3></legend>
+                             <div class="form-group">
+                                <label for="faction-name">Faction Name</label>
+                                <input type="text" id="faction-name" placeholder="e.g., The Iron-Hand Clan" required>
+                             </div>
+                             <div class="form-group">
+                                <label for="leader-name">First Leader</label>
+                                <input type="text" id="leader-name" placeholder="e.g., Borin Ironhand" required>
+                             </div>
+                             <div class="form-group">
+                                <label for="capital-name">Capital City</label>
+                                <input type="text" id="capital-name" placeholder="e.g., Khaz-Grund" required>
+                             </div>
+                             <div class="form-group">
+                                <label for="faction-theme">Theme / Description</label>
+                                <textarea id="faction-theme" rows="3" placeholder="e.g., Master artisans and miners, deeply honorable but mistrustful of outsiders." required></textarea>
+                             </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                             <button class="btn btn-clear" type="button" id="clear-form">Clear Form</button>
+                             <button class="btn btn-submit" type="submit">Create Prime Faction</button>
+                        </div>
+                    </form>
+                </main>
+
+                <!-- ================================================================== -->
+                <!-- Mocks: Sidebar display area for FactionCard.tsx, etc.          -->
+                <!-- ================================================================== -->
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <h2>Your Creations</h2>
+                        <div class="creations-list">
+                            <div class="empty-state" id="sidebar-empty-state">
+                                <p>Elements you create in this era will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- Mocks: src/components/layout/CompletionTracker.tsx & CollaborationStatus.tsx -->
+    <!-- ================================================================== -->
+    <footer class="app-footer">
+        <div class="progress-tracker">
+            <div class="progress-bar-container">
+                <div class="progress-bar-label">Total Game Progress</div>
+                <div class="progress-bar"><div class="progress-bar-fill" id="total-progress-bar" style="width: 25%;"></div></div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-label">Your Progress</div>
+                <div class="progress-bar"><div class="progress-bar-fill" id="user-progress-bar" style="width: 33%;"></div></div>
+            </div>
+            <div class="latest-year">
+                <div class="latest-year-label">Latest Year</div>
+                <div class="latest-year-value">Year 35</div>
+            </div>
+        </div>
+        <div class="collab-status"> Collaborative Room: Connected </div>
+    </footer>
+
+    <script>
+        // --- This script simulates the interactivity of the mockup ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- DATA from rulebook (mocking src/data/factionTables.ts) ---
+            const ancestryTable = { 2: "Demonkind", 3: "Seafolk", 4: "Smallfolk", 5: "Reptilian", 6: "Dwarves", 7: "Humans", 8: "Elves", 9: "Greenskins", 10: "Animalfolk", 11: "Giantkind", 12: "Player's Choice" };
+            const symbolTables = { 1: { 1: "Flame", 2: "Horse", 3: "Boar", 4: "Lion", 5: "Dragon", 6: "Hydra" }, 2: { 1: "Lightning Bolt", 2: "Bird", 3: "Mountain", 4: "Sun", 5: "Moon", 6: "Leaf" }, 3: { 1: "Tree", 2: "Claw", 3: "Spider", 4: "Grain", 5: "Bow", 6: "Horseshoe" }, 4: { 1: "Harp", 2: "Fish", 3: "Anvil", 4: "Wolf", 5: "Wings", 6: "Skull" }, 5: { 1: "Axe", 2: "Diamond", 3: "Flower", 4: "Apple", 5: "Cup", 6: "Spade" }, 6: { 1: "Sword", 2: "Beholder", 3: "Scorpion", 4: "Crab", 5: "Unicorn", 6: "Star" } };
+            const colorTable = { 1: ["Crimson", "Red", "Pink", "Dark Blue", "Lt Blue", "Blue"], 2: ["Dark Brown", "Brown", "Tan", "Lime Green", "Green", "Dark Green"], 3: ["Peach", "Burgundy", "Turquoise", "Burnt Orange", "Cream", "Dark Purple"], 4: ["Auburn", "Lt Grey", "Cyan", "Magenta", "Rose", "Slate"], 5: ["Grey", "Charcoal", "Light Grey", "Amber", "Purple", "Dark Red"], 6: ["Yellow", "Orange", "Gold", "Silver", "Black", "White"] };
+            
+            // --- State for combined rolls ---
+            let symbolRowRoll = null, symbolColRoll = null;
+            let colorRowRoll = null, colorColRoll = null;
+
+            // --- Populate Override Dropdowns ---
+            const ancestryOverride = document.getElementById('ancestry-override');
+            Object.values(ancestryTable).forEach(ancestry => {
+                ancestryOverride.innerHTML += `<option value="${ancestry}">${ancestry}</option>`;
+            });
+
+            // --- Dice Rolling Logic ---
+            document.querySelectorAll('.btn-roll').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const target = e.currentTarget.dataset.target;
+                    const numDice = parseInt(e.currentTarget.dataset.dice, 10);
+                    
+                    const diceDisplay = document.querySelector(`[data-dice-display="${target}"]`);
+                    const dice = diceDisplay.querySelectorAll('.die');
+                    
+                    // Add rolling animation
+                    dice.forEach(d => d.classList.add('rolling'));
+
+                    setTimeout(() => {
+                        diceDisplay.innerHTML = '';
+                        let total = 0;
+                        for (let i = 0; i < numDice; i++) {
+                            const roll = Math.floor(Math.random() * 6) + 1;
+                            total += roll;
+                            const dieEl = document.createElement('div');
+                            dieEl.className = 'die';
+                            dieEl.textContent = roll;
+                            diceDisplay.appendChild(dieEl);
+                        }
+
+                        // Handle different roll targets
+                        if (target === 'ancestry') {
+                            const resultText = ancestryTable[total] || 'Reroll!';
+                            document.getElementById('ancestry-result-text').textContent = resultText;
+                            document.getElementById('ancestry-override').value = resultText;
+                            document.getElementById('ancestry-result-container').classList.remove('hidden');
+                        } else if (target.startsWith('symbol')) {
+                            if (target.endsWith('row')) symbolRowRoll = total;
+                            if (target.endsWith('col')) symbolColRoll = total;
+                            if (symbolRowRoll && symbolColRoll) {
+                                const resultText = symbolTables[symbolRowRoll][symbolColRoll];
+                                document.getElementById('symbol-result-text').textContent = resultText;
+                                document.getElementById('symbol-result-container').classList.remove('hidden');
+                            }
+                        } else if (target.startsWith('color')) {
+                             if (target.endsWith('row')) colorRowRoll = total;
+                             if (target.endsWith('col')) colorColRoll = total;
+                             if (colorRowRoll && colorColRoll) {
+                                const resultText = colorTable[colorRowRoll][colorColRoll -1];
+                                 document.getElementById('color-result-text').textContent = resultText;
+                                 document.getElementById('color-result-container').classList.remove('hidden');
+                             }
+                        }
+                    }, 300); // end timeout
+                });
+            });
+
+            // --- Form Submission Logic (Simulated) ---
+            const form = document.getElementById('faction-creation-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const factionName = document.getElementById('faction-name').value;
+                const ancestry = document.getElementById('ancestry-override').value;
+
+                if (!factionName || !ancestry) {
+                    alert('Please fill out all required fields and roll for ancestry.');
+                    return;
+                }
+
+                // Hide empty state and add card
+                document.getElementById('sidebar-empty-state').classList.add('hidden');
+                const creationsList = document.querySelector('.creations-list');
+                
+                const card = document.createElement('div');
+                card.className = 'element-card';
+                card.innerHTML = `
+                    <div class="card-header">${factionName}</div>
+                    <div class="card-details">${ancestry} Faction</div>
+                `;
+                creationsList.appendChild(card);
+                
+                // Animate progress bar (simulated) & advance step
+                updateStepProgress('faction');
+                alert(`Faction "${factionName}" created!`);
+            });
+
+            // --- Step Progress Update ---
+            function updateStepProgress(completedStepId) {
+                const steps = document.querySelectorAll('#step-progress .step');
+                let foundCurrent = false;
+                steps.forEach(step => {
+                    const stepId = step.dataset.step;
+                    step.classList.remove('current', 'completed', 'locked');
+                    if(stepId === completedStepId) {
+                        step.classList.add('completed');
+                    } else if (!foundCurrent && !step.classList.contains('completed')) {
+                        step.classList.add('current');
+                        foundCurrent = true;
+                    } else {
+                        step.classList.add('locked');
+                    }
+                });
+
+                // Update the user progress bar as well
+                 const completedCount = Array.from(steps).filter(s => s.classList.contains('completed')).length;
+                 const percentage = (completedCount / steps.length) * 100;
+                 document.getElementById('user-progress-bar').style.width = percentage + '%';
+            }
+            
+            // --- Clear Form Logic ---
+            document.getElementById('clear-form').addEventListener('click', () => {
+                form.reset();
+                // Reset dice displays
+                 document.querySelectorAll('[data-dice-display]').forEach(d => {
+                    d.innerHTML = '<div class="die">?</div>'.repeat(d.children.length > 1 ? 2 : 1);
+                 });
+                // Hide result boxes
+                document.querySelectorAll('.result-box, #ancestry-result-container').forEach(r => r.classList.add('hidden'));
+                // Reset roll state
+                symbolRowRoll = null; symbolColRoll = null; colorRowRoll = null; colorColRoll = null;
+            });
+        });
+    </script>
+</body>
+</html>

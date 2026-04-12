@@ -1,0 +1,7 @@
+(Character Name) is a (Age) year old (Gender) (Race) (Profession).
+They have (Length), (Texture), (Color) hair and (Color) eyes.
+They have (Color or Description) skin.
+They stand (Height in cm) (Height in ft and inches) tall and have a (Body Type) build.
+They have a (Shape), (Additional Description) face.
+(Any notable behaviors or traits).
+

@@ -1,0 +1,91 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Mystery Node".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: mystery_node
+
+```text
++--------------------------------------------------------------------------------+
+|  [Mystery Node Architect]                                              [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Mystery: [ The Clockwork Murder  ]  Node ID: [ B: The Clocksmith's Den ]     |
++--------------------------------------------------------------------------------+
+|  SCENE FRAMING                             |  ATMOSPHERE (3 of 5 Senses)      |
+|  Agenda: [ Find the killer's sigil ]       |  [V] Scent: [ Metallic iron ]    |
+|  "The Bang":                               |  [V] Sound: [ Rhythmic ticking ] |
+|  [ A large clock tower bell crashes   ]    |  [V] Sight: [ Shadowy gears    ] |
+|  [ through the ceiling!               ]    |                                  |
++--------------------------------------------+----------------------------------+
+|  CLUE REPOSITORY                           |  REACTION LOGIC                  |
+|  [1] Bloody Gear (Physical)     [X] Obv    |  Lead NPC: [ Master Grumm ]      |
+|  [2] Hidden Safe (Env)          [?] Subtle |  - If bribed: Shares lead to [C] |
+|  [3] Witnesses (Testimony)      [X] Obv    |  - If intimidated: Flees to [D]  |
++--------------------------------------------+----------------------------------+
+|  CHALLENGES                                |  OUTBOUND LEADS                  |
+|  [ ] Locked Safe (DC 15 Thieves Tools)     |  Points to: [ Node C ] [ Node D ]|
++--------------------------------------------+----------------------------------+
+|  [Generate Node File] [Preview Scene] [Validate 3-Clue Rule]           [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: mystery_node
+
+## Component Architecture
+- **Scene Framing & Agenda Module:** Focuses the DM on the *reason* for the scene. It includes the "Bang" constructor—a dedicated tool for designing the explosive moment that starts the investigation.
+- **Sensory Palette:** A checkbox-driven interface for the "Three of Five" technique. It forces the user to pick three senses and provide evocative descriptions for each, ensuring immersive scene-setting.
+- **NPC Behavior Tree:** A miniature logic-builder for NPCs in the scene. It maps PC approaches (Diplomatic, Aggressive, Stealthy) to specific NPC reactions and information releases.
+- **Clue & Obstacle Matrix:** Manages the discovery path within the node. It distinguishes between obvious and subtle clues and ensures that every obstacle (like a locked door) has multiple solutions as per the script's guidelines.
+
+## Interaction Logic
+- **"The Bang" Trigger:** A prominent UI element that helps the DM prepare for the transition from exploration into active investigation.
+- **Outbound Lead Mapping:** Every clue can be "tagged" with a destination node. The UI visualizes these links to help the DM see the investigation web.
+- **Transition Selection:** Provides clear UI buttons for "Sharp Cuts" (skipping travel time) or "Abstract Time" (narration-heavy transitions).
+
+## Visual Design
+- **Immersive Scene Editor:** Uses localized background colors or subtle atmospheric icons based on the chosen terrain (e.g., rain icons for stormy streets).
+- **Lead-Feature-Extra Badging:** Characters in the dossier are visually distinct based on their importance to the mystery.
+- **Clue Visibility Indicators:** Uses a "Visibility" slider for each piece of evidence to manage the balance of Easy vs. Hard discovery.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: mystery_node
+
+# Mystery Node: The Clocksmith's Den (MysteryNode_ClockworkMurder_B.txt)
+
+### 1. Scene Overview
+- **Agenda:** Confirm if the victim was meeting with a guild-spy.
+- **"The Bang":** As the players enter, a massive clock tower gear snaps its cable and crashes through the skylight, narrowly missing the PCs. Amidst the dust, they hear a frantic scrambling from the back room.
+
+### 2. Atmosphere (Three of Five)
+- **Scent:** The overwhelming metallic tang of cold iron and lubricating oil.
+- **Sound:** A deafening cacophony of thousands of misaligned gears ticking and whirring out of sync.
+- **Sight:** High, vaulted ceilings choked with dangling chains and swinging pendulums that cast long, erratic shadows.
+
+### 3. Clue Repository
+1. **The Broken Spectacles (Physical - Obvious):** Found near the skylight impact. Engraved with the initials of "Thorne" (Points to Node C).
+2. **The Encrypted Ledger (Environmental - Subtle):** Hidden behind a fake gear-housing (Requires DC 16 Investigation). Contains meeting dates for the "Silver Wing" (Points to Node D).
+3. **The Trembling Apprentice (Testimony - Obvious):** A young goblin hiding under the desk. If calmed, he reveals the visitor wore a blue cloak (Confirmation of Perp description).
+
+### 4. NPCs
+- **Master Grumm (Lead):** A paranoid dwarf who values his tools more than human life. *Reaction:* If threatened, he tries to active a defensive steam-trap.
+- **Pips (Extra):** The terrified goblin apprentice.
+
+### 5. Challenges
+- **The Skylight Rubble:** The way forward is blocked by the fallen gear. *Solutions:* Athletics (Strength), Mending (Magic), or Finding the maintenance bypass (Perception).
+
+### 6. Connections
+- **Points to:** Node C (The Artificer's Tower), Node D (The Blue Cloak Tavern).
+- **Red Herring:** A stack of unpaid gambling debts to a different gang.
+

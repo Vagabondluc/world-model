@@ -1,0 +1,19 @@
+{
+  "donor": "dawn-of-worlds",
+  "basis": "captured",
+  "panels": [
+    "World kind",
+    "Turn controls",
+    "Multiplayer session"
+  ],
+  "controls": [
+    "Start turn",
+    "Apply world command",
+    "Sync session"
+  ],
+  "visibleStates": [
+    "no world kind selected",
+    "no active turn",
+    "no multiplayer session"
+  ]
+}

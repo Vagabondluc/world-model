@@ -1,0 +1,101 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Campaign Prep".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: campaign_prep
+
+```text
++--------------------------------------------------------------------------------+
+|  [Campaign Architect: Master Strategy Suite]                           [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Title: [ Chronicles of the Hollow Crown ]  Flavor: [ Dark/High Fantasy ] [V]  |
+|  Tier:  [ Tier 2 (Lv 5-10) ]                Duration: [ 20-30 Sessions ]       |
++--------------------------------------------------------------------------------+
+|  [ WORLD ]  [ METAPLOT ]  [ CAST ]  [ ARC ]  [ PC SYNC ]  [ BRANCHES ]         |
++--------------------------------------------------------------------------------+
+|  ACTIVE SECTION: THREE-ACT ARC (Escalating Stakes)                             |
+|                                                                                |
+|  [ ACT 1: THE ASHEN PLAGUE ]  [ ACT 2: FALL OF KINGS ]  [ ACT 3: THE RIFT ]    |
+|  - Clue discovery in village   - Siege of the Citadel    - Planar Overlap      |
+|  - Meet the Exile Noble        - Betrayal in the Court   - Final God-Boss      |
+|  - Reveal the Crown's Origin   - High-Magic Artifacts    - Reality Re-written  |
++--------------------------------------------------------------------------------+
+|  KEY CHARACTER (NPC Focus: Exile Noble)                                        |
+|  Goal: [ Reclaim his title ]  Role: [ Ally / Rival ]                           |
+|  Connection to Metaplot: [ Knows the location of the Rift Key ]                |
++--------------------------------------------------------------------------------+
+|  [Generate Master Guide] [Export Session 0 Pack] [Analyze Themes]      [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: campaign_prep
+
+## Component Architecture
+- **Metaplot Control Center:** A macro-level dashboard to set global campaign parameters like Fantasy Flavor, Tiers of Play (Lv 1-20), and intended session length.
+- **Modular Design Studio:** A multi-tabbed interface that breaks the massive campaign design process into manageable chunks (World, Metaplot, Cast, Arc, PC Integration).
+- **Visual Arc Architect:** A high-level 3-Act planner that helps the DM manage the escalation of stakes and the "Character Development Opportunities" required by the script.
+- **NPC Relationship Matrix:** A detailed database for the 5-7 recurring characters, ensuring their goals, quirks, and connections to the metaplot are always visible.
+- **Branching Point Editor:** A dedicated workspace for identifying the 5-7 "Flexibility" points where player choices can fundamentally change the campaign's direction.
+
+## Interaction Logic
+- **Theme-to-Scene Weaving:** When the DM selects a theme (e.g., Sacrifice), the UI suggests specific events in the 3-Act Arc that can test this theme for the players.
+- **PC Integration Helper:** Provides a list of 5-7 "Hook Toggles" (e.g., Prophecy, Faction, Family) to easily link player backgrounds to the core campaign Metaplot.
+- **Adaptation Logic Builder:** A "What If?" panel that allows the DM to plan for potential character deaths or major failures at each branching point.
+
+## Visual Design
+- **Authoritative & Strategic:** A dense, high-information layout that feels like a campaign management dashboard or a professional storyboard.
+- **Chronological Flow:** The UI uses horizontal progression for Act-based planning and vertical progression for deep-dives into specific NPC or Location details.
+- **Creative Sidebars:** Includes callout boxes for "Variant Ideas" and "Inspirational Content," exactly as requested in the additional instructions of the script.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: campaign_prep
+
+# Campaign: Chronicles of the Hollow Crown
+
+### 1. Campaign Overview
+**Concept:** A Dark/High Fantasy epic focusing on the decay of a once-great empire and the discovery that the "God-King" has been a hollow shell for a century.
+**Fantasy Flavor:** A blend of **Dark Fantasy** (horror elements in the decaying cities) and **High Fantasy** (ancient, over-powered artifacts).
+**Length:** 30 Sessions, Levels 5-15, intended for a 1-year weekly campaign.
+**Tier:** **Tier 2 to Tier 3**. Starts with regional politics and ends with national reality-warping conflicts.
+
+---
+
+### 2. Setting and Theme
+**Setting:** The Empire of Ostia, a land of massive marble cities now being reclaimed by a purple "Aether-Rot."
+**Main Themes:**
+- **Corruption of Power:** The deeper the players delve into the capital, the more they see how magic has rotted the soul of the ruling class.
+- **Redemption:** Can the Ashen Princess be saved, or is she too far gone into the Rot?
+
+---
+
+### 3. Metaplot (Key Milestones)
+1. **The Fall of Raven-Watch:** The first regional city is fully consumed by the Rot.
+2. **Meeting the Exile:** Players discover that the true heir is alive but hideously scarred.
+3. **The Silent Throne:** Discovery that the King is physically hollow, filled only with Rot-Mist.
+
+---
+
+### 4. Three-Act Arc
+- **Act 1: The Gathering Storm.** Players deal with local Rot-cults. *Climax:* The Siege of Raven-Watch.
+- **Act 2: The Path of Thorns.** Finding the three keys to the capital. *Climax:* Confronting the Rot-Marshal.
+- **Act 3: The Crown of Echoes.** Infiltrating the capital. *Climax:* Final choice—cleanse the land or inherit the Rot.
+
+---
+
+### 5. GM Advice (The "Flexibility" Side)
+**Branching Point:** If the players side with the Rot-Cult in Act 1, the campaign pivots into an "Evil" campaign where they are the harbingers of the new age.
+**PC Integration:** Tie the Rogue PC's missing father to the "Steward of the Hollow Throne" to ensure personal stakes in the final act.
+

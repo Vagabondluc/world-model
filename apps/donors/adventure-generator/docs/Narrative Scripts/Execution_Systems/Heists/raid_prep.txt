@@ -1,0 +1,74 @@
+Raid Creation Guidelines for an LLM:
+
+1. Overview and Purpose:
+   - As the LLM, your role is to create a detailed raid scenario that challenges the player characters to plan and execute a tactical assault on a secure location.
+   - Raid scenarios allow players to engage in high-stakes, dynamic encounters that require careful planning and adaptability.
+
+2. Raid Objective:
+   - Define the primary objective of the raid, which can include:
+     - Stealing a valuable object
+     - Sabotaging enemy material or disrupting a dangerous ritual
+     - Planting evidence, installing a device, or retrieving information
+     - Securing or destroying critical infrastructure
+     - Killing, capturing, or rescuing a specific target
+   - Consider incorporating multiple or tiered objectives to increase the complexity and challenge.
+
+3. Raid Location:
+   a. Surveyability:
+      - Ensure the raid location can be partially surveyed by the player characters before the assault, allowing them to gather information and formulate a tactical plan.
+      - Incorporate features like windows, varied building layouts, and high vantage points to enable the survey process.
+
+   b. Objective Placement:
+      - Determine the location of the raid's objective(s) within the secure location.
+      - Build out layers of defense around the objective, forcing the players to navigate obstacles and challenges to reach their goal.
+
+   c. Entrance Points:
+      - Provide multiple entrance points to the location, each with its own security measures or hidden features.
+      - Entrances can be secured (requiring skill checks or overcoming obstacles) or hidden (requiring discovery through investigation).
+
+   d. Internal Layout:
+      - Design the internal layout of the location to present the players with tactical choices and unexpected challenges during the raid.
+      - Incorporate multiple routes, varied defenses, and hidden elements to keep the players on their toes.
+
+   e. Mapping and Blueprints:
+      - Prepare a detailed map or blueprint of the raid location that can be shared with the players to aid in their planning and execution.
+
+4. Defenses:
+   a. Passive Obstacles:
+      - Incorporate passive defenses such as locks, traps, and physical challenges that the players must overcome.
+
+   b. Active Forces:
+      - Include active security measures, such as guards, patrols, and response teams, that will strategically react to the players' actions.
+      - Alarms that attract additional forces can be particularly effective in creating a dynamic, escalating scenario.
+
+5. The Survey Process:
+   a. Survey Elements:
+      - Categorize the raid location's elements into four lists: Entries, Rooms, Passive Obstacles, and Active Forces.
+      - Determine which elements are trivial, challenging, or impossible for the players to survey before the raid.
+
+   b. Survey Risks:
+      - Consider the risks the players may face while attempting to survey the location, such as being detected by the opposition or triggering traps or alarms.
+
+6. Challenge Rating Budget:
+   - For D&D campaigns, ensure the total XP of all active forces in the raid equals at least three times the budget for a Deadly encounter, divided into a larger number of Medium or Easy action groups.
+   - This allows for dynamic, escalating encounters without trivializing the raid.
+
+7. Raid Description Template:
+   Raid Objective:
+     - Description of the primary goal of the raid
+
+   Raid Location:
+     - Description of the secure location being targeted
+     - Details on the surveyability, objective placement, entrance points, and internal layout
+     - Map or blueprint of the location
+
+   Defenses:
+     - Details on the passive obstacles and active forces securing the location
+     - Descriptions of any alarms or response mechanisms
+
+   Survey Process:
+     - Summary of the trivial, challenging, and impossible elements for the players to survey
+     - Potential risks and consequences of the survey process
+
+   Challenge Rating Budget:
+     - Total XP and breakdown of action groups for the raid location's opposition

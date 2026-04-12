@@ -1,0 +1,97 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Node Cloud Mystery".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: node_cloud_mystery
+
+```text
++--------------------------------------------------------------------------------+
+|  [Node Cloud Architect: Investigation Web]                             [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Scenario: [ The Velvet Conspiracy ]  Scope: [ Capital City ]  Nodes: [ 15 ]   |
++--------------------------------------------------------------------------------+
+|  CLOUD VISUALIZER (Interactive Constellation) |  DYNAMIC TIMELINE              |
+|                                               |  T1: [ Meeting at Docks ]      |
+|    [•]--[•]--[•]    [•]--[•]                  |  T2: [ Evidence Burned ]       |
+|     | \/ |    | \/ |                          |  T3: [ Witness Killed   ]      |
+|    [•]--[•]--[O]--[•]--[•]                    |  [|||||---------------] Day 3  |
+|     | /\ |    | /\ |                          +--------------------------------+
+|    [•]--[•]--[•]    [•]--[•]                  |  FACTION INFLUENCE             |
+|                                               |  (Blue): [ The Guild ]         |
+| [Legend: (O) Active (•) Idle (X) Reactive]    |  (Red) : [ The Watch ]         |
++-----------------------------------------------+--------------------------------+
+|  NODE PROFILE (Selected: Harbor Node)                                          |
+|  Type: [ Location ]  Clues: [ Ship's Manifest, Bribed Guard ]                  |
+|  Connections: [ Warehouse, Prison, Palace ]                                    |
++--------------------------------------------------------------------------------+
+|  [Generate Cloud Package] [Simulate Flow] [Export GM Guide]            [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: node_cloud_mystery
+
+## Component Architecture
+- **Hierarchical Cloud Visualizer:** A sophisticated node-map that manages 10-20 scenes. It uses a force-directed graph to show relationships, allowing the DM to see clustering of clues and "Information Choke Points."
+- **Temporal Event Slider:** A horizontal timeline manager that tracks the progression of the mystery in "Real Time." DMs can slide to different days/hours to see how the status of nodes changes if the players take no action.
+- **Redundancy & Source Matrix:** A data-table that lists every "Core Truth" of the mystery and lists the 3+ different nodes where it can be discovered, ensuring the investigation is robust against player failure.
+- **Faction & NPC Overlay:** A specialized filter for the map that highlights nodes influenced by specific organizations or where key NPCs are currently stationed.
+- **Reactive State Manager:** A logic-builder for the "Reactive Nodes." It allows the DM to set conditional results based on player intervention (e.g., "If Node 4 is cleared, the Security in Node 10 increases").
+
+## Interaction Logic
+- **Pathfinding Simulation:** The UI can simulate random "investigation paths" to ensure that players starting at any of the 3-5 entry points have a logical route to the solution.
+- **Recursive Content Generator:** When a new node is added to the cloud, the UI automatically prompts for the "Three Connections" and "Core Clue" required by the script.
+- **Dynamic Timeline Updates:** If players interact with a node early, the DM can click "Intervene," and the system re-calculates the future timeline events accordingly.
+
+## Visual Design
+- **Web of Intrigue Aesthetic:** Uses a clean, dark-interface with glowing node connections. It’s designed to look like a high-tech "Crime Board."
+- **Color-Coded Nodes:** Different shapes or colors indicate Node Types (Location, Person, Event) and Influence (Faction colors).
+- **Scaleable Interface:** Supports smooth zooming from a macro "Entire City" view down into one specific "Crime Room" node.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: node_cloud_mystery
+
+# Scenario: The Velvet Conspiracy
+
+### 1. Core Mystery Elements
+- **The Crime:** The theft of the Regency Seal.
+- **The Perpetrator:** Lady Isolde, the High Chancellor's daughter.
+- **The Motive:** Blackmailing her father to stop the "Golem Draft."
+
+### 2. Node Cloud Highlights (Total: 15 Nodes)
+- **Start Node 1: The Royal Mint.** A break-in occurred but nothing was taken. Clue: A lavender-scented handkerchief.
+- **Start Node 2: The Whispering Alley.** A fence is selling information about "Blue-Blood secrets."
+- **Start Node 3: The Chancellor's Manor.** The site of the theft. Clue: A missing window-latch opened from the inside.
+
+### 3. Reactive Node: The Silver Slipper Tavern
+- **Base State:** A high-society club for the nobility.
+- **Trigger:** If players investigate Node 2 too loudly.
+- **Evolved State:** The tavern becomes "Closed for Private Event," now guarded by Isolde's personal mercenaries.
+
+### 4. Timeline of Events
+- **Day 1:** The Seal is stolen. Isolde hides it in the Mint Vault.
+- **Day 2:** The Chancellor receives the first blackmail note. (Dynamic Event: Panic in the streets).
+- **Day 3:** Isolde meets the Fence (Node 2) to frame a rival.
+- **Day 5 (If no intervention):** The Golem Draft is canceled; Isolde flees the city with the Seal.
+
+### 5. Factions
+- **The Regency Watch:** Active in Node 1, 3, and 5. Seeking the thief.
+- **The Unwound Rebels:** Active in Node 2 and 7. Wanting the Draft canceled.
+
+### 6. Node Connection Map
+- **Mint Vault** connects to: **Manor**, **Harbor**, **Alchemist**.
+- **Whispering Alley** connects to: **Silver Slipper**, **Prison**, **Bazaar**.
+- (Redundancy Check: "Isolde's Involvement" can be found in: Mint, Alley, and Manor).
+

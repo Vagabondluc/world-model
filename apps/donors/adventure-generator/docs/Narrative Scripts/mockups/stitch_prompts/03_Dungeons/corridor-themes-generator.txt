@@ -1,0 +1,88 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Corridor-Themes-Generator".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: corridor-themes-generator
+
+```text
++--------------------------------------------------------------------------------+
+|  [Corridor Themes Generator]                                          [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Dungeon Theme: [ Abandoned Lab        ]  Seed: [ 90210   ]  [Generate New]    |
++--------------------------------------------------------------------------------+
+|  Options: [X] Senses  [ ] Hazards  [X] Lore/History  [ ] Tables View           |
++--------------------------------------------------------------------------------+
+|                                                                                |
+|  GENERATED DESCRIPTION                                                         |
+|  +--------------------------------------------------------------------------+  |
+|  | Base: A narrow, low-ceilinged passage lined with cracked glass tiles.    |  |
+|  |                                                                          |  |
+|  | Sensory: The air smells of ozone and vinegar. A faint rhythmic hum      |  |
+|  | vibrates the floor underfoot.                                            |  |
+|  |                                                                          |  |
+|  | Lore: Scrawled on the tiles in faded grease pencil: "PROJECT 04 - CLOSED"|  |
+|  +--------------------------------------------------------------------------+  |
+|  [Reroll Senses] [Reroll Lore] [Edit Text Manually]                            |
+|                                                                                |
++--------------------------------------------------------------------------------+
+|  [Copy to Clipboard] [Export Snippet] [Save to Dungeon Hallway List]   [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: corridor-themes-generator
+
+## Component Architecture
+- **Theme Input:** A search/dropdown to select the primary aesthetic (e.g., Crypt, Sewer, Tech).
+- **Control Bar:**
+    - **Senses Toggle:** If on, includes sight/sound/smell/texture.
+    - **Hazards Toggle:** If on, adds minor obstacles (e.g., loose rubble, slippery mold).
+    - **History Toggle:** If on, adds flavor text about the dungeon's past.
+- **Dynamic Result Card:**
+    - Displays the generated text in a clean, readable format.
+    - **Sub-Reroll Buttons:** Small icons next to each paragraph (Base, Senses, Lore) that allow regenerating just that specific block.
+- **Seed Persistence:** The seed stays consistent until "Generate New" is clicked, allowing users to "tweak" a specific hallway.
+
+## Interaction Logic
+- **Weighted Selection:** The generator pulls from JSON tables where elements are tagged by Theme. A "Lava" theme won't generate "Freezing Mist".
+- **AI Paraphrasing:** An optional "Stylize" button uses AI to rewrite the procedural output in a specific author's style (e.g., "Lovecraftian", "Clinical").
+- **Bulk Gen:** "Generate 5" button creates a list of variations for a long descent.
+
+## Visual Design
+- **Minimalist Aesthetic:** Focuses on typography and readability.
+- **Copy Feedback:** Clicking the "Copy" button gives a subtle "Copied!" toast notification.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: corridor-themes-generator
+
+**Dungeon Theme: Ancient Dwarven Mines**
+**Seed: 55432**
+
+### Description
+**Base Layout:** 
+A wide, hexagonal tunnel reinforced with rusted iron beams. The floor is paved with heavy stone slabs, some of which are slightly tilted.
+
+**Sensory Details:** 
+- **Sight:** Faint, bioluminescent lichen glows in the cracks. 
+- **Sound:** The distant, echoing "tink-tink" of dripping water.
+- **Smell:** Sharp metallic tang mixed with old soot.
+- **Texture:** The air is dry and drafty.
+
+**Lore / History:** 
+A discarded, half-broken lantern lies in the corner, its brass casing engraved with the symbol of the "Deep-Eye Guild".
+
+**Environmental Hazard:** 
+A section of the iron reinforcement has snapped; the ceiling looks unstable. Moving quickly or making a loud noise might trigger a minor rockfall (DC 12 Dex Save or 1d6 damage).
+

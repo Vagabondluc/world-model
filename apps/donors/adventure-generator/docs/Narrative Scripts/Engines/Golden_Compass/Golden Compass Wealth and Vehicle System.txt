@@ -1,0 +1,179 @@
+# Golden Compass Wealth and Vehicle System
+
+## Introduction
+Resources and transportation are crucial elements in any adventure. This framework explains how to manage wealth, vehicles, and other assets in your Golden Compass campaigns to create authentic adventure experiences with meaningful resource management.
+
+## Wealth Management Philosophy
+*"In Golden Compass, wealth is a tool, not a goal."*
+
+Remember these core principles:
+- Wealth creates opportunities but also complications
+- Resource management adds strategic depth to adventures
+- Financial status influences how NPCs perceive and treat characters
+- Money spent wisely is never wasted
+
+## The Pyramid of Wealth
+
+### Wealth Status Levels
+The Pyramid of Wealth represents the group's collective finances, divided into four status levels:
+
+- **GETTING BY** (1-3 Wealth Points)
+  - *Basic necessities and limited access to resources*
+  - Can purchase one object per episode
+  - Must stay in low-cost accommodations
+  - Travel requires layovers and additional time
+
+- **WELL-OFF** (4-6 Wealth Points)
+  - *Comfortable living with occasional luxuries*
+  - Can purchase one object per adventurer per episode
+  - Can stay in decent accommodations
+  - Can travel with moderate convenience
+
+- **RICH** (7-9 Wealth Points)
+  - *Luxurious lifestyle with few financial concerns*
+  - Can purchase two objects per adventurer or one vehicle per episode
+  - Can stay in upscale accommodations
+  - Can travel directly with no layovers
+
+- **LOADED** (10 Wealth Points)
+  - *Virtually unlimited financial resources*
+  - Can purchase any number of objects and one vehicle per episode
+  - Can stay in the finest accommodations
+  - Can charter private transportation
+
+### Wealth Point Management
+
+#### Gaining Wealth Points
+- Selling valuable items
+- Completing jobs or missions
+- Finding treasures
+- Receiving rewards or payments
+
+#### Spending Wealth Points
+- Bribing officials or contacts
+- Purchasing additional items beyond status allowance
+- Paying for expedited travel
+- Hiring local guides or help
+- Purchasing special equipment or rare items
+
+#### Wealth Point Considerations
+- Higher status makes it harder to gain new Wealth Points
+- Lower status makes small financial gains more significant
+- Group wealth is shared unless specifically divided
+- Status determines what can be purchased without spending points
+
+## Vehicle System
+
+### Vehicle Structure
+Each vehicle has:
+- **Name and Model:** Identifying information
+- **Environment Types:** Land, Water, Air (any combination)
+- **Luck Points:** 3 points representing vehicle durability
+
+### Vehicle Types and Characteristics
+
+#### Land Vehicles
+- **Cars/Jeeps:** Versatile for various terrain, moderate speed
+- **Motorcycles:** Fast but limited capacity and protection
+- **Trucks:** High capacity but slower and less maneuverable
+- **Trains:** Fixed routes but comfortable for long distances
+
+#### Water Vehicles
+- **Boats:** Varying sizes for rivers and coastal waters
+- **Ships:** Ocean-capable with extended range
+- **Submarines:** Underwater travel with limited visibility
+- **Rafts:** Improvised and vulnerable but necessary in some situations
+
+#### Air Vehicles
+- **Planes:** Fast long-distance travel but require landing strips
+- **Seaplanes:** Versatile water landing capability
+- **Helicopters:** Vertical takeoff but limited range
+- **Hot Air Balloons:** Slow but can access remote areas
+
+### Vehicle Management
+
+#### Vehicle Acquisition
+- Purchase with Wealth Points
+- Rent temporarily (costs less Wealth Points)
+- "Borrow" through stealth or social engineering
+- Improvise from available materials (with appropriate challenges)
+
+#### Luck Point System
+- Vehicles have 3 Luck Points
+- Lose points when failing Drive tasks or taking damage
+- When all 3 points are lost, vehicle goes Out of Commission
+- Restore 1 point with Critical Success on Tech task in Safe Place
+
+#### Vehicle Specialization
+- Players with appropriate Expertise gain advantages when using compatible vehicles
+- Players without relevant Expertise suffer disadvantages with air or water vehicles
+- Vehicle modifications can grant advantages for specific environments or tasks
+
+#### Out of Commission Vehicles
+- Cannot be used until repaired
+- May require special parts, expertise, or facilities to repair
+- Can become a side quest to find repair solutions
+- May be abandoned if repair is impractical
+
+## Time and Resource Interaction
+
+### The Doomsday Clock
+- Tracks time pressure in adventures
+- 12 Hours total, starts with 1 Hour + 1 per player character
+- When clock strikes 12, players are Too Late
+
+### Using Time vs. Wealth
+Players must frequently choose between spending time or money:
+- **Fast Travel:** Spend Wealth Points to avoid losing Hours
+- **Affordable Travel:** Spend Hours to avoid using Wealth Points
+- **Quick Repairs:** Spend Wealth Points for immediate solutions
+- **DIY Approach:** Spend Hours to solve problems without money
+
+### Time Management
+- Spending an Hour allows for extended actions
+- Hours can be spent for vehicle repairs, healing, gathering supplies
+- Hours may be lost due to setbacks or failures
+- Strategic use of time creates meaningful choices
+
+## Implementation in Play
+
+### Starting Resources
+Standard campaign begins with:
+- 6 Wealth Points (Well-Off status)
+- No vehicle (unless a character has the Pilot tag)
+- Doomsday Clock at 1 + number of player characters
+
+### Hard Mode Options
+For more challenging campaigns:
+- Start with 4 Wealth Points (Getting By status)
+- Additional Hours already filled on Doomsday Clock
+- Vehicles start with fewer Luck Points
+- Fewer Luck Coins in circulation
+
+### Narrative Integration
+- Wealth status affects how NPCs treat characters
+- Vehicle condition creates story opportunities
+- Resource management decisions reveal character priorities
+- Financial setbacks can lead to interesting complications
+
+### Sample Resource Scenarios
+
+#### Wealth Scenario: The Informant
+**Situation:** A local informant has crucial information
+**Approaches:**
+- Pay a significant bribe (spend Wealth Point)
+- Spend time gaining their trust (spend an Hour)
+- Find leverage to compel cooperation (face a Challenge)
+
+#### Vehicle Scenario: Mountain Crossing
+**Situation:** A mountain pass stands between players and their destination
+**Approaches:**
+- Push vehicle beyond safe limits (risk losing Vehicle Luck Point)
+- Take the long route around (spend an Hour)
+- Hire local guides with specialized vehicles (spend Wealth Point)
+
+## Conclusion
+
+The wealth and vehicle systems in Golden Compass create meaningful resource management that deepens the adventure experience. By balancing time, money, and equipment, players must make strategic choices that have real consequences for their journey.
+
+When designing adventures, consider how wealth status and vehicle access will impact the players' options, and create scenarios that leverage these systems to provide interesting challenges and opportunities.

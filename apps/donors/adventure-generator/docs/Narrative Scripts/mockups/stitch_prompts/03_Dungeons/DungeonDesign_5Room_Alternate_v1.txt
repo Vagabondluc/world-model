@@ -1,0 +1,106 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Dungeondesign 5Room Alternate V1".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: DungeonDesign_5Room_Alternate_v1
+
+```text
++--------------------------------------------------------------------------------+
+|  [Adventure Designer: Alternate 5-Room Flow]                          [?] [X]  |
++--------------------------------------------------------------------------------+
+|  Title: [ The Sunken Reach             ]  Main Goal: [ Retrieve Scepter ]      |
++--------------------------------------------------------------------------------+
+|                                                                                |
+|  [O] STAGE 1: PREP & INTRO (Static)                                  [Edit]    |
+|   |  Summary: Arrival at the Bog. The NPC Elara gives the quest...             |
+|   v                                                                            |
+|  [F] STAGE 2: OVERCOMING CHALLENGES (Flex Block)                      [+ Add]   |
+|   |  Scene A: The Razorvine Slough (Combat)                          [Edit][D] |
+|   |  Scene B: The Toll Keeper's Riddle (Puzzle)                      [Edit][D] |
+|   |  (User can drag Scene A/B to reorder inside this block)                    |
+|   v                                                                            |
+|  [O] STAGE 3: MIDPOINT TWIST (Static)                                 [Edit]    |
+|   |  Summary: Elara is actually a Doppelganger! The Scepter is a trap.          |
+|   v                                                                            |
+|  [F] STAGE 4: SOLVING PUZZLES / ROLEPLAY (Flex Block)                 [+ Add]   |
+|   |  Scene C: Escaping the Illusionary Cage (Puzzle)                 [Edit][D] |
+|   v                                                                            |
+|  [O] STAGE 5: CLIMAX & CONFRONTATION                                  [Edit]    |
+|   |  Summary: Battle at the Scepter Altar.                                     |
+|   v                                                                            |
+|  [O] STAGE 6: RESOLUTION                                              [Edit]    |
+|   v                                                                            |
+|  [O] STAGE 7: EPILOGUE                                                [Edit]    |
+|                                                                                |
++--------------------------------------------------------------------------------+
+|  [AI Full Generation] [Export Narrative] [Save Project]               [Done]   |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: DungeonDesign_5Room_Alternate_v1
+
+## Component Architecture
+- **Stage Navigation:** A vertical timeline acting as the primary navigation. Clicking a "Stage" (e.g., Intro, Flex Block) opens the corresponding editor.
+- **Static Scene Editor:** A standard form with fields for Summary, Characters, Setting, Challenge, Outcomes, and Transitions.
+- **Flex Block Container:**
+    - A special container for Stages 2 and 4.
+    - **Draggable Cards:** Each scene is a card that can be reordered via drag-and-drop.
+    - **Interchangeable Logic:** Visual indicators showing that these scenes can occur in any order.
+- **Global AI Controller:** A floating panel that can "Fill Next Stage" or "Generate Full Adventure Plan".
+
+## Interaction Logic
+- **Stage Interconnectivity:** The "Transitions" field in one scene can deep-link to the "Summary" of the next scene if it's a fixed path.
+- **Non-Linear Mapping:** In Flex Blocks, transitions are treated as "Entry Points" (how they got here) and "Exit Points" (where to next), allowing for a mesh-like structure.
+- **Adaptive UI:** If a scene is marked as "Combat Heavy", the Challenge field expands to show Encounter Difficulty (CR) calculation tools.
+
+## Visual Design
+- **Theme-Sync:** Background tints change based on the selected Stage (e.g., red for Climax, blue for Epilogue).
+- **Responsive Layout:** Timeline collapses to a breadcrumb menu on smaller screens.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: DungeonDesign_5Room_Alternate_v1
+
+**Adventure Title: The Clockwork Heart**
+**Status: Drafted**
+
+### Stage 1: Prep & Intro (Static)
+- **Summary:** The party finds a dying automaton in the market. Its chest cavity contains a map to the "Central Engine".
+- **Characters:** Unit-41 (Dying Bot), Market Bystanders.
+- **Challenge:** Deciphering the bot's binary stutter (Intelligence check).
+- **Transition:** Following the map leads to the ruined factory sewers.
+
+### Stage 2: Overcoming Challenges (Flex)
+- **Scene A (Combat):** Sewer Vermin Swarm. Scavenger rats infected with tech-bio-rust.
+- **Scene B (Puzzle):** The Steam Pressure Hallway. Timing jumps through leaking pipes.
+
+### Stage 3: Midpoint - The Twist (Static)
+- **Summary:** The "Central Engine" isn't a factory part; it's a sentient artificial god being harvested for parts by the local Governor.
+- **Challenge:** Realizing the moral choice: shutdown the engine (killing the bot-god) or free it (collapsing the city's power).
+
+### Stage 4: Facing Roleplay Challenges (Flex)
+- **Scene C (RP):** Negotiating with the Factory Foreman who is just trying to provide for his family.
+
+### Stage 5: Climax & Confrontation
+- **Summary:** Confronting the Governor in the heart of the engine room.
+- **Challenge:** High-stakes combat with environmental hazards (the Engine's defense lasers).
+
+### Stage 6: Resolution
+- **Outcomes:** The Engine is freed; the city goes dark but the "god" survives.
+
+### Stage 7: Epilogue
+- **Hooks:** Unit-41 is reborn. The Governor flees to the mountains.
+- **Final Note:** The party is now known as the "Breakers of the Light".
+

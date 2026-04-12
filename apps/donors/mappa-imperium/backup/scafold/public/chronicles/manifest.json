@@ -1,0 +1,22 @@
+{
+  "games": [
+    {
+      "gameId": "sundered_isles_chronicle",
+      "gameName": "The Sundered Isles",
+      "lastUpdate": "2023-10-27T10:00:00Z",
+      "nextPlayerUp": "PrOfOuNd_IdIoT (Player 2)",
+      "playerList": ["PeeHell", "PrOfOuNd_IdIoT", "MOFO", "MyFaCeHuRt"],
+      "currentEraStep": "Era 4, Turn 3/6",
+      "feedUrl": "/chronicles/sundered_isles_chronicle/chronicle-feed.json"
+    },
+    {
+      "gameId": "iron_empire_chronicle",
+      "gameName": "Chronicle of the Iron Empire",
+      "lastUpdate": "2023-10-26T18:00:00Z",
+      "nextPlayerUp": "MOFO (Player 3)",
+      "playerList": ["IronKing", "SilverQueen", "MOFO"],
+      "currentEraStep": "Era 3, Neighbor Placement",
+      "feedUrl": "/chronicles/iron_empire_chronicle/chronicle-feed.json"
+    }
+  ]
+}

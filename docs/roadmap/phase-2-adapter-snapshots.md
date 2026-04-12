@@ -1,120 +1,61 @@
-# Phase 2: Adapter Snapshots
+# Phase 2: Adapter Snapshot Normalization
 
 ## Objective
 
-Copy the necessary donor files into frozen adapter snapshots and map them into canonical concepts.
+Normalize donor snapshots to `world-model/adapters/*` and validate deterministic copy + mapping integrity.
+
+Source of truth:
+
+- `world-model/scripts/build_adapter_snapshots.py`
+- `world-model/scripts/check_phase_2_snapshots.py`
+- `world-model/scripts/gates/phase_2_gate.py`
 
 ## Dependencies
 
-- Phase 0 complete
-- Phase 1 complete
-- adapter copy policy documented
-- concept families and manifests available
+- Phase 0 boundary scope split in place
+- Phase 1 canonical contracts available
+- donor source roots accessible for snapshot copy
 
-## Subphases
+## Deliverable Surface
 
-### 2.1 Snapshot selection
+For each donor (`mythforge`, `orbis`, `adventure-generator`):
 
-Deliverables:
+- `adapters/<donor>/manifest.yaml`
+- `adapters/<donor>/source-snapshot/`
+- `adapters/<donor>/mappings/concept-map.yaml`
+- `adapters/<donor>/fixtures/`
+- `adapters/<donor>/tests/`
 
-- list of required source files per donor
-- list of explicitly excluded source files per donor
-- selection rationale for each file group
+Shared:
 
-Acceptance:
+- `adapters/concept-family-registry.yaml`
+- `phase-2-snapshot-build-report.json`
+- `phase-2-snapshot-integrity-report.json`
 
-- every copied file has a reason for existing
-- every excluded file has a reason for being excluded
+## Required Checks
 
-### 2.2 Mythforge snapshot
+1. Build snapshots:
 
-Deliverables:
+```powershell
+python world-model/scripts/build_adapter_snapshots.py --all
+```
 
-- copied trunk identity material
-- copied entity material
-- copied schema binding material
-- copied event/history material
-- copied relation/asset/location material
+2. Validate snapshot integrity:
 
-Acceptance:
+```powershell
+python world-model/scripts/check_phase_2_snapshots.py
+```
 
-- Mythforge snapshot covers trunk semantics only
-- donor shell assumptions are excluded
+3. Run gate:
 
-### 2.3 Orbis snapshot
-
-Deliverables:
-
-- copied simulation profile material
-- copied domain toggle material
-- copied snapshot/event material
-- copied domain config material
-
-Acceptance:
-
-- Orbis snapshot covers simulation semantics only
-- standalone dashboard assumptions are excluded
-
-### 2.4 Adventure snapshot
-
-Deliverables:
-
-- copied workflow/session material
-- copied checkpoint/progress material
-- copied generated-output material
-- copied location/adventure linkage material
-
-Acceptance:
-
-- Adventure snapshot covers workflow semantics only
-- unrelated navigation/tool surfaces are excluded
-
-### 2.5 Snapshot manifests
-
-Deliverables:
-
-- manifest per donor
-- source root declaration
-- included path list
-- excluded path list
-- source kind declaration
-- expected concept family declaration
-- default promotion class declaration
-
-Acceptance:
-
-- snapshots are reproducible
-- a future agent can re-run the snapshot copy from the manifest
-
-### 2.6 Snapshot hashing and versioning
-
-Deliverables:
-
-- stable hash or fingerprint for each snapshot
-- snapshot version marker
-- change detection notes
-
-Acceptance:
-
-- the final app can detect when an adapter snapshot changed
-
-## Harness
-
-- snapshot completeness check
-- exclusion-path check
-- provenance check
-- adapter mapping check
-- snapshot fingerprint check
+```powershell
+python world-model/scripts/run_harness.py --phase 2
+```
 
 ## Exit Criteria
 
-- every donor has a frozen snapshot
-- every copied file is traceable to a manifest entry
-- every copied concept maps to a canonical target or reference-only classification
-
-## Failure Cases
-
-- snapshot depends on live donor code
-- copied files are missing provenance
-- excluded files are accidentally copied
-- snapshot changes are not detectable
+- manifests are strict-valid with no placeholders
+- snapshot fingerprints match copied files
+- mappings cover declared concept families
+- mandatory canonical keys are covered (`world`, `entity`, `location`, `city/settlement`, `region`, `biome`, `dungeon`, `landmark`, `relation`, `asset`, `workflow`, `simulation`, `event`, `projection`, `schema-binding`)
+- legacy `world-model/snapshots/*` is audit-only and non-blocking

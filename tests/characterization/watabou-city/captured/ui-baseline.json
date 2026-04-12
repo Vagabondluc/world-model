@@ -1,0 +1,19 @@
+{
+  "donor": "watabou-city",
+  "basis": "clean-room implementation",
+  "panels": [
+    "City layout",
+    "Seed controls",
+    "Render options"
+  ],
+  "controls": [
+    "Regenerate city",
+    "Adjust seed",
+    "Export map"
+  ],
+  "visibleStates": [
+    "no seed",
+    "no layout generated",
+    "no export selected"
+  ]
+}

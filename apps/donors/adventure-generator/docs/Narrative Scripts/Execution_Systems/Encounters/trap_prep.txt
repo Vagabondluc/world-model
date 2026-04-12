@@ -1,0 +1,81 @@
+# LLM Guidelines for Trap Generation and Execution Document
+
+As an LLM, your task is to create a comprehensive document for generating and running traps in a tabletop roleplaying game. This document should provide a systematic approach to trap creation that challenges both players and their characters while maintaining fairness and excitement.
+
+## Output File
+Generate a file named "trap_generator_and_runner.md" with the following structure:
+
+1. Introduction
+2. Trap Component Table
+3. Number Matrix
+4. Generated Traps
+5. Running Traps Effectively
+
+## Section Details
+
+### 1. Introduction
+- Explain the purpose of the document: to create engaging, fair traps that challenge both players and characters.
+- Emphasize the importance of giving players choices and time to react.
+- Briefly outline the trap generation process.
+
+### 2. Trap Component Table
+Create a table with the following columns:
+- Clue: What reveals a possible trap?
+- Trigger: How is the trap activated?
+- Danger: What happens when the trap is sprung?
+- Obscure: How is the trap hidden?
+
+Fill this table with exactly 6 entries for each column. Ensure variety and creativity in the options.
+
+If a specific theme is provided by the user, ensure all entries in the table adhere to this theme. For example, if the theme is "ancient temple", all clues, triggers, dangers, and obscuring methods should fit within that context.
+
+### 3. Number Matrix
+Generate a 3x4 matrix of random numbers between 1 and 6. This will be used to select components from the Trap Component Table.
+
+### 4. Generated Traps
+Using the Number Matrix in conjunction with the Trap Component Table, generate 3 unique traps. For each trap:
+- Select one item from each column of the Trap Component Table based on the numbers in the corresponding row of the matrix.
+- Combine these components into a cohesive trap description.
+- Ensure the trap follows these principles:
+  - It's not instantly lethal.
+  - It gives players time to react and make choices.
+  - It challenges both player skill (through reasoning and quick thinking) and character abilities (through die rolls).
+- If a theme was provided, ensure the final trap description fits within that theme.
+
+### 5. Running Traps Effectively
+Provide guidelines for Game Masters on how to run traps effectively:
+
+a. Proper Setup
+   - Emphasize the importance of clear, detailed descriptions that include potential clues.
+   - Explain how to present information without giving away the trap's presence.
+
+b. Player Engagement
+   - Encourage GMs to allow players to use reasoning and problem-solving skills.
+   - Provide examples of how to reward creative thinking.
+
+c. Character Challenges
+   - Explain when and how to call for ability checks or saving throws.
+   - Provide guidelines for setting appropriate difficulty levels for these checks.
+
+d. Trap Activation and Consequences
+   - Stress the importance of describing the trap's activation in stages, giving players time to react.
+   - Provide examples of how to narrate trap effects dramatically without being instantly lethal.
+
+e. Resolving Trap Encounters
+   - Offer suggestions for various ways players might overcome or bypass traps.
+   - Explain how to adjudicate player actions fairly and consistently.
+
+f. Learning from Traps
+   - Suggest ways for characters to gain information about future traps based on their experiences.
+   - Explain how to use traps to build tension and atmosphere in the game world.
+
+## Additional Instructions
+
+1. Use clear, concise language throughout the document.
+2. Provide specific examples to illustrate key points.
+3. Use markdown formatting for better readability and organization.
+4. Include tips and alternate suggestions to increase flexibility in trap design and execution.
+5. Emphasize the balance between challenge and fairness throughout the document.
+6. If a theme is provided, ensure it is consistently applied throughout the entire document, including examples and suggestions.
+
+Remember, your task is to generate a complete, ready-to-use document for creating and running engaging traps in a tabletop RPG. Ensure all necessary information is included and well-organized, and that any specified theme is respected throughout the document.

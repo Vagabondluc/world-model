@@ -1,0 +1,175 @@
+{
+  "donorOrder": [
+    "mythforge",
+    "orbis",
+    "adventure-generator",
+    "mappa-imperium",
+    "dawn-of-worlds",
+    "faction-image",
+    "watabou-city",
+    "encounter-balancer"
+  ],
+  "donors": {
+    "mythforge": {
+      "id": "mythforge",
+      "label": "Mythforge",
+      "classification": "app donor",
+      "route": "/donor/mythforge",
+      "vendoredRoot": "world-model/apps/donors/mythforge",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/mythforge/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/mythforge/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/mythforge.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/mythforge/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/mythforge.conformance.test.tsx",
+      "compareHint": "Runnable donor UI with a live source app in the workspace.",
+      "summary": "World authoring donor with explorer, workspace, dialogs, and canonical save/open affordances.",
+      "sourceStatus": "Live donor source app exists in the workspace.",
+      "sourceRoot": "mythforge/",
+      "sourceUiUrl": "http://127.0.0.1:3000"
+    },
+    "orbis": {
+      "id": "orbis",
+      "label": "Orbis",
+      "classification": "app donor",
+      "route": "/donor/orbis",
+      "vendoredRoot": "world-model/apps/donors/orbis",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/orbis/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/orbis/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/orbis.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/orbis/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/orbis.conformance.test.tsx",
+      "compareHint": "Real donor UI and simulation semantics fold through the canonical data layer.",
+      "summary": "Simulation donor defining domain toggles, fidelity, snapshots, and event-stream review.",
+      "sourceStatus": "True Orbis source root exists in the workspace.",
+      "sourceRoot": "to be merged/true orbis/Orbis Spec 2.0/"
+    },
+    "adventure-generator": {
+      "id": "adventure-generator",
+      "label": "Adventure Generator",
+      "classification": "app donor",
+      "route": "/donor/adventure-generator",
+      "vendoredRoot": "world-model/apps/donors/adventure-generator",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/adventure-generator/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/adventure-generator/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/adventure-generator.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/adventure-generator/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/adventure-generator.conformance.test.tsx",
+      "compareHint": "Workflow donor preserved as the source UI, with canonical data translation underneath.",
+      "summary": "Workflow donor defining guided steps, checkpoints, progress, and generated-output review.",
+      "sourceStatus": "Adventure Generator source tree lives in the workspace.",
+      "sourceRoot": "to be merged/dungeon generator/"
+    },
+    "mappa-imperium": {
+      "id": "mappa-imperium",
+      "label": "Mappa Imperium",
+      "classification": "app donor",
+      "route": "/donor/mappa-imperium",
+      "vendoredRoot": "world-model/apps/donors/mappa-imperium",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/mappa-imperium/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/mappa-imperium/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/mappa-imperium.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/mappa-imperium/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/mappa-imperium.conformance.test.tsx",
+      "compareHint": "World-era donor with hex-spatial and collaborative-session behavior.",
+      "summary": "World-era donor defining era timelines, territory, biomes, and collaborative worldbuilding.",
+      "sourceStatus": "Runnable donor app is documented in the workspace.",
+      "sourceRoot": "to be merged/mappa imperium/"
+    },
+    "dawn-of-worlds": {
+      "id": "dawn-of-worlds",
+      "label": "Dawn of Worlds",
+      "classification": "app donor",
+      "route": "/donor/dawn-of-worlds",
+      "vendoredRoot": "world-model/apps/donors/dawn-of-worlds",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/dawn-of-worlds/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/dawn-of-worlds/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/dawn-of-worlds.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/dawn-of-worlds/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/dawn-of-worlds.conformance.test.tsx",
+      "compareHint": "World-object donor with turn-based and multiplayer protocol behavior.",
+      "summary": "Collaborative worldbuilding donor with world kinds, turns, and multiplayer session state.",
+      "sourceStatus": "Runnable donor app is documented in the workspace.",
+      "sourceRoot": "to be merged/world-builder-ui/"
+    },
+    "faction-image": {
+      "id": "faction-image",
+      "label": "Sacred Sigil Generator",
+      "classification": "app donor",
+      "route": "/donor/faction-image",
+      "vendoredRoot": "world-model/apps/donors/faction-image",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/faction-image/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/faction-image/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/faction-image.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/faction-image/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/faction-image.conformance.test.tsx",
+      "compareHint": "Asset-sigil donor with icon discovery and layer composition.",
+      "summary": "Sigil generator donor with layer composition, icon discovery, and variant exploration.",
+      "sourceStatus": "Runnable donor app is documented in the workspace.",
+      "sourceRoot": "to be merged/faction-image/"
+    },
+    "watabou-city": {
+      "id": "watabou-city",
+      "label": "Watabou City",
+      "classification": "clean-room app donor",
+      "route": "/donor/watabou-city",
+      "vendoredRoot": "world-model/apps/donors/watabou-city",
+      "mountKind": "rehost-mounted",
+      "implementationStatus": "rehost-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/watabou-city/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/watabou-city/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/watabou-city.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/watabou-city/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/watabou-city.conformance.test.tsx",
+      "compareHint": "Clean-room city-layout app donor; exactness requires rehosting the clean-room UI, not the GPL reference tree.",
+      "summary": "Procedural city-layout donor with a clean-room implementation that must be mounted as donor UI.",
+      "sourceStatus": "Clean-room Watabou City implementation exists in the workspace and is eligible for vendoring.",
+      "sourceRoot": "to be merged/watabou-city-clean-room/2nd/"
+    },
+    "encounter-balancer": {
+      "id": "encounter-balancer",
+      "label": "Encounter Balancer Scaffold",
+      "classification": "scaffold-copy donor",
+      "route": "/donor/encounter-balancer",
+      "vendoredRoot": "world-model/apps/donors/encounter-balancer",
+      "mountKind": "scaffold-mounted",
+      "implementationStatus": "scaffold-mounted",
+      "canonicalBridge": {
+        "projector": "world-model/apps/unified-app/src/donors/bridges/encounter-balancer/projector.ts",
+        "actionTranslator": "world-model/apps/unified-app/src/donors/bridges/encounter-balancer/actionTranslator.ts",
+        "tests": ["world-model/apps/unified-app/tests/conformance/encounter-balancer.bridge.test.ts"]
+      },
+      "characterizationBaseline": "world-model/tests/characterization/encounter-balancer/captured/",
+      "conformanceSuite": "world-model/apps/unified-app/tests/conformance/encounter-balancer.conformance.test.tsx",
+      "compareHint": "One scaffold donor represented by four identical roots.",
+      "summary": "Encounter balancing scaffold with Balancer and Environmental tabs across four copied roots.",
+      "sourceStatus": "Four identical scaffold copies share one donor baseline.",
+      "sourceRoot": "to be merged/apocalypse/ + character-creator/ + deity creator/ + genesis/"
+    }
+  }
+}

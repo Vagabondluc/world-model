@@ -1,0 +1,23 @@
+Faction Downtime Guidelines:
+
+1. Resolving Faction Clocks:
+   - During each downtime period, roll 1d6 for each active faction clock.
+   - On a roll of 1, fill in one segment of the clock, representing the faction's progress.
+   - Once a clock is fully filled, the faction has achieved their goal.
+   - Determine the fallout and consequences of this, then immediately create a new faction clock for the faction's next agenda.
+
+2. Alternative Resolution Methods:
+   - For a more complex resolution, assign each faction clock a difficulty DC and have the faction make an appropriate skill check using their Tier proficiency.
+   - This can cause faction clocks to resolve faster, with failed checks resulting in complications for the faction.
+   - Alternatively, use a blended approach, rolling 1d4 and only making a skill check on a result of 1.
+
+3. Player Character Involvement:
+   - Allow PCs to actively assist or oppose faction clocks, either through adventures or by using their own downtime actions.
+   - Other factions may also choose to aid or hinder each other's clocks, creating a web of competing agendas.
+
+4. Intersecting Faction Progress with PCs:
+   - Whenever a faction clock segment is filled or removed, describe the concrete events and developments that have occurred.
+   - Determine how these faction-driven events can intersect with the PCs, providing them with information, opportunities, obstacles, or consequences to respond to.
+   - This ensures the faction activities create a living, reactive city environment that the PCs can actively engage with.
+
+By following these guidelines, the LLM can create a diverse and dynamic set of factions that drive the ongoing activity and intrigue within the urban campaign setting, providing the PCs with a rich world to explore and interact with.

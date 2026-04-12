@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "name": "Encounter Design",
+    "category": "Encounters",
+    "description": "Generates a structured encounter for a party on a journey, including environmental effects, challenges, opponent details, and XP rewards.",
+    "version": "1.0"
+  },
+  "inputs": [
+    {
+      "name": "party_level",
+      "type": "integer",
+      "label": "Party Level",
+      "description": "The average level of the player characters.",
+      "default": 3,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "party_size",
+      "type": "integer",
+      "label": "Party Size",
+      "description": "The number of adventurers in the party.",
+      "default": 4,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "journey_context",
+      "type": "string",
+      "label": "Journey Context",
+      "description": "Briefly describe the party's current journey or surroundings (e.g., 'travelling through a swamp to reach an ancient ruin').",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "environment_effect",
+      "type": "string",
+      "label": "Environmental Effect",
+      "description": "Describe an environmental effect and its in-game mechanics (e.g., 'Heavy rain makes stealth checks harder but extinguishes fires').",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "challenge_type",
+      "type": "enum",
+      "label": "Challenge Type",
+      "description": "Choose the primary non-combat challenge for the encounter.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": [
+        "skill_challenge",
+        "roleplay_scenario"
+      ]
+    },
+    {
+      "name": "challenge_description",
+      "type": "string",
+      "label": "Challenge Setup",
+      "description": "Describe the skill challenge or roleplay scenario the party must overcome.",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "opponent_source",
+      "type": "string",
+      "label": "Opponent Statblock or Source",
+      "description": "Provide the name, statblock, or sourcebook reference for the primary opponent(s).",
+      "default": null,
+      "item_schema": null,
+      "fields": null,
+      "options": null
+    },
+    {
+      "name": "objectives",
+      "type": "list",
+      "label": "Encounter Objectives",
+      "description": "List the primary objectives for the players to complete the encounter, which will determine the XP reward.",
+      "default": null,
+      "item_schema": {
+        "name": "objective",
+        "type": "string",
+        "label": "Objective",
+        "description": null,
+        "default": null,
+        "item_schema": null,
+        "fields": null,
+        "options": null
+      },
+      "fields": null,
+      "options": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "encounter_design",
+      "type": "object",
+      "label": "Generated Encounter",
+      "description": "A complete, structured encounter design ready for play.",
+      "default": null,
+      "item_schema": null,
+      "fields": [
+        {
+          "name": "encounter_summary",
+          "type": "string",
+          "label": "Encounter Summary",
+          "description": "A brief, one-paragraph introduction to the encounter, setting the scene.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "environment_details",
+          "type": "string",
+          "label": "Environmental Details",
+          "description": "A detailed description of the environment, its effects in gameplay, and how it impacts both players and opponents.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "challenge_setup",
+          "type": "string",
+          "label": "Challenge Setup",
+          "description": "An explanation of the skill challenge or roleplay scenario, including the skills required and potential consequences for failure.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "opponent_profile",
+          "type": "object",
+          "label": "Opponent Profile",
+          "description": "Details of the encounter's antagonists.",
+          "default": null,
+          "item_schema": null,
+          "fields": [
+            {
+              "name": "name_and_source",
+              "type": "string",
+              "label": "Name and Statblock",
+              "description": "The opponent's name and their game statistics or source.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "goals",
+              "type": "string",
+              "label": "Goals",
+              "description": "What the opponent aims to achieve in this encounter.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            },
+            {
+              "name": "tactics",
+              "type": "string",
+              "label": "Tactics",
+              "description": "How the opponent behaves, describing their combat and non-combat strategies.",
+              "default": null,
+              "item_schema": null,
+              "fields": null,
+              "options": null
+            }
+          ],
+          "options": null
+        },
+        {
+          "name": "xp_reward",
+          "type": "integer",
+          "label": "Total XP Reward",
+          "description": "The calculated experience points awarded for completing the encounter objectives.",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        },
+        {
+          "name": "estimated_playtime",
+          "type": "string",
+          "label": "Estimated Playtime",
+          "description": "An estimate of the real-world time to run the encounter (e.g., '45-60 minutes').",
+          "default": null,
+          "item_schema": null,
+          "fields": null,
+          "options": null
+        }
+      ],
+      "options": null
+    }
+  ]
+}

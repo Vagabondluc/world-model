@@ -1,0 +1,30 @@
+{
+  "loom": {
+    "stage": "synthesize",
+    "seed": "westmarsh-mission-2026-03-31-001"
+  },
+  "mission": {
+    "id": "M-0001",
+    "version": "0.1",
+    "title": "The Missing Ledger",
+    "subtitle": "A swift investigation for the Eldwyn Guild",
+    "type": "Investigation",
+    "level_range": "3-5",
+    "difficulty": "Medium",
+    "summary": "A ledger containing guild debts has vanished; clues point to a nearby manor and an inside hand.",
+    "stakes": "Guild bankruptcy vs. reputational ruin",
+    "primary_objective": "Recover the ledger and identify the thief",
+    "secondary_objectives": ["Protect innocent bystanders","Recover stolen side documents"],
+    "start_location": { "name": "Eldwyn Guildhall", "description": "A drafty meeting hall where the ledger was last seen." },
+    "key_locations": [ { "name": "Merchant Manor", "description": "Opulent mansion with a guarded back entrance." } ],
+    "key_npcs": [ { "name": "Master Harrow", "role": "Guild Accountant", "motivation": "Protect the guild's solvency", "description": "Stooped, precise, always watching ledgers." } ],
+    "scenes": [ { "id": 1, "title": "Ledger Discovery", "setting": "Guildhall, dawn", "beats": ["Players find the ledger missing","Witness report of a cloaked figure"], "complications": ["Security footage tampered"], "npcs": ["Master Harrow"] } ],
+    "rewards": { "xp": 300, "items": [ { "name": "Guild Favor", "description": "Improves standing with Eldwyn Guild" } ], "social": "Increased trade access" },
+    "failed_outcomes": ["Guild loses access to merchant loans"],
+    "hooks": [ { "tag": "H1", "summary": "Stranger in the night", "detail": "Witness claims a cloaked figure left towards the Merchant Manor." } ],
+    "tags": ["investigation","urban"],
+    "gm_advice": "Push clues slowly; reward roleplay investigations.",
+    "seed": "westmarsh-mission-2026-03-31-001"
+  },
+  "text": "The guild ledger is missing and Master Harrow is panicking. A cloaked figure was seen near the Merchant Manor. Clue chain: tampered binding → witness testimony → manor back alley. Reward: guild favour and trade access. GM tip: let players drive the investigation pace."
+}

@@ -1,0 +1,48 @@
+# Dungeon Room Designer
+
+## Objective
+Create diverse and engaging rooms for your dungeon adventure.
+
+## Instructions
+1. Determine Room Type:
+   - Scenic: Atmosphere and flavor
+   - Challenge: Traps, puzzles, or skill tests
+   - Combat: Encounter areas
+   - Twist: Surprising elements or revelations
+   - Reward: Treasure or important discoveries
+
+2. Define Room Dimensions:
+   - Decide on shape (square, circular, irregular)
+   - Set dimensions (consider map scale)
+
+3. Describe Base Features:
+   - Detail walls, floor, and ceiling
+   - Note any architectural elements
+
+4. Add Key Elements:
+   - Include at least three interactive elements
+   - Ensure elements fit room type and purpose
+
+5. Incorporate Sensory Details:
+   - Address at least three senses
+   - Include two irrelevant-but-cool details
+
+6. Design Challenges or Encounters:
+   - For challenge rooms, create puzzle or skill test
+   - For combat rooms, plan enemy placement and tactics
+
+7. Place Treasure or Rewards:
+   - Decide on appropriate treasures or information
+   - Determine how rewards are hidden or protected
+
+8. Consider Player Interaction:
+   - Anticipate possible player actions
+   - Prepare for common skill checks or spells
+
+9. Write Room Description:
+   - Craft engaging introductory text
+   - Detail individual elements thoroughly
+
+10. Review and Refine:
+    - Ensure room fits overall dungeon theme
+    - Check for balance and player engagement

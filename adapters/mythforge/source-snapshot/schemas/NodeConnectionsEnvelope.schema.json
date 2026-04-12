@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Node Connections Envelope",
+  "description": "Container vocabulary: the Node Connections payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope retained for compatibility.",
+  "type": "object",
+  "properties": {
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "from",
+          "to"
+        ],
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "workflow bundle",
+  "x-mythforge-entity-companion": "NodeConnections.schema.json"
+}

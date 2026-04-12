@@ -1,0 +1,118 @@
+
+> mappa-imperium-refactor@0.3.0 test:run
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90mD:/antigravity/mappa imperium[39m
+
+ [32mÔ£ô[39m src/components/shared/SharedComponents.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+[90mstdout[2m | src/services/websocketService.test.ts[2m > [22m[2mwebsocketService[2m > [22m[2mconnect logs message
+[22m[39mConnecting to websocket...
+
+[90mstdout[2m | src/services/websocketService.test.ts[2m > [22m[2mwebsocketService[2m > [22m[2mdisconnect logs message
+[22m[39mDisconnecting websocket...
+
+[90mstdout[2m | src/services/websocketService.test.ts[2m > [22m[2mwebsocketService[2m > [22m[2msendMessage logs message
+[22m[39mSending message: hello
+
+ [32mÔ£ô[39m src/services/websocketService.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mÔ£ô[39m src/components/shared/HelpTooltip.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32mÔ£ô[39m src/components/ui/Card.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32mÔ£ô[39m src/components/shared/StepProgressBar.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 58[2mms[22m[39m
+ [32mÔ£ô[39m src/utils/timelineCalculator.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mÔ£ô[39m src/components/shared/DicePip.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32mÔ£ô[39m src/hooks/useOnClickOutside.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32mÔ£ô[39m src/components/shared/ElementTooltip.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32mÔ£ô[39m src/components/ui/Button.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 242[2mms[22m[39m
+ [31mÔØ»[39m src/components/shared/SimpleComponents.test.tsx [2m([22m[2m6 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 203[2mms[22m[39m
+[31m     [31m├ù[31m renders when open[39m[32m 30[2mms[22m[39m
+     [32mÔ£ô[39m renders era name[32m 4[2mms[22m[39m
+     [32mÔ£ô[39m renders observer message[32m 4[2mms[22m[39m
+     [32mÔ£ô[39m renders title when open[32m 2[2mms[22m[39m
+     [32mÔ£ô[39m renders when open[32m 142[2mms[22m[39m
+     [32mÔ£ô[39m renders markdown content[32m 18[2mms[22m[39m
+ [32mÔ£ô[39m src/services/exportService.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32mÔ£ô[39m src/utils/cn.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32mÔ£ô[39m src/stores/gameStore.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 1 ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+
+ FAIL  src/components/shared/SimpleComponents.test.tsx > ConfirmationModal > renders when open
+TestingLibraryElementError: Found multiple elements with the text: Confirm
+
+Here are the matching elements:
+
+Ignored nodes: comments, script, style
+<h2
+  class="text-xl font-bold mb-2"
+>
+  Confirm
+</h2>
+
+Ignored nodes: comments, script, style
+<button
+  class="px-4 py-2 text-white rounded hover:opacity-90 bg-red-600"
+>
+  Confirm
+</button>
+
+(If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50"
+    >
+      <div
+        class="bg-white p-6 rounded shadow-lg max-w-md w-full"
+      >
+        <h2
+          class="text-xl font-bold mb-2"
+        >
+          Confirm
+        </h2>
+        <div
+          class="mb-6 text-gray-700"
+        >
+          Are you sure?
+        </div>
+        <div
+          class="flex justify-end gap-3"
+        >
+          <button
+            class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+          >
+            Cancel
+          </button>
+          <button
+            class="px-4 py-2 text-white rounded hover:opacity-90 bg-red-600"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ ÔØ» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ÔØ» getElementError node_modules/@testing-library/dom/dist/query-helpers.js:20:35
+ ÔØ» getMultipleElementsFoundError node_modules/@testing-library/dom/dist/query-helpers.js:23:10
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:55:13
+ ÔØ» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ÔØ» src/components/shared/SimpleComponents.test.tsx:14:23
+     12|     it('renders when open', () => {
+     13|         render(<ConfirmationModal isOpen={true} title="Confirm" messagÔÇª
+     14|         expect(screen.getByText('Confirm')).toBeInTheDocument();
+       |                       ^
+     15|     });
+     16| });
+
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/1]ÔÄ»
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m13 passed[39m[22m[90m (14)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m51 passed[39m[22m[90m (52)[39m
+[2m   Start at [22m 10:29:47
+[2m   Duration [22m 8.14s[2m (transform 965ms, setup 10.44s, import 1.73s, tests 818ms, environment 43.61s)[22m
+

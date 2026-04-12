@@ -1,0 +1,95 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Factions Creation".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Faction & Downtime Dynamics
+
+```text
++--------------------------------------------------------------------------------+
+|  [Faction & Downtime Dashboard: The Living World]                     [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ FACTION HUB ] [ CLOCK MONITOR ] [ CONFLICT SIM ] [ DOWNTIME LOG ]          |
++--------------------------------------------------------------------------------+
+|  ACTIVE FACTIONS (6/8)                 |  CONFLICT SIMULATOR                   |
+|  [ Tier 3 ] The Scrapper Guild         |  Party A: [ The Scrappers ]           |
+|  [ Tier 2 ] The Frost-Wraith Cabal     |  Party B: [ Iron-Mine Corp ]          |
+|  [ Tier 4 ] The High Council           |  [ ROLL CONFLICT RESULT ]             |
+|  [ Add New Faction ]                   |  Outcome: [ Faction Damaged (Wraiths) ]|
++----------------------------------------+---------------------------------------+
+|  CLOCK MONITOR (Current Agendas)       |  DOWNTIME LOG (Past Move)             |
+|  Scrappers: [||||--] (Find Iron Vein)   |  - High Council filled segment 5      |
+|  Wraiths:   [||----] (Summon Spirit)    |  - Result: Taxes raised in district.  |
+|  Council:   [||||||] (Martial Law)      |  - PC Hook: Silas needs help hidden.  |
++----------------------------------------+---------------------------------------+
+|  RELATIONSHIP WEB                      |  SIMULATOR OUTPUT                     |
+|  Scrappers <--- enemy ---> Wraiths     |  "The Wraiths have lost territory in  |
+|  Council  <--- ally  ---> Scrappers    |  The Shadow Market. Map update: +1."  |
++--------------------------------------------------------------------------------+
+|  [Resolve All Clocks] [Export City Status] [Sync to Map]               [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Faction & Downtime Dynamics
+
+## Component Architecture
+- **Categorical Faction Hub:** A management pane based on the `factions_creation.txt` template. It defines the "Tier" (power level) of each group, which acts as a global variable for their "Proficiency Bonus" in conflict rolls.
+- **Segmented Clock Monitor:** A visual representation of the progress-tracking mechanic from `faction_downtime.txt`. It supports 4, 6, and 8-segment clocks, highlighting the "Threshold of Resolution" where a faction achieves its goal.
+- **Probabilistic Conflict Sim:** An interactive module based on the `faction-conflict-simulator.txt`. It uses die-roll logic (1d6 for occurrence, random tables for participants and outcomes) to simulate "Living World" changes while the PCs are off adventuring.
+- **Intersection Event Engine:** A log that bridges the gap between faction mechanics and player narrative. It follows Rule 4 of the Downtime script: "Intersection Faction Progress with PCs," generating concrete hooks like "Additional enemy waves if initial foes are not swiftly defeated."
+
+## Interaction Logic
+- **The "Roll Faction Clocks" Global Action:** A single-button resolution that rolls for all active factions simultaneously (Rule 1: 1d6, segments fill on 1), or allows for "Complex Resolution" via Skill Checks + DC.
+- **Dynamic Map Syncing:** Conflict outcomes (Stalemate, Damaged, United) are linked to the "Dungeon State" (Step 10 of Conflict script), suggesting automated updates to maps and encounter tables.
+- **Allies/Enemies Cascade:** Filling a clock for one faction automatically triggers checks for their "Allies" (who might progress) or "Enemies" (who might take complications).
+
+## Visual Design
+- **Strategic & Schematic:** The UI uses a "Grand Strategy" aesthetic—clean lines, blueprint-style icons, and a clear hierarchy of metadata.
+- **Status Contrast:** Active clocks use bright green/amber fill levels, while "Damaged" or "Exhausted" factions are greyed out or have "Cracked" status icons.
+- **Web-Based Relationship Graphs:** The Allies/Enemies links are shown as a dynamic node graph (Mermaid style), where line thickness indicates the strength of the bond or rivalry.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: The Eldwyn Faction Report
+
+### **1. Active Factions**
+| Faction | Tier | Goal (Clock) | Status |
+|---|---|---|---|
+| **The Scrapper Guild** | 3 (+4) | Find the Iron Vein [6/8] | Active / Aggressive |
+| **The Frost-Wraiths** | 2 (+3) | Summon the Lord [2/6] | Damaged (Conflict) |
+| **The High Council** | 4 (+5) | Enforce Martial Law [4/4] | **RESOLVED** |
+
+---
+
+### **2. Conflict Simulation Result (Last Check: Between Sessions)**
+- **Participants:** The Frost-Wraiths vs. The Scrapper Guild.
+- **Outcome:** Faction Damaged (Frost-Wraiths).
+- **Narrative:** The Scrappers conducted a daylight raid on the Shadow Market. The Wraiths were forced to retreat to the lower tunnels.
+- **Mechanical Change:** Subtract 1 segment from the Wraiths' "Summon" clock. Update 'Shadow Market' map key to: "Scrapper Outpost."
+
+---
+
+### **3. Downtime Resolution: High Council**
+- **Trigger:** Faction Clock [4/4] Filled.
+- **Consequence:** Martial Law declared in the Scribe's District.
+- **Living World Event:** Iron-golem sentries have been stationed at every intersection. Curfew is now 8 PM.
+- **PC Hook:** Silas Vane is trapped in the 'Ink & Talon' tavern. He needs the party to smuggle him out past the golem checkpoints.
+
+---
+
+### **4. Agent Dossiers**
+- **Scrapper Agent:** 'Grip' (Dwarf Brute). Fiercely loyal. Uses a hydraulic grapple to "Ambusher" PCs into close combat.
+- **Wraith Agent:** 'The Pale Voice' (Specter). Uses "Soul Bolts" to harass intruders from the Ethereal Plane.
+- **Council Agent:** 'Captain Vex' (Human Soldier). Rigidly Lawful. Will try to resolve conflicts via "Negotiation" before calling the golems.
+

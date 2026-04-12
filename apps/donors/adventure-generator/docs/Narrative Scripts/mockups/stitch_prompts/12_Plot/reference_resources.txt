@@ -1,0 +1,93 @@
+
+# SYSTEM PROMPT FOR STITCH / V0.DEV
+
+**GOAL:**
+Build a high-fidelity React + Tailwind CSS component for the "Reference Resources".
+Use 'lucide-react' for icons. Ensure the UI is responsive and accessible.
+
+---
+
+## 1. VISUAL BLUEPRINT (WIREFRAME)
+# UI Wireframe: Narrative Engine & Tactical Lexicon
+
+```text
++--------------------------------------------------------------------------------+
+|  [Narrative Engine & Tactical Lexicon]                                [?] [X]  |
++--------------------------------------------------------------------------------+
+|  [ PLOT ENGINES ] [ TWIST DECK ] [ TACTICAL ROLES ] [ WORKFLOWS ] [ TONE ]   |
++--------------------------------------------------------------------------------+
+|  PLOT ENGINE: [ Elementary, My Dear Watson ] |  TACTICAL ROLE INJECTOR         |
+|  Tension: [ Truth vs. Confusion / Misdirection ] |  Target: [ Goblin King ]      |
+|  Engine: [ Advancement via Investigation ]   |  Role: [ LEADER ]             |
+|  Scenes: [ Interrogation, Crime Scene ]      |  Action: [ Buff Allies (+2 AC)]|
++----------------------------------------------+---------------------------------+
+|  UNIVERSITY TWIST DECK                       |  WORKFLOW: [ Hook vs. Meat ]    |
+|  [!] Sympathetic Villain                     |  [Initial Hook] -> [Real Meat]  |
+|  "The Antagonist's goals are justified."     |  [Rescue Miss]  -> [Blackmail]  |
++----------------------------------------------+---------------------------------+
+|  EVENT GENERATOR                             |  ATMOSPHERE                     |
+|  Area: [ Wilderness ]  Tone: [ Suspenseful ] |  Selected: [ Grim ]            |
+|  Result: [ "Footprints lead into a pond." ]  |  Constraint: [ No Secrecy ]     |
++--------------------------------------------------------------------------------+
+|  [Inject Plot Engine] [Apply Role to VTT] [Draw 2 Twists]              [Done]  |
++--------------------------------------------------------------------------------+
+```
+
+
+---
+
+## 2. TECHNICAL SPECIFICATIONS (LOGIC & STYLE)
+# UI Explanation: Narrative Engine & Tactical Lexicon
+
+## Component Architecture
+- **Plot Engine Library (Atomic Generators):** A searchable catalog based on the 34 "Core Plot Engines" from `big_list_rpg.md`. It provides structured metadata (Tension, Failure States, Scene Types) for direct injection into a GM's campaign manager.
+- **Tactical Role Overlay System:** Implements the "Creature Roles" from `Reference_CreatureRoles_v1.txt`. It allows GMs to take a generic statblock and apply a "Tactical Filter" (Ambusher, Artillery, Brute, Controller, Leader, Minion) which adds specific behavior prompts and ability mods.
+- **Workflow & Twist Suite:** A meta-processing module based on the "Meta-Rules" section of the reference.
+    - **Hook vs Meat:** A transition wizard that helps plan bait-and-switch narratives.
+    - **Twist Deck:** A virtual card draw system for 18 "Universal Twists" (e.g., Pandora's Box, Score One for the Home Team).
+- **Environmental Event Matrix:** A procedural generator for Wilderness, Urban, and Travel events, filtered by "Tone, Mood, and Perspective" (Grim, Whimsical, Hopeful), ensuring atmospheric consistency.
+
+## Interaction Logic
+- **Constraint Synchronization:** When a "Constraint Play" meta-rule is active, the UI restricts certain "Narrative Engines" or "Tactical Options" (e.g., disabling 'Lethal Force' paths).
+- **Persistence & Mutation Tracking:** Following the logic in the reference script, resolving an engine allows the GM to click "Mutate," which suggests the next engine based on the previous result (e.g., Failed Capture -> Manhunt).
+- **Scale Morphing:** A global toggle that rephrases the selected plot engine for different scopes (Personal, Communal, Regional, Global) while maintaining the "Atomic Logic."
+
+## Visual Design
+- **Lexical & Systematic:** The UI uses a "Codex" layout—clean typography, sidebars for related definitions, and a focus on "Atomic Elements."
+- **Twist Card Aesthetic:** The 18 Twists are displayed as virtual cards with unique iconography to represent their impact (e.g., a "Broken Heart" for Personal Sacrifice).
+- **Synergy Indicators:** When grouping creature roles, the UI displays "Tactical Synergy Sparklines" showing the balance of Ranged vs Melee vs Support.
+
+
+---
+
+## 3. CONTEXT DATA (SAMPLE OUTPUT)
+# Sample Output: The Scribe's Dilemma (Narrative Scene)
+
+### **1. Active Plot Engine: "Blackmail"**
+- **Core Tension:** Agency vs. Coercion.
+- **Meat:** Theron the Inky is being coerced into decrypting the Shadow-Vein by a faction that holds his "Forbidden Verb" theft as leverage.
+- **Narrative Pressure:** Each day Theron complies, the "Living Verb" in his hand becomes more chaotic.
+- **Failure State:** The Verb manifests publicly, causing religious panic in Eldwyn.
+
+---
+
+### **2. Applied Twists (Twist Deck Draw)**
+- **Twist 1: Sympathetic Villain.** The blackmailer is using the knowledge to find a cure for a local plague.
+- **Twist 2: Another Group Failed First.** The party finds the remains of a previous scribe who "complied too long" and was consumed by the Verb.
+
+---
+
+### **3. Tactical Encounter: The Scribe's Vault**
+- **Opponent:** The Obsidian Warden (Base: Golem).
+- **Injected Role: Controller.**
+    - **Tactics:** Instead of just punching, the Warden uses 'Gravity Welts' (DC 15) to pull intruders toward the "Hazard Zones" in the vault.
+- **Supporting Role: Minions (Ink-Swarms).**
+    - **Tactics:** Swarms target the spellcasters to cause "Distracted" conditions.
+
+---
+
+### **4. Atmospheric Event (Wilderness/Grim)**
+- **Event:** "The trail is marked by the smell of ozone and wet ash. You find a bird that has been petrified, not into stone, but into solid ink. It is still warm."
+- **Tone:** Grim / Suspenseful.
+- **Perspective:** Third Person Limited (Through Theron's eyes).
+

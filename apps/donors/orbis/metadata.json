@@ -1,0 +1,5 @@
+{
+  "name": "Orbis 2.0: Planetary Voxel Engine",
+  "description": "A multi-scale planetary terrain synthesizer that visualizes the transition from authoritative hex-based planetary data to deterministic voxel terrain realizations.",
+  "requestFramePermissions": []
+}

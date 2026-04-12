@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Table Envelope",
+  "description": "Container vocabulary: the Table payload is the projection bound to a UUID container. The UUID, schema binding, and append-only history live outside this file. Legacy workflow bundle envelope retained for compatibility.",
+  "type": "object",
+  "properties": {
+    "table": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "seed": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-mythforge-schema-class": "workflow bundle",
+  "x-mythforge-entity-companion": "Table.schema.json"
+}

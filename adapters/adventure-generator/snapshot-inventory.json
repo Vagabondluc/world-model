@@ -1,0 +1,114 @@
+{
+  "donor": "adventure-generator",
+  "snapshot_root": "adapters/adventure-generator/source-snapshot",
+  "source_root": "D:/antigravity/dnd adventure generator/src",
+  "file_count": 21,
+  "fingerprint": "70fe933d8597c74a152fb9f9473be42be6bab1dca23d46cff7d1663eb955d0dc",
+  "files": [
+    {
+      "path": "schemas/adventure.ts",
+      "size": 2053,
+      "sha256": "bebeb3c87355280b2600436568ed9fa40da681a3cb3b1afe8824f30fa824c5b1"
+    },
+    {
+      "path": "schemas/aiLedger.ts",
+      "size": 526,
+      "sha256": "64cd6fb5f41a4b3a3cbbb3bdbf1a3a5e7244887bd9f96d90098bedd7a68c12b9"
+    },
+    {
+      "path": "schemas/campaign.ts",
+      "size": 1805,
+      "sha256": "606a582af8a44b6743cc9a39652a89fb73fb868e0ca1e675aa2a40942d465061"
+    },
+    {
+      "path": "schemas/common.ts",
+      "size": 1757,
+      "sha256": "6a5786f2ae834384de57a7cc7b999e2c49a9e0e640a8b6e12a85f88a458acf7f"
+    },
+    {
+      "path": "schemas/compendium.ts",
+      "size": 293,
+      "sha256": "aac37aeb390f81eb226e4c35c044e2007ca8350702550172ed55f2e69ca7655b"
+    },
+    {
+      "path": "schemas/delve.ts",
+      "size": 2119,
+      "sha256": "ba18a01c6b88c099984d6bd761ca41daf166fe68755c408f887a7713319fc6df"
+    },
+    {
+      "path": "schemas/encounter.ts",
+      "size": 5202,
+      "sha256": "91b77e8b51bd68fe09b3e8a51a9a2a1985a6850b34a55ed6e30cca4cffc8e70f"
+    },
+    {
+      "path": "schemas/encounters/index.ts",
+      "size": 5018,
+      "sha256": "6fb75df0e71612f69ac2671b12b7e2419a06c8237a04697694d3c8f2aab4dc15"
+    },
+    {
+      "path": "schemas/faction.ts",
+      "size": 2065,
+      "sha256": "45e248fd056d4fb4f891f2fd6ee746c22bab9f664a8b90682d6e9f1f05d0068e"
+    },
+    {
+      "path": "schemas/generator.ts",
+      "size": 5346,
+      "sha256": "a7cb1eb5ff52af980323162e351ffc0302ad480f673fb45f9f1d141603bf09d1"
+    },
+    {
+      "path": "schemas/index.ts",
+      "size": 401,
+      "sha256": "ceadd429123dbbcf962b0cd6ea72cdc382ae199dcdd93e8f672f9c02261c35ec"
+    },
+    {
+      "path": "schemas/location.ts",
+      "size": 5628,
+      "sha256": "911d94bb1cef96c0d8e41c54972fcd8003cd3af44a395be45291dd77fe0ed2a6"
+    },
+    {
+      "path": "schemas/loot.ts",
+      "size": 1894,
+      "sha256": "ff895ad4a48eb0749feb85fe60a43a1a83a1afa10a243db7afd8054c7ee10c56"
+    },
+    {
+      "path": "schemas/lore.ts",
+      "size": 1784,
+      "sha256": "d19dc4a45b61be2956b42b1e1f19e1225515bfded47295c389b10dbfbef09850"
+    },
+    {
+      "path": "schemas/npc.ts",
+      "size": 4528,
+      "sha256": "133e2f9a397595954cb4825e473bc47cb734f21290e69f7b9c22c40b112e10b7"
+    },
+    {
+      "path": "schemas/scene.ts",
+      "size": 711,
+      "sha256": "6b2c6366e5e91e83ae34f55a97c4604ae8eaecf0d66d44fd96a2ac32bc080cea"
+    },
+    {
+      "path": "schemas/session.ts",
+      "size": 526,
+      "sha256": "720515826b9d31aa07ba852ac7797c7b522c1cf0c99d5aa7dfbcc0222818d2e5"
+    },
+    {
+      "path": "schemas/tavern.ts",
+      "size": 1386,
+      "sha256": "d3d604fe1117e3871c40bb0c22e2880b950fbe4dbb7102099e7464b543b31588"
+    },
+    {
+      "path": "schemas/trap.ts",
+      "size": 1167,
+      "sha256": "2253107b204f053a23baa718c359f9b03e540a3fa8401b3a9d2f8e0acd815bae"
+    },
+    {
+      "path": "stores/historyStore.ts",
+      "size": 2671,
+      "sha256": "fbbab0b3421b7cb0da8ad53e407077218af94996b8a82af01fe03ac408445c00"
+    },
+    {
+      "path": "stores/workflowStore.ts",
+      "size": 8767,
+      "sha256": "e121026d681e979f22cc65d425cc7e1e4f57fe17cda3a5724972e7d1a45c6b30"
+    }
+  ]
+}

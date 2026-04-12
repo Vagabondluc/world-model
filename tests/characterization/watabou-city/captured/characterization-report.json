@@ -1,0 +1,28 @@
+{
+  "donor": "watabou-city",
+  "label": "Watabou City",
+  "classification": "clean-room app donor",
+  "methodology": "clean-room app characterization",
+  "basis": "clean-room implementation",
+  "sourceInventory": [
+    {
+      "relativePath": "to be merged/watabou-city-clean-room/2nd/",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\to be merged\\watabou-city-clean-room\\2nd",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "relativePath": "world-model/docs/donors/WATABOU_CITY.md",
+      "absolutePath": "D:\\coding\\AI\\Chat-Gpt-Agent\\world-model\\docs\\donors\\WATABOU_CITY.md",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "coverage": {
+    "expectedSources": 2,
+    "existingSources": 2,
+    "missingSources": 0
+  },
+  "parityTarget": "exact clean-room rehost",
+  "unstableSurfaces": []
+}

@@ -1,0 +1,26 @@
+
+Direct-import scan (deliverable): 12 matches written to D:/coding/AI/Chat-Gpt-Agent/world-model/phase-0-direct-imports.json
+Top matches (up to 10):
+ - world-model/crates/world-model-adapters/src/lib.rs:1 -> use schemars::JsonSchema;
+ - world-model/crates/world-model-core/src/bundle.rs:1 -> use crate::{
+ - world-model/crates/world-model-core/src/commands.rs:1 -> use crate::*;
+ - world-model/crates/world-model-core/src/ids.rs:1 -> use schemars::JsonSchema;
+ - world-model/crates/world-model-core/src/lib.rs:6 -> pub use bundle::*;
+ - world-model/crates/world-model-core/src/records.rs:1 -> use crate::{
+ - world-model/crates/world-model-driver/src/main.rs:1 -> use std::{
+ - world-model/crates/world-model-schema/src/lib.rs:1 -> use schemars::{schema::RootSchema, schema_for};
+ - world-model/crates/world-model-schema/src/bin/export-schemas.rs:1 -> use std::{fs, path::PathBuf};
+ - world-model/crates/world-model-specs/src/lib.rs:1 -> use regex::Regex;
+
+Direct-import scan (donor-audit): 75 matches written to D:/coding/AI/Chat-Gpt-Agent/world-model/phase-0-direct-imports-audit.json
+Top matches (up to 10):
+ - mythforge/docs/research/pi-mono/packages/ai/src/utils/oauth/index.ts:37 -> import { antigravityOAuthProvider } from "./google-antigravity.js";
+ - mythforge/src-tauri/src/commands/ollama.rs:1 -> use std::path::PathBuf;
+ - mythforge/src-tauri/src/core/error.rs:1 -> use serde::{Deserialize, Serialize};
+ - mythforge/src-tauri/src/ollama/client.rs:1 -> use directories::ProjectDirs;
+ - mythforge/src-tauri/src/ollama/mod.rs:4 -> pub use client::{OllamaClient, OllamaError, OllamaModel, OllamaRuntime, OllamaSettings};
+ - mythforge/src-tauri/tests/contract_tests.rs:3 -> use std::fs;
+ - mythforge/src-tauri/tests/ollama_generate.rs:1 -> use std::fs;
+ - mythforge/src-tauri/tests/harness/assertions.rs:1 -> use serde_json::Value;
+ - mythforge/src-tauri/tests/harness/database.rs:1 -> use sqlx::{sqlite::SqlitePoolOptions, SqlitePool};
+ - mythforge/src-tauri/tests/harness/mock_server.rs:1 -> use httpmock::prelude::*;
